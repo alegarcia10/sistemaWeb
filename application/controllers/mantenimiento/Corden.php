@@ -18,7 +18,7 @@ public function index(){
         'ordencompletas' => $this->morden->mselectordencompletas(),
     );
 
-
+  
 
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside');
