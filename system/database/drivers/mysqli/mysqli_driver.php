@@ -120,7 +120,7 @@ class CI_DB_mysqli_driver extends CI_DB {
 		if ($this->hostname[0] === '/')
 		{
 			$hostname = NULL;
-			$port = NULL;
+			$port = null;
 			$socket = $this->hostname;
 		}
 		else

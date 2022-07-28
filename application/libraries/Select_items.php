@@ -50,7 +50,7 @@ function sin_buscador($opciones, $opcionSeleccionada, $nombreSelect, $tipoOperac
 
     <?endif;?>
 </select>
-<?}
+<?} 
 
 function sin_buscador2($opciones, $opcionSeleccionada, $nombreSelect, $tipoOperacion, $camposAuxiliares = ''){?>
 <select name="<?= $nombreSelect; ?>" id="<?= $nombreSelect; ?>" class="form-control" <?if ($camposAuxiliares != '') echo $camposAuxiliares;?> ><!--input multiselect filtro-select-->

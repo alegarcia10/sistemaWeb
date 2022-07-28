@@ -76,10 +76,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '127.0.0.1:3308',
+	'hostname' => '127.0.0.1:3306',
 	'username' => 'root',
 	'password' => '',
-	'database' => 'colsoftflorketo',
+	'database' => 'biosgastro',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
