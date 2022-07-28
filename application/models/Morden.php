@@ -4,17 +4,22 @@ class Morden extends CI_Model{
 
     //MOSTRAR orden actvas
     public function mselectorden(){
-        $this->db->where('Eliminada <=','2');
-        $this->db->order_by("IdOrden", "asc");
-        $resultado =$this->db->get('orden');
+    
+        $resultado =	$query = $this->db->query("SELECT o.IdOrden , c.Nombre ,o.IdCliente, o.FechaRecepcion ,
+           o.TareaDesarrollar, o.Precio, o.Completada, o.Eliminada FROM orden o
+           INNER JOIN cliente c ON o.IdCliente = c.IdCliente where o.Eliminada<=2 ORDER BY O.IdOrden ASC;");
         return $resultado->result();
+
     }
+
+
 
     //MOSTRAR orden completas
     public function mselectordencompletas(){
-        $this->db->where('Eliminada  >=','2');
-        $this->db->order_by("IdOrden", "asc");
-        $resultado =$this->db->get('orden');
+
+        $resultado =$query = $this->db->query("SELECT o.IdOrden , c.Nombre ,o.IdCliente, o.FechaRecepcion ,
+           o.TareaDesarrollar, o.Precio, o.Completada, o.Eliminada FROM orden o
+           INNER JOIN cliente c ON o.IdCliente = c.IdCliente where o.Eliminada>=2 ORDER BY O.IdOrden ASC ");
         return $resultado->result();
     }
     //INSERTAR orden

@@ -2,7 +2,7 @@
     <section class="content-header">
         <h1>
             Orden
-            <small>Listado de ordens</small>
+            <small>Listado de Ordenes</small>
         </h1>
     </section>
     <section class="content">
@@ -28,13 +28,12 @@
                     <div class="col-md-12">
                       <h1>Ordenes Activas</h1>
                         <table id="example1" class="table table-bordered table-hover order-table">
-
                             <thead>
                                 <tr>
-                                    <th>ID</th>
+                                    <th>N° ORDEN</th>
                                     <th>FECHA</th>
                                     <th>TAREA</th>
-                                    <th>PRECIO</th>
+                                    <th>PRECIO FACTURADO</th>
                                     <th>CLIENTE</th>
                                 </tr>
                             </thead>
@@ -46,7 +45,7 @@
                                             <td><?php echo date("d-m-Y", strtotime("$atributos->FechaRecepcion")); ?></td>
                                             <td><?php echo $atributos->TareaDesarrollar; ?></td>
                                             <td><?php echo $atributos->Precio; ?></td>
-                                            <td><?php echo $atributos->IdCliente; ?></td>
+                                            <td><?php echo $atributos->Nombre; ?></td>
                                             <td>
                                                 <div class="btn-group">
                                                   <a href="<?php echo base_url(); ?>mantenimiento/cparteorden/listar/<?php echo $atributos->IdOrden; ?>" class="btn btn-warning" title="Ver">
@@ -74,10 +73,10 @@
 
                             <thead>
                                 <tr>
-                                    <th>ID</th>
+                                    <th>N° ORDEN</th>
                                     <th>FECHA</th>
                                     <th>TAREA</th>
-                                    <th>PRECIO</th>
+                                    <th>PRECIO FACTURADO</th>
                                     <th>CLIENTE</th>
                                 </tr>
                             </thead>
@@ -89,7 +88,7 @@
                                             <td><?php echo date("d-m-Y", strtotime("$atributos->FechaRecepcion")); ?></td>
                                             <td><?php echo $atributos->TareaDesarrollar; ?></td>
                                             <td><?php echo $atributos->Precio; ?></td>
-                                            <td><?php echo $atributos->IdCliente; ?></td>
+                                            <td><?php echo $atributos->Nombre; ?></td>
                                             <td>
                                                 <div class="btn-group">
                                                   <a href="<?php echo base_url(); ?>mantenimiento/cparteorden/listar/<?php echo $atributos->IdOrden; ?>" class="btn btn-warning" title="Ver">

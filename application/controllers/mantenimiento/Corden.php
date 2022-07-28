@@ -18,8 +18,6 @@ public function index(){
         'ordencompletas' => $this->morden->mselectordencompletas(),
     );
 
-  
-
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside');
     $this->load->view('admin/orden/vlist', $data);
@@ -56,7 +54,7 @@ public function cinsert(){
             'TareaDesarrollar' => $tarea,
             'IdCliente' => $id_cliente,
             'Completada' => '0',
-            'Eliminada' => '1'
+            'Eliminada' => '0'
         );
         $res=$this->morden->minsertorden($data);
         if($res){
@@ -78,6 +76,9 @@ public function cedit($id){
     $data['cliente_select'] = $this->morden->cliente_listar_select2();
     $data['model'] = $this->morden->obtener($data['ordenedit']->IdCliente);
 
+  
+
+
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside');
     $this->load->view('admin/orden/vedit', $data);
@@ -86,14 +87,17 @@ public function cedit($id){
 
 public function cupdate(){
 
-      $id = $this->input->post('txtidorden');
+      $id = $this->input->post('txtcompleta');
+      var_dump($id);
+      die;
       $tarea = $this->input->post('txttarea');
-      $fecha = $this->input->post('txtfecha');
+      $precio = $this->input->post('txtprecio');
       $cliente = mb_strtoupper($this->input->post("cliente"));
+
 
      $data = array(
 
-       'FechaRecepcion' => $fecha,
+       'Precio' => $precio,
        'TareaDesarrollar' => $tarea,
        'IdCliente' => $cliente
        //'Completada' => '0',

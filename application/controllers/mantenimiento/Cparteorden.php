@@ -287,26 +287,6 @@ public function addTecnicoOrden(){
     echo json_encode($a);
 }
 
-public function addTecnicoOrdenNueva(){
-    $tecnico = $this->input->post("tecnico");
-    $idParte = $this->input->post("idOrden");
-
-    $nombre=$this->mparteorden->nombreTecnico($tecnico);
-
-    $data = array(
-        'Dni' => $tecnico,
-        'Nombre' => $nombre,
-        'IdOrden' => $idParte
-    );
-
-    $res=$this->mparteorden->cargarTecnicoParteOrden($data);
-
-    $a=['linksa'=>$res];
-
-    echo json_encode($a);
-}
-
-
 
 
 public function ceditTecnico($tecnico,$idParte){
@@ -316,11 +296,7 @@ public function ceditTecnico($tecnico,$idParte){
   redirect(base_url().'mantenimiento/cparteorden/cedit/'.$idParte);
 }
 
-public function cdeleteTecnico($tecnico,$idOrden){
-  $this->mparteorden->mdeletetecnicoParteOrden($tecnico);
 
-  redirect(base_url().'mantenimiento/cparteorden/cadd/'.$idOrden);
-}
 
 
 
