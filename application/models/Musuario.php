@@ -15,34 +15,34 @@ class Musuario extends CI_Model{
         }
     }
 
-    //MOSTRAR usuario 
+    //MOSTRAR usuario
     public function mselectusuario(){
-        $this->db->where('estado <=','2');
+        $this->db->where('Anulado =','0');
         $resultado =$this->db->get('usuario');
         return $resultado->result();
-    }   
-    //INSERTAR usuario 
+    }
+    //INSERTAR usuario
     public function minsertusuario($data){
-        return  $this->db->insert('usuario',$data); 
-    }   
+        return  $this->db->insert('usuario',$data);
+    }
 
-    //OBTENER DATOS 
+    //OBTENER DATOS
     public function midupdateusuario($id){
        $this->db->where('idusuario', $id);
        $resultado = $this->db->get('usuario');
        return $resultado->row();
-    }   
+    }
 
-    //MODIFICAR usuario 
+    //MODIFICAR usuario
     public function mupdateusuario($id, $data){
         $this->db->where('idusuario', $id);
         return $this->db->update('usuario', $data);
-     } 
-     //Traer usuario 
+     }
+     //Traer usuario
     public function mselectinfousuario($id){
         $this->db->where('idusuario =',"$id");
         $resultado =$this->db->get('usuario');
         return $resultado->row();
-    }   
+    }
 }
 ?>

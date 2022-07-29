@@ -4,7 +4,7 @@ class Mtecnico extends CI_Model{
 
     //MOSTRAR tecnico
     public function mselecttecnico(){
-       $this->db->where('estado <=','2');
+       $this->db->where('Activo =','1');
         $this->db->order_by("Dni", "asc");
         $resultado =$this->db->get('tecnico');
 
@@ -24,7 +24,7 @@ class Mtecnico extends CI_Model{
 
     //MODIFICAR tecnico
     public function mupdatetecnico($id, $data){
-      
+
         $this->db->where('Dni', $id);
         return $this->db->update('tecnico', $data);
      }

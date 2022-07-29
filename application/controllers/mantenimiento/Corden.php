@@ -18,6 +18,7 @@ public function index(){
         'ordencompletas' => $this->morden->mselectordencompletas(),
     );
 
+
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside');
     $this->load->view('admin/orden/vlist', $data);
@@ -26,14 +27,8 @@ public function index(){
 
 
 public function cadd(){
-    $data = array (
-        'tipoDocumentocombo' => $this->mcombo->mcombotablaorden('orden'),
-
-    );
 
     $data['tipo_cliente_select'] = $this->morden->cliente_listar_select();
-
-
 
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside');
@@ -76,8 +71,6 @@ public function cedit($id){
     $data['cliente_select'] = $this->morden->cliente_listar_select2();
     $data['model'] = $this->morden->obtener($data['ordenedit']->IdCliente);
 
-  
-
 
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside');
@@ -86,22 +79,25 @@ public function cedit($id){
 }
 
 public function cupdate(){
-
-      $id = $this->input->post('txtcompleta');
-      var_dump($id);
-      die;
       $tarea = $this->input->post('txttarea');
       $precio = $this->input->post('txtprecio');
       $cliente = mb_strtoupper($this->input->post("cliente"));
+      $id = $this->input->post('txtidorden');
+      $check = $this->input->post('habilitado');
 
+      if($check=='on'){
+        $completa=1;
+      }else{
+        $completa=0;
+      }
 
      $data = array(
 
        'Precio' => $precio,
        'TareaDesarrollar' => $tarea,
-       'IdCliente' => $cliente
-       //'Completada' => '0',
-       //'Eliminada' => '1'
+       'IdCliente' => $cliente,
+       'Completada' => $completa
+
      );
 
         $res = $this->morden->mupdateorden($id, $data);
@@ -119,11 +115,23 @@ public function cupdate(){
 public function cdelete($id){
 
     $data=array(
-        'Eliminada' => '10'
+        'Eliminada' => '1'
     );
     $this->morden->mupdateorden($id, $data);
     redirect(base_url().'mantenimiento/corden');
 }
+
+public function ccompleta($id){
+
+    $data=array(
+        'Completada' => '1'
+    );
+    $this->morden->mupdateorden($id, $data);
+    redirect(base_url().'mantenimiento/corden');
+}
+
+
+
 
 
 }

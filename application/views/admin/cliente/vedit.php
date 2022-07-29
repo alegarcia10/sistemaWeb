@@ -35,7 +35,7 @@
                                 <input type="text" id="txtprovincia" name="txtprovincia" maxlength="50"value="<?php echo !empty(form_error('txtprovincia'))? set_value('txtprovincia') : $clienteedit->Provincia ?>" class= "form-control" onblur="this.value=this.value.toUpperCase();">
                             </div>
                             <div class="col-sm-6 form-group">
-                            <a class="btn btn-success" href="<?php echo base_url();?>mantenimiento/ccliente">Volver</a>
+                                <a class="btn btn-success" href="<?php echo base_url();?>mantenimiento/ccliente">Volver</a>
                                 <button type="submit" class="btn btn-success">Guardar</button>
                             </div>
                         </div>

@@ -4,7 +4,7 @@ class Mcliente extends CI_Model{
 
     //MOSTRAR Cliente
     public function mselectcliente(){
-        $this->db->where('estado <=','2');
+        $this->db->where('Anulado =','0');
         $this->db->order_by("IdCliente", "asc");
         $resultado =$this->db->get('cliente');
 

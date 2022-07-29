@@ -25,10 +25,7 @@ public function index(){
 
 
 public function cadd(){
-    $data = array (
-        'tipoDocumentocombo' => $this->mcombo->mcombotabla('tecnico'),
-
-    );
+  
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside');
     $this->load->view('admin/tecnico/vadd', $data);
@@ -48,7 +45,7 @@ public function cinsert(){
             'Nombre' => $nombre,
             'Dni' => $dni,
             'Telefono' => $telefono,
-            'estado' => '1'
+            'Activo' => '1'
         );
         $res=$this->mtecnico->minserttecnico($data);
         if($res){
@@ -105,7 +102,7 @@ public function cupdate(){
 public function cdelete($id){
 
     $data=array(
-        'estado' => '10'
+        'Activo' => '0'
     );
     $this->mtecnico->mupdatetecnico($id, $data);
     redirect(base_url().'mantenimiento/ctecnico');

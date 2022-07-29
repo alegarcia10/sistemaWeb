@@ -27,10 +27,9 @@
                                 <input type="text" id="txtprecio" name="txtprecio"  value="<?php echo !empty(form_error('txtprecio'))? set_value('txtprecio') :  $ordenedit->Precio;?>" class= "form-control" onblur="this.value=this.value.toUpperCase();" >
                             </div>
                             <div class="col-md-4 form-group">
-                                <label>Activo</label><br>
+                                <label>Completa</label><br>
                                 <input class="chk_input" type="checkbox" id="habilitado" name="habilitado" data-width="20" data-height="20" <?=(!empty($ordenedit->Completada)&&$ordenedit->Completada=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($ordenedit->Completada))?'checked':''?> />
                                 <span class="checkmark"></span>
-
                             </div>
                             <div class="col-sm-12 form-group">
                                 <label for="tarea">Tarea</label>

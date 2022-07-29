@@ -8,7 +8,7 @@
     <section class="content">
         <div class="box box-solid">
             <div class="box-body">
-               <hr>
+
                <div class="row">
                    <div class="col-md-12">
                    <div class="row">
@@ -20,17 +20,30 @@
                         <form action="<?php echo base_url();?>mantenimiento/cparteorden/cupdate" method="POST">
                             <input type="hidden" value="<?php echo $parteordenedit->IdOrden ?>" name="txtidorden" id="txtidorden">
                             <input type="hidden" value="<?php echo $parteordenedit->IdParte ?>" name="txtidParte" id="txtidParte">
-                            <div class=" col-sm-2 form-group">
+                            <div class=" col-sm-3 form-group">
                                 <label for="fechaInicio">FechaInicio</label>
                                 <input type="string" id="txtfechaInicio" name="txtfechaInicio" value="<?php echo !empty(form_error('txtfechaInicio'))? set_value('txtfechaInicio') : $parteordenedit->FechaInicio ?>" class= "form-control" onblur="this.value=this.value.toUpperCase();" disabled>
                             </div>
-                            <div class=" col-sm-2 form-group">
+                            <div class=" col-sm-3 form-group">
                                 <label for="fechaInicio">FechaFin</label>
-                                <input type="string" id="txtfechaFin" name="txtfechaFin" value="<?php echo !empty(form_error('txtfechaFin'))? set_value('txtfechaFin') : $parteordenedit->FechaFin ?>" class= "form-control" onblur="this.value=this.value.toUpperCase();">
+                                <input type="string" id="txtfechaFin" name="txtfechaFin" value="<?php echo !empty(form_error('txtfechaFin'))? set_value('txtfechaFin') : $parteordenedit->FechaFin ?>" class= "form-control" onblur="this.value=this.value.toUpperCase();" disabled>
+                            </div>
+                            <div class=" col-sm-2 form-group">
+                                <label for="fechaTranscurrido">Tiempo Transcurrido</label>
+                                <input type="string" id="txtTranscurrido" name="txtTranscurrido" value="<?php echo !empty(form_error('txtTranscurrido'))? set_value('txtTranscurrido') : $hora ?>" class= "form-control" onblur="this.value=this.value.toUpperCase();" disabled>
+                            </div>
+                            <div class="col-md-4 form-group">
+                                <label>Completa</label><br>
+                                <input class="chk_input" type="checkbox" id="habilitado" name="habilitado" data-width="20" data-height="20" disabled <?=(!empty($parteordenedit->Completa)&&$parteordenedit->Completa=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($parteordenedit->Completa))?'checked':''?> />
+                                <span class="checkmark"></span>
                             </div>
                             <div class="col-sm-12 form-group">
                                 <label for="tarea">Tarea</label>
-                                <input type="text" id="txttarea" name="txttarea" maxlength="5" value="<?php echo !empty(form_error('txtctarea'))? set_value('txttarea') : $parteordenedit->TareaDesarrollada ?>" class= "form-control" onblur="this.value=this.value.toUpperCase();">
+                                <input type="text" id="txttarea" name="txttarea" maxlength="500" value="<?php echo !empty(form_error('txtctarea'))? set_value('txttarea') : $parteordenedit->TareaDesarrollada ?>" class= "form-control" onblur="this.value=this.value.toUpperCase();">
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <a class="btn btn-success" href="<?php echo base_url();?>mantenimiento/cparteorden/listar/<?php echo $parteordenedit->IdOrden;?>">Volver</a>
+                                <button type="submit" class="btn btn-success">Guardar</button>
                             </div>
 
                           </form>
@@ -63,7 +76,7 @@
                                      <table id="example1" class="table table-bordered table-hover order-table">
                                          <thead>
                                              <tr>
-                                                 <th>#</th>
+                                                 <th>ID Tecnico</th>
                                                  <th>Nombre</th>
                                              </tr>
                                          </thead>
@@ -72,10 +85,10 @@
                                                  <?php foreach ($tecnico_select as $atributos) : ?>
                                                      <tr>
                                                          <td><?php echo $atributos->IdParte; ?></td>
-                                                         <td ><?php echo $atributos->Dni; ?></td>
+                                                         <td ><?php echo $atributos->Nombre; ?></td>
                                                          <td>
                                                              <div >
-                                                               <a title="Eliminar" href="<?php echo base_url(); ?>mantenimiento/cparteorden/ceditTecnico/<?php echo $atributos->Dni; ?>/<?php echo $atributos->IdParte; ?>" class="btn btn-info ">
+                                                               <a title="Eliminar" href="<?php echo base_url(); ?>mantenimiento/cparteorden/ceditTecnico/<?php echo $atributos->Dni; ?>/<?php echo $atributos->IdParte; ?>" class="btn btn-danger ">
                                                                    <span class="fa fa-remove"></span>
                                                                </a>
                                                              </div>
@@ -179,7 +192,6 @@ $(document).ready(function(){
                         data:{material:material,idOrden:idOrden,idParte:idParte,cant:cant}})
                         .done(function(r) {
 
-                            alert (r);
                           r = JSON.parse(r);
 
                           $("#tbody1").append(r['linksa']);
@@ -192,6 +204,7 @@ $(document).ready(function(){
     $('#buscar2').on('click',function(){
       var tecnico =$('#tipo_tecnico').val();
       var idParte =$('#txtidParte').val();
+      var idParte =$('#txtidParte').val();
 
 
 
@@ -201,9 +214,9 @@ $(document).ready(function(){
                         dataType:'html',
                         data:{tecnico:tecnico,idParte:idParte}})
                         .done(function(r) {
-
-                          r = JSON.parse(r);//t'.$Dni.'x'.$IdParte.'
-                          var tel = '<tr><td>'+idParte+'</td><td>'+tecnico+'</td><td><div><a title="Eliminar" href="'+idParte+'ref'+tecnico+'" class="btn btn-danger"><span class="fa fa-remove"></span></a></div></td></tr>';
+                          r = JSON.parse(r);
+                          nombre=r['linksa'];
+                          var tel = '<tr><td>'+idParte+'</td><td>'+nombre+'</td><td><div><a title="Eliminar" href="'+idParte+'ref'+tecnico+'" class="btn btn-danger"><span class="fa fa-remove"></span></a></div></td></tr>';
 
                           $("#tbody2").append(tel);
 

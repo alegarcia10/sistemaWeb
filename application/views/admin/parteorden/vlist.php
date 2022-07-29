@@ -40,7 +40,7 @@
 
                         <div class="row">
                             <div class="col-md-3">
-                                <input class="form-control col-md-3 light-table-filter" data-table="order-table" type="text" placeholder="Buscar Orden..">
+                                <input class="form-control col-md-3 light-table-filter" data-table="order-table" type="text" placeholder="Buscar Tarea..">
                                 <hr>
                             </div>
                             <div class="col-md-12">
@@ -63,8 +63,8 @@
                                                 <tr>
                                                     <td><?php echo $atributos->IdParte; ?></td>
                                                     <td><?php echo $atributos->TareaDesarrollada; ?></td>
-                                                    <td><?php echo date("d-m-Y", strtotime("$atributos->FechaInicio"));?></td>
-                                                    <td><?php echo date("d-m-Y", strtotime("$atributos->FechaFin"));?></td>
+                                                    <td><?php if($atributos->FechaInicio == null){ echo "-";}else{echo date("d-m-Y", strtotime("$atributos->FechaInicio"));} ?></td>
+                                                    <td><?php if($atributos->FechaFin == null){ echo "-";}else{echo date("d-m-Y", strtotime("$atributos->FechaFin"));} ?></td>
                                                     <td><?php if ($atributos->Completa == 1){ echo 'Completa';}else{echo 'Pendiente';} ; ?></td>
                                                     <?php $data = $atributos->IdOrden; ?>
                                                     <td>
@@ -73,7 +73,7 @@
                                                             <a title="Modificar" href="<?php echo base_url(); ?>mantenimiento/cparteorden/cedit/<?php echo $atributos->IdParte; ?>" class="btn btn-info ">
                                                                 <span class="fa fa-pencil"></span>
                                                             </a>
-                                                            <a title="Eliminar" href="<?php echo base_url(); ?>mantenimiento/cparteorden/cdelete/<?php echo $atributos->IdParte; ?>" class="btn btn-danger btn-remove">
+                                                            <a title="Eliminar" href="<?php echo base_url(); ?>mantenimiento/cparteorden/cdelete/<?php echo $atributos->IdParte; ?>/<?php echo $atributos->IdOrden; ?>" class="btn btn-danger btn-remove">
                                                                 <span class="fa fa-remove"></span>
                                                             </a>
                                                         </div>

@@ -23,11 +23,9 @@ public function index(){
 }
 
 
-public function cadd(){
-    $data = array (
-        'tipoDocumentocombo' => $this->mcombo->mcombotabla('clientes'),
 
-    );
+public function cadd(){
+  
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside');
     $this->load->view('admin/cliente/vadd', $data);
@@ -49,7 +47,7 @@ public function cinsert(){
             'DniCuit' => $cuit,
             'Provincia' => $prov,
             'Domicilio' => $domicilio,
-            'estado' => '1'
+            'Anulado' => '0'
         );
         $res=$this->mcliente->minsertcliente($data);
         if($res){
@@ -107,7 +105,7 @@ public function cupdate(){
 public function cdelete($id){
 
     $data=array(
-        'estado' => '10'
+        'Anulado' => '1'
     );
     $this->mcliente->mupdatecliente($id, $data);
     redirect(base_url().'mantenimiento/ccliente');

@@ -20,8 +20,6 @@ public function listar($id){
     );
 
 
-
-
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside');
     $this->load->view('admin/parteorden/vlist', $data);
@@ -36,7 +34,7 @@ public function cadd($id){
 
 
   if(strpos($id, '_') !== false){
-    log_message('error',sprintf(" contiene _"));
+    //log_message('error',sprintf(" contiene _"));
     $id= str_replace('_', ';',$id);
     list($dni, $idOrden) = explode(';', $id);
 
@@ -58,8 +56,6 @@ public function cadd($id){
     $this->load->view('layouts/footer');
   }
 
-
-
 }
 
 
@@ -67,8 +63,6 @@ public function cinsert(){
      $idorden = $this->input->post('txtidorden');
 
      $tarea = $this->input->post('txttarea');
-
-
 
         $data = array(
             'TareaDesarrollada' => $tarea,
@@ -86,7 +80,6 @@ public function cinsert(){
             $this->session->set_flashdata('error', 'No se Guardo registro');
             redirect(base_url().'mantenimiento/cparteorden/cadd/'.$idorden);
         }
-
 
 }
 
@@ -121,18 +114,29 @@ public function cedit($id){
 
         $this->mparteorden->mdeletetecnicoOrden($idParte, $dni);
         redirect(base_url().'mantenimiento/cparteorden/cedit/'.$idParte);
-      }else{
+      }
+      else{
+
         $data = array(
             'parteordenedit' => $this->mparteorden->midupdateparteorden($id),
             'tipo_tecnico_select' => $this->mparteorden->tecnico_listar_select(),
             'tecnico_select' => $this->mparteorden->mselectTecnicoIdParte($id),
         );
+
+
         $idOrden=$data['parteordenedit']->IdOrden;
         $idParte=$data['parteordenedit']->IdParte;
-
-
         $data['material'] = $this->mparteorden->obtenerMaterial($idOrden,$idParte);
 
+        $FechaInicio= $data['parteordenedit']->FechaInicio;
+        $FechaFin= $data['parteordenedit']->FechaFin;
+
+        $date1 = new DateTime("$FechaInicio");
+        $date2 = new DateTime("$FechaFin");
+
+        $interval = date_diff($date1, $date2);
+        $hora =$interval->format(' %H :%I : %S ');
+        $data['hora'] = $hora;
 
         $this->load->view('layouts/header');
         $this->load->view('layouts/aside');
@@ -144,38 +148,16 @@ public function cedit($id){
 }
 
 public function cupdate(){
-    $idparteorden = $this->input->post('txtidparteorden');
+    $idparte = $this->input->post('txtidParte');
     $idorden = $this->input->post('txtidorden');
-    $fecha = $this->input->post('txtfecha');
-    $imc = $this->input->post('txtimc');
-    $cuello = $this->input->post('txtcuello');
-    $peso = $this->input->post('txtpeso');
-    $pecho = $this->input->post('txtpecho');
-    $brazo = $this->input->post('txtbrazo');
-    $muneca = $this->input->post('txtmuneca');
-    $cintura = $this->input->post('txtcintura');
-    $cadera = $this->input->post('txtcadera');
-    $abdomen = $this->input->post('txtabdomen');
-    $muslo = $this->input->post('txtmuslo');
-    $descripcion = $this->input->post('txtdescripcion');
+    $tarea = $this->input->post('txttarea');
+
 
 
         $data = array(
-            'idorden' => $idorden,
-            'fecha' => $fecha,
-            'imc' => $imc,
-            'cuello' => $cuello,
-            'peso' => $peso,
-            'pecho' => $pecho,
-            'brazo' => $brazo,
-            'muneca' => $muneca,
-            'cintura' => $cintura,
-            'cadera' => $cadera,
-            'abdomen' => $abdomen,
-            'muslo' => $muslo,
-            'descripcion' => $descripcion
+            'TareaDesarrollada' => $tarea
         );
-        $res = $this->mparteorden->mupdateparteorden($idparteorden, $data);
+        $res = $this->mparteorden->mupdateparteorden($idparte, $idorden,$data);
         if($res){
             $this->session->set_flashdata('correcto', 'Se Guardo Correctamente');
             redirect(base_url().'mantenimiento/cparteorden/listar/'.$idorden);
@@ -186,14 +168,19 @@ public function cupdate(){
 
 }
 
-public function cdelete($id){
+public function cdelete($IdParte ,$IdOrden){
 
-    $orden = $this->mparteorden->mselectinfoparteorden($id);
-
+    /*$orden = $this->mparteorden->mselectinfoparteorden($id);
     $idorden= $orden->idorden;
-
     $this->mparteorden->mupdateparteorden($id);
-    redirect(base_url().'mantenimiento/cparteorden/listar/'.$idorden);
+    redirect(base_url().'mantenimiento/cparteorden/listar/'.$idorden);*/
+
+
+    $data=array(
+        'Anulado' => '1'
+    );
+    $this->mparteorden->mupdateparteorden($IdParte ,$IdOrden,$data);
+    redirect(base_url().'mantenimiento/cparteorden/listar/'.$IdOrden);
 }
 
 
@@ -258,7 +245,6 @@ public function cupdateMat(){
       $data = array(
           'Descripcion' => $descripcion,
           'Cantidad' => $cantidad
-
       );
 
 
@@ -280,9 +266,11 @@ public function addTecnicoOrden(){
         'IdParte' => $idParte
     );
 
-    $res=$this->mparteorden->cargarTecnicoOrden($data);
+    $this->mparteorden->cargarTecnicoOrden($data);
+    $Nombre=$this->mparteorden->nombreTecnico($tecnico);
 
-    $a=['linksa'=>$res];
+
+    $a=['linksa'=>$Nombre];
 
     echo json_encode($a);
 }
@@ -290,7 +278,6 @@ public function addTecnicoOrden(){
 
 
 public function ceditTecnico($tecnico,$idParte){
-
 
   $this->mparteorden->mdeletetecnicoOrden($idParte, $tecnico);
   redirect(base_url().'mantenimiento/cparteorden/cedit/'.$idParte);

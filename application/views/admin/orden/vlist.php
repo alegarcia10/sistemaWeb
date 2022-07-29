@@ -12,22 +12,25 @@
                     <div class="col-md-9">
                         <a href="<?php echo base_url(); ?>mantenimiento/corden/cadd" class="btn btn-flat" id="botonVioleta"><span class="fa fa-plus"></span> Agregar orden</a>
                     </div>
-                    <div class="col-md-3">
-                        <input class="form-control col-md-3 light-table-filter" data-table="order-table" type="text" placeholder="Buscar orden..">
-                        <hr>
-                    </div>
+
                 </div>
                 <?php if ($this->session->flashdata('correcto')) : ?>
                     <div class="alert alert-success">
                         <p><?php echo $this->session->flashdata('correcto') ?></p>
                     </div>
                 <?php endif; ?>
-
                 <hr>
                 <div class="row">
                     <div class="col-md-12">
-                      <h1>Ordenes Activas</h1>
-                        <table id="example1" class="table table-bordered table-hover order-table">
+                      <div class="col-md-9">
+                          <h1>Ordenes Activas</h1>
+
+                      </div>
+                      <div class="col-md-3">
+                          <br>
+                          <input class="form-control col-md-3 light-table-filter" data-table="order-table1" type="text" placeholder="Buscar orden Activa..">
+                      </div>
+                        <table id="example1" class="table table-bordered table-hover order-table1">
                             <thead>
                                 <tr>
                                     <th>N° ORDEN</th>
@@ -48,7 +51,7 @@
                                             <td><?php echo $atributos->Nombre; ?></td>
                                             <td>
                                                 <div class="btn-group">
-                                                  <a href="<?php echo base_url(); ?>mantenimiento/cparteorden/listar/<?php echo $atributos->IdOrden; ?>" class="btn btn-warning" title="Ver">
+                                                  <a href="<?php echo base_url(); ?>mantenimiento/cparteorden/listar/<?php echo $atributos->IdOrden; ?>" class="btn btn-warning" title="Tareas">
                                                       <span class="fa fa-eye"></span>
                                                   </a>
                                                     <a href="<?php echo base_url(); ?>mantenimiento/corden/cedit/<?php echo $atributos->IdOrden; ?>" class="btn btn-info" title="Modificar">
@@ -56,6 +59,9 @@
                                                     </a>
                                                     <a href="<?php echo base_url(); ?>mantenimiento/corden/cdelete/<?php echo $atributos->IdOrden; ?>" class="btn btn-danger btn-remove" title="Eliminar">
                                                         <span class="fa fa-remove"></span>
+                                                    </a>
+                                                    <a href="<?php echo base_url(); ?>mantenimiento/corden/ccompleta/<?php echo $atributos->IdOrden; ?>" class="btn btn-success btn-remove" title="Completa">
+                                                        <span class="fa fa-play"></span>
                                                     </a>
                                                 </div>
                                             </td>
@@ -67,10 +73,16 @@
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col-md-9">
+                        <h1>Ordenes Completas</h1>
+                    </div>
+                    <div class="col-md-3">
+                        <br>
+                        <input class="form-control col-md-3 light-table-filter" data-table="order-table2" type="text" placeholder="Buscar orden Completa..">
+                    </div>
+                    <br>
                     <div class="col-md-12">
-                      <h1>Ordenes Completas</h1>
-                        <table id="example1" class="table table-bordered table-hover order-table">
-
+                        <table id="example1" class="table table-bordered table-hover order-table2">
                             <thead>
                                 <tr>
                                     <th>N° ORDEN</th>
@@ -91,9 +103,7 @@
                                             <td><?php echo $atributos->Nombre; ?></td>
                                             <td>
                                                 <div class="btn-group">
-                                                  <a href="<?php echo base_url(); ?>mantenimiento/cparteorden/listar/<?php echo $atributos->IdOrden; ?>" class="btn btn-warning" title="Ver">
-                                                      <span class="fa fa-eye"></span>
-                                                  </a>
+
                                                     <a href="<?php echo base_url(); ?>mantenimiento/corden/cedit/<?php echo $atributos->IdOrden; ?>" class="btn btn-info" title="Modificar">
                                                         <span class="fa fa-pencil"></span>
                                                     </a>
