@@ -2,7 +2,7 @@
     <section class="content-header">
         <h1>
             Orden
-            <small>Listado de ordens</small>
+            <small>Listado de ordenes</small>
         </h1>
     </section>
     <section class="content">
@@ -39,7 +39,9 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php if (!empty($ordenindex)) : ?>
+                                <?php 
+                            
+                                if (!empty($ordenindex)) : ?>
                                     <?php foreach ($ordenindex as $atributos) :?>
                                         <tr>
                                             <td><?php echo $atributos->IdOrden; ?></td>
@@ -66,6 +68,19 @@
                             </tbody>
                         </table>
                     </div>
+                                            <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                            <a class="page-link">Anterior</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                            <a class="page-link" href="#">Siguiente</a>
+                            </li>
+                        </ul>
+                        </nav>
                 </div>
                 <div class="row">
                     <div class="col-md-12">

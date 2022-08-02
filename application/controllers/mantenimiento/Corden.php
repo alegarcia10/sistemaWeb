@@ -1,6 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+//use systen\libraries\Pagination;
+
 class Corden extends CI_Controller {
     function __construct(){
     parent:: __construct();
@@ -13,8 +15,11 @@ class Corden extends CI_Controller {
 
 
 public function index(){
+       // $model=new \application\models\Morden();
+       
     $data = array (
-        'ordenindex' => $this->morden->mselectorden(),
+        'ordenindex' => $this->morden->mselectorden(), 
+        //'ordenindex' => $model->paginate(10), 'pager' => $model -> pager,
         'ordencompletas' => $this->morden->mselectordencompletas(),
     );
 
