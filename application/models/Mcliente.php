@@ -4,7 +4,7 @@ class Mcliente extends CI_Model{
 
     //MOSTRAR Cliente
     public function mselectcliente(){
-        $this->db->where('estado <=','2');
+        $this->db->where('Anulado =','0');
         $this->db->order_by("IdCliente", "asc");
         $resultado =$this->db->get('cliente');
 
@@ -18,6 +18,13 @@ class Mcliente extends CI_Model{
     //OBTENER DATOS
     public function midupdatecliente($id){
        $this->db->where('IdCliente', $id);
+       $resultado = $this->db->get('cliente');
+       return $resultado->row();
+    }
+
+    //OBTENER DATOS CON DNI
+    public function obtenerclientedni($dni){
+       $this->db->where('DniCuit', $dni);
        $resultado = $this->db->get('cliente');
        return $resultado->row();
     }

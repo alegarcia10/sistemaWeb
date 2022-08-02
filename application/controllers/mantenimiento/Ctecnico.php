@@ -25,13 +25,10 @@ public function index(){
 
 
 public function cadd(){
-    $data = array (
-        'tipoDocumentocombo' => $this->mcombo->mcombotabla('tecnico'),
 
-    );
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside');
-    $this->load->view('admin/tecnico/vadd', $data);
+    $this->load->view('admin/tecnico/vadd');
     $this->load->view('layouts/footer');
 }
 
@@ -42,22 +39,31 @@ public function cinsert(){
      $dni = $this->input->post('txtdni');
      $telefono = $this->input->post('txttelefono');
 
+     $res=$this->mtecnico->midupdatetecnico($dni);
 
-    //REGLA DE VALIDACION
-        $data = array(
-            'Nombre' => $nombre,
-            'Dni' => $dni,
-            'Telefono' => $telefono,
-            'estado' => '1'
-        );
-        $res=$this->mtecnico->minserttecnico($data);
-        if($res){
-            $this->session->set_flashdata('correcto', 'Se guardo Correctamente');
-            redirect(base_url().'mantenimiento/ctecnico');
-        }else{
-            $this->session->set_flashdata('error', 'No se Guardo registro');
-            redirect(base_url().'mantenimiento/ctecnico/cadd');
-        }
+     if($res==null){
+               $data = array(
+                   'Nombre' => $nombre,
+                   'Dni' => $dni,
+                   'Telefono' => $telefono,
+                   'Activo' => '1'
+               );
+               $res=$this->mtecnico->minserttecnico($data);
+               if($res){
+                   $this->session->set_flashdata('correcto', 'Se guardo Correctamente');
+                   redirect(base_url().'mantenimiento/ctecnico');
+               }else{
+                   $this->session->set_flashdata('error', 'No se Guardo registro');
+                   redirect(base_url().'mantenimiento/ctecnico/cadd');
+               }
+
+     }else{
+
+        //REGLA DE VALIDACION
+        $this->session->set_flashdata('error', 'Este Dni ya esta registrado');
+        redirect(base_url().'mantenimiento/ctecnico/cadd');
+     }
+
 
 
 }
@@ -81,23 +87,25 @@ public function cupdate(){
   $id = $this->input->post('txtid');
   $telefono = $this->input->post('txttelefono');
 
+            $data = array(
+                'Nombre' => $nombre,
+                'Dni' => $dni,
+                'Telefono' => $telefono
+            );
 
-  $data = array(
-      'Nombre' => $nombre,
-      'Dni' => $dni,
-      'Telefono' => $telefono
-  );
+                  $res = $this->mtecnico->mupdatetecnico($id, $data);
+                  if($res){
+                      $this->session->set_flashdata('correcto', 'Se Guardo Correctamente');
+                      redirect(base_url().'mantenimiento/ctecnico');
+                  }else {
+                      $this->session->set_flashdata('error', 'No se pudo actualizar el tecnico');
+                      redirect(base_url().'mantenimiento/ctecnico/cedit/'.$id);
+                  }
 
 
 
-        $res = $this->mtecnico->mupdatetecnico($id, $data);
-        if($res){
-            $this->session->set_flashdata('correcto', 'Se Guardo Correctamente');
-            redirect(base_url().'mantenimiento/ctecnico');
-        }else {
-            $this->session->set_flashdata('error', 'No se pudo actualizar el tecnico');
-            redirect(base_url().'mantenimiento/ctecnico/cedit'.$idtecnico);
-        }
+
+
 
 
 }
@@ -105,7 +113,7 @@ public function cupdate(){
 public function cdelete($id){
 
     $data=array(
-        'estado' => '10'
+        'Activo' => '0'
     );
     $this->mtecnico->mupdatetecnico($id, $data);
     redirect(base_url().'mantenimiento/ctecnico');

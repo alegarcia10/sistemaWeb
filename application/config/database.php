@@ -74,12 +74,41 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 
+/*
+//PRODUCCION
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '127.0.0.1:3306',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'testing',
+	'hostname' => 'localhost',
+	'port' => '3308',
+	'username' => 'u198557509_biosgastro',
+	'password' => 'Galtech2022',
+	'database' => 'u198557509_biosgastro',
+	'dbdriver' => 'mysqli',
+	'dbprefix' => '',
+	'pconnect' => FALSE,
+	'db_debug' => (ENVIRONMENT !== 'production'),
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_unicode_ci',
+	'swap_pre' => '',
+	'encrypt' => FALSE,
+	'compress' => FALSE,
+	'stricton' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE
+);
+
+*/
+//TEST
+
+$db['default'] = array(
+	'dsn'	=> '',
+	'hostname' => 'localhost',
+	'port' => '3308',
+	'username' => 'u198557509_Test',
+	'password' => 'Galtech2022',
+	'database' => 'u198557509_Testing',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

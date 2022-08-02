@@ -19,15 +19,15 @@
                             <form action="<?php echo base_url(); ?>mantenimiento/ctecnico/cinsert" method="POST">
                                 <div class=" col-sm-6 form-group">
                                     <label for="nombre">Nombre</label>
-                                    <input required type="text" id="txtnombre" name="txtnombre" maxlength="50"class="form-control" value="<?php echo set_value('txtnombre') ?>" onblur="this.value=this.value.toUpperCase();">
+                                    <input type="text" id="txtnombre" name="txtnombre" maxlength="50"class="form-control" value="<?php echo set_value('txtnombre') ?>" required >
                                 </div>
                                 <div class="col-sm-2 form-group">
                                   <label for="dni">DNI</label>
-                                  <input required type="number" id="txtdni" name="txtdni" min="1" max="99999999"  class="form-control" value="<?php echo set_value('txtdni') ?>" onblur="this.value=this.value.toUpperCase();">
+                                  <input type="number" id="txtdni" name="txtdni" min="1" max="99999999"  class="form-control" value="<?php echo set_value('txtdni') ?>" required >
                                 </div>
                                 <div class="col-sm-2 form-group">
                                     <label for="telefono">Telefono</label>
-                                    <input type="text" id="txttelefono" name="txttelefono" class="form-control" value="<?php echo set_value('txttelefono') ?>" onblur="this.value=this.value.toUpperCase();">
+                                    <input type="text" id="txttelefono" name="txttelefono" class="form-control" value="<?php echo set_value('txttelefono') ?>"  >
                                 </div>
 
                                 <div class="col-sm-12 form-group">

@@ -23,42 +23,50 @@ public function index(){
 }
 
 
-public function cadd(){
-    $data = array (
-        'tipoDocumentocombo' => $this->mcombo->mcombotabla('clientes'),
 
-    );
+public function cadd(){
+
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside');
-    $this->load->view('admin/cliente/vadd', $data);
+    $this->load->view('admin/cliente/vadd');
     $this->load->view('layouts/footer');
 }
 
 
 public function cinsert(){
 
+
      $nombre = $this->input->post('txtnombre');
      $cuit = $this->input->post('txtcuit');
      $prov = $this->input->post('txtprovincia');
      $domicilio = $this->input->post('txtdomicilio');
 
-    //REGLA DE VALIDACION
-        $data = array(
+     $cli = $this->mcliente->obtenerclientedni($cuit);
 
-            'Nombre' => $nombre,
-            'DniCuit' => $cuit,
-            'Provincia' => $prov,
-            'Domicilio' => $domicilio,
-            'estado' => '1'
-        );
-        $res=$this->mcliente->minsertcliente($data);
-        if($res){
-            $this->session->set_flashdata('correcto', 'Se guardo Correctamente');
-            redirect(base_url().'mantenimiento/ccliente');
-        }else{
-            $this->session->set_flashdata('error', 'No se Guardo registro');
-            redirect(base_url().'mantenimiento/ccliente/cadd');
-        }
+     if($cli==null){
+               $data = array(
+
+                   'Nombre' => $nombre,
+                   'DniCuit' => $cuit,
+                   'Provincia' => $prov,
+                   'Domicilio' => $domicilio,
+                   'Anulado' => '0'
+               );
+               $res=$this->mcliente->minsertcliente($data);
+
+               if($res){
+                   $this->session->set_flashdata('correcto', 'Se guardo Correctamente');
+                   redirect(base_url().'mantenimiento/ccliente');
+               }else{
+                   $this->session->set_flashdata('error', 'No se Guardo registro');
+                   redirect(base_url().'mantenimiento/ccliente/cadd');
+               }
+     }else{
+       //REGLA DE VALIDACION
+       $this->session->set_flashdata('error', 'Este Dni/Cuit ya esta registrado ');
+       redirect(base_url().'mantenimiento/ccliente/cadd');
+     }
+
 
 
 }
@@ -84,22 +92,27 @@ public function cupdate(){
      $domicilio = $this->input->post('txtdomicilio');
 
 
-     $data = array(
 
-         'Nombre' => $nombre,
-         'DniCuit' => $cuit,
-         'Provincia' => $prov,
-         'Domicilio' => $domicilio
-     );
+               $data = array(
 
-        $res = $this->mcliente->mupdatecliente($idcliente, $data);
-        if($res){
-            $this->session->set_flashdata('correcto', 'Se Guardo Correctamente');
-            redirect(base_url().'mantenimiento/ccliente');
-        }else {
-            $this->session->set_flashdata('error', 'No se pudo actualizar la cliente');
-            redirect(base_url().'mantenimiento/ccliente/cedit'.$idcliente);
-        }
+                   'Nombre' => $nombre,
+                   'DniCuit' => $cuit,
+                   'Provincia' => $prov,
+                   'Domicilio' => $domicilio
+               );
+
+                  $res = $this->mcliente->mupdatecliente($idcliente, $data);
+                  if($res){
+                      $this->session->set_flashdata('correcto', 'Se Guardo Correctamente');
+                      redirect(base_url().'mantenimiento/ccliente');
+                  }else {
+                      $this->session->set_flashdata('error', 'No se pudo actualizar la cliente');
+                      redirect(base_url().'mantenimiento/ccliente/cedit/'.$idcliente);
+                  }
+
+     
+
+
 
 
 }
@@ -107,7 +120,7 @@ public function cupdate(){
 public function cdelete($id){
 
     $data=array(
-        'estado' => '10'
+        'Anulado' => '1'
     );
     $this->mcliente->mupdatecliente($id, $data);
     redirect(base_url().'mantenimiento/ccliente');

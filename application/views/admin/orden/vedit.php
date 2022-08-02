@@ -18,13 +18,22 @@
                         <?php endif ; ?>
                         <form action="<?php echo base_url();?>mantenimiento/corden/cupdate" method="POST">
                             <input type="hidden" value="<?php echo $ordenedit->IdOrden ?>" name="txtidorden" id="txtidorden">
-                            <div class="col-sm-2 form-group">
+                            <div class="col-sm-3 form-group">
                                 <label for="fecha">FECHA</label>
-                                <input type="date" id="txtfecha" name="txtfecha"  value="<?php echo !empty(form_error('txtfecha'))? set_value('txtfecha') : $ordenedit->FechaRecepcion ?>" class= "form-control" onblur="this.value=this.value.toUpperCase();">
+                                <input type="text" id="txtfecha" name="txtfecha"  value="<?php echo !empty(form_error('txtfecha'))? set_value('txtfecha') :  date("d-m-Y", strtotime("$ordenedit->FechaRecepcion"));?>" class= "form-control"   disabled>
                             </div>
-                            <div class="col-sm-6 form-group">
+                            <div class="col-sm-3 form-group">
+                                <label for="precio">PRECIO</label>
+                                <input type="text" id="txtprecio" name="txtprecio"  value="<?php echo !empty(form_error('txtprecio'))? set_value('txtprecio') :  $ordenedit->Precio;?>" class= "form-control"   >
+                            </div>
+                            <div class="col-md-4 form-group">
+                                <label>Completa</label><br>
+                                <input class="chk_input" type="checkbox" id="habilitado" name="habilitado" data-width="20" data-height="20" <?=(!empty($ordenedit->Completada)&&$ordenedit->Completada=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($ordenedit->Completada))?'checked':''?> />
+                                <span class="checkmark"></span>
+                            </div>
+                            <div class="col-sm-12 form-group">
                                 <label for="tarea">Tarea</label>
-                                <input type="text" id="txttarea" name="txttarea" maxlength="50" value="<?php echo !empty(form_error('txttarea'))? set_value('txttarea') : $ordenedit->TareaDesarrollar ?>" class= "form-control" onblur="this.value=this.value.toUpperCase();">
+                                <input type="text" id="txttarea" name="txttarea" maxlength="50" value="<?php echo !empty(form_error('txttarea'))? set_value('txttarea') : $ordenedit->TareaDesarrollar ?>" class= "form-control"  required>
                             </div>
                             <div class="col-md-5 form-group">
                               <label for="cliente">Cliente&nbsp;&nbsp; (*)</label>

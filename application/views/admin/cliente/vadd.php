@@ -19,20 +19,20 @@
                             <form action="<?php echo base_url(); ?>mantenimiento/ccliente/cinsert" method="POST">
                                 <div class="col-sm-2 form-group">
                                   <label for="cuit">CUIT</label>
-                                  <input type="number" id="txtcuit" name="txtcuit" min="1"  class="form-control" value="<?php echo set_value('txtcuit') ?>" onblur="this.value=this.value.toUpperCase();">
+                                  <input type="number" id="txtcuit" name="txtcuit" min="1"  class="form-control" value="<?php echo set_value('txtcuit') ?>" required >
                                 </div>
                                 <div class=" col-sm-6 form-group">
                                     <label for="nombre">Nombre</label>
-                                    <input type="text" id="txtnombre" name="txtnombre" maxlength="50"class="form-control" value="<?php echo set_value('txtnombre') ?>" onblur="this.value=this.value.toUpperCase();">
+                                    <input type="text" id="txtnombre" name="txtnombre" maxlength="50"class="form-control" value="<?php echo set_value('txtnombre') ?>"  required>
                                 </div>
 
                                 <div class="col-sm-6 form-group">
                                     <label for="domicilio">Domicilio</label>
-                                    <input type="text" id="txtdomicilio" name="txtdomicilio"maxlength="50" class="form-control" value="<?php echo set_value('txtdomicilio') ?>" onblur="this.value=this.value.toUpperCase();">
+                                    <input type="text" id="txtdomicilio" name="txtdomicilio"maxlength="50" class="form-control" value="<?php echo set_value('txtdomicilio') ?>"  >
                                 </div>
                                 <div class="col-sm-6 form-group">
                                     <label for="provincia">Provincia</label>
-                                    <input type="text" id="txtprovincia" name="txtprovincia" maxlength="45"class="form-control" value="<?php echo set_value('txtprovincia') ?>" onblur="this.value=this.value.toUpperCase();">
+                                    <input type="text" id="txtprovincia" name="txtprovincia" maxlength="45"class="form-control" value="<?php echo set_value('txtprovincia') ?>"  >
                                 </div>
                                 <div class="col-sm-12 form-group">
                                     <a class="btn btn-success" href="<?php echo base_url(); ?>mantenimiento/ccliente">Volver</a>

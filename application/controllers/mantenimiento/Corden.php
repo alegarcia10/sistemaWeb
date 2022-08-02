@@ -1,8 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-//use systen\libraries\Pagination;
-
 class Corden extends CI_Controller {
     function __construct(){
     parent:: __construct();
@@ -15,15 +13,44 @@ class Corden extends CI_Controller {
 
 
 public function index(){
-       // $model=new \application\models\Morden();
-       
     $data = array (
-        'ordenindex' => $this->morden->mselectorden(), 
-        //'ordenindex' => $model->paginate(10), 'pager' => $model -> pager,
+        'ordenindex' => $this->morden->mselectorden(),
         'ordencompletas' => $this->morden->mselectordencompletas(),
     );
 
+    $ordenes=  $data['ordenindex'];
 
+
+    //var_dump($ordenes[1]->hola='hola');
+    //var_dump($ordenes);
+
+
+    foreach ($ordenes as $orden ) {
+
+
+         $id=$orden->IdOrden;
+         $gastos=0;
+         $gastosCompletos=0;
+         log_message('error',sprintf("-----------------id orden------------------ $id"));
+         $tareas=$this->morden->consultaTareas($id);
+
+         foreach ($tareas as $tarea ) {
+           $idParte=$tarea->IdParte;
+           log_message('error',sprintf("gastos igual a $gastos "));
+           log_message('error',sprintf("tarea numero   $idParte"));
+           $gastos=$this->morden->consultaGatosTotales($idParte);
+           $gastosCompletos=$gastosCompletos+$gastos;
+           log_message('error',sprintf("devuelve  $gastos"));
+
+         }
+
+         $orden->Gastos=$gastosCompletos;
+
+
+    }
+
+
+    //die;
 
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside');
@@ -33,14 +60,8 @@ public function index(){
 
 
 public function cadd(){
-    $data = array (
-        'tipoDocumentocombo' => $this->mcombo->mcombotablaorden('orden'),
-
-    );
 
     $data['tipo_cliente_select'] = $this->morden->cliente_listar_select();
-
-
 
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside');
@@ -61,7 +82,7 @@ public function cinsert(){
             'TareaDesarrollar' => $tarea,
             'IdCliente' => $id_cliente,
             'Completada' => '0',
-            'Eliminada' => '1'
+            'Eliminada' => '0'
         );
         $res=$this->morden->minsertorden($data);
         if($res){
@@ -83,6 +104,7 @@ public function cedit($id){
     $data['cliente_select'] = $this->morden->cliente_listar_select2();
     $data['model'] = $this->morden->obtener($data['ordenedit']->IdCliente);
 
+
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside');
     $this->load->view('admin/orden/vedit', $data);
@@ -90,19 +112,25 @@ public function cedit($id){
 }
 
 public function cupdate(){
-
-      $id = $this->input->post('txtidorden');
       $tarea = $this->input->post('txttarea');
-      $fecha = $this->input->post('txtfecha');
+      $precio = $this->input->post('txtprecio');
       $cliente = mb_strtoupper($this->input->post("cliente"));
+      $id = $this->input->post('txtidorden');
+      $check = $this->input->post('habilitado');
+
+      if($check=='on'){
+        $completa=1;
+      }else{
+        $completa=0;
+      }
 
      $data = array(
 
-       'FechaRecepcion' => $fecha,
+       'Precio' => $precio,
        'TareaDesarrollar' => $tarea,
-       'IdCliente' => $cliente
-       //'Completada' => '0',
-       //'Eliminada' => '1'
+       'IdCliente' => $cliente,
+       'Completada' => $completa
+
      );
 
         $res = $this->morden->mupdateorden($id, $data);
@@ -120,11 +148,23 @@ public function cupdate(){
 public function cdelete($id){
 
     $data=array(
-        'Eliminada' => '10'
+        'Eliminada' => '1'
     );
     $this->morden->mupdateorden($id, $data);
     redirect(base_url().'mantenimiento/corden');
 }
+
+public function ccompleta($id){
+
+    $data=array(
+        'Completada' => '1'
+    );
+    $this->morden->mupdateorden($id, $data);
+    redirect(base_url().'mantenimiento/corden');
+}
+
+
+
 
 
 }

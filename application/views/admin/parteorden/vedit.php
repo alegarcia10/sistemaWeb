@@ -1,14 +1,14 @@
 <div class="content-wrapper">
     <section class="content-header">
         <h1>
-            Orden
+            Tarea
             <small>Editar</small>
         </h1>
     </section>
     <section class="content">
         <div class="box box-solid">
             <div class="box-body">
-               <hr>
+
                <div class="row">
                    <div class="col-md-12">
                    <div class="row">
@@ -17,67 +17,299 @@
                             <p><?php echo $this->session->flashdata('error') ?> </p>
                         </div>
                         <?php endif ; ?>
-                        <form action="<?php echo base_url();?>mantenimiento/corden/cupdate" method="POST">
-                            <input type="hidden" value="<?php echo $ordenedit->idorden ?>" name="txtidorden" id="txtidorden">
-                            <input type="hidden" value="<?php echo $ordenedit->idCliente ?>" name="txtidCliente" id="txtidCliente">
+                        <form action="<?php echo base_url();?>mantenimiento/cparteorden/cupdate" method="POST">
+                            <input type="hidden" value="<?php echo $parteordenedit->IdOrden ?>" name="txtidorden" id="txtidorden">
+                            <input type="hidden" value="<?php echo $parteordenedit->IdParte ?>" name="txtidParte" id="txtidParte">
+                            <div class=" col-sm-3 form-group">
+                                <label for="fechaInicio">FechaInicio</label>
+                                <input type="string" id="txtfechaInicio" name="txtfechaInicio" value="<?php echo !empty(form_error('txtfechaInicio'))? set_value('txtfechaInicio') : $parteordenedit->FechaInicio ?>" class= "form-control"   disabled>
+                            </div>
+                            <div class=" col-sm-3 form-group">
+                                <label for="fechaInicio">FechaFin</label>
+                                <input type="string" id="txtfechaFin" name="txtfechaFin" value="<?php echo !empty(form_error('txtfechaFin'))? set_value('txtfechaFin') : $parteordenedit->FechaFin ?>" class= "form-control"   disabled>
+                            </div>
                             <div class=" col-sm-2 form-group">
-                                <label for="fecha">Fecha</label>
-                                <input type="date" id="txtfecha" name="txtfecha" value="<?php echo !empty(form_error('txtfecha'))? set_value('txtfecha') : $ordenedit->fecha ?>" class= "form-control" onblur="this.value=this.value.toUpperCase();">
+                                <label for="fechaTranscurrido">Tiempo Transcurrido</label>
+                                <input type="string" id="txtTranscurrido" name="txtTranscurrido" value="<?php echo !empty(form_error('txtTranscurrido'))? set_value('txtTranscurrido') : $hora ?>" class= "form-control"   disabled>
                             </div>
-                            <div class="col-sm-4 form-group">
-                                <label for="imc">I.M.C</label>
-                                <input type="text" id="txtimc" name="txtimc" maxlength="5" value="<?php echo !empty(form_error('txtcimc'))? set_value('txtimc') : $ordenedit->imc ?>" class= "form-control" onblur="this.value=this.value.toUpperCase();">
-                            </div>
-                            <div class="col-sm-4 form-group">
-                                <label for="cuello">Cuello</label>
-                                <input type="text" id="txtcuello" name="txtcuello" maxlength="5" value="<?php echo !empty(form_error('txtcuello'))? set_value('txtcuello') : $ordenedit->cuello ?>" class= "form-control" onblur="this.value=this.value.toUpperCase();">
-                            </div>
-                            <div class="col-sm-4 form-group">
-                                <label for="peso">Peso</label>
-                                <input type="text" id="txtpeso" name="txtpeso" maxlength="5" value="<?php echo !empty(form_error('txtpeso'))? set_value('txtpeso') : $ordenedit->peso ?>" class= "form-control" onblur="this.value=this.value.toUpperCase();">
-                            </div>
-                            <div class="col-sm-4 form-group">
-                                <label for="pecho">Pecho</label>
-                                <input type="text" id="txtpecho" name="txtpecho" maxlength="5" value="<?php echo !empty(form_error('txtpecho'))? set_value('txtpecho') : $ordenedit->pecho ?>" class= "form-control" onblur="this.value=this.value.toUpperCase();">
-                            </div>
-                            <div class="col-sm-4 form-group">
-                                <label for="brazo">Brazo</label>
-                                <input type="text" id="txtbrazo" name="txtbrazo" maxlength="5" value="<?php echo !empty(form_error('txtbrazo'))? set_value('txtbrazo') : $ordenedit->brazo ?>" class= "form-control" onblur="this.value=this.value.toUpperCase();">
-                            </div>
-                            <div class="col-sm-4 form-group">
-                                <label for="muneca">Muñeca</label>
-                                <input type="text" id="txtmuneca" name="txtmuneca" maxlength="5" value="<?php echo !empty(form_error('txtmuneca'))? set_value('txtmuneca') : $ordenedit->muneca ?>" class= "form-control" onblur="this.value=this.value.toUpperCase();">
-                            </div>
-                            <div class="col-sm-4 form-group">
-                                <label for="cintura">Cintura</label>
-                                <input type="text" id="txtcintura" name="txtcintura" maxlength="5" value="<?php echo !empty(form_error('txtcintura'))? set_value('txtcintura') : $ordenedit->cintura ?>" class= "form-control" onblur="this.value=this.value.toUpperCase();">
-                            </div>
-                            <div class="col-sm-4 form-group">
-                                <label for="cadera">Cadera</label>
-                                <input type="text" id="txtcadera" name="txtcadera" maxlength="5" value="<?php echo !empty(form_error('txtcadera'))? set_value('txtcadera') : $ordenedit->cadera ?>" class= "form-control" onblur="this.value=this.value.toUpperCase();">
-                            </div>
-                            <div class="col-sm-4 form-group">
-                                <label for="abdomen">Abdomen</label>
-                                <input type="text" id="txtabdomen" name="txtabdomen" maxlength="5"value="<?php echo !empty(form_error('txtabdomen'))? set_value('txtabdomen') : $ordenedit->abdomen ?>" class= "form-control" onblur="this.value=this.value.toUpperCase();">
-                            </div>
-                            <div class="col-sm-4 form-group">
-                                <label for="muslo">Muslo</label>
-                                <input type="text" id="txtmuslo" name="txtmuslo"maxlength="5"  value="<?php echo !empty(form_error('txtmuslo'))? set_value('txtmuslo') : $ordenedit->muslo ?>" class= "form-control" onblur="this.value=this.value.toUpperCase();">
+                            <div class="col-md-4 form-group">
+                                <label>Completa</label><br>
+                                <input class="chk_input" type="checkbox" id="habilitado" name="habilitado" data-width="20" data-height="20" disabled <?=(!empty($parteordenedit->Completa)&&$parteordenedit->Completa=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($parteordenedit->Completa))?'checked':''?> />
+                                <span class="checkmark"></span>
                             </div>
                             <div class="col-sm-12 form-group">
-                                <label for="descripcion">Descripcion</label>
-                                <input type="text" id="txtdescripcion" name="txtdescripcion" maxlength="200"value="<?php echo !empty(form_error('txtdescripcion'))? set_value('txtdescripcion') : $ordenedit->descripcion ?>" class= "form-control" onblur="this.value=this.value.toUpperCase();">
+                                <label for="tarea">Tarea</label>
+                                <input type="text" id="txttarea" name="txttarea" maxlength="500" value="<?php echo !empty(form_error('txtctarea'))? set_value('txttarea') : $parteordenedit->TareaDesarrollada ?>" class= "form-control" required >
                             </div>
-
-                            <div class=" col-sm-6 form-group">
-                            <a class="btn btn-success" href="<?php echo base_url();?>mantenimiento/corden/listar/<?php echo $ordenedit->idCliente ?>">Volver</a>
+                            <div class="col-sm-6 form-group">
+                                <a class="btn btn-success" href="<?php echo base_url();?>mantenimiento/cparteorden/listar/<?php echo $parteordenedit->IdOrden;?>">Volver</a>
                                 <button type="submit" class="btn btn-success">Guardar</button>
                             </div>
-                        </div>
-                    </form>
+
+                          </form>
                     </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="row">
+                        <?php if($this->session->flashdata('error')):?>
+                         <div class="alert alert-danger">
+                             <p><?php echo $this->session->flashdata('error') ?> </p>
+                         </div>
+                         <?php endif ; ?>
+
+                         <form action="<?php echo base_url();?>mantenimiento/cparteorden/cupdate" method="POST">
+                              <div class="col-sm-6 form-group">
+                                <h3>Tecnicos</h3>
+                              </div>
+                             <input type="hidden" value="<?php echo $parteordenedit->IdOrden ?>" name="txtidorden" id="txtidorden">
+                             <input type="hidden" value="<?php echo $parteordenedit->IdParte ?>" name="txtidParte" id="txtidParte">
+                               <div class="col-sm-8 form-group" >
+                                   <label class="control-label" for="tipo_tecnico">Tecnico</label>
+                                   <?$this->select_items->sin_buscador($tipo_tecnico_select, '','tipo_tecnico','1', 'required');?>
+                               </div>
+
+                               <div class="col-sm-2">
+                                 <br>
+                                 <button class="btn btn-success" type="button" id="buscar2"><span class="fa fa-search" aria-hidden="true" ></span>Agregar</button>
+                               </div>
+                               <div class="col-sm-12 form-group">
+                                     <table id="example1" class="table table-bordered table-hover order-table">
+                                         <thead>
+                                             <tr>
+                                                 <th>DNI</th>
+                                                 <th>Nombre</th>
+                                             </tr>
+                                         </thead>
+                                         <tbody id='tbody2'>
+                                             <?php if (!empty($tecnico_select)) : ?>
+                                                 <?php foreach ($tecnico_select as $atributos) : ?>
+                                                     <tr>
+                                                         <td><?php echo $atributos->Dni; ?></td>
+                                                         <td ><?php echo $atributos->Nombre; ?></td>
+                                                         <td>
+                                                             <div >
+                                                               <a title="Eliminar" href="<?php echo base_url(); ?>mantenimiento/cparteorden/ceditTecnico/<?php echo $atributos->Dni; ?>/<?php echo $atributos->IdParte; ?>" class="btn btn-danger ">
+                                                                   <span class="fa fa-remove"></span>
+                                                               </a>
+                                                             </div>
+                                                         </td>
+                                                     </tr>
+                                                 <?php endforeach ?>
+                                             <?php endif; ?>
+                                         </tbody>
+                                     </table>
+                               </div>
+                           </form>
+                       </div>
+                    </div>
+               <div class="col-md-6">
+                 <div class="row">
+                   <?php if($this->session->flashdata('error')):?>
+                    <div class="alert alert-danger">
+                        <p><?php echo $this->session->flashdata('error') ?> </p>
+                    </div>
+                    <?php endif ; ?>
+                    <form action="<?php echo base_url();?>mantenimiento/cparteorden/cupdate" method="POST">
+                        <div class="col-sm-8 form-group">
+                          <h3>Materiales</h3>
+                        </div>
+                        <input type="hidden" value="<?php echo $parteordenedit->IdOrden ?>" name="txtidorden" id="txtidorden">
+                        <input type="hidden" value="<?php echo $parteordenedit->IdParte ?>" name="txtidParte" id="txtidParte">
+                          <div class="col-sm-12 form-group">
+                              <label for="material">Descripcion</label>
+                              <input type="text" id="txtmaterial" name="txtmaterial" class="form-control"  value="<?php echo set_value('txtmaterial') ?>" >
+                          </div>
+                          <div class="col-sm-3 form-group">
+                              <label for="cantidad">Cantidad</label>
+                              <input type="text" id="txtcantidad" name="txtcantidad" class="form-control" value="<?php echo set_value('txtcantidad') ?>" >
+                          </div>
+                          <div class="col-sm-3 form-group">
+                              <label for="precio">Precio</label>
+                              <input type="text" id="txtprecio" name="txtprecio" class="form-control" value="<?php echo set_value('txtprecio') ?>" >
+                          </div>
+                          <div class="col-sm-2">
+                            <br>
+                            <button class="btn btn-success" type="button" id="buscar1"><span class="fa fa-search" aria-hidden="true" ></span>Agregar</button>
+                          </div>
+                          <div class="col-sm-12 form-group">
+                                <table id="example1" class="table table-bordered table-hover order-table">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Material</th>
+                                            <th>Cantidad</th>
+                                            <th>Precio</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id='tbody1'>
+                                        <?php if (!empty($material)) : ?>
+                                            <?php foreach ($material as $atributos) : ?>
+                                                <tr>
+                                                    <td><?php echo $atributos->IdMat; ?></td>
+                                                    <td><?php echo $atributos->Descripcion; ?></td>
+                                                    <td><?php echo $atributos->Cantidad; ?></td>
+                                                    <td><?php echo $atributos->Precio; ?></td>
+                                                    <?php $data = $atributos->IdOrden; ?>
+                                                    <td>
+                                                        <div class="btn-group">
+                                                            <a title="Modificar" href="<?php echo base_url(); ?>mantenimiento/cparteorden/ceditMat/<?php echo $atributos->IdMat; ?>" class="btn btn-info ">
+                                                                <span class="fa fa-pencil"></span>
+                                                            </a>
+                                                            <a title="Eliminar" href="<?php echo base_url(); ?>mantenimiento/cparteorden/cdeleteMat/<?php echo $atributos->IdMat; ?>" class="btn btn-danger btn-remove">
+                                                                <span class="fa fa-remove"></span>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            <?php endforeach ?>
+                                        <?php endif; ?>
+                                    </tbody>
+                                </table>
+                          </div>
+                    </form>
+                  </div>
+               </div>
+
                </div>
             </div>
         </div>
     </section>
 </div>
+
+
+<script>
+$(document).ready(function(){
+
+
+
+    $('#buscar1').on('click',function(){
+
+    var material =$('#txtmaterial').val();
+    var idOrden =$('#txtidorden').val();
+    var idParte =$('#txtidParte').val();
+    var cant =$('#txtcantidad').val();
+    var precio =$('#txtprecio').val();
+
+
+    if((material=='') || (cant=='') ){
+
+
+
+    }else{
+
+      $('#txtmaterial').val('');
+      $('#txtcantidad').val('');
+      $('#txtprecio').val('');
+
+            $.ajax( {
+                                method:'POST',
+                                url:'<?php echo base_url(); ?>' + 'mantenimiento/Cparteorden/addMaterial',
+                                dataType:'html',
+                                data:{material:material,idOrden:idOrden,idParte:idParte,cant:cant,precio:precio}})
+                                .done(function(r) {
+
+                                  r = JSON.parse(r);
+
+                                  $("#tbody1").append(r['linksa']);
+
+
+                                });
+
+    }
+
+
+
+
+
+
+    });
+
+    $('#buscar2').on('click',function(){
+      var tecnico =$('#tipo_tecnico').val();
+      var idParte =$('#txtidParte').val();
+
+
+
+
+                $.ajax( {
+                        method:'POST',
+                        url:'<?php echo base_url(); ?>' + 'mantenimiento/Cparteorden/addTecnicoOrden',
+                        dataType:'html',
+                        data:{tecnico:tecnico,idParte:idParte}})
+                        .done(function(r) {
+                          r = JSON.parse(r);
+                          tecnico=r['linksa'];
+                          nombre=tecnico['Nombre'];
+                          id=tecnico['Dni'];
+                          var tel = '<tr><td>'+id+'</td><td>'+nombre+'</td><td><div><a title="Eliminar" href="'+idParte+'ref'+id+'" class="btn btn-danger"><span class="fa fa-remove"></span></a></div></td></tr>';
+
+                          $("#tbody2").append(tel);
+
+
+                        });
+
+    });
+
+
+
+
+
+
+    /*
+    <label for="materiales">
+      Materiales
+      <div class="btn btn-success" id="btnexample1">
+      </div>
+    </label>
+
+    $("#btnexample1").on('click',function(){
+      alert('hola');
+      i=0;
+
+      $("#example1")
+      .append
+      (
+        $('<tr>')
+        .append
+        (
+          $('<td>')
+          .append
+          (
+            $('<input>').attr('type', 'text').attr('name','nombre[]').addClass('form-control')
+          )
+        )
+        .append
+        (
+          $('<td>')
+          .append
+          (
+            $('<input>').attr('type', 'text').attr('name','cantidad[]').addClass('form-control')
+          )
+        )
+        .append
+        (
+          $('<td>')
+          .append
+          (
+            $('<div>').addClass('btn btn-primary').text('Guardar')
+          )
+          .append
+          (
+            $('<div>').addClass('btn btn-danger').text('Eliminar')
+          )
+        )
+      )
+
+    });*/
+
+
+
+
+
+
+
+
+
+
+})
+</script>
