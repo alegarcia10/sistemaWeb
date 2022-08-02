@@ -7,17 +7,37 @@ class Morden extends CI_Model{
 
         $resultado =	$query = $this->db->query("SELECT o.IdOrden , c.Nombre ,o.IdCliente, o.FechaRecepcion ,
            o.TareaDesarrollar, o.Precio, o.Completada, o.Eliminada FROM orden o
-           INNER JOIN cliente c ON o.IdCliente = c.IdCliente where o.Eliminada=0 and o.Completada=0 ORDER BY O.IdOrden ASC;");
+           INNER JOIN cliente c ON o.IdCliente = c.IdCliente where o.Eliminada=0 and o.Completada=0 ORDER BY o.IdOrden ASC;");
         return $resultado->result();
 
     }
+
+    public function consultaTareas($id){
+        $this->db->where('IdOrden', $id);
+        $resultado=$this->db->get('parteorden');
+        return  $resultado->result();
+     }
+
+     //CONSULTA LOS GASTOS DE TODOS OS MATERIALES DE UNA TAREA
+     public function consultaGatosTotales($id){
+       $resultado =$query = $this->db->query("SELECT SUM(Precio)as Gastos FROM material where IdParte=$id");
+        //log_message('error',sprintf("id orden $ $resultado"));
+        $resultado=$resultado->row();
+       $gastos=$resultado->Gastos;
+
+       $x=intval($gastos);
+       //var_dump($gastos->Gastos);
+       log_message('error',sprintf("gastosssss $x "));
+         return  $gastos;
+      }
+
 
     //MOSTRAR orden completas
     public function mselectordencompletas(){
 
         $resultado =$query = $this->db->query("SELECT o.IdOrden , c.Nombre ,o.IdCliente, o.FechaRecepcion ,
            o.TareaDesarrollar, o.Precio, o.Completada, o.Eliminada FROM orden o
-           INNER JOIN cliente c ON o.IdCliente = c.IdCliente where o.Eliminada=0 and o.Completada=1  ORDER BY O.IdOrden ASC ");
+           INNER JOIN cliente c ON o.IdCliente = c.IdCliente where o.Eliminada=0 and o.Completada=1  ORDER BY o.IdOrden ASC ");
         return $resultado->result();
     }
     //INSERTAR orden

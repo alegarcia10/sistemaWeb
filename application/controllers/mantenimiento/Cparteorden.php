@@ -33,20 +33,12 @@ public function cadd($id){
   log_message('error',sprintf(" id que lelga es $id"));
 
 
-  if(strpos($id, '_') !== false){
-    //log_message('error',sprintf(" contiene _"));
-    $id= str_replace('_', ';',$id);
-    list($dni, $idOrden) = explode(';', $id);
 
-    $this->mparteorden->mdeletetecnicoParteOrden($dni);
-
-    redirect(base_url().'mantenimiento/cparteorden/cadd/'.$idOrden);
-  }else{
     $data = array(
 
         'ordenindex' => $this->morden->mselectinfoorden($id),
-        'tipo_tecnico_select' => $this->mparteorden->tecnico_listar_select(),
-        'tecnico_select' => $this->mparteorden->tecnico_parte()
+        'tipo_tecnico_select' => $this->mparteorden->tecnico_listar_select()
+
 
     );
 
@@ -54,7 +46,7 @@ public function cadd($id){
     $this->load->view('layouts/aside');
     $this->load->view('admin/parteorden/vadd', $data);
     $this->load->view('layouts/footer');
-  }
+
 
 }
 
@@ -107,11 +99,7 @@ public function cedit($id){
       }
       elseif(strpos($id, 'ref') !== false){
         $id= str_replace('ref', ';',$id);
-
-
         list($idParte, $dni) = explode(';', $id);
-
-
         $this->mparteorden->mdeletetecnicoOrden($idParte, $dni);
         redirect(base_url().'mantenimiento/cparteorden/cedit/'.$idParte);
       }
@@ -122,6 +110,7 @@ public function cedit($id){
             'tipo_tecnico_select' => $this->mparteorden->tecnico_listar_select(),
             'tecnico_select' => $this->mparteorden->mselectTecnicoIdParte($id),
         );
+
 
 
         $idOrden=$data['parteordenedit']->IdOrden;
@@ -190,19 +179,19 @@ public function addMaterial(){
     $idParte = $this->input->post("idParte");
     $idOrden = $this->input->post("idOrden");
     $cant = $this->input->post("cant");
+    $precio = $this->input->post("precio");
 
 
     $data = array(
         'Cantidad' => $cant,
         'Descripcion' =>  $material,
         'IdOrden' => $idOrden,
-        'IdParte' => $idParte
+        'IdParte' => $idParte,
+        'Precio' => $precio
     );
     $ale=$data['Cantidad'];
 
     $res=$this->mparteorden->cargarMat($data);
-
-
 
     $a=['linksa'=>$res];
 
@@ -236,6 +225,7 @@ public function cupdateMat(){
 
   $descripcion = $this->input->post('txtdescripcion');
   $cantidad = $this->input->post('txtcantidad');
+  $precio = $this->input->post('txtprecio');
   $id = $this->input->post('txtid');
   $mat = $this->mparteorden->obtenerMaterialconIdMat($id);
 
@@ -244,7 +234,8 @@ public function cupdateMat(){
 
       $data = array(
           'Descripcion' => $descripcion,
-          'Cantidad' => $cantidad
+          'Cantidad' => $cantidad,
+          'Precio' => $precio
       );
 
 
@@ -267,10 +258,10 @@ public function addTecnicoOrden(){
     );
 
     $this->mparteorden->cargarTecnicoOrden($data);
-    $Nombre=$this->mparteorden->nombreTecnico($tecnico);
+    $tecnico=$this->mparteorden->nombreTecnico($tecnico);
 
 
-    $a=['linksa'=>$Nombre];
+    $a=['linksa'=>$tecnico];
 
     echo json_encode($a);
 }

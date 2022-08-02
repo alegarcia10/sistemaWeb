@@ -20,11 +20,11 @@
                             <input type="hidden" value="<?php echo $ordenedit->IdOrden ?>" name="txtidorden" id="txtidorden">
                             <div class="col-sm-3 form-group">
                                 <label for="fecha">FECHA</label>
-                                <input type="text" id="txtfecha" name="txtfecha"  value="<?php echo !empty(form_error('txtfecha'))? set_value('txtfecha') :  date("d-m-Y", strtotime("$ordenedit->FechaRecepcion"));?>" class= "form-control" onblur="this.value=this.value.toUpperCase();" disabled>
+                                <input type="text" id="txtfecha" name="txtfecha"  value="<?php echo !empty(form_error('txtfecha'))? set_value('txtfecha') :  date("d-m-Y", strtotime("$ordenedit->FechaRecepcion"));?>" class= "form-control"   disabled>
                             </div>
                             <div class="col-sm-3 form-group">
                                 <label for="precio">PRECIO</label>
-                                <input type="text" id="txtprecio" name="txtprecio"  value="<?php echo !empty(form_error('txtprecio'))? set_value('txtprecio') :  $ordenedit->Precio;?>" class= "form-control" onblur="this.value=this.value.toUpperCase();" >
+                                <input type="text" id="txtprecio" name="txtprecio"  value="<?php echo !empty(form_error('txtprecio'))? set_value('txtprecio') :  $ordenedit->Precio;?>" class= "form-control"   >
                             </div>
                             <div class="col-md-4 form-group">
                                 <label>Completa</label><br>
@@ -33,7 +33,7 @@
                             </div>
                             <div class="col-sm-12 form-group">
                                 <label for="tarea">Tarea</label>
-                                <input type="text" id="txttarea" name="txttarea" maxlength="50" value="<?php echo !empty(form_error('txttarea'))? set_value('txttarea') : $ordenedit->TareaDesarrollar ?>" class= "form-control" onblur="this.value=this.value.toUpperCase();">
+                                <input type="text" id="txttarea" name="txttarea" maxlength="50" value="<?php echo !empty(form_error('txttarea'))? set_value('txttarea') : $ordenedit->TareaDesarrollar ?>" class= "form-control"  required>
                             </div>
                             <div class="col-md-5 form-group">
                               <label for="cliente">Cliente&nbsp;&nbsp; (*)</label>

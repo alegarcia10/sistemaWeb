@@ -22,6 +22,13 @@ class Mcliente extends CI_Model{
        return $resultado->row();
     }
 
+    //OBTENER DATOS CON DNI
+    public function obtenerclientedni($dni){
+       $this->db->where('DniCuit', $dni);
+       $resultado = $this->db->get('cliente');
+       return $resultado->row();
+    }
+
     //MODIFICAR Cliente
     public function mupdatecliente($id, $data){
         $this->db->where('IdCliente', $id);

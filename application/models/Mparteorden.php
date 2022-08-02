@@ -42,8 +42,10 @@ class Mparteorden extends CI_Model{
      }
 
      public function mselectinfoparteorden($id){
-        $this->db->where('IdOrden =',"$id");
-        $resultado =$this->db->get('orden');
+
+        $resultado =	$query = $this->db->query("SELECT o.IdOrden , o.FechaRecepcion , o.TareaDesarrollar , o.Precio , o.IdCliente , o.Completada , o.Eliminada , c.Nombre
+        FROM orden o
+        INNER JOIN cliente c ON o.IdCliente = c.IdCliente where o.IdOrden=$id;");
         return $resultado->row();
     }
     public function tecnico_listar_select(){//
@@ -90,7 +92,7 @@ class Mparteorden extends CI_Model{
     public function mselectTecnicoIdParte($id){
 
         $resultado =	$query = $this->db->query("SELECT t.IdParte , t.Dni , tc.Nombre FROM tecnicoorden t
-           INNER JOIN tecnico tc ON t.Dni = tc.Dni where t.IdParte<=$id ;");
+           INNER JOIN tecnico tc ON t.Dni = tc.Dni where t.IdParte=$id ;");
         return $resultado->result();
     }
 
@@ -112,6 +114,7 @@ class Mparteorden extends CI_Model{
         $IdOrden=$data['IdOrden'];
         $Cantidad=$data['Cantidad'];
         $Descripcion=$data['Descripcion'];
+        $Precio=$data['Precio'];
         $this->db->where('IdOrden =',"$IdOrden");
         $this->db->where('IdParte =',"$IdParte");
         $this->db->insert('material',$data);
@@ -121,6 +124,7 @@ class Mparteorden extends CI_Model{
                     <td>'.$IdMat.'</td>
                     <td>'.$Descripcion.'</td>
                     <td>'.$Cantidad.'</td>
+                    <td>'.$Precio.'</td>
                     <td>
                         <div class="btn-group">
                             <a title="Modificar" href="@'.$IdMat.'" class="btn btn-info ">
@@ -154,12 +158,21 @@ class Mparteorden extends CI_Model{
 
     }
 
-    //Trae Tecnico asociado a ORDEN al momento de crear momentaneamente
-    public function tecnico_parte(){
-        $resultado =$this->db->get('tecnicoparteorden');
-        return $resultado->result();
+
+
+    //Trae Tecnico con el dni
+    public function nombreTecnico($Dni){
+        $this->db->where('Dni =',"$Dni");
+        $resultado =$this->db->get('tecnico');
+        $res=$resultado->row();
+        return $res;
     }
 
+
+    /*//INSERTAR TecnicoParteOrden
+    public function cargarTecnicoParteOrden($data){
+      return $this->db->insert('tecnicoparteorden',$data);
+    }
     //Eliminar Tecnico tala tecnicoparteorden
     public function mdeletetecnicoParteOrden($Dni){
         $this->db->where('Dni =',"$Dni");
@@ -167,18 +180,11 @@ class Mparteorden extends CI_Model{
 
     }
 
-    //Trae Tecnico con el dni
-    public function nombreTecnico($Dni){
-        $this->db->where('Dni =',"$Dni");
-        $resultado =$this->db->get('tecnico');
-        $res=$resultado->row();
-        return $res->Nombre;
-    }
-
-    //INSERTAR TecnicoParteOrden
-    public function cargarTecnicoParteOrden($data){
-      return $this->db->insert('tecnicoparteorden',$data);
-    }
+    //Trae Tecnico asociado a ORDEN al momento de crear momentaneamente
+    public function tecnico_parte(){
+        $resultado =$this->db->get('tecnicoparteorden');
+        return $resultado->result();
+    }*/
 
 
 

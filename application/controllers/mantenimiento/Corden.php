@@ -18,6 +18,39 @@ public function index(){
         'ordencompletas' => $this->morden->mselectordencompletas(),
     );
 
+    $ordenes=  $data['ordenindex'];
+
+
+    //var_dump($ordenes[1]->hola='hola');
+    //var_dump($ordenes);
+
+
+    foreach ($ordenes as $orden ) {
+
+
+         $id=$orden->IdOrden;
+         $gastos=0;
+         $gastosCompletos=0;
+         log_message('error',sprintf("-----------------id orden------------------ $id"));
+         $tareas=$this->morden->consultaTareas($id);
+
+         foreach ($tareas as $tarea ) {
+           $idParte=$tarea->IdParte;
+           log_message('error',sprintf("gastos igual a $gastos "));
+           log_message('error',sprintf("tarea numero   $idParte"));
+           $gastos=$this->morden->consultaGatosTotales($idParte);
+           $gastosCompletos=$gastosCompletos+$gastos;
+           log_message('error',sprintf("devuelve  $gastos"));
+
+         }
+
+         $orden->Gastos=$gastosCompletos;
+
+
+    }
+
+
+    //die;
 
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside');

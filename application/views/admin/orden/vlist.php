@@ -37,19 +37,22 @@
                                     <th>FECHA</th>
                                     <th>TAREA</th>
                                     <th>PRECIO FACTURADO</th>
+                                    <th>GASTOS</th>
                                     <th>CLIENTE</th>
+                                    <th >OPERACIONES</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php if (!empty($ordenindex)) : ?>
                                     <?php foreach ($ordenindex as $atributos) :?>
                                         <tr>
-                                            <td><?php echo $atributos->IdOrden; ?></td>
-                                            <td><?php echo date("d-m-Y", strtotime("$atributos->FechaRecepcion")); ?></td>
-                                            <td><?php echo $atributos->TareaDesarrollar; ?></td>
-                                            <td><?php echo $atributos->Precio; ?></td>
-                                            <td><?php echo $atributos->Nombre; ?></td>
-                                            <td>
+                                            <td width="5%"><?php echo $atributos->IdOrden; ?></td>
+                                            <td width="10%"><?php echo date("d-m-Y", strtotime("$atributos->FechaRecepcion")); ?></td>
+                                            <td width="30%"><?php echo $atributos->TareaDesarrollar; ?></td>
+                                            <td width="10%"><?php echo $atributos->Precio; ?></td>
+                                            <td width="10%"><?php echo $atributos->Gastos; ?></td>
+                                            <td width="15%"><?php echo $atributos->Nombre; ?></td>
+                                            <td width="20%" >
                                                 <div class="btn-group">
                                                   <a href="<?php echo base_url(); ?>mantenimiento/cparteorden/listar/<?php echo $atributos->IdOrden; ?>" class="btn btn-warning" title="Tareas">
                                                       <span class="fa fa-eye"></span>

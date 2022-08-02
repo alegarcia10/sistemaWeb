@@ -21,9 +21,9 @@
 
                                 <div class="col-sm-12 form-group">
                                     <label for="tarea" >Tarea</label>
-                                    <input type="text" id="txttarea" name="txttarea" class="form-control" value="<?php echo set_value('txttarea') ?>" onblur="this.value=this.value.toUpperCase();">
+                                    <input type="text" id="txttarea" name="txttarea" class="form-control" value="<?php echo set_value('txttarea') ?>" required >
                                 </div>
-                                
+
                                 <div class="col-sm-12 form-group">
                                 <a class="btn btn-success" href="<?php echo base_url();?>mantenimiento/cparteorden/listar/<?php echo $ordenindex->IdOrden ?>">Volver</a>
                                     <button type="submit" class="btn btn-success">Guardar</button>

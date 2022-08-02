@@ -24,7 +24,7 @@
                         <h4>PRECIO: <?= $ordenindex->Precio ?> </h4>
                     </div>
                     <div class="col-md-4">
-                        <h4>CLIENTE: <?= $ordenindex->IdCliente ?> </h4>
+                        <h4>CLIENTE: <?= $ordenindex->Nombre ?> </h4>
                     </div>
                 </div>
                 <hr>

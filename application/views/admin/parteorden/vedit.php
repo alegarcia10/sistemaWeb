@@ -22,15 +22,15 @@
                             <input type="hidden" value="<?php echo $parteordenedit->IdParte ?>" name="txtidParte" id="txtidParte">
                             <div class=" col-sm-3 form-group">
                                 <label for="fechaInicio">FechaInicio</label>
-                                <input type="string" id="txtfechaInicio" name="txtfechaInicio" value="<?php echo !empty(form_error('txtfechaInicio'))? set_value('txtfechaInicio') : $parteordenedit->FechaInicio ?>" class= "form-control" onblur="this.value=this.value.toUpperCase();" disabled>
+                                <input type="string" id="txtfechaInicio" name="txtfechaInicio" value="<?php echo !empty(form_error('txtfechaInicio'))? set_value('txtfechaInicio') : $parteordenedit->FechaInicio ?>" class= "form-control"   disabled>
                             </div>
                             <div class=" col-sm-3 form-group">
                                 <label for="fechaInicio">FechaFin</label>
-                                <input type="string" id="txtfechaFin" name="txtfechaFin" value="<?php echo !empty(form_error('txtfechaFin'))? set_value('txtfechaFin') : $parteordenedit->FechaFin ?>" class= "form-control" onblur="this.value=this.value.toUpperCase();" disabled>
+                                <input type="string" id="txtfechaFin" name="txtfechaFin" value="<?php echo !empty(form_error('txtfechaFin'))? set_value('txtfechaFin') : $parteordenedit->FechaFin ?>" class= "form-control"   disabled>
                             </div>
                             <div class=" col-sm-2 form-group">
                                 <label for="fechaTranscurrido">Tiempo Transcurrido</label>
-                                <input type="string" id="txtTranscurrido" name="txtTranscurrido" value="<?php echo !empty(form_error('txtTranscurrido'))? set_value('txtTranscurrido') : $hora ?>" class= "form-control" onblur="this.value=this.value.toUpperCase();" disabled>
+                                <input type="string" id="txtTranscurrido" name="txtTranscurrido" value="<?php echo !empty(form_error('txtTranscurrido'))? set_value('txtTranscurrido') : $hora ?>" class= "form-control"   disabled>
                             </div>
                             <div class="col-md-4 form-group">
                                 <label>Completa</label><br>
@@ -39,7 +39,7 @@
                             </div>
                             <div class="col-sm-12 form-group">
                                 <label for="tarea">Tarea</label>
-                                <input type="text" id="txttarea" name="txttarea" maxlength="500" value="<?php echo !empty(form_error('txtctarea'))? set_value('txttarea') : $parteordenedit->TareaDesarrollada ?>" class= "form-control" onblur="this.value=this.value.toUpperCase();">
+                                <input type="text" id="txttarea" name="txttarea" maxlength="500" value="<?php echo !empty(form_error('txtctarea'))? set_value('txttarea') : $parteordenedit->TareaDesarrollada ?>" class= "form-control" required >
                             </div>
                             <div class="col-sm-6 form-group">
                                 <a class="btn btn-success" href="<?php echo base_url();?>mantenimiento/cparteorden/listar/<?php echo $parteordenedit->IdOrden;?>">Volver</a>
@@ -76,7 +76,7 @@
                                      <table id="example1" class="table table-bordered table-hover order-table">
                                          <thead>
                                              <tr>
-                                                 <th>ID Tecnico</th>
+                                                 <th>DNI</th>
                                                  <th>Nombre</th>
                                              </tr>
                                          </thead>
@@ -84,7 +84,7 @@
                                              <?php if (!empty($tecnico_select)) : ?>
                                                  <?php foreach ($tecnico_select as $atributos) : ?>
                                                      <tr>
-                                                         <td><?php echo $atributos->IdParte; ?></td>
+                                                         <td><?php echo $atributos->Dni; ?></td>
                                                          <td ><?php echo $atributos->Nombre; ?></td>
                                                          <td>
                                                              <div >
@@ -110,23 +110,26 @@
                     </div>
                     <?php endif ; ?>
                     <form action="<?php echo base_url();?>mantenimiento/cparteorden/cupdate" method="POST">
-                        <div class="col-sm-6 form-group">
+                        <div class="col-sm-8 form-group">
                           <h3>Materiales</h3>
                         </div>
                         <input type="hidden" value="<?php echo $parteordenedit->IdOrden ?>" name="txtidorden" id="txtidorden">
                         <input type="hidden" value="<?php echo $parteordenedit->IdParte ?>" name="txtidParte" id="txtidParte">
-                          <div class="col-sm-7 form-group">
+                          <div class="col-sm-12 form-group">
                               <label for="material">Descripcion</label>
-                              <input type="text" id="txtmaterial" name="txtmaterial" class="form-control" value="<?php echo set_value('txtmaterial') ?>" onblur="this.value=this.value.toUpperCase();" required>
+                              <input type="text" id="txtmaterial" name="txtmaterial" class="form-control"  value="<?php echo set_value('txtmaterial') ?>" >
                           </div>
-                          <div class="col-sm-2 form-group">
+                          <div class="col-sm-3 form-group">
                               <label for="cantidad">Cantidad</label>
-                              <input type="number" id="txtcantidad" name="txtcantidad" class="form-control" value="<?php echo set_value('txtcantidad') ?>" onblur="this.value=this.value.toUpperCase();" required>
+                              <input type="text" id="txtcantidad" name="txtcantidad" class="form-control" value="<?php echo set_value('txtcantidad') ?>" >
+                          </div>
+                          <div class="col-sm-3 form-group">
+                              <label for="precio">Precio</label>
+                              <input type="text" id="txtprecio" name="txtprecio" class="form-control" value="<?php echo set_value('txtprecio') ?>" >
                           </div>
                           <div class="col-sm-2">
                             <br>
                             <button class="btn btn-success" type="button" id="buscar1"><span class="fa fa-search" aria-hidden="true" ></span>Agregar</button>
-
                           </div>
                           <div class="col-sm-12 form-group">
                                 <table id="example1" class="table table-bordered table-hover order-table">
@@ -135,6 +138,7 @@
                                             <th>#</th>
                                             <th>Material</th>
                                             <th>Cantidad</th>
+                                            <th>Precio</th>
                                         </tr>
                                     </thead>
                                     <tbody id='tbody1'>
@@ -144,7 +148,7 @@
                                                     <td><?php echo $atributos->IdMat; ?></td>
                                                     <td><?php echo $atributos->Descripcion; ?></td>
                                                     <td><?php echo $atributos->Cantidad; ?></td>
-
+                                                    <td><?php echo $atributos->Precio; ?></td>
                                                     <?php $data = $atributos->IdOrden; ?>
                                                     <td>
                                                         <div class="btn-group">
@@ -179,32 +183,51 @@ $(document).ready(function(){
 
 
     $('#buscar1').on('click',function(){
+
     var material =$('#txtmaterial').val();
     var idOrden =$('#txtidorden').val();
     var idParte =$('#txtidParte').val();
     var cant =$('#txtcantidad').val();
+    var precio =$('#txtprecio').val();
 
 
-    $.ajax( {
-                        method:'POST',
-                        url:'<?php echo base_url(); ?>' + 'mantenimiento/Cparteorden/addMaterial',
-                        dataType:'html',
-                        data:{material:material,idOrden:idOrden,idParte:idParte,cant:cant}})
-                        .done(function(r) {
-
-                          r = JSON.parse(r);
-
-                          $("#tbody1").append(r['linksa']);
+    if((material=='') || (cant=='') ){
 
 
-                        });
+
+    }else{
+
+      $('#txtmaterial').val('');
+      $('#txtcantidad').val('');
+      $('#txtprecio').val('');
+
+            $.ajax( {
+                                method:'POST',
+                                url:'<?php echo base_url(); ?>' + 'mantenimiento/Cparteorden/addMaterial',
+                                dataType:'html',
+                                data:{material:material,idOrden:idOrden,idParte:idParte,cant:cant,precio:precio}})
+                                .done(function(r) {
+
+                                  r = JSON.parse(r);
+
+                                  $("#tbody1").append(r['linksa']);
+
+
+                                });
+
+    }
+
+
+
+
+
 
     });
 
     $('#buscar2').on('click',function(){
       var tecnico =$('#tipo_tecnico').val();
       var idParte =$('#txtidParte').val();
-      var idParte =$('#txtidParte').val();
+
 
 
 
@@ -215,8 +238,10 @@ $(document).ready(function(){
                         data:{tecnico:tecnico,idParte:idParte}})
                         .done(function(r) {
                           r = JSON.parse(r);
-                          nombre=r['linksa'];
-                          var tel = '<tr><td>'+idParte+'</td><td>'+nombre+'</td><td><div><a title="Eliminar" href="'+idParte+'ref'+tecnico+'" class="btn btn-danger"><span class="fa fa-remove"></span></a></div></td></tr>';
+                          tecnico=r['linksa'];
+                          nombre=tecnico['Nombre'];
+                          id=tecnico['Dni'];
+                          var tel = '<tr><td>'+id+'</td><td>'+nombre+'</td><td><div><a title="Eliminar" href="'+idParte+'ref'+id+'" class="btn btn-danger"><span class="fa fa-remove"></span></a></div></td></tr>';
 
                           $("#tbody2").append(tel);
 

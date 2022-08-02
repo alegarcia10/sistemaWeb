@@ -19,7 +19,7 @@
                             <form action="<?php echo base_url(); ?>mantenimiento/corden/cinsert" method="POST">
                                 <div class="col-sm-2 form-group">
                                   <label for="fecha">FECHA</label>
-                                  <input type="date" id="txtfecha" name="txtfecha" class="form-control" value="<?php echo set_value('txtfecha') ?>" onblur="this.value=this.value.toUpperCase();">
+                                  <input type="date" id="txtfecha" name="txtfecha" class="form-control" value="<?php echo set_value('txtfecha') ?>" required >
                                 </div>
                                 <div class="col-sm-3 form-group">
                                     <label class="control-label" for="tipo_cliente">CLIENTE (*)</label>
@@ -27,7 +27,7 @@
                                 </div>
                                 <div class=" col-sm-12 form-group">
                                     <label for="tarea">TAREA</label>
-                                    <input type="text" id="txttarea" name="txttarea" maxlength="500"class="form-control" value="<?php echo set_value('txttarea') ?>" onblur="this.value=this.value.toUpperCase();">
+                                    <input type="text" id="txttarea" name="txttarea" maxlength="500"class="form-control" value="<?php echo set_value('txttarea') ?>" required >
                                 </div>
                                 <div class="col-sm-12 form-group">
                                     <a class="btn btn-success" href="<?php echo base_url(); ?>mantenimiento/corden">Volver</a>
@@ -35,12 +35,18 @@
                                 </div>
 
                             </form>
-
-
-                        </div>
+                        </div>                      
                     </div>
                 </div>
             </div>
         </div>
     </section>
 </div>
+
+<script type="text/javascript">
+
+  $('#buscar1').on('click',function(){
+      $("#exampleModal").modal("show");
+  });
+
+</script>
