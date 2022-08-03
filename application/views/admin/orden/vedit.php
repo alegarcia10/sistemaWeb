@@ -1,5 +1,4 @@
 <div class="content-wrapper">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <section class="content-header">
         <h1>
         Orden
@@ -25,7 +24,7 @@
                             </div>
                             <div class="col-sm-3 form-group">
                                 <label for="precio">PRECIO</label>
-                                <input type="number" id="txtprecio" name="txtprecio" step="0.01" min="0" max="9999999.99" value="<?php echo !empty(form_error('txtprecio'))? set_value('txtprecio') :  $ordenedit->Precio;?>" class= "form-control"   >
+                                <input type="number" id="txtprecio" name="txtprecio" step="0.01"  value="<?php echo !empty(form_error('txtprecio'))? set_value('txtprecio') :  $ordenedit->Precio;?>" class= "form-control"   >
                             </div>
                             <div class="col-md-4 form-group">
                                 <label>Completa</label><br>
@@ -53,5 +52,3 @@
         </div>
     </section>
 </div>
-<script>
-</script>
