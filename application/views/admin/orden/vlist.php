@@ -50,7 +50,7 @@
                                             <td width="10%"><?php echo date("d-m-Y", strtotime("$atributos->FechaRecepcion")); ?></td>
                                             <td width="30%"><?php echo $atributos->TareaDesarrollar; ?></td>
                                             <td width="10%"> $<?php echo $atributos->Gastos; ?></td>
-                                            <td width="10%">$<?php echo $atributos->Precio; ?></td>
+                                            <td width="10%">$<?php echo number_format($atributos->Precio;, 2): string?></td>
                                             <td width="15%"><?php echo $atributos->Nombre; ?></td>
                                             <td width="20%" >
                                                 <div class="btn-group">
