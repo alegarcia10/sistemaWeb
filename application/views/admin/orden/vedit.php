@@ -25,7 +25,7 @@
                             </div>
                             <div class="col-sm-3 form-group">
                                 <label for="precio">PRECIO</label>
-                                <input type="number" id="txtprecio" name="txtprecio" data-decimal="2" oninput="enforceNumberValidation(this)" value="<?php echo !empty(form_error('txtprecio'))? set_value('txtprecio') :  $ordenedit->Precio;?>" class= "form-control"   >
+                                <input type="number" id="txtprecio" name="txtprecio" step="any" class="two-decimals" value="<?php echo !empty(form_error('txtprecio'))? set_value('txtprecio') :  $ordenedit->Precio;?>" class= "form-control"   >
                             </div>
                             <div class="col-md-4 form-group">
                                 <label>Completa</label><br>
@@ -54,25 +54,7 @@
     </section>
 </div>
 <script>
-	function enforceNumberValidation(ele) {
-    if ($(ele).data('decimal') != null) {
-        // found valid rule for decimal
-        var decimal = parseInt($(ele).data('decimal')) || 0;
-        var val = $(ele).val();
-        if (decimal > 0) {
-            var splitVal = val.split('.');
-            if (splitVal.length == 2 && splitVal[1].length > decimal) {
-                // user entered invalid input
-                $(ele).val(splitVal[0] + '.' + splitVal[1].substr(0, decimal));
-            }
-        } else if (decimal == 0) {
-            // do not allow decimal place
-            var splitVal = val.split('.');
-            if (splitVal.length > 1) {
-                // user entered invalid input
-                $(ele).val(splitVal[0]); // always trim everything after '.'
-            }
-        }
-    }
-}
+	$(".two-decimals").change(function(){
+  this.value = parseFloat(this.value).toFixed(2);
+});
 </script>
