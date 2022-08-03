@@ -153,6 +153,15 @@ public function ccompleta($id){
     redirect(base_url().'mantenimiento/corden');
 }
 
+public function cdescompleta($id){
+
+    $data=array(
+        'Completada' => '0'
+    );
+    $this->morden->mupdateorden($id, $data);
+    redirect(base_url().'mantenimiento/corden');
+}
+
 
 
 

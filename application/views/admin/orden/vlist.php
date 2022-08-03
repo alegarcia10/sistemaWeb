@@ -23,7 +23,7 @@
                 <div class="row">
                     <div class="col-md-12">
                       <div class="col-md-9">
-                          <h1>Ordenes Activas</h1>
+                          <h1>Ordenes Activas<span class="fa fa-clock-o"></span></h1>
 
                       </div>
                       <div class="col-md-3">
@@ -64,7 +64,7 @@
                                                         <span class="fa fa-remove"></span>
                                                     </a>
                                                     <a href="<?php echo base_url(); ?>mantenimiento/corden/ccompleta/<?php echo $atributos->IdOrden; ?>" class="btn btn-success " title="Completa">
-                                                        <span class="fa fa-check"></span>
+                                                        <span class="fa fa-check-circle"></span>
                                                     </a>
                                                 </div>
                                             </td>
@@ -77,7 +77,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-9">
-                        <h1>Ordenes Completas</h1>
+                        <h1>Ordenes Completas<span class="fa fa-check-circle"></span></h1>
                     </div>
                     <div class="col-md-3">
                         <br>
@@ -115,6 +115,9 @@
                                                     </a>
                                                     <a href="<?php echo base_url(); ?>mantenimiento/corden/cdelete/<?php echo $atributos->IdOrden; ?>" class="btn btn-danger btn-remove" title="Eliminar">
                                                         <span class="fa fa-remove"></span>
+                                                    </a>
+                                                    <a href="<?php echo base_url(); ?>mantenimiento/corden/cdescompleta/<?php echo $atributos->IdOrden; ?>" class="btn btn-success " title="Reanudar">
+                                                        <span class="fa fa-clock-o"></span>
                                                     </a>
                                                 </div>
                                             </td>
