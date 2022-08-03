@@ -41,7 +41,7 @@ public function index(){
 
          }
 
-         $orden->Gastos=consultaGatosOrden($id);
+         $orden->Gastos=consultarGastosOrden($id);
 
 
     }
