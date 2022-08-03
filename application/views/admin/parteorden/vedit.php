@@ -131,7 +131,7 @@
                           </div>
                           <div class="col-sm-3 form-group">
                               <label for="precio">Precio</label>
-                              <input type="text" id="txtprecio" name="txtprecio" class="form-control" step=".01" value="<?php echo set_value('txtprecio') ?>" >
+                              <input type="number" id="txtprecio" name="txtprecio" class="form-control" step=".01" value="<?php echo set_value('txtprecio') ?>" >
                           </div>
                           <div class="col-sm-2">
                             <br>

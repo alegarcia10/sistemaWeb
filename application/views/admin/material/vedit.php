@@ -28,7 +28,7 @@
                             </div>
                             <div class="col-sm-2 form-group">
                                 <label for="precio">Precio</label>
-                                <input type="text" id="txtprecio" name="txtprecio" step=".01" value="<?php echo !empty(form_error('txtprecio'))? set_value('txtprecio') : $materialedit->Precio ?>" class= "form-control"  >
+                                <input type="number" id="txtprecio" name="txtprecio" step=".01" value="<?php echo !empty(form_error('txtprecio'))? set_value('txtprecio') : $materialedit->Precio ?>" class= "form-control"  >
                             </div>
 
                             <div class="col-sm-12 form-group">
