@@ -63,7 +63,7 @@
                                                     <a href="<?php echo base_url(); ?>mantenimiento/corden/cdelete/<?php echo $atributos->IdOrden; ?>" class="btn btn-danger btn-remove" title="Eliminar">
                                                         <span class="fa fa-remove"></span>
                                                     </a>
-                                                    <a href="<?php echo base_url(); ?>mantenimiento/corden/ccompleta/<?php echo $atributos->IdOrden; ?>" class="btn btn-success btn-remove" title="Completa">
+                                                    <a href="<?php echo base_url(); ?>mantenimiento/corden/ccompleta/<?php echo $atributos->IdOrden; ?>" class="btn btn-success " title="Completa">
                                                         <span class="fa fa-play"></span>
                                                     </a>
                                                 </div>
