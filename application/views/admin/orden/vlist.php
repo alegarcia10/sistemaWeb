@@ -23,7 +23,7 @@
                 <div class="row">
                     <div class="col-md-12">
                       <div class="col-md-9">
-                          <h1>Ordenes Activas<span class="fa fa-clock-o"></span></h1>
+                          <h1>Ordenes Activas  <span class="fa fa-clock-o"></span></h1>
 
                       </div>
                       <div class="col-md-3">
@@ -77,7 +77,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-9">
-                        <h1>Ordenes Completas<span class="fa fa-check-circle"></span></h1>
+                        <h1>Ordenes Completas  <span class="fa fa-check-circle"></span></h1>
                     </div>
                     <div class="col-md-3">
                         <br>
