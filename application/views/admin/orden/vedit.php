@@ -25,7 +25,7 @@
                             </div>
                             <div class="col-sm-3 form-group">
                                 <label for="precio">PRECIO</label>
-                                <input type="number" id="txtprecio" name="txtprecio" step="any" class="two-decimals" value="<?php echo !empty(form_error('txtprecio'))? set_value('txtprecio') :  $ordenedit->Precio;?>" class= "form-control"   >
+                                <input type="number" id="txtprecio" name="txtprecio" step="0.01" pattern="^\d+(?:\.\d{1,2})?$" value="<?php echo !empty(form_error('txtprecio'))? set_value('txtprecio') :  $ordenedit->Precio;?>" class= "form-control"   >
                             </div>
                             <div class="col-md-4 form-group">
                                 <label>Completa</label><br>
@@ -54,7 +54,4 @@
     </section>
 </div>
 <script>
-	$(".two-decimals").change(function(){
-  this.value = parseFloat(this.value).toFixed(2);
-});
 </script>
