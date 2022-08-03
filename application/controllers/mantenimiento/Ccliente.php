@@ -110,7 +110,7 @@ public function cupdate(){
                       redirect(base_url().'mantenimiento/ccliente/cedit/'.$idcliente);
                   }
 
-     
+
 
 
 
@@ -123,7 +123,8 @@ public function cdelete($id){
         'Anulado' => '1'
     );
     $this->mcliente->mupdatecliente($id, $data);
-    redirect(base_url().'mantenimiento/ccliente');
+    //redirect(base_url().'mantenimiento/ccliente');
+    echo "mantenimiento/ccliente";
 }
 
 

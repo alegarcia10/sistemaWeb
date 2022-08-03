@@ -22,15 +22,10 @@
                         <p><?php echo $this->session->flashdata('correcto') ?></p>
                     </div>
                 <?php endif; ?>
-
                 <hr>
                 <div class="row">
-
-
                     <div class="col-md-12">
-
                         <table id="example1" class="table table-bordered table-hover order-table">
-
                             <thead>
                                 <tr>
                                     <th>#</th>
@@ -38,7 +33,6 @@
                                     <th>Nombre</th>
                                     <th>Domicilio</th>
                                     <th>Provincia</th>
-
                                 </tr>
                             </thead>
                             <tbody>
@@ -50,11 +44,9 @@
                                             <td><?php echo $atributos->Nombre; ?></td>
                                             <td><?php echo $atributos->Domicilio; ?></td>
                                             <td><?php echo $atributos->Provincia; ?></td>
-
-
                                             <td>
                                                 <div class="btn-group">
-                                                
+
                                                     <a href="<?php echo base_url(); ?>mantenimiento/ccliente/cedit/<?php echo $atributos->IdCliente; ?>" class="btn btn-info" title="Modificar">
                                                         <span class="fa fa-pencil"></span>
                                                     </a>
@@ -73,35 +65,4 @@
             </div>
         </div>
     </section>
-</div>
-
-<div class="modal fade" id="modal-default">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">x</font>
-                        </font>
-                    </span>
-                </button>
-                <h4 class="modal-title">
-                    <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;"> Informacion de la cliente</font>
-                    </font>
-                </h4>
-            </div>
-            <div class="modal-body">
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">
-                    <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">Cerrar</font>
-                    </font>
-                </button>
-            </div>
-        </div>
-    </div>
 </div>

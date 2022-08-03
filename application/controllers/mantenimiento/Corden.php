@@ -12,6 +12,7 @@ class Corden extends CI_Controller {
     }
 
 
+
 public function index(){
     $data = array (
         'ordenindex' => $this->morden->mselectorden(),
@@ -21,11 +22,37 @@ public function index(){
     $ordenes=  $data['ordenindex'];
 
 
-    //var_dump($ordenes[1]->hola='hola');
-    //var_dump($ordenes);
-
 
     foreach ($ordenes as $orden ) {
+
+
+         $id=$orden->IdOrden;
+         $gastos=0;
+         $gastosCompletos=0;
+         log_message('error',sprintf("-----------------id orden------------------ $id"));
+         $tareas=$this->morden->consultaTareas($id);
+
+         foreach ($tareas as $tarea ) {
+           $idParte=$tarea->IdParte;
+           log_message('error',sprintf("gastos igual a $gastos "));
+           log_message('error',sprintf("tarea numero   $idParte"));
+           $gastos=$this->morden->consultaGatosTotales($idParte);
+           $gastosCompletos=$gastosCompletos+$gastos;
+           log_message('error',sprintf("devuelve  $gastos"));
+
+         }
+
+         $orden->Gastos=$gastosCompletos;
+
+
+    }
+
+
+    $ordenesCompletas=  $data['ordencompletas'];
+
+
+
+    foreach ($ordenesCompletas as $orden ) {
 
 
          $id=$orden->IdOrden;
@@ -151,7 +178,8 @@ public function cdelete($id){
         'Eliminada' => '1'
     );
     $this->morden->mupdateorden($id, $data);
-    redirect(base_url().'mantenimiento/corden');
+    //redirect(base_url().'mantenimiento/corden');
+    echo "mantenimiento/corden";
 }
 
 public function ccompleta($id){

@@ -116,7 +116,8 @@ public function cdelete($id){
         'Activo' => '0'
     );
     $this->mtecnico->mupdatetecnico($id, $data);
-    redirect(base_url().'mantenimiento/ctecnico');
+    //redirect(base_url().'mantenimiento/ctecnico');
+    echo "mantenimiento/ctecnico";
 }
 
 

@@ -23,6 +23,7 @@
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url();?>assets/template/dist/js/demo.js"></script>
 <script src="<?php echo base_url();?>assets/select2-4.0.10/dist/js/select2.min.js"></script>
+<script src="<?php echo base_url();?>assets/sweetalert/dist/sweetalert.min.js"></script>
 <script>
 $(document).ready(function () {
 $('.sidebar-menu').tree()
@@ -32,25 +33,61 @@ $('.sidebar-menu').tree()
 </html>
 
 <script tyoe="text/javascript">
-    $(document).ready(function () {
-  $('#example2').DataTable({
-             "language": {
-                 "lengthMenu": "Mostrar _MENU_ registros por pagina",
-                 "zeroRecords": "No se encontraron resultados en su busqueda",
-                 "searchPlaceholder": "Buscar registros",
-                 "info": "Mostrando registros de _START_ al _END_ de un total de  _TOTAL_ registros",
-                 "infoEmpty": "No existen registros",
-                 "infoFiltered": "(filtrado de un total de _MAX_ registros)",
-                 "search": "Buscar:",
-                 "paginate": {
-                     "first": "Primero",
-                     "last": "Último",
-                     "next": "Siguiente",
-                     "previous": "Anterior"
-                 },
-             }
-        });
- })
+
+  var base_url= "<?php echo base_url();?>";
+
+            $(document).ready(function () {
+                $('#example2').DataTable({
+                           "language": {
+                               "lengthMenu": "Mostrar _MENU_ registros por pagina",
+                               "zeroRecords": "No se encontraron resultados en su busqueda",
+                               "searchPlaceholder": "Buscar registros",
+                               "info": "Mostrando registros de _START_ al _END_ de un total de  _TOTAL_ registros",
+                               "infoEmpty": "No existen registros",
+                               "infoFiltered": "(filtrado de un total de _MAX_ registros)",
+                               "search": "Buscar:",
+                               "paginate": {
+                                   "first": "Primero",
+                                   "last": "Último",
+                                   "next": "Siguiente",
+                                   "previous": "Anterior"
+                               },
+                           }
+                      });
+         })
+
+         $(".btn-remove").on("click", function(e){
+           e.preventDefault(); // cancela accion de href
+           var ruta =$(this).attr("href");
+           //alert(ruta);
+           swal({
+             title: "¿Realmente quieres Eliminar el registro?",
+             text: "¡No podras revertir esto!",
+             type: "warning",
+             showCancelButton: true,
+             confirmButtonColor: '#d9534f',
+             cancelButtonColor: '#d33',
+             confirmButtonText: "¡Si!",
+             showLoaderOnConfirm: true,
+             cancelButtonText: "¡No!",
+             closeOnConfirm: false,
+             closeOnCancel: false
+              },
+              function(isConfirm){
+                if (isConfirm) {
+                  $.ajax({
+                    url: ruta,
+                    type: "POST",
+                    success:function(res){
+                      //alert(res);
+                      window.location.href=base_url+res;
+                    }
+                  });
+                }else{
+                  swal("Cancelado", "", "error");
+                }
+              });
+         });
 </script>
 
 

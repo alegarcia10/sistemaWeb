@@ -127,6 +127,19 @@ public function cedit($id){
         $hora =$interval->format(' %H :%I : %S ');
         $data['hora'] = $hora;
 
+
+        $gastos=0;
+        $gastosCompletos=0;
+
+
+          //log_message('error',sprintf("gastos igual a $gastos "));
+          //log_message('error',sprintf("tarea numero   $idParte"));
+          $gastos=$this->morden->consultaGatosTotales($idParte);
+          $gastosCompletos=$gastosCompletos+$gastos;
+          //log_message('error',sprintf("devuelve  $gastos"));
+
+        $data['Gastos'] = $gastosCompletos;
+
         $this->load->view('layouts/header');
         $this->load->view('layouts/aside');
         $this->load->view('admin/parteorden/vedit', $data);
@@ -140,8 +153,6 @@ public function cupdate(){
     $idparte = $this->input->post('txtidParte');
     $idorden = $this->input->post('txtidorden');
     $tarea = $this->input->post('txttarea');
-
-
 
         $data = array(
             'TareaDesarrollada' => $tarea
@@ -169,7 +180,8 @@ public function cdelete($IdParte ,$IdOrden){
         'Anulado' => '1'
     );
     $this->mparteorden->mupdateparteorden($IdParte ,$IdOrden,$data);
-    redirect(base_url().'mantenimiento/cparteorden/listar/'.$IdOrden);
+    //redirect(base_url().'mantenimiento/cparteorden/listar/'.$IdOrden);
+    echo "mantenimiento/cparteorden/listar/$IdOrden";
 }
 
 
@@ -214,11 +226,10 @@ public function ceditMat($id){
 public function cdeleteMat($id){
 
     $mat = $this->mparteorden->obtenerMaterialconIdMat($id);
-
     $IdParte= $mat->IdParte;
-
     $this->mparteorden->mdeletematerial($id);
-    redirect(base_url().'mantenimiento/cparteorden/cedit/'.$IdParte);
+    //redirect(base_url().'mantenimiento/cparteorden/cedit/'.$IdParte);
+    echo "mantenimiento/cparteorden/cedit/$IdParte";
 }
 
 public function cupdateMat(){
@@ -271,7 +282,9 @@ public function addTecnicoOrden(){
 public function ceditTecnico($tecnico,$idParte){
 
   $this->mparteorden->mdeletetecnicoOrden($idParte, $tecnico);
-  redirect(base_url().'mantenimiento/cparteorden/cedit/'.$idParte);
+  //redirect(base_url().'mantenimiento/cparteorden/cedit/'.$idParte);
+
+  echo "mantenimiento/cparteorden/cedit/$idParte";
 }
 
 

@@ -21,7 +21,8 @@
     <link rel="stylesheet" href="<?php echo base_url();?>assets/template/dist/css/skins/_all-skins.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/template/dist/css/diseño.css">
     <link href="<?php echo base_url();?>assets/select2-4.0.10/dist/css/select2.min.css" rel="stylesheet" />
-    
+    <link href="<?php echo base_url();?>assets/sweetalert/dist/sweetalert.css" rel="stylesheet" />
+
 
     <script src="<?php echo base_url();?>assets/template/jquery/jquery-3.6.0.min.js"></script>
 </head>
