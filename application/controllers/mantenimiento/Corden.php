@@ -24,26 +24,8 @@ public function index(){
 
 
     foreach ($ordenes as $orden ) {
-
-
          $id=$orden->IdOrden;
-         $gastos=0;
-         log_message('error',sprintf("-----------------id orden------------------ $id"));
-         $tareas=$this->morden->consultaTareas($id);
-
-         foreach ($tareas as $tarea ) {
-           $idParte=$tarea->IdParte;
-           //log_message('error',sprintf("gastos igual a $gastos "));
-           log_message('error',sprintf("tarea numero   $idParte"));
-           //$gastos=$this->morden->consultaGatosTotales($idParte);
-           //$gastosCompletos=$gastosCompletos+$gastos;
-           log_message('error',sprintf("devuelve  $gastos"));
-
-         }
-
          $orden->Gastos=$this->morden->consultaGatosOrden($id);
-
-
     }
 
 
@@ -52,27 +34,8 @@ public function index(){
 
 
     foreach ($ordenesCompletas as $orden ) {
-
-
          $id=$orden->IdOrden;
-         $gastos=0;
-         $gastosCompletos=0;
-         log_message('error',sprintf("-----------------id orden------------------ $id"));
-         $tareas=$this->morden->consultaTareas($id);
-
-         foreach ($tareas as $tarea ) {
-           $idParte=$tarea->IdParte;
-           log_message('error',sprintf("gastos igual a $gastos "));
-           log_message('error',sprintf("tarea numero   $idParte"));
-           $gastos=$this->morden->consultaGatosTotales($idParte);
-           $gastosCompletos=$gastosCompletos+$gastos;
-           log_message('error',sprintf("devuelve  $gastos"));
-
-         }
-
-         $orden->Gastos=$gastosCompletos;
-
-
+         $orden->Gastos=$this->morden->consultaGatosOrden($id);
     }
 
 
