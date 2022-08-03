@@ -55,21 +55,21 @@ $('.sidebar-menu').tree()
                            }
                       });
          })
-
+         
          $(".btn-remove").on("click", function(e){
            e.preventDefault(); // cancela accion de href
            var ruta =$(this).attr("href");
            //alert(ruta);
            swal({
-             title: "¿Realmente quieres Eliminar el registro?",
-             text: "¡No podras revertir esto!",
+             title: "Esta a punto de eliminar la orden Nro",
+             text: "",
              type: "warning",
              showCancelButton: true,
              confirmButtonColor: '#d9534f',
              cancelButtonColor: '#d33',
-             confirmButtonText: "¡Si!",
+             confirmButtonText: "Eliminar",
              showLoaderOnConfirm: true,
-             cancelButtonText: "¡No!",
+             cancelButtonText: "Cancelar",
              closeOnConfirm: false,
              closeOnCancel: false
               },

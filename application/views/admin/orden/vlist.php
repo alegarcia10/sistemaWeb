@@ -36,8 +36,8 @@
                                     <th>N° ORDEN</th>
                                     <th>FECHA</th>
                                     <th>TAREA</th>
-                                    <th>PRECIO FACTURADO</th>
                                     <th>GASTOS</th>
+                                    <th>MONTO A FACTURAR</th>
                                     <th>CLIENTE</th>
                                     <th >OPERACIONES</th>
                                 </tr>
@@ -49,8 +49,8 @@
                                             <td width="5%"><?php echo $atributos->IdOrden; ?></td>
                                             <td width="10%"><?php echo date("d-m-Y", strtotime("$atributos->FechaRecepcion")); ?></td>
                                             <td width="30%"><?php echo $atributos->TareaDesarrollar; ?></td>
-                                            <td width="10%"><?php echo $atributos->Precio; ?></td>
-                                            <td width="10%"><?php echo $atributos->Gastos; ?></td>
+                                            <td width="10%"> $<?php echo $atributos->Gastos; ?></td>
+                                            <td width="10%">$<?php echo $atributos->Precio; ?></td>
                                             <td width="15%"><?php echo $atributos->Nombre; ?></td>
                                             <td width="20%" >
                                                 <div class="btn-group">
@@ -91,8 +91,8 @@
                                   <th>N° ORDEN</th>
                                   <th>FECHA</th>
                                   <th>TAREA</th>
-                                  <th>PRECIO FACTURADO</th>
                                   <th>GASTOS</th>
+                                  <th>MONTO FACTURADO</th>
                                   <th>CLIENTE</th>
                                   <th >OPERACIONES</th>
                                 </tr>
@@ -104,8 +104,8 @@
                                           <td width="5%"><?php echo $atributos->IdOrden; ?></td>
                                           <td width="10%"><?php echo date("d-m-Y", strtotime("$atributos->FechaRecepcion")); ?></td>
                                           <td width="30%"><?php echo $atributos->TareaDesarrollar; ?></td>
-                                          <td width="10%"><?php echo $atributos->Precio; ?></td>
-                                          <td width="10%"><?php echo $atributos->Precio; ?></td>
+                                          <td width="10%">$<?php echo $atributos->Gastos; ?></td>
+                                          <td width="10%">$<?php echo $atributos->Precio; ?></td>
                                           <td width="15%"><?php echo $atributos->Nombre; ?></td>
                                           <td width="20%" >
                                                 <div class="btn-group">
