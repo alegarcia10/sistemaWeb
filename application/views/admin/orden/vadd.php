@@ -19,7 +19,7 @@
                             <form action="<?php echo base_url(); ?>mantenimiento/corden/cinsert" method="POST">
                                 <div class="col-sm-2 form-group">
                                   <label for="fecha">FECHA</label>
-                                  <input type="date" id="txtfecha" name="txtfecha" class="form-control" value="<?php echo set_value('txtfecha') ?>" required >
+                                  <input type="date" id="txtfecha" name="txtfecha" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfecha') ?>" required >
                                 </div>
                                 <div class="col-sm-3 form-group">
                                     <label class="control-label" for="tipo_cliente">CLIENTE (*)</label>
@@ -35,7 +35,7 @@
                                 </div>
 
                             </form>
-                        </div>                      
+                        </div>
                     </div>
                 </div>
             </div>
