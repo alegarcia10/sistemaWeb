@@ -64,7 +64,7 @@
                                                         <span class="fa fa-remove"></span>
                                                     </a>
                                                     <a href="<?php echo base_url(); ?>mantenimiento/corden/ccompleta/<?php echo $atributos->IdOrden; ?>" class="btn btn-success " title="Completa">
-                                                        <span class="fa fa-play"></span>
+                                                        <span class="fa fa-check"></span>
                                                     </a>
                                                 </div>
                                             </td>
