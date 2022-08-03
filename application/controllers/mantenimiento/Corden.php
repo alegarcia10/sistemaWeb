@@ -41,7 +41,7 @@ public function index(){
 
          }
 
-         $orden->Gastos=consultarGastosOrden($id);
+         $orden->Gastos=$this->morden->consultaGatosOrden($id);
 
 
     }
