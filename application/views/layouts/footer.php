@@ -56,7 +56,7 @@ $('.sidebar-menu').tree()
                       });
          })
          
-         $("#deleteOrden").on("click", function(e){
+         $(".btn-remove").on("click", function(e){
            e.preventDefault(); // cancela accion de href
            var ruta =$(this).attr("href");
            //alert(ruta);
@@ -97,13 +97,13 @@ $('.sidebar-menu').tree()
          });
 
 
-         $(".btn-success").on("click", function(e){
+         $("#reanudarOrden").on("click", function(e){
            e.preventDefault(); // cancela accion de href
            var ruta =$(this).attr("href");
            //alert(ruta);
            swal({
-             title: "Esta apunto de marcar completada",
-             text: "ORDEN Nro° " +ruta.substring(this.href.lastIndexOf('/') + 1),
+             title: "Esta apunto de marcar como pendiente",
+             text: "Orden Nro° " +ruta.substring(this.href.lastIndexOf('/') + 1),
              type: "warning",
              showCancelButton: true,
              confirmButtonColor: '#d9534f',
@@ -125,14 +125,14 @@ $('.sidebar-menu').tree()
                     }
                   });
                 }else{
-                  Swal.fire({
-                      position: 'top-center',
-                      icon: 'error',
-                      title: 'Cancelado',
-                      showConfirmButton: false,
-                      timer: 500
-                    })
-                  //swal("Cancelado", "", "error");
+                  // Swal.fire({
+                  //     position: 'top-center',
+                  //     icon: 'error',
+                  //     title: 'Cancelado',
+                  //     showConfirmButton: false,
+                  //     timer: 500
+                  //   })
+                  swal("Cancelado", "", "error");
                 }
               });
          });
