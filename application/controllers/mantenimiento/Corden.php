@@ -128,7 +128,7 @@ public function cupdate(){
             redirect(base_url().'mantenimiento/corden');
         }else {
             $this->session->set_flashdata('error', 'No se pudo actualizar la orden');
-            redirect(base_url().'mantenimiento/corden/cedit'.$idorden);
+            redirect(base_url().'mantenimiento/corden/cedit'.$id);
         }
 
 

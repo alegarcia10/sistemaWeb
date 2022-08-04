@@ -65,7 +65,7 @@ $('.sidebar-menu').tree()
            var ruta =$(this).attr("href");
            //alert(ruta);
            swal({
-             title: "Esta a punto de eliminar",
+             title: "Esta por eliminar",
              text: "Orden Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
              type: "warning",
              showCancelButton: true,
@@ -103,7 +103,7 @@ $('.sidebar-menu').tree()
            var ruta =$(this).attr("href");
            //alert(ruta);
            swal({
-             title: "Esta a punto de eliminar",
+             title: "Esta por eliminar",
              text: "Orden Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
              type: "warning",
              showCancelButton: true,
@@ -141,7 +141,7 @@ $('.sidebar-menu').tree()
            var ruta =$(this).attr("href");
            //alert(ruta);
            swal({
-             title: "Esta apunto de marcar como completa",
+             title: "Esta por marcar como completa",
              text: "Orden Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
              type: "warning",
              showCancelButton: true,
@@ -219,7 +219,7 @@ $('.sidebar-menu').tree()
            var ruta =$(this).attr("href");
            //alert(ruta);
            swal({
-             title: "Esta apunto de marcar como pendiente",
+             title: "Esta por marcar como pendiente",
              text: "Orden Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
              type: "warning",
              showCancelButton: true,
@@ -259,7 +259,7 @@ $('.sidebar-menu').tree()
            var ruta =$(this).attr("href");
            //alert(ruta);
            swal({
-             title: "Esta a punto de eliminar",
+             title: "Esta por eliminar",
              text: "Tarea Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
              type: "warning",
              showCancelButton: true,
@@ -299,7 +299,7 @@ $('.sidebar-menu').tree()
            var ruta =$(this).attr("href");
            //alert(ruta);
            swal({
-             title: "Esta a punto de eliminar",
+             title: "Esta por eliminar",
              text: "Cliente Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
              type: "warning",
              showCancelButton: true,
@@ -340,7 +340,7 @@ $(".deleteTecnico").on("click", function(e){
            var ruta =$(this).attr("href");
            //alert(ruta);
            swal({
-             title: "Esta a punto de eliminar",
+             title: "Esta por eliminar",
              text: "Tecnico Nro° " +ruta.substring(this.href.lastIndexOf('/') + 1),
              type: "warning",
              showCancelButton: true,
@@ -381,7 +381,7 @@ $(".deleteUsuario").on("click", function(e){//
            var ruta =$(this).attr("href");
            //alert(ruta);
            swal({
-             title: "Esta a punto de eliminar",
+             title: "Esta por eliminar",
              text: "Usuario Nro° " +ruta.substring(this.href.lastIndexOf('/') + 1),
              type: "warning",
              showCancelButton: true,
