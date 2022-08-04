@@ -61,8 +61,8 @@ $('.sidebar-menu').tree()
            var ruta =$(this).attr("href");
            //alert(ruta);
            swal({
-             title: "Esta a punto de eliminar la orden Nro° " +ruta.substring(this.href.lastIndexOf('/') + 1),
-             text: "",
+             title: "Esta a punto de eliminar",
+             text: "ORDEN Nro° " +ruta.substring(this.href.lastIndexOf('/') + 1),
              type: "warning",
              showCancelButton: true,
              confirmButtonColor: '#d9534f',
@@ -95,8 +95,8 @@ $('.sidebar-menu').tree()
            var ruta =$(this).attr("href");
            //alert(ruta);
            swal({
-             title: "Marcar la orden Nro° "+ruta.substring(this.href.lastIndexOf('/') + 1)+" como completa?",
-             text: "",
+             title: "Esta apunto de marcar completada",
+             text: "ORDEN Nro° " +ruta.substring(this.href.lastIndexOf('/') + 1),
              type: "warning",
              showCancelButton: true,
              confirmButtonColor: '#d9534f',
