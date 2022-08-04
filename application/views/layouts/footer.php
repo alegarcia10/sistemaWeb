@@ -37,7 +37,7 @@ $('.sidebar-menu').tree()
   var base_url= "<?php echo base_url();?>";
 
             $(document).ready(function () {
-                $('#').DataTable({
+                $('#example2').DataTable({
                            "language": {
                                "lengthMenu": "Mostrar _MENU_ registros por pagina",
                                "zeroRecords": "No se encontraron resultados en su busqueda",
@@ -55,21 +55,25 @@ $('.sidebar-menu').tree()
                            }
                       });
          })
+         
 
-         $(".btn-remove").on("click", function(e){
+//ACCIONES DE ORDEN ***************************************************************************************
+
+
+         $("#deleteOrden").on("click", function(e){
            e.preventDefault(); // cancela accion de href
            var ruta =$(this).attr("href");
            //alert(ruta);
            swal({
-             title: "¿Realmente quieres Eliminar el registro?",
-             text: "¡No podras revertir esto!",
+             title: "Esta a punto de eliminar",
+             text: "Orden Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
              type: "warning",
              showCancelButton: true,
              confirmButtonColor: '#d9534f',
              cancelButtonColor: '#d33',
-             confirmButtonText: "¡Si!",
+             confirmButtonText: "Eliminar",
              showLoaderOnConfirm: true,
-             cancelButtonText: "¡No!",
+             cancelButtonText: "Cancelar",
              closeOnConfirm: false,
              closeOnCancel: false
               },
@@ -84,24 +88,30 @@ $('.sidebar-menu').tree()
                     }
                   });
                 }else{
-                  swal("Cancelado", "", "error");
+                  swal({
+                      type: 'error',
+                      title: 'Cancelado',
+                      showConfirmButton: false,
+                      timer: 500
+                    });
                 }
               });
          });
 
-         $(".btn-completa").on("click", function(e){
+         $("#deleteCOrden").on("click", function(e){
            e.preventDefault(); // cancela accion de href
            var ruta =$(this).attr("href");
            //alert(ruta);
            swal({
-             title: "¿Marcar la Orden como Completa?",
+             title: "Esta a punto de eliminar",
+             text: "Orden Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
              type: "warning",
              showCancelButton: true,
              confirmButtonColor: '#d9534f',
              cancelButtonColor: '#d33',
-             confirmButtonText: "¡Si!",
+             confirmButtonText: "Eliminar",
              showLoaderOnConfirm: true,
-             cancelButtonText: "¡No!",
+             cancelButtonText: "Cancelar",
              closeOnConfirm: false,
              closeOnCancel: false
               },
@@ -116,24 +126,32 @@ $('.sidebar-menu').tree()
                     }
                   });
                 }else{
-                  swal("Cancelado", "", "error");
+                  swal({
+                      type: 'error',
+                      title: 'Cancelado',
+                      showConfirmButton: false,
+                      timer: 500
+                    });
                 }
               });
          });
 
-         $(".btn-activar").on("click", function(e){
+
+
+         $("#completaOrden").on("click", function(e){
            e.preventDefault(); // cancela accion de href
            var ruta =$(this).attr("href");
            //alert(ruta);
            swal({
-             title: "¿Estas de acuerdo que deseas activar la Orden?",
+             title: "Marcar la orden Nro como completa?",
+             text: "",
              type: "warning",
              showCancelButton: true,
              confirmButtonColor: '#d9534f',
              cancelButtonColor: '#d33',
-             confirmButtonText: "¡Si!",
+             confirmButtonText: "Confirmar",
              showLoaderOnConfirm: true,
-             cancelButtonText: "¡No!",
+             cancelButtonText: "Cancelar",
              closeOnConfirm: false,
              closeOnCancel: false
               },
@@ -148,10 +166,251 @@ $('.sidebar-menu').tree()
                     }
                   });
                 }else{
-                  swal("Cancelado", "", "error");
+                  swal("Cancelado jiji jaja", "", "error");
                 }
               });
          });
+
+
+        //  $("#completaOrden").on("click", function(e){
+        //    e.preventDefault(); // cancela accion de href
+        //    var ruta =$(this).attr("href");
+        //    //alert(ruta);
+        //    swal({
+        //      title: "Esta apunto de marcar como completa",
+        //      text: "Orden Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
+        //      type: "warning",
+        //      showCancelButton: true,
+        //      confirmButtonColor: '#d9534f',
+        //      cancelButtonColor: '#d33',
+        //      confirmButtonText: "Confirmar",
+        //      showLoaderOnConfirm: true,
+        //      cancelButtonText: "Cancelar",
+        //      closeOnConfirm: false,
+        //      closeOnCancel: false
+        //       },
+        //       function(isConfirm){
+        //         if (isConfirm) {
+        //           $.ajax({
+        //             url: ruta,
+        //             type: "POST",
+        //             success:function(res){
+        //               //alert(res);
+        //               window.location.href=base_url+res;
+        //             }
+        //           });
+        //         }else{
+        //           swal({
+        //               type: 'error',
+        //               title: 'Cancelado',
+        //               showConfirmButton: false,
+        //               timer: 500
+        //             });
+        //         }
+        //       });
+        //  });
+
+
+         $("#reanudarOrden").on("click", function(e){
+           e.preventDefault(); // cancela accion de href
+           var ruta =$(this).attr("href");
+           //alert(ruta);
+           swal({
+             title: "Esta apunto de marcar como pendiente",
+             text: "Orden Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
+             type: "warning",
+             showCancelButton: true,
+             confirmButtonColor: '#d9534f',
+             cancelButtonColor: '#d33',
+             confirmButtonText: "Confirmar",
+             showLoaderOnConfirm: true,
+             cancelButtonText: "Cancelar",
+             closeOnConfirm: false,
+             closeOnCancel: false
+              },
+              function(isConfirm){
+                if (isConfirm) {
+                  $.ajax({
+                    url: ruta,
+                    type: "POST",
+                    success:function(res){
+                      //alert(res);
+                      window.location.href=base_url+res;
+                    }
+                  });
+                }else{
+                  swal({
+                      type: 'error',
+                      title: 'Cancelado',
+                      showConfirmButton: false,
+                      timer: 500
+                    });
+                }
+              });
+         });
+
+//ACCIONES DE PARTE ***************************************************************************************
+
+        $("#deleteParte").on("click", function(e){
+           e.preventDefault(); // cancela accion de href
+           var ruta =$(this).attr("href");
+           //alert(ruta);
+           swal({
+             title: "Esta a punto de eliminar",
+             text: "Tarea Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
+             type: "warning",
+             showCancelButton: true,
+             confirmButtonColor: '#d9534f',
+             cancelButtonColor: '#d33',
+             confirmButtonText: "Eliminar",
+             showLoaderOnConfirm: true,
+             cancelButtonText: "Cancelar",
+             closeOnConfirm: false,
+             closeOnCancel: false
+              },
+              function(isConfirm){
+                if (isConfirm) {
+                  $.ajax({
+                    url: ruta,
+                    type: "POST",
+                    success:function(res){
+                      //alert(res);
+                      window.location.href=base_url+res;
+                    }
+                  });
+                }else{
+                  swal({
+                      type: 'error',
+                      title: 'Cancelado',
+                      showConfirmButton: false,
+                      timer: 500
+                    });
+                }
+              });
+         });
+
+//ACCIONES DE CLIENTE ***************************************************************************************
+
+      $("#deleteCliente").on("click", function(e){
+           e.preventDefault(); // cancela accion de href
+           var ruta =$(this).attr("href");
+           //alert(ruta);
+           swal({
+             title: "Esta a punto de eliminar",
+             text: "Cliente Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
+             type: "warning",
+             showCancelButton: true,
+             confirmButtonColor: '#d9534f',
+             cancelButtonColor: '#d33',
+             confirmButtonText: "Eliminar",
+             showLoaderOnConfirm: true,
+             cancelButtonText: "Cancelar",
+             closeOnConfirm: false,
+             closeOnCancel: false
+              },
+              function(isConfirm){
+                if (isConfirm) {
+                  $.ajax({
+                    url: ruta,
+                    type: "POST",
+                    success:function(res){
+                      //alert(res);
+                      window.location.href=base_url+res;
+                    }
+                  });
+                }else{
+                  swal({
+                      type: 'error',
+                      title: 'Cancelado',
+                      showConfirmButton: false,
+                      timer: 500
+                    });
+                }
+              });
+         });
+
+
+//ACCIONES DE TECNICO ***************************************************************************************
+
+$("#deleteTecnico").on("click", function(e){
+           e.preventDefault(); // cancela accion de href
+           var ruta =$(this).attr("href");
+           //alert(ruta);
+           swal({
+             title: "Esta a punto de eliminar",
+             text: "Tecnico Nro° " +ruta.substring(this.href.lastIndexOf('/') + 1),
+             type: "warning",
+             showCancelButton: true,
+             confirmButtonColor: '#d9534f',
+             cancelButtonColor: '#d33',
+             confirmButtonText: "Eliminar",
+             showLoaderOnConfirm: true,
+             cancelButtonText: "Cancelar",
+             closeOnConfirm: false,
+             closeOnCancel: false
+              },
+              function(isConfirm){
+                if (isConfirm) {
+                  $.ajax({
+                    url: ruta,
+                    type: "POST",
+                    success:function(res){
+                      //alert(res);
+                      window.location.href=base_url+res;
+                    }
+                  });
+                }else{
+                  swal({
+                      type: 'error',
+                      title: 'Cancelado',
+                      showConfirmButton: false,
+                      timer: 500
+                    });
+                }
+              });
+         });
+
+
+//ACCIONES DE USUARIO ***************************************************************************************
+
+$("#deleteUsuario").on("click", function(e){
+           e.preventDefault(); // cancela accion de href
+           var ruta =$(this).attr("href");
+           //alert(ruta);
+           swal({
+             title: "Esta a punto de eliminar",
+             text: "Usuario Nro° " +ruta.substring(this.href.lastIndexOf('/') + 1),
+             type: "warning",
+             showCancelButton: true,
+             confirmButtonColor: '#d9534f',
+             cancelButtonColor: '#d33',
+             confirmButtonText: "Eliminar",
+             showLoaderOnConfirm: true,
+             cancelButtonText: "Cancelar",
+             closeOnConfirm: false,
+             closeOnCancel: false
+              },
+              function(isConfirm){
+                if (isConfirm) {
+                  $.ajax({
+                    url: ruta,
+                    type: "POST",
+                    success:function(res){
+                      //alert(res);
+                      window.location.href=base_url+res;
+                    }
+                  });
+                }else{
+                  swal({
+                      type: 'error',
+                      title: 'Cancelado',
+                      showConfirmButton: false,
+                      timer: 500
+                    });
+                }
+              });
+         });
+
 </script>
 
 

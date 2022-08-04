@@ -23,7 +23,7 @@
                 <div class="row">
                     <div class="col-md-12">
                       <div class="col-md-9">
-                          <h1>Ordenes Activas</h1>
+                          <h1>Ordenes Activas  <span class="fa fa-clock-o"></span></h1>
 
                       </div>
                       <div class="col-md-3">
@@ -36,8 +36,8 @@
                                     <th>N° ORDEN</th>
                                     <th>FECHA</th>
                                     <th>TAREA</th>
-                                    <th>PRECIO FACTURADO</th>
                                     <th>GASTOS</th>
+                                    <th>MONTO A FACTURAR</th>
                                     <th>CLIENTE</th>
                                     <th >OPERACIONES</th>
                                 </tr>
@@ -49,8 +49,8 @@
                                             <td width="5%"><?php echo $atributos->IdOrden; ?></td>
                                             <td width="10%"><?php echo date("d-m-Y", strtotime("$atributos->FechaRecepcion")); ?></td>
                                             <td width="30%"><?php echo $atributos->TareaDesarrollar; ?></td>
-                                            <td width="10%"><?php echo $atributos->Precio; ?></td>
-                                            <td width="10%"><?php echo $atributos->Gastos; ?></td>
+                                            <td width="10%"> $<?php echo number_format($atributos->Gastos, 2); ?></td>
+                                            <td width="10%">$<?php echo number_format($atributos->Precio, 2); ?></td>
                                             <td width="15%"><?php echo $atributos->Nombre; ?></td>
                                             <td width="20%" >
                                                 <div class="btn-group">
@@ -60,11 +60,11 @@
                                                     <a href="<?php echo base_url(); ?>mantenimiento/corden/cedit/<?php echo $atributos->IdOrden; ?>" class="btn btn-info" title="Modificar">
                                                         <span class="fa fa-pencil"></span>
                                                     </a>
-                                                    <a href="<?php echo base_url(); ?>mantenimiento/corden/cdelete/<?php echo $atributos->IdOrden; ?>" class="btn btn-danger btn-remove" title="Eliminar">
+                                                    <a id="deleteOrden" href="<?php echo base_url(); ?>mantenimiento/corden/cdelete/<?php echo $atributos->IdOrden; ?>" class="btn btn-danger btn-remove" title="Eliminar">
                                                         <span class="fa fa-remove"></span>
                                                     </a>
-                                                    <a href="<?php echo base_url(); ?>mantenimiento/corden/ccompleta/<?php echo $atributos->IdOrden; ?>" class="btn btn-success btn-completa " title="Completa">
-                                                        <span class="fa fa-play"></span>
+                                                    <a id="completaOrden" href="<?php echo base_url(); ?>mantenimiento/corden/ccompleta/<?php echo $atributos->IdOrden; ?>" class="btn btn-success " title="Completa">
+                                                        <span class="fa fa-check-circle"></span>
                                                     </a>
                                                 </div>
                                             </td>
@@ -77,7 +77,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-9">
-                        <h1>Ordenes Completas</h1>
+                        <h1>Ordenes Completas  <span class="fa fa-check-circle"></span></h1>
                     </div>
                     <div class="col-md-3">
                         <br>
@@ -91,8 +91,8 @@
                                   <th>N° ORDEN</th>
                                   <th>FECHA</th>
                                   <th>TAREA</th>
-                                  <th>PRECIO FACTURADO</th>
                                   <th>GASTOS</th>
+                                  <th>MONTO FACTURADO</th>
                                   <th>CLIENTE</th>
                                   <th >OPERACIONES</th>
                                 </tr>
@@ -104,8 +104,8 @@
                                           <td width="5%"><?php echo $atributos->IdOrden; ?></td>
                                           <td width="10%"><?php echo date("d-m-Y", strtotime("$atributos->FechaRecepcion")); ?></td>
                                           <td width="30%"><?php echo $atributos->TareaDesarrollar; ?></td>
-                                          <td width="10%"><?php echo $atributos->Precio; ?></td>
-                                          <td width="10%"><?php echo $atributos->Precio; ?></td>
+                                          <td width="10%"> $<?php echo number_format($atributos->Gastos, 2); ?></td>
+                                            <td width="10%">$<?php echo number_format($atributos->Precio, 2); ?></td>
                                           <td width="15%"><?php echo $atributos->Nombre; ?></td>
                                           <td width="20%" >
                                                 <div class="btn-group">
@@ -113,11 +113,11 @@
                                                     <a href="<?php echo base_url(); ?>mantenimiento/corden/cedit/<?php echo $atributos->IdOrden; ?>" class="btn btn-info" title="Modificar">
                                                         <span class="fa fa-pencil"></span>
                                                     </a>
-                                                    <a href="<?php echo base_url(); ?>mantenimiento/corden/cdelete/<?php echo $atributos->IdOrden; ?>" class="btn btn-danger btn-remove" title="Eliminar">
+                                                    <a id="deleteOrdenC" href="<?php echo base_url(); ?>mantenimiento/corden/cdelete/<?php echo $atributos->IdOrden; ?>" class="btn btn-danger btn-remove" title="Eliminar">
                                                         <span class="fa fa-remove"></span>
                                                     </a>
-                                                    <a href="<?php echo base_url(); ?>mantenimiento/corden/cactivar/<?php echo $atributos->IdOrden; ?>" class="btn btn-success btn-activar" title="Activar">
-                                                        <span class="fa fa-remove"></span>
+                                                    <a id="reanudarOrden" href="<?php echo base_url(); ?>mantenimiento/corden/cdescompleta/<?php echo $atributos->IdOrden; ?>" class="btn btn-success " title="Reanudar">
+                                                        <span class="fa fa-clock-o"></span>
                                                     </a>
                                                 </div>
                                             </td>
