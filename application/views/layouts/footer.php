@@ -378,7 +378,7 @@ $("#deleteTecnico").on("click", function(e){
 
 //ACCIONES DE USUARIO ***************************************************************************************
 
-$("#deleteUsuario").on("click", function(e){
+$(".btn-remove").on("click", function(e){//#deleteUsuario
            e.preventDefault(); // cancela accion de href
            var ruta =$(this).attr("href");
            //alert(ruta);
