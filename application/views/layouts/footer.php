@@ -84,7 +84,7 @@ $('.sidebar-menu').tree()
                     }
                   });
                 }else{
-                    Swal.fire({
+                    swal({
                       position: 'top-center',
                       icon: 'error',
                       title: 'Cancelado',
@@ -125,14 +125,14 @@ $('.sidebar-menu').tree()
                     }
                   });
                 }else{
-                  // Swal.fire({
-                  //     position: 'top-center',
-                  //     icon: 'error',
-                  //     title: 'Cancelado',
-                  //     showConfirmButton: false,
-                  //     timer: 500
-                  //   })
-                  swal("Cancelado", "", "error");
+                  swal({
+                      position: 'top-center',
+                      icon: 'error',
+                      title: 'Cancelado',
+                      showConfirmButton: false,
+                      timer: 500
+                    })
+                  //swal("Cancelado", "", "error");
                 }
               });
          });
