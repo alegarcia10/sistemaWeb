@@ -66,7 +66,7 @@ $('.sidebar-menu').tree()
            //alert(ruta);
            swal({
              title: "Esta a punto de eliminar",
-             text: "Orden Nro° " +ruta.substring(this.href.lastIndexOf('/') + 1),
+             text: "Orden Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
              type: "warning",
              showCancelButton: true,
              confirmButtonColor: '#d9534f',
@@ -93,10 +93,83 @@ $('.sidebar-menu').tree()
                       title: 'Cancelado',
                       showConfirmButton: false,
                       timer: 500
-                    })
+                    });
                 }
               });
          });
+
+         $("#deleteCOrden").on("click", function(e){
+           e.preventDefault(); // cancela accion de href
+           var ruta =$(this).attr("href");
+           //alert(ruta);
+           swal({
+             title: "Esta a punto de eliminar",
+             text: "Orden Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
+             type: "warning",
+             showCancelButton: true,
+             confirmButtonColor: '#d9534f',
+             cancelButtonColor: '#d33',
+             confirmButtonText: "Eliminar",
+             showLoaderOnConfirm: true,
+             cancelButtonText: "Cancelar",
+             closeOnConfirm: false,
+             closeOnCancel: false
+              },
+              function(isConfirm){
+                if (isConfirm) {
+                  $.ajax({
+                    url: ruta,
+                    type: "POST",
+                    success:function(res){
+                      //alert(res);
+                      window.location.href=base_url+res;
+                    }
+                  });
+                }else{
+                  swal({
+                      type: 'error',
+                      title: 'Cancelado',
+                      showConfirmButton: false,
+                      timer: 500
+                    });
+                }
+              });
+         });
+
+
+
+        //  $(".btn-success").on("click", function(e){
+        //    e.preventDefault(); // cancela accion de href
+        //    var ruta =$(this).attr("href");
+        //    //alert(ruta);
+        //    swal({
+        //      title: "Marcar la orden Nro como completa?",
+        //      text: "",
+        //      type: "warning",
+        //      showCancelButton: true,
+        //      confirmButtonColor: '#d9534f',
+        //      cancelButtonColor: '#d33',
+        //      confirmButtonText: "Confirmar",
+        //      showLoaderOnConfirm: true,
+        //      cancelButtonText: "Cancelar",
+        //      closeOnConfirm: false,
+        //      closeOnCancel: false
+        //       },
+        //       function(isConfirm){
+        //         if (isConfirm) {
+        //           $.ajax({
+        //             url: ruta,
+        //             type: "POST",
+        //             success:function(res){
+        //               //alert(res);
+        //               window.location.href=base_url+res;
+        //             }
+        //           });
+        //         }else{
+        //           swal("Cancelado jiji jaja", "", "error");
+        //         }
+        //       });
+        //  });
 
 
          $("#completaOrden").on("click", function(e){
@@ -105,7 +178,7 @@ $('.sidebar-menu').tree()
            //alert(ruta);
            swal({
              title: "Esta apunto de marcar como completa",
-             text: "Orden Nro° " +ruta.substring(this.href.lastIndexOf('/') + 1),
+             text: "Orden Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
              type: "warning",
              showCancelButton: true,
              confirmButtonColor: '#d9534f',
@@ -132,7 +205,7 @@ $('.sidebar-menu').tree()
                       title: 'Cancelado',
                       showConfirmButton: false,
                       timer: 500
-                    })
+                    });
                 }
               });
          });
@@ -144,7 +217,7 @@ $('.sidebar-menu').tree()
            //alert(ruta);
            swal({
              title: "Esta apunto de marcar como pendiente",
-             text: "Orden Nro° " +ruta.substring(this.href.lastIndexOf('/') + 1),
+             text: "Orden Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
              type: "warning",
              showCancelButton: true,
              confirmButtonColor: '#d9534f',
@@ -171,7 +244,7 @@ $('.sidebar-menu').tree()
                       title: 'Cancelado',
                       showConfirmButton: false,
                       timer: 500
-                    })
+                    });
                 }
               });
          });
@@ -184,7 +257,7 @@ $('.sidebar-menu').tree()
            //alert(ruta);
            swal({
              title: "Esta a punto de eliminar",
-             text: "Tarea Nro° " +ruta.substring(this.href.lastIndexOf('/') + 1),
+             text: "Tarea Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
              type: "warning",
              showCancelButton: true,
              confirmButtonColor: '#d9534f',
@@ -211,7 +284,7 @@ $('.sidebar-menu').tree()
                       title: 'Cancelado',
                       showConfirmButton: false,
                       timer: 500
-                    })
+                    });
                 }
               });
          });
@@ -224,7 +297,7 @@ $('.sidebar-menu').tree()
            //alert(ruta);
            swal({
              title: "Esta a punto de eliminar",
-             text: "Cliente Nro° " +ruta.substring(this.href.lastIndexOf('/') + 1),
+             text: "Cliente Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
              type: "warning",
              showCancelButton: true,
              confirmButtonColor: '#d9534f',
@@ -251,7 +324,7 @@ $('.sidebar-menu').tree()
                       title: 'Cancelado',
                       showConfirmButton: false,
                       timer: 500
-                    })
+                    });
                 }
               });
          });
@@ -292,7 +365,7 @@ $("#deleteTecnico").on("click", function(e){
                       title: 'Cancelado',
                       showConfirmButton: false,
                       timer: 500
-                    })
+                    });
                 }
               });
          });
@@ -333,7 +406,7 @@ $("#deleteUsuario").on("click", function(e){
                       title: 'Cancelado',
                       showConfirmButton: false,
                       timer: 500
-                    })
+                    });
                 }
               });
          });
