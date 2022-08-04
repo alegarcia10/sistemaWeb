@@ -61,7 +61,7 @@ $('.sidebar-menu').tree()
            var ruta =$(this).attr("href");
            //alert(ruta);
            swal({
-             title: "Esta a punto de eliminar la orden Nro",
+             title: "Esta a punto de eliminar la orden Nro° " +ruta.substring(this.href.lastIndexOf('/') + 1),
              text: "",
              type: "warning",
              showCancelButton: true,
@@ -95,7 +95,7 @@ $('.sidebar-menu').tree()
            var ruta =$(this).attr("href");
            //alert(ruta);
            swal({
-             title: "Marcar la orden Nro como completa?",
+             title: "Marcar la orden Nro° "+ruta.substring(this.href.lastIndexOf('/') + 1)+" como completa?",
              text: "",
              type: "warning",
              showCancelButton: true,
@@ -118,7 +118,7 @@ $('.sidebar-menu').tree()
                     }
                   });
                 }else{
-                  swal("Cancelado jiji jaja", "", "error");
+                  swal("Cancelado", "", "error");
                 }
               });
          });
