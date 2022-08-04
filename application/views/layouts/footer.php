@@ -60,7 +60,7 @@ $('.sidebar-menu').tree()
 //ACCIONES DE ORDEN ***************************************************************************************
 
 
-         $("#deleteOrden").on("click", function(e){
+         $(".deleteOrden").on("click", function(e){
            e.preventDefault(); // cancela accion de href
            var ruta =$(this).attr("href");
            //alert(ruta);
@@ -98,7 +98,7 @@ $('.sidebar-menu').tree()
               });
          });
 
-         $("#deleteCOrden").on("click", function(e){
+         $(".deleteOrdenCompleta").on("click", function(e){
            e.preventDefault(); // cancela accion de href
            var ruta =$(this).attr("href");
            //alert(ruta);
@@ -136,9 +136,7 @@ $('.sidebar-menu').tree()
               });
          });
 
-
-
-         $("#completaOrden").on("click", function(e){
+         $(".completaOrden").on("click", function(e){
            e.preventDefault(); // cancela accion de href
            var ruta =$(this).attr("href");
            //alert(ruta);
@@ -216,7 +214,7 @@ $('.sidebar-menu').tree()
         //  });
 
 
-         $("#reanudarOrden").on("click", function(e){
+         $(".reanudarOrden").on("click", function(e){
            e.preventDefault(); // cancela accion de href
            var ruta =$(this).attr("href");
            //alert(ruta);
@@ -256,7 +254,7 @@ $('.sidebar-menu').tree()
 
 //ACCIONES DE PARTE ***************************************************************************************
 
-        $("#deleteParte").on("click", function(e){
+        $(".deleteParte").on("click", function(e){
            e.preventDefault(); // cancela accion de href
            var ruta =$(this).attr("href");
            //alert(ruta);
@@ -296,7 +294,7 @@ $('.sidebar-menu').tree()
 
 //ACCIONES DE CLIENTE ***************************************************************************************
 
-      $("#deleteCliente").on("click", function(e){
+      $(".deleteCliente").on("click", function(e){
            e.preventDefault(); // cancela accion de href
            var ruta =$(this).attr("href");
            //alert(ruta);
@@ -337,7 +335,7 @@ $('.sidebar-menu').tree()
 
 //ACCIONES DE TECNICO ***************************************************************************************
 
-$("#deleteTecnico").on("click", function(e){
+$(".deleteTecnico").on("click", function(e){
            e.preventDefault(); // cancela accion de href
            var ruta =$(this).attr("href");
            //alert(ruta);
@@ -378,7 +376,7 @@ $("#deleteTecnico").on("click", function(e){
 
 //ACCIONES DE USUARIO ***************************************************************************************
 
-$(".btn-remove").on("click", function(e){//#deleteUsuario
+$(".deleteUsuario").on("click", function(e){//
            e.preventDefault(); // cancela accion de href
            var ruta =$(this).attr("href");
            //alert(ruta);
