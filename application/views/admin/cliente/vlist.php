@@ -50,7 +50,7 @@
                                                     <a href="<?php echo base_url(); ?>mantenimiento/ccliente/cedit/<?php echo $atributos->IdCliente; ?>" class="btn btn-info" title="Modificar">
                                                         <span class="fa fa-pencil"></span>
                                                     </a>
-                                                    <a href="<?php echo base_url(); ?>mantenimiento/ccliente/cdelete/<?php echo $atributos->IdCliente; ?>" class="btn btn-danger btn-remove" title="Eliminar">
+                                                    <a id="deleteCliente" href="<?php echo base_url(); ?>mantenimiento/ccliente/cdelete/<?php echo $atributos->IdCliente; ?>" class="btn btn-danger btn-remove" title="Eliminar">
                                                         <span class="fa fa-remove"></span>
                                                     </a>
                                                 </div>

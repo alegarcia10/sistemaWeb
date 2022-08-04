@@ -51,7 +51,7 @@
                                                     <a href="<?php echo base_url(); ?>mantenimiento/ctecnico/cedit/<?php echo $atributos->Dni; ?>" class="btn btn-info" title="Modificar">
                                                         <span class="fa fa-pencil"></span>
                                                     </a>
-                                                    <a href="<?php echo base_url(); ?>mantenimiento/ctecnico/cdelete/<?php echo $atributos->Dni; ?>" class="btn btn-danger btn-remove" title="Eliminar">
+                                                    <a id="deleteTecnico" href="<?php echo base_url(); ?>mantenimiento/ctecnico/cdelete/<?php echo $atributos->Dni; ?>" class="btn btn-danger btn-remove" title="Eliminar">
                                                         <span class="fa fa-remove"></span>
                                                     </a>
                                                 </div>

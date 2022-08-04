@@ -73,7 +73,7 @@
                                                             <a title="Modificar" href="<?php echo base_url(); ?>mantenimiento/cparteorden/cedit/<?php echo $atributos->IdParte; ?>" class="btn btn-info ">
                                                                 <span class="fa fa-pencil"></span>
                                                             </a>
-                                                            <a title="Eliminar" href="<?php echo base_url(); ?>mantenimiento/cparteorden/cdelete/<?php echo $atributos->IdParte; ?>/<?php echo $atributos->IdOrden; ?>" class="btn btn-danger btn-remove">
+                                                            <a id="deleteParte" title="Eliminar" href="<?php echo base_url(); ?>mantenimiento/cparteorden/cdelete/<?php echo $atributos->IdParte; ?>/<?php echo $atributos->IdOrden; ?>" class="btn btn-danger btn-remove">
                                                                 <span class="fa fa-remove"></span>
                                                             </a>
                                                         </div>
