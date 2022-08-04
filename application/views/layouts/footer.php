@@ -138,47 +138,13 @@ $('.sidebar-menu').tree()
 
 
 
-        //  $(".btn-success").on("click", function(e){
-        //    e.preventDefault(); // cancela accion de href
-        //    var ruta =$(this).attr("href");
-        //    //alert(ruta);
-        //    swal({
-        //      title: "Marcar la orden Nro como completa?",
-        //      text: "",
-        //      type: "warning",
-        //      showCancelButton: true,
-        //      confirmButtonColor: '#d9534f',
-        //      cancelButtonColor: '#d33',
-        //      confirmButtonText: "Confirmar",
-        //      showLoaderOnConfirm: true,
-        //      cancelButtonText: "Cancelar",
-        //      closeOnConfirm: false,
-        //      closeOnCancel: false
-        //       },
-        //       function(isConfirm){
-        //         if (isConfirm) {
-        //           $.ajax({
-        //             url: ruta,
-        //             type: "POST",
-        //             success:function(res){
-        //               //alert(res);
-        //               window.location.href=base_url+res;
-        //             }
-        //           });
-        //         }else{
-        //           swal("Cancelado jiji jaja", "", "error");
-        //         }
-        //       });
-        //  });
-
-
          $("#completaOrden").on("click", function(e){
            e.preventDefault(); // cancela accion de href
            var ruta =$(this).attr("href");
            //alert(ruta);
            swal({
-             title: "Esta apunto de marcar como completa",
-             text: "Orden Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
+             title: "Marcar la orden Nro como completa?",
+             text: "",
              type: "warning",
              showCancelButton: true,
              confirmButtonColor: '#d9534f',
@@ -200,15 +166,49 @@ $('.sidebar-menu').tree()
                     }
                   });
                 }else{
-                  swal({
-                      type: 'error',
-                      title: 'Cancelado',
-                      showConfirmButton: false,
-                      timer: 500
-                    });
+                  swal("Cancelado jiji jaja", "", "error");
                 }
               });
          });
+
+
+        //  $("#completaOrden").on("click", function(e){
+        //    e.preventDefault(); // cancela accion de href
+        //    var ruta =$(this).attr("href");
+        //    //alert(ruta);
+        //    swal({
+        //      title: "Esta apunto de marcar como completa",
+        //      text: "Orden Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
+        //      type: "warning",
+        //      showCancelButton: true,
+        //      confirmButtonColor: '#d9534f',
+        //      cancelButtonColor: '#d33',
+        //      confirmButtonText: "Confirmar",
+        //      showLoaderOnConfirm: true,
+        //      cancelButtonText: "Cancelar",
+        //      closeOnConfirm: false,
+        //      closeOnCancel: false
+        //       },
+        //       function(isConfirm){
+        //         if (isConfirm) {
+        //           $.ajax({
+        //             url: ruta,
+        //             type: "POST",
+        //             success:function(res){
+        //               //alert(res);
+        //               window.location.href=base_url+res;
+        //             }
+        //           });
+        //         }else{
+        //           swal({
+        //               type: 'error',
+        //               title: 'Cancelado',
+        //               showConfirmButton: false,
+        //               timer: 500
+        //             });
+        //         }
+        //       });
+        //  });
 
 
          $("#reanudarOrden").on("click", function(e){
