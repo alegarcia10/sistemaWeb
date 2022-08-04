@@ -85,7 +85,7 @@ $('.sidebar-menu').tree()
                   });
                 }else{
                     Swal.fire({
-                      position: 'center',
+                      position: 'top-center',
                       icon: 'error',
                       title: 'Cancelado',
                       showConfirmButton: false,
@@ -126,7 +126,7 @@ $('.sidebar-menu').tree()
                   });
                 }else{
                   Swal.fire({
-                      position: 'center',
+                      position: 'top-center',
                       icon: 'error',
                       title: 'Cancelado',
                       showConfirmButton: false,
