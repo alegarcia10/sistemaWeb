@@ -84,9 +84,8 @@ $('.sidebar-menu').tree()
                     }
                   });
                 }else{
-                    swal({
-                      position: 'top-center',
-                      icon: 'error',
+                  swal({
+                      type: 'error',
                       title: 'Cancelado',
                       showConfirmButton: false,
                       timer: 500
@@ -126,8 +125,7 @@ $('.sidebar-menu').tree()
                   });
                 }else{
                   swal({
-                      position: 'top-center',
-                      icon: 'error',
+                      type: 'error',
                       title: 'Cancelado',
                       showConfirmButton: false,
                       timer: 500
