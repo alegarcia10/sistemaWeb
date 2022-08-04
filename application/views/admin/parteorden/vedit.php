@@ -6,7 +6,7 @@
         </h1>
     </section>
     <section class="content">
-      <div>
+      <div class="box">
         <!-- <div class="box box-solid"> -->
             <div class="box-body">
 
