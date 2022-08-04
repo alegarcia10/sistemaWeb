@@ -6,12 +6,12 @@
         </h1>
     </section>
     <section class="content">
-        <div>
+      <div>
+        <!-- <div class="box box-solid"> -->
             <div class="box-body">
 
                <div class="row">
-               <div class="box box-solid">
-                   <div class="col-md-12">
+                   <div class="col-md-12 box box-solid">
                    <div class="row">
                        <?php if($this->session->flashdata('error')):?>
                         <div class="alert alert-danger">
@@ -56,9 +56,7 @@
                           </form>
                     </div>
                     </div>
-                    </div>
-                    <div class="box box-solid">
-                    <div class="col-md-6">
+                    <div class="col-md-6 box box-solid">
                       <div class="row">
                         <?php if($this->session->flashdata('error')):?>
                          <div class="alert alert-danger">
@@ -110,10 +108,8 @@
                                </div>
                            </form>
                        </div>
-                       </div>
                     </div>
-               <div class="box box-solid">    
-               <div class="col-md-6">
+               <div class="col-md-6 box box-solid">
                  <div class="row">
                    <?php if($this->session->flashdata('error')):?>
                     <div class="alert alert-danger">
@@ -179,8 +175,8 @@
                           </div>
                     </form>
                   </div>
-                  </div>
                </div>
+
                </div>
             </div>
         </div>
