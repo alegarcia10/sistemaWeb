@@ -205,12 +205,12 @@ $('.sidebar-menu').tree()
         //             }
         //           });
         //         }else{
-                  swal({
-                      type: 'error',
-                      title: 'Cancelado',
-                      showConfirmButton: false,
-                      timer: 500
-                    });
+                  // swal({
+                  //     type: 'error',
+                  //     title: 'Cancelado',
+                  //     showConfirmButton: false,
+                  //     timer: 500
+                  //   });
         //         }
         //       });
         //  });
