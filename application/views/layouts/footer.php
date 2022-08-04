@@ -84,6 +84,13 @@ $('.sidebar-menu').tree()
                     }
                   });
                 }else{
+                    Swal.fire({
+                      position: 'center',
+                      icon: 'error',
+                      title: 'Cancelado',
+                      showConfirmButton: false,
+                      timer: 500
+                    })
                   //swal("Cancelado", "", "error");
                 }
               });
@@ -118,6 +125,13 @@ $('.sidebar-menu').tree()
                     }
                   });
                 }else{
+                  Swal.fire({
+                      position: 'center',
+                      icon: 'error',
+                      title: 'Cancelado',
+                      showConfirmButton: false,
+                      timer: 500
+                    })
                   //swal("Cancelado", "", "error");
                 }
               });
