@@ -143,8 +143,8 @@ $('.sidebar-menu').tree()
            var ruta =$(this).attr("href");
            //alert(ruta);
            swal({
-             title: "Marcar la orden Nro como completa?",
-             text: "",
+             title: "Esta apunto de marcar como completa",
+             text: "Orden Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
              type: "warning",
              showCancelButton: true,
              confirmButtonColor: '#d9534f',
@@ -166,7 +166,12 @@ $('.sidebar-menu').tree()
                     }
                   });
                 }else{
-                  swal("Cancelado jiji jaja", "", "error");
+                  swal({
+                      type: 'error',
+                      title: 'Cancelado',
+                      showConfirmButton: false,
+                      timer: 500
+                    });
                 }
               });
          });
@@ -177,8 +182,8 @@ $('.sidebar-menu').tree()
         //    var ruta =$(this).attr("href");
         //    //alert(ruta);
         //    swal({
-        //      title: "Esta apunto de marcar como completa",
-        //      text: "Orden Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
+            //  title: "Esta apunto de marcar como completa",
+            //  text: "Orden Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
         //      type: "warning",
         //      showCancelButton: true,
         //      confirmButtonColor: '#d9534f',
@@ -200,12 +205,12 @@ $('.sidebar-menu').tree()
         //             }
         //           });
         //         }else{
-        //           swal({
-        //               type: 'error',
-        //               title: 'Cancelado',
-        //               showConfirmButton: false,
-        //               timer: 500
-        //             });
+                  swal({
+                      type: 'error',
+                      title: 'Cancelado',
+                      showConfirmButton: false,
+                      timer: 500
+                    });
         //         }
         //       });
         //  });
