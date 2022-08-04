@@ -150,7 +150,8 @@ public function ccompleta($id){
         'Completada' => '1'
     );
     $this->morden->mupdateorden($id, $data);
-    redirect(base_url().'mantenimiento/corden');
+    //redirect(base_url().'mantenimiento/corden');
+    echo "mantenimiento/corden";
 }
 
 public function cdescompleta($id){
@@ -159,7 +160,8 @@ public function cdescompleta($id){
         'Completada' => '0'
     );
     $this->morden->mupdateorden($id, $data);
-    redirect(base_url().'mantenimiento/corden');
+    //redirect(base_url().'mantenimiento/corden');
+    echo "mantenimiento/corden";
 }
 
 
