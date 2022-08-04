@@ -24,8 +24,27 @@ public function index(){
 
 
     foreach ($ordenes as $orden ) {
+
+
          $id=$orden->IdOrden;
-         $orden->Gastos=$this->morden->consultaGatosOrden($id);
+         $gastos=0;
+         $gastosCompletos=0;
+         log_message('error',sprintf("-----------------id orden------------------ $id"));
+         $tareas=$this->morden->consultaTareas($id);
+
+         foreach ($tareas as $tarea ) {
+           $idParte=$tarea->IdParte;
+           log_message('error',sprintf("gastos igual a $gastos "));
+           log_message('error',sprintf("tarea numero   $idParte"));
+           $gastos=$this->morden->consultaGatosTotales($idParte);
+           $gastosCompletos=$gastosCompletos+$gastos;
+           log_message('error',sprintf("devuelve  $gastos"));
+
+         }
+
+         $orden->Gastos=$gastosCompletos;
+
+
     }
 
 
@@ -34,8 +53,27 @@ public function index(){
 
 
     foreach ($ordenesCompletas as $orden ) {
+
+
          $id=$orden->IdOrden;
-         $orden->Gastos=$this->morden->consultaGatosOrden($id);
+         $gastos=0;
+         $gastosCompletos=0;
+         log_message('error',sprintf("-----------------id orden------------------ $id"));
+         $tareas=$this->morden->consultaTareas($id);
+
+         foreach ($tareas as $tarea ) {
+           $idParte=$tarea->IdParte;
+           log_message('error',sprintf("gastos igual a $gastos "));
+           log_message('error',sprintf("tarea numero   $idParte"));
+           $gastos=$this->morden->consultaGatosTotales($idParte);
+           $gastosCompletos=$gastosCompletos+$gastos;
+           log_message('error',sprintf("devuelve  $gastos"));
+
+         }
+
+         $orden->Gastos=$gastosCompletos;
+
+
     }
 
 
@@ -150,16 +188,18 @@ public function ccompleta($id){
         'Completada' => '1'
     );
     $this->morden->mupdateorden($id, $data);
-    redirect(base_url().'mantenimiento/corden');
+    //redirect(base_url().'mantenimiento/corden');
+    echo "mantenimiento/corden";
 }
 
-public function cdescompleta($id){
+public function cactivar($id){
 
     $data=array(
         'Completada' => '0'
     );
     $this->morden->mupdateorden($id, $data);
-    redirect(base_url().'mantenimiento/corden');
+    //redirect(base_url().'mantenimiento/corden');
+    echo "mantenimiento/corden";
 }
 
 

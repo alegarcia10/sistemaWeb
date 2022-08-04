@@ -32,19 +32,6 @@ class Morden extends CI_Model{
       }
 
 
-      public function consultaGatosOrden($id){
-        $resultado =$query = $this->db->query("SELECT SUM(Precio)as Gastos FROM material where IdOrden=$id");
-         //log_message('error',sprintf("id orden $ $resultado"));
-         $resultado=$resultado->row();
-        $gastos=$resultado->Gastos;
- 
-        $x=intval($gastos);
-        //var_dump($gastos->Gastos);
-        log_message('error',sprintf("gastos de orden $x "));
-          return  $gastos;
-       }
-
-
     //MOSTRAR orden completas
     public function mselectordencompletas(){
 
