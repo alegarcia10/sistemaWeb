@@ -39,12 +39,8 @@
                         <?php endif; ?>
 
                         <div class="row">
-                            <div class="col-md-3">
-                                <input class="form-control col-md-3 light-table-filter" data-table="order-table" type="text" placeholder="Buscar Tarea..">
-                                <hr>
-                            </div>
                             <div class="col-md-12">
-                                <table id="example1" class="table table-bordered table-hover order-table">
+                                <table id="tablaparte" class="table table-bordered table-hover order-table">
                                     <thead>
                                         <tr>
                                             <th>#</th>
@@ -52,12 +48,11 @@
                                             <th>Fecha Inicio</th>
                                             <th>Fecha Fin</th>
                                             <th>Estado</th>
-
+                                            <th>Operaciones</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php //var_dump($ordenindex); die;
-                                        ?>
+
                                         <?php if (!empty($parteordenindex)) : ?>
                                             <?php foreach ($parteordenindex as $atributos) : ?>
                                                 <tr>
@@ -66,7 +61,6 @@
                                                     <td><?php if($atributos->FechaInicio == null){ echo "-";}else{echo date("d-m-Y", strtotime("$atributos->FechaInicio"));} ?></td>
                                                     <td><?php if($atributos->FechaFin == null){ echo "-";}else{echo date("d-m-Y", strtotime("$atributos->FechaFin"));} ?></td>
                                                     <td><?php if ($atributos->Completa == 1){ echo 'Completa';}else{echo 'Pendiente';} ; ?></td>
-                                                    <?php $data = $atributos->IdOrden; ?>
                                                     <td>
                                                         <div class="btn-group">
 
@@ -93,3 +87,27 @@
             </div>
     </section>
 </div>
+
+<script type="text/javascript">
+
+
+$(document).ready(function () {
+    $('#tablaparte').DataTable({
+               "language": {
+                   "lengthMenu": "Mostrar _MENU_ registros por pagina",
+                   "zeroRecords": "No se encontraron resultados en su busqueda",
+                   "searchPlaceholder": "Buscar Tarea",
+                   "info": "Mostrando registros de _START_ al _END_ de un total de  _TOTAL_ registros",
+                   "infoEmpty": "No existen registros",
+                   "infoFiltered": "(filtrado de un total de _MAX_ registros)",
+                   "search": "Buscar:",
+                   "paginate": {
+                       "first": "Primero",
+                       "last": "Último",
+                       "next": "Siguiente",
+                       "previous": "Anterior"
+                   },
+               }
+          });
+})
+</script>

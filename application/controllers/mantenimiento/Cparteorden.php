@@ -78,7 +78,6 @@ public function cinsert(){
 
 public function cedit($id){
 
-
   $var=substr($id, 0, 1);
   $id= str_replace('@', '',$id);
   $id= str_replace('_', '',$id);
@@ -283,7 +282,6 @@ public function ceditTecnico($tecnico,$idParte){
 
   $this->mparteorden->mdeletetecnicoOrden($idParte, $tecnico);
   //redirect(base_url().'mantenimiento/cparteorden/cedit/'.$idParte);
-
   echo "mantenimiento/cparteorden/cedit/$idParte";
 }
 

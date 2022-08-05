@@ -27,7 +27,7 @@
                                     <th>Nombre </th>
                                     <th>Apellido</th>
                                     <th>Usuario</th>
-                                    
+
                                 </tr>
                             </thead>
                             <tbody>
@@ -38,11 +38,8 @@
                                     <td><?php echo $atributos->nombre ;?></td>
                                     <td><?php echo $atributos->apellido ;?></td>
                                     <td><?php echo $atributos->usuario;?></td>
-
                                     <td>
                                         <div class="btn-group">
-                                       
-                                        
                                             <a href="<?php echo base_url();?>mantenimiento/cusuario/cedit/<?php echo $atributos->idUsuario; ?>" class="btn btn-info">
                                                 <span class="fa fa-pencil"></span>
                                             </a>
@@ -81,6 +78,3 @@
         </div>
     </div>
 </div>
-
-
-

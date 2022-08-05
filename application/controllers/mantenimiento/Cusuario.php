@@ -111,7 +111,8 @@ public function cdelete($id){
         'Anulado' => '1'
     );
     $this->musuario->mupdateusuario($id, $data);
-    redirect(base_url().'mantenimiento/cusuario');
+    //redirect(base_url().'mantenimiento/cusuario');
+    echo "mantenimiento/cusuario";
 }
 
 

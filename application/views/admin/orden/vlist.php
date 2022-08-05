@@ -12,7 +12,6 @@
                     <div class="col-md-9">
                         <a href="<?php echo base_url(); ?>mantenimiento/corden/cadd" class="btn btn-flat" id="botonVioleta"><span class="fa fa-plus"></span> Agregar orden</a>
                     </div>
-
                 </div>
                 <?php if ($this->session->flashdata('correcto')) : ?>
                     <div class="alert alert-success">
@@ -22,15 +21,10 @@
                 <hr>
                 <div class="row">
                     <div class="col-md-12">
-                      <div class="col-md-9">
+                      <div class="col-md-12">
                           <h1>Ordenes Activas  <span class="fa fa-clock-o"></span></h1>
-
                       </div>
-                      <div class="col-md-3">
-                          <br>
-                          <input class="form-control col-md-3 light-table-filter" data-table="order-table1" type="text" placeholder="Buscar orden Activa..">
-                      </div>
-                        <table id="example1" class="table table-bordered table-hover order-table1">
+                        <table id="tablaordena" class="table table-bordered table-hover order-table1">
                             <thead>
                                 <tr>
                                     <th>N° ORDEN</th>
@@ -75,17 +69,15 @@
                         </table>
                     </div>
                 </div>
+                <hr>
                 <div class="row">
-                    <div class="col-md-9">
+                  <div class="col-md-12">
+                    <div class="col-md-12">
                         <h1>Ordenes Completas  <span class="fa fa-check-circle"></span></h1>
                     </div>
-                    <div class="col-md-3">
-                        <br>
-                        <input class="form-control col-md-3 light-table-filter" data-table="order-table2" type="text" placeholder="Buscar orden Completa..">
-                    </div>
                     <br>
-                    <div class="col-md-12">
-                        <table id="example1" class="table table-bordered table-hover order-table2">
+
+                        <table id="tablaordenc" class="table table-bordered table-hover order-table2">
                             <thead>
                                 <tr>
                                   <th>N° ORDEN</th>
@@ -133,33 +125,27 @@
     </section>
 </div>
 
-<div class="modal fade" id="modal-default">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">x</font>
-                        </font>
-                    </span>
-                </button>
-                <h4 class="modal-title">
-                    <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;"> Informacion de la orden</font>
-                    </font>
-                </h4>
-            </div>
-            <div class="modal-body">
 
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">
-                    <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">Cerrar</font>
-                    </font>
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
+<script type="text/javascript">
+
+
+$(document).ready(function () {
+    $('#tablaordenc').DataTable({
+               "language": {
+                   "lengthMenu": "Mostrar _MENU_ registros por pagina",
+                   "zeroRecords": "No se encontraron resultados en su busqueda",
+                   "searchPlaceholder": "Buscar Ordenes Completas",
+                   "info": "Mostrando registros de _START_ al _END_ de un total de  _TOTAL_ registros",
+                   "infoEmpty": "No existen registros",
+                   "infoFiltered": "(filtrado de un total de _MAX_ registros)",
+                   "search": "Buscar:",
+                   "paginate": {
+                       "first": "Primero",
+                       "last": "Último",
+                       "next": "Siguiente",
+                       "previous": "Anterior"
+                   },
+               }
+          });
+})
+</script>

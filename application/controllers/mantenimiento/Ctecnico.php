@@ -89,10 +89,9 @@ public function cupdate(){
 
             $data = array(
                 'Nombre' => $nombre,
-                'Dni' => $dni,
+                'Dni' => $id,
                 'Telefono' => $telefono
             );
-
                   $res = $this->mtecnico->mupdatetecnico($id, $data);
                   if($res){
                       $this->session->set_flashdata('correcto', 'Se Guardo Correctamente');

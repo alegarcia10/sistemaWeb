@@ -27,7 +27,7 @@ class Morden extends CI_Model{
 
        $x=intval($gastos);
        //var_dump($gastos->Gastos);
-       log_message('error',sprintf("gastosssss $x "));
+       //log_message('error',sprintf("gastosssss $x "));
          return  $gastos;
       }
 
@@ -37,14 +37,12 @@ class Morden extends CI_Model{
          //log_message('error',sprintf("id orden $ $resultado"));
          $resultado=$resultado->row();
         $gastos=$resultado->Gastos;
- 
+
         $x=intval($gastos);
         //var_dump($gastos->Gastos);
-        log_message('error',sprintf("gastos de orden $x "));
+        //log_message('error',sprintf("gastos de orden $x "));
           return  $gastos;
        }
-
-
     //MOSTRAR orden completas
     public function mselectordencompletas(){
 

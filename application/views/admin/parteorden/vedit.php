@@ -8,7 +8,6 @@
     <section class="content">
         <div class="box box-solid">
             <div class="box-body">
-
                <div class="row">
                    <div class="col-md-12">
                    <div class="row">
@@ -94,7 +93,7 @@
                                                          <td ><?php echo $atributos->Nombre; ?></td>
                                                          <td>
                                                              <div >
-                                                               <a title="Eliminar" href="<?php echo base_url(); ?>mantenimiento/cparteorden/ceditTecnico/<?php echo $atributos->Dni; ?>/<?php echo $atributos->IdParte; ?>" class="btn btn-danger btn-remove ">
+                                                               <a title="Eliminar" href="<?php echo base_url(); ?>mantenimiento/cparteorden/ceditTecnico/<?php echo $atributos->Dni; ?>/<?php echo $atributos->IdParte; ?>" class="btn btn-danger btn-remove deleteTecnicoTarea">
                                                                    <span class="fa fa-remove"></span>
                                                                </a>
                                                              </div>
@@ -161,7 +160,7 @@
                                                             <a title="Modificar" href="<?php echo base_url(); ?>mantenimiento/cparteorden/ceditMat/<?php echo $atributos->IdMat; ?>" class="btn btn-info ">
                                                                 <span class="fa fa-pencil"></span>
                                                             </a>
-                                                            <a title="Eliminar" href="<?php echo base_url(); ?>mantenimiento/cparteorden/cdeleteMat/<?php echo $atributos->IdMat; ?>" class="btn btn-danger btn-remove">
+                                                            <a title="Eliminar" href="<?php echo base_url(); ?>mantenimiento/cparteorden/cdeleteMat/<?php echo $atributos->IdMat; ?>" class="btn btn-danger btn-remove deleteMaterialTarea">
                                                                 <span class="fa fa-remove"></span>
                                                             </a>
                                                         </div>
