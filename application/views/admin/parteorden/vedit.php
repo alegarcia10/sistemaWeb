@@ -64,7 +64,7 @@
 
                          <form action="<?php echo base_url();?>mantenimiento/cparteorden/cupdate" method="POST">
                               <div class="col-sm-6 form-group">
-                                <h3>Tecnicos</h3>
+                                <h3>Técnicos</h3>
                               </div>
                              <input type="hidden" value="<?php echo $parteordenedit->IdOrden ?>" name="txtidorden" id="txtidorden">
                              <input type="hidden" value="<?php echo $parteordenedit->IdParte ?>" name="txtidParte" id="txtidParte">
