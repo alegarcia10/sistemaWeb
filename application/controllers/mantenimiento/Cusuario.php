@@ -27,7 +27,7 @@ public function cadd(){
 
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside');
-    $this->load->view('admin/usuario/vadd', $data);
+    $this->load->view('admin/usuario/vadd');
     $this->load->view('layouts/footer');
 }
 

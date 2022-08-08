@@ -23,7 +23,7 @@
                             </div>
                             <div class=" col-sm-4 form-group">
                                 <label for="apellido">Apellido</label>
-                                <input type="text" id="txtapellido" name="txtapellido" class="form-control" value="<?php echo set_value('txtapellido') ?>"  required >
+                                <input type="text" id="txtapellido" name="txtapellido" class="form-control" value="<?php echo set_value('txtapellido') ?>"   >
                             </div>
                             <div class="col-sm-4 form-group">
                                 <label for="usuario">Usuario</label>

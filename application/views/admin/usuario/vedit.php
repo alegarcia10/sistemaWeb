@@ -24,7 +24,7 @@
                             </div>
                             <div class=" col-sm-4 form-group">
                                 <label for="apellido">Apellido</label>
-                                <input type="text" id="txtapellido" name="txtapellido" value="<?php echo !empty(form_error('txtapellido'))? set_value('txtapellido') : $usuarioedit->apellido ?>" class= "form-control"  required>
+                                <input type="text" id="txtapellido" name="txtapellido" value="<?php echo !empty(form_error('txtapellido'))? set_value('txtapellido') : $usuarioedit->apellido ?>" class= "form-control"  >
                             </div>
 
                             <div class="col-sm-4  form-group">
