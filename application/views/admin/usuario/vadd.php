@@ -19,19 +19,19 @@
                         <form action="<?php echo base_url();?>mantenimiento/cusuario/cinsert" method="POST">
                             <div class=" col-sm-4 form-group">
                                 <label for="nombre">Nombre</label>
-                                <input type="text" id="txtnombre" name="txtnombre" class="form-control" value="<?php echo set_value('txtnombre') ?>"  >
+                                <input type="text" id="txtnombre" name="txtnombre" class="form-control" value="<?php echo set_value('txtnombre') ?>"   required>
                             </div>
                             <div class=" col-sm-4 form-group">
                                 <label for="apellido">Apellido</label>
-                                <input type="text" id="txtapellido" name="txtapellido" class="form-control" value="<?php echo set_value('txtapellido') ?>"  >
+                                <input type="text" id="txtapellido" name="txtapellido" class="form-control" value="<?php echo set_value('txtapellido') ?>"  required >
                             </div>
                             <div class="col-sm-4 form-group">
                                 <label for="usuario">Usuario</label>
-                                <input type="text" id="txtusuario" name="txtusuario" class="form-control" value="<?php echo set_value('txtusuario') ?>" >
+                                <input type="text" id="txtusuario" name="txtusuario" class="form-control" value="<?php echo set_value('txtusuario') ?>"  required>
                             </div>
                             <div class="col-sm-4 form-group">
                                 <label for="Contraseña">Contraseña</label>
-                                <input type="text" id="txtContraseña" name="txtContraseña" class="form-control" value="<?php echo set_value('txtContraseña') ?>" >
+                                <input type="text" id="txtContraseña" name="txtContraseña" class="form-control" value="<?php echo set_value('txtContraseña') ?>"  required>
                             </div>
 
                             <div class="col-sm-12 form-group">

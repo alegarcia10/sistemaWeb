@@ -73,7 +73,7 @@
                 <div class="row">
                   <div class="col-md-12">
                     <div class="col-md-12">
-                        <h1>Ordenes Completas  <span class="fa fa-check-circle"></span></h1>
+                        <h1>Órdenes Completas  <span class="fa fa-check-circle"></span></h1>
                     </div>
                     <br>
 
@@ -132,7 +132,7 @@
 $(document).ready(function () {
     $('#tablaordenc').DataTable({
                "language": {
-                   "lengthMenu": "Mostrar _MENU_ registros por pagina",
+                   "lengthMenu": "Mostrar _MENU_ registros por página",
                    "zeroRecords": "No se encontraron resultados en su busqueda",
                    "searchPlaceholder": "Buscar Ordenes Completas",
                    "info": "Mostrando registros de _START_ al _END_ de un total de  _TOTAL_ registros",

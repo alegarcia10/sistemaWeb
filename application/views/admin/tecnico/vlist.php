@@ -10,7 +10,7 @@
             <div class="box-body">
                 <div class="row">
                     <div class="col-md-9">
-                        <a href="<?php echo base_url(); ?>mantenimiento/ctecnico/cadd" class="btn btn-flat" id="botonVioleta"><span class="fa fa-plus"></span> Agregar Tecnico</a>
+                        <a href="<?php echo base_url(); ?>mantenimiento/ctecnico/cadd" class="btn btn-flat" id="botonVioleta"><span class="fa fa-plus"></span> Agregar Técnico</a>
                     </div>
                 </div>
                 <?php if ($this->session->flashdata('correcto')) : ?>
@@ -67,7 +67,7 @@
 $(document).ready(function () {
     $('#tablatecnico').DataTable({
                "language": {
-                   "lengthMenu": "Mostrar _MENU_ registros por pagina",
+                   "lengthMenu": "Mostrar _MENU_ registros por página",
                    "zeroRecords": "No se encontraron resultados en su busqueda",
                    "searchPlaceholder": "Buscar Tecnico",
                    "info": "Mostrando registros de _START_ al _END_ de un total de  _TOTAL_ registros",

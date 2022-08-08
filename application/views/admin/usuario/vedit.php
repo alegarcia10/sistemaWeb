@@ -20,20 +20,20 @@
                             <input type="hidden" value="<?php echo $usuarioedit->idUsuario ?>" name="txtidusuario" id="txtidusuario">
                             <div class=" col-sm-4 form-group">
                                 <label for="nombre">Nombre</label>
-                                <input type="text" id="txtnombre" name="txtnombre" value="<?php echo !empty(form_error('txtnombre'))? set_value('txtnombre') : $usuarioedit->nombre ?>" class= "form-control"  >
+                                <input type="text" id="txtnombre" name="txtnombre" value="<?php echo !empty(form_error('txtnombre'))? set_value('txtnombre') : $usuarioedit->nombre ?>" class= "form-control"  required>
                             </div>
                             <div class=" col-sm-4 form-group">
                                 <label for="apellido">Apellido</label>
-                                <input type="text" id="txtapellido" name="txtapellido" value="<?php echo !empty(form_error('txtapellido'))? set_value('txtapellido') : $usuarioedit->apellido ?>" class= "form-control"  >
+                                <input type="text" id="txtapellido" name="txtapellido" value="<?php echo !empty(form_error('txtapellido'))? set_value('txtapellido') : $usuarioedit->apellido ?>" class= "form-control"  required>
                             </div>
 
                             <div class="col-sm-4  form-group">
                                 <label for="usuario">usuario</label>
-                                <input type="text" id="txtusuario" name="txtusuario" value="<?php echo !empty(form_error('txtusuario'))? set_value('txtusuario') : $usuarioedit->usuario ?>" class= "form-control" >
+                                <input type="text" id="txtusuario" name="txtusuario" value="<?php echo !empty(form_error('txtusuario'))? set_value('txtusuario') : $usuarioedit->usuario ?>" class= "form-control" required>
                             </div>
                             <div class="col-sm-4  form-group">
                                 <label for="Contraseña">Contraseña</label>
-                                <input type="text" id="txtContraseña" name="txtContraseña" value="<?php echo !empty(form_error('txtContraseña'))? set_value('txtContraseña') : $usuarioedit->pass ?>" class= "form-control" >
+                                <input type="text" id="txtContraseña" name="txtContraseña" value="<?php echo !empty(form_error('txtContraseña'))? set_value('txtContraseña') : $usuarioedit->pass ?>" class= "form-control" required >
                             </div>
 
                             <div class="col-sm-12 form-group">

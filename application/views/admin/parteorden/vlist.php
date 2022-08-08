@@ -94,7 +94,7 @@
 $(document).ready(function () {
     $('#tablaparte').DataTable({
                "language": {
-                   "lengthMenu": "Mostrar _MENU_ registros por pagina",
+                   "lengthMenu": "Mostrar _MENU_ registros por página",
                    "zeroRecords": "No se encontraron resultados en su busqueda",
                    "searchPlaceholder": "Buscar Tarea",
                    "info": "Mostrando registros de _START_ al _END_ de un total de  _TOTAL_ registros",
