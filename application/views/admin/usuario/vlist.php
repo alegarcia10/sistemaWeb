@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <section class="content-header">
         <h1> Usuario
-            <small>Listado de usuarios </small>
+            <small>Listado de Usuarios </small>
         </h1>
     </section>
     <section class="content">

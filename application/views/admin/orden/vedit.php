@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <section class="content-header">
         <h1>
-        Orden
+        Órden
             <small>Editar</small>
         </h1>
     </section>
@@ -19,11 +19,11 @@
                         <form action="<?php echo base_url();?>mantenimiento/corden/cupdate" method="POST">
                             <input type="hidden" value="<?php echo $ordenedit->IdOrden ?>" name="txtidorden" id="txtidorden">
                             <div class="col-sm-3 form-group">
-                                <label for="fecha">FECHA</label>
+                                <label for="fecha">Fecha</label>
                                 <input type="text" id="txtfecha" name="txtfecha"  min="2020-01-01" max="2100-12-31" value="<?php echo !empty(form_error('txtfecha'))? set_value('txtfecha') :  date("d-m-Y", strtotime("$ordenedit->FechaRecepcion"));?>" class= "form-control"   disabled>
                             </div>
                             <div class="col-sm-3 form-group">
-                                <label for="precio">PRECIO</label>
+                                <label for="precio">Precio</label>
                                 <input type="number" id="txtprecio" name="txtprecio" step="0.01"  value="<?php echo !empty(form_error('txtprecio'))? set_value('txtprecio') :  $ordenedit->Precio;?>" class= "form-control"   >
                             </div>
                             <div class="col-md-4 form-group">

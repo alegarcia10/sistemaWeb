@@ -22,18 +22,18 @@
                 <div class="row">
                     <div class="col-md-12">
                       <div class="col-md-12">
-                          <h1>Ordenes Activas  <span class="fa fa-clock-o"></span></h1>
+                          <h1>Órdenes Activas  <span class="fa fa-clock-o"></span></h1>
                       </div>
                         <table id="tablaordena" class="table table-bordered table-hover order-table1">
                             <thead>
                                 <tr>
-                                    <th>N° ORDEN</th>
-                                    <th>FECHA</th>
-                                    <th>TAREA</th>
-                                    <th>GASTOS</th>
-                                    <th>MONTO A FACTURAR</th>
-                                    <th>CLIENTE</th>
-                                    <th >OPERACIONES</th>
+                                    <th>N° Órden</th>
+                                    <th>Fecha</th>
+                                    <th>Tarea</th>
+                                    <th>Gastos</th>
+                                    <th>Monto a Facturar</th>
+                                    <th>Cliente</th>
+                                    <th >Operaciones</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -80,13 +80,13 @@
                         <table id="tablaordenc" class="table table-bordered table-hover order-table2">
                             <thead>
                                 <tr>
-                                  <th>N° ORDEN</th>
-                                  <th>FECHA</th>
-                                  <th>TAREA</th>
-                                  <th>GASTOS</th>
-                                  <th>MONTO FACTURADO</th>
-                                  <th>CLIENTE</th>
-                                  <th >OPERACIONES</th>
+                                  <th>N° Órden</th>
+                                  <th>Fecha</th>
+                                  <th>Tarea</th>
+                                  <th>Gastos</th>
+                                  <th>Monto Facturado</th>
+                                  <th>Cliente</th>
+                                  <th >Operaciones</th>
                                 </tr>
                             </thead>
                             <tbody>

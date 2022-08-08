@@ -278,7 +278,7 @@ public function addTecnicoOrden(){
 
 
 
-public function ceditTecnico($tecnico,$idParte){
+public function ceditTecnico($idParte,$tecnico){
 
   $this->mparteorden->mdeletetecnicoOrden($idParte, $tecnico);
   //redirect(base_url().'mantenimiento/cparteorden/cedit/'.$idParte);

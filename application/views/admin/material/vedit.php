@@ -19,7 +19,7 @@
                         <form action="<?php echo base_url();?>mantenimiento/cparteorden/cupdateMat" method="POST">
                             <input type="hidden" value="<?php echo $materialedit->IdMat ?>" name="txtid" id="txtid">
                             <div class="col-sm-6 form-group">
-                                <label for="descripcion">Descripcion</label>
+                                <label for="descripcion">Descripción</label>
                                 <input type="text" id="txtdescripcion" name="txtdescripcion" maxlength="150" value="<?php echo !empty(form_error('txtdescripcion'))? set_value('txtdescripcion') : $materialedit->Descripcion ?>" class= "form-control"  >
                             </div>
                             <div class="col-sm-2 form-group">

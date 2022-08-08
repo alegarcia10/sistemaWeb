@@ -1,8 +1,8 @@
 <div class="content-wrapper">
     <section class="content-header">
         <h1>
-            Tecnicos
-            <small>Listado de Tecnicos</small>
+            Técnicos
+            <small>Listado de Técnicos</small>
         </h1>
     </section>
     <section class="content">

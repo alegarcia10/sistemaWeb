@@ -27,7 +27,7 @@
                               <tr>
                                   <th>#</th>
                                   <th>CUIT</th>
-                                  <th>NOMBRE</th>
+                                  <th>Nombre</th>
                                   <th>Domicilio</th>
                                   <th>Provincia</th>
                                   <th>Operaciones</th>

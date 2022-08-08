@@ -458,7 +458,8 @@ $(".deleteMaterialTarea").on("click", function(e){//
          $(".deleteTecnicoTarea").on("click", function(e){//
                     e.preventDefault(); // cancela accion de href
                     var ruta =$(this).attr("href");
-                    alert(ruta);
+                  
+                    //alert(ruta);
                     swal({
                       title: "Esta por eliminar",
                       text: "Tecnico Dni " +ruta.substring(this.href.lastIndexOf('/') + 1),

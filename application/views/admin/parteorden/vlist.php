@@ -15,16 +15,16 @@
                     <br>
                     <br>
                     <div class="col-md-4">
-                        <h4>FECHA: <?=   date("d-m-Y", strtotime("$ordenindex->FechaRecepcion "));?> </h4>
+                        <h4>Fecha: <?=   date("d-m-Y", strtotime("$ordenindex->FechaRecepcion "));?> </h4>
                     </div>
                     <div class="col-md-4">
-                        <h4>TAREA: <?= $ordenindex->TareaDesarrollar ?> </h4>
+                        <h4>Tarea: <?= $ordenindex->TareaDesarrollar ?> </h4>
                     </div>
                     <div class="col-md-4">
-                        <h4>PRECIO: <?= $ordenindex->Precio ?> </h4>
+                        <h4>Precio: <?= $ordenindex->Precio ?> </h4>
                     </div>
                     <div class="col-md-4">
-                        <h4>CLIENTE: <?= $ordenindex->Nombre ?> </h4>
+                        <h4>Cliente: <?= $ordenindex->Nombre ?> </h4>
                     </div>
                 </div>
                 <hr>

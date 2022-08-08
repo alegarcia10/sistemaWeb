@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <section class="content-header">
         <h1>
-        Tecnico
+        Técnico
             <small>Editar</small>
         </h1>
     </section>
