@@ -63,7 +63,7 @@ public function cinsert(){
 
     }else{
         //REGLA DE VALIDACION
-        $this->session->set_flashdata('error', 'El Usuario '.$usuario.' ya esta registrado ');
+        $this->session->set_flashdata('error', "El Usuario '$usuario' ya esta registrado ");
         redirect(base_url().'mantenimiento/cusuario/cadd');
     }
 
