@@ -28,7 +28,7 @@
                             <thead>
                                 <tr>
                                     <th>N° Órden</th>
-                                    <th>Fecha</th>
+                                    <th>Fecha Recepción</th>
                                     <th>Tarea</th>
                                     <th>Gastos</th>
                                     <th>Monto a Facturar</th>
@@ -81,7 +81,7 @@
                             <thead>
                                 <tr>
                                   <th>N° Órden</th>
-                                  <th>Fecha</th>
+                                  <th>Fecha Recepción</th>
                                   <th>Tarea</th>
                                   <th>Gastos</th>
                                   <th>Monto Facturado</th>

@@ -19,8 +19,8 @@
                         <form action="<?php echo base_url();?>mantenimiento/corden/cupdate" method="POST">
                             <input type="hidden" value="<?php echo $ordenedit->IdOrden ?>" name="txtidorden" id="txtidorden">
                             <div class="col-sm-3 form-group">
-                                <label for="fecha">Fecha</label>
-                                <input type="text" id="txtfecha" name="txtfecha"  min="2020-01-01" max="2100-12-31" value="<?php echo !empty(form_error('txtfecha'))? set_value('txtfecha') :  date("d-m-Y", strtotime("$ordenedit->FechaRecepcion"));?>" class= "form-control"   disabled>
+                                <label for="fecha">Fecha de Recepción</label>
+                                <input type="text" id="txtfecha" name="txtfecha"  min="2020-01-01" max="2100-12-31" value="<?php echo !empty(form_error('txtfecha'))? set_value('txtfecha') :  date("d-m-Y", strtotime("$ordenedit->FechaRecepcion"));?>" class= "form-control"   >
                             </div>
                             <div class="col-sm-3 form-group">
                                 <label for="precio">Precio</label>
