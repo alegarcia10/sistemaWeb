@@ -9,7 +9,7 @@
             <div class="box-body">
                 <div class="row" id="datos">
                     <div class="col-md-12">
-                        <h1 id="H1A">DETALLES ORDEN</h1>
+                        <h1 id="H1A">DETALLES ÓRDEN</h1>
                     </div>
                     <br>
                     <br>
