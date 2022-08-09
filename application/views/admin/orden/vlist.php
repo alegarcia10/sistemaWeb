@@ -145,7 +145,8 @@ $(document).ready(function () {
                        "next": "Siguiente",
                        "previous": "Anterior"
                    },
-               }
+               },
+               "order": [[ 0, "desc" ]]
           });
 })
 </script>
