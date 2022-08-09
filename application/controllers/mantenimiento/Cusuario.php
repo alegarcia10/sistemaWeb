@@ -39,9 +39,9 @@ public function cinsert(){
      $usuario = $this->input->post('txtusuario');
      $contraseña = $this->input->post('txtContraseña');
 
+     $usu = $this->musuario->obtenerusuario($usuario);
 
-    //REGLA DE VALIDACION
-
+    if($usu==null){
 
         $data = array(
 
@@ -61,6 +61,13 @@ public function cinsert(){
             redirect(base_url().'mantenimiento/cusuario/cadd');
         }
 
+    }else{
+        //REGLA DE VALIDACION
+        $this->session->set_flashdata('error', 'Este Usuario ya esta registrado ');
+        redirect(base_url().'mantenimiento/cusuario/cadd');
+    }
+
+    
 
 }
 

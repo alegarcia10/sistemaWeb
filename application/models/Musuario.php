@@ -44,5 +44,15 @@ class Musuario extends CI_Model{
         $resultado =$this->db->get('usuario');
         return $resultado->row();
     }
+
+
+      //Verifico si exite usuario
+    public function obtenerusuario($usuario){
+        $this->db->where('usuario', $usuario);
+        $resultado = $this->db->get('usuario');
+        return $resultado->row();
+     }
+ 
+ 
 }
 ?>
