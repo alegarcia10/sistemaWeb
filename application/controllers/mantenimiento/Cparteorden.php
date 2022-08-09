@@ -58,7 +58,8 @@ public function cinsert(){
 
         $data = array(
             'TareaDesarrollada' => $tarea,
-            'IdOrden' => $idorden
+            'IdOrden' => $idorden,
+            'Estado' => 0
 
         );
 
@@ -162,7 +163,7 @@ public function cupdate(){
             redirect(base_url().'mantenimiento/cparteorden/listar/'.$idorden);
         }else {
             $this->session->set_flashdata('error', 'No se pudo actualizar la parteorden');
-            redirect(base_url().'mantenimiento/cparteorden/cedit'.$idparteorden);
+            redirect(base_url().'mantenimiento/cparteorden/cedit'.$idparte);
         }
 
 }

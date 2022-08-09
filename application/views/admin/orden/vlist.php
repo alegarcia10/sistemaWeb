@@ -1,8 +1,8 @@
 <div class="content-wrapper">
     <section class="content-header">
         <h1>
-            Orden
-            <small>Listado de Ordenes</small>
+            Órden
+            <small>Listado de Órdenes</small>
         </h1>
     </section>
     <section class="content">
@@ -10,7 +10,7 @@
             <div class="box-body">
                 <div class="row">
                     <div class="col-md-9">
-                        <a href="<?php echo base_url(); ?>mantenimiento/corden/cadd" class="btn btn-flat" id="botonVioleta"><span class="fa fa-plus"></span> Agregar orden</a>
+                        <a href="<?php echo base_url(); ?>mantenimiento/corden/cadd" class="btn btn-flat" id="botonVioleta"><span class="fa fa-plus"></span> Agregar Órden</a>
                     </div>
                 </div>
                 <?php if ($this->session->flashdata('correcto')) : ?>
