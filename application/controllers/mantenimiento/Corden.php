@@ -19,13 +19,9 @@ public function index(){
         'ordencompletas' => $this->morden->mselectordencompletas(),
     );
 
-   
 
     $ordenes=  $data['ordenindex'];
-    var_dump($ordenes);
-    die;
-
-
+  
 
     foreach ($ordenes as $orden ) {
          $id=$orden->IdOrden;
