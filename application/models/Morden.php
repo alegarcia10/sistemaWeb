@@ -7,7 +7,7 @@ class Morden extends CI_Model{
 
         $resultado =	$query = $this->db->query("SELECT o.IdOrden , c.Nombre ,o.IdCliente, o.FechaRecepcion ,
            o.TareaDesarrollar, o.Precio, o.Completada, o.Eliminada FROM orden o
-           INNER JOIN cliente c ON o.IdCliente = c.IdCliente where o.Eliminada=0 and o.Completada=0 ORDER BY o.IdOrden DESCGI;");
+           INNER JOIN cliente c ON o.IdCliente = c.IdCliente where o.Eliminada=0 and o.Completada=0 ORDER BY o.IdOrden DESC;");
         return $resultado->result();
 
     }
