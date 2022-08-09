@@ -70,7 +70,7 @@ $(document).ready(function () {
     $('#tablacliente').DataTable({
                "language": {
                    "lengthMenu": "Mostrar _MENU_ registros por página",
-                   "zeroRecords": "No se encontraron resultados en su busqueda",
+                   "zeroRecords": "No se encontraron resultados en su búsqueda",
                    "searchPlaceholder": "Buscar Cliente",
                    "info": "Mostrando registros de _START_ al _END_ de un total de  _TOTAL_ registros",
                    "infoEmpty": "No existen registros",
