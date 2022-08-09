@@ -135,7 +135,7 @@ $(document).ready(function () {
                    "lengthMenu": "Mostrar _MENU_ registros por página",
                    "zeroRecords": "No se encontraron resultados en su busqueda",
                    "searchPlaceholder": "Buscar Órdenes Completas",
-                   "info": "Mostrando registros de _START_ al _END_ de un total de  _TOTAL_ registros",
+                   "info": "Mostrando registros de _END_ al _START_ de un total de  _TOTAL_ registros",
                    "infoEmpty": "No existen registros",
                    "infoFiltered": "(filtrado de un total de _MAX_ registros)",
                    "search": "Buscar:",
