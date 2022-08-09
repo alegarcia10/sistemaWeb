@@ -30,7 +30,7 @@
                                   <th>Nombre</th>
                                   <th>Domicilio</th>
                                   <th>Provincia</th>
-                                  <th>Operaciones</th>
+                                  <th width="5%">Operaciones</th>
                               </tr>
                           </thead>
                           <tbody>
