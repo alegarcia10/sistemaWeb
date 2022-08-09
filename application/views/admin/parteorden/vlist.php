@@ -23,7 +23,7 @@
                     <div class="col-md-4">
                         <h4>Precio: <?= $ordenindex->Precio ?> </h4>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-5">
                         <h4>Cliente: <?= $ordenindex->Nombre ?> </h4>
                     </div>
                 </div>
