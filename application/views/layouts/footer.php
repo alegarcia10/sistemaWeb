@@ -53,7 +53,7 @@ $('.sidebar-menu').tree()
                                    "previous": "Anterior"
                                },
                            },
-                           "order": [[ 1, "desc" ]]
+                           "order": [[ 0, "desc" ]]
                       });
          })
 
