@@ -69,13 +69,13 @@
                              <input type="hidden" value="<?php echo $parteordenedit->IdOrden ?>" name="txtidorden" id="txtidorden">
                              <input type="hidden" value="<?php echo $parteordenedit->IdParte ?>" name="txtidParte" id="txtidParte">
                                <div class="col-sm-8 form-group" >
-                                   <label class="control-label" for="tipo_tecnico">Tecnico</label>
+                                   <label class="control-label" for="tipo_tecnico">Técnico</label>
                                    <?$this->select_items->sin_buscador($tipo_tecnico_select, '','tipo_tecnico','1', 'required');?>
                                </div>
 
                                <div class="col-sm-2">
                                  <br>
-                                 <button class="btn btn-success" type="button" id="buscar2"><span class="fa fa-search" aria-hidden="true" ></span>Agregar</button>
+                                 <button class="btn btn-success" type="button" id="buscar2"><span class="fa fa-search" aria-hidden="true" ></span> Agregar </button>
                                </div>
                                <div class="col-sm-12 form-group">
                                      <table id="example1" class="table table-bordered table-hover order-table">
@@ -121,7 +121,7 @@
                         <input type="hidden" value="<?php echo $parteordenedit->IdOrden ?>" name="txtidorden" id="txtidorden">
                         <input type="hidden" value="<?php echo $parteordenedit->IdParte ?>" name="txtidParte" id="txtidParte">
                           <div class="col-sm-12 form-group">
-                              <label for="material">Descripcion</label>
+                              <label for="material">Descripción</label>
                               <input type="text" id="txtmaterial" name="txtmaterial" class="form-control"  value="<?php echo set_value('txtmaterial') ?>" >
                           </div>
                           <div class="col-sm-3 form-group">
@@ -134,7 +134,7 @@
                           </div>
                           <div class="col-sm-2">
                             <br>
-                            <button class="btn btn-success" type="button" id="buscar1"><span class="fa fa-search" aria-hidden="true" ></span>Agregar</button>
+                            <button class="btn btn-success" type="button" id="buscar1"><span class="fa fa-search" aria-hidden="true" ></span> Agregar </button>
                           </div>
                           <div class="col-sm-12 form-group">
                                 <table id="example1" class="table table-bordered table-hover order-table">
