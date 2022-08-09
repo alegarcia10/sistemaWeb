@@ -19,10 +19,11 @@ public function index(){
         'ordencompletas' => $this->morden->mselectordencompletas(),
     );
 
-    var_dump($data);
-    die;
+   
 
     $ordenes=  $data['ordenindex'];
+    var_dump($ordenes);
+    die;
 
 
 
