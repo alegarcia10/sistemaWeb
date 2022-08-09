@@ -91,7 +91,9 @@ public function cupdate(){
      $usuario = $this->input->post('txtusuario');
      $contraseña = $this->input->post('txtContraseña');
 
+     $usu = $this->musuario->obtenerusuario($usuario);
 
+    if($usu==null){
 
         $data = array(
             'nombre' => $nombre,
@@ -108,6 +110,16 @@ public function cupdate(){
             $this->session->set_flashdata('error', 'No se pudo actualizar la usuario');
             redirect(base_url().'mantenimiento/cusuario/cedit'.$idusuario);
         }
+
+    }else{
+        //REGLA DE VALIDACION
+        $this->session->set_flashdata('error', "El Usuario '$usuario' ya esta registrado ");
+        redirect(base_url().'mantenimiento/cusuario/cadd');
+    }
+
+
+
+        
 
 
 }
