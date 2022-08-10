@@ -20,8 +20,11 @@
                     <div class="col-md-4">
                         <h4>Tarea: <?= $ordenindex->TareaDesarrollar ?> </h4>
                     </div>
-                    <div class="col-md-4">
-                        <h4>Precio: <?= $ordenindex->Precio ?> </h4>
+                    <div class="col-md-2">
+                        <h4>Gastos: <?= $Gastos ?> </h4>
+                    </div>
+                    <div class="col-md-2">
+                        <h4>Monto a Facturar: <?= $ordenindex->Precio ?> </h4>
                     </div>
                     <div class="col-md-5">
                         <h4>Cliente: <?= $ordenindex->Nombre ?> </h4>
@@ -52,7 +55,6 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-
                                         <?php if (!empty($parteordenindex)) : ?>
                                             <?php foreach ($parteordenindex as $atributos) : ?>
                                                 <tr>

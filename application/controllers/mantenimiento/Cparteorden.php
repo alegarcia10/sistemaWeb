@@ -19,6 +19,8 @@ public function listar($id){
         'ordenindex' => $this->mparteorden->mselectinfoparteorden($id)
     );
 
+    $data['Gastos']=$this->morden->consultaGatosOrden($id);
+
 
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside');
