@@ -1,8 +1,8 @@
 <div class="content-wrapper">
     <section class="content-header">
         <h1>
-            Orden
-            <small>Listado de Ordenes</small>
+            Órden
+            <small>Listado de Órdenes</small>
         </h1>
     </section>
     <section class="content">
@@ -10,9 +10,8 @@
             <div class="box-body">
                 <div class="row">
                     <div class="col-md-9">
-                        <a href="<?php echo base_url(); ?>mantenimiento/corden/cadd" class="btn btn-flat" id="botonVioleta"><span class="fa fa-plus"></span> Agregar orden</a>
+                        <a href="<?php echo base_url(); ?>mantenimiento/corden/cadd" class="btn btn-flat" id="botonVioleta"><span class="fa fa-plus"></span> Agregar Órden</a>
                     </div>
-
                 </div>
                 <?php if ($this->session->flashdata('correcto')) : ?>
                     <div class="alert alert-success">
@@ -22,24 +21,19 @@
                 <hr>
                 <div class="row">
                     <div class="col-md-12">
-                      <div class="col-md-9">
-                          <h1>Ordenes Activas</h1>
-
+                      <div class="col-md-12">
+                          <h1>Órdenes Activas  <span class="fa fa-clock-o"></span></h1>
                       </div>
-                      <div class="col-md-3">
-                          <br>
-                          <input class="form-control col-md-3 light-table-filter" data-table="order-table1" type="text" placeholder="Buscar orden Activa..">
-                      </div>
-                        <table id="example1" class="table table-bordered table-hover order-table1">
+                        <table id="tablaordena" class="table table-bordered table-hover order-table1">
                             <thead>
                                 <tr>
-                                    <th>N° ORDEN</th>
-                                    <th>FECHA</th>
-                                    <th>TAREA</th>
-                                    <th>PRECIO FACTURADO</th>
-                                    <th>GASTOS</th>
-                                    <th>CLIENTE</th>
-                                    <th >OPERACIONES</th>
+                                    <th>N° Órden</th>
+                                    <th>Fecha Recepción</th>
+                                    <th>Tarea</th>
+                                    <th>Gastos</th>
+                                    <th>Monto a Facturar</th>
+                                    <th>Cliente</th>
+                                    <th >Operaciones</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -49,8 +43,8 @@
                                             <td width="5%"><?php echo $atributos->IdOrden; ?></td>
                                             <td width="10%"><?php echo date("d-m-Y", strtotime("$atributos->FechaRecepcion")); ?></td>
                                             <td width="30%"><?php echo $atributos->TareaDesarrollar; ?></td>
-                                            <td width="10%"><?php echo $atributos->Precio; ?></td>
-                                            <td width="10%"><?php echo $atributos->Gastos; ?></td>
+                                            <td width="10%"> $<?php echo number_format($atributos->Gastos, 2); ?></td>
+                                            <td width="10%">$<?php echo number_format($atributos->Precio, 2); ?></td>
                                             <td width="15%"><?php echo $atributos->Nombre; ?></td>
                                             <td width="20%" >
                                                 <div class="btn-group">
@@ -60,11 +54,11 @@
                                                     <a href="<?php echo base_url(); ?>mantenimiento/corden/cedit/<?php echo $atributos->IdOrden; ?>" class="btn btn-info" title="Modificar">
                                                         <span class="fa fa-pencil"></span>
                                                     </a>
-                                                    <a href="<?php echo base_url(); ?>mantenimiento/corden/cdelete/<?php echo $atributos->IdOrden; ?>" class="btn btn-danger btn-remove" title="Eliminar">
+                                                    <a href="<?php echo base_url(); ?>mantenimiento/corden/cdelete/<?php echo $atributos->IdOrden; ?>" class="btn btn-danger btn-remove deleteOrden" title="Eliminar">
                                                         <span class="fa fa-remove"></span>
                                                     </a>
-                                                    <a href="<?php echo base_url(); ?>mantenimiento/corden/ccompleta/<?php echo $atributos->IdOrden; ?>" class="btn btn-success btn-remove" title="Completa">
-                                                        <span class="fa fa-play"></span>
+                                                    <a href="<?php echo base_url(); ?>mantenimiento/corden/ccompleta/<?php echo $atributos->IdOrden; ?>" class="btn btn-success completaOrden" title="Completa">
+                                                        <span class="fa fa-check-circle"></span>
                                                     </a>
                                                 </div>
                                             </td>
@@ -75,43 +69,47 @@
                         </table>
                     </div>
                 </div>
+                <hr>
                 <div class="row">
-                    <div class="col-md-9">
-                        <h1>Ordenes Completas</h1>
-                    </div>
-                    <div class="col-md-3">
-                        <br>
-                        <input class="form-control col-md-3 light-table-filter" data-table="order-table2" type="text" placeholder="Buscar orden Completa..">
+                  <div class="col-md-12">
+                    <div class="col-md-12">
+                        <h1>Órdenes Completas  <span class="fa fa-check-circle"></span></h1>
                     </div>
                     <br>
-                    <div class="col-md-12">
-                        <table id="example1" class="table table-bordered table-hover order-table2">
+
+                        <table id="tablaordenc" class="table table-bordered table-hover order-table2">
                             <thead>
                                 <tr>
-                                    <th>N° ORDEN</th>
-                                    <th>FECHA</th>
-                                    <th>TAREA</th>
-                                    <th>PRECIO FACTURADO</th>
-                                    <th>CLIENTE</th>
+                                  <th>N° Órden</th>
+                                  <th>Fecha Recepción</th>
+                                  <th>Tarea</th>
+                                  <th>Gastos</th>
+                                  <th>Monto Facturado</th>
+                                  <th>Cliente</th>
+                                  <th >Operaciones</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php if (!empty($ordencompletas)) : ?>
                                     <?php foreach ($ordencompletas as $atributos) :?>
                                         <tr>
-                                            <td><?php echo $atributos->IdOrden; ?></td>
-                                            <td><?php echo date("d-m-Y", strtotime("$atributos->FechaRecepcion")); ?></td>
-                                            <td><?php echo $atributos->TareaDesarrollar; ?></td>
-                                            <td><?php echo $atributos->Precio; ?></td>
-                                            <td><?php echo $atributos->Nombre; ?></td>
-                                            <td>
+                                          <td width="5%"><?php echo $atributos->IdOrden; ?></td>
+                                          <td width="10%"><?php echo date("d-m-Y", strtotime("$atributos->FechaRecepcion")); ?></td>
+                                          <td width="30%"><?php echo $atributos->TareaDesarrollar; ?></td>
+                                          <td width="10%"> $<?php echo number_format($atributos->Gastos, 2); ?></td>
+                                            <td width="10%">$<?php echo number_format($atributos->Precio, 2); ?></td>
+                                          <td width="15%"><?php echo $atributos->Nombre; ?></td>
+                                          <td width="20%" >
                                                 <div class="btn-group">
 
                                                     <a href="<?php echo base_url(); ?>mantenimiento/corden/cedit/<?php echo $atributos->IdOrden; ?>" class="btn btn-info" title="Modificar">
                                                         <span class="fa fa-pencil"></span>
                                                     </a>
-                                                    <a href="<?php echo base_url(); ?>mantenimiento/corden/cdelete/<?php echo $atributos->IdOrden; ?>" class="btn btn-danger btn-remove" title="Eliminar">
+                                                    <a href="<?php echo base_url(); ?>mantenimiento/corden/cdelete/<?php echo $atributos->IdOrden; ?>" class="btn btn-danger btn-remove deleteOrdenCompleta" title="Eliminar">
                                                         <span class="fa fa-remove"></span>
+                                                    </a>
+                                                    <a href="<?php echo base_url(); ?>mantenimiento/corden/cdescompleta/<?php echo $atributos->IdOrden; ?>" class="btn btn-success reanudarOrden" title="Reanudar">
+                                                        <span class="fa fa-clock-o"></span>
                                                     </a>
                                                 </div>
                                             </td>
@@ -127,33 +125,28 @@
     </section>
 </div>
 
-<div class="modal fade" id="modal-default">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">x</font>
-                        </font>
-                    </span>
-                </button>
-                <h4 class="modal-title">
-                    <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;"> Informacion de la orden</font>
-                    </font>
-                </h4>
-            </div>
-            <div class="modal-body">
 
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">
-                    <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">Cerrar</font>
-                    </font>
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
+<script type="text/javascript">
+
+
+$(document).ready(function () {
+    $('#tablaordenc').DataTable({
+               "language": {
+                   "lengthMenu": "Mostrar _MENU_ registros por página",
+                   "zeroRecords": "No se encontraron resultados en su búsqueda",
+                   "searchPlaceholder": "Buscar Órdenes Completas",
+                   "info": "Mostrando registros de _START_ al _END_ de un total de  _TOTAL_ registros",
+                   "infoEmpty": "No existen registros",
+                   "infoFiltered": "(filtrado de un total de _MAX_ registros)",
+                   "search": "Buscar:",
+                   "paginate": {
+                       "first": "Primero",
+                       "last": "Último",
+                       "next": "Siguiente",
+                       "previous": "Anterior"
+                   },
+               },
+               "order": [[ 0, "desc" ]]
+          });
+})
+</script>

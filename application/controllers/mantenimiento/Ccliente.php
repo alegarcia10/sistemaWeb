@@ -91,7 +91,9 @@ public function cupdate(){
      $prov = $this->input->post('txtprovincia');
      $domicilio = $this->input->post('txtdomicilio');
 
+     $cli = $this->mcliente->obtenerclientedni($cuit);
 
+     if($cli==null){
 
                $data = array(
 
@@ -109,10 +111,11 @@ public function cupdate(){
                       $this->session->set_flashdata('error', 'No se pudo actualizar la cliente');
                       redirect(base_url().'mantenimiento/ccliente/cedit/'.$idcliente);
                   }
-
-     
-
-
+     }else{
+       //REGLA DE VALIDACION
+       $this->session->set_flashdata('error', 'Este Dni/Cuit ya esta registrado ');
+       redirect(base_url().'mantenimiento/ccliente/cadd');
+     }
 
 
 }
@@ -123,7 +126,8 @@ public function cdelete($id){
         'Anulado' => '1'
     );
     $this->mcliente->mupdatecliente($id, $data);
-    redirect(base_url().'mantenimiento/ccliente');
+    //redirect(base_url().'mantenimiento/ccliente');
+    echo "mantenimiento/ccliente";
 }
 
 

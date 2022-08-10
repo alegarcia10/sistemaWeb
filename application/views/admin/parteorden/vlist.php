@@ -9,22 +9,22 @@
             <div class="box-body">
                 <div class="row" id="datos">
                     <div class="col-md-12">
-                        <h1 id="H1A">DETALLES ORDEN</h1>
+                        <h1 id="H1A">DETALLES ÓRDEN</h1>
                     </div>
                     <br>
                     <br>
                     <br>
                     <div class="col-md-4">
-                        <h4>FECHA: <?=   date("d-m-Y", strtotime("$ordenindex->FechaRecepcion "));?> </h4>
+                        <h4>Fecha: <?=   date("d-m-Y", strtotime("$ordenindex->FechaRecepcion "));?> </h4>
                     </div>
                     <div class="col-md-4">
-                        <h4>TAREA: <?= $ordenindex->TareaDesarrollar ?> </h4>
+                        <h4>Tarea: <?= $ordenindex->TareaDesarrollar ?> </h4>
                     </div>
                     <div class="col-md-4">
-                        <h4>PRECIO: <?= $ordenindex->Precio ?> </h4>
+                        <h4>Precio: <?= $ordenindex->Precio ?> </h4>
                     </div>
-                    <div class="col-md-4">
-                        <h4>CLIENTE: <?= $ordenindex->Nombre ?> </h4>
+                    <div class="col-md-5">
+                        <h4>Cliente: <?= $ordenindex->Nombre ?> </h4>
                     </div>
                 </div>
                 <hr>
@@ -39,12 +39,8 @@
                         <?php endif; ?>
 
                         <div class="row">
-                            <div class="col-md-3">
-                                <input class="form-control col-md-3 light-table-filter" data-table="order-table" type="text" placeholder="Buscar Tarea..">
-                                <hr>
-                            </div>
                             <div class="col-md-12">
-                                <table id="example1" class="table table-bordered table-hover order-table">
+                                <table id="tablaparte" class="table table-bordered table-hover order-table">
                                     <thead>
                                         <tr>
                                             <th>#</th>
@@ -52,12 +48,11 @@
                                             <th>Fecha Inicio</th>
                                             <th>Fecha Fin</th>
                                             <th>Estado</th>
-
+                                            <th>Operaciones</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php //var_dump($ordenindex); die;
-                                        ?>
+
                                         <?php if (!empty($parteordenindex)) : ?>
                                             <?php foreach ($parteordenindex as $atributos) : ?>
                                                 <tr>
@@ -65,15 +60,19 @@
                                                     <td><?php echo $atributos->TareaDesarrollada; ?></td>
                                                     <td><?php if($atributos->FechaInicio == null){ echo "-";}else{echo date("d-m-Y", strtotime("$atributos->FechaInicio"));} ?></td>
                                                     <td><?php if($atributos->FechaFin == null){ echo "-";}else{echo date("d-m-Y", strtotime("$atributos->FechaFin"));} ?></td>
-                                                    <td><?php if ($atributos->Completa == 1){ echo 'Completa';}else{echo 'Pendiente';} ; ?></td>
-                                                    <?php $data = $atributos->IdOrden; ?>
+                                                    <td><?php if ($atributos->Completa == 1)
+                                                    { echo 'Completa';}elseif($atributos->Estado == 0)
+                                                    { echo 'Pendiente';}elseif($atributos->Estado == 1)
+                                                    { echo 'Recibida';}elseif($atributos->Estado == 2)
+                                                    { echo 'En Curso';}elseif($atributos->Estado == 3)
+                                                    { echo 'Completa';}else{ echo '-';} ; ?></td>
                                                     <td>
                                                         <div class="btn-group">
 
                                                             <a title="Modificar" href="<?php echo base_url(); ?>mantenimiento/cparteorden/cedit/<?php echo $atributos->IdParte; ?>" class="btn btn-info ">
                                                                 <span class="fa fa-pencil"></span>
                                                             </a>
-                                                            <a title="Eliminar" href="<?php echo base_url(); ?>mantenimiento/cparteorden/cdelete/<?php echo $atributos->IdParte; ?>/<?php echo $atributos->IdOrden; ?>" class="btn btn-danger btn-remove">
+                                                            <a title="Eliminar" href="<?php echo base_url(); ?>mantenimiento/cparteorden/cdelete/<?php echo $atributos->IdParte; ?>/<?php echo $atributos->IdOrden; ?>" class="btn btn-danger btn-remove deleteParte">
                                                                 <span class="fa fa-remove"></span>
                                                             </a>
                                                         </div>
@@ -93,3 +92,27 @@
             </div>
     </section>
 </div>
+
+<script type="text/javascript">
+
+
+$(document).ready(function () {
+    $('#tablaparte').DataTable({
+               "language": {
+                   "lengthMenu": "Mostrar _MENU_ registros por página",
+                   "zeroRecords": "No se encontraron resultados en su búsqueda",
+                   "searchPlaceholder": "Buscar Tarea",
+                   "info": "Mostrando registros de _START_ al _END_ de un total de  _TOTAL_ registros",
+                   "infoEmpty": "No existen registros",
+                   "infoFiltered": "(filtrado de un total de _MAX_ registros)",
+                   "search": "Buscar:",
+                   "paginate": {
+                       "first": "Primero",
+                       "last": "Último",
+                       "next": "Siguiente",
+                       "previous": "Anterior"
+                   },
+               }
+          });
+})
+</script>

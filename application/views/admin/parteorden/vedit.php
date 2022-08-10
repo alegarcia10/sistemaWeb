@@ -8,7 +8,6 @@
     <section class="content">
         <div class="box box-solid">
             <div class="box-body">
-
                <div class="row">
                    <div class="col-md-12">
                    <div class="row">
@@ -32,16 +31,22 @@
                                 <label for="fechaTranscurrido">Tiempo Transcurrido</label>
                                 <input type="string" id="txtTranscurrido" name="txtTranscurrido" value="<?php echo !empty(form_error('txtTranscurrido'))? set_value('txtTranscurrido') : $hora ?>" class= "form-control"   disabled>
                             </div>
-                            <div class="col-md-4 form-group">
+                            <div class=" col-sm-3 form-group">
+                                <label for="txtgastos">Gastos</label>
+                                <input type="string" id="txtgastos" name="txtgastos" value="<?php echo !empty(form_error('txtgastos'))? set_value('txtgastos') : $Gastos ?>" class= "form-control"   disabled>
+                            </div>
+                            <div class="col-md-1 form-group">
                                 <label>Completa</label><br>
                                 <input class="chk_input" type="checkbox" id="habilitado" name="habilitado" data-width="20" data-height="20" disabled <?=(!empty($parteordenedit->Completa)&&$parteordenedit->Completa=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($parteordenedit->Completa))?'checked':''?> />
                                 <span class="checkmark"></span>
                             </div>
+
                             <div class="col-sm-12 form-group">
                                 <label for="tarea">Tarea</label>
                                 <input type="text" id="txttarea" name="txttarea" maxlength="500" value="<?php echo !empty(form_error('txtctarea'))? set_value('txttarea') : $parteordenedit->TareaDesarrollada ?>" class= "form-control" required >
                             </div>
-                            <div class="col-sm-6 form-group">
+
+                            <div class="col-sm-12 form-group">
                                 <a class="btn btn-success" href="<?php echo base_url();?>mantenimiento/cparteorden/listar/<?php echo $parteordenedit->IdOrden;?>">Volver</a>
                                 <button type="submit" class="btn btn-success">Guardar</button>
                             </div>
@@ -59,18 +64,18 @@
 
                          <form action="<?php echo base_url();?>mantenimiento/cparteorden/cupdate" method="POST">
                               <div class="col-sm-6 form-group">
-                                <h3>Tecnicos</h3>
+                                <h3>Técnicos</h3>
                               </div>
                              <input type="hidden" value="<?php echo $parteordenedit->IdOrden ?>" name="txtidorden" id="txtidorden">
                              <input type="hidden" value="<?php echo $parteordenedit->IdParte ?>" name="txtidParte" id="txtidParte">
                                <div class="col-sm-8 form-group" >
-                                   <label class="control-label" for="tipo_tecnico">Tecnico</label>
+                                   <label class="control-label" for="tipo_tecnico">Técnico</label>
                                    <?$this->select_items->sin_buscador($tipo_tecnico_select, '','tipo_tecnico','1', 'required');?>
                                </div>
 
                                <div class="col-sm-2">
                                  <br>
-                                 <button class="btn btn-success" type="button" id="buscar2"><span class="fa fa-search" aria-hidden="true" ></span>Agregar</button>
+                                 <button class="btn btn-success" type="button" id="buscar2"><span class="fa fa-search" aria-hidden="true" ></span> Agregar </button>
                                </div>
                                <div class="col-sm-12 form-group">
                                      <table id="example1" class="table table-bordered table-hover order-table">
@@ -88,7 +93,7 @@
                                                          <td ><?php echo $atributos->Nombre; ?></td>
                                                          <td>
                                                              <div >
-                                                               <a title="Eliminar" href="<?php echo base_url(); ?>mantenimiento/cparteorden/ceditTecnico/<?php echo $atributos->Dni; ?>/<?php echo $atributos->IdParte; ?>" class="btn btn-danger ">
+                                                               <a title="Eliminar" href="<?php echo base_url(); ?>mantenimiento/cparteorden/ceditTecnico/<?php  echo $atributos->IdParte; ?>/<?php echo $atributos->Dni; ?>" class="btn btn-danger btn-remove deleteTecnicoTarea">
                                                                    <span class="fa fa-remove"></span>
                                                                </a>
                                                              </div>
@@ -116,7 +121,7 @@
                         <input type="hidden" value="<?php echo $parteordenedit->IdOrden ?>" name="txtidorden" id="txtidorden">
                         <input type="hidden" value="<?php echo $parteordenedit->IdParte ?>" name="txtidParte" id="txtidParte">
                           <div class="col-sm-12 form-group">
-                              <label for="material">Descripcion</label>
+                              <label for="material">Descripción</label>
                               <input type="text" id="txtmaterial" name="txtmaterial" class="form-control"  value="<?php echo set_value('txtmaterial') ?>" >
                           </div>
                           <div class="col-sm-3 form-group">
@@ -125,11 +130,11 @@
                           </div>
                           <div class="col-sm-3 form-group">
                               <label for="precio">Precio</label>
-                              <input type="text" id="txtprecio" name="txtprecio" class="form-control" value="<?php echo set_value('txtprecio') ?>" >
+                              <input type="number" id="txtprecio" name="txtprecio" class="form-control" step=".01" value="<?php echo set_value('txtprecio') ?>" >
                           </div>
                           <div class="col-sm-2">
                             <br>
-                            <button class="btn btn-success" type="button" id="buscar1"><span class="fa fa-search" aria-hidden="true" ></span>Agregar</button>
+                            <button class="btn btn-success" type="button" id="buscar1"><span class="fa fa-search" aria-hidden="true" ></span> Agregar </button>
                           </div>
                           <div class="col-sm-12 form-group">
                                 <table id="example1" class="table table-bordered table-hover order-table">
@@ -155,7 +160,7 @@
                                                             <a title="Modificar" href="<?php echo base_url(); ?>mantenimiento/cparteorden/ceditMat/<?php echo $atributos->IdMat; ?>" class="btn btn-info ">
                                                                 <span class="fa fa-pencil"></span>
                                                             </a>
-                                                            <a title="Eliminar" href="<?php echo base_url(); ?>mantenimiento/cparteorden/cdeleteMat/<?php echo $atributos->IdMat; ?>" class="btn btn-danger btn-remove">
+                                                            <a title="Eliminar" href="<?php echo base_url(); ?>mantenimiento/cparteorden/cdeleteMat/<?php echo $atributos->IdMat; ?>" class="btn btn-danger btn-remove deleteMaterialTarea">
                                                                 <span class="fa fa-remove"></span>
                                                             </a>
                                                         </div>
@@ -180,6 +185,7 @@
 <script>
 $(document).ready(function(){
 
+  var base_url= "<?php echo base_url();?>";
 
 
     $('#buscar1').on('click',function(){
@@ -209,8 +215,8 @@ $(document).ready(function(){
                                 .done(function(r) {
 
                                   r = JSON.parse(r);
-
-                                  $("#tbody1").append(r['linksa']);
+                                  window.location.href=base_url+'/mantenimiento/cparteorden/cedit/'+idParte;
+                                  //$("#tbody1").append(r['linksa']);
 
 
                                 });
@@ -241,9 +247,10 @@ $(document).ready(function(){
                           tecnico=r['linksa'];
                           nombre=tecnico['Nombre'];
                           id=tecnico['Dni'];
-                          var tel = '<tr><td>'+id+'</td><td>'+nombre+'</td><td><div><a title="Eliminar" href="'+idParte+'ref'+id+'" class="btn btn-danger"><span class="fa fa-remove"></span></a></div></td></tr>';
-
-                          $("#tbody2").append(tel);
+                          var tel = '<tr><td>'+id+'</td><td>'+nombre+'</td><td><div><a title="Eliminar" href="'+idParte+'ref'+id+'" class="btn btn-danger btn-remove "><span class="fa fa-remove"></span></a></div></td></tr>';
+                          //alert(base_url);
+                          window.location.href=base_url+'/mantenimiento/cparteorden/cedit/'+idParte;
+                          //$("#tbody2").append(tel);
 
 
                         });

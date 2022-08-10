@@ -12,41 +12,30 @@ class Corden extends CI_Controller {
     }
 
 
+
 public function index(){
     $data = array (
         'ordenindex' => $this->morden->mselectorden(),
         'ordencompletas' => $this->morden->mselectordencompletas(),
     );
 
+
     $ordenes=  $data['ordenindex'];
-
-
-    //var_dump($ordenes[1]->hola='hola');
-    //var_dump($ordenes);
-
+  
 
     foreach ($ordenes as $orden ) {
-
-
          $id=$orden->IdOrden;
-         $gastos=0;
-         $gastosCompletos=0;
-         log_message('error',sprintf("-----------------id orden------------------ $id"));
-         $tareas=$this->morden->consultaTareas($id);
-
-         foreach ($tareas as $tarea ) {
-           $idParte=$tarea->IdParte;
-           log_message('error',sprintf("gastos igual a $gastos "));
-           log_message('error',sprintf("tarea numero   $idParte"));
-           $gastos=$this->morden->consultaGatosTotales($idParte);
-           $gastosCompletos=$gastosCompletos+$gastos;
-           log_message('error',sprintf("devuelve  $gastos"));
-
-         }
-
-         $orden->Gastos=$gastosCompletos;
+         $orden->Gastos=$this->morden->consultaGatosOrden($id);
+    }
 
 
+    $ordenesCompletas=  $data['ordencompletas'];
+
+
+
+    foreach ($ordenesCompletas as $orden ) {
+         $id=$orden->IdOrden;
+         $orden->Gastos=$this->morden->consultaGatosOrden($id);
     }
 
 
@@ -139,7 +128,7 @@ public function cupdate(){
             redirect(base_url().'mantenimiento/corden');
         }else {
             $this->session->set_flashdata('error', 'No se pudo actualizar la orden');
-            redirect(base_url().'mantenimiento/corden/cedit'.$idorden);
+            redirect(base_url().'mantenimiento/corden/cedit'.$id);
         }
 
 
@@ -151,7 +140,8 @@ public function cdelete($id){
         'Eliminada' => '1'
     );
     $this->morden->mupdateorden($id, $data);
-    redirect(base_url().'mantenimiento/corden');
+    //redirect(base_url().'mantenimiento/corden');
+    echo "mantenimiento/corden";
 }
 
 public function ccompleta($id){
@@ -160,7 +150,18 @@ public function ccompleta($id){
         'Completada' => '1'
     );
     $this->morden->mupdateorden($id, $data);
-    redirect(base_url().'mantenimiento/corden');
+    //redirect(base_url().'mantenimiento/corden');
+    echo "mantenimiento/corden";
+}
+
+public function cdescompleta($id){
+
+    $data=array(
+        'Completada' => '0'
+    );
+    $this->morden->mupdateorden($id, $data);
+    //redirect(base_url().'mantenimiento/corden');
+    echo "mantenimiento/corden";
 }
 
 

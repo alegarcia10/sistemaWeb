@@ -15,15 +15,15 @@
                      -->
                     <li class="treeview">
                         <a href="#">
-                            <i class="fa fa-cogs"></i> <span>Parametros</span>
+                            <i class="fa fa-cogs"></i> <span>Parámetros</span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
                         <ul class="treeview-menu">
                             <li><a href="<?php echo base_url(); ?>mantenimiento/ccliente"><i class="fa fa-circle-o"></i> Clientes</a></li>
-                            <li><a href="<?php echo base_url(); ?>mantenimiento/ctecnico"><i class="fa fa-circle-o"></i> Tecnicos</a></li>
-                            <li><a href="<?php echo base_url(); ?>mantenimiento/corden"><i class="fa fa-circle-o"></i> Ordenes</a></li>
+                            <li><a href="<?php echo base_url(); ?>mantenimiento/ctecnico"><i class="fa fa-circle-o"></i> Técnicos</a></li>
+                            <li><a href="<?php echo base_url(); ?>mantenimiento/corden"><i class="fa fa-circle-o"></i> Órdenes</a></li>
                         </ul>
                     </li>
 

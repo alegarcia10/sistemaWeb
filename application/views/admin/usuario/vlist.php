@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <section class="content-header">
         <h1> Usuario
-            <small>Listado de usuarios </small>
+            <small>Listado de Usuarios </small>
         </h1>
     </section>
     <section class="content">
@@ -27,7 +27,7 @@
                                     <th>Nombre </th>
                                     <th>Apellido</th>
                                     <th>Usuario</th>
-                                    
+
                                 </tr>
                             </thead>
                             <tbody>
@@ -38,15 +38,12 @@
                                     <td><?php echo $atributos->nombre ;?></td>
                                     <td><?php echo $atributos->apellido ;?></td>
                                     <td><?php echo $atributos->usuario;?></td>
-
                                     <td>
                                         <div class="btn-group">
-                                       
-                                        
                                             <a href="<?php echo base_url();?>mantenimiento/cusuario/cedit/<?php echo $atributos->idUsuario; ?>" class="btn btn-info">
                                                 <span class="fa fa-pencil"></span>
                                             </a>
-                                            <a href="<?php echo base_url();?>mantenimiento/cusuario/cdelete/<?php echo $atributos->idUsuario; ?>" class="btn btn-danger btn-remove">
+                                            <a href="<?php echo base_url();?>mantenimiento/cusuario/cdelete/<?php echo $atributos->idUsuario; ?>" class="btn btn-danger btn-remove deleteUsuario">
                                                 <span class="fa fa-remove"></span>
                                             </a>
                                         </div>
@@ -81,6 +78,3 @@
         </div>
     </div>
 </div>
-
-
-

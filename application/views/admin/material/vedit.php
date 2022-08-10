@@ -19,16 +19,16 @@
                         <form action="<?php echo base_url();?>mantenimiento/cparteorden/cupdateMat" method="POST">
                             <input type="hidden" value="<?php echo $materialedit->IdMat ?>" name="txtid" id="txtid">
                             <div class="col-sm-6 form-group">
-                                <label for="descripcion">Descripcion</label>
-                                <input type="text" id="txtdescripcion" name="txtdescripcion" maxlength="50" value="<?php echo !empty(form_error('txtdescripcion'))? set_value('txtdescripcion') : $materialedit->Descripcion ?>" class= "form-control"  >
+                                <label for="descripcion">Descripción</label>
+                                <input type="text" id="txtdescripcion" name="txtdescripcion" maxlength="150" value="<?php echo !empty(form_error('txtdescripcion'))? set_value('txtdescripcion') : $materialedit->Descripcion ?>" class= "form-control"  >
                             </div>
                             <div class="col-sm-2 form-group">
                                 <label for="cantidad">Cantidad</label>
-                                <input type="text" id="txtcantidad" name="txtcantidad" maxlength="999999999999" value="<?php echo !empty(form_error('txtcantidad'))? set_value('txtcantidad') : $materialedit->Cantidad ?>" class= "form-control"  >
+                                <input type="text" id="txtcantidad" name="txtcantidad"  value="<?php echo !empty(form_error('txtcantidad'))? set_value('txtcantidad') : $materialedit->Cantidad ?>" class= "form-control"  >
                             </div>
                             <div class="col-sm-2 form-group">
                                 <label for="precio">Precio</label>
-                                <input type="text" id="txtprecio" name="txtprecio" maxlength="999999999999" value="<?php echo !empty(form_error('txtprecio'))? set_value('txtprecio') : $materialedit->Precio ?>" class= "form-control"  >
+                                <input type="number" id="txtprecio" name="txtprecio" step=".01" value="<?php echo !empty(form_error('txtprecio'))? set_value('txtprecio') : $materialedit->Precio ?>" class= "form-control"  >
                             </div>
 
                             <div class="col-sm-12 form-group">

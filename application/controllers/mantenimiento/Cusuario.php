@@ -27,7 +27,7 @@ public function cadd(){
 
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside');
-    $this->load->view('admin/usuario/vadd', $data);
+    $this->load->view('admin/usuario/vadd');
     $this->load->view('layouts/footer');
 }
 
@@ -39,9 +39,9 @@ public function cinsert(){
      $usuario = $this->input->post('txtusuario');
      $contraseña = $this->input->post('txtContraseña');
 
+     $usu = $this->musuario->obtenerusuario($usuario);
 
-    //REGLA DE VALIDACION
-
+    if($usu==null){
 
         $data = array(
 
@@ -61,6 +61,13 @@ public function cinsert(){
             redirect(base_url().'mantenimiento/cusuario/cadd');
         }
 
+    }else{
+        //REGLA DE VALIDACION
+        $this->session->set_flashdata('error', "El Usuario '$usuario' ya esta registrado ");
+        redirect(base_url().'mantenimiento/cusuario/cadd');
+    }
+
+    
 
 }
 
@@ -84,7 +91,9 @@ public function cupdate(){
      $usuario = $this->input->post('txtusuario');
      $contraseña = $this->input->post('txtContraseña');
 
+     $usu = $this->musuario->obtenerusuario($usuario);
 
+    if($usu==null){
 
         $data = array(
             'nombre' => $nombre,
@@ -102,6 +111,16 @@ public function cupdate(){
             redirect(base_url().'mantenimiento/cusuario/cedit'.$idusuario);
         }
 
+    }else{
+        //REGLA DE VALIDACION
+        $this->session->set_flashdata('error', "El Usuario '$usuario' ya esta registrado ");
+        redirect(base_url().'mantenimiento/cusuario/cadd');
+    }
+
+
+
+        
+
 
 }
 
@@ -111,7 +130,8 @@ public function cdelete($id){
         'Anulado' => '1'
     );
     $this->musuario->mupdateusuario($id, $data);
-    redirect(base_url().'mantenimiento/cusuario');
+    //redirect(base_url().'mantenimiento/cusuario');
+    echo "mantenimiento/cusuario";
 }
 
 
