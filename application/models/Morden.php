@@ -33,7 +33,7 @@ class Morden extends CI_Model{
 
 
       public function consultaGatosOrden($id){
-        $resultado =$query = $this->db->query("SELECT SUM(Precio)as Gastos FROM material where IdOrden=$id");
+        $resultado =$query = $this->db->query("SELECT ifnull(SUM(Precio),0) as Gastos FROM material where IdOrden=$id");
          //log_message('error',sprintf("id orden $ $resultado"));
          $resultado=$resultado->row();
         $gastos=$resultado->Gastos;

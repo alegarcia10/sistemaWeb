@@ -18,10 +18,10 @@
                         <h4>Fecha: <?=   date("d-m-Y", strtotime("$ordenindex->FechaRecepcion "));?> </h4>
                     </div>
                     <div class="col-md-4">
-                        <h4>Tarea: <?= $ordenindex->TareaDesarrollar ?> </h4>
-                    </div>
-                    <div class="col-md-4">
                         <h4>Cliente: <?= $ordenindex->Nombre ?> </h4>
+                    </div>
+                    <div class="col-md-12">
+                        <h4>Tarea: <?= $ordenindex->TareaDesarrollar ?> </h4>
                     </div>
                     <div class="col-md-4">
                         <h4>Gastos: $<?= $Gastos ?> </h4>
