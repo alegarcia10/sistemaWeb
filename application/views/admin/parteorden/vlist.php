@@ -21,11 +21,15 @@
                         <h4>Tarea: <?= $ordenindex->TareaDesarrollar ?> </h4>
                     </div>
                     <div class="col-md-4">
-                        <h4>Precio: <?= $ordenindex->Precio ?> </h4>
-                    </div>
-                    <div class="col-md-5">
                         <h4>Cliente: <?= $ordenindex->Nombre ?> </h4>
                     </div>
+                    <div class="col-md-4">
+                        <h4>Gastos: $<?= $Gastos ?> </h4>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Monto a Facturar: $<?= $ordenindex->Precio ?> </h4>
+                    </div>
+                    
                 </div>
                 <hr>
 
@@ -44,7 +48,7 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>Tarea a Desarrollar</th>
+                                            <th>Tarea Realizada</th>
                                             <th>Fecha Inicio</th>
                                             <th>Fecha Fin</th>
                                             <th>Estado</th>
@@ -52,20 +56,19 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-
                                         <?php if (!empty($parteordenindex)) : ?>
                                             <?php foreach ($parteordenindex as $atributos) : ?>
                                                 <tr>
                                                     <td><?php echo $atributos->IdParte; ?></td>
                                                     <td><?php echo $atributos->TareaDesarrollada; ?></td>
-                                                    <td><?php if($atributos->FechaInicio == null){ echo "-";}else{echo date("d-m-Y", strtotime("$atributos->FechaInicio"));} ?></td>
-                                                    <td><?php if($atributos->FechaFin == null){ echo "-";}else{echo date("d-m-Y", strtotime("$atributos->FechaFin"));} ?></td>
+                                                    <td><?php if($atributos->FechaInicio == null){ echo "-";}else{echo $atributos->FechaInicio;} ?></td>
+                                                    <td><?php if($atributos->FechaFin == null){ echo "-";}else{echo $atributos->FechaFin;} ?></td>
                                                     <td><?php if ($atributos->Completa == 1)
-                                                    { echo 'Completa';}elseif($atributos->Estado == 0)
+                                                    { echo 'Completada';}elseif($atributos->Estado == 0)
                                                     { echo 'Pendiente';}elseif($atributos->Estado == 1)
                                                     { echo 'Recibida';}elseif($atributos->Estado == 2)
                                                     { echo 'En Curso';}elseif($atributos->Estado == 3)
-                                                    { echo 'Completa';}else{ echo '-';} ; ?></td>
+                                                    { echo 'Finalizada';}else{ echo '-';} ; ?></td>
                                                     <td>
                                                         <div class="btn-group">
 
