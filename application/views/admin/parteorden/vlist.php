@@ -64,11 +64,11 @@
                                                     <td><?php if($atributos->FechaInicio == null){ echo "-";}else{echo $atributos->FechaInicio;} ?></td>
                                                     <td><?php if($atributos->FechaFin == null){ echo "-";}else{echo $atributos->FechaFin;} ?></td>
                                                     <td><?php if ($atributos->Completa == 1)
-                                                    { echo 'Completa';}elseif($atributos->Estado == 0)
+                                                    { echo 'Completada';}elseif($atributos->Estado == 0)
                                                     { echo 'Pendiente';}elseif($atributos->Estado == 1)
                                                     { echo 'Recibida';}elseif($atributos->Estado == 2)
                                                     { echo 'En Curso';}elseif($atributos->Estado == 3)
-                                                    { echo 'Completa';}else{ echo '-';} ; ?></td>
+                                                    { echo 'Finalizada';}else{ echo '-';} ; ?></td>
                                                     <td>
                                                         <div class="btn-group">
 
