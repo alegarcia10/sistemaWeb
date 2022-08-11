@@ -44,11 +44,11 @@
 
                         <div class="row">
                             <div class="col-md-12">
-                                <table id="tablaparte" class="table table-bordered table-responsive table-hover order-table ">
+                                <table id="tablaparte" class="table table-bordered table-hover order-table ">
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th width="50px" !important >Tarea Realizadaa</th>
+                                            <th>Tarea Realizadaa</th>
                                             <th>Fecha Inicio</th>
                                             <th>Fecha Fin</th>
                                             <th>Estado</th>
@@ -60,7 +60,7 @@
                                             <?php foreach ($parteordenindex as $atributos) : ?>
                                                 <tr>
                                                     <td width="10%"><?php echo $atributos->IdParte; ?></td>
-                                                    <td width="50px" !important ><?php echo $atributos->TareaDesarrollada; ?></td>
+                                                    <td id="tareaDesarrollada"><?php echo $atributos->TareaDesarrollada; ?></td>
                                                     <td width="10%"><?php if($atributos->FechaInicio == null){ echo "-";}else{echo $atributos->FechaInicio;} ?></td>
                                                     <td width="10%"><?php if($atributos->FechaFin == null){ echo "-";}else{echo $atributos->FechaFin;} ?></td>
                                                     <td width="10%"><?php if ($atributos->Completa == 1)
