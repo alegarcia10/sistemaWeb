@@ -44,15 +44,15 @@
 
                         <div class="row">
                             <div class="col-md-12">
-                                <table id="tablaparte" class="table table-bordered table-hover order-table">
+                                <table id="tablaparte" class="table table-bordered table-hover order-table table-responsive">
                                     <thead>
                                         <tr>
-                                            <th width="10%">#</th>
-                                            <th width="10%">Tarea Realizada</th>
-                                            <th width="10%">Fecha Inicio</th>
-                                            <th width="10%">Fecha Fin</th>
-                                            <th width="10%">Estado</th>
-                                            <th width="10%">Operaciones</th>
+                                            <th>#</th>
+                                            <th>Tarea Realizada</th>
+                                            <th>Fecha Inicio</th>
+                                            <th>Fecha Fin</th>
+                                            <th>Estado</th>
+                                            <th>Operaciones</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -69,7 +69,7 @@
                                                     { echo 'Recibida';}elseif($atributos->Estado == 2)
                                                     { echo 'En Curso';}elseif($atributos->Estado == 3)
                                                     { echo 'Finalizada';}else{ echo '-';} ; ?></td>
-                                                    <td width="20%">
+                                                    <td width="10%">
                                                         <div class="btn-group">
 
                                                             <a title="Modificar" href="<?php echo base_url(); ?>mantenimiento/cparteorden/cedit/<?php echo $atributos->IdParte; ?>" class="btn btn-info ">
