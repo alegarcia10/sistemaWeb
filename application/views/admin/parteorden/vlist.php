@@ -44,6 +44,11 @@
 
                         <div class="row">
                             <div class="col-md-12">
+                                <div class="col-sm-6 form-group">
+                                    <a class="btn btn-success" href="<?php echo base_url(); ?>mantenimiento/corden">Volver</a>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
                                 <div class="table-responsive">
                                 <table id="tablaparte" class="table" style="width:100%">
                                     <thead>
@@ -87,9 +92,6 @@
                                     </tbody>
                                 </table>
                                 </div>
-                            </div>
-                            <div class="col-sm-6 form-group">
-                                <a class="btn btn-success" href="<?php echo base_url(); ?>mantenimiento/corden">Volver</a>
                             </div>
                         </div>
                     </div>
