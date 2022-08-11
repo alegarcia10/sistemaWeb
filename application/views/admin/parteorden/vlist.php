@@ -29,7 +29,7 @@
                     <div class="col-md-12">
                         <h4>Tarea: <?= $ordenindex->TareaDesarrollar ?> </h4>
                     </div>
-                    
+
                 </div>
                 <hr>
 
@@ -44,11 +44,12 @@
 
                         <div class="row">
                             <div class="col-md-12">
-                                <table id="tablaparte" class="table table-bordered table-hover order-table">
+                                <div class="table-responsive">
+                                <table id="tablaparte" class="table" style="width:100%">
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>Tarea Realizada</th>
+                                            <th style="width:50px">Tarea Realizadaa</th>
                                             <th>Fecha Inicio</th>
                                             <th>Fecha Fin</th>
                                             <th>Estado</th>
@@ -59,8 +60,8 @@
                                         <?php if (!empty($parteordenindex)) : ?>
                                             <?php foreach ($parteordenindex as $atributos) : ?>
                                                 <tr>
-                                                    <td width="10%"><?php echo $atributos->IdParte; ?></td>
-                                                    <td width="40%"><?php echo $atributos->TareaDesarrollada; ?></td>
+                                                <td width="10%"><?php echo $atributos->IdParte; ?></td>
+                                                    <td width="45%"><?php echo $atributos->TareaDesarrollada; ?></td>
                                                     <td width="10%"><?php if($atributos->FechaInicio == null){ echo "-";}else{echo $atributos->FechaInicio;} ?></td>
                                                     <td width="10%"><?php if($atributos->FechaFin == null){ echo "-";}else{echo $atributos->FechaFin;} ?></td>
                                                     <td width="10%"><?php if ($atributos->Completa == 1)
@@ -69,7 +70,7 @@
                                                     { echo 'Recibida';}elseif($atributos->Estado == 2)
                                                     { echo 'En Curso';}elseif($atributos->Estado == 3)
                                                     { echo 'Finalizada';}else{ echo '-';} ; ?></td>
-                                                    <td width="20%">
+                                                    <td width="15%">
                                                         <div class="btn-group">
 
                                                             <a title="Modificar" href="<?php echo base_url(); ?>mantenimiento/cparteorden/cedit/<?php echo $atributos->IdParte; ?>" class="btn btn-info ">
@@ -85,6 +86,7 @@
                                         <?php endif; ?>
                                     </tbody>
                                 </table>
+                                </div>
                             </div>
                             <div class="col-sm-6 form-group">
                                 <a class="btn btn-success" href="<?php echo base_url(); ?>mantenimiento/corden">Volver</a>

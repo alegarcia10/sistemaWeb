@@ -27,7 +27,7 @@
                                 </div>
                                 <div class=" col-sm-12 form-group">
                                     <label for="tarea">TAREA</label>
-                                    <input type="text" id="txttarea" name="txttarea" class="form-control" value="<?php echo set_value('txttarea') ?>" required >
+                                    <input type="text" id="txttarea" name="txttarea" maxlength="1000"class="form-control" value="<?php echo set_value('txttarea') ?>" required >
                                 </div>
                                 <div class="col-sm-12 form-group">
                                     <a class="btn btn-success" href="<?php echo base_url(); ?>mantenimiento/corden">Volver</a>
