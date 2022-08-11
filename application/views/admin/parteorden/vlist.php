@@ -44,7 +44,7 @@
 
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="table-responsive">
+                                <div >
                                 <table id="tablaparte" class="table" style="width:100%">
                                     <thead>
                                         <tr>
