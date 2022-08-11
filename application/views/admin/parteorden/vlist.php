@@ -61,7 +61,7 @@
                                             <?php foreach ($parteordenindex as $atributos) : ?>
                                                 <tr>
                                                 <td width="10%"><?php echo $atributos->IdParte; ?></td>
-                                                    <td width="40%"><?php echo $atributos->TareaDesarrollada; ?></td>
+                                                    <td width="50%"><?php echo $atributos->TareaDesarrollada; ?></td>
                                                     <td width="10%"><?php if($atributos->FechaInicio == null){ echo "-";}else{echo $atributos->FechaInicio;} ?></td>
                                                     <td width="10%"><?php if($atributos->FechaFin == null){ echo "-";}else{echo $atributos->FechaFin;} ?></td>
                                                     <td width="10%"><?php if ($atributos->Completa == 1)
@@ -70,7 +70,7 @@
                                                     { echo 'Recibida';}elseif($atributos->Estado == 2)
                                                     { echo 'En Curso';}elseif($atributos->Estado == 3)
                                                     { echo 'Finalizada';}else{ echo '-';} ; ?></td>
-                                                    <td width="20%">
+                                                    <td width="10%">
                                                         <div class="btn-group">
 
                                                             <a title="Modificar" href="<?php echo base_url(); ?>mantenimiento/cparteorden/cedit/<?php echo $atributos->IdParte; ?>" class="btn btn-info ">
