@@ -33,7 +33,7 @@
                             </div>
                             <div class="col-sm-12 form-group">
                                 <label for="tarea">Tarea</label>
-                                <input type="text" id="txttarea" name="txttarea"  value="<?php echo !empty(form_error('txttarea'))? set_value('txttarea') : $ordenedit->TareaDesarrollar ?>" class= "form-control"  required>
+                                <input type="text" id="txttarea" name="txttarea"  maxlength="1000" value="<?php echo !empty(form_error('txttarea'))? set_value('txttarea') : $ordenedit->TareaDesarrollar ?>" class= "form-control"  required>
                             </div>
                             <div class="col-md-5 form-group">
                               <label for="cliente">Cliente&nbsp;&nbsp; (*)</label>
