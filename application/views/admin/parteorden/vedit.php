@@ -43,7 +43,7 @@
 
                             <div class="col-sm-12 form-group">
                                 <label for="tarea">Tarea</label>
-                                <input type="text" id="txttarea" name="txttarea" maxlength="500" value="<?php echo !empty(form_error('txtctarea'))? set_value('txttarea') : $parteordenedit->TareaDesarrollada ?>" class= "form-control" required >
+                                <input type="text" id="txttarea" name="txttarea" value="<?php echo !empty(form_error('txtctarea'))? set_value('txttarea') : $parteordenedit->TareaDesarrollada ?>" class= "form-control" required >
                             </div>
 
                             <div class="col-sm-12 form-group">
