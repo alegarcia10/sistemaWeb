@@ -48,7 +48,7 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th width="40%" !important >Tarea Realizada</th>
+                                            <th width="50px" !important >Tarea Realizadaa</th>
                                             <th>Fecha Inicio</th>
                                             <th>Fecha Fin</th>
                                             <th>Estado</th>
