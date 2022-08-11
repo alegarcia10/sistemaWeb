@@ -45,11 +45,11 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="table-responsive">
-                                <table id="tablaparte" class="table">
+                                <table id="tablaparte" class="table" style="width:100%">
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>Tarea Realizadaa</th>
+                                            <th style="width:50px">Tarea Realizadaa</th>
                                             <th>Fecha Inicio</th>
                                             <th>Fecha Fin</th>
                                             <th>Estado</th>
