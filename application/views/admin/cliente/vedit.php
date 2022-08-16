@@ -29,7 +29,7 @@
                             </div>
                             <div class="col-sm-6 form-group">
                                 <label for="domicilio">Domicilio</label>
-                                <input type="text" id="txtdomicilio" name="txtdomicilio" maxlength="50" value="<?php echo !empty(form_error('txtdomicilio'))? set_value('txtdomicilio') : $clienteedit->Domicilio ?>" class= "form-control"  >
+                                <input type="text" id="txtdomicilio" name="txtdomicilio" maxlength="1000" value="<?php echo !empty(form_error('txtdomicilio'))? set_value('txtdomicilio') : $clienteedit->Domicilio ?>" class= "form-control"  >
                             </div>
                             <div class="col-sm-6 form-group">
                                 <label for="provincia">Provincia</label>
