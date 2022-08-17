@@ -25,7 +25,7 @@
                             </div>
                             <div class="col-sm-6 form-group">
                                 <label for="nombre">Nombre</label>
-                                <input type="text" id="txtnombre" name="txtnombre" maxlength="50" value="<?php echo !empty(form_error('txtnombre'))? set_value('txtnombre') : $clienteedit->Nombre ?>" class= "form-control" required >
+                                <input type="text" id="txtnombre" name="txtnombre" maxlength="256" value="<?php echo !empty(form_error('txtnombre'))? set_value('txtnombre') : $clienteedit->Nombre ?>" class= "form-control" required >
                             </div>
                             <div class="col-sm-6 form-group">
                                 <label for="domicilio">Domicilio</label>
