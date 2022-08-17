@@ -19,7 +19,7 @@
                             <form action="<?php echo base_url(); ?>mantenimiento/ctecnico/cinsert" method="POST">
                                 <div class=" col-sm-6 form-group">
                                     <label for="nombre">Nombre</label>
-                                    <input type="text" id="txtnombre" name="txtnombre" maxlength="50"class="form-control" value="<?php echo set_value('txtnombre') ?>" required >
+                                    <input type="text" id="txtnombre" name="txtnombre" maxlength="256"class="form-control" value="<?php echo set_value('txtnombre') ?>" required >
                                 </div>
                                 <div class="col-sm-2 form-group">
                                   <label for="dni">DNI</label>
