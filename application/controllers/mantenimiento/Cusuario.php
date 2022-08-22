@@ -115,7 +115,7 @@ public function cupdate(){
     }else{
         //REGLA DE VALIDACION
         $this->session->set_flashdata('error', "El Usuario '$usuario' ya esta registrado ");
-        redirect(base_url().'mantenimiento/cusuario/cadd');
+        redirect(base_url().'mantenimiento/cusuario/cedit'.$idusuario);
     }
 
 
