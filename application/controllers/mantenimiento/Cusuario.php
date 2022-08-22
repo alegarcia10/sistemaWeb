@@ -87,13 +87,14 @@ public function cupdate(){
 
     $idusuario = $this->input->post('txtidusuario');
     $nombre = $this->input->post('txtnombre');
-     $apellido = $this->input->post('txtapellido');
-     $usuario = $this->input->post('txtusuario');
-     $contraseña = $this->input->post('txtContraseña');
+    $txtnombreviejo = $this->input->post('txtnombreviejo');
+    $apellido = $this->input->post('txtapellido');
+    $usuario = $this->input->post('txtusuario');
+    $contraseña = $this->input->post('txtContraseña');
 
      $usu = $this->musuario->obtenerusuario($usuario);
 
-    if($usu==null){
+    if(($usu==null) or ($txtnombreviejo==$nombre) ){
 
         $data = array(
             'nombre' => $nombre,
