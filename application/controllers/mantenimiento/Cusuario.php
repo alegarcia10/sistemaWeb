@@ -87,13 +87,14 @@ public function cupdate(){
 
     $idusuario = $this->input->post('txtidusuario');
     $nombre = $this->input->post('txtnombre');
-     $apellido = $this->input->post('txtapellido');
-     $usuario = $this->input->post('txtusuario');
-     $contraseña = $this->input->post('txtContraseña');
+    $apellido = $this->input->post('txtapellido');
+    $txtnombreviejo = $this->input->post('txtnombreviejo');
+    $usuario = $this->input->post('txtusuario');
+    $contraseña = $this->input->post('txtContraseña');
 
      $usu = $this->musuario->obtenerusuario($usuario);
 
-    if($usu==null){
+    if(($usu==null) or ($txtnombreviejo==$usuario) ){
 
         $data = array(
             'nombre' => $nombre,
@@ -108,13 +109,13 @@ public function cupdate(){
             redirect(base_url().'mantenimiento/cusuario');
         }else {
             $this->session->set_flashdata('error', 'No se pudo actualizar la usuario');
-            redirect(base_url().'mantenimiento/cusuario/cedit'.$idusuario);
+            redirect(base_url().'mantenimiento/cusuario/cedit/'.$idusuario);
         }
 
     }else{
         //REGLA DE VALIDACION
         $this->session->set_flashdata('error', "El Usuario '$usuario' ya esta registrado ");
-        redirect(base_url().'mantenimiento/cusuario/cadd');
+        redirect(base_url().'mantenimiento/cusuario/cedit/'.$idusuario);
     }
 
 
