@@ -109,13 +109,13 @@ public function cupdate(){
             redirect(base_url().'mantenimiento/cusuario');
         }else {
             $this->session->set_flashdata('error', 'No se pudo actualizar la usuario');
-            redirect(base_url().'mantenimiento/cusuario/cedit'.$idusuario);
+            redirect(base_url().'mantenimiento/cusuario/cedit/'.$idusuario);
         }
 
     }else{
         //REGLA DE VALIDACION
         $this->session->set_flashdata('error', "El Usuario '$usuario' ya esta registrado ");
-        redirect(base_url().'mantenimiento/cusuario/cedit'.$idusuario);
+        redirect(base_url().'mantenimiento/cusuario/cedit/'.$idusuario);
     }
 
 
