@@ -89,13 +89,15 @@ public function cupdate(){
 
   $res=$this->mtecnico->midupdatetecnico($dni);
 
-     if($res==null){
+     if(($res==null) or ($dni=$id)){
+        
         $data = array(
             'Nombre' => $nombre,
-            'Dni' => $id,
+            'Dni' => $dni,
             'Telefono' => $telefono
         );
               $res = $this->mtecnico->mupdatetecnico($id, $data);
+              //$this->mtecnico->mupdateidtecnico($id, $dni);
               if($res){
                   $this->session->set_flashdata('correcto', 'Se Guardo Correctamente');
                   redirect(base_url().'mantenimiento/ctecnico');
