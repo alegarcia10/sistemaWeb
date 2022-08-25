@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <section class="content-header">
         <h1>
-            Tarea N° <?php echo $parteordenedit->IdParte ?>
+            Tarea N° <?php echo $parteordenedit->IdParte  ?>
             <small>Editar</small>
         </h1>
     </section>
