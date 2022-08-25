@@ -18,10 +18,10 @@
                         <?php endif ; ?>
                         <form action="<?php echo base_url();?>mantenimiento/ccliente/cupdate" method="POST">
                             <input type="hidden" value="<?php echo $clienteedit->IdCliente ?>" name="txtidcliente" id="txtidcliente">
-                            <input type="hidden" value="<?php echo $clienteedit->DniCuit ?>" name="txtcuit" id="txtcuit">
+                            <input type="hidden" value="<?php echo $clienteedit->DniCuit ?>" name="txtcuitold" id="txtcuitold">
                             <div class="col-sm-2 form-group">
-                                <label for="txtcuit2">CUIT</label>
-                                <input type="number" id="txtcuit2" name="txtcuit2" maxlength="999999999999" value="<?php echo !empty(form_error('txtcuit'))? set_value('txtcuit') : $clienteedit->DniCuit ?>" class= "form-control" required disabled>
+                                <label for="txtcuitnew">CUIT</label>
+                                <input type="number" id="txtcuitnew" name="txtcuitnew" maxlength="999999999999" value="<?php echo !empty(form_error('txtcuitnew'))? set_value('txtcuitnew') : $clienteedit->DniCuit ?>" class= "form-control" required >
                             </div>
                             <div class="col-sm-6 form-group">
                                 <label for="nombre">Nombre</label>

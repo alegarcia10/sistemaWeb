@@ -87,13 +87,14 @@ public function cupdate(){
 
      $idcliente = $this->input->post('txtidcliente');
      $nombre = $this->input->post('txtnombre');
-     $cuit = $this->input->post('txtcuit');
+     $cuitold = $this->input->post('txtcuitold'); 
+     $cuit = $this->input->post('txtcuitnew');
      $prov = $this->input->post('txtprovincia');
      $domicilio = $this->input->post('txtdomicilio');
 
-    // $cli = $this->mcliente->obtenerclientedni($cuit);
+     $cli = $this->mcliente->obtenerclientedni($cuit);
 
-    // if($cli==null){
+     if(($cli==null) or ($cuitold==$cuit)){
 
                $data = array(
 
@@ -111,11 +112,11 @@ public function cupdate(){
                       $this->session->set_flashdata('error', 'No se pudo actualizar la cliente');
                       redirect(base_url().'mantenimiento/ccliente/cedit/'.$idcliente);
                   }
-    // }else{
-    //   //REGLA DE VALIDACION
-    //   $this->session->set_flashdata('error', 'Este Dni/Cuit ya esta registrado ');
-    //   redirect(base_url().'mantenimiento/ccliente/cadd');
-    // }
+     }else{
+       //REGLA DE VALIDACION
+       $this->session->set_flashdata('error', 'Este Dni/Cuit ya esta registrado ');
+       redirect(base_url().'mantenimiento/ccliente/cadd');
+     }
 
 
 }
