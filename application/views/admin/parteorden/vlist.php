@@ -9,7 +9,7 @@
             <div class="box-body">
                 <div class="row" id="datos">
                     <div class="col-md-12">
-                        <h1 id="H1A">DETALLES ÓRDEN</h1>
+                        <h1 id="H1A">DETALLES ÓRDEN N° <?php echo $ordenindex->IdOrden; ?> </h1>
                     </div>
                     <br>
                     <br>
@@ -52,7 +52,7 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th style="width:50px">Tarea Realizadaa</th>
+                                            <th style="width:50px">Tarea Realizada</th>
                                             <th>Fecha Inicio</th>
                                             <th>Fecha Fin</th>
                                             <th>Estado</th>

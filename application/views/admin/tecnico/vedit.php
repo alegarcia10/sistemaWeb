@@ -24,7 +24,7 @@
                             </div>
                             <div class="col-sm-2 form-group">
                                 <label for="dni">DNI</label>
-                                <input type="number" id="txtdni" name="txtdni" maxlength="999999999999" value="<?php echo !empty(form_error('txtdni'))? set_value('txtdni') : $tecnicoedit->Dni ?>" class= "form-control" required disabled >
+                                <input type="number" id="txtdni" name="txtdni" maxlength="999999999999" value="<?php echo !empty(form_error('txtdni'))? set_value('txtdni') : $tecnicoedit->Dni ?>" class= "form-control" required>
                             </div>
 
                             <div class="col-sm-6 form-group">
