@@ -2,7 +2,7 @@
     <section class="content-header">
         <h1>
             Cliente
-            <small>Nuevo</small>
+            <small>Nuevo 1</small>
         </h1>
     </section>
     <section class="content">
