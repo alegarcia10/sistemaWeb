@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 //$config['base_url'] = 'http://localhost/proyectos/flor';
-$config['base_url'] = 'https://biosgastro.online/develop-sist';
+$config['base_url'] = 'https://biosgastro.online/featureuser-sist';
 //$config['base_url'] = 'https://biosgastro.online/master-sist';
 
 /*
