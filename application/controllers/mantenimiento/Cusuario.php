@@ -46,7 +46,7 @@ public function cinsert(){
         $data = array(
 
             'nombre' => $nombre,
-            'apellido' => $apellido,
+            //'apellido' => $apellido,
             'usuario' => $usuario,
             'pass' => $contraseña,
             'IdRol' => '1',
@@ -98,7 +98,7 @@ public function cupdate(){
 
         $data = array(
             'nombre' => $nombre,
-            'apellido' => $apellido,
+            //'apellido' => $apellido,
             'usuario' => $usuario,
             'pass' => $contraseña
         );
