@@ -24,8 +24,8 @@
                                 <input type="text" id="txtnombre" name="txtnombre" value="<?php echo !empty(form_error('txtnombre'))? set_value('txtnombre') : $usuarioedit->nombre ?>" class= "form-control"  required>
                             </div>
                             <div class=" col-sm-4 form-group">
-                                <label for="apellido">Apellido</label>
-                                <input type="text" id="txtapellido" name="txtapellido" value="<?php echo !empty(form_error('txtapellido'))? set_value('txtapellido') : $usuarioedit->apellido ?>" class= "form-control"  >
+                                <label for="email">Email</label>
+                                <input type="text" id="txtemail" name="txtemail" value="<?php echo !empty(form_error('txtemail'))? set_value('txtemail') : $usuarioedit->email ?>" class= "form-control"  >
                             </div>
 
                             <div class="col-sm-4  form-group">

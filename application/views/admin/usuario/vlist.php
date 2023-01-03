@@ -25,7 +25,7 @@
                                 <tr>
                                     <th>#</th>
                                     <th>Nombre </th>
-                                    <th>Apellido</th>
+                                    <th>Email</th>
                                     <th>Usuario</th>
 
                                 </tr>
@@ -36,7 +36,7 @@
                                 <tr>
                                     <td><?php echo $atributos->idUsuario;?></td>
                                     <td><?php echo $atributos->nombre ;?></td>
-                                    <td><?php echo $atributos->apellido ;?></td>
+                                    <td><?php echo $atributos->email ;?></td>
                                     <td><?php echo $atributos->usuario;?></td>
                                     <td>
                                         <div class="btn-group">

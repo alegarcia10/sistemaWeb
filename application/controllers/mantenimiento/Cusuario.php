@@ -35,7 +35,7 @@ public function cadd(){
 public function cinsert(){
 
     $nombre = $this->input->post('txtnombre');
-     $apellido = $this->input->post('txtapellido');
+     $email = $this->input->post('txtemail');
      $usuario = $this->input->post('txtusuario');
      $contraseña = $this->input->post('txtContraseña');
 
@@ -46,7 +46,7 @@ public function cinsert(){
         $data = array(
 
             'nombre' => $nombre,
-            'apellido' => $apellido,
+            'email' => $email,
             'usuario' => $usuario,
             'pass' => $contraseña,
             'IdRol' => '1',
@@ -87,7 +87,7 @@ public function cupdate(){
 
     $idusuario = $this->input->post('txtidusuario');
     $nombre = $this->input->post('txtnombre');
-    $apellido = $this->input->post('txtapellido');
+    $email = $this->input->post('txtemail');
     $txtnombreviejo = $this->input->post('txtnombreviejo');
     $usuario = $this->input->post('txtusuario');
     $contraseña = $this->input->post('txtContraseña');
@@ -98,7 +98,7 @@ public function cupdate(){
 
         $data = array(
             'nombre' => $nombre,
-            'apellido' => $apellido,
+            'email' => $email,
             'usuario' => $usuario,
             'pass' => $contraseña
         );
