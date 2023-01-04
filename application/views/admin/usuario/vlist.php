@@ -26,7 +26,7 @@
                                     <th>#</th>
                                     <th>Nombre </th>
                                     <th>Email</th>
-                                    <th>Usuario</th>
+                                    <th>Privilegios</th>
 
                                 </tr>
                             </thead>
@@ -37,7 +37,7 @@
                                     <td><?php echo $atributos->idUsuario;?></td>
                                     <td><?php echo $atributos->nombre ;?></td>
                                     <td><?php echo $atributos->email ;?></td>
-                                    <td><?php echo $atributos->usuario;?></td>
+                                    <td><?php echo $atributos->usuario_listar_select_uno(idUsuario);?></td>
                                     <td>
                                         <div class="btn-group">
                                             <a href="<?php echo base_url();?>mantenimiento/cusuario/cedit/<?php echo $atributos->idUsuario; ?>" class="btn btn-info">

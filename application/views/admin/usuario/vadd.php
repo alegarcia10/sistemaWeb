@@ -26,7 +26,7 @@
                                 <input type="text" id="txtemail" name="txtemail" class="form-control" value="<?php echo set_value('txtemail') ?>"   >
                             </div>
                             <div class="col-sm-4 form-group">
-                                <label for="usuario">Usuario</label>
+                                <label for="usuario">Privilegios</label>
                                 <input type="text" id="txtusuario" name="txtusuario" class="form-control" value="<?php echo set_value('txtusuario') ?>"  required>
                             </div>
                             <div class="col-sm-4 form-group">
