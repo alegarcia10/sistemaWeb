@@ -54,7 +54,7 @@ class Musuario extends CI_Model{
       }
 
     public function usuario_listar_select2(){//
-        $query=$this->db->query("SELECT DISTINCT usuarios.idUsuario
+        $query=$this->db->query("SELECT DISTINCT u.idUsuario, t.nombre_tipo
                                 FROM tipousuario t INNER JOIN usuarios u on t.idRol=u.idRol WHERE u.anulado = 1" );
       return $query->result();
       }
