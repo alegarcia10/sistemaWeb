@@ -25,9 +25,11 @@ public function index(){
 
 public function cadd(){
 
+    $data['tipo_usuario_select'] = $this->musuario->usuario_listar_select();
+
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside');
-    $this->load->view('admin/usuario/vadd');
+    $this->load->view('admin/usuario/vadd',$data);
     $this->load->view('layouts/footer');
 }
 
@@ -36,7 +38,7 @@ public function cinsert(){
 
     $nombre = $this->input->post('txtnombre');
      $email = $this->input->post('txtemail');
-     $usuario = $this->input->post('txtusuario');
+     $idRol = $this->input->post('usuario');
      $contraseña = $this->input->post('txtContraseña');
 
      $usu = $this->musuario->obtenerusuario($usuario);
@@ -47,9 +49,8 @@ public function cinsert(){
 
             'nombre' => $nombre,
             'email' => $email,
-            'usuario' => $usuario,
+            'idRol' => $idRol,
             'pass' => $contraseña,
-            'IdRol' => '1',
             'Anulado' => '0'
         );
         $res=$this->musuario->minsertusuario($data);
@@ -76,6 +77,8 @@ public function cedit($id){
     $data = array(
         'usuarioedit' => $this->musuario->midupdateusuario($id),
     );
+    $data['usuario_select'] = $this->musuario->cliente_listar_select2();
+    $data['model'] = $this->musuario->obtener($data['usuarioedit']->idRol);
 
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside');
@@ -89,7 +92,7 @@ public function cupdate(){
     $nombre = $this->input->post('txtnombre');
     $email = $this->input->post('txtemail');
     $txtnombreviejo = $this->input->post('txtnombreviejo');
-    $usuario = $this->input->post('txtusuario');
+    $idRol = mb_strtoupper($this->input->post('usuario'));
     $contraseña = $this->input->post('txtContraseña');
 
      $usu = $this->musuario->obtenerusuario($usuario);
@@ -99,7 +102,7 @@ public function cupdate(){
         $data = array(
             'nombre' => $nombre,
             'email' => $email,
-            'usuario' => $usuario,
+            'idRol' => $idRol,
             'pass' => $contraseña
         );
 
