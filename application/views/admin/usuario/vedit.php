@@ -30,7 +30,8 @@
 
                             <div class="col-sm-4  form-group">
                                 <label for="usuario">Privilegios</label>
-                                <input type="" id="txtusuario" name="txtusuario" value="<?php echo !empty(form_error('txtusuario'))? set_value('txtusuario') : $usuarioedit->usuario ?>" class= "form-control" required>
+                                <? $this->select_items->sin_buscador2($usuario_select,(!empty($model->idUsuario))
+                               ? $model->idUsuario : '',	'usuario','1',(!empty($consultar)) ? "disabled ":'required');?>
                             </div>
                             <div class="col-sm-4  form-group">
                                 <label for="Contraseña">Contraseña</label>
