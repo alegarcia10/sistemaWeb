@@ -74,6 +74,12 @@ class Musuario extends CI_Model{
         return $resultado->row();
      }
  
+    function obtener($id){
+        $this->db->where("idRol",$id);
+        $query = $this->db->get('tipousuario');
+        return $query->row();
+        $error = $this->db->error();
+    }
  
 }
 ?>
