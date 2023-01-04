@@ -77,7 +77,7 @@ public function cedit($id){
     $data = array(
         'usuarioedit' => $this->musuario->midupdateusuario($id),
     );
-    $data['usuario_select'] = $this->musuario->cliente_listar_select2();
+    $data['usuario_select'] = $this->musuario->usuario_listar_select2();
     $data['model'] = $this->musuario->obtener($data['usuarioedit']->idRol);
 
     $this->load->view('layouts/header');
