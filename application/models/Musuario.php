@@ -18,7 +18,7 @@ class Musuario extends CI_Model{
     //MOSTRAR usuario
     public function mselectusuario(){
         //$this->db->where('Anulado =','0');
-        $resultado =$query=$this->db->query("SELECT distinct t.nombre_tipo, t.idRol, u.idUsuario, u.nombre, u.email
+        $resultado =$query=$this->db->query("SELECT t.nombre_tipo, t.idRol, u.idUsuario, u.nombre, u.email
         FROM tipousuario t INNER JOIN usuarios u on t.idRol=u.idRol WHERE u.anulado = 0");
         return $resultado->result();
     }
