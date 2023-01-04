@@ -48,7 +48,8 @@ class Musuario extends CI_Model{
     // Listar tipo de usuario
     public function usuario_listar_select(){//
         $query=$this->db->query("SELECT DISTINCT tipousuario.nombre_tipo as NOMBRE
-                                FROM tipousuario JOIN usuarios WHERE usuarios.anulado = 0");
+                                FROM tipousuario JOIN usuarios WHERE usuarios.anulado = 0
+                                ORDER BY tipousuario.Nombre ASC " );
       return $query->result();
       }
 
