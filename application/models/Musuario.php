@@ -4,7 +4,7 @@ class Musuario extends CI_Model{
 
     public function logeo ($user,$pass){
 
-        $this->db->where('usuario',$user);
+        $this->db->where('nombre',$user);
         $this->db->where('pass',$pass);
         $resultado =$this->db->get('usuarios');
         if($resultado->num_rows()>0){
@@ -47,8 +47,9 @@ class Musuario extends CI_Model{
 
     // Listar tipo de usuario
     public function usuario_listar_select(){//
-        $query=$this->db->query("SELECT DISTINCT tipousuario.nombre_tipo as NOMBRE
-                                FROM tipousuario JOIN usuarios WHERE usuarios.anulado = 0" );
+        $query=$this->db->query("SELECT DISTINCT tipousuario.idRol tipousuario.nombre_tipo as NOMBRE
+                                FROM tipousuario t INNER JOIN usuarios u on t.idRol=u.idRol 
+                                WHERE usuarios.anulado = 0" );
       return $query->result();
       }
 
