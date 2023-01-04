@@ -54,9 +54,8 @@ class Musuario extends CI_Model{
       }
 
     public function usuario_listar_select2(){//
-        $query=$this->db->query("SELECT DISTINCT tipousuario.idRol IdTecnico ,.Nombre as NOMBRE
-                                FROM tecnico WHERE tecnico.Activo = 1
-                                ORDER BY tecnico.Nombre ASC " );
+        $query=$this->db->query("SELECT DISTINCT usuarios.idUsuario
+                                FROM tipousuario t INNER JOIN usuarios u on t.idRol=u.idRol WHERE u.anulado = 1" );
       return $query->result();
       }
 
