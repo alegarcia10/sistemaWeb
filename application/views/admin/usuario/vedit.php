@@ -29,8 +29,8 @@
                             </div>
 
                             <div class="col-sm-4  form-group">
-                                <label for="usuario">usuario</label>
-                                <input type="text" id="txtusuario" name="txtusuario" value="<?php echo !empty(form_error('txtusuario'))? set_value('txtusuario') : $usuarioedit->usuario ?>" class= "form-control" required>
+                                <label for="usuario">Privilegios</label>
+                                <input type="" id="txtusuario" name="txtusuario" value="<?php echo !empty(form_error('txtusuario'))? set_value('txtusuario') : $usuarioedit->usuario ?>" class= "form-control" required>
                             </div>
                             <div class="col-sm-4  form-group">
                                 <label for="Contraseña">Contraseña</label>
