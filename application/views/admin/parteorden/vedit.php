@@ -75,7 +75,7 @@
 
                                <div class="col-sm-2">
                                  <br>
-                                 <button class="btn btn-success" type="button" id="buscar2"><span class="fa fa-search" aria-hidden="true" ></span> Agregar </button>
+                                 <button class="btn btn-success" type="button" id="buscar2"><span class="fa fa-plus" aria-hidden="true" ></span> Agregar </button>
                                </div>
                                <div class="col-sm-12 form-group">
                                      <table id="example1" class="table table-bordered table-hover order-table">
@@ -134,7 +134,7 @@
                           </div>
                           <div class="col-sm-2">
                             <br>
-                            <button class="btn btn-success" type="button" id="buscar1"><span class="fa fa-search" aria-hidden="true" ></span> Agregar </button>
+                            <button class="btn btn-success" type="button" id="buscar1"><span class="fa fa-plus" aria-hidden="true" ></span> Agregar </button>
                           </div>
                           <div class="col-sm-12 form-group">
                                 <table id="example1" class="table table-bordered table-hover order-table">
