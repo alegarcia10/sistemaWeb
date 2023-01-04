@@ -35,7 +35,7 @@
                             </div>
 
                             <div class="col-sm-12 form-group">
-                            <a class="btn btn-success" href="<?php echo base_url();?>mantenimiento/cusuario">Volver</a>
+                            <a class="btn btn-default" href="<?php echo base_url();?>mantenimiento/cusuario">Volver</a>
                                 <button type="submit" class="btn btn-success">Guardar</button>
                             </div>
                         </form>
