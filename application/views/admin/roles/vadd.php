@@ -19,7 +19,18 @@
                         <form action="<?php echo base_url();?>mantenimiento/croles/cinsert" method="POST">
                             <div class="col-sm-4 form-group">
                                 <label for="tipo_usuario">Privilegios</label>
-                                
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Técnicos
+                                        </label>
+                                        </div>
+                                        <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Clientes
+                                        </label>
+                                </div>
                             </div>
                             <div class="col-sm-12 form-group">
                             <a class="btn btn-default" href="<?php echo base_url();?>mantenimiento/croles">Volver</a>
