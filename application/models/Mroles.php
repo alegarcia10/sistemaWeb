@@ -22,6 +22,12 @@ class Mroles extends CI_Model{
         FROM tipousuario t INNER JOIN usuarios u on t.idRol=u.idRol WHERE u.anulado = 0");
         return $resultado->result();
     }
+
+    public function mtroles(){
+        
+        $resultado =$query=$this->db->query("SELECT t.nombre_tipo FROM tipousuario t");
+        return $resultado->result();
+    }
     //INSERTAR usuario
     public function minsertroles($data){
         return  $this->db->insert('tipousuario',$data);

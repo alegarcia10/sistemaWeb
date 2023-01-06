@@ -8,6 +8,7 @@ class Cusuario extends CI_Controller {
         redirect(base_url());
     }
     $this->load->model('musuario');
+    $this->load->model('mroles');
     $this->load->model('mcombo');
     }
 
@@ -15,7 +16,7 @@ class Cusuario extends CI_Controller {
 public function index(){
     $data = array (
         'usuarioindex' => $this->musuario->mselectusuario(),
-        'usuario_select' => $this->musuario->usuario_listar_select()
+        'usuario_select' => $this->mroles->mtroles()
     );
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside');
