@@ -26,11 +26,11 @@ public function index(){
 
 public function cadd(){
 
-    $data['tipo_usuario_select'] = $this->mtipousuario->usuario_listar_select();
+    //$data['tipo_usuario_select'] = $this->mtipousuario->usuario_listar_select();
 
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside');
-    $this->load->view('admin/roles/vadd',$data);
+    $this->load->view('admin/roles/vadd');
     $this->load->view('layouts/footer');
 }
 
