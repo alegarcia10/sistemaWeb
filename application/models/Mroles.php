@@ -55,7 +55,7 @@ class Mroles extends CI_Model{
 
     public function roles_listar_select2(){//
         $query=$this->db->query("SELECT DISTINCT u.idUsuario, t.nombre_tipo
-                                FROM tipousuario t INNER JOIN usuarios u on t.idRol=u.idRol WHERE u.anulado = 1" );
+                                FROM tipousuario t INNER JOIN usuarios u on t.idRol=u.idRol WHERE u.anulado = 0" );
       return $query->result();
       }
 
