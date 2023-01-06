@@ -24,25 +24,25 @@ class Mroles extends CI_Model{
     }
     //INSERTAR usuario
     public function minsertroles($data){
-        return  $this->db->insert('roles',$data);
+        return  $this->db->insert('tipousuario',$data);
     }
 
     //OBTENER DATOS
     public function midupdateroles($id){
        $this->db->where('idRol', $id);
-       $resultado = $this->db->get('roles');
+       $resultado = $this->db->get('tipousuario');
        return $resultado->row();
     }
 
     //MODIFICAR usuario
     public function mupdateroles($id, $data){
         $this->db->where('idRol', $id);
-        return $this->db->update('roles', $data);
+        return $this->db->update('tipousuario', $data);
      }
      //Traer usuario
     public function mselectinforoles($id){
         $this->db->where('idRol =',"$id");
-        $resultado =$this->db->get('roles');
+        $resultado =$this->db->get('tipousuario');
         return $resultado->row();
     }
 
@@ -69,8 +69,8 @@ class Mroles extends CI_Model{
 
       //Verifico si exite usuario
     public function obtenerrol($rol){
-        $this->db->where('roles', $rol);
-        $resultado = $this->db->get('roles');
+        $this->db->where('nombre_tipo', $rol);
+        $resultado = $this->db->get('tipousuario');
         return $resultado->row();
      }
  
