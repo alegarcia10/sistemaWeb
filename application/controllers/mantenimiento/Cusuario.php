@@ -15,6 +15,7 @@ class Cusuario extends CI_Controller {
 public function index(){
     $data = array (
         'usuarioindex' => $this->musuario->mselectusuario(),
+        'usuario_select' => $this->musuario->usuario_listar_select()
     );
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside');
