@@ -8,13 +8,14 @@ class Croles extends CI_Controller {
         redirect(base_url());
     }
     $this->load->model('mroles');
+    $this->load->model('mtipousuario');
     $this->load->model('mcombo');
     }
 
 
 public function index(){
     $data = array (
-        'rolesindex' => $this->mroles->mselectroles(),
+        'rolesindex' => $this->mtipousuario->mselecttipo(),
     );
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside');
@@ -25,7 +26,7 @@ public function index(){
 
 public function cadd(){
 
-    $data['tipo_usuario_select'] = $this->mroles->usuario_listar_select();
+    $data['tipo_usuario_select'] = $this->mtipousuario->usuario_listar_select();
 
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside');
@@ -39,7 +40,7 @@ public function cinsert(){
      $nombre_tipo = $this->input->post('rol');
      
 
-     $rol = $this->mroles->obtenerroles($roles);
+     $rol = $this->mtipousuario->obtenerroles($roles);
 
     if($rol==null){
 
