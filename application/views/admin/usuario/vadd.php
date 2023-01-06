@@ -26,8 +26,8 @@
                                 <input type="text" id="txtemail" name="txtemail" class="form-control" value="<?php echo set_value('txtemail') ?>"   >
                             </div>
                             <div class="col-sm-4 form-group">
-                                <label for="tipo_usuario">Privilegios</label>
-                                <?$this->select_items->sin_buscador($usuario_select, '','tipo_usuario','1', 'required');?>
+                                <label for="usuario_select">Privilegios</label>
+                                <?$this->select_items->sin_buscador($usuario_select, '','usuario_select','1', 'required');?>
                             </div>
                             <div class="col-sm-4 form-group">
                                 <label for="Contraseña">Contraseña</label>
