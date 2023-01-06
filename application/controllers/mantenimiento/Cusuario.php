@@ -15,8 +15,8 @@ class Cusuario extends CI_Controller {
 
 public function index(){
     $data = array (
-        'usuarioindex' => $this->musuario->mselectusuario(),
-        'usuario_select' => $this->mroles->mtroles()
+        'usuarioindex' => $this->musuario->mselectusuario()
+        
     );
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside');
@@ -27,7 +27,7 @@ public function index(){
 
 public function cadd(){
 
-    $data['tipo_usuario_select'] = $this->musuario->usuario_listar_select();
+    $data['usuario_select']  = $this->mroles->mtroles();
 
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside');
