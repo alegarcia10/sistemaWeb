@@ -27,7 +27,7 @@ public function index(){
 
 public function cadd(){
 
-    $data['usuario_select']  = $this->mroles->mtroles();
+    $data['usuario_select']  = $this->mroles->roles_listar_select();
 
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside');
@@ -53,8 +53,7 @@ public function cinsert(){
             'email' => $email,
             'idRol' => $idRol,
             'pass' => $contraseña,
-            'Anulado' => '0',
-            'usuario_select' => $this->mroles->mtroles()
+            'Anulado' => '0'
         );
         $res=$this->musuario->minsertusuario($data);
         if($res){
