@@ -25,7 +25,7 @@
                                 <label for="tipo_usuario">Vistas permitidas</label>
                                 </div>
                                 <div class="col-md-4 form-group">
-                                    <label>Cliente</label><br>
+                                    <label>Cliente</label>
                                     <input class="chk_input" type="checkbox" id="habilitado" name="habilitado" data-width="20" data-height="20" <?=(!empty($ordenedit->Completada)&&$ordenedit->Completada=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($ordenedit->Completada))?'checked':''?> />
                                     <span class="checkmark"></span>
                                 </div>
@@ -35,7 +35,12 @@
                                 <span class="checkmark"></span>
                             </div>
                             <div class="col-md-4 form-group">
-                                <label>Ordenes</label><br>
+                                <label>Ordenes</label>
+                                <input class="chk_input" type="checkbox" id="habilitado" name="habilitado" data-width="20" data-height="20" <?=(!empty($ordenedit->Completada)&&$ordenedit->Completada=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($ordenedit->Completada))?'checked':''?> />
+                                <span class="checkmark"></span>
+                            </div>
+                            <div class="col-md-4 form-group">
+                                <label>Usuarios</label>
                                 <input class="chk_input" type="checkbox" id="habilitado" name="habilitado" data-width="20" data-height="20" <?=(!empty($ordenedit->Completada)&&$ordenedit->Completada=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($ordenedit->Completada))?'checked':''?> />
                                 <span class="checkmark"></span>
                             </div>
