@@ -17,20 +17,22 @@
                             </div>
                         <?php endif; ?>
                         <form action="<?php echo base_url();?>mantenimiento/croles/cinsert" method="POST">
-                            <div class="col-sm-4 form-group">
+                        <div class=" col-sm-4 form-group">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" id="txtnombre" name="txtnombre" class="form-control" value="<?php echo set_value('txtnombre') ?>"   required>
+                            </div>    
+                        <div class="col-sm-4 form-group">
                                 <label for="tipo_usuario">Privilegios</label>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">
-                                            Técnicos
-                                        </label>
-                                        </div>
-                                        <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                        <label class="form-check-label" for="flexCheckChecked">
-                                            Clientes
-                                        </label>
+                                <div class="col-md-4 form-group">
+                                    <label>Cliente</label><br>
+                                    <input class="chk_input" type="checkbox" id="habilitado" name="habilitado" data-width="20" data-height="20" <?=(!empty($ordenedit->Completada)&&$ordenedit->Completada=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($ordenedit->Completada))?'checked':''?> />
+                                    <span class="checkmark"></span>
                                 </div>
+                                <div class="col-md-4 form-group">
+                                <label>Completa</label><br>
+                                <input class="chk_input" type="checkbox" id="habilitado" name="habilitado" data-width="20" data-height="20" <?=(!empty($ordenedit->Completada)&&$ordenedit->Completada=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($ordenedit->Completada))?'checked':''?> />
+                                <span class="checkmark"></span>
+                            </div>
                             </div>
                             <div class="col-sm-12 form-group">
                             <a class="btn btn-default" href="<?php echo base_url();?>mantenimiento/croles">Volver</a>
