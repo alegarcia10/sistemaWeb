@@ -12,7 +12,7 @@ class Cdashboard extends CI_Controller {
 
     public function index()
 	{
-		$idRol=$data['usuario']->IdRol;
+		//$idRol=$data['usuario']->IdRol;
         $data['rolesindex'] = $this->musuario->obtener($idRol);
 
 
