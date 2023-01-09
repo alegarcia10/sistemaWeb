@@ -18,7 +18,7 @@
                         <?php endif ; ?>
                         <form action="<?php echo base_url();?>mantenimiento/cusuario/cupdate" method="POST">
                             <input type="hidden" value="<?php echo $usuarioedit->idUsuario ?>" name="txtidusuario" id="txtidusuario">
-                            
+                            <input type="hidden" value="<?php echo $usuarioedit->idRol ?>" name="txtidrol" id="txtidrol">
                             <div class=" col-sm-4 form-group">
                                 <label for="nombre">Nombre</label>
                                 <input type="text" id="txtnombre" name="txtnombre" value="<?php echo !empty(form_error('txtnombre'))? set_value('txtnombre') : $usuarioedit->nombre ?>" class= "form-control"  required>
@@ -30,8 +30,8 @@
 
                             <div class="col-sm-4  form-group">
                                 <label for="usuario">Privilegios</label>
-                                <? $this->select_items->sin_buscador2($usuario_select,(!empty($model->idUsuario))
-                               ? $model->idUsuario : '',	'usuario','1',(!empty($consultar)) ? "disabled ":'required');?>
+                                <? $this->select_items->sin_buscador2($usuario_select,(!empty($model->idRol))
+                               ? $model->idRol : '',	'usuario','1',(!empty($consultar)) ? "disabled ":'required');?>
                             </div>
                             <div class="col-sm-4  form-group">
                                 <label for="Contraseña">Contraseña</label>
