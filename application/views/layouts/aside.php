@@ -20,14 +20,14 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
+                        <?php if (!empty($rolesindex)) : ?>
+                                            <?php foreach ($rolesindex as $atributos) : ?>
                         <ul class="treeview-menu">
-                            <li><a href="<?php echo base_url(); ?>mantenimiento/ccliente"><i class="fa fa-circle-o"></i> Clientes</a></li>
+                            <li><a href="<?php echo base_url(); ?>mantenimiento/ccliente" <?=(!empty($rolesindex->Cliente)&&$rolesindex->Cliente=="1")?'enabled':'disabled'?> /> <i class="fa fa-circle-o"></i> Clientes</a></li>
                             <li><a href="<?php echo base_url(); ?>mantenimiento/ctecnico"><i class="fa fa-circle-o"></i> Técnicos</a></li>
                             <li><a href="<?php echo base_url(); ?>mantenimiento/corden"><i class="fa fa-circle-o"></i> Órdenes</a></li>
                         </ul>
                     </li>
-
-
                     <li class="treeview">
                         <a href="#">
                             <i class="fa fa-user-circle-o"></i> <span>Administrador</span>
@@ -41,6 +41,8 @@
                         </ul>
                     </li>
                 </ul>
+                                <?php endforeach ?>
+                    <?php endif; ?>
             </section>
             <!-- /.sidebar -->
         </aside>
