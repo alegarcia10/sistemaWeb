@@ -21,7 +21,7 @@
                                 <label for="nombre">Nombre</label>
                                 <input type="text" id="txtnombre" name="txtnombre" class="form-control" value="<?php echo set_value('txtnombre') ?>"   required>
                             </div>    
-                            <br>
+                            <br><br/>
                         <div class="col-sm-4 form-group">
                                 <label for="tipo_usuario">Vistas permitidas</label><br>
                                 </div>
