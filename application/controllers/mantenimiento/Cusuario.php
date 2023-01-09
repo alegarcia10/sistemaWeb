@@ -27,7 +27,7 @@ public function index(){
 
 public function cadd(){
 
-    $data['usuario_select']  = $this->mroles->roles_listar_select();
+    $data['usuario_select']  = $this->musuario->usuario_listar_select();
 
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside');
