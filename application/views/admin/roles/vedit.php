@@ -18,7 +18,7 @@
                         <?php endif ; ?>
                         <form action="<?php echo base_url();?>mantenimiento/croles/cupdate" method="POST">
                             <input type="hidden" value="<?php echo $rolesedit->idRol ?>" name="txtidusuario" id="txtidusuario">
-                            <input type="hidden" value="<?php echo $rolesedit->nombre_tipo ?>" name="txtnombreviejo" id="txtnombreviejo">
+                            
                             <div class="col-sm-4  form-group">
                                 <label for="rol">Privilegios</label>
                                 <? $this->select_items->sin_buscador2($roles_select,(!empty($model->idRol))
