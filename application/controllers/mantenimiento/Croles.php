@@ -85,7 +85,7 @@ public function cedit($id){
 public function cupdate(){
 
     $idRol = $this->input->post('txtidrol');
-    $nombre_tipo = $this->input->post('txtnombretipo');
+    $nombre_tipo = $this->input->post('rol');
 
      $rol = $this->mroles->obtenerroles($roles);
 
