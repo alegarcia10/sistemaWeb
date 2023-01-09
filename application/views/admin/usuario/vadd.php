@@ -27,7 +27,7 @@
                             </div>
                             <div class="col-sm-4 form-group">
                                 <label for="usuario_select">Privilegios</label>
-                                <?$this->select_items->sin_buscador($usuario_select, '','usuario_select','1', 'required');?>
+                                <?$this->select_items->sin_buscador_priv($usuario_select, '','usuario_select','1', 'required');?>
                             </div>
                             <div class="col-sm-4 form-group">
                                 <label for="Contraseña">Contraseña</label>
