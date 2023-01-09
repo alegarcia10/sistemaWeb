@@ -40,7 +40,7 @@ public function cinsert(){
 
     $nombre = $this->input->post('txtnombre');
      $email = $this->input->post('txtemail');
-     $idRol = $this->input->post('usuario');
+     $idRol = $this->input->post('usuario_select');
      $contraseña = $this->input->post('txtContraseña');
 
      $usu = $this->musuario->obtenerusuario($usuario);
