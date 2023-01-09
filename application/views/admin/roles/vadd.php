@@ -17,7 +17,7 @@
                             </div>
                         <?php endif; ?>
                         <form action="<?php echo base_url();?>mantenimiento/croles/cinsert" method="POST">
-                        <div class=" col-sm-4 form-group">
+                        <div class=" col-sm-12 form-group">
                                 <label for="nombre">Nombre</label>
                                 <input type="text" id="txtnombre" name="txtnombre" class="form-control" value="<?php echo set_value('txtnombre') ?>"   required>
                             </div>    
