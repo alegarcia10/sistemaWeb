@@ -31,7 +31,7 @@ public function clogeo(){
             'login' => TRUE
         );
         echo $this->session->set_userdata($data);
-        redirect(base_url().'cdashboard');
+        redirect(base_url().'cdashboard',$data);
     }
 }
 
