@@ -28,11 +28,12 @@ public function clogeo(){
             'idUsuario' => $res->idUsuario,
             'nombre' => $res->nombre,
             'idRol' => $res->idRol,
-            'login' => TRUE
+            'login' => TRUE,
+            'roles' => $this->mroles->obtener($idRol)
         );
         echo $this->session->set_userdata($data);
        // redirect(base_url().'cdashboard',$data);
-
+        
        var_dump("pasa x aca");
         $this->load->view('layouts/header');
 		$this->load->view('layouts/aside',$data);
