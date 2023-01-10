@@ -24,7 +24,7 @@
                        
                     
                         <ul class="treeview-menu">
-                        <?php if ($roles->Cliente =="1") { ?>
+                        <?php if ($roles->cliente =="1") { ?>
                             <li><a href="<?php echo base_url(); ?>mantenimiento/ccliente"> <i class="fa fa-circle-o"></i> Clientes</a></li>
                             <?php } ?>
                             <li><a href="<?php echo base_url(); ?>mantenimiento/ctecnico"><i class="fa fa-circle-o"></i> Técnicos</a></li>
