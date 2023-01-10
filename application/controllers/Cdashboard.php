@@ -13,11 +13,11 @@ class Cdashboard extends CI_Controller {
     public function index()
 	{
 		//$idRol=$data['usuario']->IdRol;
-        $data['rolesindex'] = $this->musuario->obtener($idRol);
+        //$data['rolesindex'] = $this->musuario->obtener($idRol);
 
 
 		$this->load->view('layouts/header');
-		$this->load->view('layouts/aside',$data);
+		$this->load->view('layouts/aside');
 		$this->load->view('admin/dashboard');
 		$this->load->view('layouts/footer');
 	}
