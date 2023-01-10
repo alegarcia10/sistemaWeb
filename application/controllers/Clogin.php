@@ -30,7 +30,7 @@ public function clogeo(){
             'nombre' => $res->nombre,
             'idRol' => $res->idRol,
             'login' => TRUE,
-            'roles' => $this->mroles->obtener($idRol)
+            'roles' => $this->mroles->obtener($res->idRol)
         );
         echo $this->session->set_userdata($data);
        // redirect(base_url().'cdashboard',$data);
