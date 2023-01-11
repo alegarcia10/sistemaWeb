@@ -9,6 +9,7 @@ class Ccliente extends CI_Controller {
     }
     $idrol = $this->session->userdata("idRol");
     $this->load->model('mcliente');
+    $this->load->model('mroles');
     $this->load->model('mcombo');
     //var_dump($nombre);
     }
