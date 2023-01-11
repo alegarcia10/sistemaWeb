@@ -126,8 +126,13 @@ public function cedit($id){
 
 public function cupdate(){
 
-    //$idRol = $this->input->post('txtidrol');
+    $idRol = $this->input->post('txtidrol');
     $nombre_tipo = $this->input->post('txtnombre');
+    $check_cliente = $this->input->post('cliente');
+    $check_tecnico = $this->input->post('tecnico');
+    $check_orden = $this->input->post('ordenes');
+    $check_usu = $this->input->post('usu');
+    $check_rol = $this->input->post('rol');
 
      $rol = $this->mroles->obtenerrol($nombre_tipo);
      if($check_cliente=='on'){
@@ -170,7 +175,7 @@ public function cupdate(){
 
         );
 
-        $res = $this->mroles->mupdaterol($idRol, $data);
+        $res = $this->mroles->mupdateroles($idRol, $data);
         if($res){
             $this->session->set_flashdata('correcto', 'Se Guardo Correctamente');
             redirect(base_url().'mantenimiento/croles');
