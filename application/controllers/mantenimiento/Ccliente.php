@@ -16,6 +16,7 @@ class Ccliente extends CI_Controller {
 
 
 public function index(){
+    $idrol = $this->session->userdata("idRol");
     $data = array (
         'clienteindex' => $this->mcliente->mselectcliente(),
         'roles'=> $this->mroles->obtener($idRol)
