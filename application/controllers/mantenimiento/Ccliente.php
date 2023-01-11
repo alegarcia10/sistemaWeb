@@ -7,7 +7,7 @@ class Ccliente extends CI_Controller {
     if(!$this->session->userdata('login')){
         redirect(base_url());
     }
-    //$idrol = $this->session->userdata("idRol");
+    $idrol = $this->session->userdata("idRol");
     $this->load->model('mcliente');
     $this->load->model('mroles');
     $this->load->model('mcombo');
