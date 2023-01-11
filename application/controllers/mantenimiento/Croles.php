@@ -135,6 +135,7 @@ public function cupdate(){
     $check_rol = $this->input->post('rol');
 
      $rol = $this->mroles->obtenerrol($nombre_tipo);
+     
      if($check_cliente=='on'){
         $cliente=1;
       }else{
