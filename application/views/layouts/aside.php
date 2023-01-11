@@ -15,10 +15,12 @@
                      -->
                     <li class="treeview">
                         <a href="#">
+                        <?php if ($roles->cliente =="1" || $roles->tecnico =="1" || $roles->ordenes =="1") { ?>
                             <i class="fa fa-cogs"></i> <span>Menu</span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
+                            <?php } ?>
                         </a>
                         
                        
@@ -35,7 +37,7 @@
                         <?php } ?>
                         </ul>
                     </li>
-                    <?php if ($roles->usuarios =="1"&& $roles->roles =="1") { ?>
+                    <?php if ($roles->usuarios =="1" || $roles->roles =="1") { ?>
                     <li class="treeview">
                         <a href="#">
                         
