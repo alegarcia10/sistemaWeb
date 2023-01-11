@@ -16,7 +16,7 @@ class Croles extends CI_Controller {
 public function index(){
     $idrol = $this->session->userdata("idRol");
     $data = array (
-        'rolesindex' => $this->mtipousuario->mselecttipo(),
+        'rolesindex' => $this->mroles->mselectrolessolo(),
         'roles'=> $this->mroles->obtener($idrol)
     );
     $this->load->view('layouts/header');
