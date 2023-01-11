@@ -43,13 +43,15 @@ public function cadd(){
 
 public function cinsert(){
 
-    $idrol = $this->input->post('txtidrol'); 
+    //$idrol = $this->input->post('txtidrol'); 
     $nombre_tipo = $this->input->post('txtnombre');
     $check_cliente = $this->input->post('cliente');
     $check_tecnico = $this->input->post('tecnico');
     $check_orden = $this->input->post('ordenes');
     $check_usu = $this->input->post('usu');
     $check_rol = $this->input->post('rol');
+
+    $b_rol = $this->mroles->obtenerid($nombre_tipo);
 
     if($check_cliente=='on'){
         $cliente=1;
@@ -77,6 +79,7 @@ public function cinsert(){
         $rol=0;
       }
     
+      if($b_rol==null){
         $data = array(
 
             'idRol' => $idRol,
@@ -97,7 +100,11 @@ public function cinsert(){
             redirect(base_url().'mantenimiento/croles/cadd');
         }
 
-    
+    }else{
+        //REGLA DE VALIDACION
+        $this->session->set_flashdata('error', 'Este Rol ya esta registrado ');
+        redirect(base_url().'mantenimiento/ccliente/cadd');
+      }
 
 }
 
