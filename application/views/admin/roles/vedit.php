@@ -18,6 +18,7 @@
                         <?php endif ; ?>
                         <form action="<?php echo base_url();?>mantenimiento/croles/cupdate" method="POST">
                             <input type="hidden" value="<?php echo $rolesedit->idRol ?>" name="txtidrol" id="txtidrol">
+                            <input type="hidden" value="<?php echo $rolesedit->nombre_tipo ?>" name="txtnombreviejo" id="txtnombreviejo">
                             <div class=" col-sm-12 form-group">
                                 <label for="nombre">Nombre</label>
                                 <input type="text" id="txtnombre" name="txtnombre" maxlength="256" value="<?php echo !empty(form_error('txtnombre'))? set_value('txtnombre') : $rolesedit->nombre_tipo ?>" class= "form-control" required >

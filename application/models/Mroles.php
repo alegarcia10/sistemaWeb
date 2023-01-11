@@ -87,6 +87,12 @@ class Mroles extends CI_Model{
         return $resultado->row();
      }
  
+     public function obtenerroles($roles){
+        $this->db->where('tipousuario', $roles);
+        $resultado = $this->db->get('tipousuario');
+        return $resultado->row();
+     }
+
     function obtener($id){
         $this->db->where("idRol",$id);
         $query = $this->db->get('tipousuario');

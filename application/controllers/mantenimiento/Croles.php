@@ -88,7 +88,8 @@ public function cinsert(){
             'tecnico' => $tecnico,
             'ordenes' => $orden,
             'usuarios' => $usuario,
-            'roles' => $rol
+            'roles' => $rol,
+            'anulado' => 0
 
         );
         $res=$this->mroles->minsertroles($data);
@@ -128,13 +129,14 @@ public function cupdate(){
 
     $idRol = $this->input->post('txtidrol');
     $nombre_tipo = $this->input->post('txtnombre');
+    $nombre = $this->input->post('txtnombreviejo');
     $check_cliente = $this->input->post('cliente');
     $check_tecnico = $this->input->post('tecnico');
     $check_orden = $this->input->post('ordenes');
     $check_usu = $this->input->post('usu');
     $check_rol = $this->input->post('rol');
 
-     $rol = $this->mroles->obtenerrol($nombre_tipo);
+     $rol = $this->mroles->obtenerroles($roles);
 
      if($check_cliente=='on'){
         $cliente=1;
@@ -163,7 +165,7 @@ public function cupdate(){
       }
 
 
-    
+      if(($rol==null) or ($nombre==$roles) ){
 
         $data = array(
             //'idRol' => $idRol,
@@ -172,7 +174,8 @@ public function cupdate(){
             'tecnico' => $tecnico,
             'ordenes' => $orden,
             'usuarios' => $usuario,
-            'roles' => $rol
+            'roles' => $rol,
+            'anulado' => 0
 
         );
 
@@ -185,6 +188,11 @@ public function cupdate(){
             redirect(base_url().'mantenimiento/croles/cedit/'.$idRol);
         }
 
+    }else{
+        //REGLA DE VALIDACION
+        $this->session->set_flashdata('error', "El Rol '$roles' ya esta registrado ");
+        redirect(base_url().'mantenimiento/cusuario/cedit/'.$idRol);
+    }
    
 
         
@@ -194,11 +202,11 @@ public function cupdate(){
 
 public function cdelete($id){
 
-    /*$data=array(
-        'Anulado' => '1'
-    );*/
-    $this->mroles->mupdateroles($id);
-    //redirect(base_url().'mantenimiento/cusuario');
+    $data=array(
+        'anulado' => '1'
+    );
+    $this->mcliente->mupdateroles($id, $data);
+    //redirect(base_url().'mantenimiento/ccliente');
     echo "mantenimiento/croles";
 }
 
