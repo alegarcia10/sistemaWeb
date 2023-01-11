@@ -7,19 +7,21 @@ class Ccliente extends CI_Controller {
     if(!$this->session->userdata('login')){
         redirect(base_url());
     }
-    $nombre = $this->session->userdata("idRol");
+    $idrol = $this->session->userdata("idRol");
     $this->load->model('mcliente');
     $this->load->model('mcombo');
-    var_dump($nombre);
+    //var_dump($nombre);
     }
 
 
 public function index(){
     $data = array (
         'clienteindex' => $this->mcliente->mselectcliente(),
+
     );
+    $roles=$this->mroles->obtener($idRol);
     $this->load->view('layouts/header');
-    $this->load->view('layouts/aside');
+    $this->load->view('layouts/aside',$roles);
     $this->load->view('admin/cliente/vlist', $data);
     $this->load->view('layouts/footer');
 }
@@ -28,8 +30,9 @@ public function index(){
 
 public function cadd(){
 
+    $roles=$this->mroles->obtener($idRol);
     $this->load->view('layouts/header');
-    $this->load->view('layouts/aside');
+    $this->load->view('layouts/aside',$roles);
     $this->load->view('admin/cliente/vadd');
     $this->load->view('layouts/footer');
 }
@@ -37,7 +40,7 @@ public function cadd(){
 
 public function cinsert(){
 
-
+    
      $nombre = $this->input->post('txtnombre');
      $cuit = $this->input->post('txtcuit');
      $prov = $this->input->post('txtprovincia');
@@ -78,9 +81,9 @@ public function cedit($id){
     $data = array(
         'clienteedit' => $this->mcliente->midupdatecliente($id),
     );
-
+    $roles=$this->mroles->obtener($idRol);
     $this->load->view('layouts/header');
-    $this->load->view('layouts/aside');
+    $this->load->view('layouts/aside',$roles);
     $this->load->view('admin/cliente/vedit', $data);
     $this->load->view('layouts/footer');
 }
