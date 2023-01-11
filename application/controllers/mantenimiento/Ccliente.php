@@ -7,7 +7,7 @@ class Ccliente extends CI_Controller {
     if(!$this->session->userdata('login')){
         redirect(base_url());
     }
-    $idrol = $this->session->userdata("idRol");
+    //$idrol = $this->session->userdata("idRol");
     $this->load->model('mcliente');
     $this->load->model('mroles');
     $this->load->model('mcombo');
@@ -16,10 +16,10 @@ class Ccliente extends CI_Controller {
 
 
 public function index(){
-    $idrol = $this->session->userdata("idRol");
+    
     $data = array (
         'clienteindex' => $this->mcliente->mselectcliente(),
-        'roles'=> $this->mroles->obtener($idRol)
+        'roles'=> $this->mroles->obtener($idrol)
     );
     //$roles=$this->mroles->obtener($idRol);
     $this->load->view('layouts/header');
@@ -82,7 +82,7 @@ public function cinsert(){
 public function cedit($id){
     $data = array(
         'clienteedit' => $this->mcliente->midupdatecliente($id),
-        'roles'=>$this->mroles->obtener($idRol)
+        'roles'=>$this->mroles->obtener($idrol)
     );
     //$roles=$this->mroles->obtener($idRol);
     $this->load->view('layouts/header');
