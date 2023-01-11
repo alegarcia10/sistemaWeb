@@ -39,7 +39,7 @@
                                             <a href="<?php echo base_url();?>mantenimiento/croles/cedit/<?php echo $atributos->idRol; ?>" class="btn btn-info">
                                                 <span class="fa fa-pencil"></span>
                                             </a>
-                                            <a href="<?php echo base_url();?>mantenimiento/croles/cdelete/<?php echo $atributos->idRol; ?>" class="btn btn-danger btn-remove deleteUsuario">
+                                            <a href="<?php echo base_url();?>mantenimiento/croles/cdelete/<?php echo $atributos->idRol; ?>" class="btn btn-danger btn-remove deleteRoles">
                                                 <span class="fa fa-remove"></span>
                                             </a>
                                         </div>
