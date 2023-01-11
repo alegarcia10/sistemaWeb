@@ -18,11 +18,11 @@ class Ccliente extends CI_Controller {
 public function index(){
     $data = array (
         'clienteindex' => $this->mcliente->mselectcliente(),
-
+        $roles=$this->mroles->obtener($idRol)
     );
-    $roles=$this->mroles->obtener($idRol);
+    //$roles=$this->mroles->obtener($idRol);
     $this->load->view('layouts/header');
-    $this->load->view('layouts/aside',$roles);
+    $this->load->view('layouts/aside',$data);
     $this->load->view('admin/cliente/vlist', $data);
     $this->load->view('layouts/footer');
 }
@@ -81,10 +81,11 @@ public function cinsert(){
 public function cedit($id){
     $data = array(
         'clienteedit' => $this->mcliente->midupdatecliente($id),
+        $roles=$this->mroles->obtener($idRol)
     );
-    $roles=$this->mroles->obtener($idRol);
+    //$roles=$this->mroles->obtener($idRol);
     $this->load->view('layouts/header');
-    $this->load->view('layouts/aside',$roles);
+    $this->load->view('layouts/aside',$data);
     $this->load->view('admin/cliente/vedit', $data);
     $this->load->view('layouts/footer');
 }
