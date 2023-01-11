@@ -135,7 +135,7 @@ public function cupdate(){
     $check_rol = $this->input->post('rol');
 
      $rol = $this->mroles->obtenerrol($nombre_tipo);
-     
+
      if($check_cliente=='on'){
         $cliente=1;
       }else{
@@ -163,7 +163,7 @@ public function cupdate(){
       }
 
 
-    if($rol==null) {
+    
 
         $data = array(
             //'idRol' => $idRol,
@@ -185,13 +185,7 @@ public function cupdate(){
             redirect(base_url().'mantenimiento/croles/cedit/'.$idRol);
         }
 
-    }else{
-        //REGLA DE VALIDACION
-        $this->session->set_flashdata('error', "El Rol '$nombre_tipo' ya está registrado ");
-        redirect(base_url().'mantenimiento/croles/cedit/'.$idRol);
-    }
-
-
+   
 
         
 
