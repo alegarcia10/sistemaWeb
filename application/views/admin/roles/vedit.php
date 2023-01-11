@@ -20,7 +20,7 @@
                             <input type="hidden" value="<?php echo $rolesedit->idRol ?>" name="txtidusuario" id="txtidusuario">
                             <div class=" col-sm-12 form-group">
                                 <label for="nombre">Nombre</label>
-                                <input type="text" id="txtnombre" name="txtnombre" class="form-control" value="<?php echo set_value('txtnombre') ?>"   required>
+                                <input type="text" id="txtnombre" name="txtnombre" maxlength="256" value="<?php echo !empty(form_error('txtnombre'))? set_value('txtnombre') : $rolesedit->nombre_tipo ?>" class= "form-control" required >
                             </div>    
                             <div class="col-sm-4  form-group">
                                 <label for="rol">Privilegios</label>
@@ -30,13 +30,13 @@
                                 <span class="checkmark"></span>
                             </div>
                             <div class="col-md-4 form-group">
-                                <label>Cliente</label><br>
-                                <input class="chk_input" type="checkbox" id="cliente" name="cliente" data-width="20" data-height="20" <?=(!empty($rolesedit->cliente)&&$rolesedit->cliente=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($rolesedit->cliente))?'checked':''?> />
+                                <label>Tecnico</label><br>
+                                <input class="chk_input" type="checkbox" id="tecnico" name="tecnico" data-width="20" data-height="20" <?=(!empty($rolesedit->tecnico)&&$rolesedit->tecnico=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($rolesedit->tecnico))?'checked':''?> />
                                 <span class="checkmark"></span>
                             </div>
                             <div class="col-md-4 form-group">
-                                <label>Cliente</label><br>
-                                <input class="chk_input" type="checkbox" id="cliente" name="cliente" data-width="20" data-height="20" <?=(!empty($rolesedit->cliente)&&$rolesedit->cliente=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($rolesedit->cliente))?'checked':''?> />
+                                <label>Ordenes</label><br>
+                                <input class="chk_input" type="checkbox" id="ordenes" name="ordenes" data-width="20" data-height="20" <?=(!empty($rolesedit->ordenes)&&$rolesedit->ordenes=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($rolesedit->ordenes))?'checked':''?> />
                                 <span class="checkmark"></span>
                             </div>
                             </div>

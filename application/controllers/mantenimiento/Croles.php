@@ -127,7 +127,7 @@ public function cedit($id){
 public function cupdate(){
 
     //$idRol = $this->input->post('txtidrol');
-    $nombre_tipo = $this->input->post('rol');
+    $nombre_tipo = $this->input->post('txtnombre');
 
      $rol = $this->mroles->obtenerrol($nombre_tipo);
      if($check_cliente=='on'){
@@ -157,7 +157,7 @@ public function cupdate(){
       }
 
 
-    if(($rol==null) or ($txtnombreviejo==$roles) ){
+    if($rol==null) {
 
         $data = array(
             //'idRol' => $idRol,
@@ -181,7 +181,7 @@ public function cupdate(){
 
     }else{
         //REGLA DE VALIDACION
-        $this->session->set_flashdata('error', "El Rol '$roles' ya está registrado ");
+        $this->session->set_flashdata('error', "El Rol '$nombre_tipo' ya está registrado ");
         redirect(base_url().'mantenimiento/croles/cedit/'.$idRol);
     }
 
