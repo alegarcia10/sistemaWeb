@@ -27,27 +27,27 @@
                                 </div>
                                 <div class="col-md-12 form-group">
                                     <label>Cliente</label>
-                                    <input class="chk_input" type="checkbox" id="cliente" name="habilitado" data-width="20" data-height="20" <?=(!empty($rolesindex->cliente)&&$rolesindex->cliente=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($rolesindex->cliente))?'checked':''?> />
+                                    <input class="chk_input" type="checkbox" id="cliente" name="habilitado" data-width="20" data-height="20" />
                                     <span class="checkmark"></span>
                                 </div>
                                 <div class="col-md-12 form-group">
                                 <label>Técnicos</label>
-                                <input class="chk_input" type="checkbox" id="tecnico" name="habilitado" data-width="20" data-height="20" <?=(!empty($rolesindex->tecnico)&&$rolesindex->tecnico=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($rolesindex->tecnico))?'checked':''?> />
+                                <input class="chk_input" type="checkbox" id="tecnico" name="habilitado" data-width="20" data-height="20" />
                                 <span class="checkmark"></span>
                             </div>
                             <div class="col-md-12 form-group">
                                 <label>Ordenes</label>
-                                <input class="chk_input" type="checkbox" id="orden" name="habilitado" data-width="20" data-height="20" <?=(!empty($rolesindex->ordenes)&&$rolesindex->ordenes=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($rolesindex->ordenes))?'checked':''?> />
+                                <input class="chk_input" type="checkbox" id="orden" name="habilitado" data-width="20" data-height="20" />
                                 <span class="checkmark"></span>
                             </div>
                             <div class="col-md-2 form-group">
                                 <label>Usuarios</label>
-                                <input class="chk_input" type="checkbox" id="usu" name="habilitado" data-width="20" data-height="20" <?=(!empty($rolesindex->usuarios)&&$rolesindex->usuarios=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($rolesindex->usuarios))?'checked':''?> />
+                                <input class="chk_input" type="checkbox" id="usu" name="habilitado" data-width="20" data-height="20" />
                                 <span class="checkmark"></span>
                             </div>
                             <div class="col-md-12 form-group">
                                 <label>Roles</label>
-                                <input class="chk_input" type="checkbox" id="rol" name="habilitado" data-width="20" data-height="20" <?=(!empty($rolesindex->roles)&&$rolesindex->roles=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($rolesindex->roles))?'checked':''?> />
+                                <input class="chk_input" type="checkbox" id="rol" name="habilitado" data-width="20" data-height="20" />
                                 <span class="checkmark"></span>
                             </div>
                             <div class="col-sm-12 form-group">
