@@ -35,7 +35,7 @@ public function clogeo(){
         echo $this->session->set_userdata($data);
        // redirect(base_url().'cdashboard',$data);
         
-       var_dump("pasa x aca");
+       
         $this->load->view('layouts/header');
 		$this->load->view('layouts/aside',$data);
 		$this->load->view('admin/dashboard');
