@@ -32,9 +32,12 @@ public function index(){
 
 public function cadd(){
     $idrol = $this->session->userdata("idRol");
-    $roles=$this->mroles->obtener($idrol);
+    $data = array (
+        'roles'=>$this->mroles->obtener($idrol)
+    );
+    
     $this->load->view('layouts/header');
-    $this->load->view('layouts/aside',$roles);
+    $this->load->view('layouts/aside',$data);
     $this->load->view('admin/cliente/vadd');
     $this->load->view('layouts/footer');
 }
@@ -80,6 +83,7 @@ public function cinsert(){
 
 
 public function cedit($id){
+    $idrol = $this->session->userdata("idRol");
     $data = array(
         'clienteedit' => $this->mcliente->midupdatecliente($id),
         'roles'=>$this->mroles->obtener($idrol)
