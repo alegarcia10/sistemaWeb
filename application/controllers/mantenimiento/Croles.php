@@ -14,8 +14,10 @@ class Croles extends CI_Controller {
 
 
 public function index(){
+    $idrol = $this->session->userdata("idRol");
     $data = array (
         'rolesindex' => $this->mtipousuario->mselecttipo(),
+        'roles'=> $this->mroles->obtener($idrol)
     );
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside');
@@ -25,11 +27,15 @@ public function index(){
 
 
 public function cadd(){
-
+    $idrol = $this->session->userdata("idRol");
     $data['roles_select'] = $this->mroles->roles_listar_select2();
 
+    $datos = array(
+        'roles'=> $this->mroles->obtener($idrol)
+    );
+
     $this->load->view('layouts/header');
-    $this->load->view('layouts/aside');
+    $this->load->view('layouts/aside',$datos);
     $this->load->view('admin/roles/vadd',$data);
     $this->load->view('layouts/footer');
 }
@@ -70,14 +76,16 @@ public function cinsert(){
 
 
 public function cedit($id){
+    $idrol = $this->session->userdata("idRol");
     $data = array(
         'rolesedit' => $this->mroles->midupdateroles($id),
+        'roles'=> $this->mroles->obtener($idrol)
     );
     //$data['usuario_select'] = $this->musuario->usuario_listar_select2();
     $data['model'] = $this->mroles->obtener($data['rolesedit']->idRol);
 
     $this->load->view('layouts/header');
-    $this->load->view('layouts/aside');
+    $this->load->view('layouts/aside',$data);
     $this->load->view('admin/roles/vedit', $data);
     $this->load->view('layouts/footer');
 }

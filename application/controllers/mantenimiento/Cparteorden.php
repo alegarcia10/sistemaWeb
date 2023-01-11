@@ -7,23 +7,26 @@ class Cparteorden extends CI_Controller {
         redirect(base_url());
     }
     $this->load->model('mparteorden');
+    $this->load->model('mroles');
     $this->load->model('morden');
     $this->load->model('mcombo');
     }
 
 
 public function listar($id){
-
+    $idrol = $this->session->userdata("idRol");
     $data = array (
         'parteordenindex' => $this->mparteorden->mselectparteorden($id),
-        'ordenindex' => $this->mparteorden->mselectinfoparteorden($id)
+        'ordenindex' => $this->mparteorden->mselectinfoparteorden($id),
+        'roles'=> $this->mroles->obtener($idrol)
+
     );
 
     $data['Gastos']=$this->morden->consultaGatosOrden($id);
 
 
     $this->load->view('layouts/header');
-    $this->load->view('layouts/aside');
+    $this->load->view('layouts/aside',$data);
     $this->load->view('admin/parteorden/vlist', $data);
     $this->load->view('layouts/footer');
 }
@@ -35,17 +38,16 @@ public function cadd($id){
   log_message('error',sprintf(" id que lelga es $id"));
 
 
-
+  $idrol = $this->session->userdata("idRol");
     $data = array(
 
         'ordenindex' => $this->morden->mselectinfoorden($id),
-        'tipo_tecnico_select' => $this->mparteorden->tecnico_listar_select()
-
-
+        'tipo_tecnico_select' => $this->mparteorden->tecnico_listar_select(),
+        'roles'=> $this->mroles->obtener($idrol)
     );
 
     $this->load->view('layouts/header');
-    $this->load->view('layouts/aside');
+    $this->load->view('layouts/aside',$data);
     $this->load->view('admin/parteorden/vadd', $data);
     $this->load->view('layouts/footer');
 
@@ -80,7 +82,7 @@ public function cinsert(){
 
 
 public function cedit($id){
-
+  $idrol = $this->session->userdata("idRol");
   $var=substr($id, 0, 1);
   $id= str_replace('@', '',$id);
   $id= str_replace('_', '',$id);
@@ -88,9 +90,10 @@ public function cedit($id){
         if ($var=='@') {
           $data = array(
               'materialedit' => $this->mparteorden->midupdatematerial($id),
+              'roles'=> $this->mroles->obtener($idrol)
           );
           $this->load->view('layouts/header');
-          $this->load->view('layouts/aside');
+          $this->load->view('layouts/aside',$data);
           $this->load->view('admin/material/vedit', $data);
           $this->load->view('layouts/footer');
       }elseif($var=='_'){
@@ -111,6 +114,7 @@ public function cedit($id){
             'parteordenedit' => $this->mparteorden->midupdateparteorden($id),
             'tipo_tecnico_select' => $this->mparteorden->tecnico_listar_select(),
             'tecnico_select' => $this->mparteorden->mselectTecnicoIdParte($id),
+            'roles'=> $this->mroles->obtener($idrol)
         );
 
 
@@ -143,7 +147,7 @@ public function cedit($id){
         $data['Gastos'] = $gastosCompletos;
 
         $this->load->view('layouts/header');
-        $this->load->view('layouts/aside');
+        $this->load->view('layouts/aside',$data);
         $this->load->view('admin/parteorden/vedit', $data);
         $this->load->view('layouts/footer');
       }
@@ -215,12 +219,14 @@ public function addMaterial(){
 
 
 public function ceditMat($id){
+    $idrol = $this->session->userdata("idRol");
     $data = array(
         'materialedit' => $this->mparteorden->midupdatematerial($id),
+        'roles'=> $this->mroles->obtener($idrol)
     );
 
     $this->load->view('layouts/header');
-    $this->load->view('layouts/aside');
+    $this->load->view('layouts/aside',$data);
     $this->load->view('admin/material/vedit', $data);
     $this->load->view('layouts/footer');
 }

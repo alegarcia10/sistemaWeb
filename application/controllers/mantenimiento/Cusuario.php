@@ -15,11 +15,12 @@ class Cusuario extends CI_Controller {
 
 public function index(){
     $data = array (
-        'usuarioindex' => $this->musuario->mselectusuario()
+        'usuarioindex' => $this->musuario->mselectusuario(),
+        'roles'=> $this->mroles->obtener($idrol)
         
     );
     $this->load->view('layouts/header');
-    $this->load->view('layouts/aside');
+    $this->load->view('layouts/aside',$data);
     $this->load->view('admin/usuario/vlist', $data);
     $this->load->view('layouts/footer');
 }
@@ -28,9 +29,12 @@ public function index(){
 public function cadd(){
 
     $data['usuario_select']  = $this->musuario->usuario_listar_select();
+    $datos = array(
+        'roles'=> $this->mroles->obtener($idrol)
+    );
 
     $this->load->view('layouts/header');
-    $this->load->view('layouts/aside');
+    $this->load->view('layouts/aside',$data);
     $this->load->view('admin/usuario/vadd',$data);
     $this->load->view('layouts/footer');
 }
@@ -78,12 +82,13 @@ public function cinsert(){
 public function cedit($id){
     $data = array(
         'usuarioedit' => $this->musuario->midupdateusuario($id),
+        'roles'=> $this->mroles->obtener($idrol)
     );
     $data['usuario_select'] = $this->musuario->usuario_listar_select2();
     $data['model'] = $this->musuario->obtener($data['usuarioedit']->idRol);
 
     $this->load->view('layouts/header');
-    $this->load->view('layouts/aside');
+    $this->load->view('layouts/aside',$data);
     $this->load->view('admin/usuario/vedit', $data);
     $this->load->view('layouts/footer');
 }
