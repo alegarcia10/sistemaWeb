@@ -29,7 +29,7 @@ public function index(){
 
 public function cadd(){
     $idrol = $this->session->userdata("idRol");
-    $data['usuario_select']  = $this->musuario->usuario_listar_select();
+    $data['usuario_select']  = $this->musuario->usuario_listar_select2();
     $datos = array(
         'roles'=> $this->mroles->obtener($idrol)
     );
