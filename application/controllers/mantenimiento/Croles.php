@@ -43,17 +43,50 @@ public function cadd(){
 
 public function cinsert(){
 
-     $nombre_tipo = $this->input->post('rol');
-     
+    $idrol = $this->input->post('txtidrol'); 
+    $nombre_tipo = $this->input->post('txtnombre');
+    $check_cliente = $this->input->post('cliente');
+    $check_tecnico = $this->input->post('tecnico');
+    $check_orden = $this->input->post('ordenes');
+    $check_usu = $this->input->post('usu');
+    $check_rol = $this->input->post('rol');
 
-     $rol = $this->mtipousuario->obtenerroles($roles);
-
-    if($rol==null){
-
+    if($check_cliente=='on'){
+        $cliente=1;
+      }else{
+        $cliente=0;
+      }
+      if($check_tecnico=='on'){
+        $tecnico=1;
+      }else{
+        $tecnico=0;
+      }
+      if($check_orden=='on'){
+        $orden=1;
+      }else{
+        $orden=0;
+      }
+      if($check_usu=='on'){
+        $usuario=1;
+      }else{
+        $usuario=0;
+      }
+      if($check_rol=='on'){
+        $rol=1;
+      }else{
+        $rol=0;
+      }
+    
         $data = array(
 
             'idRol' => $idRol,
-            'nombre_tipo' => $nombre_tipo
+            'nombre_tipo' => $nombre_tipo,
+            'cliente' => $cliente,
+            'tecnico' => $tecnico,
+            'ordenes' => $orden,
+            'usu' => $usuario,
+            'rol' => $rol
+
         );
         $res=$this->mroles->minsertroles($data);
         if($res){
@@ -63,12 +96,6 @@ public function cinsert(){
             $this->session->set_flashdata('error', 'No se Guardo registro');
             redirect(base_url().'mantenimiento/croles/cadd');
         }
-
-    }else{
-        //REGLA DE VALIDACION
-        $this->session->set_flashdata('error', "El Rol '$roles' ya está registrado ");
-        redirect(base_url().'mantenimiento/croles/cadd');
-    }
 
     
 
