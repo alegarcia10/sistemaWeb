@@ -103,7 +103,7 @@ public function cinsert(){
     }else{
         //REGLA DE VALIDACION
         $this->session->set_flashdata('error', 'Este Rol ya esta registrado ');
-        redirect(base_url().'mantenimiento/ccliente/cadd');
+        redirect(base_url().'mantenimiento/croles/cadd');
       }
 
 }
