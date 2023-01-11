@@ -27,8 +27,12 @@
                         <?php if ($roles->cliente =="1") { ?>
                             <li><a href="<?php echo base_url(); ?>mantenimiento/ccliente"> <i class="fa fa-circle-o"></i> Clientes</a></li>
                             <?php } ?>
+                        <?php if ($roles->tecnico =="1") { ?>
                             <li><a href="<?php echo base_url(); ?>mantenimiento/ctecnico"><i class="fa fa-circle-o"></i> Técnicos</a></li>
+                        <?php } ?>
+                        <?php if ($roles->ordenes =="1") { ?>
                             <li><a href="<?php echo base_url(); ?>mantenimiento/corden"><i class="fa fa-circle-o"></i> Órdenes</a></li>
+                        <?php } ?>
                         </ul>
                     </li>
                     <li class="treeview">
@@ -39,8 +43,12 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
+                        <?php if ($roles->usuarios =="1") { ?>
                             <li><a href="<?php echo base_url(); ?>mantenimiento/cusuario"><i class="fa fa-circle-o"></i>Usuarios</a></li>
+                        <?php } ?>
+                        <?php if ($roles->roles =="1") { ?>    
                             <li><a href="<?php echo base_url(); ?>mantenimiento/croles"><i class="fa fa-circle-o"></i>Roles</a></li>
+                        <?php } ?>
                         </ul>
                     </li>
                 </ul>
