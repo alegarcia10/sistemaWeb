@@ -16,7 +16,7 @@ class Ccliente extends CI_Controller {
 
 
 public function index(){
-    
+    $idrol = $this->session->userdata("idRol");
     $data = array (
         'clienteindex' => $this->mcliente->mselectcliente(),
         'roles'=> $this->mroles->obtener($idrol)
@@ -32,7 +32,7 @@ public function index(){
 
 public function cadd(){
 
-    //$roles=$this->mroles->obtener($idRol);
+    $roles=$this->mroles->obtener($idrol);
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside',$roles);
     $this->load->view('admin/cliente/vadd');
