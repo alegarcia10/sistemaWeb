@@ -29,14 +29,15 @@ public function index(){
 
 public function cadd(){
     $idrol = $this->session->userdata("idRol");
-    $data['usuario_select']  = $this->musuario->usuario_listar_select2();
+    //$data['usuario_select']  = $this->musuario->usuario_listar_select2();
     $datos = array(
-        'roles'=> $this->mroles->obtener($idrol)
+        'roles'=> $this->mroles->obtener($idrol),
+        'usuario_select' => $this->musuario->usuario_listar_select2()
     );
 
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside',$datos);
-    $this->load->view('admin/usuario/vadd',$data);
+    $this->load->view('admin/usuario/vadd',$datos);
     $this->load->view('layouts/footer');
 }
 
