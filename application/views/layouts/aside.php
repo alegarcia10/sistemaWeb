@@ -37,10 +37,12 @@
                     </li>
                     <li class="treeview">
                         <a href="#">
+                        <?php if ($roles->usuarios =="0"&& $roles->roles =="0") { ?>
                             <i class="fa fa-user-circle-o"></i> <span>Administrador</span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
+                            <?php } ?>
                         </a>
                         <ul class="treeview-menu">
                         <?php if ($roles->usuarios =="1") { ?>
