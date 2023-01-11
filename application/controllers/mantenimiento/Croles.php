@@ -20,7 +20,7 @@ public function index(){
         'roles'=> $this->mroles->obtener($idrol)
     );
     $this->load->view('layouts/header');
-    $this->load->view('layouts/aside');
+    $this->load->view('layouts/aside',$data);
     $this->load->view('admin/roles/vlist', $data);
     $this->load->view('layouts/footer');
 }
