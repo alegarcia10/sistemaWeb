@@ -82,13 +82,13 @@ public function cinsert(){
       if($b_rol==null){
         $data = array(
 
-            'idRol' => $idRol,
+            //'idRol' => $idRol,
             'nombre_tipo' => $nombre_tipo,
             'cliente' => $cliente,
             'tecnico' => $tecnico,
             'ordenes' => $orden,
-            'usu' => $usuario,
-            'rol' => $rol
+            'usuarios' => $usuario,
+            'roles' => $rol
 
         );
         $res=$this->mroles->minsertroles($data);
