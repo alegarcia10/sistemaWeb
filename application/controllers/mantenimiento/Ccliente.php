@@ -31,7 +31,7 @@ public function index(){
 
 
 public function cadd(){
-
+    $idrol = $this->session->userdata("idRol");
     $roles=$this->mroles->obtener($idrol);
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside',$roles);
