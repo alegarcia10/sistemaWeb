@@ -14,6 +14,7 @@ class Cusuario extends CI_Controller {
 
 
 public function index(){
+    $idrol = $this->session->userdata("idRol");
     $data = array (
         'usuarioindex' => $this->musuario->mselectusuario(),
         'roles'=> $this->mroles->obtener($idrol)
@@ -27,7 +28,7 @@ public function index(){
 
 
 public function cadd(){
-
+    $idrol = $this->session->userdata("idRol");
     $data['usuario_select']  = $this->musuario->usuario_listar_select();
     $datos = array(
         'roles'=> $this->mroles->obtener($idrol)
@@ -80,6 +81,7 @@ public function cinsert(){
 
 
 public function cedit($id){
+    $idrol = $this->session->userdata("idRol");
     $data = array(
         'usuarioedit' => $this->musuario->midupdateusuario($id),
         'roles'=> $this->mroles->obtener($idrol)
