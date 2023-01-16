@@ -37,7 +37,7 @@
                             </div>
                             <div class="col-md-12 form-group">
                                 <label>Ordenes</label>
-                                <input class="chk_input" type="checkbox" id="orden" name="orden" data-width="20" data-height="20" />
+                                <input class="chk_input" type="checkbox" id="ordenes" name="ordenes" data-width="20" data-height="20" />
                                 <span class="checkmark"></span>
                             </div>
                             <div class="col-md-2 form-group">
