@@ -56,7 +56,9 @@ function sin_buscador_priv($opciones, $opcionSeleccionada, $nombreSelect, $tipoO
     <select name="<?= $nombreSelect; ?>" id="<?= $nombreSelect; ?>" class="form-control" <?if ($camposAuxiliares != '') echo $camposAuxiliares;?> ><!--input multiselect filtro-select-->
         <?if ($tipoOperacion==''):?>
             <option value="">Seleccione una opción</option>
-            <?foreach ($opciones as $row):?>
+            
+            <? var_dump($opciones);
+            foreach ($opciones as $row):?>
                 <option value="<?= strval($row->idRol); ?>">
                     <?= $row->NOMBRE ?>
                 </option>
