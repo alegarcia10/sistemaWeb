@@ -95,8 +95,8 @@ public function cinsert(){
             
 
         );
-        var_dump($data);
-        die;
+        //var_dump($data);
+        //die;
         $res=$this->mroles->minsertroles($data);
         if($res){
             $this->session->set_flashdata('correcto', 'Se guardo Correctamente');

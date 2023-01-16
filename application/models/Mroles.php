@@ -37,7 +37,8 @@ class Mroles extends CI_Model{
     }
     //INSERTAR usuario
     public function minsertroles($data){
-        
+        var_dump($data);
+        die;
         return  $this->db->insert('tipousuario',$data);
     }
 
