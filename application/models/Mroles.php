@@ -19,10 +19,11 @@ class Mroles extends CI_Model{
     public function mselectrolessolo(){
         //$this->db->where('Anulado =','0');
         $resultado =$query=$this->db->query("SELECT t.idRol, t.nombre_tipo, t.cliente, t.tecnico, t.ordenes, t.usuarios, t.roles
-        FROM tipousuario t");
+        FROM tipousuario t 
+        WHERE anulado = 0");
         return $resultado->result();
     }
-
+    //no se usa
     public function mselectroles(){
         //$this->db->where('Anulado =','0');
         $resultado =$query=$this->db->query("SELECT t.nombre_tipo, t.idRol, u.idUsuario, u.nombre, u.email
@@ -37,8 +38,6 @@ class Mroles extends CI_Model{
     }
     //INSERTAR usuario
     public function minsertroles($data){
-        //var_dump($data);
-        //die;
         return  $this->db->insert('tipousuario',$data);
     }
 
@@ -56,7 +55,7 @@ class Mroles extends CI_Model{
      }
      //Traer usuario
     public function mselectinforoles($id){
-        $this->db->where('idRol =',"$id");
+        $this->db->where('idRol', $id);
         $resultado =$this->db->get('tipousuario');
         return $resultado->row();
     }
