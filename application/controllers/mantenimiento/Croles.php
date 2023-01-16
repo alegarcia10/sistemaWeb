@@ -170,7 +170,7 @@ public function cupdate(){
       }
 
 
-      if(($nrol==null) ){
+      if(($nrol==null) or ($nombre==$nombre_tipo) ){
 
         $data = array(
             //'idRol' => $idRol,
