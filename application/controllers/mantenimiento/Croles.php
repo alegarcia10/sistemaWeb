@@ -51,6 +51,8 @@ public function cinsert(){
     $check_usu = $this->input->post('usu');
     $check_rol = $this->input->post('rol');
 
+    var_dump($check_cliente);
+    die;
     $b_rol = $this->mroles->obtenerrol($nombre_tipo);
 
     if($check_cliente=='on'){
