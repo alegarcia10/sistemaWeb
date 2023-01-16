@@ -196,7 +196,7 @@ public function cupdate(){
     }else{
         //REGLA DE VALIDACION
         $this->session->set_flashdata('error', "El Rol '$nombre_tipo' ya esta registrado ");
-        redirect(base_url().'mantenimiento/cusuario/cedit/'.$idRol);
+        redirect(base_url().'mantenimiento/croles/cedit/'.$idRol);
     }
    
 
