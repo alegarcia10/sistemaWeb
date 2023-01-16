@@ -51,8 +51,7 @@ public function cinsert(){
     $check_usu = $this->input->post('usu');
     $check_rol = $this->input->post('rol');
 
-    var_dump($check_cliente);
-    die;
+   
     $b_rol = $this->mroles->obtenerrol($nombre_tipo);
 
     if($check_cliente=='on'){
@@ -81,6 +80,7 @@ public function cinsert(){
         $rol=0;
       }
     
+
       if($b_rol==null){
         $data = array(
 
@@ -92,8 +92,11 @@ public function cinsert(){
             'usuarios' => $usuario,
             'roles' => $rol,
             'anulado' => 0
+            
 
         );
+        var_dump($data);
+        die;
         $res=$this->mroles->minsertroles($data);
         if($res){
             $this->session->set_flashdata('correcto', 'Se guardo Correctamente');
