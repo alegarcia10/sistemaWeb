@@ -30,7 +30,7 @@
 
                             <div class="col-sm-4  form-group">
                                 <label for="usuario">Privilegios</label>
-                                <? $this->select_items->sin_buscador2($usuario_select,(!empty($model->idRol))
+                                <? $this->select_items->sin_buscador_priv($usuario_select,(!empty($model->idRol))
                                ? $model->idRol : '',	'usuario','1',(!empty($consultar)) ? "disabled ":'required');?>
                             </div>
                             <div class="col-sm-4  form-group">
