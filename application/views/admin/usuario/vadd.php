@@ -11,7 +11,7 @@
                 <div class="row">
                     <div class="col-md-12">
                     <div class="row">
-                        <?php if ($this->session->flashdata('error')):?>
+                        <?php var_dump($usuario_select);  if ($this->session->flashdata('error')):?>
                             <div class="alert alert-danger">
                                 <p><?php echo $this->session->flashdata('error')?></p>
                             </div>
@@ -27,7 +27,7 @@
                             </div>
                             <div class="col-sm-4 form-group">
                                 <label for="usuario_select">Privilegios</label>
-                                <?var_dump($usuario_select); $this->select_items->sin_buscador_priv($usuario_select, '','usuario_select','1', 'required');?>
+                                <? $this->select_items->sin_buscador_priv($usuario_select, '','usuario_select','1', 'required');?>
                             </div>
                             <div class="col-sm-4 form-group">
                                 <label for="Contraseña">Contraseña</label>
