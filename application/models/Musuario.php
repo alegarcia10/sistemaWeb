@@ -6,6 +6,7 @@ class Musuario extends CI_Model{
 
         $this->db->where('nombre',$user);
         $this->db->where('pass',$pass);
+        $this->db->where('anulado',0);
         $resultado =$this->db->get('usuarios');
         if($resultado->num_rows()>0){
             return $resultado->row();
