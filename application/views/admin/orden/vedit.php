@@ -37,7 +37,7 @@
                             </div>
                             <div class="col-md-5 form-group">
                               <label for="cliente">Cliente&nbsp;&nbsp; (*)</label>
-                							<? var_dump($cliente_select); $this->select_items->sin_buscador2($cliente_select,(!empty($model->IdCliente))
+                							<? $this->select_items->sin_buscador2($cliente_select,(!empty($model->IdCliente))
                                ? $model->IdCliente : '',	'cliente','1',(!empty($consultar)) ? "disabled ":'required');?>
                 							<input id="cliente_hidden" name="cliente_hidden" type="hidden" >
                 						</div>
