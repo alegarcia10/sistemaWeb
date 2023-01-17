@@ -87,7 +87,7 @@ public function cedit($id){
         'usuarioedit' => $this->musuario->midupdateusuario($id),
         'roles'=> $this->mroles->obtener($idrol)
     );
-    $data['usuario'] = $this->mroles->mselectrolessolo();
+    $data['usuario'] = $this->musuario->usuario_listar_select();
     $data['model'] = $this->musuario->obtener($data['usuarioedit']->idRol);
 
     $this->load->view('layouts/header');
