@@ -49,7 +49,7 @@ public function cinsert(){
      $idRol = $this->input->post('usuario_select');
      $contraseña = $this->input->post('txtContraseña');
 
-     $usu = $this->musuario->obtenerusuario($usuario);
+     $usu = $this->musuario->obtenerusuario($nombre);
 
     if($usu==null){
 
@@ -72,7 +72,7 @@ public function cinsert(){
 
     }else{
         //REGLA DE VALIDACION
-        $this->session->set_flashdata('error', "El Usuario '$usuario' ya esta registrado ");
+        $this->session->set_flashdata('error', "El Usuario '$nombre' ya esta registrado ");
         redirect(base_url().'mantenimiento/cusuario/cadd');
     }
 
