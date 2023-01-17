@@ -101,7 +101,9 @@
                                           <td width="15%"><?php echo $atributos->Nombre; ?></td>
                                           <td width="20%" >
                                                 <div class="btn-group">
-
+                                                    <a href="<?php echo base_url(); ?>mantenimiento/cparteorden/listar/<?php echo $atributos->IdOrden; ?>" class="btn btn-warning" title="Tareas">
+                                                        <span class="fa fa-eye"></span>
+                                                    </a>
                                                     <a href="<?php echo base_url(); ?>mantenimiento/corden/cedit/<?php echo $atributos->IdOrden; ?>" class="btn btn-info" title="Modificar">
                                                         <span class="fa fa-pencil"></span>
                                                     </a>
