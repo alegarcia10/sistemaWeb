@@ -57,7 +57,7 @@ function sin_buscador_priv($opciones, $opcionSeleccionada, $nombreSelect, $tipoO
         <?if ($tipoOperacion==''):?>
             <option value="">Seleccione una opción</option>
             
-            <? var_dump($opciones);
+            <?
             foreach ($opciones as $row):?>
                 <option value="<?= strval($row->idRol); ?>">
                     <?= $row->NOMBRE ?>
@@ -67,7 +67,6 @@ function sin_buscador_priv($opciones, $opcionSeleccionada, $nombreSelect, $tipoO
             <option value=""></option>
             <?
             $x=999;
-    
             foreach ($opciones as $row):?>
             <option value="<?= strval($row->idRol) ?>" <?if (strval($opcionSeleccionada) == strval($row->ID)) echo "selected"; ?> >
                 <?= $row->NOMBRE;

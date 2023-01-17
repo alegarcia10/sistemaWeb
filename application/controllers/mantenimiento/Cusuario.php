@@ -32,7 +32,7 @@ public function cadd(){
     //$data['usuario_select']  = $this->musuario->usuario_listar_select2();
     $datos = array(
         'roles'=> $this->mroles->obtener($idrol),
-        'usuario_select' => $this->musuario->usuario_listar_select2()
+        'usuario_select' => $this->mroles->mselectrolessolo()
     );
 
     $this->load->view('layouts/header');
