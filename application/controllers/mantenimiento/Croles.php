@@ -210,7 +210,7 @@ public function cdelete($id){
     $data=array(
         'anulado' => '1'
     );
-    $this->mcliente->mupdateroles($id, $data);
+    $this->mroles->mupdateroles($id, $data);
     //redirect(base_url().'mantenimiento/ccliente');
     echo "mantenimiento/croles";
 }
