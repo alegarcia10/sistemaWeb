@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <section class="content-header">
         <h1>
-        Órden
+        Orden
             <small>Editar</small>
         </h1>
     </section>
