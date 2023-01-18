@@ -52,7 +52,7 @@
                                                     { echo 'Pendiente';}elseif($atributos->Estado == 1)
                                                     { echo 'Recibida';}elseif($atributos->Estado == 2)
                                                     { echo 'En Curso';}elseif($atributos->Estado == 3)
-                                                    { echo 'Finalizada';}else{ echo '-';} ; ?></td>
+                                                    { echo 'Finalizada';}else{ echo 'No tiene tareas';} ; ?></td>
                                             <td width="20%" >
                                                 <div class="btn-group">
                                                   <a href="<?php echo base_url(); ?>mantenimiento/cparteorden/listar/<?php echo $atributos->IdOrden; ?>" class="btn btn-warning" title="Tareas">
