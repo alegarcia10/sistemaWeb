@@ -95,7 +95,7 @@ class Morden extends CI_Model{
   	}
     function consultarEstado($id){//
       $query=$this->db->query("SELECT * FROM parteorden WHERE IdOrden=$id and 
-      FechaFin  = (SELECT MAX(FechaFin) FROM parteorden WHERE IdOrden=$id)" ) ;
+      IdParte  = (SELECT MAX(IdParte) FROM parteorden WHERE IdOrden=$id)" ) ;
     return $query->row();
   	}
 }
