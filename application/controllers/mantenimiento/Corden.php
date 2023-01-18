@@ -16,8 +16,30 @@ class Corden extends CI_Controller {
 
 public function index(){
     $idrol = $this->session->userdata("idRol");
+    $ordenes= $this->morden->mselectorden(); 
+    
+    foreach ($ordenes as $orden ) {
+        $id=$orden->IdOrden;
+        $porden=$this->morden->consultarEstado($id);
+
+       
+        if($porden != null){
+            $completa=$porden->Completa;
+            $estado=$porden->Estado;
+
+            $orden->Completa=$completa;
+            $orden->Estado=$estado;
+
+            }else{
+               
+                $orden->Completa='0';
+                $orden->Estado='4';
+            }
+
+
+   }
     $data = array (
-        'ordenindex' => $this->morden->mselectorden(),
+        'ordenindex' => $ordenes,
         'ordencompletas' => $this->morden->mselectordencompletas(),
         'roles'=> $this->mroles->obtener($idrol)
     );
