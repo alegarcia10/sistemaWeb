@@ -33,7 +33,7 @@
                                     <th>Gastos</th>
                                     <th>Monto a Facturar</th>
                                     <th>Cliente</th>
-                                    <th>Estado</th>
+                                    <th>Estado Tarea</th>
                                     <th >Operaciones</th>
                                 </tr>
                             </thead>
