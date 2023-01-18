@@ -28,21 +28,21 @@
                             </div>
                             <div class="col-sm-2 form-group">
                                 <label>Cliente</label>
-                                <div class="col-sm-1 form-group">
+                                <div class="col-sm-2 form-group">
                                 <input class="chk_input" type="checkbox" id="cliente" name="cliente" data-width="20" data-height="20" <?=(!empty($rolesedit->cliente)&&$rolesedit->cliente=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($rolesedit->cliente))?'checked':''?> />
                                 <span class="checkmark"></span>
                                 </div>
                             </div>
                             <div class="col-sm-2 form-group">
                                 <label>Tecnico</label>
-                                <div class="col-sm-1 form-group">
+                                <div class="col-sm-2 form-group">
                                 <input class="chk_input" type="checkbox" id="tecnico" name="tecnico" data-width="20" data-height="20" <?=(!empty($rolesedit->tecnico)&&$rolesedit->tecnico=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($rolesedit->tecnico))?'checked':''?> />
                                 <span class="checkmark"></span>
                                 </div>
                             </div>
                             <div class="col-sm-2 form-group">
                                 <label>Órdenes</label>
-                                <div class="col-sm-1 form-group">
+                                <div class="col-sm-2 form-group">
                                 <input class="chk_input" type="checkbox" id="ordenes" name="ordenes" data-width="20" data-height="20" <?=(!empty($rolesedit->ordenes)&&$rolesedit->ordenes=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($rolesedit->ordenes))?'checked':''?> />
                                 <span class="checkmark"></span>
                                 </div>
