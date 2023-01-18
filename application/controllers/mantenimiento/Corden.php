@@ -90,6 +90,7 @@ public function cadd(){
 public function cinsert(){
 
      $tarea = $this->input->post('txttarea');
+     $obs = $this->input->post('txtobser');
      $fecha = $this->input->post('txtfecha');
      $id_cliente=$this->input->post("tipo_cliente");
 
@@ -99,7 +100,8 @@ public function cinsert(){
             'TareaDesarrollar' => $tarea,
             'IdCliente' => $id_cliente,
             'Completada' => '0',
-            'Eliminada' => '0'
+            'Eliminada' => '0',
+            'observaciones' => $obs
         );
         $res=$this->morden->minsertorden($data);
         if($res){
@@ -132,6 +134,7 @@ public function cedit($id){
 
 public function cupdate(){
       $tarea = $this->input->post('txttarea');
+      $obs = $this->input->post('txtobser');
       $precio = $this->input->post('txtprecio');
       $cliente = mb_strtoupper($this->input->post("cliente"));
       $id = $this->input->post('txtidorden');
@@ -148,7 +151,8 @@ public function cupdate(){
        'Precio' => $precio,
        'TareaDesarrollar' => $tarea,
        'IdCliente' => $cliente,
-       'Completada' => $completa
+       'Completada' => $completa,
+       'observaciones' => $obs
 
      );
 

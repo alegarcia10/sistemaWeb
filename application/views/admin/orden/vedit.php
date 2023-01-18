@@ -41,6 +41,10 @@
                                ? $model->IdCliente : '',	'cliente','1',(!empty($consultar)) ? "disabled ":'required');?>
                 							<input id="cliente_hidden" name="cliente_hidden" type="hidden" >
                 						</div>
+                            <div class=" col-sm-12 form-group">
+                                <label for="obser">OBSERVACIONES</label>
+                                <input type="text" id="txtobser" name="txtobser" maxlength="1000"class="form-control" value="<?php echo set_value('txtobser') ?>">
+                            </div>
                             <div class="col-sm-12 form-group">
                             <a class="btn btn-success" href="<?php echo base_url();?>mantenimiento/corden">Volver</a>
                                 <button type="submit" class="btn btn-success">Guardar</button>
