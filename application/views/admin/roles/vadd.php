@@ -25,7 +25,7 @@
                         <div class="col-sm-12 form-group">
                                 <label for="tipo_usuario">Vistas permitidas</label><br>
                                 </div>
-                                <div class="col-sm-1 form-group">
+                                <div class="col-sm-2 form-group">
                                     <label>Cliente</label>
                                     <input class="chk_input" type="checkbox" id="cliente" name="cliente" data-width="20" data-height="20" />
                                     <span class="checkmark"></span>
