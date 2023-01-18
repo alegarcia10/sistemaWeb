@@ -25,27 +25,27 @@
                         <div class="col-sm-12 form-group">
                                 <label for="tipo_usuario">Vistas permitidas</label><br>
                                 </div>
-                                <div class="col-md-12 form-group">
+                                <div class="col-sm-3 form-group">
                                     <label>Cliente</label>
                                     <input class="chk_input" type="checkbox" id="cliente" name="cliente" data-width="20" data-height="20" />
                                     <span class="checkmark"></span>
                                 </div>
-                                <div class="col-md-12 form-group">
+                                <div class="col-sm-3 form-group">
                                 <label>Técnicos</label>
                                 <input class="chk_input" type="checkbox" id="tecnico" name="tecnico" data-width="20" data-height="20" />
                                 <span class="checkmark"></span>
                             </div>
-                            <div class="col-md-12 form-group">
+                            <div class="col-sm-2 form-group">
                                 <label>Ordenes</label>
                                 <input class="chk_input" type="checkbox" id="ordenes" name="ordenes" data-width="20" data-height="20" />
                                 <span class="checkmark"></span>
                             </div>
-                            <div class="col-md-2 form-group">
+                            <div class="col-sm-2 form-group">
                                 <label>Usuarios</label>
                                 <input class="chk_input" type="checkbox" id="usu" name="usu" data-width="20" data-height="20" />
                                 <span class="checkmark"></span>
                             </div>
-                            <div class="col-md-12 form-group">
+                            <div class="col-sm-2 form-group">
                                 <label>Roles</label>
                                 <input class="chk_input" type="checkbox" id="rol" name="rol" data-width="20" data-height="20" />
                                 <span class="checkmark"></span>
