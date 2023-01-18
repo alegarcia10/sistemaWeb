@@ -28,8 +28,10 @@
                             </div>
                             <div class="col-sm-2 form-group">
                                 <label>Cliente</label><br>
+                                <div class="col-sm-1 form-group">
                                 <input class="chk_input" type="checkbox" id="cliente" name="cliente" data-width="20" data-height="20" <?=(!empty($rolesedit->cliente)&&$rolesedit->cliente=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($rolesedit->cliente))?'checked':''?> />
                                 <span class="checkmark"></span>
+                                </div>
                             </div>
                             <div class="col-sm-2 form-group">
                                 <label>Tecnico</label><br>
