@@ -26,27 +26,27 @@
                             <div class="col-sm-12  form-group">
                                 <label for="rol">Vistas Permitidas</label>
                             </div>
-                            <div class="col-md-12 form-group">
+                            <div class="col-sm-2 form-group">
                                 <label>Cliente</label><br>
                                 <input class="chk_input" type="checkbox" id="cliente" name="cliente" data-width="20" data-height="20" <?=(!empty($rolesedit->cliente)&&$rolesedit->cliente=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($rolesedit->cliente))?'checked':''?> />
                                 <span class="checkmark"></span>
                             </div>
-                            <div class="col-md-12 form-group">
+                            <div class="col-sm-2 form-group">
                                 <label>Tecnico</label><br>
                                 <input class="chk_input" type="checkbox" id="tecnico" name="tecnico" data-width="20" data-height="20" <?=(!empty($rolesedit->tecnico)&&$rolesedit->tecnico=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($rolesedit->tecnico))?'checked':''?> />
                                 <span class="checkmark"></span>
                             </div>
-                            <div class="col-md-12 form-group">
+                            <div class="col-sm-2 form-group">
                                 <label>Ordenes</label><br>
                                 <input class="chk_input" type="checkbox" id="ordenes" name="ordenes" data-width="20" data-height="20" <?=(!empty($rolesedit->ordenes)&&$rolesedit->ordenes=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($rolesedit->ordenes))?'checked':''?> />
                                 <span class="checkmark"></span>
                             </div>
-                            <div class="col-md-2 form-group">
+                            <div class="col-sm-2 form-group">
                             <label>Usuarios</label><br>
                                 <input class="chk_input" type="checkbox" id="usu" name="usu" data-width="20" data-height="20" <?=(!empty($rolesedit->usuarios)&&$rolesedit->usuarios=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($rolesedit->usuarios))?'checked':''?> />
                                 <span class="checkmark"></span>
                             </div>
-                            <div class="col-md-12 form-group">
+                            <div class="col-sm-2 form-group">
                             <label>Roles</label><br>
                                 <input class="chk_input" type="checkbox" id="rol" name="rol" data-width="20" data-height="20" <?=(!empty($rolesedit->roles)&&$rolesedit->roles=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($rolesedit->roles))?'checked':''?> />
                                 <span class="checkmark"></span>
