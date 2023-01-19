@@ -72,59 +72,7 @@
                         </table>
                     </div>
                 </div>
-                <hr>
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="col-md-12">
-                        <h1>Órdenes Completas  <span class="fa fa-check-circle"></span></h1>
-                    </div>
-                    <br>
-
-                        <table id="tablaordenc" class="table table-bordered table-hover order-table2">
-                            <thead>
-                                <tr>
-                                  <th>N° Órden</th>
-                                  <th>Fecha Recepción</th>
-                                  <th>Tarea</th>
-                                  <th>Gastos</th>
-                                  <th>Monto Facturado</th>
-                                  <th>Cliente</th>
-                                  <th >Operaciones</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php if (!empty($ordencompletas)) : ?>
-                                    <?php foreach ($ordencompletas as $atributos) :?>
-                                        <tr>
-                                          <td width="5%"><?php echo $atributos->IdOrden; ?></td>
-                                          <td width="10%"><?php echo date("d-m-Y", strtotime("$atributos->FechaRecepcion")); ?></td>
-                                          <td width="30%"><?php echo $atributos->TareaDesarrollar; ?></td>
-                                          <td width="10%"> $<?php echo number_format($atributos->Gastos, 2); ?></td>
-                                            <td width="10%">$<?php echo number_format($atributos->Precio, 2); ?></td>
-                                          <td width="15%"><?php echo $atributos->Nombre; ?></td>
-                                          <td width="20%" >
-                                                <div class="btn-group">
-                                                    <a href="<?php echo base_url(); ?>mantenimiento/cparteorden/listar/<?php echo $atributos->IdOrden; ?>" class="btn btn-warning" title="Tareas">
-                                                        <span class="fa fa-eye"></span>
-                                                    </a>
-                                                    <a href="<?php echo base_url(); ?>mantenimiento/corden/cedit/<?php echo $atributos->IdOrden; ?>" class="btn btn-info" title="Modificar">
-                                                        <span class="fa fa-pencil"></span>
-                                                    </a>
-                                                    <a href="<?php echo base_url(); ?>mantenimiento/corden/cdelete/<?php echo $atributos->IdOrden; ?>" class="btn btn-danger btn-remove deleteOrdenCompleta" title="Eliminar">
-                                                        <span class="fa fa-remove"></span>
-                                                    </a>
-                                                    <a href="<?php echo base_url(); ?>mantenimiento/corden/cdescompleta/<?php echo $atributos->IdOrden; ?>" class="btn btn-success reanudarOrden" title="Reanudar">
-                                                        <span class="fa fa-clock-o"></span>
-                                                    </a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    <?php endforeach ?>
-                                <?php endif; ?>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </section>
