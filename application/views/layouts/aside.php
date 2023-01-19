@@ -66,9 +66,9 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                        <?php if ($roles->usuarios =="1") { ?>
-                            <li><a href="<?php echo base_url(); ?>mantenimiento/croles"><i class="fa fa-circle-o"></i>Estados de Trabajo</a></li>
-                        <?php } ?>
+                        
+                            <li><a href="<?php echo base_url(); ?>mantenimiento/ctrabajo"><i class="fa fa-circle-o"></i>Estados de Trabajo</a></li>
+                        
                         </ul>
                         </li>
                         
