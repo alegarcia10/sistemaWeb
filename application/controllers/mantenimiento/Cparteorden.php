@@ -159,9 +159,15 @@ public function cupdate(){
     $idparte = $this->input->post('txtidParte');
     $idorden = $this->input->post('txtidorden');
     $tarea = $this->input->post('txttarea');
+    $txtfechaInicio = $this->input->post('txtfechaInicio');
+    $txtfechaFin = $this->input->post('txtfechaFin');
+    
 
         $data = array(
-            'TareaDesarrollada' => $tarea
+            'TareaDesarrollada' => $tarea,
+            'FechaInicio' => $txtfechaInicio,
+            'FechaFin' => $txtfechaFin
+
         );
         $res = $this->mparteorden->mupdateparteorden($idparte, $idorden,$data);
         if($res){
