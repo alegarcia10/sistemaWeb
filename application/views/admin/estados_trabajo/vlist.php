@@ -18,18 +18,18 @@
                 <div class="row">
                     <div class="col-md-12">
                       <div class="col-md-12">
-                          <h1>Órdenes Activas  <span class="fa fa-clock-o"></span></h1>
+                          <h1>Trabajos</h1>
                       </div>
                         <table id="tablaordena" class="table table-bordered table-hover order-table1">
                             <thead>
                                 <tr>
-                                    <th>N° Órden</th>
+                                    
                                     <th>Fecha Recepción</th>
                                     <th>Tarea</th>
                                     <th>Gastos</th>
                                     <th>Monto a Facturar</th>
                                     <th>Cliente</th>
-                                    <th>Estado Tarea</th>
+                                    <th>Estado</th>
                                     <th >Operaciones</th>
                                 </tr>
                             </thead>
@@ -37,7 +37,7 @@
                                 <?php if (!empty($ordenindex)) : ?>
                                     <?php foreach ($ordenindex as $atributos) :?>
                                         <tr>
-                                            <td width="5%"><?php echo $atributos->IdOrden; ?></td>
+                                            
                                             <td width="10%"><?php echo date("d-m-Y", strtotime("$atributos->FechaRecepcion")); ?></td>
                                             <td width="24%"><?php echo $atributos->TareaDesarrollar; ?></td>
                                             <td width="8%"> $<?php echo number_format($atributos->Gastos, 2); ?></td>
