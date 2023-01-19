@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <section class="content-header">
         <h1>
-        Órden
+        Orden
             <small>Editar</small>
         </h1>
     </section>
@@ -41,6 +41,10 @@
                                ? $model->IdCliente : '',	'cliente','1',(!empty($consultar)) ? "disabled ":'required');?>
                 							<input id="cliente_hidden" name="cliente_hidden" type="hidden" >
                 						</div>
+                            <div class=" col-sm-12 form-group">
+                                <label for="obser">OBSERVACIONES</label>
+                                <input type="text" id="txtobser" name="txtobser" maxlength="1000"class="form-control" value="<?php echo !empty(form_error('txtobser'))? set_value('txtobser') : $ordenedit->observaciones ?>" class= "form-control">
+                            </div>
                             <div class="col-sm-12 form-group">
                             <a class="btn btn-success" href="<?php echo base_url();?>mantenimiento/corden">Volver</a>
                                 <button type="submit" class="btn btn-success">Guardar</button>

@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <section class="content-header">
-        <h1> Usuario
-            <small>Listado de Usuarios </small>
+        <h1> Roles
+            <small>Listado de Roles de Usuario </small>
         </h1>
     </section>
     <section class="content">
@@ -9,7 +9,7 @@
             <div class="box-body">
                 <div class="row">
                     <div class="col-md-12">
-                        <a href="<?php echo base_url();?>mantenimiento/cusuario/cadd" class="btn btn-flat" id="botonVioleta"><span class="fa fa-plus"></span> Agregar usuario</a>
+                        <a href="<?php echo base_url();?>mantenimiento/croles/cadd" class="btn btn-flat" id="botonVioleta"><span class="fa fa-plus"></span> Agregar Rol</a>
                     </div>
                 </div>
                 <?php if ($this->session->flashdata('correcto')):?>
@@ -24,26 +24,22 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Nombre </th>
-                                    <th>Email</th>
                                     <th>Privilegios</th>
 
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php if(!empty($usuarioindex)):?>
-                                <?php foreach ($usuarioindex as $atributos):?>
+                                <?php if(!empty($rolesindex)):?>
+                                <?php foreach ($rolesindex as $atributos):?>
                                 <tr>
-                                    <td><?php echo $atributos->idUsuario;?></td>
-                                    <td><?php echo $atributos->nombre ;?></td>
-                                    <td><?php echo $atributos->email ;?></td>
+                                    <td><?php echo $atributos->idRol;?></td>
                                     <td><?php echo $atributos->nombre_tipo ;?></td>
                                     <td>
                                         <div class="btn-group">
-                                            <a href="<?php echo base_url();?>mantenimiento/cusuario/cedit/<?php echo $atributos->idUsuario; ?>" class="btn btn-info">
+                                            <a href="<?php echo base_url();?>mantenimiento/croles/cedit/<?php echo $atributos->idRol; ?>" class="btn btn-info">
                                                 <span class="fa fa-pencil"></span>
                                             </a>
-                                            <a href="<?php echo base_url();?>mantenimiento/cusuario/cdelete/<?php echo $atributos->idUsuario; ?>" class="btn btn-danger btn-remove deleteUsuario">
+                                            <a href="<?php echo base_url();?>mantenimiento/croles/cdelete/<?php echo $atributos->idRol; ?>" class="btn btn-danger btn-remove deleteRoles">
                                                 <span class="fa fa-remove"></span>
                                             </a>
                                         </div>

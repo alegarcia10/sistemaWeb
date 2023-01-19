@@ -21,11 +21,11 @@
                             <input type="hidden" value="<?php echo $parteordenedit->IdParte ?>" name="txtidParte" id="txtidParte">
                             <div class=" col-sm-3 form-group">
                                 <label for="fechaInicio">FechaInicio</label>
-                                <input type="string" id="txtfechaInicio" name="txtfechaInicio" value="<?php echo !empty(form_error('txtfechaInicio'))? set_value('txtfechaInicio') : $parteordenedit->FechaInicio ?>" class= "form-control"   disabled>
+                                <input type="string" id="txtfechaInicio" name="txtfechaInicio" value="<?php echo !empty(form_error('txtfechaInicio'))? set_value('txtfechaInicio') : $parteordenedit->FechaInicio ?>" class= "form-control"   >
                             </div>
                             <div class=" col-sm-3 form-group">
                                 <label for="fechaInicio">FechaFin</label>
-                                <input type="string" id="txtfechaFin" name="txtfechaFin" value="<?php echo !empty(form_error('txtfechaFin'))? set_value('txtfechaFin') : $parteordenedit->FechaFin ?>" class= "form-control"   disabled>
+                                <input type="string" id="txtfechaFin" name="txtfechaFin" value="<?php echo !empty(form_error('txtfechaFin'))? set_value('txtfechaFin') : $parteordenedit->FechaFin ?>" class= "form-control"   >
                             </div>
                             <div class=" col-sm-2 form-group">
                                 <label for="fechaTranscurrido">Tiempo Transcurrido</label>
@@ -75,7 +75,7 @@
 
                                <div class="col-sm-2">
                                  <br>
-                                 <button class="btn btn-success" type="button" id="buscar2"><span class="fa fa-search" aria-hidden="true" ></span> Agregar </button>
+                                 <button class="btn btn-success" type="button" id="buscar2"><span class="fa fa-plus" aria-hidden="true" ></span> Agregar </button>
                                </div>
                                <div class="col-sm-12 form-group">
                                      <table id="example1" class="table table-bordered table-hover order-table">
@@ -134,7 +134,7 @@
                           </div>
                           <div class="col-sm-2">
                             <br>
-                            <button class="btn btn-success" type="button" id="buscar1"><span class="fa fa-search" aria-hidden="true" ></span> Agregar </button>
+                            <button class="btn btn-success" type="button" id="buscar1"><span class="fa fa-plus" aria-hidden="true" ></span> Agregar </button>
                           </div>
                           <div class="col-sm-12 form-group">
                                 <table id="example1" class="table table-bordered table-hover order-table">

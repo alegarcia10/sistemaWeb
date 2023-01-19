@@ -8,15 +8,40 @@ class Corden extends CI_Controller {
         redirect(base_url());
     }
     $this->load->model('morden');
+    $this->load->model('mroles');
     $this->load->model('mcombo');
     }
 
 
 
 public function index(){
+    $idrol = $this->session->userdata("idRol");
+    $ordenes= $this->morden->mselectorden(); 
+    
+    foreach ($ordenes as $orden ) {
+        $id=$orden->IdOrden;
+        $porden=$this->morden->consultarEstado($id);
+
+       
+        if($porden != null){
+            $completa=$porden->Completa;
+            $estado=$porden->Estado;
+
+            $orden->Completa=$completa;
+            $orden->Estado=$estado;
+
+            }else{
+               
+                $orden->Completa='0';
+                $orden->Estado='4';
+            }
+
+
+   }
     $data = array (
-        'ordenindex' => $this->morden->mselectorden(),
+        'ordenindex' => $ordenes,
         'ordencompletas' => $this->morden->mselectordencompletas(),
+        'roles'=> $this->mroles->obtener($idrol)
     );
 
 
@@ -42,18 +67,21 @@ public function index(){
     //die;
 
     $this->load->view('layouts/header');
-    $this->load->view('layouts/aside');
+    $this->load->view('layouts/aside',$data);
     $this->load->view('admin/orden/vlist', $data);
     $this->load->view('layouts/footer');
 }
 
 
 public function cadd(){
-
+    $idrol = $this->session->userdata("idRol");
     $data['tipo_cliente_select'] = $this->morden->cliente_listar_select();
+    $datos = array(
+        'roles'=> $this->mroles->obtener($idrol)
+    );
 
     $this->load->view('layouts/header');
-    $this->load->view('layouts/aside');
+    $this->load->view('layouts/aside',$datos);
     $this->load->view('admin/orden/vadd', $data);
     $this->load->view('layouts/footer');
 }
@@ -62,6 +90,7 @@ public function cadd(){
 public function cinsert(){
 
      $tarea = $this->input->post('txttarea');
+     $obs = $this->input->post('txtobser');
      $fecha = $this->input->post('txtfecha');
      $id_cliente=$this->input->post("tipo_cliente");
 
@@ -71,7 +100,8 @@ public function cinsert(){
             'TareaDesarrollar' => $tarea,
             'IdCliente' => $id_cliente,
             'Completada' => '0',
-            'Eliminada' => '0'
+            'Eliminada' => '0',
+            'observaciones' => $obs
         );
         $res=$this->morden->minsertorden($data);
         if($res){
@@ -87,21 +117,24 @@ public function cinsert(){
 
 
 public function cedit($id){
+    $idrol = $this->session->userdata("idRol");
     $data = array(
         'ordenedit' => $this->morden->midupdateorden($id),
+        'roles'=> $this->mroles->obtener($idrol)
     );
     $data['cliente_select'] = $this->morden->cliente_listar_select2();
     $data['model'] = $this->morden->obtener($data['ordenedit']->IdCliente);
 
 
     $this->load->view('layouts/header');
-    $this->load->view('layouts/aside');
+    $this->load->view('layouts/aside',$data);
     $this->load->view('admin/orden/vedit', $data);
     $this->load->view('layouts/footer');
 }
 
 public function cupdate(){
       $tarea = $this->input->post('txttarea');
+      $obs = $this->input->post('txtobser');
       $precio = $this->input->post('txtprecio');
       $cliente = mb_strtoupper($this->input->post("cliente"));
       $id = $this->input->post('txtidorden');
@@ -118,7 +151,8 @@ public function cupdate(){
        'Precio' => $precio,
        'TareaDesarrollar' => $tarea,
        'IdCliente' => $cliente,
-       'Completada' => $completa
+       'Completada' => $completa,
+       'observaciones' => $obs
 
      );
 

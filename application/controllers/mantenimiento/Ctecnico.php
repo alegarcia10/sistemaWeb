@@ -8,26 +8,33 @@ class Ctecnico extends CI_Controller {
         redirect(base_url());
     }
     $this->load->model('mtecnico');
+    $this->load->model('mroles');
     $this->load->model('mcombo');
     }
 
 
 public function index(){
+    $idrol = $this->session->userdata("idRol");
     $data = array (
         'tecnicoindex' => $this->mtecnico->mselecttecnico(),
+        'roles'=> $this->mroles->obtener($idrol)
     );
 
     $this->load->view('layouts/header');
-    $this->load->view('layouts/aside');
+    $this->load->view('layouts/aside',$data);
     $this->load->view('admin/tecnico/vlist', $data);
     $this->load->view('layouts/footer');
 }
 
 
 public function cadd(){
+    $idrol = $this->session->userdata("idRol");
+    $data = array(
+        'roles'=> $this->mroles->obtener($idrol)
+    );
 
     $this->load->view('layouts/header');
-    $this->load->view('layouts/aside');
+    $this->load->view('layouts/aside',$data);
     $this->load->view('admin/tecnico/vadd');
     $this->load->view('layouts/footer');
 }
@@ -70,12 +77,14 @@ public function cinsert(){
 
 
 public function cedit($id){
+    $idrol = $this->session->userdata("idRol");
     $data = array(
         'tecnicoedit' => $this->mtecnico->midupdatetecnico($id),
+        'roles'=> $this->mroles->obtener($idrol)
     );
 
     $this->load->view('layouts/header');
-    $this->load->view('layouts/aside');
+    $this->load->view('layouts/aside',$data);
     $this->load->view('admin/tecnico/vedit', $data);
     $this->load->view('layouts/footer');
 }

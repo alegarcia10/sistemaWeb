@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <section class="content-header">
         <h1>
-            Órden
+            Orden
             <small>Listado de Órdenes</small>
         </h1>
     </section>
@@ -10,7 +10,7 @@
             <div class="box-body">
                 <div class="row">
                     <div class="col-md-9">
-                        <a href="<?php echo base_url(); ?>mantenimiento/corden/cadd" class="btn btn-flat" id="botonVioleta"><span class="fa fa-plus"></span> Agregar Órden</a>
+                        <a href="<?php echo base_url(); ?>mantenimiento/corden/cadd" class="btn btn-flat" id="botonVioleta"><span class="fa fa-plus"></span> Agregar Orden</a>
                     </div>
                 </div>
                 <?php if ($this->session->flashdata('correcto')) : ?>
@@ -33,6 +33,7 @@
                                     <th>Gastos</th>
                                     <th>Monto a Facturar</th>
                                     <th>Cliente</th>
+                                    <th>Estado Tarea</th>
                                     <th >Operaciones</th>
                                 </tr>
                             </thead>
@@ -42,10 +43,16 @@
                                         <tr>
                                             <td width="5%"><?php echo $atributos->IdOrden; ?></td>
                                             <td width="10%"><?php echo date("d-m-Y", strtotime("$atributos->FechaRecepcion")); ?></td>
-                                            <td width="30%"><?php echo $atributos->TareaDesarrollar; ?></td>
-                                            <td width="10%"> $<?php echo number_format($atributos->Gastos, 2); ?></td>
-                                            <td width="10%">$<?php echo number_format($atributos->Precio, 2); ?></td>
+                                            <td width="24%"><?php echo $atributos->TareaDesarrollar; ?></td>
+                                            <td width="8%"> $<?php echo number_format($atributos->Gastos, 2); ?></td>
+                                            <td width="8%">$<?php echo number_format($atributos->Precio, 2); ?></td>
                                             <td width="15%"><?php echo $atributos->Nombre; ?></td>
+                                            <td width="10%"><?php if ($atributos->Completa == '1')
+                                                    { echo 'Completada';}elseif($atributos->Estado == 0)
+                                                    { echo 'Pendiente';}elseif($atributos->Estado == 1)
+                                                    { echo 'Recibida';}elseif($atributos->Estado == 2)
+                                                    { echo 'En Curso';}elseif($atributos->Estado == 3)
+                                                    { echo 'Finalizada';}else{ echo 'No tiene tareas';} ; ?></td>
                                             <td width="20%" >
                                                 <div class="btn-group">
                                                   <a href="<?php echo base_url(); ?>mantenimiento/cparteorden/listar/<?php echo $atributos->IdOrden; ?>" class="btn btn-warning" title="Tareas">
@@ -101,7 +108,9 @@
                                           <td width="15%"><?php echo $atributos->Nombre; ?></td>
                                           <td width="20%" >
                                                 <div class="btn-group">
-
+                                                    <a href="<?php echo base_url(); ?>mantenimiento/cparteorden/listar/<?php echo $atributos->IdOrden; ?>" class="btn btn-warning" title="Tareas">
+                                                        <span class="fa fa-eye"></span>
+                                                    </a>
                                                     <a href="<?php echo base_url(); ?>mantenimiento/corden/cedit/<?php echo $atributos->IdOrden; ?>" class="btn btn-info" title="Modificar">
                                                         <span class="fa fa-pencil"></span>
                                                     </a>

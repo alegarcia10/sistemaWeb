@@ -52,6 +52,36 @@ function sin_buscador($opciones, $opcionSeleccionada, $nombreSelect, $tipoOperac
 </select>
 <?}
 
+function sin_buscador_priv($opciones, $opcionSeleccionada, $nombreSelect, $tipoOperacion, $camposAuxiliares = ''){?>
+    <select name="<?= $nombreSelect; ?>" id="<?= $nombreSelect; ?>" class="form-control" <?if ($camposAuxiliares != '') echo $camposAuxiliares;?> ><!--input multiselect filtro-select-->
+        <?if ($tipoOperacion==''):?>
+            <option value="">Seleccione una opción</option>
+            
+            <?
+            foreach ($opciones as $row):?>
+                <option value="<?= strval($row->idRol); ?>">
+                    <?= $row->nombre_tipo ?>
+                </option>
+            <?endforeach;?>
+        <?else:?>
+            <option value=""></option>
+            <?
+            $x=999;
+            foreach ($opciones as $row):?>
+            <option value="<?= strval($row->idRol) ?>" <?if (strval($opcionSeleccionada) == strval($row->idRol)) echo "selected"; ?> >
+                <?= $row->nombre_tipo;
+                  ?>
+    
+            </option>
+            <?endforeach;
+    
+            ?>
+    
+    
+        <?endif;?>
+    </select>
+    <?}
+
 function sin_buscadormultiple($opciones, $opcionSeleccionada, $nombreSelect, $tipoOperacion, $camposAuxiliares = ''){?>
 <select name="<?= $nombreSelect; ?>" id="<?= $nombreSelect; ?>" class="js-example-basic-multiple"  <?if ($camposAuxiliares != '') echo $camposAuxiliares;?> name="states[]" multiple="multiple" style="width: 75%"><!--input multiselect filtro-select-->
     <?if ($tipoOperacion==''):?>
@@ -101,6 +131,28 @@ function sin_buscador2($opciones, $opcionSeleccionada, $nombreSelect, $tipoOpera
     <?endif;?>
 </select>
 <?}
+
+function sin_buscador_roles($opciones, $opcionSeleccionada, $nombreSelect, $tipoOperacion, $camposAuxiliares = ''){?>
+    <select name="<?= $nombreSelect; ?>" id="<?= $nombreSelect; ?>" class="form-control" <?if ($camposAuxiliares != '') echo $camposAuxiliares;?> ><!--input multiselect filtro-select-->
+        <?if ($tipoOperacion==''):?>
+            <option value="">Seleccione una opción</option>
+            <?foreach ($opciones as $row):?>
+                <option value="<?= strval($row->ID); ?>">
+                    <?= $row->NOMBRE ?>
+                </option>
+            <?endforeach;?>
+        <?else:?>
+            <option value=""></option>
+            <?
+            foreach ($opciones as $row): ?>
+            <option value="<?= strval($row->ID) ?>" <?if (strval($opcionSeleccionada) == strval($row->ID)) echo "selected"; ?> >
+                <?= $row->NOMBRE; ?>
+            </option>
+            <?endforeach;?>
+        <?endif;?>
+    </select>
+    <?}
+
 function sin_buscador3($opciones, $opcionSeleccionada, $nombreSelect, $tipoOperacion, $camposAuxiliares = ''){?>
     <select name="<?= $nombreSelect; ?>" id="<?= $nombreSelect; ?>" class="form-control" <?if ($camposAuxiliares != '') echo $camposAuxiliares;?> ><!--input multiselect filtro-select-->
         <?if ($tipoOperacion==''):?>

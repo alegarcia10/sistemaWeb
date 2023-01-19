@@ -93,5 +93,10 @@ class Morden extends CI_Model{
   		return $query->row();
   		$error = $this->db->error();
   	}
+    function consultarEstado($id){//
+      $query=$this->db->query("SELECT * FROM parteorden WHERE IdOrden=$id and 
+      IdParte  = (SELECT MAX(IdParte) FROM parteorden WHERE IdOrden=$id)" ) ;
+    return $query->row();
+  	}
 }
 ?>

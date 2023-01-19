@@ -18,19 +18,20 @@
                         <?php endif ; ?>
                         <form action="<?php echo base_url();?>mantenimiento/cusuario/cupdate" method="POST">
                             <input type="hidden" value="<?php echo $usuarioedit->idUsuario ?>" name="txtidusuario" id="txtidusuario">
-                            <input type="hidden" value="<?php echo $usuarioedit->usuario ?>" name="txtnombreviejo" id="txtnombreviejo">
+                            <input type="hidden" value="<?php echo $usuarioedit->idRol ?>" name="txtidrol" id="txtidrol">
                             <div class=" col-sm-4 form-group">
                                 <label for="nombre">Nombre</label>
                                 <input type="text" id="txtnombre" name="txtnombre" value="<?php echo !empty(form_error('txtnombre'))? set_value('txtnombre') : $usuarioedit->nombre ?>" class= "form-control"  required>
                             </div>
                             <div class=" col-sm-4 form-group">
-                                <label for="apellido">Apellido</label>
-                                <input type="text" id="txtapellido" name="txtapellido" value="<?php echo !empty(form_error('txtapellido'))? set_value('txtapellido') : $usuarioedit->apellido ?>" class= "form-control"  >
+                                <label for="email">Email</label>
+                                <input type="text" id="txtemail" name="txtemail" value="<?php echo !empty(form_error('txtemail'))? set_value('txtemail') : $usuarioedit->email ?>" class= "form-control"  >
                             </div>
 
                             <div class="col-sm-4  form-group">
-                                <label for="usuario">usuario</label>
-                                <input type="text" id="txtusuario" name="txtusuario" value="<?php echo !empty(form_error('txtusuario'))? set_value('txtusuario') : $usuarioedit->usuario ?>" class= "form-control" required>
+                                <label for="usuario">Privilegios</label>
+                                <?$this->select_items->sin_buscador_roles($usuario_select,(!empty($model->idRol))
+                               ? $model->idRol : '',	'usuario','1',(!empty($consultar)) ? "disabled ":'required');?>
                             </div>
                             <div class="col-sm-4  form-group">
                                 <label for="Contraseña">Contraseña</label>
@@ -48,3 +49,4 @@
         </div>
     </section>
 </div>
+ <!-- <input type="hidden" value="<?php## echo $usuarioedit->usuario ?>" name="txtnombreviejo" id="txtnombreviejo">
