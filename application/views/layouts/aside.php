@@ -64,9 +64,14 @@
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
-                            
                         </a>
+                        <ul class="treeview-menu">
+                        <?php if ($roles->usuarios =="1") { ?>
+                            <li><a href="<?php echo base_url(); ?>mantenimiento/croles"><i class="fa fa-circle-o"></i>Estados de Trabajo</a></li>
+                        <?php } ?>
+                        </ul>
                         </li>
+                        
                 </ul>
                                 
             </section>
