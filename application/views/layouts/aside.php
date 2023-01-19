@@ -57,6 +57,15 @@
                         </ul>
                     </li>
                     <?php } ?>
+                    <li class="treeview">
+                        <a href="#">
+                        
+                            <i class="fa fa-book"></i> <span>Gestión</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                            
+                        </a>
                 </ul>
                                 
             </section>
