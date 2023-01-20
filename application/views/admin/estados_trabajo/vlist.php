@@ -78,7 +78,7 @@
                         <table id="tablaordena" class="table table-bordered table-hover order-table1">
                             <thead>
                                 <tr>
-                                    <th>Fecha Recepción</th>
+                                    <th>Fecha</th>
                                     <th>Tarea</th>
                                     <th>Gastos</th>
                                     <th>Monto a Facturar</th>
