@@ -82,7 +82,7 @@
                                     <th>Tarea</th>
                                     <th>Gastos</th>
                                     <th>Monto a Facturar</th>
-                                    <?php var_dump($data); //if ($cliente==1){?>
+                                    <?php//if ($cliente==1){?>
                                     <th>Cliente</th>
                                     <?php //}?>
                                     <?php //if ($estado==1){?>
