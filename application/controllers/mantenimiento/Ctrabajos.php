@@ -9,7 +9,6 @@ class Ctrabajos extends CI_Controller {
     }
     $this->load->model('morden');
     $this->load->model('mroles');
-    $this->load->model('mcombo');
     }
 
 
@@ -40,7 +39,6 @@ public function index(){
    }
     $data = array (
         'ordenindex' => $ordenes,
-        'ordencompletas' => $this->morden->mselectordencompletas(),
         'roles'=> $this->mroles->obtener($idrol)
     );
 
@@ -71,6 +69,85 @@ public function index(){
     $this->load->view('admin/estados_trabajo/vlist', $data);
     $this->load->view('layouts/footer');
 }
+
+
+public function indexFiltroColumnas(){
+    $idrol = $this->session->userdata("idRol");
+    $ordenes= $this->morden->mselectorden(); 
+    
+    foreach ($ordenes as $orden ) {
+        $id=$orden->IdOrden;
+        $porden=$this->morden->consultarEstado($id);
+
+       
+        if($porden != null){
+            $completa=$porden->Completa;
+            $estado=$porden->Estado;
+
+            $orden->Completa=$completa;
+            $orden->Estado=$estado;
+
+            }else{
+               
+                $orden->Completa='0';
+                $orden->Estado='4';
+            }
+
+
+   }
+    $check_cliente = $this->input->post('cliente');
+    $check_estado = $this->input->post('estado');
+    /*$check_orden = $this->input->post('ordenes');
+    $check_usu = $this->input->post('usu');
+    $check_rol = $this->input->post('rol');*/
+
+    if($check_cliente=='on'){
+        $cliente=1;
+      }else{
+        $cliente=0;
+      }
+      if($check_estado=='on'){
+        $estado=1;
+      }else{
+        $estado=0;
+      }
+
+    $data = array (
+        'ordenindex' => $ordenes,
+        'cliente' => $cliente,
+        'estado' => $estado,
+        'roles'=> $this->mroles->obtener($idrol)
+    );
+    var_dump($data);
+
+    $ordenes=  $data['ordenindex'];
+  
+
+    foreach ($ordenes as $orden ) {
+         $id=$orden->IdOrden;
+         $orden->Gastos=$this->morden->consultaGatosOrden($id);
+    }
+
+
+    //$ordenesCompletas=  $data['ordencompletas'];
+
+
+
+    /*foreach ($ordenesCompletas as $orden ) {
+         $id=$orden->IdOrden;
+         $orden->Gastos=$this->morden->consultaGatosOrden($id);
+    }*/
+
+
+    //die;
+
+    $this->load->view('layouts/header');
+    $this->load->view('layouts/aside',$data);
+    $this->load->view('admin/estados_trabajo/vlist', $data);
+    $this->load->view('layouts/footer');
+}
+
+
 
 
 }

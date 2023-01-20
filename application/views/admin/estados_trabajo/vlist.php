@@ -35,7 +35,7 @@
                                 </div>
                             </form>
 
-                            <form action="<?php echo base_url();?>" method="POST">   
+                            <form action="<?php echo base_url();?>mantenimiento/ctrabajos/indexFiltroColumnas" method="POST">   
                             
                         <div class="col-sm-12 form-group">
                                 <label for="columnas">Columnas</label><br>
@@ -82,8 +82,12 @@
                                     <th>Tarea</th>
                                     <th>Gastos</th>
                                     <th>Monto a Facturar</th>
+                                    <?php if ($cliente==1){?>
                                     <th>Cliente</th>
+                                    <?php }?>
+                                    <?php if ($estado==1){?>
                                     <th>Estado</th>
+                                    <?php }?>
                                 </tr>
                             </thead>
                             <tbody>
