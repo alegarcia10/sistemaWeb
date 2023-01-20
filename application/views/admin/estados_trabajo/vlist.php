@@ -73,7 +73,9 @@
                                 <button type="submit" class="btn btn-success">Mostrar</button>
                             </div>
                         </form>
-
+                        <div class="col-md-12">
+                          <h3>Listado Trabajos</h3>
+                        </div>
                         <table id="tablaordena" class="table table-bordered table-hover order-table1">
                             <thead>
                                 <tr>
