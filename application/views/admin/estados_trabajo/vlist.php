@@ -36,7 +36,8 @@
                             </form>
 
                             <form action="<?php echo base_url();?>mantenimiento/ctrabajos/indexFiltroColumnas" method="POST">   
-                            
+                                <div class="col-md-12">
+                                </div>
                                 <div class="col-sm-1 form-group">
                                     <label>Fecha</label>
                                     <input class="chk_input" type="checkbox" id="fecha" name="fecha" data-width="20" data-height="20" />
