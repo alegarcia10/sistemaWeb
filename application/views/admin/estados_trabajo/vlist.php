@@ -20,7 +20,7 @@
                       <div class="col-md-12">
                           <h1>Trabajos</h1>
                       </div>
-                      <form action="<?php echo base_url(); ?>mantenimiento/corden/cinsert" method="POST">
+                      <form action="<?php echo base_url(); ?>" method="POST">
                                 <div class="col-sm-2 form-group">
                                   <label for="fechaini">Inicio</label>
                                   <input type="date" id="txtfechaini" name="txtfechaini" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfechaini') ?>">
@@ -33,8 +33,47 @@
                                 <div class="col-sm-10 form-group">
                                     <button type="submit" class="btn btn-success">Buscar</button>
                                 </div>
-
                             </form>
+
+                            <form action="<?php echo base_url();?>" method="POST">   
+                            
+                        <div class="col-sm-12 form-group">
+                                <label for="columnas">Columnas</label><br>
+                                </div>
+                                <div class="col-sm-2 form-group">
+                                    <label>Fecha</label>
+                                    <input class="chk_input" type="checkbox" id="fecha" name="fecha" data-width="20" data-height="20" />
+                                    <span class="checkmark"></span>
+                                </div>
+                                <div class="col-sm-2 form-group">
+                                <label>Tarea</label>
+                                <input class="chk_input" type="checkbox" id="tarea" name="tarea" data-width="20" data-height="20" />
+                                <span class="checkmark"></span>
+                            </div>
+                            <div class="col-sm-2 form-group">
+                                <label>Gastos</label>
+                                <input class="chk_input" type="checkbox" id="gastos" name="gastos" data-width="20" data-height="20" />
+                                <span class="checkmark"></span>
+                            </div>
+                            <div class="col-sm-2 form-group">
+                                <label>Monto a Facturar</label>
+                                <input class="chk_input" type="checkbox" id="monto" name="monto" data-width="20" data-height="20" />
+                                <span class="checkmark"></span>
+                            </div>
+                            <div class="col-sm-2 form-group">
+                                <label>Cliente</label>
+                                <input class="chk_input" type="checkbox" id="cliente" name="cliente" data-width="20" data-height="20" />
+                                <span class="checkmark"></span>
+                            </div>
+                            <div class="col-sm-2 form-group">
+                                <label>Estado</label>
+                                <input class="chk_input" type="checkbox" id="estado" name="estado" data-width="20" data-height="20" />
+                                <span class="checkmark"></span>
+                            </div>
+                            <div class="col-sm-12 form-group">
+                                <button type="submit" class="btn btn-success">Mostrar</button>
+                            </div>
+                        </form>
 
                         <table id="tablaordena" class="table table-bordered table-hover order-table1">
                             <thead>
