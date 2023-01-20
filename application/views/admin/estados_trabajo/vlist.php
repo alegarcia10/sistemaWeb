@@ -17,8 +17,9 @@
                 <hr>
                 <div class="row">
                     <div class="col-md-12">
+                        <div class="col-md-12">
                           <h1>Filtros</h1>
-
+                        </div>
                       <form action="<?php echo base_url(); ?>" method="POST">
                                 <div class="col-sm-2 form-group">
                                   <label for="fechaini">Inicio</label>
