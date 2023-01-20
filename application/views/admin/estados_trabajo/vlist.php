@@ -40,32 +40,32 @@
                         <div class="col-sm-12 form-group">
                                 <label for="columnas">Columnas</label><br>
                                 </div>
-                                <div class="col-sm-2 form-group">
+                                <div class="col-sm-1 form-group">
                                     <label>Fecha</label>
                                     <input class="chk_input" type="checkbox" id="fecha" name="fecha" data-width="20" data-height="20" />
                                     <span class="checkmark"></span>
                                 </div>
-                                <div class="col-sm-2 form-group">
+                                <div class="col-sm-1 form-group">
                                 <label>Tarea</label>
                                 <input class="chk_input" type="checkbox" id="tarea" name="tarea" data-width="20" data-height="20" />
                                 <span class="checkmark"></span>
                             </div>
-                            <div class="col-sm-2 form-group">
+                            <div class="col-sm-1 form-group">
                                 <label>Gastos</label>
                                 <input class="chk_input" type="checkbox" id="gastos" name="gastos" data-width="20" data-height="20" />
                                 <span class="checkmark"></span>
                             </div>
-                            <div class="col-sm-2 form-group">
+                            <div class="col-sm-1 form-group">
                                 <label>Monto a Facturar</label>
                                 <input class="chk_input" type="checkbox" id="monto" name="monto" data-width="20" data-height="20" />
                                 <span class="checkmark"></span>
                             </div>
-                            <div class="col-sm-2 form-group">
+                            <div class="col-sm-1 form-group">
                                 <label>Cliente</label>
                                 <input class="chk_input" type="checkbox" id="cliente" name="cliente" data-width="20" data-height="20" />
                                 <span class="checkmark"></span>
                             </div>
-                            <div class="col-sm-2 form-group">
+                            <div class="col-sm-1 form-group">
                                 <label>Estado</label>
                                 <input class="chk_input" type="checkbox" id="estado" name="estado" data-width="20" data-height="20" />
                                 <span class="checkmark"></span>
