@@ -20,17 +20,31 @@
                       <div class="col-md-12">
                           <h1>Trabajos</h1>
                       </div>
+                      <form action="<?php echo base_url(); ?>mantenimiento/corden/cinsert" method="POST">
+                                <div class="col-sm-2 form-group">
+                                  <label for="fechaini">Inicio</label>
+                                  <input type="date" id="txtfechaini" name="txtfechaini" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfechaini') ?>">
+                                </div>
+                                <div class="col-sm-2 form-group">
+                                  <label for="fechafin">Fin</label>
+                                  <input type="date" id="txtfechafin" name="txtfechafin" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfechafin') ?>">
+                                </div>
+
+                                <div class="col-sm-12 form-group">
+                                    <button type="submit" class="btn btn-success">Buscar</button>
+                                </div>
+
+                            </form>
+
                         <table id="tablaordena" class="table table-bordered table-hover order-table1">
                             <thead>
                                 <tr>
-                                    
                                     <th>Fecha Recepción</th>
                                     <th>Tarea</th>
                                     <th>Gastos</th>
                                     <th>Monto a Facturar</th>
                                     <th>Cliente</th>
                                     <th>Estado</th>
-                                    <th >Operaciones</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -49,22 +63,7 @@
                                                     { echo 'Recibida';}elseif($atributos->Estado == 2)
                                                     { echo 'En Curso';}elseif($atributos->Estado == 3)
                                                     { echo 'Finalizada';}else{ echo 'No tiene tareas';} ; ?></td>
-                                            <td width="20%" >
-                                                <div class="btn-group">
-                                                  <a href="<?php echo base_url(); ?>mantenimiento/cparteorden/listar/<?php echo $atributos->IdOrden; ?>" class="btn btn-warning" title="Tareas">
-                                                      <span class="fa fa-eye"></span>
-                                                  </a>
-                                                    <a href="<?php echo base_url(); ?>mantenimiento/corden/cedit/<?php echo $atributos->IdOrden; ?>" class="btn btn-info" title="Modificar">
-                                                        <span class="fa fa-pencil"></span>
-                                                    </a>
-                                                    <a href="<?php echo base_url(); ?>mantenimiento/corden/cdelete/<?php echo $atributos->IdOrden; ?>" class="btn btn-danger btn-remove deleteOrden" title="Eliminar">
-                                                        <span class="fa fa-remove"></span>
-                                                    </a>
-                                                    <a href="<?php echo base_url(); ?>mantenimiento/corden/ccompleta/<?php echo $atributos->IdOrden; ?>" class="btn btn-success completaOrden" title="Completa">
-                                                        <span class="fa fa-check-circle"></span>
-                                                    </a>
-                                                </div>
-                                            </td>
+                                          
                                         </tr>
                                     <?php endforeach ?>
                                 <?php endif; ?>
