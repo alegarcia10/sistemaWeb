@@ -56,7 +56,7 @@
                                 <span class="checkmark"></span>
                             </div>
                             <div class="col-sm-1 form-group">
-                                <label>Monto a Facturar &nbsp;&nbsp;&nbsp;</label>
+                                <label>A facturar</label>
                                 <input class="chk_input" type="checkbox" id="monto" name="monto" data-width="20" data-height="20" />
                                 <span class="checkmark"></span>
                             </div>
