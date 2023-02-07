@@ -8,6 +8,7 @@ class Ctrabajos extends CI_Controller {
         redirect(base_url());
     }
     $this->load->model('morden');
+    $this->load->model('mparteorden');
     $this->load->model('mroles');
     }
 
@@ -16,6 +17,7 @@ class Ctrabajos extends CI_Controller {
 public function index(){
     $idrol = $this->session->userdata("idRol");
     $ordenes= $this->morden->mselectorden(); 
+    $tecnicos = $this->mparteorden->mselectTecnicoIdParte($id);
     
     foreach ($ordenes as $orden ) {
         $id=$orden->IdOrden;
@@ -39,6 +41,7 @@ public function index(){
    }
     $data = array (
         'ordenindex' => $ordenes,
+        'tecnico_select' => $tecnicos,
         'roles'=> $this->mroles->obtener($idrol)
     );
 

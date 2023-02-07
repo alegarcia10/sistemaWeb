@@ -98,7 +98,12 @@
                                             
                                             <td width="10%"><?php echo date("d-m-Y", strtotime("$atributos->FechaRecepcion")); ?></td>
                                             <td width="24%"><?php echo $atributos->TareaDesarrollar; ?></td>
-                                            
+                                            <?php if (!empty($tecnico_select)) : ?>
+                                                 <?php foreach ($tecnico_select as $atributos) : ?>
+                                                         <td ><?php echo $atributos->Nombre; ?></td>
+                                                         <?php endforeach ?>
+                                             <?php endif; ?>
+                                             <td width="8%">$<?php echo number_format($atributos->Gastos, 2); ?></td>
                                             <td width="8%">$<?php echo number_format($atributos->Precio, 2); ?></td>
                                             <td width="15%"><?php echo $atributos->Nombre; ?></td>
                                             <td width="10%"><?php if ($atributos->Completa == '1')
