@@ -78,9 +78,8 @@
                         <table id="tablaordena" class="table table-bordered table-hover order-table1">
                             <thead>
                                 <tr>
-                                    <th>Fecha</th>
-                                    <th>Tarea</th>
-                                    <th>Gastos</th>
+                                    <th>Fecha Visita</th>
+                                    <th>Detalle Trabajo</th>
                                     <th>Monto a Facturar</th>
                                   
                                     <th>Cliente</th>
@@ -97,7 +96,7 @@
                                             
                                             <td width="10%"><?php echo date("d-m-Y", strtotime("$atributos->FechaRecepcion")); ?></td>
                                             <td width="24%"><?php echo $atributos->TareaDesarrollar; ?></td>
-                                            <td width="8%"> $<?php echo number_format($atributos->Gastos, 2); ?></td>
+                                            
                                             <td width="8%">$<?php echo number_format($atributos->Precio, 2); ?></td>
                                             <td width="15%"><?php echo $atributos->Nombre; ?></td>
                                             <td width="10%"><?php if ($atributos->Completa == '1')
