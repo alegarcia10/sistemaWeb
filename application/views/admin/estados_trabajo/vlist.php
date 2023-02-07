@@ -98,7 +98,7 @@
                                             
                                             <td width="10%"><?php echo date("d-m-Y", strtotime("$atributos->FechaRecepcion")); ?></td>
                                             <td width="24%"><?php echo $atributos->TareaDesarrollar; ?></td>
-                                            <?php var_dump($tecnico_select); if (!empty($tecnico_select)) : ?>
+                                            <?php if (!empty($tecnico_select)) : ?>
                                                  <?php foreach ($tecnico_select as $atributos) : ?>
                                                          <td ><?php echo $atributos->Nombre; ?></td>
                                                          <?php endforeach ?>

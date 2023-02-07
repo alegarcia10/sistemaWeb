@@ -23,7 +23,7 @@ public function index(){
         $id=$orden->IdOrden;
         $porden=$this->morden->consultarEstado($id);
         $tecnicos = $this->mparteorden->mselectTecnicoIdParte($id);
-
+        var_dump($tecnicos);
        
         if($porden != null){
             $completa=$porden->Completa;
