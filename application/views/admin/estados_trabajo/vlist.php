@@ -80,7 +80,9 @@
                                 <tr>
                                     <th>Fecha Visita</th>
                                     <th>Detalle Trabajo</th>
-                                    <th>Monto a Facturar</th>
+                                    <th>Técnicos</th>
+                                    <th>Monto S/IVA</th>
+                                    <th>Materiales S/IVA</th>
                                   
                                     <th>Cliente</th>
                                  
