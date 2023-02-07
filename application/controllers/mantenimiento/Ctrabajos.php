@@ -17,11 +17,12 @@ class Ctrabajos extends CI_Controller {
 public function index(){
     $idrol = $this->session->userdata("idRol");
     $ordenes= $this->morden->mselectorden(); 
-    $tecnicos = $this->mparteorden->mselectTecnicoIdParte($id);
+   
     
     foreach ($ordenes as $orden ) {
         $id=$orden->IdOrden;
         $porden=$this->morden->consultarEstado($id);
+        $tecnicos = $this->mparteorden->mselectTecnicoIdParte($id);
 
        
         if($porden != null){
