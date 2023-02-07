@@ -23,9 +23,8 @@ public function index(){
         $id=$orden->IdOrden;
         $porden=$this->morden->consultarEstado($id);
         $tecnicos = $this->mparteorden->mselectTecnicoIdParte($id);
-        var_dump($tecnicos);
-        die;
-       
+        
+
         if($porden != null){
             $completa=$porden->Completa;
             $estado=$porden->Estado;
@@ -39,11 +38,15 @@ public function index(){
                 $orden->Estado='4';
             }
 
-
+    }
+            foreach ($ordenes as $orden ) {
+                $id=$orden->IdOrden;
+                $tecnicos = $this->mparteorden->mselectTecnicoIdParte($id);
    }
+        $tecnicos = $data['tecnico_select'];
+
     $data = array (
         'ordenindex' => $ordenes,
-        'tecnico_select' => $tecnicos,
         'roles'=> $this->mroles->obtener($idrol)
     );
 
