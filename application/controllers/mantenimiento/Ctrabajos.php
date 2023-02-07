@@ -39,17 +39,20 @@ public function index(){
             }
 
     }
-            foreach ($ordenes as $orden ) {
-                $id=$orden->IdOrden;
-                $tecnicos = $this->mparteorden->mselectTecnicoIdParte($id);
-   }
-        $tecnicos = $data['tecnico_select'];
+
 
     $data = array (
         'ordenindex' => $ordenes,
+        'tecnico_select' => $tecnicos,
         'roles'=> $this->mroles->obtener($idrol)
     );
 
+
+    foreach ($ordenes as $orden ) {
+        $id=$orden->IdOrden;
+        $tecnicos = $this->mparteorden->mselectTecnicoIdParte($id);
+    }
+        $tecnicos = $data['tecnico_select'];
 
     $ordenes=  $data['ordenindex'];
   
