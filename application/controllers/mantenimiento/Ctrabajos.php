@@ -24,6 +24,7 @@ public function index(){
         $porden=$this->morden->consultarEstado($id);
         $tecnicos = $this->mparteorden->mselectTecnicoIdParte($id);
         var_dump($tecnicos);
+        die;
        
         if($porden != null){
             $completa=$porden->Completa;
