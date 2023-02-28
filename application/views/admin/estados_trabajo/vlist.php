@@ -116,9 +116,9 @@ $(document).ready(function () {
                         extend: 'collection',
                         text: 'Export',
                         buttons: [ 'excel', 'pdf' ]
-                        }
-                ],
-            'colvis'
+                        },
+                ]
+            //'colvis'
           });
 })
 
