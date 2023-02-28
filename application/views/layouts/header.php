@@ -22,6 +22,10 @@
     <link rel="stylesheet" href="<?php echo base_url();?>assets/template/datatables.net-bs/css/dataTables.foundation.min.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/template/datatables.net-bs/css/dataTables.foundation.css">
 
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/DataTables-1.13.3/css/dataTables.bootstrap4.min.css"/>
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/Buttons-2.3.5/css/buttons.bootstrap4.min.css"/>
+
+
     <link rel="stylesheet" href="<?php echo base_url();?>assets/template/dist/css/skins/_all-skins.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/template/dist/css/diseño.css">
     <link href="<?php echo base_url();?>assets/select2-4.0.10/dist/css/select2.min.css" rel="stylesheet" />
