@@ -75,7 +75,7 @@
                         <div class="col-md-12">
                           <h3>Listado Trabajos</h3>
                         </div>
-                        <table id="tablaordena" class="table table-bordered table-hover order-table1">
+                        <table id="tablaordenc" class="table table-bordered table-hover order-table1">
                             <thead>
                                 <tr>
                                     <div id="fecha">
@@ -129,7 +129,7 @@
 
 
 $(document).ready(function () {
-    $('#tablaordena').DataTable({
+    $('#tablaordenc').DataTable({
                "language": {
                    "lengthMenu": "Mostrar _MENU_ registros por página",
                    "zeroRecords": "No se encontraron resultados en su búsqueda",
