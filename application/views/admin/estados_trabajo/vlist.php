@@ -113,8 +113,10 @@ $(document).ready(function () {
                     titleAttr: 'Imprimir',
                     className: 'btn btn-info'
                 },
-                "colvis"{
-                    text: 'Columnas'
+                {
+                    extend: 'colvis',
+                    text : 'Choose',
+                    className: 'btn btn-outline-primary'
                 }
                
             ]           
