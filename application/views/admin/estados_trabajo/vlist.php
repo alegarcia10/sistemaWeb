@@ -116,7 +116,8 @@ $(document).ready(function () {
                 {
                     extends: 'spacer',
                     style: 'bar'
-                } 
+                } ,
+                'spacer'
             
             ]           
                     
