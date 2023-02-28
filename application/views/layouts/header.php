@@ -27,9 +27,9 @@
     <link href="<?php echo base_url();?>assets/select2-4.0.10/dist/css/select2.min.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/sweetalert/dist/sweetalert.css" rel="stylesheet" />
 
-    <link href="DataTables-1.13.3/css/jquery.dataTables.min.css"/>
-    <link href="Buttons-2.3.5/css/buttons.dataTables.min.css"/>
-    <link href="Responsive-2.4.0/css/responsive.dataTables.min.css"/>
+    <link href="<?php echo base_url();?>DataTables-1.13.3/css/jquery.dataTables.min.css"/>
+    <link href="<?php echo base_url();?>Buttons-2.3.5/css/buttons.dataTables.min.css"/>
+    <link href="<?php echo base_url();?>Responsive-2.4.0/css/responsive.dataTables.min.css"/>
 
 
     <script src="<?php echo base_url();?>assets/template/jquery/jquery-3.6.0.min.js"></script>
