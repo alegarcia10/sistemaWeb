@@ -113,12 +113,8 @@ $(document).ready(function () {
                     text: '<i class="fa fa-print"></i>',
                     titleAttr: 'Imprimir',
                     className: 'btn btn-info'
-                },
-                {
-                    extend: 'colvis',
-                    text : 'Columnas',
-                    className: 'btn btn-success'
                 }
+                
                
             ]           
                     
