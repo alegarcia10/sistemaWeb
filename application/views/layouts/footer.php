@@ -24,7 +24,7 @@
 <script src="<?php echo base_url();?>assets/template/datatables.net-bs/js/buttons.print.min.js"></script>
 <script src="<?php echo base_url();?>assets/template/datatables.net-bs/js/buttons.boostrap4.min.js"></script>
 
-<script src="<?php echo base_url();?>assets/template/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+
 <script src="<?php echo base_url();?>assets/template/datatables.net-bs/js/dataTables.bootstrap4.min.js"></script>
 <!-- FastClick -->
 <script src="<?php echo base_url();?>assets/template/fastclick/lib/fastclick.js"></script>
