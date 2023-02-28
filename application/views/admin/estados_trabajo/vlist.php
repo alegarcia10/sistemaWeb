@@ -146,11 +146,9 @@ $(document).ready(function () {
                    },
                },
                "order": [[ 0, "desc" ]],
-               "dom": "Bfrtilp",
-               "buttons":[{
-                    "extend": "excelHtml5",
-                    "className": "btn btn-success"
-
+               "columnDefs":[{
+                    "target": 0,
+                    "visible": false,
                }]
           });
 })
