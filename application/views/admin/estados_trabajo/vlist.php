@@ -35,43 +35,7 @@
                                 </div>
                             </form>
 
-                            <form action="<?php echo base_url();?>mantenimiento/ctrabajos/indexFiltroColumnas" method="POST">   
-                                <div class="col-md-12">
-                                </div>
-                                <div class="col-sm-1 form-group">
-                                    <label>Fecha</label>
-                                    <input class="chk_input" type="checkbox" id="fecha" name="fecha" data-width="20" data-height="20" />
-                                    <span class="checkmark"></span>
-                                </div>
-                                <div class="col-sm-1 form-group">
-                                <label>Tarea</label>
-                                <input class="chk_input" type="checkbox" id="tarea" name="tarea" data-width="20" data-height="20" />
-                                <span class="checkmark"></span>
-                            </div>
-                            <div class="col-sm-1 form-group">
-                                <label>Gastos</label>
-                                <input class="chk_input" type="checkbox" id="gastos" name="gastos" data-width="20" data-height="20" />
-                                <span class="checkmark"></span>
-                            </div>
-                            <div class="col-sm-1 form-group">
-                                <label>A facturar</label>
-                                <input class="chk_input" type="checkbox" id="monto" name="monto" data-width="20" data-height="20" />
-                                <span class="checkmark"></span>
-                            </div>
-                            <div class="col-sm-1 form-group">
-                                <label>Cliente</label>
-                                <input class="chk_input" type="checkbox" id="cliente" name="cliente" data-width="20" data-height="20" />
-                                <span class="checkmark"></span>
-                            </div>
-                            <div class="col-sm-1 form-group">
-                                <label>Estado</label>
-                                <input class="chk_input" type="checkbox" id="estado" name="estado" data-width="20" data-height="20" />
-                                <span class="checkmark"></span>
-                            </div>
-                            <div class="col-sm-12 form-group">
-                                <button type="submit" id=boton onclick="mostrar();" class="btn btn-success">Mostrar</button>
-                            </div>
-                        </form>
+                           
                         <div class="col-md-12">
                           <h3>Listado Trabajos</h3>
                         </div>
@@ -148,26 +112,13 @@ $(document).ready(function () {
                "order": [[ 0, "desc" ]],
                dom: 'Bfrtip',
                buttons: [
-            {
-                extend: 'copyHtml5',
-                exportOptions: {
-                    columns: [ 0, ':visible' ]
-                }
-            },
-            {
-                extend: 'excelHtml5',
-                exportOptions: {
-                    columns: ':visible'
-                }
-            },
-            {
-                extend: 'pdfHtml5',
-                exportOptions: {
-                    columns: [ 0, 1, 2, 5 ]
-                }
-            },
+                        {
+                        extend: 'collection',
+                        text: 'Export',
+                        buttons: [ 'excel', 'pdf' ]
+                        }
+                ],
             'colvis'
-        ]
           });
 })
 
