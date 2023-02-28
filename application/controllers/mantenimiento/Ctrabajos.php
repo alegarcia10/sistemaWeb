@@ -129,7 +129,7 @@ public function indexFiltroColumnas(){
         'estado' => $estado,
         'roles'=> $this->mroles->obtener($idrol)
     );
-    var_dump($data);
+    //var_dump($data);
 
     $ordenes=  $data['ordenindex'];
   

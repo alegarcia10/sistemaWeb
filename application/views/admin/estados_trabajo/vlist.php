@@ -149,7 +149,8 @@ $(document).ready(function () {
           });
 })
 
-function mostrar(){
-    document.getElementById("fecha").style.display = 'none';
-}
+var table = $('#tablaordenc').DataTable();
+table.columns([0,1]).visible(false,false);
+table.columns.adjust().draw(false);
+
 </script>
