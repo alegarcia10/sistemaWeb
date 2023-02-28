@@ -35,7 +35,7 @@
                                 </div>
                             </form>
 
-                           
+                            
                         <div class="col-md-12">
                           <h3>Listado Trabajos</h3>
                         </div>
@@ -113,12 +113,18 @@ $(document).ready(function () {
                dom: 'Bfrtip',
                buttons: [
                         {
-                        extend: 'collection',
-                        text: 'Export',
-                        buttons: [ 'excel', 'pdf' ]
+                            extend: 'collection',
+                            text: 'Show columns',
+                            buttons: [ 'columnsVisibility' ],
+                            visibility: true
                         },
-                ]
-            //'colvis'
+                        {
+                            extend: 'collection',
+                            text: 'Hide columns',
+                            buttons: [ 'columnsVisibility' ],
+                            visibility: false
+                        }
+                    ]
           });
 })
 
