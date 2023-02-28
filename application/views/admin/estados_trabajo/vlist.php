@@ -93,7 +93,7 @@ $(document).ready(function () {
                },
                "order": [[ 0, "desc" ]],
                responsive: "true",
-               dom: 'Bfrtilp',
+               dom: 'Bfrtip',
                buttons: [ 
                 {
                     extend: 'excelHtml5',
