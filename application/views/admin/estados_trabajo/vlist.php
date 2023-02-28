@@ -146,9 +146,9 @@ $(document).ready(function () {
                    },
                },
                "order": [[ 0, "desc" ]],
-               "columnDefs":[{
-                    "target": '1',
-                    "visible": false,
+               columnDefs:[{
+                    targets: [1],
+                    visible: false,
                },],
           });
 })
