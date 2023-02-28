@@ -136,6 +136,16 @@ $(document).ready(function () {
                buttons: [
                         {
                             extend: 'collection',
+                            text: 'Exportar',
+                            buttons: [
+                                'excel',
+                                'csv',
+                                'pdf',
+                                'print'
+                            ]
+                        }
+                        {
+                            extend: 'collection',
                             text: 'Mostrar Columnas',
                             buttons: [ 'columnsVisibility' ],
                             visibility: true
