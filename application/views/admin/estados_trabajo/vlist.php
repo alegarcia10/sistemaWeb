@@ -115,8 +115,8 @@ $(document).ready(function () {
                 },
                 {
                     extend: 'colvis',
-                    text : 'Choose',
-                    className: 'btn btn-outline-primary'
+                    text : 'Columnas',
+                    className: 'btn btn-success'
                 }
                
             ]           
