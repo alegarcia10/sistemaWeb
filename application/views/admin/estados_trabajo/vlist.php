@@ -147,8 +147,8 @@ $(document).ready(function () {
                },
                "order": [[ 0, "desc" ]],
                "columnDefs":[{
-                    "target": "1",
-                    "visible": "false",
+                    "target": 1,
+                    "visible": false,
                },],
           });
 })
