@@ -69,7 +69,7 @@
                                 <span class="checkmark"></span>
                             </div>
                             <div class="col-sm-12 form-group">
-                                <button type="submit" class="btn btn-success">Mostrar</button>
+                                <button type="submit" id=boton onclick="mostrar();" class="btn btn-success">Mostrar</button>
                             </div>
                         </form>
                         <div class="col-md-12">
@@ -78,7 +78,9 @@
                         <table id="tablaordena" class="table table-bordered table-hover order-table1">
                             <thead>
                                 <tr>
+                                    <div id="fecha">
                                     <th>Fecha Visita</th>
+                                    </div>
                                     <th>Detalle Trabajo</th>
                                     
                                     <th>Monto S/IVA</th>
@@ -146,4 +148,8 @@ $(document).ready(function () {
                "order": [[ 0, "desc" ]]
           });
 })
+
+function mostrar(){
+    document.getElementById("fecha").style.display = 'none';
+}
 </script>
