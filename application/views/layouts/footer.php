@@ -26,7 +26,7 @@
 <script src="<?php echo base_url();?>assets/template/datatables.net-bs/js/buttons.foundation.min.js"></script>
 
 
-<script type="text/javascript" src="https://cdn.datatables.net/v/bs4-4.1.1/jq-3.3.1/dt-1.10.23/b-1.6.5/b-colvis-1.6.5/datatables.min.js"></script>
+
 
 <script src="<?php echo base_url();?>assets/template/JSZip-2.5.0/jszip.min.js"></script>
 <script src="<?php echo base_url();?>assets/template/pdfmake-0.1.36/pdfmake.min.js"></script>
