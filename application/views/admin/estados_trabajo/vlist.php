@@ -145,7 +145,7 @@ $(document).ready(function () {
                        "previous": "Anterior"
                    },
                },
-               "order": [[ 0, "desc" ]]
+               "order": [[ 0, "desc" ]],
                "buttons":[{
                     "extend": "excelHtml5",
                     "className": "btn btn-success"
