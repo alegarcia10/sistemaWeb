@@ -20,14 +20,14 @@
 
 
 
-<script src="<?php echo base_url();?>JSZip-2.5.0/jszip.min.js"></script>
-<script src="<?php echo base_url();?>pdfmake-0.1.36/pdfmake.min.js"></script>
-<script src="<?php echo base_url();?>pdfmake-0.1.36/vfs_fonts.js"></script>
-<script src="<?php echo base_url();?>DataTables-1.13.3/js/jquery.dataTables.min.js"></script>
-<script src="<?php echo base_url();?>Buttons-2.3.5/js/dataTables.buttons.min.js"></script>
-<script src="<?php echo base_url();?>Buttons-2.3.5/js/buttons.html5.min.js"></script>
-<script src="<?php echo base_url();?>Buttons-2.3.5/js/buttons.print.min.js"></script>
-<script src="<?php echo base_url();?>Responsive-2.4.0/js/dataTables.responsive.min.js"></script>
+<script src="<?php echo base_url();?>assets/template/JSZip-2.5.0/jszip.min.js"></script>
+<script src="<?php echo base_url();?>assets/template/pdfmake-0.1.36/pdfmake.min.js"></script>
+<script src="<?php echo base_url();?>assets/template/pdfmake-0.1.36/vfs_fonts.js"></script>
+<script src="<?php echo base_url();?>assets/template/DataTables-1.13.3/js/jquery.dataTables.min.js"></script>
+<script src="<?php echo base_url();?>assets/template/Buttons-2.3.5/js/dataTables.buttons.min.js"></script>
+<script src="<?php echo base_url();?>assets/template/Buttons-2.3.5/js/buttons.html5.min.js"></script>
+<script src="<?php echo base_url();?>assets/template/Buttons-2.3.5/js/buttons.print.min.js"></script>
+<script src="<?php echo base_url();?>assets/template/Responsive-2.4.0/js/dataTables.responsive.min.js"></script>
 <!-- FastClick -->
 <script src="<?php echo base_url();?>assets/template/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
