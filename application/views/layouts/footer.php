@@ -15,6 +15,11 @@
 <script src="<?php echo base_url();?>assets/template/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- dataTable -->
 <script src="<?php echo base_url();?>assets/template/datatables.net-bs/js/jquery.dataTables.min.js"></script>
+
+<script src="<?php echo base_url();?>assets/template/datatables.net-bs/js/dataTables.buttons.min.js"></script>
+<script src="<?php echo base_url();?>assets/template/datatables.net-bs/js/buttons.colVis.min.js"></script>
+<script src="<?php echo base_url();?>assets/template/datatables.net-bs/js/buttons.html5.min.js"></script>
+
 <script src="<?php echo base_url();?>assets/template/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 <!-- FastClick -->
 <script src="<?php echo base_url();?>assets/template/fastclick/lib/fastclick.js"></script>
