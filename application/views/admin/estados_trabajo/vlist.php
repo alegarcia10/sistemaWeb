@@ -146,10 +146,14 @@ $(document).ready(function () {
                    },
                },
                "order": [[ 0, "desc" ]]
+               "buttons":[{
+                    "extend": 'excelHtml5',
+                    "className": 'btn btn-success'
+
+               }]
           });
 })
 
-var table = $('#tablaordenc').DataTable();
-table.columns('.fecha').visible(false);
+
 
 </script>
