@@ -98,18 +98,27 @@ $(document).ready(function () {
                buttons: [ 
                 {
                     extend: 'excelHtml5',
+                    exportOptions:{
+                            columns:'visible'
+                    }
                     text: '<i class="fas fa-file-excel"></i>',
                     titleAttr: 'Exportar a Excel',
                     className: 'btn btn-success'
                 },
                 {
                     extend: 'pdfHtml5',
+                    exportOptions:{
+                            columns:'visible'
+                    }
                     text: '<i class="fas fa-file-pdf"></i>',
                     titleAttr: 'Exportar a PDF',
                     className: 'btn btn-danger'
                 },
                 {
                     extend: 'print',
+                    exportOptions:{
+                            columns:'visible'
+                    }
                     text: '<i class="fa fa-print"></i>',
                     titleAttr: 'Imprimir',
                     className: 'btn btn-info'
