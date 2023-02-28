@@ -122,29 +122,18 @@ $(document).ready(function () {
                     text: '<i class="fa fa-print"></i>',
                     titleAttr: 'Imprimir',
                     className: 'btn btn-info'
-                }
+                },
+                'colvis'
                 
                
-            ]           
+            ],
+            columnDefs: [{
+                targets: -1,
+                visible: false
+            }]           
                     
           });
-          var table = $('#tablaordenc').DataTable();
-		
-        function addButtons() {
-            // Colvis
-            var buttonsColvis = new $.fn.dataTable.Buttons(table, {
-                 buttons: [ 
-                 {
-                    extend: 'collection',
-                    buttons:['columnsToggle'],
-                    text : 'Columnas',
-                    className: 'btn btn-outline-primary'
-                 }
-                ]
-            }).container().appendTo($('#idColumns'));;
-        }
-        
-        addButtons();	
+        	
         
 });
 
