@@ -129,7 +129,7 @@
 
 
 $(document).ready(function () {
-    $('#tablaordenc').DataTable({
+    $('#tablaordena').DataTable({
                "language": {
                    "lengthMenu": "Mostrar _MENU_ registros por página",
                    "zeroRecords": "No se encontraron resultados en su búsqueda",
