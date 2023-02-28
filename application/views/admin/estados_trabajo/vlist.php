@@ -115,7 +115,7 @@
 
 
 $(document).ready(function () {
-    var table = $('#tablaordenc').DataTable({
+    $('#tablaordenc').DataTable({
                "language": {
                    "lengthMenu": "Mostrar _MENU_ registros por página",
                    "zeroRecords": "No se encontraron resultados en su búsqueda",
@@ -134,25 +134,15 @@ $(document).ready(function () {
                "order": [[ 0, "desc" ]],
                dom: 'Bfrtip',
                buttons: [
-                        {
-                            extend: 'collection',
-                            text: 'Exportar',
-                            buttons: [
-                                'excel',
-                                'csv',
-                                'pdf',
-                                'print'
-                            ]
-                        },
-                        {
-                            buttons: [ 'columnsToggle' ]
-                            
-                        }
                        
-                    ]
+                        
+                        'columnsToggle' 
+               ]   
+                       
+                    
           });
-          table.buttons().container()
-        .appendTo( '#example_wrapper .col-md-6:eq(0)' );
+        
+        
  
 });
 
