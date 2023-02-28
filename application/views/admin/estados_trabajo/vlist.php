@@ -94,13 +94,13 @@ $(document).ready(function () {
                },
                "order": [[ 0, "desc" ]],
                //responsive: "true",
-               dom: 'Bfrtilp',
+               dom: 'Bfrtip',
                buttons: [ 
                 {
                     extend: 'excelHtml5',
                     exportOptions:{
-                            columns:'visible'
-                    }
+                            columns: ':visible'
+                    },
                     text: '<i class="fas fa-file-excel"></i>',
                     titleAttr: 'Exportar a Excel',
                     className: 'btn btn-success'
@@ -108,8 +108,8 @@ $(document).ready(function () {
                 {
                     extend: 'pdfHtml5',
                     exportOptions:{
-                            columns:'visible'
-                    }
+                            columns:':visible'
+                    },
                     text: '<i class="fas fa-file-pdf"></i>',
                     titleAttr: 'Exportar a PDF',
                     className: 'btn btn-danger'
@@ -117,8 +117,8 @@ $(document).ready(function () {
                 {
                     extend: 'print',
                     exportOptions:{
-                            columns:'visible'
-                    }
+                            columns:':visible'
+                    },
                     text: '<i class="fa fa-print"></i>',
                     titleAttr: 'Imprimir',
                     className: 'btn btn-info'
