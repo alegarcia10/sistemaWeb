@@ -17,15 +17,7 @@
 <!-- dataTable -->
 <script src="<?php echo base_url();?>assets/template/datatables.net-bs/js/jquery.dataTables.min.js"></script>
 
-<script src="<?php echo base_url();?>assets/template/datatables.net-bs/js/dataTables.buttons.min.js"></script>
-<script src="<?php echo base_url();?>assets/template/datatables.net-bs/js/buttons.colVis.min.js"></script>
-<script src="<?php echo base_url();?>assets/template/datatables.net-bs/js/buttons.html5.min.js"></script>
-<script src="<?php echo base_url();?>assets/template/datatables.net-bs/js/dataTables.responsive.min.js"></script>
-<script src="<?php echo base_url();?>assets/template/datatables.net-bs/js/buttons.print.min.js"></script>
-<script src="<?php echo base_url();?>assets/template/datatables.net-bs/js/buttons.boostrap4.min.js"></script>
-<script src="<?php echo base_url();?>assets/template/datatables.net-bs/js/buttons.foundation.min.js"></script>
 
-<script src="<?php echo base_url();?>assets/template/datatables.net-bs/js/dataTables.bootstrap4.min.js"></script>
 
 
 <script src="JSZip-2.5.0/jszip.min.js"></script>
