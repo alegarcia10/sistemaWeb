@@ -93,7 +93,7 @@ $(document).ready(function () {
                },
                "order": [[ 0, "desc" ]],
                responsive: "true",
-               dom: 'Bfrtip',
+               dom: 'Bfrtilp',
                buttons: [ 
                 {
                     extend: 'excelHtml5',
@@ -112,7 +112,8 @@ $(document).ready(function () {
                     text: '<i class="fa fa-print"></i>',
                     titleAttr: 'Imprimir',
                     className: 'btn btn-info'
-                }
+                },
+                {"columnsToggle"}
                
             ]           
                     
