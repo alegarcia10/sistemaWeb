@@ -119,10 +119,7 @@ $(document).ready(function () {
             ]           
                     
           });
-        
-});
-
-var table = $('#tablaordenc').DataTable();
+          var table = $('#tablaordenc').DataTable();
 		
         function addButtons() {
             // Colvis
@@ -138,7 +135,11 @@ var table = $('#tablaordenc').DataTable();
         }
         
         addButtons();	
-    });
+        
+});
+
+
+
 
 
 
