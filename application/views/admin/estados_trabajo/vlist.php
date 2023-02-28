@@ -150,7 +150,6 @@ $(document).ready(function () {
 })
 
 var table = $('#tablaordenc').DataTable();
-table.columns([0,1]).visible(false,false);
-table.columns.adjust().draw(false);
+table.columns('.fecha').visible(false);
 
 </script>
