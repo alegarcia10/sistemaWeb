@@ -22,6 +22,7 @@
 <script src="<?php echo base_url();?>assets/template/datatables.net-bs/js/buttons.html5.min.js"></script>
 <script src="<?php echo base_url();?>assets/template/datatables.net-bs/js/dataTables.responsive.min.js"></script>
 <script src="<?php echo base_url();?>assets/template/datatables.net-bs/js/buttons.print.min.js"></script>
+<script src="<?php echo base_url();?>assets/template/datatables.net-bs/js/buttons.boostrap4.min.js"></script>
 
 <script src="<?php echo base_url();?>assets/template/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 <script src="<?php echo base_url();?>assets/template/datatables.net-bs/js/dataTables.bootstrap4.min.js"></script>
