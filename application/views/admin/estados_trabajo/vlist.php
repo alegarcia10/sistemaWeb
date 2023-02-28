@@ -15,7 +15,8 @@
                     </div>
                 <?php endif; ?>
                 
-                
+                <div id="idColumns" class="container w-100">
+                    </div>
 
                             
                         <div class="col-md-12">
@@ -124,6 +125,24 @@ $(document).ready(function () {
           });
         
 });
+
+var table = $('#tablaordenc').DataTable();
+		
+        function addButtons() {
+            // Colvis
+            var buttonsColvis = new $.fn.dataTable.Buttons(table, {
+                 buttons: [ 
+                 {
+                    extend: 'colvis',
+                    text : 'colvis',
+                    className: 'btn btn-outline-primary'
+                 }
+                ]
+            }).container().appendTo($('#idColumns'));;
+        }
+        
+        addButtons();	
+    });
 
 
 
