@@ -115,7 +115,7 @@
 
 
 $(document).ready(function () {
-    $('#tablaordenc').DataTable({
+    var table = $('#tablaordenc').DataTable({
                "language": {
                    "lengthMenu": "Mostrar _MENU_ registros por página",
                    "zeroRecords": "No se encontraron resultados en su búsqueda",
@@ -158,6 +158,9 @@ $(document).ready(function () {
                         }
                     ]
           });
+          table.buttons().container()
+        .appendTo( '#example_wrapper .col-md-6:eq(0)' );
+ 
 })
 
 
