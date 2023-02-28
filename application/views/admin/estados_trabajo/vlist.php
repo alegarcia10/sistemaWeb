@@ -111,7 +111,14 @@ $(document).ready(function () {
                },
                "order": [[ 0, "desc" ]],
                dom: 'Bfrtip',
-               buttons: [ 'columnsToggle' ]           
+               buttons: [ 
+                'columnsToggle',
+                {
+                    extends: 'spacer',
+                    style: 'bar'
+                } 
+            
+            ]           
                     
           });
         
