@@ -92,7 +92,7 @@ $(document).ready(function () {
                    },
                },
                "order": [[ 0, "desc" ]],
-               responsive: "true",
+               //responsive: "true",
                dom: 'Bfrtilp',
                buttons: [ 
                 {
@@ -113,7 +113,9 @@ $(document).ready(function () {
                     titleAttr: 'Imprimir',
                     className: 'btn btn-info'
                 },
-                "colvis"
+                "colvis"{
+                    text: 'Columnas'
+                }
                
             ]           
                     
