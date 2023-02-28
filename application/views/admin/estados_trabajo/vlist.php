@@ -88,29 +88,7 @@
     </section>
 </div>
 
-<style>
-   li.buttons-columnVisibility a {
-       cursor:pointer;
-       }
-   li.buttons-columnVisibility.active a {
-       background-color:transparent;
-       color:inherit; 
-       }
-   li.buttons-columnVisibility.active a:hover {
-       background-color:#f5f5f5;
-       color:inherit;
-       }
-   li.buttons-columnVisibility a:before {
-       width:25px;
-       font-family:"Glyphicons Halflings";
-       content:"\e013";
-       color:transparent;
-       padding-right:10px;
-       }
-   li.buttons-columnVisibility.active a:before {
-       color:inherit;
-       }
-</style>
+
 <script type="text/javascript">
 
 
@@ -133,17 +111,10 @@ $(document).ready(function () {
                },
                "order": [[ 0, "desc" ]],
                dom: 'Bfrtip',
-               buttons: [
-                       
-                        
-                        'columnsToggle' 
-               ]   
-                       
+               buttons: [ 'columnsToggle' ]           
                     
           });
         
-        
- 
 });
 
 
