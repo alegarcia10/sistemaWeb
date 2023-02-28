@@ -145,17 +145,10 @@ $(document).ready(function () {
                             ]
                         },
                         {
-                            extend: 'collection',
-                            text: 'Mostrar Columnas',
-                            buttons: [ 'columnsVisibility' ],
-                            visibility: true
-                        },
-                        {
-                            extend: 'collection',
-                            text: 'Ocultar Columnas',
-                            buttons: [ 'columnsVisibility' ],
-                            visibility: false
+                            buttons: [ 'columnsToggle' ]
+                            
                         }
+                       
                     ]
           });
           table.buttons().container()
