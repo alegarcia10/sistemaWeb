@@ -113,7 +113,7 @@ $(document).ready(function () {
                     titleAttr: 'Imprimir',
                     className: 'btn btn-info'
                 },
-                {"columnsToggle"}
+                {"colvis"}
                
             ]           
                     
