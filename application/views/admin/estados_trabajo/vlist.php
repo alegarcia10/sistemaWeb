@@ -114,13 +114,13 @@ $(document).ready(function () {
                buttons: [
                         {
                             extend: 'collection',
-                            text: 'Show columns',
+                            text: 'Mostrar Columnas',
                             buttons: [ 'columnsVisibility' ],
                             visibility: true
                         },
                         {
                             extend: 'collection',
-                            text: 'Hide columns',
+                            text: 'Ocultar Columnas',
                             buttons: [ 'columnsVisibility' ],
                             visibility: false
                         }
