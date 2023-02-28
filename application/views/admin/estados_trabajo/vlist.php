@@ -143,7 +143,7 @@ $(document).ready(function () {
                                 'pdf',
                                 'print'
                             ]
-                        }
+                        },
                         {
                             extend: 'collection',
                             text: 'Mostrar Columnas',
