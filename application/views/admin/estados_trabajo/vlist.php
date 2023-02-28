@@ -127,7 +127,7 @@ $(document).ready(function () {
                  buttons: [ 
                  {
                     extend: 'collection',
-                    buttons:['columnsToggle']
+                    buttons:['columnsToggle'],
                     text : 'Columnas',
                     className: 'btn btn-outline-primary'
                  }
