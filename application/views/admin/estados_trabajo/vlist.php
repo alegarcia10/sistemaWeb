@@ -127,7 +127,7 @@ $(document).ready(function () {
                  buttons: [ 
                  {
                     extend: 'colvis',
-                    text : 'colvis',
+                    text : 'Columnas',
                     className: 'btn btn-outline-primary'
                  }
                 ]
