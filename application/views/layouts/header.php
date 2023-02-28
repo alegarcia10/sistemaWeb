@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="<?php echo base_url();?>assets/template/datatables.net-bs/css/dataTables.bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/template/datatables.net-bs/css/buttons.foundation.min.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/template/datatables.net-bs/css/dataTables.foundation.min.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/datatables.net-bs/css/dataTables.foundation.css">
 
     <link rel="stylesheet" href="<?php echo base_url();?>assets/template/dist/css/skins/_all-skins.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/template/dist/css/diseño.css">
