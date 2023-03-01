@@ -25,19 +25,25 @@
                         <table id="tablaordenc" class="table table-bordered table-hover order-table1">
                             <thead>
                                 <tr>
-                                    <div id="fecha">
                                     <th>Fecha Visita</th>
-                                    </div>
-                                    <th>Detalle Trabajo</th>
+
+                                    <th>Cliente</th>
                                     
+                                    <th>Detalle Trabajo</th>
+
+                                    <th>Estado</th>
+                                    
+                                    <th>Técnicos</th>
+
                                     <th>Monto S/IVA</th>
+                                    
                                     <th>Materiales S/IVA</th>
                                   
-                                    <th>Cliente</th>
-                                 
-                                 
-                                    <th>Estado</th>
-                                  
+                                    <th>Ganancia</th>
+
+                                    <th>HH Invertidas</th>
+
+                                    <th>Rentabilidad</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -46,19 +52,21 @@
                                         <tr>
                                             
                                             <td width="10%"><?php echo date("d-m-Y", strtotime("$atributos->FechaRecepcion")); ?></td>
-                                            <td width="24%"><?php echo $atributos->TareaDesarrollar; ?></td>
-                                           
-                                             <td width="8%">$<?php echo number_format($atributos->Gastos, 2); ?></td>
-                                            <td width="8%">$<?php echo number_format($atributos->Precio, 2); ?></td>
                                             <td width="15%"><?php echo $atributos->Nombre; ?></td>
+                                            <td width="24%"><?php echo $atributos->TareaDesarrollar; ?></td>
                                             <td width="10%"><?php if ($atributos->Completa == '1')
                                                     { echo 'Completada';}elseif($atributos->Estado == 0)
                                                     { echo 'Pendiente';}elseif($atributos->Estado == 1)
                                                     { echo 'Recibida';}elseif($atributos->Estado == 2)
                                                     { echo 'En Curso';}elseif($atributos->Estado == 3)
                                                     { echo 'Finalizada';}else{ echo 'No tiene tareas';} ; ?></td>
-                                          
-                                        </tr>
+                                            <td></td>
+                                             <td width="8%">$<?php echo number_format($atributos->Gastos, 2); ?></td>
+                                            <td width="8%">$<?php echo number_format($atributos->Precio, 2); ?></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr> 
                                     <?php endforeach ?>
                                 <?php endif; ?>
                             </tbody>
