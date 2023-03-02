@@ -55,7 +55,8 @@ public function index(){
         $tecnicos = $data['tecnico_select'];
     
     $ordenes=  $data['ordenindex'];
-  
+    var_dump($data);
+    die;
 
     foreach ($ordenes as $orden ) {
          $id=$orden->IdOrden;
