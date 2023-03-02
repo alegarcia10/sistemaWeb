@@ -48,17 +48,18 @@ public function index(){
     );
 
 
+    
         $tecnicos = $data['tecnico_select'];
     
     $ordenes=  $data['ordenindex'];
-    /*var_dump($data);
-    die;*/
+    
 
     foreach ($ordenes as $orden ) {
          $id=$orden->IdOrden;
          $orden->Gastos=$this->morden->consultaGatosOrden($id);
-         $orden->ejemplo="hola";
+         $orden->tecnicos = $this->mparteorden->mselectTecnicoIdParte($id);
     }
+    
     var_dump($ordenes);
     die;
 
