@@ -57,7 +57,7 @@ public function index(){
     foreach ($ordenes as $orden ) {
          $id=$orden->IdOrden;
          $orden->Gastos=$this->morden->consultaGatosOrden($id);
-         $orden->tecnicos = $this->mparteorden->mselectTecnicoIdParte($id);
+         $orden->tecnicos = $this->mparteorden->mselectTecnicoId($id);
     }
     
     var_dump($ordenes);

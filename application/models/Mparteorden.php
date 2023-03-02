@@ -96,6 +96,22 @@ class Mparteorden extends CI_Model{
         return $resultado->result();
     }
 
+    public function mselectTecnicoId($id){
+
+        $resultado =	$query = $this->db->query("SELECT tc.Nombre FROM tecnicoorden t
+           INNER JOIN tecnico tc ON t.Dni = tc.Dni where t.IdParte=$id ;");
+         $tecnico=$resultado->result();
+         $resultado="";
+         foreach($tecnicos as $tecnico){
+            $nombre = $tecnico["Nombre"];
+            $resultado = $resultado.$nombre;
+            var_dump($nombre);
+            die;
+         }
+         
+    }
+
+
 
 
     //MODIFICAR material
