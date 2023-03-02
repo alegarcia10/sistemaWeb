@@ -48,21 +48,19 @@ public function index(){
     );
 
 
-    foreach ($ordenes as $orden ) {
-        $id=$orden->IdOrden;
-        $tecnicos = $this->mparteorden->mselectTecnicoIdParte($id);
-    }
         $tecnicos = $data['tecnico_select'];
     
     $ordenes=  $data['ordenindex'];
-    var_dump($data);
-    die;
+    /*var_dump($data);
+    die;*/
 
     foreach ($ordenes as $orden ) {
          $id=$orden->IdOrden;
          $orden->Gastos=$this->morden->consultaGatosOrden($id);
+         $orden->ejemplo="hola";
     }
-
+    var_dump($ordenes);
+    die;
 
     //$ordenesCompletas=  $data['ordencompletas'];
 
