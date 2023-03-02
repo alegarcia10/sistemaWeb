@@ -105,7 +105,7 @@ class Mparteorden extends CI_Model{
          foreach($tecnicos as $tecnico){
             $nombre = $tecnico->Nombre;
             $resultado = $resultado.$nombre;
-            var_dump($nombre);
+            var_dump($id);
             die;
          }
          
