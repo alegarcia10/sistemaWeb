@@ -60,8 +60,7 @@ public function index(){
          $orden->tecnicos = $this->mparteorden->mselectTecnicoId($id);
     }
     
-    var_dump($ordenes);
-    die;
+  
 
     //$ordenesCompletas=  $data['ordencompletas'];
 
