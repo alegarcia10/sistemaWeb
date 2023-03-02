@@ -107,8 +107,7 @@ class Mparteorden extends CI_Model{
             $resultado = $resultado." , ".$nombre;
             
          }
-         var_dump($resultado);
-            die;
+         return $resultado;
          
     }
 
