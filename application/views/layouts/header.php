@@ -19,8 +19,8 @@
 
    
 
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">  
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/font-awesome/css/all.css">
+    
 
     <link rel="stylesheet" href="<?php echo base_url();?>assets/template/DataTables-1.13.3/css/dataTables.bootstrap4.min.css"/>
     <link rel="stylesheet" href="<?php echo base_url();?>assets/template/Buttons-2.3.5/css/buttons.bootstrap4.min.css"/>
