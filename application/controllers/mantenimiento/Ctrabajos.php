@@ -49,7 +49,7 @@ public function index(){
 
 
     
-        $tecnicos = $data['tecnico_select'];
+        // $tecnicos = $data['tecnico_select'];
     
     $ordenes=  $data['ordenindex'];
     
