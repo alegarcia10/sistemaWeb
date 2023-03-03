@@ -10,7 +10,8 @@
     <!-- Bootstrap 3.3.7 -->
     <link rel="stylesheet" href="<?php echo base_url();?>assets/template/bootstrap/css/bootstrap.min.css">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/font-awesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/fontawesome/css/solid.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="<?php echo base_url();?>assets/template/dist/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
