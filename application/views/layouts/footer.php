@@ -22,7 +22,7 @@
 <script src="<?php echo base_url();?>assets/template/datatables.net-bs/js/dataTables.responsive.min.js"></script>
 
 
-<script src="<?php echo base_url();?>assets/template/fontawasome/js/fontawesome.min.js"></script>
+
 
 
 
