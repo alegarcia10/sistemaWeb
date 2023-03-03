@@ -59,7 +59,7 @@
                                                       <span class="fa fa-eye"></span>
                                                   </a>
                                                     <a href="<?php echo base_url(); ?>mantenimiento/corden/cedit/<?php echo $atributos->IdOrden; ?>" class="btn btn-info" title="Modificar">
-                                                        <span class="fa fa-pencil"></span>
+                                                        <span class="fa-regular fa-pen"></span>
                                                     </a>
                                                     <a href="<?php echo base_url(); ?>mantenimiento/corden/cdelete/<?php echo $atributos->IdOrden; ?>" class="btn btn-danger btn-remove deleteOrden" title="Eliminar">
                                                         <span class="fa fa-remove"></span>
