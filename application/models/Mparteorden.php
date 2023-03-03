@@ -105,7 +105,7 @@ class Mparteorden extends CI_Model{
          foreach($tecnicos as $tecnico){
             $resultado="";
             $nombre = $tecnico->Nombre;
-            $resultado = $resultado.$nombre.", ";
+            $resultado = $resultado."".$nombre.", ";
             
          }
          return $resultado;
