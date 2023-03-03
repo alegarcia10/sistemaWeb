@@ -59,7 +59,7 @@ public function index(){
          $parte=$this->mparteorden->mselectparteorden($id);
          
          $orden->Gastos=$this->morden->consultaGatosOrden($id);
-         $orden->tecnicos = $this->mparteorden->mselectTecnicoId($parte->idParte);
+         $orden->tecnicos = $this->mparteorden->mselectTecnicoId($parte->IdParte);
     }
     
   
