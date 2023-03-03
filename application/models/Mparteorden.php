@@ -101,9 +101,9 @@ class Mparteorden extends CI_Model{
         $resultado =	$query = $this->db->query("SELECT tc.Nombre FROM tecnicoorden t
            INNER JOIN tecnico tc ON t.Dni = tc.Dni where t.IdParte=$id ;");
          $tecnicos=$resultado->result();
-         //$resultado="";
+         $resultado="";
          foreach($tecnicos as $tecnico){
-            $resultado="";
+            //$resultado="";
             $nombre = $tecnico->Nombre;
             $resultado = $resultado."".$nombre;
             
