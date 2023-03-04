@@ -21,13 +21,13 @@ public function index(){
     
     foreach ($ordenes as $orden ) {
         $id=$orden->IdOrden;
-       
+        $band = false;
         $parteorden = $this->mparteorden->mselectparteorden($id);
         $orden->tecnicos="";
         if($parteorden != null){
             $tec="";
             $horasAcum=0;
-            $band = false;
+           
             foreach($parteorden as $parte){
                 
                 $tecnicos = $this->mparteorden->mselectTecnicoId($parte->IdParte);
