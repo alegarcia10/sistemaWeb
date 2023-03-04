@@ -110,7 +110,7 @@ $(document).ready(function () {
       style: "multi",
       selector: "td:first-child",
     },
-               dom: 'C<"clear">lfrtip',
+               dom: 'B<"clear">lfrtip',
                scrollY:        "300px",
                scrollX:        true,
                scrollCollapse: true,
