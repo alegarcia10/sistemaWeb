@@ -25,16 +25,17 @@ public function index(){
         $parteorden = $this->mparteorden->mselectparteorden($id);
         $orden->tecnicos="";
         if($parteorden != null){
+            $tec="";
             foreach($parteorden as $parte){
                 
                 $tecnicos = $this->mparteorden->mselectTecnicoId($parte->IdParte);
-
+                $tec=$tec."".$tecnicos." ";
             }
         }else{
             $tecnicos="No tiene técnicos";
             }
         
-        $orden->TEC=$tecnicos;
+        $orden->tecnicos=$tec;
         //var_dump($tecnicos);
     
         /*var_dump("----------------------------------------------------------------");
