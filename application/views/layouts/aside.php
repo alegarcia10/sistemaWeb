@@ -27,13 +27,13 @@
                     
                         <ul class="treeview-menu">
                         <?php if ($roles->cliente =="1") { ?>
-                            <li><a href="<?php echo base_url(); ?>mantenimiento/ccliente"> <i class="fa-solid fa-circle"></i> Clientes</a></li>
+                            <li><a href="<?php echo base_url(); ?>mantenimiento/ccliente"> <i class="fa-solid fa-person"></i> Clientes</a></li>
                             <?php } ?>
                         <?php if ($roles->tecnico =="1") { ?>
-                            <li><a href="<?php echo base_url(); ?>mantenimiento/ctecnico"><i class="fa fa-circle-o"></i> Técnicos</a></li>
+                            <li><a href="<?php echo base_url(); ?>mantenimiento/ctecnico"><i class="fa-solid fa-user-gear"></i> Técnicos</a></li>
                         <?php } ?>
                         <?php if ($roles->ordenes =="1") { ?>
-                            <li><a href="<?php echo base_url(); ?>mantenimiento/corden"><i class="fa fa-circle-o"></i> Órdenes</a></li>
+                            <li><a href="<?php echo base_url(); ?>mantenimiento/corden"><i class="fa-solid fa-file-lines"></i> Órdenes</a></li>
                         <?php } ?>
                         </ul>
                     </li>

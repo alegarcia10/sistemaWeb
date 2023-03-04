@@ -118,7 +118,7 @@
                                                         <span class="fa-solid fa-circle-xmark"></span>
                                                     </a>
                                                     <a href="<?php echo base_url(); ?>mantenimiento/corden/cdescompleta/<?php echo $atributos->IdOrden; ?>" class="btn btn-success reanudarOrden" title="Reanudar">
-                                                        <span class="fa fa-clock-o"></span>
+                                                        <span class="fa-solid fa-clock"></span>
                                                     </a>
                                                 </div>
                                             </td>
