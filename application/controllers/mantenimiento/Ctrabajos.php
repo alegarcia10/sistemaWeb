@@ -33,7 +33,7 @@ public function index(){
                     foreach($tecnicos as $tecnico){
                     
                     $nombre = $tecnico->Nombre;
-                        if(str_contains($tec, $nombre)){
+                        if(strpos($tec, $nombre) !== false){
                             $tec=$tec."".$nombre." ";
                         }
                     }
@@ -44,12 +44,6 @@ public function index(){
             }
         
         $orden->TEC=$tec;
-        //var_dump($tecnicos);
-    
-        /*var_dump("----------------------------------------------------------------");
-       
-        var_dump($orden);
-        die;*/
 
 
 
