@@ -69,6 +69,12 @@ public function index(){
                 $orden->Estado='4';
             }
 
+         
+    $orden->Precio = (int)$orden->Precio;
+    $orden->Gastos = (int)$orden->Gastos;
+
+    $orden->Ganancia = $orden->Precio - $orden->Gastos;
+
     }
 
 
@@ -92,8 +98,7 @@ public function index(){
          $orden->Gastos=$this->morden->consultaGatosOrden($id);
          $orden->tecnicos = $this->mparteorden->mselectTecnicoId($id);
     }
-    
-  
+   
 
     //$ordenesCompletas=  $data['ordencompletas'];
 
