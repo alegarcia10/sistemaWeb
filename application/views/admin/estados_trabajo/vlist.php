@@ -80,7 +80,7 @@
 </div>
 <style>
 
-td:last-child {text-align:center;}
+
 
 </style>
 
