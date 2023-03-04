@@ -140,8 +140,9 @@ $(document).ready(function () {
                 {
                     extend :'colvis',
                     text:"Columnas",
-                    columnText : function ( dt, idx, title ) { return (idx+1)+': '+title; },
-                    className: 'btn btn-primary'
+                    className: 'btn btn-primary',
+                    columnText : function ( dt, idx, title ) { return (idx+1)+': '+title; }
+                    
                    
                     
                 }
