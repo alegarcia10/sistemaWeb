@@ -54,7 +54,7 @@ public function index(){
                     $interval = date_diff($date1, $date2);
                     $hora =$interval->format(' %H :%I : %S ');
                     
-                    if($FechaInicio != null && $FechaFin != null){
+                    if($FechaInicio != null || $FechaFin != null){
                         var_dump($hora);
 
                     var_dump($FechaInicio);
@@ -64,6 +64,7 @@ public function index(){
                     $horasAcum = $horasAcum+$h1;
                     }
                     else{
+                        var_dump("Entra al else");
                         $horasAcum = $horasAcum + 0;
                     }
                     
