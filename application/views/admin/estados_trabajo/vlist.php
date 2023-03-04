@@ -108,9 +108,7 @@ $(document).ready(function () {
                //responsive: "true",
     
                dom: 'B<"clear">lfrtip',
-               scrollY:        "300px",
-               scrollX:        true,
-               scrollCollapse: true,
+               
                buttons: [ 
                 {
                     extend: 'excelHtml5',
