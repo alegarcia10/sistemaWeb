@@ -141,6 +141,7 @@ $(document).ready(function () {
                 },
                 {
                     extend :'colvis',
+                    text:"columnas",
                     columnText : function ( dt, idx, title ) { return (idx+1)+': '+title; }
                    
                     
