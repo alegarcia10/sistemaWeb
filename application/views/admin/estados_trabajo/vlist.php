@@ -111,6 +111,10 @@ $(document).ready(function () {
                },
                "order": [[ 0, "desc" ]],
                //responsive: "true",
+               select: {
+      style: "multi",
+      selector: "td:first-child",
+    },
                dom: 'Bfrtip',
                scrollY:        "300px",
                scrollX:        true,
