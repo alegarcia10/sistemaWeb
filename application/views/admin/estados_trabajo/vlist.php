@@ -88,7 +88,7 @@
 
 
 $(document).ready(function () {
-   var table=  $('#tablaordenc').DataTable({
+   var table =  $('#tablaordenc').DataTable({
                "language": {
                    "lengthMenu": "Mostrar _MENU_ registros por página",
                    "zeroRecords": "No se encontraron resultados en su búsqueda",
@@ -152,11 +152,11 @@ $(document).ready(function () {
             fnDrawCallback: function () {
        $('.buttons-colvis').attr("id", "showHideColumnButton").removeClass('dt-buttonbuttons-collection buttons-colvis');}
             
-       table.buttons().container()
-        .appendTo( '#example_wrapper .col-md-6:eq(0)' );
+       
                      
                     
           });
+          table.buttons().container().appendTo( '#example_wrapper .col-md-6:eq(0)' );
         	
         
 });
