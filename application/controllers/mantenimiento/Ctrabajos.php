@@ -32,7 +32,7 @@ public function index(){
                 $tec=$tec."".$tecnicos." ";
             }
         }else{
-            $tecnicos="No tiene técnicos";
+            $tec="No tiene técnicos";
             }
         
         $orden->tecnicos=$tec;
