@@ -80,23 +80,7 @@
 </div>
 <style>
 
-div.dt-button-background {
-        position: unset !important;
-        z-index: 0;
-    }
-    .dt-button-collection {
-        margin-top: 5.5px !important;
-        margin-bottom: 5px !important;
-        position: fixed !important;
-    }
-    .dt-button-collection button {
-        background-color: white !important;
-        border-color: gray;
-    }
-    .dt-button-collection button.active {
-        background-color: #bbcdb0 !important;
-        border-color: #bbcdb0;
-        color: white
+
 
 </style>
 
@@ -160,7 +144,14 @@ $(document).ready(function () {
                 },
                 {
                     extend :'colvis',
-                    text: "Columnas"
+                    postfixButtons: ['colvisRestore'],
+                        buttons : [{
+                            extend: 'columnsToggle',
+                            action: function (e, dt, node, config) {
+                                alert('Activated!');
+                                console.log("Activated!");
+                            },
+                        }]
                     
                 }
                
