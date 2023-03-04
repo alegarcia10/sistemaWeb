@@ -145,9 +145,7 @@ $(document).ready(function () {
                 {
                     extend :'colvis',
                     text: "Columnas"
-                    action: function ( e, dt, node, config ) {
-                            dt.column( -2 ).visible( ! dt.column( -2 ).visible() );
-                        }
+                    
                 }
                
             ],
