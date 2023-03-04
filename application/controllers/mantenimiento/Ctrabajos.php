@@ -34,11 +34,10 @@ public function index(){
                     
                     $nombre = $tecnico->Nombre;
                         if(strlen(strstr($tec, $nombre))>0){
-                            var_dump("Entro if");
-                            //$tec=$tec."".$nombre." ";
+                            
                         }
                         else{
-                            var_dump("Entro else");
+                            
                             $tec=$tec."".$nombre." ";
                         }
                        
@@ -80,40 +79,6 @@ public function index(){
     }
 
 
-    $data = array (
-        'ordenindex' => $ordenes,
-        'tecnico_select' => $tecnicos,
-        'roles'=> $this->mroles->obtener($idrol)
-    );
-
-
-    
-    $tecnicos = $data['tecnico_select'];
-    
-    $ordenes=  $data['ordenindex'];
-    
-    
-
-   /* foreach ($ordenes as $orden ) {
-         $id=$orden->IdOrden;
-         //$parte=$this->mparteorden->mselectparteorden($orden->IdOrden);
-         
-         $orden->Gastos=$this->morden->consultaGatosOrden($id);
-         $orden->tecnicos = $this->mparteorden->mselectTecnicoId($id);
-    }*/
-   
-
-    //$ordenesCompletas=  $data['ordencompletas'];
-
-
-
-    /*foreach ($ordenesCompletas as $orden ) {
-         $id=$orden->IdOrden;
-         $orden->Gastos=$this->morden->consultaGatosOrden($id);
-    }*/
-
-
-    //die;
 
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside',$data);
