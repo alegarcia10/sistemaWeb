@@ -27,6 +27,7 @@ public function index(){
         if($parteorden != null){
             $tec="";
             $horasAcum=0;
+            $band = false;
             foreach($parteorden as $parte){
                 
                 $tecnicos = $this->mparteorden->mselectTecnicoId($parte->IdParte);
@@ -57,6 +58,7 @@ public function index(){
                     $hora =$interval->format(' %H :%I : %S ');
                     
                     if($FechaInicio != null || $FechaFin != null){
+                        $band = true;
                         var_dump($hora);
 
                     var_dump($FechaInicio);
@@ -66,6 +68,7 @@ public function index(){
                     $horasAcum = $horasAcum+$h1;
                     }
                     else{
+                        //$band=false;
                         var_dump("Entra al else");
                         $horasAcum = $horasAcum + 0;
                     }
@@ -84,13 +87,16 @@ public function index(){
                             
             } //recorre parte orden
         }else{
+
             $tec="No tiene técnicos";
             $horasAcum="No tiene Horas acumuladas";
 
             }
         
         $orden->TEC=$tec;
+        if($band == true){
         $orden->HH=$this->mparteorden->segundos_hhmm($horasAcum);
+        }
 
 
 
@@ -98,6 +104,7 @@ public function index(){
         if($porden != null){
             $completa=$porden->Completa;
             $estado=$porden->Estado;
+            
 
             $orden->Completa=$completa;
             $orden->Estado=$estado;
