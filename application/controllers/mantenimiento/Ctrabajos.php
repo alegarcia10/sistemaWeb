@@ -25,7 +25,7 @@ public function index(){
         $parteorden = $this->mparteorden->mselectparteorden($id);
         $orden->tecnicos="";
         if($parteorden != null){
-            $tec="ALEJANDRO";
+            $tec="";
             foreach($parteorden as $parte){
                 
                 $tecnicos = $this->mparteorden->mselectTecnicoId($parte->IdParte);
@@ -34,13 +34,14 @@ public function index(){
                     
                     $nombre = $tecnico->Nombre;
                         if(strlen(strstr($tec, $nombre))>0){
-                            var_dump("Entro");
+                            var_dump("Entro if");
+                            //$tec=$tec."".$nombre." ";
+                        }
+                        else{
+                            var_dump("Entro else");
                             $tec=$tec."".$nombre." ";
                         }
-                        var_dump($tec);
-                        var_dump("-----------------------");
-                        var_dump($nombre);
-
+                       
                         
                     }
                 
