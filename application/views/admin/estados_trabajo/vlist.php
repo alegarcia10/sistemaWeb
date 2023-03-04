@@ -145,12 +145,9 @@ $(document).ready(function () {
                     
                 }
                
-            ],
+            ]
             
-            columnDefs: [{
-                targets: -1,
-                visible: false
-            }]           
+                     
                     
           });
         	
