@@ -79,16 +79,8 @@
     </section>
 </div>
 <style>
-/* Ensure that the demo table scrolls */
-th, td { white-space: nowrap; }
-    div.dataTables_wrapper {
-        width: 800px;
-        margin: 0 auto;
-    }
- 
-    div.ColVis {
-        float: left;
-    }
+
+
 
 </style>
 
