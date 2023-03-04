@@ -79,18 +79,12 @@
     </section>
 </div>
 <style>
-div.dt-button-collection button.dt-button:active:not(.disabled), div.dt-button-collection button.dt-button.active:not(.disabled), div.dt-button-collection div.dt-button:active:not(.disabled), div.dt-button-collection div.dt-button.active:not(.disabled), div.dt-button-collection a.dt-button:active:not(.disabled), div.dt-button-collection a.dt-button.active:not(.disabled) {
-            background-color: #dadada;
-            background-image: -webkit-linear-gradient(top, #76b900 0%, #dadada 100%);
-            background-image: -moz-linear-gradient(top, #76b900 0%, #dadada 100%);
-            background-image: -ms-linear-gradient(top, #76b900 0%, #dadada 100%);
-            background-image: -o-linear-gradient(top, #76b900 0%, #dadada 100%);
-            background-image: linear-gradient(to bottom, #76b900 0%, #dadada 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f0f0f0', EndColorStr='#dadada');
-            box-shadow: inset 1px 1px 3px #666;
-            font-family: 'Trebuchet MS',sans-serif;
-            font-size: 12px;
-        }
+.dt-button-collection{
+
+display: block;
+height: 450px !important;
+overflow-y: scroll !important;
+}
 
 
 </style>
