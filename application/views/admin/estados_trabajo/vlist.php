@@ -116,9 +116,7 @@ $(document).ready(function () {
       selector: "td:first-child",
     },
                dom: 'Bfrtip',
-               scrollY:        "300px",
-               scrollX:        true,
-               scrollCollapse: true,
+               
                buttons: [ 
                 {
                     extend: 'excelHtml5',
