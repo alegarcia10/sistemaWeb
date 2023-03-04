@@ -41,7 +41,7 @@
                                     <td>
                                         <div class="btn-group">
                                             <a href="<?php echo base_url();?>mantenimiento/cusuario/cedit/<?php echo $atributos->idUsuario; ?>" class="btn btn-info">
-                                                <span class="fa fa-pencil"></span>
+                                                <span class="fa-solid fa-pen"></span>
                                             </a>
                                             <a href="<?php echo base_url();?>mantenimiento/cusuario/cdelete/<?php echo $atributos->idUsuario; ?>" class="btn btn-danger btn-remove deleteUsuario">
                                                 <span class="fa fa-remove"></span>

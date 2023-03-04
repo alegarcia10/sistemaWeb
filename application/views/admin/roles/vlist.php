@@ -37,7 +37,7 @@
                                     <td>
                                         <div class="btn-group">
                                             <a href="<?php echo base_url();?>mantenimiento/croles/cedit/<?php echo $atributos->idRol; ?>" class="btn btn-info">
-                                                <span class="fa fa-pencil"></span>
+                                                <span class="fa-solid fa-pen"></span>
                                             </a>
                                             <a href="<?php echo base_url();?>mantenimiento/croles/cdelete/<?php echo $atributos->idRol; ?>" class="btn btn-danger btn-remove deleteRoles">
                                                 <span class="fa fa-remove"></span>

@@ -45,7 +45,7 @@
                                           <td  >
                                               <div class="btn-group">
                                                 <a href="<?php echo base_url(); ?>mantenimiento/ccliente/cedit/<?php echo $atributos->IdCliente; ?>" class="btn btn-info" title="Modificar">
-                                                    <span class="fa-regular fa-pen"></span>
+                                                    <span class="fa-solid fa-pen"></span>
                                                 </a>
                                    
                                               </div>
