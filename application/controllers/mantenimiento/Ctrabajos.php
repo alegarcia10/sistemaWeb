@@ -31,12 +31,12 @@ public function index(){
         }
 
         $orden->tecnicos=$tecnicos;
-        var_dump($tecnicos);
+        //var_dump($tecnicos);
     
-        var_dump("----------------------------------------------------------------");
+        /*var_dump("----------------------------------------------------------------");
        
         var_dump($orden);
-        die;
+        die;*/
 
 
 
