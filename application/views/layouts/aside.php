@@ -16,7 +16,7 @@
                     <li class="treeview">
                         <a href="#">
                         <?php if ($roles->cliente =="1" || $roles->tecnico =="1" || $roles->ordenes =="1") { ?>
-                            <i class="fa-solid fa-layer-group"></i> <span>Menu</span>
+                            <i class="fa-solid fa-layer-group"></i> <span> Menu</span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
@@ -33,7 +33,7 @@
                             <li><a href="<?php echo base_url(); ?>mantenimiento/ctecnico"><i class="fa-solid fa-user-gear"></i> Técnicos</a></li>
                         <?php } ?>
                         <?php if ($roles->ordenes =="1") { ?>
-                            <li><a href="<?php echo base_url(); ?>mantenimiento/corden"><i class="fa-solid fa-file-lines"></i> Órdenes</a></li>
+                            <li><a href="<?php echo base_url(); ?>mantenimiento/corden"><i class="fa-solid fa-file-lines"></i>  Órdenes</a></li>
                         <?php } ?>
                         </ul>
                     </li>
@@ -41,7 +41,7 @@
                     <li class="treeview">
                         <a href="#">
                         
-                            <i class="fa-solid fa-lock"></i> <span> Administrador</span>
+                            <i class="fa-solid fa-lock"></i> <span>  Administrador</span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
