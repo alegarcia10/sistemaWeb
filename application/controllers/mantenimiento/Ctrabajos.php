@@ -38,6 +38,7 @@ public function index(){
                         }
                         var_dump($tec);
                         var_dump("-----------------------");
+                        var_dump($nombre);
 
                         
                     }
