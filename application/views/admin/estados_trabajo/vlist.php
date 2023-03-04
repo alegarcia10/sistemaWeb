@@ -148,9 +148,7 @@ $(document).ready(function () {
                 }
                
             ],
-            search: {
-                smart: true
-            },
+           
             fnDrawCallback: function () {
        $('.buttons-colvis').attr("id", "showHideColumnButton").removeClass('dt-buttonbuttons-collection buttons-colvis');}
             
