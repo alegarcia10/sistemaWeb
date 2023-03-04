@@ -140,12 +140,16 @@ $(document).ready(function () {
                 {
                     extend :'colvis',
                     text:"Columnas",
-                    columnText : function ( dt, idx, title ) { return (idx+1)+': '+title; }
+                    columnText : function ( dt, idx, title ) { return (idx+1)+': '+title; },
+                    className: 'btn btn-primary'
                    
                     
                 }
                
-            ]
+            ],
+            fnDrawCallback: function () {
+       $('.buttons-colvis').attr("id", "showHideColumnButton").removeClass('dt-button
+            buttons-collection buttons-colvis');
             
                      
                     
