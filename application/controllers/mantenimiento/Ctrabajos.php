@@ -45,11 +45,10 @@ public function index(){
                         
                     }
                     
-                    var_dump($orden);
-                    die;
+                   
 
-                    $FechaInicio= $orden->FechaInicio;
-                    $FechaFin= $orden->FechaFin;
+                    $FechaInicio= $parte->FechaInicio;
+                    $FechaFin= $parte->FechaFin;
 
                     $date1 = new DateTime("$FechaInicio");
                     $date2 = new DateTime("$FechaFin");
