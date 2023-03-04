@@ -107,7 +107,7 @@ $(document).ready(function () {
                "order": [[ 0, "desc" ]],
                //responsive: "true",
     
-               dom: 'B<"clear">lfrtip',
+               dom: 'Blfrtip',
                
                buttons: [ 
                 {
