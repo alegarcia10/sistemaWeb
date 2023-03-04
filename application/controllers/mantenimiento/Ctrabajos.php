@@ -53,19 +53,29 @@ public function index(){
 
                     $interval = date_diff($date1, $date2);
                     $hora =$interval->format(' %H :%I : %S ');
-                    var_dump($hora);
+                    
+                    if($FechaInicio != null && $FechaFin != null){
+                        var_dump($hora);
 
                     var_dump($FechaInicio);
                     var_dump($FechaFin);
 
+                    $h1 = $this->mparteorden->explode_tiempo($hora);
+                    $horasAcum = $horasAcum+$h1;
+                    }
+                    else{
+                        $horasAcum = $horasAcum + 0;
+                    }
+                    
+
 
                     
-                    $h1 = $this->mparteorden->explode_tiempo($hora);
+                   
                     //$h2 = $this->mparteorden->explode_tiempo($hora2);
 
                     //echo segundos_hhmm($total_tiempo_segundos);
 
-                    $horasAcum = $horasAcum+$h1;
+                    
 
 
                             
