@@ -60,7 +60,7 @@
                                                     { echo 'Recibida';}elseif($atributos->Estado == 2)
                                                     { echo 'En Curso';}elseif($atributos->Estado == 3)
                                                     { echo 'Finalizada';}else{ echo 'No tiene tareas';} ; ?></td>
-                                            <td width="15%"><?php echo $atributos->tecnicos; ?></td>
+                                            <td width="15%"><?php echo $atributos->TEC; ?></td>
                                              <td width="8%">$<?php echo number_format($atributos->Gastos, 2); ?></td>
                                             <td width="8%">$<?php echo number_format($atributos->Precio, 2); ?></td>
                                             <td></td>

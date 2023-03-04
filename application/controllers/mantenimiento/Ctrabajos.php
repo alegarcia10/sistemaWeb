@@ -35,7 +35,7 @@ public function index(){
             $tec="No tiene técnicos";
             }
         
-        $orden->tecnicos=$tec;
+        $orden->TEC=$tec;
         //var_dump($tecnicos);
     
         /*var_dump("----------------------------------------------------------------");
