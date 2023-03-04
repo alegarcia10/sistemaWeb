@@ -144,15 +144,8 @@ $(document).ready(function () {
                 },
                 {
                     extend :'colvis',
-                    text: "Columnas",
-                    postfixButtons: ['colvisRestore'],
-                        buttons : [{
-                            extend: 'columnsToggle',
-                            action: function (e, dt, node, config) {
-                                alert('Activated!');
-                                console.log("Activated!");
-                            },
-                        }]
+                    text: "Columnas"
+                   
                     
                 }
                
