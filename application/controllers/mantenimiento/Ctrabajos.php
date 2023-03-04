@@ -23,6 +23,7 @@ public function index(){
         $id=$orden->IdOrden;
        
         $parteorden = $this->mparteorden->mselectparteorden($id);
+        $orden->tecnicos="";
         foreach($parteorden as $parte){
             
             $tecnicos = $this->mparteorden->mselectTecnicoIdParte($parte->IdParte);
