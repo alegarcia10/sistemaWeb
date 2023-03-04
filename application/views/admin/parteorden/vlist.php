@@ -80,7 +80,7 @@
                                                                 <span class="fa-solid fa-pen"></span>
                                                             </a>
                                                             <a title="Eliminar" href="<?php echo base_url(); ?>mantenimiento/cparteorden/cdelete/<?php echo $atributos->IdParte; ?>/<?php echo $atributos->IdOrden; ?>" class="btn btn-danger btn-remove deleteParte">
-                                                                <span class="fa fa-remove"></span>
+                                                                <span class="fa-solid fa-circle-xmark"></span>
                                                             </a>
                                                         </div>
                                                     </td>

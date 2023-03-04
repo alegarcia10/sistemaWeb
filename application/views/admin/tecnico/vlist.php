@@ -44,7 +44,7 @@
                                                     <span class="fa-solid fa-pen"></span>
                                                 </a>
                                                 <a href="<?php echo base_url(); ?>mantenimiento/ctecnico/cdelete/<?php echo $atributos->Dni; ?>" class="btn btn-danger btn-remove deleteTecnico" title="Eliminar">
-                                                    <span class="fa fa-remove"></span>
+                                                    <span class="fa-solid fa-circle-xmark"></span>
                                                 </a>
                                               </div>
                                           </td>

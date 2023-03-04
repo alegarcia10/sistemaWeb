@@ -62,7 +62,7 @@
                                                         <span class="fa-solid fa-pen"></span>
                                                     </a>
                                                     <a href="<?php echo base_url(); ?>mantenimiento/corden/cdelete/<?php echo $atributos->IdOrden; ?>" class="btn btn-danger btn-remove deleteOrden" title="Eliminar">
-                                                        <span class="fa-regular fa-circle-xmark"></span>
+                                                        <span class="fa-solid fa-circle-xmark"></span>
                                                     </a>
                                                     <a href="<?php echo base_url(); ?>mantenimiento/corden/ccompleta/<?php echo $atributos->IdOrden; ?>" class="btn btn-success completaOrden" title="Completa">
                                                         <span class="fa fa-check-circle"></span>

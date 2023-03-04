@@ -44,7 +44,7 @@
                                                 <span class="fa-solid fa-pen"></span>
                                             </a>
                                             <a href="<?php echo base_url();?>mantenimiento/cusuario/cdelete/<?php echo $atributos->idUsuario; ?>" class="btn btn-danger btn-remove deleteUsuario">
-                                                <span class="fa fa-remove"></span>
+                                                <span class="fa-solid fa-circle-xmark"></span>
                                             </a>
                                         </div>
                                     </td>
