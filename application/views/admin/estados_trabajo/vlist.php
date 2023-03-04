@@ -79,8 +79,18 @@
     </section>
 </div>
 <style>
-.dt-button-collection a.buttons-columnVisibility:before,
-.dt-button-collection a.buttons-columnVisibility.active span:before {
+
+.dt-button-collection .dt-button.buttons-columnVisibility {
+    background: none !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0.25em 1em !important;
+    margin: 0 !important;
+    text-align: left !important;
+}
+.dt-button-collection .buttons-columnVisibility:before,
+.dt-button-collection .buttons-columnVisibility.active span:before {
     display:block;
     position:absolute;
     top:1.2em;
@@ -89,27 +99,24 @@
     height:12px;
     box-sizing:border-box;
 }
-
-.dt-button-collection a.buttons-columnVisibility:before {
+.dt-button-collection .buttons-columnVisibility:before {
     content:' ';
-    margin-top:-6px;
+    margin-top:-8px;
     margin-left:10px;
     border:1px solid black;
     border-radius:3px;
 }
-
-.dt-button-collection a.buttons-columnVisibility.active span:before {
+.dt-button-collection .buttons-columnVisibility.active span:before {
+    font-family: 'Arial' !important;
     content:'\2714';
-    margin-top:-11px;
-    margin-left:12px;
-    text-align:center;
-    text-shadow:1px 1px #DDD, -1px -1px #DDD, 1px -1px #DDD, -1px 1px #DDD;
+    margin-top: -15px;
+    margin-left: 12px;
+    text-align: center;
+    text-shadow: 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
 }
-
-.dt-button-collection a.buttons-columnVisibility span {
-    margin-left:20px;    
+.dt-button-collection .buttons-columnVisibility span {
+    margin-left:17px;    
 }
-
 
 </style>
 
