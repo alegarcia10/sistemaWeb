@@ -103,6 +103,9 @@ $(document).ready(function () {
                "order": [[ 0, "desc" ]],
                //responsive: "true",
                dom: 'Bfrtip',
+               scrollY:        "300px",
+               scrollX:        true,
+               scrollCollapse: true,
                buttons: [ 
                 {
                     extend: 'excelHtml5',
