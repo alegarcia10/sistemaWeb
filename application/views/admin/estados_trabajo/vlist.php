@@ -152,6 +152,8 @@ $(document).ready(function () {
             fnDrawCallback: function () {
        $('.buttons-colvis').attr("id", "showHideColumnButton").removeClass('dt-buttonbuttons-collection buttons-colvis');}
             
+       dt.buttons().container()
+        .appendTo( '#example_wrapper .col-md-6:eq(0)' );
                      
                     
           });
