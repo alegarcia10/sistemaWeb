@@ -141,15 +141,13 @@ $(document).ready(function () {
                 },
                 {
                     extend :'colvis',
-                    text: "Columnas"
+                    columnText : function ( dt, idx, title ) { return (idx+1)+': '+title; }
                    
                     
                 }
                
             ],
-            fixedColumns:{
-                left: 2
-            },
+            
             columnDefs: [{
                 targets: -1,
                 visible: false
