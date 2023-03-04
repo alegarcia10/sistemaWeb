@@ -27,9 +27,8 @@ public function index(){
         if($parteorden != null){
             foreach($parteorden as $parte){
                 
-                $tecnicos = $this->mparteorden->mselectTecnicoIdParte($parte->IdParte);
-var_dump($tecnicos);
-die;
+                $tecnicos = $this->mparteorden->mselectTecnicoId($parte->IdParte);
+
             }
         }else{
             $tecnicos="No tiene técnicos";

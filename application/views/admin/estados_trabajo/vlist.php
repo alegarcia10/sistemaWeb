@@ -47,7 +47,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php var_dump($ordenindex); die; if (!empty($ordenindex)) : ?>
+                                <?php if (!empty($ordenindex)) : ?>
                                     <?php foreach ($ordenindex as $atributos) :?>
                                         <tr>
                                             
