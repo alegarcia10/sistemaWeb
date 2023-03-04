@@ -177,6 +177,22 @@ class Mparteorden extends CI_Model{
         return $res;
     }
 
+    //funciones de horas// Separamos el tiempo en un array para pasarlo a segundos
+    public function explode_tiempo($tiempo) {
+        $arr_tiempo = explode(':', $tiempo);
+        $segundos = $arr_tiempo[0] * 3600 + $arr_tiempo[1] * 60 + $arr_tiempo[2];
+        return $segundos;
+    }
+
+    // Transformar los segundos en hora formato HH:mm:ss
+    public function segundos_hhmm($seg) {
+        $horas = floor($seg / 3600);
+        $minutos = floor($seg / 60 % 60);
+        $segundos = floor($seg % 60);
+
+        return sprintf('%02d:%02d:%02d', $horas, $minutos, $segundos);
+    }
+
 
     /*//INSERTAR TecnicoParteOrden
     public function cargarTecnicoParteOrden($data){

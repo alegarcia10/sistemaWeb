@@ -26,6 +26,7 @@ public function index(){
         $orden->tecnicos="";
         if($parteorden != null){
             $tec="";
+            $horasAcum=0;
             foreach($parteorden as $parte){
                 
                 $tecnicos = $this->mparteorden->mselectTecnicoId($parte->IdParte);
@@ -43,14 +44,35 @@ public function index(){
                        
                         
                     }
-                
-            }
+
+                    $FechaInicio= $orden->FechaInicio;
+                    $FechaFin= $orden->FechaFin;
+
+                    $date1 = new DateTime("$FechaInicio");
+                    $date2 = new DateTime("$FechaFin");
+
+                    $interval = date_diff($date1, $date2);
+                    $hora =$interval->format(' %H :%I : %S ');
+                    
+
+
+                    
+                    $h1 = $this->mparteorden->explode_tiempo($hora);
+                    //$h2 = $this->mparteorden->explode_tiempo($hora2);
+
+                    //echo segundos_hhmm($total_tiempo_segundos);
+
+                    $horasAcum = $horasAcum+$h1;
+
+
+                            
+            } //recorre parte orden
         }else{
             $tec="No tiene técnicos";
             }
         
         $orden->TEC=$tec;
-
+        $orden->HH=$this->mparteorden->segundos_hhmm($horasAcum);
 
 
 
