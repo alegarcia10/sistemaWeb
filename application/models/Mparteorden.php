@@ -186,6 +186,7 @@ class Mparteorden extends CI_Model{
 
     // Transformar los segundos en hora formato HH:mm:ss
     public function segundos_hhmm($seg) {
+        var_dump($seg);
         $horas = floor($seg / 3600);
         $minutos = floor($seg / 60 % 60);
         $segundos = floor($seg % 60);
