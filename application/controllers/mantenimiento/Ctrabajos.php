@@ -53,7 +53,10 @@ public function index(){
 
                     $interval = date_diff($date1, $date2);
                     $hora =$interval->format(' %H :%I : %S ');
-                    
+                    var_dump($hora);
+
+                    var_dump($FechaInicio);
+                    var_dump($FechaFin);
 
 
                     
