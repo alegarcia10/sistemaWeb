@@ -21,10 +21,26 @@ public function index(){
     
     foreach ($ordenes as $orden ) {
         $id=$orden->IdOrden;
-        $porden=$this->morden->consultarEstado($id);
-        $tecnicos = $this->mparteorden->mselectTecnicoIdParte($id);
-        
+       
+        $parteorden = $this->mparteorden->mselectparteorden($id);
+        foreach($parteorden as $parte){
+            
+            $tecnicos = $this->mparteorden->mselectTecnicoIdParte($parte->IdParte);
 
+        }
+
+        $orden->tecnicos=$tecnicos;
+        var_dump($tecnicos);
+    
+        var_dump("----------------------------------------------------------------");
+       
+        var_dump($orden);
+        die;
+
+
+
+
+        $porden=$this->morden->consultarEstado($id);
         if($porden != null){
             $completa=$porden->Completa;
             $estado=$porden->Estado;
