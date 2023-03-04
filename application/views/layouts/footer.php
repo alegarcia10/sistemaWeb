@@ -23,7 +23,7 @@
 
 
 
-
+<script src="<?php echo base_url();?>assets/template/DataTables-1.13.3/js/dataTables.fixedColumns.min.js"></script>
 
 
 

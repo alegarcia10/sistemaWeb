@@ -137,6 +137,9 @@ $(document).ready(function () {
                 }
                
             ],
+            fixedColumns:{
+                left: 2
+            },
             columnDefs: [{
                 targets: -1,
                 visible: false
