@@ -69,6 +69,8 @@ public function index(){
             } //recorre parte orden
         }else{
             $tec="No tiene técnicos";
+            $horasAcum="No tiene Horas acumuladas";
+
             }
         
         $orden->TEC=$tec;
