@@ -29,7 +29,15 @@ public function index(){
             foreach($parteorden as $parte){
                 
                 $tecnicos = $this->mparteorden->mselectTecnicoId($parte->IdParte);
-                $tec=$tec."".$tecnicos." ";
+                
+                    foreach($tecnicos as $tecnico){
+                    
+                    $nombre = $tecnico->Nombre;
+                        if(str_contains($tec, $nombre)){
+                            $tec=$tec."".$nombre." ";
+                        }
+                    }
+                
             }
         }else{
             $tec="No tiene técnicos";
