@@ -25,7 +25,7 @@ public function index(){
         $parteorden = $this->mparteorden->mselectparteorden($id);
         $orden->tecnicos="";
         if($parteorden != null){
-            $tec="";
+            $tec="ALEJANDRO";
             foreach($parteorden as $parte){
                 
                 $tecnicos = $this->mparteorden->mselectTecnicoId($parte->IdParte);
