@@ -146,7 +146,7 @@ $(document).ready(function () {
       style: "multi",
       selector: "td:first-child",
     },
-               dom: 'Bfrtip',
+               dom: '<"dt-buttons"Bf><"clear">lirtp',
                scrollY:        "300px",
                scrollX:        true,
                scrollCollapse: true,
