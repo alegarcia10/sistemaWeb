@@ -79,7 +79,36 @@
     </section>
 </div>
 <style>
+.dt-button-collection a.buttons-columnVisibility:before,
+.dt-button-collection a.buttons-columnVisibility.active span:before {
+    display:block;
+    position:absolute;
+    top:1.2em;
+    left:0;
+    width:12px;
+    height:12px;
+    box-sizing:border-box;
+}
 
+.dt-button-collection a.buttons-columnVisibility:before {
+    content:' ';
+    margin-top:-6px;
+    margin-left:10px;
+    border:1px solid black;
+    border-radius:3px;
+}
+
+.dt-button-collection a.buttons-columnVisibility.active span:before {
+    content:'\2714';
+    margin-top:-11px;
+    margin-left:12px;
+    text-align:center;
+    text-shadow:1px 1px #DDD, -1px -1px #DDD, 1px -1px #DDD, -1px 1px #DDD;
+}
+
+.dt-button-collection a.buttons-columnVisibility span {
+    margin-left:20px;    
+}
 
 
 </style>
@@ -144,6 +173,7 @@ $(document).ready(function () {
                 },
                 {
                     extend :'colvis',
+                    text: "Columnas",
                     postfixButtons: ['colvisRestore'],
                         buttons : [{
                             extend: 'columnsToggle',
