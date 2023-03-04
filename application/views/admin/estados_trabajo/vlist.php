@@ -107,7 +107,7 @@ $(document).ready(function () {
                "order": [[ 0, "desc" ]],
                //responsive: "true",
     
-               dom: 'Blfrtip',
+               dom: '<"dt-buttons"Bf><"clear">lirtp',
                
                buttons: [ 
                 {
