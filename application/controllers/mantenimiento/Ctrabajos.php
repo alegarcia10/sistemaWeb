@@ -36,6 +36,10 @@ public function index(){
                         if(strpos($tec, $nombre) !== false){
                             $tec=$tec."".$nombre." ";
                         }
+                        var_dump($tec);
+                        var_dump("-----------------------");
+
+                        
                     }
                 
             }
