@@ -28,7 +28,8 @@ public function index(){
             foreach($parteorden as $parte){
                 
                 $tecnicos = $this->mparteorden->mselectTecnicoIdParte($parte->IdParte);
-
+var_dump($tecnicos);
+die;
             }
         }else{
             $tecnicos="No tiene técnicos";
