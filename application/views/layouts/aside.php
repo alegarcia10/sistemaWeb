@@ -41,7 +41,7 @@
                     <li class="treeview">
                         <a href="#">
                         
-                            <i class="fa-solid fa-lock"></i> <span>  Administrador</span>
+                            <i class="fa-solid fa-lock"></i> <span> &nbsp Administrador</span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
@@ -60,7 +60,7 @@
                     <li class="treeview">
                         <a href="#">
                         
-                            <i class="fa-solid fa-book"></i> <span>Gestión</span>
+                            <i class="fa-solid fa-book"></i> <span> &nbsp Gestión</span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
