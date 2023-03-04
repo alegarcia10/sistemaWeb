@@ -30,7 +30,7 @@ public function index(){
 
         }
 
-        $orden->tecnicos=$tecnicos;
+        $orden->TEC=$tecnicos;
         //var_dump($tecnicos);
     
         /*var_dump("----------------------------------------------------------------");
