@@ -183,6 +183,8 @@ class Mparteorden extends CI_Model{
         var_dump($tiempo);
         $arr_tiempo = explode(':', $tiempo);
         $arr_tiempo = explode(' ', $tiempo);
+        var_dump("explode desp de 185");
+        var_dump($tiempo);
         $segundos = $arr_tiempo[0] * 3600 + $arr_tiempo[1] * 60 + $arr_tiempo[2];
         return $segundos;
     }
