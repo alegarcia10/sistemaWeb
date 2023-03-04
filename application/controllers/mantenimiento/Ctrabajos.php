@@ -33,7 +33,7 @@ public function index(){
                     foreach($tecnicos as $tecnico){
                     
                     $nombre = $tecnico->Nombre;
-                        if(strpos($tec, $nombre) !== false){
+                        if(strlen(strstr($tec, $nombre))>0){
                             var_dump("Entro");
                             $tec=$tec."".$nombre." ";
                         }
