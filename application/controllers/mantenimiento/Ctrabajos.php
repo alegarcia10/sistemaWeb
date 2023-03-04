@@ -69,7 +69,9 @@ public function index(){
                 $orden->Estado='4';
             }
 
-         
+    $orden->Gastos=$this->morden->consultaGatosOrden($id);
+    $orden->tecnicos = $this->mparteorden->mselectTecnicoId($id);
+
     $orden->Precio = (int)$orden->Precio;
     $orden->Gastos = (int)$orden->Gastos;
 
@@ -90,14 +92,15 @@ public function index(){
     
     $ordenes=  $data['ordenindex'];
     
+    
 
-    foreach ($ordenes as $orden ) {
+   /* foreach ($ordenes as $orden ) {
          $id=$orden->IdOrden;
          //$parte=$this->mparteorden->mselectparteorden($orden->IdOrden);
          
          $orden->Gastos=$this->morden->consultaGatosOrden($id);
          $orden->tecnicos = $this->mparteorden->mselectTecnicoId($id);
-    }
+    }*/
    
 
     //$ordenesCompletas=  $data['ordencompletas'];
