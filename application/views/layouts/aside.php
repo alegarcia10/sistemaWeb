@@ -41,7 +41,7 @@
                     <li class="treeview">
                         <a href="#">
                         
-                            <i class="fa fa-user-circle-o"></i> <span>Administrador</span>
+                            <i class="fa-solid fa-lock"></i> <span>Administrador</span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
@@ -49,10 +49,10 @@
                         </a>
                         <ul class="treeview-menu">
                         <?php if ($roles->usuarios =="1") { ?>
-                            <li><a href="<?php echo base_url(); ?>mantenimiento/cusuario"><i class="fa fa-circle-o"></i>Usuarios</a></li>
+                            <li><a href="<?php echo base_url(); ?>mantenimiento/cusuario"><i class="fa-solid fa-circle-user"></i>Usuarios</a></li>
                         <?php } ?>
                         <?php if ($roles->roles =="1") { ?>    
-                            <li><a href="<?php echo base_url(); ?>mantenimiento/croles"><i class="fa fa-circle-o"></i>Roles</a></li>
+                            <li><a href="<?php echo base_url(); ?>mantenimiento/croles"><i class="fa-solid fa-key"></i>Roles</a></li>
                         <?php } ?>
                         </ul>
                     </li>
