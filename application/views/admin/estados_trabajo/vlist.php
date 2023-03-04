@@ -149,7 +149,7 @@ $(document).ready(function () {
                
             ],
             fnDrawCallback: function () {
-       $('.buttons-colvis').attr("id", "showHideColumnButton").removeClass('dt-buttonbuttons-collection buttons-colvis');
+       $('.buttons-colvis').attr("id", "showHideColumnButton").removeClass('dt-buttonbuttons-collection buttons-colvis');}
             
                      
                     
