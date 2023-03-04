@@ -80,7 +80,7 @@
 </div>
 <style>
 
-
+td:last-child {text-align:center;}
 
 </style>
 
@@ -141,7 +141,7 @@ $(document).ready(function () {
                 },
                 {
                     extend :'colvis',
-                    text:"columnas",
+                    text:"Columnas",
                     columnText : function ( dt, idx, title ) { return (idx+1)+': '+title; }
                    
                     
