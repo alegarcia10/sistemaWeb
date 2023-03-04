@@ -67,7 +67,7 @@
                         </a>
                         <ul class="treeview-menu">
                         
-                            <li><a href="<?php echo base_url(); ?>mantenimiento/ctrabajos"><i class="fa fa-circle-o"></i>Estados de Trabajo</a></li>
+                            <li><a href="<?php echo base_url(); ?>mantenimiento/ctrabajos"><i class="fa-solid fa-chart-line"></i>Estados de Trabajo</a></li>
                         
                         </ul>
                         </li>
