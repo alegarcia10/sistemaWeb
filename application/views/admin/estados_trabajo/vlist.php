@@ -79,12 +79,7 @@
     </section>
 </div>
 <style>
-.dt-button-collection{
 
-display: block;
-height: 450px !important;
-overflow-y: scroll !important;
-}
 
 
 </style>
@@ -116,7 +111,9 @@ $(document).ready(function () {
       selector: "td:first-child",
     },
                dom: 'Bfrtip',
-               
+               scrollY:        "300px",
+               scrollX:        true,
+               scrollCollapse: true,
                buttons: [ 
                 {
                     extend: 'excelHtml5',
