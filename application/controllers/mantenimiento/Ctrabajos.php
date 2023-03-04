@@ -34,6 +34,7 @@ public function index(){
                     
                     $nombre = $tecnico->Nombre;
                         if(strpos($tec, $nombre) !== false){
+                            var_dump("Entro");
                             $tec=$tec."".$nombre." ";
                         }
                         var_dump($tec);
