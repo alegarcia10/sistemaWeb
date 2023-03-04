@@ -44,6 +44,9 @@ public function index(){
                        
                         
                     }
+                    
+                    var_dump($orden);
+                    die;
 
                     $FechaInicio= $orden->FechaInicio;
                     $FechaFin= $orden->FechaFin;
