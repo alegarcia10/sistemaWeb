@@ -179,12 +179,12 @@ class Mparteorden extends CI_Model{
 
     //funciones de horas// Separamos el tiempo en un array para pasarlo a segundos
     public function explode_tiempo($tiempo) {
+        date("Y-m-d",strtotime($tiempo));
         var_dump("entro al explode");
         var_dump($tiempo);
         $arr_tiempo = explode(':', $tiempo);
-        $arr_tiempo = explode(' ', $tiempo);
-        var_dump("explode desp de 185");
-        var_dump($tiempo);
+    
+       
         $segundos = $arr_tiempo[0] * 3600 + $arr_tiempo[1] * 60 + $arr_tiempo[2];
         return $segundos;
     }
