@@ -106,7 +106,7 @@
               background: white !important;
               color: black !important;
               border-color: red !important;
-              opacity: 1;
+              
            }
 
 </style>
