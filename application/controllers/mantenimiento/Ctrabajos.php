@@ -124,12 +124,15 @@ public function index(){
     $orden->Ganancia = $orden->Precio - $orden->Gastos;
 
     }
-
+    $data = array (
+        'ordenindex' => $ordenes,
+        'roles'=> $this->mroles->obtener($idrol)
+    );
 
 
     $this->load->view('layouts/header');
-    $this->load->view('layouts/aside');
-    $this->load->view('admin/estados_trabajo/vlist');
+    $this->load->view('layouts/aside',$data);
+    $this->load->view('admin/estados_trabajo/vlist',$data);
     $this->load->view('layouts/footer');
 }
 
