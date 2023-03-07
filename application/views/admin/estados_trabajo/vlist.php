@@ -24,8 +24,7 @@
                         </div>
                         <div class="row">
                     <div class="col-md-12">
-                        <div class="col-md-6">
-                          <h2>Filtros</h2>
+                        <div class="col-md-4">
                         </div>
                       <form action="</*?php echo base_url(); ?>" method="POST">
                                 <div class="col-sm-2 form-group">
