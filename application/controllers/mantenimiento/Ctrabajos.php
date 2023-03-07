@@ -128,7 +128,7 @@ public function index(){
 
 
     $this->load->view('layouts/header');
-    $this->load->view('layouts/aside',$data);
+    $this->load->view('layouts/aside');
     $this->load->view('admin/estados_trabajo/vlist');
     $this->load->view('layouts/footer');
 }
