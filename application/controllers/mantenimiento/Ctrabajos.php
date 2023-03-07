@@ -94,9 +94,9 @@ public function index(){
             }
         
         $orden->TEC=$tec;
-        if($band == true){
-        $orden->HH=$this->mparteorden->segundos_hhmm($horasAcum);
-        }
+       // if($band == true){
+        //$orden->HH=$this->mparteorden->segundos_hhmm($horasAcum);
+        //}
 
 
 
@@ -129,7 +129,7 @@ public function index(){
 
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside',$data);
-    $this->load->view('admin/estados_trabajo/vlist', $data);
+    $this->load->view('admin/estados_trabajo/vlist');
     $this->load->view('layouts/footer');
 }
 
