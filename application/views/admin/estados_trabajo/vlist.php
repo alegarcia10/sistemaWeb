@@ -28,7 +28,7 @@
                         </div>
                       <form action="<?php echo base_url(); ?>" method="POST">
                       <h4>Fechas</h4>          
-                      
+                      <div class="col-sm-3 form-group">
                                     
                                   
                                   <input type="date" id="txtfechaini" name="txtfechaini" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfechaini') ?>">
@@ -41,7 +41,7 @@
                                 
                                 
                                     <button type="submit" class="btn btn-success">Buscar</button>
-                               
+                        </div>      
                             </form>
                             <br>
                         <table id="tablaordenc" class="table table-bordered table-hover order-table1">
