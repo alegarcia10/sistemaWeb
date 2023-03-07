@@ -23,8 +23,8 @@
                           <h3>Listado Trabajos</h3>
                         </div>
                         <div class="row">
-                    <div class="col-md-6">
-                        <div class="col-md-12">
+                    <div class="col-md-12">
+                        <div class="col-md-6">
                           <h2>Filtros</h2>
                         </div>
                       <form action="</*?php echo base_url(); ?>" method="POST">
