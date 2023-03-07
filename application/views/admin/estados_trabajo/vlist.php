@@ -23,7 +23,7 @@
                       <h4>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Fechas</h4>          
                       <div class="col-md-10 form-group">
                                 <div class="col-sm-3 form-group">
-                                  
+                                <label for="fechaini"></label>
                                   <input type="date" id="txtfechaini" name="txtfechaini" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfechaini') ?>">
                                   </div>
                                 
