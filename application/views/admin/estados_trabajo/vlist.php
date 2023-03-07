@@ -36,7 +36,7 @@
                                   <input type="date" id="txtfechafin" name="txtfechafin" class="form-control" min="2020-01-01" max="2100-12-31" value="</**?php echo set_value('txtfechafin') ?>">
                                 </div>
                                 <br>
-                                <div class="col-sm-5 form-group">
+                                <div class="col-sm-6 form-group">
                                 <label for=""></label>
                                     <button type="submit" class="btn btn-success">Buscar</button>
                                 </div>
@@ -130,6 +130,15 @@ $(document).ready(function () {
                
                buttons: [ 
                 {
+                    extend :'colvis',
+                    text:"Columnas",
+                    className: 'btn btn-primary',
+                    columnText : function ( dt, idx, title ) { return (idx+1)+': '+title; }
+                    
+                   
+                    
+                },
+                {
                     extend: 'excelHtml5',
                     exportOptions:{
                             columns: ':visible'
@@ -156,15 +165,7 @@ $(document).ready(function () {
                     titleAttr: 'Imprimir',
                     className: 'btn btn-info'
                 },
-                {
-                    extend :'colvis',
-                    text:"Columnas",
-                    className: 'btn btn-primary',
-                    columnText : function ( dt, idx, title ) { return (idx+1)+': '+title; }
-                    
-                   
-                    
-                }
+                
                
             ],
            
