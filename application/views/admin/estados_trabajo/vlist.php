@@ -99,11 +99,13 @@
 .dt-button.buttons-columnVisibility {
               background: green !important;
               color: white !important;
-              opacity: 0.5;
+              border: green !important;
+              
            }
         .dt-button.buttons-columnVisibility.active {
               background: white !important;
               color: black !important;
+              border: red !important;
               opacity: 1;
            }
 
