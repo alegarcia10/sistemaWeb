@@ -37,12 +37,13 @@
                                   
                                   <input type="date" id="txtfechafin" name="txtfechafin" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfechafin') ?>">
                                 
-                                <br>
+                                
                                 
                                 
                                     <button type="submit" class="btn btn-success">Buscar</button>
                                
                             </form>
+                            <br>
                         <table id="tablaordenc" class="table table-bordered table-hover order-table1">
                             <thead>
                                 <tr>
