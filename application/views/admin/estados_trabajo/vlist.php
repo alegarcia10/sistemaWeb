@@ -36,11 +36,11 @@
                                 
                                   <div class="col-sm-3 form-group">
                                   <input type="date" id="txtfechafin" name="txtfechafin" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfechafin') ?>">
+                                  </div>
                                 
                                 
                                 
-                                
-                                    <button type="submit" class="btn btn-success">Buscar</button> </div>
+                                    <button type="submit" class="btn btn-success">Buscar</button> 
                         </div>      
                             </form>
                             <br>
