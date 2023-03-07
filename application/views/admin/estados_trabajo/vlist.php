@@ -24,7 +24,7 @@
                         </div>
                         <div class="row">
                     <div class="col-md-12">
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                         </div>
                       <form action="</*?php echo base_url(); ?>" method="POST">
                                 <div class="col-sm-2 form-group">
