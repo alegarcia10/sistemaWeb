@@ -59,17 +59,17 @@ public function index(){
                     
                     if($FechaInicio != null || $FechaFin != null){
                         $band = true;
-                        var_dump($hora);
+                    //    var_dump($hora);
 
-                    var_dump($FechaInicio);
-                    var_dump($FechaFin);
+                    //var_dump($FechaInicio);
+                    //var_dump($FechaFin);
 
                     $h1 = $this->mparteorden->explode_tiempo($hora);
                     $horasAcum = $horasAcum+$h1;
                     }
                     else{
                         //$band=false;
-                        var_dump("Entra al else");
+                        //var_dump("Entra al else");
                         $horasAcum = $horasAcum + 0;
                     }
                     

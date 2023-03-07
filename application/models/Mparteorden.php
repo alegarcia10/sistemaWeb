@@ -179,9 +179,9 @@ class Mparteorden extends CI_Model{
 
     //funciones de horas// Separamos el tiempo en un array para pasarlo a segundos
     public function explode_tiempo($tiempo) {
-        date("Y-m-d",strtotime($tiempo));
-        var_dump("entro al explode");
-        var_dump($tiempo);
+        //date("Y-m-d",strtotime($tiempo));
+        //var_dump("entro al explode");
+        //var_dump($tiempo);
         $arr_tiempo = explode(':', $tiempo);
     
        
@@ -191,7 +191,7 @@ class Mparteorden extends CI_Model{
 
     // Transformar los segundos en hora formato HH:mm:ss
     public function segundos_hhmm($seg) {
-        var_dump($seg."lo q se me cante");
+        //var_dump($seg."lo q se me cante");
         $horas = floor($seg / 3600);
         $minutos = floor($seg / 60 % 60);
         $segundos = floor($seg % 60);
