@@ -48,7 +48,7 @@ public function index(){
                     
                    
 
-                    $FechaInicio= $parte->FechaInicio;
+                   /* $FechaInicio= $parte->FechaInicio;
                     $FechaFin= $parte->FechaFin;
 
                     $date1 = new DateTime("$FechaInicio");
@@ -71,7 +71,7 @@ public function index(){
                         //$band=false;
                         //var_dump("Entra al else");
                         $horasAcum = $horasAcum + 0;
-                    }
+                    }*/
                     
 
 
@@ -89,7 +89,7 @@ public function index(){
         }else{
 
             $tec="No tiene técnicos";
-            $horasAcum="No tiene Horas acumuladas";
+            //$horasAcum="No tiene Horas acumuladas";
 
             }
         
