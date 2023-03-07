@@ -39,8 +39,9 @@
                                   </div>
                                 
                                 
-                                
+                                  <div class="col-sm-3 form-group">
                                     <button type="submit" class="btn btn-success">Buscar</button> 
+                                    </div>
                         </div>      
                             </form>
                             <br>
