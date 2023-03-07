@@ -27,7 +27,7 @@
                         <div class="col-md-12">
                         </div>
                       <form action="<?php echo base_url(); ?>" method="POST">
-                      <h4>Fechas</h4>          
+                      <h4>   Fechas</h4>          
                       <div class="col-md-8 form-group">
                                 <div class="col-sm-4 form-group">
                                   
@@ -44,7 +44,7 @@
                                     </div>
                         </div>      
                             </form>
-                            <br>
+                           
                         <table id="tablaordenc" class="table table-bordered table-hover order-table1">
                             <thead>
                                 <tr>
