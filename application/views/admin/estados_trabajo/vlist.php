@@ -97,7 +97,7 @@
 <style>
 
 .dt-button.buttons-columnVisibility {
-              background: #0000FF !important;
+              background: red !important;
               color: white !important;
               opacity: 0.5;
            }
