@@ -97,9 +97,9 @@
 <style>
 
 .dt-button.buttons-columnVisibility {
-              background: green !important;
+              background: blue !important;
               color: white !important;
-              border: green !important;
+             
               
            }
         .dt-button.buttons-columnVisibility.active {
