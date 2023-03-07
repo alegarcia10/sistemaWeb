@@ -23,7 +23,7 @@
                           <h3>Listado Trabajos</h3>
                         </div>
                         <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                         <div class="col-md-12">
                           <h2>Filtros</h2>
                         </div>
