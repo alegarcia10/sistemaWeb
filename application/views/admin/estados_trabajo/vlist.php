@@ -23,7 +23,7 @@
                       <h4>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Fechas</h4>          
                       <div class="col-md-10 form-group">
                                 <div class="col-sm-3 form-group">
-                                <label for="fechaini"></label>
+                                
                                   <input type="date" id="txtfechaini" name="txtfechaini" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfechaini') ?>">
                                   </div>
                                 
@@ -96,7 +96,16 @@
 </div>
 <style>
 
-
+.dt-button.buttons-columnVisibility {
+              background: #FF0000 !important;
+              color: white !important;
+              opacity: 0.5;
+           }
+        .dt-button.buttons-columnVisibility.active {
+              background: black !important;
+              color: white !important;
+              opacity: 1;
+           }
 
 </style>
 
