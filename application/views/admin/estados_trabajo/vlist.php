@@ -27,7 +27,7 @@
                         <div class="col-md-12">
                         </div>
                       <form action="<?php echo base_url(); ?>" method="POST">
-                      <h4>   Fechas</h4>          
+                      <h4>  &nbsp;&nbsp; &nbsp;Fechas</h4>          
                       <div class="col-md-8 form-group">
                                 <div class="col-sm-4 form-group">
                                   
