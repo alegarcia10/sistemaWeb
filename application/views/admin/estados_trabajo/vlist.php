@@ -95,9 +95,9 @@
     </section>
 </div>
 <style>
-
+/*estilo de boton columnas*/ 
 .dt-button.buttons-columnVisibility {
-              background: blue !important;
+              background: #3c8dbc !important;
               color: white !important;
              
               
