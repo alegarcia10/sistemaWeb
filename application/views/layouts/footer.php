@@ -33,7 +33,7 @@
 <script src="<?php echo base_url();?>assets/template/DataTables-1.13.3/js/jquery.dataTables.min.js"></script>
 <script src="<?php echo base_url();?>assets/template/DataTables-1.13.3/js/dataTables.bootstrap4.min.js"></script>
 <script src="<?php echo base_url();?>assets/template/Buttons-2.3.5/js/dataTables.buttons.min.js"></script>
-
+<script src="<?php echo base_url();?>assets/template/Buttons-2.3.5/js/buttons.bootstrap4.min.js"></script>
 <script src="<?php echo base_url();?>assets/template/Buttons-2.3.5/js/buttons.colVis.min.js"></script>
 <script src="<?php echo base_url();?>assets/template/Buttons-2.3.5/js/buttons.html5.min.js"></script>
 <script src="<?php echo base_url();?>assets/template/Buttons-2.3.5/js/buttons.print.min.js"></script>
