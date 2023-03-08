@@ -114,9 +114,7 @@
            div.dt-buttons{
             position:absolute;
            }
-           div.dataTables_length{
-            position:initial;
-           }
+           
 </style>
 
 <script type="text/javascript">
