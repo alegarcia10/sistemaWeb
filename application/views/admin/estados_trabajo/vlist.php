@@ -113,8 +113,8 @@
 
            div.dt-buttons{
             /*position:relative;*/
-            margin-bottom: 10px;
-            float:right;
+            margin-top: 10px;
+            /*float:right;*/
            }
 
            div.dataTables_wrapper div.dataTables_length label{
