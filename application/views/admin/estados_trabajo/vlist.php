@@ -37,7 +37,7 @@
                                     </div>
                         </div>      
                             </form>
-                           
+                    </div>   
                         <table id="tablaordenc" class="table table-bordered table-hover order-table1">
                             <thead>
                                 <tr>
