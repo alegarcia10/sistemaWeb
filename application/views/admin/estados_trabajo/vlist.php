@@ -220,6 +220,9 @@ $(document).ready(function () {
                 
                
             ],
+            'columnDefs': [
+       { targets: 1, visible: false }
+    ],
            
             fnDrawCallback: function () {
        $('.buttons-colvis').attr("id", "showHideColumnButton").removeClass('dt-buttonbuttons-collection buttons-colvis');}
