@@ -105,7 +105,7 @@
         .dt-button.buttons-columnVisibility.active {
               background: white !important;
               color: black !important;
-              border-color: blue !important;
+              border-color: #3c8dbc !important;
               
            }
 
