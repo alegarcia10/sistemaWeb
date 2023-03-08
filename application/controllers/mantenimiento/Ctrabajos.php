@@ -87,13 +87,13 @@ public function index(){
         }else{
 
             $tec="No tiene técnicos";
-            $horasAcum="No tiene Horas acumuladas";
+            $horasAcum=0;
 
             }
         
         $orden->TEC=$tec;
         if($band == true){
-        $horasAcum =number_format((float)$horasAcum, 2, '.', '');
+        $horasAcum =number_format((float)$horasAcum, 2, '.', '')."hs";
         $orden->HH=$horasAcum;
         }
 
