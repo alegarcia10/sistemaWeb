@@ -21,12 +21,12 @@ public function index(){
     
     foreach ($ordenes as $orden ) {
         $id=$orden->IdOrden;
-        $band = false;
+        //$band = false;
         $parteorden = $this->mparteorden->mselectparteorden($id);
         $orden->tecnicos="";
         if($parteorden != null){
             $tec="";
-            $HH=0;
+            //$HH=0;
             $horasAcum=0;
            
             foreach($parteorden as $parte){
@@ -51,7 +51,7 @@ public function index(){
 
                     $FechaInicio= $parte->FechaInicio;
                     $FechaFin= $parte->FechaFin;
-                    if($FechaInicio != null || $FechaFin != null){
+                    if($FechaInicio != null && $FechaFin != null){
 
                     $date1 = strtotime("$FechaInicio");
                     $date2 = strtotime("$FechaFin");
@@ -60,7 +60,7 @@ public function index(){
                     $hora =$interval->format(' %H :%I : %S ');*/
                     
                     
-                        $band = true;
+                        //$band = true;
                         
                     $h1 = ($date2 - $date1) /60 /60;
 
@@ -94,10 +94,9 @@ public function index(){
             }
         
         $orden->TEC=$tec;
-        if($band == true){
-        $horasAcum =number_format((float)$horasAcum, 2, '.', '')." hs";
+        
+        //$horasAcum =number_format((float)$horasAcum, 2, '.', '')." hs";
         $orden->HH=$horasAcum;
-        }
 
 
 
