@@ -118,8 +118,8 @@
            }
 
            div.dataTables_wrapper div.dataTables_info{
-            /*position:relative;*/
-            display: inline-block;
+            position:relative;
+            top: -50px;
             /*float:right;*/
            }
            
