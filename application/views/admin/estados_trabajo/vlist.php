@@ -119,7 +119,7 @@
 
            div.dataTables_wrapper div.dataTables_info{
             /*position:relative;*/
-            margin-top: 30px;
+            display: inline-block;
             /*float:right;*/
            }
            
