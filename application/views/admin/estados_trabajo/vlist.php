@@ -66,7 +66,11 @@
 
                                     <th>Fecha Factura</th>
 
-                             
+                                    <th>Estado pago</th>
+
+                                    <th>Fecha pago</th>
+
+                                    <th>Demora en pago</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -89,6 +93,11 @@
                                             <td width="8%">$<?php echo  number_format($atributos->Ganancia, 2); ?></td>
                                             <td width="8%"><?php echo number_format($atributos->HH, 2);?></td>
                                             <td width="8%">$<?php echo '-'//$atributos->rentabilidad; ?></td>
+                                            <td width="8%"><?php echo '<input type="text" name="r1_age" value="" size="3"' ?></td>
+                                            <td width="8%"><?php echo '<input type="text" name="r1_age" value="" size="3"' ?></td>
+                                            <td width="8%"><?php echo '<input type="text" name="r1_age" value="" size="3"' ?></td>
+                                            <td width="8%"><?php echo '<input type="text" name="r1_age" value="" size="3"' ?></td>
+                                            <td width="8%"><?php echo '<input type="text" name="r1_age" value="" size="3"' ?></td>
                                             
                                         </tr> 
                                     <?php endforeach ?>
@@ -119,7 +128,7 @@
 
 
            div.dt-buttons{
-            /*position:relative; 
+            /*position:relative;
             margin-top: 10px;*/
             margin-bottom: 10px;
             float:right;
