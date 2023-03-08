@@ -117,9 +117,9 @@
             float:right;
            }
 
-           div.dataTables_length{
+           div.dataTables_wrapper div.dataTables_info{
             /*position:relative;*/
-            margin-bottom: 15px;
+            margin-top: 15px;
             /*float:right;*/
            }
            
