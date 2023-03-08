@@ -118,9 +118,9 @@
            }
 
            div.dt-dataTables_length{
-            /*position:relative;*/
-            position:absolute;
-            top: -10px;
+            /*position:relative;
+            position:absolute;*/
+            margin-bottom: -10px;
            }
 
            div.dataTables_wrapper div.dataTables_info{
