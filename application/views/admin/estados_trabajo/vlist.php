@@ -116,6 +116,12 @@
             margin-bottom: 10px;
             float:right;
            }
+
+           div.dataTables_length{
+            /*position:relative;*/
+            margin-bottom: 15px;
+            /*float:right;*/
+           }
            
 </style>
 
