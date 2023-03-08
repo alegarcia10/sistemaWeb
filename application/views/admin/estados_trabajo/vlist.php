@@ -34,7 +34,7 @@
                                 </div>
                 </form>
                       <form action="<?php echo base_url(); ?>mantenimiento/corden/cinsert" method="POST">
-                      <h4>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Fechas</h4>          
+                                
                       <div class="col-md-10 form-group">
                                 <div class="col-sm-3 form-group">
                                 
