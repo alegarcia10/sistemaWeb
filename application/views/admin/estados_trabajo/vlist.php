@@ -118,9 +118,9 @@
            }
 
            div.dataTables_wrapper div.dataTables_length label{
-            /*position:relative;*/
-            position:relative;
-            top: 10px;
+            /*position:relative;
+            position:relative;*/
+            top: 30px;
            }
 
            div.dataTables_wrapper div.dataTables_info{
