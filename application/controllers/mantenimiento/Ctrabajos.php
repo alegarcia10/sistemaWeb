@@ -96,7 +96,7 @@ public function index(){
         
         $orden->TEC=$tec;
         
-        $horasAcum =$horasAcum->format(' %H :%I : %S ');
+        //$horasAcum =$horasAcum->format(' %H :%I : %S ');
         $orden->HH=$horasAcum;
 
 
