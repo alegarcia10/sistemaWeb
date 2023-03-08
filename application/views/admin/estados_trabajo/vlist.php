@@ -118,9 +118,9 @@
            }
 
            div.dataTables_wrapper div.dataTables_length label{
-            /*position:relative;
-            position:absolute;*/
-            margin-bottom: -10px;
+            /*position:relative;*/
+            position:absolute;
+            margin-top: 10px;
            }
 
            div.dataTables_wrapper div.dataTables_info{
