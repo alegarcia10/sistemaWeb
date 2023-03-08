@@ -26,7 +26,7 @@ public function index(){
         $orden->tecnicos="";
         if($parteorden != null){
             $tec="";
-            $horasAcum='00 : 00 : 00';
+            $horasAcum=0;
            
             foreach($parteorden as $parte){
                 
@@ -48,30 +48,27 @@ public function index(){
                     
                    
 
-                   /* $FechaInicio= $parte->FechaInicio;
+                    $FechaInicio= $parte->FechaInicio;
                     $FechaFin= $parte->FechaFin;
 
                     $date1 = new DateTime("$FechaInicio");
                     $date2 = new DateTime("$FechaFin");
 
-                    $interval = date_diff($date1, $date2);
-                    $hora =$interval->format(' %H :%I : %S ');
+                    /*$interval = date_diff($date1, $date2);
+                    $hora =$interval->format(' %H :%I : %S ');*/
                     
                     if($FechaInicio != null || $FechaFin != null){
                         $band = true;
-                    //    var_dump($hora);
+                        
 
-                    //var_dump($FechaInicio);
-                    //var_dump($FechaFin);
-
-                    $h1 = $this->mparteorden->explode_tiempo($hora);
+                    $h1 = $this->mparteorden->suma_horas($date1,$date2);
                     $horasAcum = $horasAcum+$h1;
                     }
                     else{
                         //$band=false;
                         //var_dump("Entra al else");
                         $horasAcum = $horasAcum + 0;
-                    }*/
+                    }
                     
 
 
@@ -89,14 +86,15 @@ public function index(){
         }else{
 
             $tec="No tiene técnicos";
-            //$horasAcum="No tiene Horas acumuladas";
+            $horasAcum="No tiene Horas acumuladas";
 
             }
         
         $orden->TEC=$tec;
-       // if($band == true){
-        //$orden->HH=$this->mparteorden->segundos_hhmm($horasAcum);
-        //}
+        if($band == true){
+        $horasAcum =$interval->format(' %H :%I : %S ');
+        $orden->HH=$horasAcum;
+        }
 
 
 
