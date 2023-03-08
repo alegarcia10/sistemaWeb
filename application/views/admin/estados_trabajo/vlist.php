@@ -33,6 +33,7 @@
                                   <button type="submit" class="btn btn-success">Buscar</button> 
                                 </div>
                 </form>
+                <br>
                       
                             <div class ="col-sm-12 dt-buttons">
                             </div>
