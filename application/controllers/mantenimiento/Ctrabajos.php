@@ -51,8 +51,8 @@ public function index(){
                     $FechaInicio= $parte->FechaInicio;
                     $FechaFin= $parte->FechaFin;
 
-                    $date1 = new DateTime("$FechaInicio");
-                    $date2 = new DateTime("$FechaFin");
+                    $date1 = strtotime("$FechaInicio");
+                    $date2 = strtotime("$FechaFin");
 
                     /*$interval = date_diff($date1, $date2);
                     $hora =$interval->format(' %H :%I : %S ');*/
@@ -60,8 +60,9 @@ public function index(){
                     if($FechaInicio != null || $FechaFin != null){
                         $band = true;
                         
+                    $h1 = ($date2 - $date1) /60 /60;
 
-                    $h1 = $this->mparteorden->suma_horas($date1,$date2);
+                    //$h1 = $this->mparteorden->suma_horas($date1,$date2);
                     $horasAcum = $horasAcum+$h1;
                     }
                     else{
@@ -92,7 +93,7 @@ public function index(){
         
         $orden->TEC=$tec;
         if($band == true){
-        $horasAcum =$interval->format(' %H :%I : %S ');
+        $horasAcum =number_format((float)$horasAcum, 2, '.', '');
         $orden->HH=$horasAcum;
         }
 
