@@ -66,7 +66,7 @@ public function index(){
                     $h1 = floor(($date2 - $date1) /60 /60);
 
                     //$h1 = $this->mparteorden->suma_horas($date1,$date2);
-                    $horasAcum = $horasAcum+$interval;
+                    $horasAcum = $horasAcum+$h1;
                     }
                     else{
                         //$band=false;
