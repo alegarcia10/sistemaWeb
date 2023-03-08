@@ -119,7 +119,7 @@
 
            div.dataTables_wrapper div.dataTables_info{
             position:absolute;
-            bottom: -100px;
+            bottom: -60px;
             /*float:right;*/
            }
            
