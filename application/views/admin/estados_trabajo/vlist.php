@@ -21,11 +21,11 @@
                     <div class="col-md-12">
                     <form action="<?php echo base_url(); ?>mantenimiento/corden/cinsert" method="POST">
                                 <div class="col-sm-2 form-group">
-                                  <label for="fecha">INICIO</label>
+                                  <label for="fechaini">INICIO</label>
                                   <input type="date" id="txtfecha" name="txtfecha" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfecha') ?>">
                                 </div>
                                 <div class="col-sm-2 form-group">
-                                  <label for="fecha">FIN</label>
+                                  <label for="fechafin">FIN</label>
                                   <input type="date" id="txtfecha" name="txtfecha" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfecha') ?>">
                                 </div>
                                 <div class="col-sm-2 form-group">
