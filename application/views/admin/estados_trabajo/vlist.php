@@ -221,7 +221,7 @@ $(document).ready(function () {
                
             ],
             'columnDefs': [
-       { targets: 1, visible: false }
+       { targets: [10,11,12,13,14], visible: false }
     ],
            
             fnDrawCallback: function () {
