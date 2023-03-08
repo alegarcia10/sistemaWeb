@@ -112,8 +112,8 @@
 
 
            div.dt-buttons{
-            /*position:relative;*/
-            margin-top: 10px;
+            /*position:relative;
+            margin-top: 10px;*/
             margin-bottom: 10px;
             float:right;
            }
