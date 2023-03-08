@@ -80,8 +80,8 @@
                                              <td width="8%">$<?php echo number_format($atributos->Precio, 2); ?></td>
                                             <td width="8%">$<?php echo number_format($atributos->Gastos, 2); ?></td>
                                             <td width="8%">$<?php echo  number_format($atributos->Ganancia, 2); ?></td>
-                                            <td width="15%"><?php echo 'No tiene Horas Invertidas'//$atributos->HH; ?></td>
-                                            <td></td>
+                                            <td width="8%"><?php echo '00:00:00'//$atributos->HH; ?></td>
+                                            <td width="8%"><?php echo '-'//$atributos->rentabilidad; ?></td>
                                         </tr> 
                                     <?php endforeach ?>
                                 <?php endif; ?>
