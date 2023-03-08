@@ -115,7 +115,7 @@
             position:absolute;
            }
            div.dataTables_length{
-            position:end;
+            position:initial;
            }
 </style>
 
