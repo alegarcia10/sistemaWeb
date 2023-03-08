@@ -33,24 +33,8 @@
                                   <button type="submit" class="btn btn-success">Buscar</button> 
                                 </div>
                 </form>
-                      <form action="<?php echo base_url(); ?>mantenimiento/corden/cinsert" method="POST">
-                                
-                      <div class="col-md-10 form-group">
-                                <div class="col-sm-3 form-group">
-                                
-                                  <input type="date" id="txtfechaini" name="txtfechaini" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfechaini') ?>">
-                                  </div>
-                                
-                                  <div class="col-sm-3 form-group">
-                                  <input type="date" id="txtfechafin" name="txtfechafin" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfechafin') ?>">
-                                  </div>
-                                
-                                
-                                  <div class="col-sm-5 form-group">
-                                    <button type="submit" class="btn btn-success">Buscar</button> 
-                                    </div>
-                        </div>      
-                            </form>
+                      
+                            
                       
                         <table id="tablaordenc" class="table table-bordered table-hover order-table1">
                             <thead>
