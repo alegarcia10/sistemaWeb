@@ -113,7 +113,7 @@
 
            div.dt-buttons{
             position:relative;
-            align:right;
+            float:right;
            }
            
 </style>
