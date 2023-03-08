@@ -114,7 +114,7 @@
            div.dt-buttons{
             /*position:relative;*/
             margin-top: 10px;
-            /*float:right;*/
+            float:right;
            }
 
            div.dataTables_wrapper div.dataTables_length label{
@@ -128,6 +128,11 @@
             bottom: 0;
             /*float:right;*/
            }
+           div.dataTables_wrapper div.dataTables_filter {
+            top: 40px;
+            text-align: right;
+            position: relative;
+            }
            
 </style>
 
