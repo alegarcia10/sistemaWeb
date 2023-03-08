@@ -29,7 +29,7 @@
                                   <input type="date" id="txtfecha" name="txtfecha" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfecha') ?>">
                                 </div>
                                 <div class="col-sm-12 form-group">
-                                  <label for="boton">&nbsp;</label>
+                                  
                                   <button type="submit" class="btn btn-success">Buscar</button> 
                                 </div>
                 </form>
