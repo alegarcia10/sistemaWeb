@@ -110,6 +110,10 @@
               
            }
 
+
+           div.dt-buttons{
+            position:absolute;
+           }
 </style>
 
 <script type="text/javascript">
