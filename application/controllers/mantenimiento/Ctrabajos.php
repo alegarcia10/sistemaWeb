@@ -26,6 +26,7 @@ public function index(){
         $orden->tecnicos="";
         if($parteorden != null){
             $tec="";
+            $HH=0;
             $horasAcum=0;
            
             foreach($parteorden as $parte){
