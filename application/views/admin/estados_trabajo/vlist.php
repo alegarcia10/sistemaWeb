@@ -81,8 +81,8 @@
                                              <td width="8%">$<?php echo number_format($atributos->Precio, 2); ?></td>
                                             <td width="8%">$<?php echo number_format($atributos->Gastos, 2); ?></td>
                                             <td width="8%">$<?php echo  number_format($atributos->Ganancia, 2); ?></td>
-                                            <td width="8%"><?php echo date_format("H-i-s",$atributos->HH);?></td>
-                                            <td width="8%"><?php echo '-'//$atributos->rentabilidad; ?></td>
+                                            <td width="8%"><?php echo $atributos->HH;?></td>
+                                            <td width="8%">$<?php echo '-'//$atributos->rentabilidad; ?></td>
                                         </tr> 
                                     <?php endforeach ?>
                                 <?php endif; ?>

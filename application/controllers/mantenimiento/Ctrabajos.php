@@ -57,13 +57,13 @@ public function index(){
                     $date2 = strtotime("$FechaFin");
 
                     //var_dump($date1);
-                    $interval = date_diff($date1, $date2);
+                    //$interval = date_diff($date1, $date2);
                     //$hora =$interval->format(' %H :%I : %S ');
                     
                     
                         //$band = true;
                         
-                    //$h1 = floor((($date2 - $date1) /60) /60);
+                    $h1 = floor(($date2 - $date1) /60 /60);
 
                     //$h1 = $this->mparteorden->suma_horas($date1,$date2);
                     $horasAcum = $horasAcum+$interval;
