@@ -94,10 +94,10 @@
                                             <td width="8%"><?php echo number_format($atributos->HH, 2);?></td>
                                             <td width="8%">$<?php echo '-'//$atributos->rentabilidad; ?></td>
                                             <td width="8%"><?php echo '<input type="text" name="r1_age" value="" ' ?></td>
-                                            <td width="8%"><?php echo '<input type="text" name="r1_age" value="" size="3"' ?></td>
-                                            <td width="8%"><?php echo '<input type="text" name="r1_age" value="" size="3"' ?></td>
-                                            <td width="8%"><?php echo '<input type="text" name="r1_age" value="" size="3"' ?></td>
-                                            <td width="8%"><?php echo '<input type="text" name="r1_age" value="" size="3"' ?></td>
+                                            <td width="8%"><?php echo '<input type="text" name="r1_age" value="" ' ?></td>
+                                            <td width="8%"><?php echo '<input type="text" name="r1_age" value="" ' ?></td>
+                                            <td width="8%"><?php echo '<input type="text" name="r1_age" value="" ' ?></td>
+                                            <td width="8%"><?php echo '<input type="text" name="r1_age" value="" ' ?></td>
                                             
                                         </tr> 
                                     <?php endforeach ?>
