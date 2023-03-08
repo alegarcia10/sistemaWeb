@@ -56,17 +56,17 @@ public function index(){
                     $date1 = strtotime("$FechaInicio");
                     $date2 = strtotime("$FechaFin");
 
-                    var_dump($date1);
-                    /*$interval = date_diff($date1, $date2);
-                    $hora =$interval->format(' %H :%I : %S ');*/
+                    //var_dump($date1);
+                    $interval = date_diff($date1, $date2);
+                    //$hora =$interval->format(' %H :%I : %S ');
                     
                     
                         //$band = true;
                         
-                    $h1 = floor((($date2 - $date1) /60) /60);
+                    //$h1 = floor((($date2 - $date1) /60) /60);
 
                     //$h1 = $this->mparteorden->suma_horas($date1,$date2);
-                    $horasAcum = $horasAcum+$h1;
+                    $horasAcum = $horasAcum+$interval;
                     }
                     else{
                         //$band=false;
@@ -96,7 +96,7 @@ public function index(){
         
         $orden->TEC=$tec;
         
-        //$horasAcum =number_format((float)$horasAcum, 2, '.', '')." hs";
+        $horasAcum =$horasAcum->format(' %H :%I : %S ');
         $orden->HH=$horasAcum;
 
 
