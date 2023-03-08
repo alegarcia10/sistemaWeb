@@ -117,6 +117,12 @@
             float:right;
            }
 
+           div.dt-dataTables_length{
+            /*position:relative;*/
+            position:absolute;
+            top: -10px;
+           }
+
            div.dataTables_wrapper div.dataTables_info{
             position:absolute;
             bottom: 0;
