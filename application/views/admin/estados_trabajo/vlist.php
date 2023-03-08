@@ -117,7 +117,7 @@
             float:right;
            }
 
-           div.dataTables_length{
+           div.dataTables_wrapper div.dataTables_length label{
             /*position:relative;
             position:absolute;*/
             margin-bottom: -10px;
