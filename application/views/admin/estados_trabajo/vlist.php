@@ -114,6 +114,7 @@
            div.dt-buttons{
             /*position:relative;*/
             margin-top: 10px;
+            bottom: 5px;
             float:right;
            }
 
@@ -130,6 +131,7 @@
            }
            div.dataTables_wrapper div.dataTables_filter {
             top: 2px;
+            right: 5px;
             float:left;
             position: relative;
             }
