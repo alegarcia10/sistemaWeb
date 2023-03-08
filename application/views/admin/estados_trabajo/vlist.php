@@ -66,11 +66,7 @@
 
                                     <th>Fecha Factura</th>
 
-                                    <th>Estado pago</th>
-
-                                    <th>Fecha pago</th>
-
-                                    <th>Demora en pago</th>
+                             
                                 </tr>
                             </thead>
                             <tbody>
