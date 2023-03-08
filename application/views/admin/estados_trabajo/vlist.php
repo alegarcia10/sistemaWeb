@@ -19,6 +19,12 @@
 
                         <div class="row">
                     <div class="col-md-12">
+                    <form action="<?php echo base_url(); ?>mantenimiento/corden/cinsert" method="POST">
+                                <div class="col-sm-2 form-group">
+                                  <label for="fecha">FECHA</label>
+                                  <input type="date" id="txtfecha" name="txtfecha" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfecha') ?>" required >
+                                </div>
+                </form>
                       <form action="<?php echo base_url(); ?>mantenimiento/corden/cinsert" method="POST">
                       <h4>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Fechas</h4>          
                       <div class="col-md-10 form-group">
