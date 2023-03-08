@@ -130,7 +130,7 @@
            }
            div.dataTables_wrapper div.dataTables_filter {
             top: 2px;
-            
+            float:left;
             position: relative;
             }
            
