@@ -34,7 +34,8 @@
                                 </div>
                 </form>
                       
-                            
+                            <div class ="col-sm-12 dt-buttons">
+                            </div>
                       
                         <table id="tablaordenc" class="table table-bordered table-hover order-table1">
                             <thead>
