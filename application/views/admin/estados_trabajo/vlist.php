@@ -176,6 +176,7 @@ $(document).ready(function () {
                },
                "order": [[ 0, "desc" ]],
                responsive: "true",
+               scrollX:true,
     
                dom: '<"dt-buttons"Bf><"clear">lirtp',
                
