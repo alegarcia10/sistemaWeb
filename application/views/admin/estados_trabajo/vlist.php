@@ -117,7 +117,7 @@
             float:right;
            }
 
-           div.dt-dataTables_length{
+           div.dataTables_length{
             /*position:relative;
             position:absolute;*/
             margin-bottom: -10px;
