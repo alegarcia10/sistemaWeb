@@ -129,8 +129,8 @@
             /*float:right;*/
            }
            div.dataTables_wrapper div.dataTables_filter {
-            top: 20px;
-            text-align: left;
+            top: 2px;
+            
             position: relative;
             }
            
