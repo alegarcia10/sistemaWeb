@@ -8,17 +8,14 @@
     <section class="content">
         <div class="box box-solid">
             <div class="box-body">
+            <div class="row">
+                    <div class="col-md-12">
                 
                 <?php if ($this->session->flashdata('correcto')) : ?>
                     <div class="alert alert-success">
                         <p><?php echo $this->session->flashdata('correcto') ?></p>
                     </div>
                 <?php endif; ?>
-                
-             
-
-                        <div class="row">
-                    <div class="col-md-12">
                     <form action="<?php echo base_url(); ?>mantenimiento/ctrabajos/indexFiltro" method="POST">
                                 <div class="col-sm-3 form-group">
                                   <label for="fechaini">INICIO</label>
