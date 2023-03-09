@@ -121,10 +121,12 @@ public function index(){
 
     $orden->Precio = (int)$orden->Precio;
     $orden->Gastos = (int)$orden->Gastos;
+    
 
     $orden->Ganancia = $orden->Precio - $orden->Gastos;
 
     if($orden->Ganancia > 0){
+        $orden->HH = (int)$orden->HH;
         $orden->rentabilidad = $orden->HH / $orden->Ganancia;
     }
     else{
