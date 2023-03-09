@@ -221,7 +221,8 @@ $(document).ready(function () {
                
             ],
             'columnDefs': [
-       { targets: [10,11,12,13,14], visible: false }
+       { targets: [10,11,12,13,14], visible: false},
+        {searchable: false, targets: [3,5,6,7,8,9,10,11,12,13,14]  }
     ],
            
             fnDrawCallback: function () {
