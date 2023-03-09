@@ -124,6 +124,13 @@ public function index(){
 
     $orden->Ganancia = $orden->Precio - $orden->Gastos;
 
+    if($orden->Ganancia > 0){
+        $orden->rentabilidad = $orden->HH / $orden->Ganancia;
+    }
+    else{
+        $orden->rentabilidad = 0;
+    }
+
     }
     $data = array (
         'ordenindex' => $ordenes,
