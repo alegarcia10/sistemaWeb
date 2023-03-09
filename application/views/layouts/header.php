@@ -65,13 +65,13 @@
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <!--<img src="<?php echo base_url()?>assets/template/dist/img/logo.jpg" class="user-image" alt="User Image"> -->
-                                <span class="hidden-xs"><?php echo '<i class="fa-solid fa-user"></i>'.' '. $this->session->userdata('nombre')?></span>
+                                <span class="hidden-xs">'<i class="fa-solid fa-user"></i><?php echo $this->session->userdata('nombre')?></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <li class="user-body">
                                     <div class="row">
                                         <div class="col-xs-12 text-center">
-                                            <a href="<?php echo '<i class="fa-solid fa-user"></i>'.' '. base_url();?>clogin/clogout"> Cerrar Sesión</a>
+                                            <a href="<?php echo base_url();?>clogin/clogout"><i class="fa-solid fa-xmark"></i>  Cerrar Sesión</a>
                                         </div>
                                     </div>
                                     <!-- /.row -->
