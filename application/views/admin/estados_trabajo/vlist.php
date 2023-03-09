@@ -30,6 +30,8 @@
                                   <button type="submit" class="btn btn-success">Buscar</button> 
                                 </div>
                 </form>
+                
+                </div>
                 <br>
                 <br>
                 <br>
@@ -102,7 +104,7 @@
                             </tbody>
                         </table>
                     </div>
-                </div>
+                
               </div> 
             </div>
         </div>
