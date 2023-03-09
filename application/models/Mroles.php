@@ -18,7 +18,7 @@ class Mroles extends CI_Model{
     //MOSTRAR usuario
     public function mselectrolessolo(){
         //$this->db->where('Anulado =','0');
-        $resultado =$query=$this->db->query("SELECT t.idRol, t.nombre_tipo, t.cliente, t.tecnico, t.ordenes, t.usuarios, t.roles
+        $resultado =$query=$this->db->query("SELECT t.idRol, t.nombre_tipo, t.cliente, t.tecnico, t.ordenes, t.usuarios, t.roles, t.estados_trabajo
         FROM tipousuario t 
         WHERE anulado = 0");
         return $resultado->result();

@@ -36,7 +36,7 @@
                                 <span class="checkmark"></span>
                             </div>
                             <div class="col-sm-2 form-group">
-                                <label>Ordenes</label>
+                                <label>Órdenes</label>
                                 <input class="chk_input" type="checkbox" id="ordenes" name="ordenes" data-width="20" data-height="20" />
                                 <span class="checkmark"></span>
                             </div>
@@ -48,6 +48,11 @@
                             <div class="col-sm-2 form-group">
                                 <label>Roles</label>
                                 <input class="chk_input" type="checkbox" id="rol" name="rol" data-width="20" data-height="20" />
+                                <span class="checkmark"></span>
+                            </div>
+                            <div class="col-sm-2 form-group">
+                                <label>Estados de Trabajo</label>
+                                <input class="chk_input" type="checkbox" id="estado" name="estado" data-width="20" data-height="20" />
                                 <span class="checkmark"></span>
                             </div>
                             <div class="col-sm-12 form-group">

@@ -57,6 +57,7 @@
                         </ul>
                     </li>
                     <?php } ?>
+                    <?php if ($roles->estados_trabajo =="1") { ?>
                     <li class="treeview">
                         <a href="#">
                         
@@ -71,6 +72,7 @@
                         
                         </ul>
                         </li>
+                    <?php } ?>
                         
                 </ul>
                                 
