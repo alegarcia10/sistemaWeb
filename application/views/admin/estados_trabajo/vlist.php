@@ -92,7 +92,7 @@
                                             <td width="8%">$<?php echo number_format($atributos->Gastos, 2); ?></td>
                                             <td width="8%">$<?php echo  number_format($atributos->Ganancia, 2); ?></td>
                                             <td width="8%"><?php echo number_format($atributos->HH, 2);?></td>
-                                            <td width="8%">%<?php echo number_format($atributos->rentabilidad,2); ?></td>
+                                            <td width="8%"><?php echo number_format($atributos->rentabilidad,2); ?>%</td>
                                             <td width="8%"><?php echo '<input type="text" name="r1_age" value="" ' ?></td>
                                             <td width="8%"><?php echo '<input type="text" name="r1_age" value="" ' ?></td>
                                             <td width="8%"><?php echo '<input type="text" name="r1_age" value="" ' ?></td>
