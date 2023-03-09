@@ -125,7 +125,7 @@ public function index(){
 
     $orden->Ganancia = $orden->Precio - $orden->Gastos;
     var_dump($orden->Ganancia);
-    if($orden->Ganancia > 0){
+    if($orden->Ganancia != null){
         $orden->HH = (int)$orden->HH;
         $orden->rentabilidad = $orden->HH / $orden->Ganancia;
         var_dump($orden->rentabilidad);
