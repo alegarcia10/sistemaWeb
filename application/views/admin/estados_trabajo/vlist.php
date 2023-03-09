@@ -10,7 +10,7 @@
             <div class="box-body">
             <div class="row">
                     <div class="col-md-12">
-                
+                        <div class="row">
                 <?php if ($this->session->flashdata('correcto')) : ?>
                     <div class="alert alert-success">
                         <p><?php echo $this->session->flashdata('correcto') ?></p>
@@ -103,7 +103,7 @@
                         </table>
                     </div>
                 </div>
-                
+              </div> 
             </div>
         </div>
     </section>
