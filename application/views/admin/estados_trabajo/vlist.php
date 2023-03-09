@@ -93,11 +93,11 @@
                                             <td width="8%">$<?php echo  number_format($atributos->Ganancia, 2); ?></td>
                                             <td width="8%"><?php echo number_format($atributos->HH, 2);?></td>
                                             <td width="8%"><?php echo number_format($atributos->rentabilidad,2); ?>%</td>
-                                            <td width="8%"><?php echo '<input type="text" name="r1_age" value="" ' ?></td>
-                                            <td width="8%"><?php echo '<input type="text" name="r1_age" value="" ' ?></td>
-                                            <td width="8%"><?php echo '<input type="text" name="r1_age" value="" ' ?></td>
-                                            <td width="8%"><?php echo '<input type="text" name="r1_age" value="" ' ?></td>
-                                            <td width="8%"><?php echo '<input type="text" name="r1_age" value="" ' ?></td>
+                                            <td width="8%"><?php echo '-' ?></td>
+                                            <td width="8%"><?php echo '-' ?></td>
+                                            <td width="8%"><?php echo '-' ?></td>
+                                            <td width="8%"><?php echo '-' ?></td>
+                                            <td width="8%"><?php echo '-' ?></td>
                                             
                                         </tr> 
                                     <?php endforeach ?>
@@ -222,7 +222,7 @@ $(document).ready(function () {
             ],
             'columnDefs': [
        { targets: [10,11,12,13,14], visible: false},
-        {searchable: false, targets: [3,5,6,7,8,9,10,11,12,13,14]  }
+       {searchable: false, targets: [3,5,6,7,8,9,10,11,12,13,14]  }
     ],
            
             fnDrawCallback: function () {
