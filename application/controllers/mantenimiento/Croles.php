@@ -96,7 +96,7 @@ public function cinsert(){
             'ordenes' => $orden,
             'usuarios' => $usuario,
             'roles' => $rol,
-            'estado' => $est,
+            'estados_trabajo' => $est,
             'anulado' => 0
             
 
@@ -192,7 +192,7 @@ public function cupdate(){
             'ordenes' => $orden,
             'usuarios' => $usuario,
             'roles' => $rol,
-            'estado' => $est,
+            'estados_trabajo' => $est,
             'anulado' => 0
 
         );
