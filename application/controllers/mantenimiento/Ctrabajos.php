@@ -128,7 +128,7 @@ public function index(){
     if($orden->Ganancia != null){
         $orden->Ganancia = (float)$orden->Ganancia;
         $orden->rentabilidad = $orden->HH / $orden->Ganancia;
-        $orden->rentabilidad = (float)$orden->rentabilidad;
+        $orden->rentabilidad = $orden->rentabilidad * 100;
         var_dump($orden->rentabilidad);
     }
     else{
