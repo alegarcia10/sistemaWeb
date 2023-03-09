@@ -84,6 +84,12 @@
         </header>
         <style>
             .navbar-nav>.user-menu>.dropdown-menu>.user-body a {
-    color: red !important;
-}
+    color: red !important;}
+
+    .navbar-nav>.user-menu>.dropdown-menu{
+        width: 100px;
+            }
+            .skin-blue .main-header .navbar .nav > li > a:hover, .skin-blue .main-header .navbar .nav > li > a:active, .skin-blue .main-header .navbar .nav > li > a:focus, .skin-blue .main-header .navbar .nav .open > a, .skin-blue .main-header .navbar .nav .open > a:hover, .skin-blue .main-header .navbar .nav .open > a:focus, .skin-blue .main-header .navbar .nav > .active > a{
+                color: #000000;
+            }
         </style>
