@@ -151,8 +151,11 @@ public function index(){
 }
 
 
-public function indexFiltro($ini,$fin){
+public function indexFiltro(){
     $idrol = $this->session->userdata("idRol");
+    $ini=$this->input->post('txtfechai');
+    $fin=$this->input->post('txtfechaf');
+    if($ini != null && $fin != null){
     $ordenes= $this->morden->mselectordenfecha($ini,$fin); 
     
     foreach ($ordenes as $orden ) {
@@ -276,12 +279,13 @@ public function indexFiltro($ini,$fin){
         'ordenindex' => $ordenes,
         'roles'=> $this->mroles->obtener($idrol)
     );
-
+    
 
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside',$data);
     $this->load->view('admin/estados_trabajo/vlist',$data);
     $this->load->view('layouts/footer');
+    }//fin if
 }
 
 

@@ -19,11 +19,11 @@
                     <form action="<?php echo base_url(); ?>mantenimiento/ctrabajos/indexFiltro" method="POST">
                                 <div class="col-sm-3 form-group">
                                   <label for="fechaini">INICIO</label>
-                                  <input type="date" id="txtfecha" name="txtfecha" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfecha') ?>">
+                                  <input type="date" id="txtfechai" name="txtfecha" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfecha') ?>">
                                 </div>
                                 <div class="col-sm-3 form-group">
                                   <label for="fechafin">FIN</label>
-                                  <input type="date" id="txtfecha" name="txtfecha" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfecha') ?>">
+                                  <input type="date" id="txtfechaf" name="txtfecha" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfecha') ?>">
                                 </div>
                                 <div class="col-sm-12 form-group">
                                   
