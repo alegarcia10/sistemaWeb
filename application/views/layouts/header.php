@@ -71,7 +71,7 @@
                                 <li class="user-body">
                                     <div class="row">
                                         <div class="col-xs-12 text-center">
-                                            <a href="<?php echo base_url();?>clogin/clogout" text-color='red'><i class="fa-solid fa-xmark">&nbsp;</i>Cerrar Sesión</a>
+                                            <a href="<?php echo base_url();?>clogin/clogout" color='red'><i class="fa-solid fa-xmark">&nbsp;&nbsp;</i>Cerrar Sesión</a>
                                         </div>
                                     </div>
                                     <!-- /.row -->
@@ -82,3 +82,8 @@
                 </div>
             </nav>
         </header>
+        <style>
+            .navbar-nav>.user-menu>.dropdown-menu>.user-body a {
+    color: red !important;
+}
+        </style>
