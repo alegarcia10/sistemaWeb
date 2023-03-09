@@ -65,7 +65,7 @@
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <!--<img src="<?php echo base_url()?>assets/template/dist/img/logo.jpg" class="user-image" alt="User Image"> -->
-                                <span class="hidden-xs"><?php echo $this->session->userdata('nombre')?></span>
+                                <span class="hidden-xs"><?php echo '<i class="fa-solid fa-book"></i>'. $this->session->userdata('nombre')?></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <li class="user-body">
