@@ -71,7 +71,7 @@
                                 <li class="user-body">
                                     <div class="row">
                                         <div class="col-xs-12 text-center">
-                                            <a href="<?php echo base_url();?>clogin/clogout"> Cerrar Sesión</a>
+                                            <a href="<?php echo '<i class="fa-solid fa-user"></i>'.' '. base_url();?>clogin/clogout"> Cerrar Sesión</a>
                                         </div>
                                     </div>
                                     <!-- /.row -->
