@@ -15,7 +15,7 @@ class Morden extends CI_Model{
     public function mselectordenfecha($ini,$fin){
       var_dump($ini);
 
-      $ini = date("d/m/Y H:i:s", strtotime($ini));
+      $ini = date("Y/m/d H:i:s", strtotime($ini));
       var_dump($ini);
       $resultado =	$query = $this->db->query("SELECT o.IdOrden , c.Nombre ,o.IdCliente, o.FechaRecepcion ,
          o.TareaDesarrollar, o.Precio, o.Completada, o.Eliminada FROM orden o
