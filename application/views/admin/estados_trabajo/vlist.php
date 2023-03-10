@@ -40,7 +40,7 @@
                         <table id="tablaordenc" class="table table-bordered table-hover order-table1">
                             <thead>
                                 <tr>
-                                    <th>Fecha Visita</th>
+                                    <th>Fecha Visitaaa</th>
 
                                     <th>Cliente</th>
                                     
