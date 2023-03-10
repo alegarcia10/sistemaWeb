@@ -8,29 +8,29 @@
     <section class="content">
         <div class="box box-solid">
             <div class="box-body">
-            <div class="row">
+                <div class="row">
                     <div class="col-md-12">
                         <div class="row">
-                <?php if ($this->session->flashdata('correcto')) : ?>
-                    <div class="alert alert-success">
-                        <p><?php echo $this->session->flashdata('correcto') ?></p>
-                    </div>
-                <?php endif; ?>
+                            <?php if ($this->session->flashdata('correcto')) : ?>
+                                <div class="alert alert-success">
+                                    <p><?php echo $this->session->flashdata('correcto') ?></p>
+                                </div>
+                            <?php endif; ?>
                     <form action="<?php echo base_url(); ?>mantenimiento/ctrabajos/indexFiltro" method="POST">
                                 <div class="col-sm-3 form-group">
                                   <label for="fechaini">INICIO</label>
-                                  <input type="date" id="txtfechai" name="txtfecha" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfecha') ?>">
+                                  <input type="date" id="txtfechai" name="txtfechai" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfechai') ?>">
                                 </div>
                                 <div class="col-sm-3 form-group">
                                   <label for="fechafin">FIN</label>
-                                  <input type="date" id="txtfechaf" name="txtfecha" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfecha') ?>">
+                                  <input type="date" id="txtfechaf" name="txtfechaf" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfechaf') ?>">
                                 </div>
                                 <div class="col-sm-12 form-group">
                                   
                                   <button type="submit" class="btn btn-success">Buscar</button> 
                                 </div>
                 </form>
-                
+                </div> 
                 </div>
                 <br>
                 <br>
@@ -105,7 +105,7 @@
                         </table>
                     </div>
                 
-              </div> 
+              
             </div>
         </div>
     </section>
