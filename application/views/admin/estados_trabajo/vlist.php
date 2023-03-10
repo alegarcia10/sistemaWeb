@@ -16,7 +16,7 @@
                                     <p><?php echo $this->session->flashdata('correcto') ?></p>
                                 </div>
                             <?php endif; ?>
-                    <form action="<?php echo base_url(); ?>mantenimiento/ctrabajos/indexFiltro" method="POST">
+                     <form action="<?php echo base_url(); ?>mantenimiento/ctrabajos/indexFiltro" method="POST">
                                 <div class="col-sm-3 form-group">
                                   <label for="fechaini">INICIO</label>
                                   <input type="date" id="txtfechai" name="txtfechai" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfechai') ?>">
@@ -25,17 +25,16 @@
                                   <label for="fechafin">FIN</label>
                                   <input type="date" id="txtfechaf" name="txtfechaf" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfechaf') ?>">
                                 </div>
-                                <div class="col-sm-12 form-group">
+                                <div class="col-sm-3 form-group">
                                   
                                   <button type="submit" class="btn btn-success">Buscar</button> 
                                 </div>
-                </form>
-                    </div> 
-                </div>
+                     </div> 
+                       </form>
+                    
                 
-                <br>
-                <br>
-                <br>
+                
+                
                       
                             
                 <div class="row">
@@ -107,7 +106,7 @@
                         </table>
                     </div>
                 </div>
-              
+              </div> 
             </div>
         </div>
     </section>
