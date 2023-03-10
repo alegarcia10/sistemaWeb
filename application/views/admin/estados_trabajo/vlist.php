@@ -27,7 +27,7 @@
                                 </div>
                                 <div class="col-sm-3 form-group">
                                   
-                                  <button type="submit" class="btn btn-success">Buscar</button> 
+                                  <a href="<?php echo base_url(); ?>mantenimiento/ctrabajos/indexFiltro" class="btn btn-success">Buscar</a> 
                                 </div>
                      </div> 
                        </form>
