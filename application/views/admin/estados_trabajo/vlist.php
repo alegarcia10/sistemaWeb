@@ -30,15 +30,16 @@
                                   <button type="submit" class="btn btn-success">Buscar</button> 
                                 </div>
                 </form>
-                </div> 
+                    </div> 
                 </div>
-                </div>
+                
                 <br>
                 <br>
                 <br>
                       
                             
-                      
+                <div class="row">
+                    <div class="col-md-12">
                         <table id="tablaordenc" class="table table-bordered table-hover order-table1">
                             <thead>
                                 <tr>
@@ -105,9 +106,9 @@
                             </tbody>
                         </table>
                     </div>
-                
+                </div>
               
-            
+            </div>
         </div>
     </section>
 </div>
