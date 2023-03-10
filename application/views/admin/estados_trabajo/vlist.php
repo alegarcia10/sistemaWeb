@@ -22,11 +22,13 @@
                                   <input type="date" id="txtfechai" name="txtfechai" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfechai') ?>">
                                 </div>
                                 <div class="col-sm-3 form-group">
-                                  <label for="fechafin">FINa</label>
+                                  <label for="fechafin">FIN</label>
                                   <input type="date" id="txtfechaf" name="txtfechaf" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfechaf') ?>">
-                                  <a href="<?php echo base_url(); ?>mantenimiento/ctrabajos/indexFiltro" class="btn btn-success">Buscar</a> 
                                 </div>
-                                 
+                                <div class="col-sm-3 form-group">
+                                  
+                                  <button type="submit" class="btn btn-success">Buscar</button> 
+                                </div>
                      </div> 
                        </form>
                     
@@ -40,7 +42,7 @@
                         <table id="tablaordenc" class="table table-bordered table-hover order-table1">
                             <thead>
                                 <tr>
-                                    <th>Fecha Visitaaa</th>
+                                    <th>Fecha Visita</th>
 
                                     <th>Cliente</th>
                                     
