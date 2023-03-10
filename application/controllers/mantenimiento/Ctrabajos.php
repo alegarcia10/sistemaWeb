@@ -289,7 +289,7 @@ public function indexFiltro(){
     $this->load->view('layouts/footer');
     }//fin if
     else{
-    index();
+        $this->ctrabajo->index();
     }
 }
 
