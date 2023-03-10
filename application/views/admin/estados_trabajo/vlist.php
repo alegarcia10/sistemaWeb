@@ -32,6 +32,7 @@
                 </form>
                 </div> 
                 </div>
+                </div>
                 <br>
                 <br>
                 <br>
@@ -106,7 +107,7 @@
                     </div>
                 
               
-            </div>
+            
         </div>
     </section>
 </div>
