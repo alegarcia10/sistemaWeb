@@ -23,8 +23,7 @@ class Morden extends CI_Model{
          INNER JOIN cliente c ON o.IdCliente = c.IdCliente 
          where o.Eliminada=0 and o.Completada=0 and o.FechaRecepcion >= '$ini' and o.FechaRecepcion <= '$fin' 
          ORDER BY o.IdOrden DESC;");
-    var_dump($resultado->result());
-      die;   
+    
       return $resultado->result();
       
 
