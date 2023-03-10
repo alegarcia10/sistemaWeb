@@ -156,6 +156,9 @@ public function indexFiltro(){
     $idrol = $this->session->userdata("idRol");
     $ini=$this->input->post('txtfechai');
     $fin=$this->input->post('txtfechaf');
+    var_dump("fechas");
+    var_dump($ini);
+    var_dump($fin);
     if($ini != null && $fin != null){
     $ordenes= $this->morden->mselectordenfecha($ini,$fin); 
     
