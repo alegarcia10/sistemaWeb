@@ -152,6 +152,7 @@ public function index(){
 
 
 public function indexFiltro(){
+    var_dump("llega al filtro sin romper");
     $idrol = $this->session->userdata("idRol");
     $ini=$this->input->post('txtfechai');
     $fin=$this->input->post('txtfechaf');
