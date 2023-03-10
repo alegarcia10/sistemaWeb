@@ -26,7 +26,7 @@
                                   <input type="date" id="txtfechaf" name="txtfechaf" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfechaf') ?>">
                                   <a href="<?php echo base_url(); ?>mantenimiento/ctrabajos/indexFiltro" class="btn btn-success">Buscar</a> 
                                 </div>
-                                
+                                 
                      </div> 
                        </form>
                     
