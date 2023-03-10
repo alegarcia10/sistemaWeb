@@ -46,7 +46,7 @@
                                 <input type="text" id="txtobser" name="txtobser" maxlength="1000"class="form-control" value="<?php echo !empty(form_error('txtobser'))? set_value('txtobser') : $ordenedit->observaciones ?>" class= "form-control">
                             </div>
                             <div class=" col-sm-12 form-group">
-                                <h2>Datos de Faturacion</h2>
+                                <h2>Datos de Facturacion</h2>
                             </div>
                             <div class="col-sm-3 form-group">
                                 <label for="numFactura">N° Factura</label>
@@ -62,7 +62,12 @@
                             </div>
                             <div class="col-sm-3 form-group">
                                 <label for="Pago">Pago</label>
-                                <input class="form-check-input position-static" type="radio" name="txtPago" id="txtPago" value="<?php echo set_value('txtPago') ?>" aria-label="...">
+                                <select name="Pago" id="Pago">
+                                    <option value="volvo">Volvo</option>
+                                    <option value="saab">Saab</option>
+                                    <option value="mercedes">Mercedes</option>
+                                    <option value="audi">Audi</option>
+                                </select>
                             </div>
                             <div class="col-sm-12 form-group">
                                 <a class="btn btn-success" href="<?php echo base_url();?>mantenimiento/corden">Volver</a>
