@@ -45,7 +45,25 @@
                                 <label for="obser">OBSERVACIONES</label>
                                 <input type="text" id="txtobser" name="txtobser" maxlength="1000"class="form-control" value="<?php echo !empty(form_error('txtobser'))? set_value('txtobser') : $ordenedit->observaciones ?>" class= "form-control">
                             </div>
+                            <div class=" col-sm-12 form-group">
+                                <h1>Datos de Faturacion</h1>
                             <div class="col-sm-12 form-group">
+                            <div class="col-sm-3 form-group">
+                                <label for="numFactura">N° Factura</label>
+                                <input type="numFactura" id="txtnumFactura" name="txtnumFactura" step="0.01"  value="<?php echo !empty(form_error('txtnumFactura'))? set_value('txtnumFactura') :  $ordenedit->numFactura;?>" class= "form-control"   >
+                            </div>
+                            <div class="col-sm-3 form-group">
+                                <label for="fechaFactura">Fecha Factura</label>
+                                <input type="date" id="txtfechaFactura" name="txtfechaFactura" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfechaFactura') ?>">
+                            </div>
+                            <div class="col-sm-3 form-group">
+                                <label for="fechaPago">Fecha Pago</label>
+                                <input type="date" id="txtfechaPago" name="txtfechaPago" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfechaPago') ?>">
+                            </div>
+                            <div class="col-sm-3 form-group">
+                                <label for="Pago">Pago</label>
+                                <input class="form-check-input position-static" type="Pago" name="txtPago" id="txtPago" value="<?php echo set_value('txtPago') ?>" aria-label="...">
+                            </div>
                             <a class="btn btn-success" href="<?php echo base_url();?>mantenimiento/corden">Volver</a>
                                 <button type="submit" class="btn btn-success">Guardar</button>
                             </div>
