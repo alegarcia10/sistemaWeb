@@ -286,9 +286,7 @@ public function indexFiltro(){
     $this->load->view('admin/estados_trabajo/vlist',$data);
     $this->load->view('layouts/footer');
     }//fin if
-    else{
-        index();
-    }
+    
 }
 
 
