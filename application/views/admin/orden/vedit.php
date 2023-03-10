@@ -50,7 +50,7 @@
                             <div class="col-sm-12 form-group">
                             <div class="col-sm-3 form-group">
                                 <label for="numFactura">N° Factura</label>
-                                <input type="numFactura" id="txtnumFactura" name="txtnumFactura" step="0.01"  value="<?php echo !empty(form_error('txtnumFactura'))? set_value('txtnumFactura') :  $ordenedit->numFactura;?>" class= "form-control"   >
+                                <input type="numFactura" id="txtnumFactura" name="txtnumFactura" step="0.01"  value="<?php echo !empty(form_error('txtnumFactura'))? set_value('txtnumFactura') :  $ordenedit->observaciones;?>" class= "form-control"   >
                             </div>
                             <div class="col-sm-3 form-group">
                                 <label for="fechaFactura">Fecha Factura</label>
