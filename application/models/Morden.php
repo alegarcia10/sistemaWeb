@@ -26,7 +26,7 @@ class Morden extends CI_Model{
     var_dump("SELECT o.IdOrden , c.Nombre ,o.IdCliente, o.FechaRecepcion ,
     o.TareaDesarrollar, o.Precio, o.Completada, o.Eliminada FROM orden o
     INNER JOIN cliente c ON o.IdCliente = c.IdCliente 
-    where o.Eliminada=0 and o.Completada=0 and o.FechaRecepcion >= $ini and o.FechaRecepcion <= $fin 
+    where o.Eliminada=0 and o.Completada=0 and o.FechaRecepcion >= '$ini' and o.FechaRecepcion <= '$fin' 
     ORDER BY o.IdOrden DESC;");
       die;   
       return $resultado->result();
