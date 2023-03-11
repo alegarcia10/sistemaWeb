@@ -121,9 +121,14 @@ public function cedit($id){
     $idrol = $this->session->userdata("idRol");
     $facturas = $this->mfactura->miupdatefactura($id);
 
+    if($facturas->N_factura == null){
+        $facturas->N_factura=' ';
+        $facturas->fecha_factura=' ';
+        $facturas->fecha_pago=' ';
+        $facturas->estado_pago=' ';
+    }
     
-    var_dump($facturas->N_factura);
-    die;
+   
 
     $data = array(
         'ordenedit' => $this->morden->midupdateorden($id),

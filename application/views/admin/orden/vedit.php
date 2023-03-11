@@ -11,7 +11,7 @@
                <hr>
                <div class="row">
                    <div class="col-md-12">
-                       <?php var_dump($ordenedit) ;echo "---------/n" ;var_dump($facturas); die; if($this->session->flashdata('error')):?>
+                       <?php if($this->session->flashdata('error')):?>
                         <div class="alert alert-danger">
                             <p><?php echo $this->session->flashdata('error') ?> </p>
                         </div>
