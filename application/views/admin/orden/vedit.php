@@ -68,7 +68,7 @@
                             </div>
                             <div class="col-sm-3 form-group">
                                 <label for="fechaPago">Fecha Pago</label>
-                                <input type="date" id="txtfechaPago" name="txtfechaPago" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo !empty(form_error('txtfechaPago'))? set_value('txtfechaPago') :  date("d-m-Y", strtotime("$facturas->fecha_pago"));?>">
+                                <input type="datetime" id="txtfechaPago" name="txtfechaPago" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo !empty(form_error('txtfechaPago'))? set_value('txtfechaPago') :  date("d-m-Y", strtotime("$facturas->fecha_pago"));?>">
                             </div>
                             <div class="col-sm-3 form-group">
                                 <label for="Pago">Estado del Pago</label>
