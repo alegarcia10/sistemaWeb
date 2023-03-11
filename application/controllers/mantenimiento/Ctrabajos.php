@@ -124,8 +124,8 @@ public function index(){
             $tarea=$this->morden->consultarPrimerTarea($id);
             if($tarea != null){
                 $fecha_visita= $tarea->FechaInicio;
-
-                $orden->Fecha=$fecha_visita;
+                if($fecha_visita != null){
+                $orden->Fecha=$fecha_visita;}
             }
             else{
                 $orden->Fecha="-";
