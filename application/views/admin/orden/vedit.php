@@ -49,7 +49,7 @@
                             <b>¿CARGAR FACTURA?</b>
                             <br>
                             <br>
-                                <input type="checkbox" margin-left = 60px name="check" id="check" value="1" class="chk_input" onchange="javascript:showContent()" />
+                                <input type="checkbox" name="check" id="check" value="1" class="chk_input" onchange="javascript:showContent()" />
                             </div>
                                 <div id="content" style="display: none;">
                          <div class=" col-sm-12 form-group">
@@ -88,6 +88,14 @@
         </div>
     </section>
 </div>
+
+<style>
+    input[type="radio"], input[type="checkbox"] {
+    
+    margin-left: 60px;
+    
+}
+    </style>
 
 <script type="text/javascript">
     function showContent() {
