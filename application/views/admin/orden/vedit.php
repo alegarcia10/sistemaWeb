@@ -39,8 +39,8 @@
                               <label for="cliente">Cliente&nbsp;&nbsp; (*)</label>
                 							<? $this->select_items->sin_buscador2($cliente_select,(!empty($model->IdCliente))
                                ? $model->IdCliente : '',	'cliente','1',(!empty($consultar)) ? "disabled ":'required');?>
-                							<input id="cliente_hidden" name="cliente_hidden" type="hidden" >
-                						</div>
+                			<input id="cliente_hidden" name="cliente_hidden" type="hidden" >
+                			</div>
                             <div class=" col-sm-12 form-group">
                                 <label for="obser">OBSERVACIONES</label>
                                 <input type="text" id="txtobser" name="txtobser" maxlength="1000"class="form-control" value="<?php echo !empty(form_error('txtobser'))? set_value('txtobser') : $ordenedit->observaciones ?>" class= "form-control">
@@ -52,7 +52,7 @@
                                 <b>¿CARGAR FACTURA?</b>
                                         
                                 <input type="checkbox" name="check" id="check" value="1" class="chk_input" onchange="javascript:showContent()" />
-                                <input type="hidden" value="<?php echo $facturas->N_factura ?>" name="txtnfact" id="txtnfact">
+                                
                             </div>
                                 <div id="content" style="display: none;">// DIV PADRE
                                     <div class=" col-sm-12 form-group">
