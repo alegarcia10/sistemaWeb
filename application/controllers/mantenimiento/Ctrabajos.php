@@ -160,7 +160,7 @@ public function index(){
         $date1 = date_create("$FechaFact");
         $date2 = date_create("$FechaPago");
         $interval = date_diff($date1,$date2);
-        $dias =$interval->format(' %a ');
+        $dias =$interval->format(' %a ')." días";
         
         $orden->demora=$dias;
         }
