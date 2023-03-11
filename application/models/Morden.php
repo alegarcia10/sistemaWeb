@@ -82,6 +82,15 @@ class Morden extends CI_Model{
        return $resultado->row();
     }
 
+    //OBTENER DATOS con idOrden
+    public function midupdateordenyfacturas($id){
+      $query=$this->db->query("SELECT o.IdOrden ,o.IdCliente, o.FechaRecepcion , o.TareaDesarrollar, 
+      o.Precio, o.Completada, o.Eliminada, f.N_factura, f.fecha_factura, f.fecha_pago, f.estado_pago 
+      FROM orden o LEFT JOIN factura f ON f.id_orden = o.IdOrden where o.IdOrden=$id;" );
+      return $resultado->row();
+   }
+
+  
     //MODIFICAR orden
     public function mupdateorden($id, $data){
         $this->db->where('IdOrden', $id);

@@ -52,19 +52,19 @@
                             </div>
                             <div class="col-sm-3 form-group">
                                 <label for="numFactura">N° Factura</label>
-                                <input type="text" id="txtnumFactura" name="txtnumFactura" class= "form-control" value="<?php echo !empty(form_error('txtnumFactura'))? set_value('txtnumFactura') :  $facturas->N_factura;?>" class= "form-control" >
+                                <input type="text" id="txtnumFactura" name="txtnumFactura" class= "form-control" value="<?php echo !empty(form_error('txtnumFactura'))? set_value('txtnumFactura') :  $ordenedit->N_factura;?>" class= "form-control" >
                             </div>
                             <div class="col-sm-3 form-group">
                                 <label for="fechaFactura">Fecha Factura</label>
-                                <input type="text" id="txtfechaFactura" name="txtfechaFactura" class="form-control"  value="<?php echo !empty(form_error('txtfechaFactura'))? set_value('txtfechaFactura') :  date("d-m-Y", strtotime("$facturas->fecha_factura"));?>" >
+                                <input type="text" id="txtfechaFactura" name="txtfechaFactura" class="form-control"  value="<?php echo !empty(form_error('txtfechaFactura'))? set_value('txtfechaFactura') :  date("d-m-Y", strtotime("$ordenedit->fecha_factura"));?>" >
                             </div>
                             <div class="col-sm-3 form-group">
                                 <label for="fechaPago">Fecha Pago</label>
-                                <input type="text" id="txtfechaPago" name="txtfechaPago" class="form-control"  value="<?php echo !empty(form_error('txtfechaPago'))? set_value('txtfechaPago') :  date("d-m-Y", strtotime("$facturas->fecha_pago"));?>">
+                                <input type="text" id="txtfechaPago" name="txtfechaPago" class="form-control"  value="<?php echo !empty(form_error('txtfechaPago'))? set_value('txtfechaPago') :  date("d-m-Y", strtotime("$ordenedit->fecha_pago"));?>">
                             </div>
                             <div class="col-sm-3 form-group">
                                 <label for="Pago">Estado del Pago</label>
-                                <input type="text" id="txtpago" name="txtpago" maxlength="1000" value="<?php echo !empty(form_error('txtpago'))? set_value('txtpago') : $facturas->estado_pago ?>" class= "form-control">    
+                                <input type="text" id="txtpago" name="txtpago" maxlength="1000" value="<?php echo !empty(form_error('txtpago'))? set_value('txtpago') : $ordenedit->estado_pago ?>" class= "form-control">    
                             </div>
                             <br>
                             <br>

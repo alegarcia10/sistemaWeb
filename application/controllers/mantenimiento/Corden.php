@@ -119,20 +119,10 @@ public function cinsert(){
 
 public function cedit($id){
     $idrol = $this->session->userdata("idRol");
-    $facturas = $this->mfactura->miupdatefactura($id);
-
-    if($facturas->N_factura == null){
-        $facturas->N_factura=' ';
-        $facturas->fecha_factura=' ';
-        $facturas->fecha_pago=' ';
-        $facturas->estado_pago=' ';
-    }
     
-   
 
     $data = array(
-        'ordenedit' => $this->morden->midupdateorden($id),
-        'facturas' => $facturas,
+        'ordenedit' => $this->morden->midupdateordenyfacturas($id),
         'roles'=> $this->mroles->obtener($idrol)
     );
 
