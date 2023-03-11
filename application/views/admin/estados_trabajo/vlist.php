@@ -103,7 +103,7 @@
                                                     { echo ("$atributos->estado_pago");}else{ echo '-';} ; ?></td>
                                             <td width="8%"><?php if ($atributos->fecha_pago != null)
                                                     { echo date("d-m-Y", strtotime("$atributos->fecha_pago"));}else{ echo '-';} ; ?></td>
-                                            <td width="8%"><?php echo '-' ?></td>
+                                            <td width="8%"><?php echo $atributos->demora; ?></td>
                                             
                                         </tr> 
                                     <?php endforeach ?>
