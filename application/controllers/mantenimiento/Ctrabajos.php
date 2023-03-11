@@ -155,7 +155,7 @@ public function index(){
 
     $FechaFact= $orden->fecha_factura;
     $FechaPago= $orden->fecha_pago;
-        if($FechaFact != null && $FechaPago != null && $FechaFact != '0000-00-00 00:00:00' && $FechaPago != '0000-00-00 00:00:00'){
+        if($FechaFact != null || $FechaPago != null || $FechaFact != '0000-00-00 00:00:00' || $FechaPago != '0000-00-00 00:00:00'){
 
         $date1 = date_create("$FechaFact");
         $date2 = date_create("$FechaPago");
