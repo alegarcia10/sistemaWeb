@@ -156,11 +156,16 @@ public function index(){
     $FechaFact= $orden->fecha_factura;
     $FechaPago= $orden->fecha_pago;
         if($FechaFact == null || $FechaPago == null || $FechaFact == '0000-00-00 00:00:00' || $FechaPago == '0000-00-00 00:00:00'){
-
+            if($FechaFact == '0000-00-00 00:00:00' || $FechaFact == null){
+                $orden->fecha_factura="-";
+            }
+            if($FechaPago == '0000-00-00 00:00:00' || $FechaPago == null){
+                $orden->fecha_pago="-";
+            }
             $orden->demora="-";
         }
         else{
-            $date1 = date_create("$FechaFact");
+        $date1 = date_create("$FechaFact");
         $date2 = date_create("$FechaPago");
         $interval = date_diff($date1,$date2);
         $dias =$interval->format(' %a ')." días";
