@@ -113,7 +113,7 @@ public function index(){
 
             $orden->Completa=$completa;
             $orden->Estado=$estado;
-            $orden->Fecha=$fecha_visita;
+            
 
             }else{
                
@@ -124,6 +124,8 @@ public function index(){
             $tarea=$this->morden->consultarPrimerTarea($id);
             if($tarea != null){
                 $fecha_visita=$tarea->FechaInicio;
+
+                $orden->Fecha=$fecha_visita;
             }
             else{
                 $orden->Fecha="-";
