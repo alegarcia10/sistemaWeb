@@ -95,8 +95,10 @@
                                             <td width="8%">$<?php echo  number_format($atributos->Ganancia, 2); ?></td>
                                             <td width="8%"><?php echo number_format($atributos->HH, 2);?></td>
                                             <td width="8%"><?php echo number_format($atributos->rentabilidad,2); ?>%</td>
-                                            <td width="8%"><?php echo '-'; ?></td>
-                                            <td width="8%"><?php echo '-' ; ?></td>
+                                            <td width="8%"><?php if ($atributos->N_factura != null)
+                                                    { echo $atributos->N_factura;}else{ echo '-';} ; ?></td>
+                                            <td width="8%"><?php if ($atributos->fecha_factura != null)
+                                                    { echo date("d-m-Y", strtotime("$atributos->fecha_factura"));}else{ echo '-';} ; ?></td>
                                             <td width="8%"><?php echo '-' ?></td>
                                             <td width="8%"><?php echo '-' ?></td>
                                             <td width="8%"><?php echo '-' ?></td>
