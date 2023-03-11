@@ -78,7 +78,7 @@
                                     <?php foreach ($ordenindex as $atributos) :?>
                                         <tr>
                                             
-                                            <td width="10%"><?php if ($atributos->Fecha != NULL) 
+                                            <td width="10%"><?php if ($atributos->Fecha != '01-01-1970') 
                                                                 {echo date("d-m-Y", strtotime("$atributos->Fecha"));}
                                                                  else{echo '-' ; };?></td>
                                             <td width="15%"><?php echo $atributos->Nombre; ?></td>
