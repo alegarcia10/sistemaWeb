@@ -78,7 +78,9 @@
                                     <?php foreach ($ordenindex as $atributos) :?>
                                         <tr>
                                             
-                                            <td width="10%"><?php echo date("d-m-Y", strtotime("$atributos->Fecha")); ?></td>
+                                            <td width="10%"><?php if ($atributos->Fecha != null) 
+                                                                {echo date("d-m-Y", strtotime("$atributos->Fecha"));}
+                                                                 else{echo '-' ; };?></td>
                                             <td width="15%"><?php echo $atributos->Nombre; ?></td>
                                             <td width="24%"><?php echo $atributos->TareaDesarrollar; ?></td>
                                             <td width="10%"><?php if ($atributos->Completa == '1')
