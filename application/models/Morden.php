@@ -117,5 +117,11 @@ class Morden extends CI_Model{
       IdParte  = (SELECT MAX(IdParte) FROM parteorden WHERE IdOrden=$id)" ) ;
     return $query->row();
   	}
+
+     function consultarPrimerTarea($id){//
+      $query=$this->db->query("SELECT * FROM parteorden WHERE IdOrden=$id and 
+      IdParte  = (SELECT MIN(IdParte) FROM parteorden WHERE IdOrden=$id)" ) ;
+    return $query->row();
+  	}
 }
 ?>

@@ -78,7 +78,7 @@
                                     <?php foreach ($ordenindex as $atributos) :?>
                                         <tr>
                                             
-                                            <td width="10%"><?php echo date("d-m-Y", strtotime("$atributos->FechaRecepcion")); ?></td>
+                                            <td width="10%"><?php echo date("d-m-Y", strtotime("$atributos->Fecha")); ?></td>
                                             <td width="15%"><?php echo $atributos->Nombre; ?></td>
                                             <td width="24%"><?php echo $atributos->TareaDesarrollar; ?></td>
                                             <td width="10%"><?php if ($atributos->Completa == '1')
@@ -96,7 +96,7 @@
                                             <td width="8%"><?php if ($atributos->N_factura != null)
                                                     { echo $atributos->N_factura;}else{ echo '-';} ; ?></td>
                                             <td width="8%"><?php if ($atributos->fecha_factura != null)
-                                                    { echo $atributos->fecha_factura;}else{ echo '-';} ; ?></td>
+                                                    { echo date("d-m-Y", strtotime("$atributos->fecha_factura"));}else{ echo '-';} ; ?></td>
                                             <td width="8%"><?php echo '-' ?></td>
                                             <td width="8%"><?php echo '-' ?></td>
                                             <td width="8%"><?php echo '-' ?></td>

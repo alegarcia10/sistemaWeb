@@ -104,13 +104,15 @@ public function index(){
 
 
         $porden=$this->morden->consultarEstado($id);
+        $tarea=$this->morden->consultarPrimerTarea($id);
         if($porden != null){
             $completa=$porden->Completa;
             $estado=$porden->Estado;
-            
+            $fecha_visita=$tarea->FechaIinicio;
 
             $orden->Completa=$completa;
             $orden->Estado=$estado;
+            $orden->Fecha=$fecha_visita;
 
             }else{
                
