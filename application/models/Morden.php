@@ -120,7 +120,7 @@ class Morden extends CI_Model{
 
      function consultarPrimerTarea($id){//
       $query=$this->db->query("SELECT * FROM parteorden WHERE IdOrden=$id and 
-      IdParte  = (SELECT MIN(IdParte) FROM parteorden WHERE IdOrden=$id and FechaInicio!=null)" ) ;
+      IdParte  = (SELECT MIN(IdParte) FROM parteorden WHERE IdOrden=$id)" ) ;
     return $query->row();
   	}
 }
