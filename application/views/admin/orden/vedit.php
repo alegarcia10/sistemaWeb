@@ -48,13 +48,7 @@
                             <br>
                             <br>
 
-                            <div class="col-md-5 form-group">
-                                <b>¿CARGAR FACTURA?</b>
-                                        
-                                <input type="checkbox" name="check" id="check" value="1" class="chk_input" onchange="javascript:showContent()" />
-                                <input type="hidden" id="txtnfact" name="txtnfact"  value="<?php echo !empty(form_error('txtnfact'))? set_value('txtnfact') :  $facturas->N_factura;?>"  >
-                                
-                            </div>
+                        
                                 <div id="content" style="display: none;">// DIV PADRE
                                     <div class=" col-sm-12 form-group">
                                         <h2>Datos de Facturacion</h2>
