@@ -62,7 +62,7 @@
                             </div>
                             <div class="col-sm-3 form-group">
                                 <label for="Pago">Pago</label>
-                                <select name="Pago" id="Pago" width="10em">
+                                <select name="Pago" id="Pago" width="8%">
                                     <option value="volvo">Completo</option>
                                     <option value="saab">Parcial</option>
                                     <option value="mercedes">Incompleto</option>
