@@ -153,6 +153,20 @@ public function index(){
         $orden->rentabilidad = 0;
     }
 
+    $FechaFact= $orden->fecha_factura;
+    $FechaPago= $orden->fecha_pago;
+        if($FechaFact != null && $FechaPago != null){
+
+        $date1 = strtotime("$FechaInicio");
+        $date2 = strtotime("$FechaFin");
+        $dias = date_diff($date1,$date2);
+        $format= '%a';
+        
+        $orden->demora=$dias->format($format);
+        }
+        else{
+            $orden->demora="-";
+        }
     }
     $data = array (
         'ordenindex' => $ordenes,
