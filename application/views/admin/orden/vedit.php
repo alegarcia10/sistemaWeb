@@ -47,6 +47,7 @@
                             </div>
                             <div class="col-md-5 form-group">
                             <b>¿CARGAR FACTURA?</b>
+                            <br>
                                 <input type="checkbox" name="check" id="check" value="1" class="chk_input" onchange="javascript:showContent()" />
                             </div>
                                 <div id="content" style="display: none;">
