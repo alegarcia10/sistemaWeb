@@ -45,7 +45,10 @@
                                 <label for="obser">OBSERVACIONES</label>
                                 <input type="text" id="txtobser" name="txtobser" maxlength="1000"class="form-control" value="<?php echo !empty(form_error('txtobser'))? set_value('txtobser') : $ordenedit->observaciones ?>" class= "form-control">
                             </div>
-                            <div class=" col-sm-12 form-group">
+                            <b>¿CARGAR FACTURA?</b>
+                                <input type="checkbox" name="check" id="check" value="1" class="form-control" onchange="javascript:showContent()" />
+                                <div id="content" style="display: none;">
+                         <div class=" col-sm-12 form-group">
                                 <h2>Datos de Facturacion</h2>
                             </div>
                             <div class="col-sm-3 form-group">
@@ -69,6 +72,7 @@
                                     
                                 </select>
                             </div>
+                       </div>
                             <div class="col-sm-12 form-group">
                                 <a class="btn btn-success" href="<?php echo base_url();?>mantenimiento/corden">Volver</a>
                                 <button type="submit" class="btn btn-success">Guardar</button>
@@ -80,3 +84,16 @@
         </div>
     </section>
 </div>
+
+<script type="text/javascript">
+    function showContent() {
+        element = document.getElementById("content");
+        check = document.getElementById("check");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }
+</script>
