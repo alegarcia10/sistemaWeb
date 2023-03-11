@@ -63,10 +63,10 @@
                             <div class="col-sm-3 form-group">
                                 <label for="Pago">Pago</label>
                                 <select name="Pago" id="Pago" width="10em">
-                                    <option value="volvo">Volvo</option>
-                                    <option value="saab">Saab</option>
-                                    <option value="mercedes">Mercedes</option>
-                                    <option value="audi">Audi</option>
+                                    <option value="volvo">Completo</option>
+                                    <option value="saab">Parcial</option>
+                                    <option value="mercedes">Incompleto</option>
+                                    
                                 </select>
                             </div>
                             <div class="col-sm-12 form-group">
