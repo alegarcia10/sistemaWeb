@@ -325,7 +325,8 @@ public function indexFiltro(){
     $this->load->view('layouts/footer');
     }//fin if
     else{
-        $this->ctrabajo->index();
+        $this->session->set_flashdata('error', 'Este Dni/Cuit ya esta registrado ');
+       redirect(base_url().'mantenimiento/ctrabajos/index');
     }
 }
 
