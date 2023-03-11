@@ -45,8 +45,10 @@
                                 <label for="obser">OBSERVACIONES</label>
                                 <input type="text" id="txtobser" name="txtobser" maxlength="1000"class="form-control" value="<?php echo !empty(form_error('txtobser'))? set_value('txtobser') : $ordenedit->observaciones ?>" class= "form-control">
                             </div>
+                            <div class="col-md-5 form-group">
                             <b>¿CARGAR FACTURA?</b>
                                 <input type="checkbox" name="check" id="check" value="1" class="form-control" onchange="javascript:showContent()" />
+                            </div>
                                 <div id="content" style="display: none;">
                          <div class=" col-sm-12 form-group">
                                 <h2>Datos de Facturacion</h2>
