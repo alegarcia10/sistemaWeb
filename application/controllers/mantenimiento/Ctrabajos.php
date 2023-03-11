@@ -126,6 +126,9 @@ public function index(){
                 $fecha_visita= $tarea->FechaInicio;
                 if($fecha_visita != null){
                 $orden->Fecha=$fecha_visita;}
+                else{
+                    $orden->Fecha="-";
+                }
             }
             else{
                 $orden->Fecha="-";
