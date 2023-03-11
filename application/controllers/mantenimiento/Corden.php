@@ -119,11 +119,19 @@ public function cinsert(){
 
 public function cedit($id){
     $idrol = $this->session->userdata("idRol");
+    $facturas = $this->mfactura->miupdatefactura($id);
+
+    
+    var_dump($facturas->N_factura);
+    die;
+
     $data = array(
         'ordenedit' => $this->morden->midupdateorden($id),
-        'facturas' => $this->mfactura->miupdatefactura($id),
+        'facturas' => $facturas,
         'roles'=> $this->mroles->obtener($idrol)
     );
+
+
     $data['cliente_select'] = $this->morden->cliente_listar_select2();
     $data['model'] = $this->morden->obtener($data['ordenedit']->IdCliente);
 
