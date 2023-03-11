@@ -10,6 +10,7 @@ class Corden extends CI_Controller {
     $this->load->model('morden');
     $this->load->model('mroles');
     $this->load->model('mcombo');
+    $this->load->model('mfactura');
     }
 
 
@@ -120,6 +121,7 @@ public function cedit($id){
     $idrol = $this->session->userdata("idRol");
     $data = array(
         'ordenedit' => $this->morden->midupdateorden($id),
+        'facturas' => $this->mfactura->miupdatefactura($id),
         'roles'=> $this->mroles->obtener($idrol)
     );
     $data['cliente_select'] = $this->morden->cliente_listar_select2();

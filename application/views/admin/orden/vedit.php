@@ -50,8 +50,9 @@
 
                             <div class="col-md-5 form-group">
                             <b>¿CARGAR FACTURA?</b>
-                                                      
+                                        
                                 <input type="checkbox" name="check" id="check" value="1" class="chk_input" onchange="javascript:showContent()" />
+                                <input type="hidden" value="<?php echo $facturas->N_factura ?>" name="txtnfact" id="txtnfact">
                             </div>
                                 <div id="content" style="display: none;">
                          <div class=" col-sm-12 form-group">
@@ -59,18 +60,19 @@
                             </div>
                             <div class="col-sm-3 form-group">
                                 <label for="numFactura">N° Factura</label>
-                                <input type="numFactura" id="txtnumFactura" name="txtnumFactura" step="0.01"  value="<?php echo !empty(form_error('txtnumFactura'))? set_value('txtnumFactura') :  $ordenedit->observaciones;?>" class= "form-control"   >
+                                <input type="numFactura" id="txtnumFactura" name="txtnumFactura" value="<?php echo !empty(form_error('txtnumFactura'))? set_value('txtnumFactura') :  $facturas->N_factura;?>" class= "form-control"   >
                             </div>
                             <div class="col-sm-3 form-group">
                                 <label for="fechaFactura">Fecha Factura</label>
-                                <input type="date" id="txtfechaFactura" name="txtfechaFactura" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfechaFactura') ?>">
+                                <input type="date" id="txtfechaFactura" name="txtfechaFactura" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo !empty(form_error('txtfechaFactura'))? set_value('txtfechaFactura') :  date("d-m-Y", strtotime("$facturas->fecha_factura"));?>" >
                             </div>
                             <div class="col-sm-3 form-group">
                                 <label for="fechaPago">Fecha Pago</label>
-                                <input type="date" id="txtfechaPago" name="txtfechaPago" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfechaPago') ?>">
+                                <input type="date" id="txtfechaPago" name="txtfechaPago" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo !empty(form_error('txtfechaPago'))? set_value('txtfechaPago') :  date("d-m-Y", strtotime("$facturas->fecha_pago"));?>">
                             </div>
                             <div class="col-sm-3 form-group">
-                                <label for="Pago">Pago</label>
+                                <label for="Pago">Estado del Pago</label>
+                                <input type="text" id="txtpago" name="txtpago" maxlength="1000" value="<?php echo !empty(form_error('txtpago'))? set_value('txtpago') : $facturas->estado_pago ?>" class= "form-control">
                                 <select name="Pago" id="Pago" class="form-control">
                                     <option value="volvo">Completo</option>
                                     <option value="saab">Parcial</option>
