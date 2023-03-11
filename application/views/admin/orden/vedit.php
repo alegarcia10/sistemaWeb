@@ -48,7 +48,8 @@
                             <div class="col-md-5 form-group">
                             <b>¿CARGAR FACTURA?</b>
                             <br>
-                                <input type="checkbox" align-content="center" name="check" id="check" value="1" class="chk_input" onchange="javascript:showContent()" />
+                            <br>
+                                <input type="checkbox" margin-left = 60px name="check" id="check" value="1" class="chk_input" onchange="javascript:showContent()" />
                             </div>
                                 <div id="content" style="display: none;">
                          <div class=" col-sm-12 form-group">
