@@ -44,7 +44,7 @@
         <header class="main-header" >
             <!-- Logo -->
 
-            <a href="<?php echo base_url()?>cdashboard" class="logo" id="menu3">
+            <a href="#" class="logo" id="menu3">
                 <!-- mini logo for sidebar mini 50x50 pixels -->
                 <span class="logo-mini"><img src="<?php echo base_url()?>assets/template/dist/img/ICONO COOLSOFT jpg.png" id="imgSmall"></span>
                 <!-- logo for regular state and mobile devices -->
