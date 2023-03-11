@@ -30,7 +30,7 @@ public function index(){
             $tec="";
             //$HH=0;
             $horasAcum=0;
-            $fecha_visita="";
+            //$fecha_visita="";
            
             foreach($parteorden as $parte){
                 
@@ -105,11 +105,11 @@ public function index(){
 
 
         $porden=$this->morden->consultarEstado($id);
-        $tarea=$this->morden->consultarPrimerTarea($id);
+        
         if($porden != null){
             $completa=$porden->Completa;
             $estado=$porden->Estado;
-            $fecha_visita=$tarea->FechaInicio;
+            
 
             $orden->Completa=$completa;
             $orden->Estado=$estado;
@@ -119,6 +119,13 @@ public function index(){
                
                 $orden->Completa='0';
                 $orden->Estado='4';
+                
+            }
+            $tarea=$this->morden->consultarPrimerTarea($id);
+            if($tarea != null){
+                $fecha_visita=$tarea->FechaInicio;
+            }
+            else{
                 $orden->Fecha="-";
             }
 
