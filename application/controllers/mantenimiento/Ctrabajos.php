@@ -159,8 +159,8 @@ public function index(){
 
         $date1 = strtotime("$FechaInicio");
         $date2 = strtotime("$FechaFin");
-        $dias = diff($date1,$date2);
-        
+        $interval = date_diff($date1,$date2);
+        $dias =$interval->format(' %a ');
         
         $orden->demora=$dias;
         }
