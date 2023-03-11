@@ -108,7 +108,7 @@ public function index(){
         if($porden != null){
             $completa=$porden->Completa;
             $estado=$porden->Estado;
-            $fecha_visita=$tarea->FechaIinicio;
+            $fecha_visita=$tarea->FechaInicio;
 
             $orden->Completa=$completa;
             $orden->Estado=$estado;
