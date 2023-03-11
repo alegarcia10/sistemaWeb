@@ -157,8 +157,8 @@ public function index(){
     $FechaPago= $orden->fecha_pago;
         if($FechaFact != null && $FechaPago != null){
 
-        $date1 = strtotime("$FechaInicio");
-        $date2 = strtotime("$FechaFin");
+        $date1 = strtotime("$FechaFact");
+        $date2 = strtotime("$FechaPago");
         $interval = date_diff($date1,$date2);
         $dias =$interval->format(' %a ');
         
