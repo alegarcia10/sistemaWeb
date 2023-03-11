@@ -119,7 +119,7 @@ public function index(){
                
                 $orden->Completa='0';
                 $orden->Estado='4';
-                $orden->Fecha='-';
+                $orden->Fecha="-";
             }
 
     $orden->Gastos=$this->morden->consultaGatosOrden($id);
