@@ -16,9 +16,9 @@
                                     <p><?php echo $this->session->flashdata('correcto') ?></p>
                                 </div>
                             <?php endif; ?>
-                            <div class="col-md-6">
-                            <input type="text" name="datefilter" value="01/01/2018 - 01/15/2018" />
-                            </div>         
+                            
+                            <input type="text" name="datefilter">
+                                     
                        </div> 
                 
                 
