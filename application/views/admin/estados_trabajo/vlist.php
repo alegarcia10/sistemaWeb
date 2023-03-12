@@ -227,17 +227,17 @@ $(document).ready(function () {
                     
           });
           //table.buttons().container().appendTo( '#example_wrapper .col-md-6:eq(0)' );
-        	
-        
-});
-
-$(function() {
+          $(function() {
   $('input[name="daterange"]').daterangepicker({
     opens: 'left'
   }, function(start, end, label) {
     console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
   });
 });
+
+        
+});
+
 
 
 
