@@ -17,7 +17,7 @@
 <!-- dataTable -->
 
 
-
+<script src="<?php echo base_url();?>assets/template/jquery/jquery-3.5.1.js"></script>
 
 <script src="<?php echo base_url();?>assets/template/datatables.net-bs/js/dataTables.responsive.min.js"></script>
 
