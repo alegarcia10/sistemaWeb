@@ -16,21 +16,9 @@
                                     <p><?php echo $this->session->flashdata('correcto') ?></p>
                                 </div>
                             <?php endif; ?>
-                     <form action="<?php echo base_url(); ?>mantenimiento/ctrabajos/indexFiltro" method="POST">
-                                <div class="col-sm-3 form-group">
-                                  <label for="fechaini">INICIO</label>
-                                  <input type="date" id="txtfechai" name="txtfechai" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfechai') ?>">
-                                </div>
-                                <div class="col-sm-3 form-group">
-                                  <label for="fechafin">FIN</label>
-                                  <input type="date" id="txtfechaf" name="txtfechaf" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfechaf') ?>">
-                                </div>
-                                <div class="col-sm-12 form-group">
-                                  
-                                  <button type="submit" class="btn btn-success">Buscar</button> 
-                                </div>
-                   
-                       </form>
+                            <div class="col-md-6">
+                            <input type="text" name="daterange" value="01/01/2018 - 01/15/2018" />
+                            </div>         
                        </div> 
                 
                 
@@ -243,7 +231,13 @@ $(document).ready(function () {
         
 });
 
-
+$(function() {
+  $('input[name="daterange"]').daterangepicker({
+    opens: 'left'
+  }, function(start, end, label) {
+    console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+  });
+});
 
 
 

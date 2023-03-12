@@ -17,7 +17,7 @@ class Ctrabajos extends CI_Controller {
 public function index(){
     $idrol = $this->session->userdata("idRol");
     
-    $ordenes= $this->morden->mselectorden(); 
+    $ordenes= $this->morden->mselectestadostrabajo(); 
     
    
     
@@ -325,7 +325,6 @@ public function indexFiltro(){
     $this->load->view('layouts/footer');
     }//fin if
     else{
-        $this->session->set_flashdata('error', 'Este Dni/Cuit ya esta registrado ');
        redirect(base_url().'mantenimiento/ctrabajos/index');
     }
 }

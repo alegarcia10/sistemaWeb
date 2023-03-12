@@ -9,10 +9,22 @@ class Morden extends CI_Model{
            o.TareaDesarrollar, o.Precio, o.Completada, o.Eliminada, f.N_factura, f.fecha_factura, f.fecha_pago, f.estado_pago FROM orden o
            INNER JOIN cliente c ON o.IdCliente = c.IdCliente  
            LEFT JOIN factura f ON f.id_orden = o.IdOrden
-           where o.Eliminada=0 ORDER BY o.IdOrden DESC;");
+           where o.Eliminada=0 and o.Completada=0 
+           ORDER BY o.IdOrden DESC;");
         return $resultado->result();
 
     }
+
+    public function mselectestadostrabajo(){
+
+      $resultado =	$query = $this->db->query("SELECT o.IdOrden , c.Nombre ,o.IdCliente, o.FechaRecepcion ,
+         o.TareaDesarrollar, o.Precio, o.Completada, o.Eliminada, f.N_factura, f.fecha_factura, f.fecha_pago, f.estado_pago FROM orden o
+         INNER JOIN cliente c ON o.IdCliente = c.IdCliente  
+         LEFT JOIN factura f ON f.id_orden = o.IdOrden
+         where o.Eliminada=0 ORDER BY o.IdOrden DESC;");
+      return $resultado->result();
+
+  }
 
     public function mselectordenfecha($ini,$fin){
      
