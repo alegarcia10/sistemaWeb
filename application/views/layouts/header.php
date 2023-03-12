@@ -21,7 +21,8 @@
 
    
 
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/DataTables-1.13.3/css/daterangepicker.css"/>
+    
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/DataTables-1.13.3/css/dataTables.dateTimes.min.css"/>
     
 
     <link rel="stylesheet" href="<?php echo base_url();?>assets/template/DataTables-1.13.3/css/dataTables.bootstrap4.min.css"/>
