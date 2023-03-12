@@ -231,12 +231,7 @@ $(document).ready(function () {
           });
           //table.buttons().container().appendTo( '#example_wrapper .col-md-6:eq(0)' );
           
-
-        
-});
-
-
-$(function() {
+          $(function() {
 
 $('input[name="datefilter"]').daterangepicker({
     autoUpdateInput: false,
@@ -254,6 +249,11 @@ $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) 
 });
 
 });
+        
+});
+
+
+
 
 
 /*<div class="row">
