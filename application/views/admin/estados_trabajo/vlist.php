@@ -229,15 +229,7 @@ $(document).ready(function () {
                     
           });
           //table.buttons().container().appendTo( '#example_wrapper .col-md-6:eq(0)' );
-          
-          
-        
-});
-
-var minDate, maxDate;
- 
-// Custom filtering function which will search data in column four between two values
-$.fn.dataTable.ext.search.push(
+          $.fn.dataTable.ext.search.push(
     function( settings, data, dataIndex ) {
         var min = minDate.val();
         var max = maxDate.val();
@@ -255,7 +247,7 @@ $.fn.dataTable.ext.search.push(
     }
 );
  
-$(document).ready(function() {
+
     // Create date inputs
     minDate = new DateTime($('#min'), {
         format: 'MMMM Do YYYY'
@@ -271,8 +263,16 @@ $(document).ready(function() {
     $('#min, #max').on('change', function () {
         table.draw();
     });
+
+
+
+          
+        
 });
 
+var minDate, maxDate;
+ 
+// Custom filtering function which will search data in column four between two values
 
 
 /*<div class="row">

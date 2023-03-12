@@ -57,7 +57,7 @@ $('.sidebar-menu').tree()
 </body>
 </html>
 
-<script tyoe="text/javascript">
+<script type="text/javascript">
 
   var base_url= "<?php echo base_url();?>";
 
