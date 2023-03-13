@@ -16,12 +16,7 @@
                                     <p><?php echo $this->session->flashdata('correcto') ?></p>
                                 </div>
                             <?php endif; ?>
-                                <div class="input-group date" data-provide="datepicker">
-                                    <input type="text" class="form-control">
-                                <div class="input-group-addon">
-                                    <span class="glyphicon glyphicon-th"></span>
-                                </div>
-                            </div>
+                            <input class="datepicker" data-date-format="mm/dd/yyyy">
                             
                                      
                        </div> 
@@ -233,9 +228,9 @@ $(document).ready(function () {
           });
           //table.buttons().container().appendTo( '#example_wrapper .col-md-6:eq(0)' );
           $('.datepicker').datepicker({
-    format: 'mm/dd/yyyy',
     startDate: '-3d'
 });
+
 
 
 
