@@ -240,7 +240,7 @@ $(document).ready(function () {
     function( settings, data, dataIndex ) {
         var min =  $('#start_date').val();
         var max =  $('#end_date').val();
-        var date_pursached =  data[2]  || 0; // use data for the date column
+        var date_pursached =  data[0]; // use data for the date column
  
          if (min == "" && max == "") { return true; }
          if (min == "" && date_pursached <= max) { return true;}
