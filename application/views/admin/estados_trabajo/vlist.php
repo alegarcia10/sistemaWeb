@@ -17,7 +17,7 @@
                                 </div>
                             <?php endif; ?>
                            
-                    <div class="col-md-12">
+                    
                         <div class="col-md-12">
                           <h2>Filtros</h2>
                         </div>
@@ -37,7 +37,7 @@
                             </form>
                             
                                      
-                       </div> 
+                      
                 
                 
                        
