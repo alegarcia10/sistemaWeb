@@ -259,7 +259,7 @@ var table = $('#tablaordenc').DataTable();
         table.draw();
     } );*/
 
-    function() {  
+   
     var table = $('#tablaordenc').DataTable();
 
     $('#min,#max').keyup( function() {
@@ -295,8 +295,7 @@ var table = $('#tablaordenc').DataTable();
         }
 
         return dateCol >= dateIni && dateCol <= dateFin;
-    }
-);
+    });
 
 
 
