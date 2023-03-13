@@ -238,7 +238,7 @@ $(document).ready(function () {
           //table.buttons().container().appendTo( '#example_wrapper .col-md-6:eq(0)' );
           $.fn.dataTable.ext.search.push(
     function( settings, data, dataIndex ) {
-        var min =  date("d-m-Y", strtotime($('#start_date').val()));
+        var min =  $('#start_date').val();
         var max =  $('#end_date').val();
         var date_pursached =  data[0]; // use data for the date column
  
