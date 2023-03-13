@@ -19,10 +19,10 @@
                             <div class="row">
 <div class="input-daterange">
 		<div class="col-md-4">
-		<input type="date" name="start_date"   dateformat="d M y"    id="start_date" class="form-control" />
+		<input type="date" name="start_date"   dateformat="d M y"    id="min" class="form-control" />
 	  </div>
  <div class="col-md-4">
- <input type="date" name="end_date" id="end_date"  dateformat="d M y"  class="form-control" />
+ <input type="date" name="end_date" id="max"  dateformat="d M y"  class="form-control" />
 		</div>      
 		</div>
 </div>
@@ -236,7 +236,7 @@ $(document).ready(function () {
                     
           });
           //table.buttons().container().appendTo( '#example_wrapper .col-md-6:eq(0)' );
-          $.fn.dataTable.ext.search.push(
+          /*$.fn.dataTable.ext.search.push(
     function( settings, data, dataIndex ) {
         var min = $('#start_date').val();
         
@@ -257,9 +257,46 @@ var table = $('#tablaordenc').DataTable();
     // Event listener to the two range filtering inputs to redraw on input
     $('#start_date, #end_date').change( function() {
         table.draw();
-    } );
+    } );*/
 
+    function() {  
+    var table = $('#tablaordenc').DataTable();
 
+    $('#min,#max').keyup( function() {
+        table.draw();
+    });
+
+    $.fn.dataTable.ext.search.push(
+    function(oSettings, aData, iDataIndex) {
+
+        var dateIni = $('#min').val();
+        var dateFin = $('#max').val();
+
+        var indexCol = 0;
+
+        dateIni = dateIni.replace(/-/g, "");
+        dateFin= dateFin.replace(/-/g, "");
+
+        var dateCol = aData[indexCol].replace(/-/g, "");
+
+        if (dateIni === "" && dateFin === "")
+        {
+            return true;
+        }
+
+        if(dateIni === "")
+        {
+            return dateCol <= dateFin;
+        }
+
+        if(dateFin === "")
+        {
+            return dateCol >= dateIni;
+        }
+
+        return dateCol >= dateIni && dateCol <= dateFin;
+    }
+);
 
 
 
