@@ -16,7 +16,7 @@
                                     <p><?php echo $this->session->flashdata('correcto') ?></p>
                                 </div>
                             <?php endif; ?>
-                            <div class="row">
+                           
                     <div class="col-md-12">
                         <div class="col-md-12">
                           <h2>Filtros</h2>
