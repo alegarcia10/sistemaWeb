@@ -16,7 +16,16 @@
                                     <p><?php echo $this->session->flashdata('correcto') ?></p>
                                 </div>
                             <?php endif; ?>
-                            <input class="datepicker" data-date-format="mm/dd/yyyy">
+                            <div class="row">
+<div class="input-daterange">
+		<div class="col-md-4">
+		<input type="date" name="start_date"       id="start_date" class="form-control" />
+	  </div>
+ <div class="col-md-4">
+ <input type="date" name="end_date" id="end_date"    class="form-control" />
+		</div>      
+		</div>
+</div>
                             
                                      
                        </div> 
@@ -227,9 +236,27 @@ $(document).ready(function () {
                     
           });
           //table.buttons().container().appendTo( '#example_wrapper .col-md-6:eq(0)' );
-          $('.datepicker').datepicker({
-    startDate: '-3d'
-});
+          $.fn.dataTable.ext.search.push(
+    function( settings, data, dataIndex ) {
+        var min =  $('#start_date').val();
+        var max =  $('#end_date').val();
+        var date_pursached =  data[2]  || 0; // use data for the date column
+ 
+         if (min == "" && max == "") { return true; }
+         if (min == "" && date_pursached <= max) { return true;}
+         if(max == "" && date_pursached >= min) {return true;}
+         if (date_pursached <= max && date_pursached >= min) { return true; }
+         return false;
+    }
+);
+var table = $('#tablaordenc').DataTable();
+
+     
+    // Event listener to the two range filtering inputs to redraw on input
+    $('#start_date, #end_date').change( function() {
+        table.draw();
+    } );
+
 
 
 
@@ -238,7 +265,7 @@ $(document).ready(function () {
         
 });
 
-var minDate, maxDate;
+
  
 // Custom filtering function which will search data in column four between two values
 
