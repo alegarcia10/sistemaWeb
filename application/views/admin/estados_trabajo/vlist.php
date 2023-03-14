@@ -17,15 +17,24 @@
                                 </div>
                             <?php endif; ?>
                             <div class="row">
-<div class="input-daterange">
-		<div class="col-md-4">
-		<input type="date" name="start_date"   dateformat="d M y"    id="min" class="form-control" />
-	  </div>
- <div class="col-md-4">
- <input type="date" name="end_date" id="max"  dateformat="d M y"  class="form-control" />
-		</div>      
-		</div>
-</div>
+                    <div class="col-md-12">
+                        <div class="col-md-12">
+                          <h2>Filtros</h2>
+                        </div>
+                      <form action="<?php echo base_url(); ?>" method="POST">
+                                <div class="col-sm-2 form-group">
+                                  <label for="fechaini">Inicio</label>
+                                  <input type="date" id="txtfechaini" name="txtfechaini" class="form-control" min="2020-01-01" max="2100-12-31" value="</**?php echo set_value('txtfechaini') ?>">
+                                </div>
+                                <div class="col-sm-2 form-group">
+                                  <label for="fechafin">Fin</label>
+                                  <input type="date" id="txtfechafin" name="txtfechafin" class="form-control" min="2020-01-01" max="2100-12-31" value="</**?php echo set_value('txtfechafin') ?>">
+                                </div>
+                                <br>
+                                <div class="col-sm-10 form-group">
+                                    <button type="submit" class="btn btn-success">Buscar</button>
+                                </div>
+                            </form>
                             
                                      
                        </div> 
