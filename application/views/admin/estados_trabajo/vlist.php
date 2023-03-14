@@ -227,6 +227,14 @@ $(document).ready(function () {
        { targets: [10,11,12,13,14], visible: false},
        {searchable: false, targets: [3,5,6,7,8,9,10,11,12,13,14]  }
     ],
+            "createdRow":function(row,data,index){
+                if(data[0]=='-'){
+                    $('td',row).eq(0).css({
+                        'background-color':'#ff5252',
+                        'color':'white'
+                    })
+                }
+            };
            
             fnDrawCallback: function () {
        $('.buttons-colvis').attr("id", "showHideColumnButton").removeClass('dt-buttonbuttons-collection buttons-colvis');}
