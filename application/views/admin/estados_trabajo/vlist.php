@@ -16,109 +16,51 @@
                                     <p><?php echo $this->session->flashdata('correcto') ?></p>
                                 </div>
                             <?php endif; ?>
-                            
-                    <div class="col-md-12">
-                        <div class="col-md-12">
-                          <h2>Filtros</h2>
-                        </div>
-                      <form action="<?php echo base_url(); ?>" method="POST">
-                                <div class="col-sm-2 form-group">
-                                  <label for="fechaini">Inicio</label>
-                                  <input type="date" id="txtfechaini" name="txtfechaini" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfechaini') ?>">
-                                </div>
-                                <div class="col-sm-2 form-group">
-                                  <label for="fechafin">Fin</label>
-                                  <input type="date" id="txtfechafin" name="txtfechafin" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo set_value('txtfechafin') ?>">
-                                </div>
-                                <br>
-                                <div class="col-sm-10 form-group">
-                                    <button type="submit" class="btn btn-success">Buscar</button>
-                                </div>
-                            </form>
-                            
-                                     
-                       </div> 
-                
-                
-                       
-                      
-                            
-                <div class="row">
-                    <div class="col-md-12">
-                        <table id="tablaordenc" class="table table-bordered table-hover order-table1">
-                            <thead>
-                                <tr>
-                                    <th>Fecha Visita</th>
 
-                                    <th>Cliente</th>
-                                    
-                                    <th>Detalle Trabajo</th>
-
-                                    <th>Estado</th>
-                                    
-                                    <th>Técnicos</th>
-
-                                    <th>Monto S/IVA</th>
-                                    
-                                    <th>Materiales S/IVA</th>
-                                  
-                                    <th>Ganancia</th>
-
-                                    <th>HH Invertidas</th>
-
-                                    <th>Rentabilidad</th>
-
-                                    <th>N° factura</th>
-
-                                    <th>Fecha Factura</th>
-
-                                    <th>Estado pago</th>
-
-                                    <th>Fecha pago</th>
-
-                                    <th>Demora en pago</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php if (!empty($ordenindex)) : ?>
-                                    <?php foreach ($ordenindex as $atributos) :?>
-                                        <tr>
-                                            
-                                            <td width="10%"><?php if ($atributos->Fecha != "-") 
-                                                                {echo date("d-m-Y", strtotime("$atributos->Fecha"));}
-                                                                 else{echo '-' ; };?></td>
-                                            <td width="15%"><?php echo $atributos->Nombre; ?></td>
-                                            <td width="24%"><?php echo $atributos->TareaDesarrollar; ?></td>
-                                            <td width="10%"><?php if ($atributos->Completa == '1')
-                                                    { echo 'Completada';}elseif($atributos->Estado == 0)
-                                                    { echo 'Pendiente';}elseif($atributos->Estado == 1)
-                                                    { echo 'Recibida';}elseif($atributos->Estado == 2)
-                                                    { echo 'En Curso';}elseif($atributos->Estado == 3)
-                                                    { echo 'Finalizada';}else{ echo 'Sin tareas';} ; ?></td>
-                                            <td width="15%"><?php echo $atributos->TEC; ?></td>
-                                             <td width="8%">$<?php echo number_format($atributos->Precio, 2); ?></td>
-                                            <td width="8%">$<?php echo number_format($atributos->Gastos, 2); ?></td>
-                                            <td width="8%">$<?php echo  number_format($atributos->Ganancia, 2); ?></td>
-                                            <td width="8%"><?php echo number_format($atributos->HH, 2);?></td>
-                                            <td width="8%"><?php echo number_format($atributos->rentabilidad,2); ?>%</td>
-                                            <td width="8%"><?php if ($atributos->N_factura != null)
-                                                    { echo $atributos->N_factura;}else{ echo '-';} ; ?></td>
-                                            <td width="8%"><?php if ($atributos->fecha_factura != "-")
-                                                    { echo date("d-m-Y", strtotime("$atributos->fecha_factura"));}else{ echo '-';} ; ?></td>
-                                            <td width="8%"><?php if ($atributos->estado_pago != null)
-                                                    { echo ($atributos->estado_pago);}else{ echo '-';} ; ?></td>
-                                            <td width="8%"><?php if ($atributos->fecha_pago != "-")
-                                                    { echo date("d-m-Y", strtotime("$atributos->fecha_pago"));}else{ echo '-';} ; ?></td>
-                                            <td width="8%"><?php echo $atributos->demora; ?></td>
-                                            
-                                        </tr> 
-                                    <?php endforeach ?>
-                                <?php endif; ?>
-                            </tbody>
-                        </table>
-                    </div>
+                            <div class="col-md-12">
+                           
+                                        <div class="input-daterange">
+                                                <div class="col-md-4">
+                                                <input type="date" name="start_date"       id="start_date" class="form-control" />
+                                                </div>
+                                            <div class="col-md-4">
+                                                <input type="date" name="end_date" id="end_date"    class="form-control" />
+                                            </div>      
+                                        
+                                        </div>
+                                        
+                                        <table class="table" id="rapport">
+                                                <thead>
+                                                        <tr>
+                                                            <th>Id</th>
+                                                            <th>Reférence</th>
+                                                            <th>Date</th>
+                                                        </tr>
+                                                    </thead>
+                                                <tbody>
+                                                    <tr>
+                                                            <td>1</td>
+                                                            <td>XZDF</td>
+                                                            <td>2018-10-26 15:04:13</td>
+                                                        </tr>
+                                                    <tr>
+                                                            <td>2</td>
+                                                            <td>XZDpo</td>
+                                                            <td>2018-10-23 15:04:13</td>
+                                                    </tr>
+                                                    <tr>
+                                                            <td>4</td>
+                                                            <td>XZDmoQSD</td>
+                                                            <td>2018-09-10 15:04:13</td>
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                            </div>
+                        
+                        </div>  
+                    
+                    </div> 
                 </div>
-              </div> 
             </div>
         </div>
     </section>
@@ -254,13 +196,11 @@ $(document).ready(function () {
                     
           });
           //table.buttons().container().appendTo( '#example_wrapper .col-md-6:eq(0)' );
-          /*$.fn.dataTable.ext.search.push(
+          $.fn.dataTable.ext.search.push(
     function( settings, data, dataIndex ) {
-        var min = $('#start_date').val();
-        
+        var min =  $('#start_date').val();
         var max =  $('#end_date').val();
-        
-        var date_pursached =  data[0]; // use data for the date column
+        var date_pursached =  data[2]  || 0; // use data for the date column
  
          if (min == "" && max == "") { return true; }
          if (min == "" && date_pursached <= max) { return true;}
@@ -269,13 +209,17 @@ $(document).ready(function () {
          return false;
     }
 );
-var table = $('#tablaordenc').DataTable();
+ 
+$(document).ready(function() {
+    var table = $('#rapport').DataTable();
 
      
     // Event listener to the two range filtering inputs to redraw on input
     $('#start_date, #end_date').change( function() {
         table.draw();
-    } );*/
+    } );
+
+} );
 
    
     
@@ -309,5 +253,8 @@ var table = $('#tablaordenc').DataTable();
                                     <button type="submit" class="btn btn-success">Buscar</button>
                                 </div>
                             </form>*/ 
+
+
+                            /* */
 
 </script>

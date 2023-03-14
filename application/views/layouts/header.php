@@ -19,8 +19,8 @@
     folder instead of downloading all of them to reduce the load. -->
     <!-- DataTables -->
 
-   
-
+    
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/DataTables-1.13.3/css/jquery.dataTables.min.css"/>
     
     <link rel="stylesheet" href="<?php echo base_url();?>assets/template/DataTables-1.13.3/css/dataTables.dateTimes.min.css"/>
     
