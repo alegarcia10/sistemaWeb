@@ -234,7 +234,7 @@ $(document).ready(function () {
                         'color':'white'
                     })
                 }
-            };
+            }
            
             fnDrawCallback: function () {
        $('.buttons-colvis').attr("id", "showHideColumnButton").removeClass('dt-buttonbuttons-collection buttons-colvis');}
