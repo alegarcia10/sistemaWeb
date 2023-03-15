@@ -17,7 +17,7 @@
                                 </div>
                             <?php endif; ?>
                             <div class="col-md-12">
-                                <h2>Filtro Fecha</h2>
+                                <h3>Filtro Fecha</h3>
                             </div>
 
                             <div class="col-md-12">
