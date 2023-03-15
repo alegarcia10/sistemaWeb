@@ -165,7 +165,7 @@
 
 
 $(document).ready(function () {
-   /*var table =  $('#tablaordenc').DataTable({
+var table =  $('#tablaordenc').DataTable({
                "language": {
                    "lengthMenu": "Mostrar _MENU_ registros por página",
                    "zeroRecords": "No se encontraron resultados en su búsqueda",
@@ -242,7 +242,7 @@ $(document).ready(function () {
             
            
             fnDrawCallback: function () {
-       $('.buttons-colvis').attr("id", "showHideColumnButton").removeClass('dt-buttonbuttons-collection buttons-colvis');}*/
+       $('.buttons-colvis').attr("id", "showHideColumnButton").removeClass('dt-buttonbuttons-collection buttons-colvis');}
             
        
                      
