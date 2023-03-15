@@ -156,7 +156,7 @@
             top: 30px;
            }
            .dataTables_wrapper .dataTables_length {
-            top: 30px;
+            margin-top: 20px;;
             }
 
            div.dataTables_wrapper div.dataTables_info{
