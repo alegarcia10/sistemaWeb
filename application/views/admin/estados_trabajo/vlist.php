@@ -156,10 +156,10 @@
            div.dataTables_wrapper div.dataTables_length label{
             /*position:relative;
             position:relative;*/
-            top: 40px;
+            margin-top: 10px;
            }
            .dataTables_wrapper .dataTables_length {
-            margin-top: 30px;;
+            margin-top: 30px;
             }
 
            div.dataTables_wrapper div.dataTables_info{
