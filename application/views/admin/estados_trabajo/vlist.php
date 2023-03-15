@@ -16,11 +16,11 @@
                                     <p><?php echo $this->session->flashdata('correcto') ?></p>
                                 </div>
                             <?php endif; ?>
-                            <div class="col-md-12">
+                            <div class="col-md-12" style="padding-left:0">
                                 <h3>Filtro Fecha</h3>
                             </div>
 
-                            <div class="col-md-12">
+                            <div class="col-md-12" style="padding-left:0">
                                     <div class="row">
                                         <div class="input-daterange">
                                             <div class="col-md-4">
