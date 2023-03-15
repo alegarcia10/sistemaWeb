@@ -122,10 +122,10 @@
 </div>
 <style>
 /*estilo titulos tabla*/ 
-/*.table thead, .table tfoot{
+.table thead, .table tfoot{
         background-color: #455a64;
         color:azure;
-    }*/
+    }
 /*estilo de boton columnas*/ 
 .dt-button.buttons-columnVisibility {
               background: #3c8dbc !important;
