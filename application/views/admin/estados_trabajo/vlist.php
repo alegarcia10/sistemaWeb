@@ -16,6 +16,9 @@
                                     <p><?php echo $this->session->flashdata('correcto') ?></p>
                                 </div>
                             <?php endif; ?>
+                            <div class="col-md-12">
+                                <h2>Filtro Fecha</h2>
+                            </div>
 
                             <div class="col-md-12">
                                     <div class="row">
@@ -156,7 +159,7 @@
             top: 30px;
            }
            .dataTables_wrapper .dataTables_length {
-            margin-top: 20px;;
+            margin-top: 30px;;
             }
 
            div.dataTables_wrapper div.dataTables_info{
