@@ -192,16 +192,17 @@ var table =  $('#tablaordenc').DataTable({
                         'background-color':'#ff5252',
                         'color':'white'
                     })
-                };
+                }
+                
+            },
+            "createdRow":function(row,data,index){
                 if(data[10]=='-'){
                     $('td',row).eq(10).css({
                         'background-color':'#ff5252',
                         'color':'white'
                     })
                 }
-                
             },
-            
                 
             
                "order": [[ 0, "desc" ]],
