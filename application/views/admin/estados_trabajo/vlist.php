@@ -187,7 +187,7 @@ var table =  $('#tablaordenc').DataTable({
                    },
                },
                "createdRow":function(row,data,index){
-                if(data[0]=='-'){
+                if(data[0,10,11,12,13,14]=='-'){
                     $('td',row).eq(0).css({
                         'background-color':'#ff5252',
                         'color':'white'
