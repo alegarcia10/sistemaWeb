@@ -167,6 +167,10 @@
             float:left;
             position: relative;
             }
+            .dataTables_wrapper .dataTables_paginate .paginate_button {
+    
+               padding: 0em; 
+            }   
            
 </style>
 
