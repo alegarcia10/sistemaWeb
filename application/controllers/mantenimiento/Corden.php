@@ -180,6 +180,7 @@ public function cupdatefact(){
     $nfact = $this->input->post('txtnumFactura');
     $id = $this->input->post('txtid');
     $estado = $this->input->post('txtpago');
+    $idorden= $this->input->post('txtidorden');
   
     $res=$this->mfactura->midupdatefact($nfact);
   
@@ -189,7 +190,8 @@ public function cupdatefact(){
               'N_factura' => $nfact,
               'fecha_factura' => $ffact,
               'fecha_pago' => $fpago,
-              'estado_pago' => $estado
+              'estado_pago' => $estado,
+              'id_orden' =>$idorden
           );
           if($res==null){
                 $res = $this->mfactura->minsertfactura($data);
