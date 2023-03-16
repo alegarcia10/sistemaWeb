@@ -18,6 +18,9 @@
                         <?php endif ; ?>
                         <form action="<?php echo base_url();?>mantenimiento/corden/cupdate" method="POST">
                             <input type="hidden" value="<?php echo $ordenedit->IdOrden ?>" name="txtidorden" id="txtidorden">
+                            <div class=" col-sm-12 form-group">
+                                <h2>Datos Orden</h2>
+                            </div>
                             <div class="col-sm-3 form-group">
                                 <label for="fecha">Fecha de Recepción</label>
                                 <input type="text" id="txtfecha" name="txtfecha"  min="2020-01-01" max="2100-12-31" value="<?php echo !empty(form_error('txtfecha'))? set_value('txtfecha') :  date("d-m-Y", strtotime("$ordenedit->FechaRecepcion"));?>" class= "form-control"   >
@@ -45,8 +48,15 @@
                                 <label for="obser">OBSERVACIONES</label>
                                 <input type="text" id="txtobser" name="txtobser" maxlength="1000"class="form-control" value="<?php echo !empty(form_error('txtobser'))? set_value('txtobser') : $ordenedit->observaciones ?>" class= "form-control">
                             </div>
+                            <div class="col-sm-12 form-group">
+                                <a class="btn btn-success" href="<?php echo base_url();?>mantenimiento/corden">Volver</a>
+                                <button type="submit" class="btn btn-success">Guardar</button>
+                            </div>
+                        </form>
                             <br>
-                            <br>    
+                            <br>  
+                        <form action="<?php echo base_url();?>mantenimiento/corden/cupdatefact" method="POST">
+                            <input type="hidden" value="<?php echo $ordenedit->N_factura ?>" name="txtid" id="txtid">  
                             <div class=" col-sm-12 form-group">
                                 <h2>Datos de Facturacion</h2>
                             </div>
