@@ -176,9 +176,7 @@ public function cupdate(){
 public function cupdatefact(){
 
     $fpago = $this->input->post('txtfechaPago');
-    
     $ffact = $this->input->post('txtfechaFactura');
-    $ffact =date("Y/m/d", strtotime($this->input->post('txtfechaFactura')));
     $nfact = $this->input->post('txtnumFactura');
     $id = $this->input->post('txtid');
     $estado = $this->input->post('txtpago');
@@ -190,6 +188,14 @@ public function cupdatefact(){
     else{
         $fpago =date("Y/m/d", strtotime($this->input->post('txtfechaPago')));
     }
+
+    if($ffact==null){
+        $ffact=null;
+    }
+    else{
+        $ffact =date("Y/m/d", strtotime($this->input->post('txtfechaFactura')));
+    }
+    
   
     $res=$this->mfactura->midupdatefact($nfact);
   
