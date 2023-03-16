@@ -8,7 +8,7 @@
     <section class="content">
         <div class="box box-solid">
             <div class="box-body">
-               <hr>
+               
                <div class="row">
                    <div class="col-md-12">
                        <?php if($this->session->flashdata('error')):?>
@@ -80,7 +80,7 @@
                             <br>
 
                             <div class="col-sm-12 form-group">
-                                <a class="btn btn-success" href="<?php echo base_url();?>mantenimiento/corden">Volver</a>
+                                
                                 <button type="submit" class="btn btn-success">Guardar</button>
                             </div>
                         </form>
