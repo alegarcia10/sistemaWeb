@@ -37,6 +37,24 @@
                         <?php } ?>
                         </ul>
                     </li>
+                   
+                    <?php if ($roles->estados_trabajo =="1") { ?>
+                    <li class="treeview">
+                        <a href="#">
+                        
+                            <i class="fa-solid fa-book"></i> <span> &nbsp Gestión</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                        
+                            <li><a href="<?php echo base_url(); ?>mantenimiento/ctrabajos"><i class="fa-solid fa-chart-line"></i> Estados de Trabajo</a></li>
+                        
+                        </ul>
+                        </li>
+                    <?php } ?>
+
                     <?php if ($roles->usuarios =="1" || $roles->roles =="1") { ?>
                     <li class="treeview">
                         <a href="#">
@@ -56,22 +74,6 @@
                         <?php } ?>
                         </ul>
                     </li>
-                    <?php } ?>
-                    <?php if ($roles->estados_trabajo =="1") { ?>
-                    <li class="treeview">
-                        <a href="#">
-                        
-                            <i class="fa-solid fa-book"></i> <span> &nbsp Gestión</span>
-                            <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <ul class="treeview-menu">
-                        
-                            <li><a href="<?php echo base_url(); ?>mantenimiento/ctrabajos"><i class="fa-solid fa-chart-line"></i> Estados de Trabajo</a></li>
-                        
-                        </ul>
-                        </li>
                     <?php } ?>
                         
                 </ul>
