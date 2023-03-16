@@ -155,6 +155,7 @@ $(document).ready(function () {
                        "previous": "Anterior"
                    },
                },
+               scrollX:true,
                "order": [[ 0, "desc" ]]
           });
 })

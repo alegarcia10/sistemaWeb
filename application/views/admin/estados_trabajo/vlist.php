@@ -26,7 +26,7 @@
                                             <div class="col-md-4">
                                                 <input type="date" name="start_date" id="start_date" class="form-control" />
                                             </div>
-                                            <br>
+                                            
                                             <div class="col-md-4">
                                                 <input type="date" name="end_date" id="end_date" class="form-control" />
                                             </div>      
@@ -201,18 +201,10 @@ var table =  $('#tablaordenc').DataTable({
                        "previous": "Anterior"
                    },
                },
-               "createdRow":function(row,data,index){
-                if(data[0]=='-'){
-                    $('td',row).eq(0).css({
-                        'background-color':'#ff5252',
-                        'color':'white'
-                    })
-                }
-                
-            },  
+               
             
                "order": [[ 0, "desc" ]],
-               //responsive: "true",
+               responsive: "true",
                scrollX:true,
     
                dom: '<"dt-buttons"Bf><"clear">lirtp',
@@ -259,19 +251,8 @@ var table =  $('#tablaordenc').DataTable({
             ],
             'columnDefs': [
        { targets: [10,11,12,13,14], visible: false},
-       {searchable: false, targets: [3,5,6,7,8,9,10,11,12,13,14]  },
-       {
-        "targets": [10,11,12,13,14],
-        "createdCell": function (td, cellData, rowData, row, col) {
-      if ( cellData == '-' ) {
-        $(td).css('background-color','#ff5252');
-        $(td).css('color','white');
-      }else{
-        $(td).css('background-color','#00b347');
-        $(td).css('color','white');
-      }
-    }
-    }
+       {searchable: false, targets: [3,5,6,7,8,9,10,11,12,13,14]  }
+       
     ],
             
            
@@ -318,8 +299,31 @@ $(document).ready(function() {
 
 
  
-// Custom filtering function which will search data in column four between two values
 
+/*
+//creacion de color en celda segun contenido
+"createdRow":function(row,data,index){
+                if(data[0]=='-'){
+                    $('td',row).eq(0).css({
+                        'background-color':'#ff5252',
+                        'color':'white'
+                    })
+                }
+                
+            },  */
+
+            /*{
+        "targets": [10,11,12,13,14],
+        "createdCell": function (td, cellData, rowData, row, col) {
+      if ( cellData == '-' ) {
+        $(td).css('background-color','#ff5252');
+        $(td).css('color','white');
+      }else{
+        $(td).css('background-color','#00b347');
+        $(td).css('color','white');
+      }
+    }
+    } */
 
 /*<div class="row">
                     <div class="col-md-12">

@@ -117,7 +117,8 @@ $(document).ready(function () {
                        "next": "Siguiente",
                        "previous": "Anterior"
                    },
-               }
+               },
+               scrollX:true
           });
 })
 </script>
