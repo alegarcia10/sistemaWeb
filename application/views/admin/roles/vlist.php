@@ -75,14 +75,3 @@
     </div>
 </div>
 
-<script type="text/javascript">
-
-
-$(document).ready(function () {
-    $('#example1').DataTable({
-               scrollX:true
-               
-    });
-})
-
-</script>
