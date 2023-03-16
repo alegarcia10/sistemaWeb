@@ -48,11 +48,11 @@
                                     <table id="tablaordenc" class="table table-bordered table-hover order-table1">
                                     <thead>
                                         <tr>
-                                            <th align="center">Fecha Visita</th>
+                                            <th>Fecha Visita</th>
 
-                                            <th align="center">Cliente</th>
+                                            <th>Cliente</th>
                                             
-                                            <th align="center">Detalle Trabajo</th>
+                                            <th>Detalle Trabajo</th>
 
                                             <th>Estado</th>
                                             
@@ -251,9 +251,20 @@ var table =  $('#tablaordenc').DataTable({
                     },
                     text: '<i class="fa fa-print"></i>',
                     titleAttr: 'Imprimir',
-                    className: 'btn btn-info'
+                    className: 'btn btn-info',
+                    customize: function(doc) {
+ 
+                        $(doc.document.body).find('table tbody tr').each(function( index ) {
+                        var status = $(this).find('td:eq(0)').text();
+                            
+                        if (status === '-') {
+                            $(this).css('background-color', '#42f5f5');
+                        }
+                        
+                        });
+                            $(win.document.body).find('h1').css('text-align','center');
+                    }
                 }
-                
                
             ],
             'columnDefs': [
