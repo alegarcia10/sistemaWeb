@@ -20,7 +20,7 @@
                 <hr>
                 <div class="row">
                     <div class="col-md-12">
-                        <table id="example1" class="table table-bordered table-hover" style="overflow-x: auto;">
+                        <table id="example1" class="table table-bordered table-hover" style="overflow-x: scroll;">
                             <thead>
                                 <tr>
                                     <th>#</th>
