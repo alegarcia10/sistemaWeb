@@ -72,11 +72,11 @@
                             </div>
                             <div class="col-sm-3 form-group">
                                 <label for="fechaFactura">Fecha Factura</label>
-                                <input type="text" id="txtfechaFactura" name="txtfechaFactura" class="form-control"  value="<?php echo !empty(form_error('txtfechaFactura'))? set_value('txtfechaFactura') :  date("d-m-Y", strtotime("$ordenedit->fecha_factura"));?>" >
+                                <input type="date" id="txtfechaFactura" name="txtfechaFactura" class="form-control"  value="<?php echo !empty(form_error('txtfechaFactura'))? set_value('txtfechaFactura') :  date("d-m-Y", strtotime("$ordenedit->fecha_factura"));?>" >
                             </div>
                             <div class="col-sm-3 form-group">
                                 <label for="fechaPago">Fecha Pago</label>
-                                <input type="text" id="txtfechaPago" name="txtfechaPago" class="form-control"  value="<?php echo !empty(form_error('txtfechaPago'))? set_value('txtfechaPago') :  date("d-m-Y", strtotime("$ordenedit->fecha_pago"));?>">
+                                <input type="date" id="txtfechaPago" name="txtfechaPago" class="form-control"  value="<?php echo !empty(form_error('txtfechaPago'))? set_value('txtfechaPago') :  date("d-m-Y", strtotime("$ordenedit->fecha_pago"));?>">
                             </div>
                             <div class="col-sm-3 form-group">
                                 <label for="Pago">Estado del Pago</label>
