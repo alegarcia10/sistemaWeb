@@ -24,10 +24,11 @@
                                     <div class="row">
                                         <div class="input-daterange">
                                             <div class="col-md-4">
-                                                <input type="date" name="start_date"       id="start_date" class="form-control" />
+                                                <input type="date" name="start_date" id="start_date" class="form-control" />
                                             </div>
+                                            <br>
                                             <div class="col-md-4">
-                                                <input type="date" name="end_date" id="end_date"    class="form-control" />
+                                                <input type="date" name="end_date" id="end_date" class="form-control" />
                                             </div>      
                                         </div>
                                  </div>
