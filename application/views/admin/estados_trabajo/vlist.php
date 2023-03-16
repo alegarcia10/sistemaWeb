@@ -251,18 +251,8 @@ var table =  $('#tablaordenc').DataTable({
                     },
                     text: '<i class="fa fa-print"></i>',
                     titleAttr: 'Imprimir',
-                    className: 'btn btn-info',
-                    customize: function(doc) {
- 
-                        $(doc.document.body).find('table tbody tr').each(function( index ) {
-                        var status = $(this).find('td:eq(0)').text();
-                            
-                        if (status === '-') {
-                            $(this).css('background-color', '#42f5f5');
-                        }
-                        
-                        });
-                    }
+                    className: 'btn btn-info'
+                    
                 }
                
             ],
