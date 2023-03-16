@@ -265,6 +265,9 @@ var table =  $('#tablaordenc').DataTable({
       if ( cellData == '-' ) {
         $(td).css('background-color','#ff5252');
         $(td).css('color','white');
+      }else{
+        $(td).css('background-color','#00b347');
+        $(td).css('color','white');
       }
     }
     }
