@@ -15,10 +15,8 @@
                         <div class="alert alert-danger">
                             <p><?php echo $this->session->flashdata('error') ?> </p>
                         </div>
-                        <?php endif  ;if($ordenedit->fecha_factura=='0000-00-00 00:00:00' || $ordenedit->fecha_factura==null)
-                        {echo"entra al if"; $ordenedit->fecha_factura="";}
-                        else{echo"entra al else";$ordenedit->fecha_factura= date("d-m-Y", strtotime($ordenedit->fecha_factura)); }?>
-                        <?php  var_dump($ordenedit); die;?>
+                        <?php endif  ;?>
+                        
                         <form action="<?php echo base_url();?>mantenimiento/corden/cupdate" method="POST">
                             <input type="hidden" value="<?php echo $ordenedit->IdOrden ?>" name="txtidorden" id="txtidorden">
                             <div class=" col-sm-12 form-group">
@@ -76,11 +74,11 @@
                             </div>
                             <div class="col-sm-3 form-group">
                                 <label for="fechaFactura">Fecha Factura</label>
-                                <input type="date" id="txtfechaFactura" name="txtfechaFactura" class="form-control"  value="<?php if($ordenedit->fecha_factura=='0000-00-00 00:00:00' || $ordenedit->fecha_factura==null){$ordenedit->fecha_factura="";}else{date("d-m-Y H:i:s", strtotime("$ordenedit->fecha_factura")); } echo !empty(form_error('txtfechaFactura'))? set_value('txtfechaFactura') : $ordenedit->fecha_factura?>" >
+                                <input type="date" id="txtfechaFactura" name="txtfechaFactura" class="form-control"  value="<?php if($ordenedit->fecha_factura=='0000-00-00 00:00:00' || $ordenedit->fecha_factura==null){$ordenedit->fecha_factura="";}else{$ordenedit->fecha_factura= date("d-m-Y H:i:s", strtotime("$ordenedit->fecha_factura")); } echo !empty(form_error('txtfechaFactura'))? set_value('txtfechaFactura') : $ordenedit->fecha_factura?>" >
                             </div>
                             <div class="col-sm-3 form-group">
                                 <label for="fechaPago">Fecha Pago</label>
-                                <input type="date" id="txtfechaPago" name="txtfechaPago" class="form-control"  value="<?php echo !empty(form_error('txtfechaPago'))? set_value('txtfechaPago') :  date("d-m-Y", strtotime("$ordenedit->fecha_pago"));?>">
+                                <input type="date" id="txtfechaPago" name="txtfechaPago" class="form-control"  value="<?php if($ordenedit->fecha_pago=='0000-00-00 00:00:00' || $ordenedit->fecha_pago==null){$ordenedit->fecha_pago="";}else{$ordenedit->fecha_pago= date("d-m-Y H:i:s", strtotime("$ordenedit->fecha_pago")); } echo !empty(form_error('txtfechaPago'))? set_value('txtfechaPago') : $ordenedit->fecha_pago;?>">
                             </div>
                             <div class="col-sm-3 form-group">
                                 <label for="Pago">Estado del Pago</label>
