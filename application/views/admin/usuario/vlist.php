@@ -24,7 +24,7 @@
                         <table id="example1" class="table table-bordered table-hover" style="overflow-x: auto; width: 100%;">
                             <thead>
                                 <tr>
-                                    <th>#</th>
+                                   
                                     <th>Nombre </th>
                                     <th>Email</th>
                                     <th>Privilegios</th>
@@ -36,7 +36,7 @@
                                 <?php if(!empty($usuarioindex)):?>
                                 <?php foreach ($usuarioindex as $atributos):?>
                                 <tr>
-                                    <td><?php echo $atributos->idUsuario;?></td>
+                                    
                                     <td><?php echo $atributos->nombre ;?></td>
                                     <td><?php echo $atributos->email ;?></td>
                                     <td><?php echo $atributos->nombre_tipo ;?></td>
