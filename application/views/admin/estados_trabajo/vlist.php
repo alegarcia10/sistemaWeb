@@ -128,7 +128,7 @@
 <style>
 /*estilo titulos tabla*/ 
 .table thead, .table tfoot{
-        background-color: #455a64;
+        background-color: #337ab7;
         color:azure;
     }
 /*estilo de boton columnas*/ 
