@@ -48,11 +48,11 @@
                                     <table id="tablaordenc" class="table table-bordered table-hover order-table1">
                                     <thead>
                                         <tr>
-                                            <th>Fecha Visita</th>
+                                            <th align="center">Fecha Visita</th>
 
-                                            <th>Cliente</th>
+                                            <th align="center">Cliente</th>
                                             
-                                            <th>Detalle Trabajo</th>
+                                            <th align="center">Detalle Trabajo</th>
 
                                             <th>Estado</th>
                                             
