@@ -262,7 +262,6 @@ var table =  $('#tablaordenc').DataTable({
                         }
                         
                         });
-                            $(win.document.body).find('h1').css('text-align','center');
                     }
                 }
                
