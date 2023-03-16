@@ -20,6 +20,19 @@ class Mfactura extends CI_Model{
        $resultado = $this->db->get('factura');
        return $resultado->row();
     }
+     //OBTENER DATOS
+     public function midupdatefact($id){
+        $this->db->where('N_factura', $id);
+        $resultado = $this->db->get('factura');
+        return $resultado->row();
+     }
+ 
+     //MODIFICAR factura
+     public function mupdatefact($id, $data){
+ 
+         $this->db->where('N_factura', $id);
+         return $this->db->update('factura', $data);
+      }
 
 
 }

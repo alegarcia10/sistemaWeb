@@ -173,6 +173,46 @@ public function cupdate(){
 
 }
 
+public function cupdatefact(){
+
+    $fpago = $this->input->post('txtfechaPago');
+    $ffact = $this->input->post('txtfechaFactura');
+    $nfact = $this->input->post('txtnumFactura');
+    $id = $this->input->post('txtid');
+    $estado = $this->input->post('txtpago');
+  
+    $res=$this->mfactura->midupdatefact($nfact);
+  
+       if(($res==null) or ($nfact=$id)){
+          
+          $data = array(
+              'N_factura' => $nfact,
+              'fecha_factura' => $ffact,
+              'fecha_pago' => $fpago,
+              'estado_pago' => $estado
+          );
+          if($res==null){
+                $res = $this->mfactura->minsertfactura($data);
+          }else{
+                $res = $this->mfactura->mupdatefact($id, $data);
+          }
+                if($res){
+                    $this->session->set_flashdata('correcto', 'Se Guardo Correctamente');
+                    redirect(base_url().'mantenimiento/corden');
+                }else {
+                    $this->session->set_flashdata('error', 'No se pudo actualizar la factura');
+                    redirect(base_url().'mantenimiento/corden/cedit/'.$id);
+                }
+  
+       }else{
+  
+          //REGLA DE VALIDACION
+          $this->session->set_flashdata('error', 'Este N° de Factura ya está registrado');
+          redirect(base_url().'mantenimiento/corden/cedit/'.$id);
+       }
+}
+  
+
 public function cdelete($id){
 
     $data=array(
