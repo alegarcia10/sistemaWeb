@@ -80,8 +80,8 @@
 
 $(document).ready(function () {
     $('#example1').DataTable({
-               scrollX:true,
-               "order": [[ 0, "desc" ]]
+               scrollX:true
+               
     });
 })
 
