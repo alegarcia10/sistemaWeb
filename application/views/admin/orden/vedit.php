@@ -60,7 +60,7 @@
                         <input type="checkbox" name="check" id="check" value="1" onchange="javascript:showContent()" />
                        </div>
                         <div id="content" style="display: none;">
-                        <form action="<?php echo base_url();?>mantenimiento/corden/cupdatefact" method="POST">
+                        <form action="<?php  var_dump($ordenedit->fecha_factura); echo base_url();?>mantenimiento/corden/cupdatefact" method="POST">
                             <input type="hidden" value="<?php echo $ordenedit->IdOrden ?>" name="txtidorden" id="txtidorden">
                             <input type="hidden" value="<?php echo $ordenedit->N_factura ?>" name="txtid" id="txtid">  
                             <div class=" col-sm-12 form-group">
@@ -72,7 +72,7 @@
                             </div>
                             <div class="col-sm-3 form-group">
                                 <label for="fechaFactura">Fecha Factura</label>
-                                <input type="date" id="txtfechaFactura" name="txtfechaFactura" class="form-control"  value="<?php var_dump($ordenedit->fecha_factura); var_dump("--");  if($ordenedit->fecha_factura=='0000-00-00 00:00:00' || $ordenedit->fecha_factura==null){$ordenedit->fecha_factura="";}else{date("d-m-Y", strtotime("$ordenedit->fecha_factura")); } echo !empty(form_error('txtfechaFactura'))? set_value('txtfechaFactura') : $ordenedit->fecha_factura?>" >
+                                <input type="date" id="txtfechaFactura" name="txtfechaFactura" class="form-control"  value="<?php if($ordenedit->fecha_factura=='0000-00-00 00:00:00' || $ordenedit->fecha_factura==null){$ordenedit->fecha_factura="";}else{date("d-m-Y", strtotime("$ordenedit->fecha_factura")); } echo !empty(form_error('txtfechaFactura'))? set_value('txtfechaFactura') : $ordenedit->fecha_factura?>" >
                             </div>
                             <div class="col-sm-3 form-group">
                                 <label for="fechaPago">Fecha Pago</label>
