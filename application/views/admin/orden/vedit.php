@@ -15,7 +15,9 @@
                         <div class="alert alert-danger">
                             <p><?php echo $this->session->flashdata('error') ?> </p>
                         </div>
-                        <?php endif  ;if($ordenedit->fecha_factura=='0000-00-00 00:00:00' || $ordenedit->fecha_factura==null){echo"entra al if"; $ordenedit->fecha_factura="";}else{echo"entra al else"; date("d-m-Y H:i:s", strtotime("$ordenedit->fecha_factura")); }?>
+                        <?php endif  ;if($ordenedit->fecha_factura=='0000-00-00 00:00:00' || $ordenedit->fecha_factura==null)
+                        {echo"entra al if"; $ordenedit->fecha_factura="";}
+                        else{echo"entra al else"; date("d-m-Y H:i:s", strtotime($ordenedit->fecha_factura)); }?>
                         <?php  var_dump($ordenedit); die;?>
                         <form action="<?php echo base_url();?>mantenimiento/corden/cupdate" method="POST">
                             <input type="hidden" value="<?php echo $ordenedit->IdOrden ?>" name="txtidorden" id="txtidorden">
