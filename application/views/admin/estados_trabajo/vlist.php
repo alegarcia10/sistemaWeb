@@ -263,8 +263,8 @@ var table =  $('#tablaordenc').DataTable({
         "targets": 10,
         "createdCell": function (td, cellData, rowData, row, col) {
       if ( cellData == '-' ) {
-        $(td).css('background-color','#ff5252'),
-        $(td).css('color':'white')
+        $(td).css('background-color','#ff5252');
+        $(td).css('color','white');
       }
     }
     }
