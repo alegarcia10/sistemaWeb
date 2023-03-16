@@ -55,10 +55,13 @@
                         </form>
                             <br>
                             <br>  
+                        <div id="content" style="display: none;">
+                        <b>Datos Factura</b>
+                        <input type="checkbox" name="check" id="check" value="1" onchange="javascript:showContent()" />
                         <form action="<?php echo base_url();?>mantenimiento/corden/cupdatefact" method="POST">
                             <input type="hidden" value="<?php echo $ordenedit->N_factura ?>" name="txtid" id="txtid">  
                             <div class=" col-sm-12 form-group">
-                                <h2>Datos de Facturacion</h2>
+                                <h2>Datos de Facturación</h2>
                             </div>
                             <div class="col-sm-3 form-group">
                                 <label for="numFactura">N° Factura</label>
@@ -84,6 +87,7 @@
                                 <button type="submit" class="btn btn-success">Guardar</button>
                             </div>
                         </form>
+                        </div>
                     </div> 
                </div>
             </div>
