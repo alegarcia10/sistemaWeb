@@ -68,11 +68,11 @@
                             </div>
                             <div class="col-sm-3 form-group">
                                 <label for="numFactura">N° Factura</label>
-                                <input type="text" id="txtnumFactura" name="txtnumFactura" class= "form-control"  value="<?php if($ordenedit->N_factura==null){$ordenedit->N_factura='-';} echo !empty(form_error('txtnumFactura'))? set_value('txtnumFactura') :  $ordenedit->N_factura;?>" class= "form-control" >
+                                <input type="text" id="txtnumFactura" name="txtnumFactura" class= "form-control"  value="<?php echo !empty(form_error('txtnumFactura'))? set_value('txtnumFactura') :  $ordenedit->N_factura;?>" class= "form-control" >
                             </div>
                             <div class="col-sm-3 form-group">
                                 <label for="fechaFactura">Fecha Factura</label>
-                                <input type="date" id="txtfechaFactura" name="txtfechaFactura" class="form-control"  value="<?php echo !empty(form_error('txtfechaFactura'))? set_value('txtfechaFactura') :  date("d-m-Y", strtotime("$ordenedit->fecha_factura"));?>" >
+                                <input type="date" id="txtfechaFactura" name="txtfechaFactura" class="form-control"  value="<?php if($ordenedit->fecha_factura=='0000-00-00 00:00:00'){$ordenedit->fecha_factura='';} echo !empty(form_error('txtfechaFactura'))? set_value('txtfechaFactura') :  date("d-m-Y", strtotime("$ordenedit->fecha_factura"));?>" >
                             </div>
                             <div class="col-sm-3 form-group">
                                 <label for="fechaPago">Fecha Pago</label>
