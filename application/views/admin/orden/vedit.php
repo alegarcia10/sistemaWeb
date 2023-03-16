@@ -60,7 +60,8 @@
                         <input type="checkbox" name="check" id="check" value="1" onchange="javascript:showContent()" />
                        </div>
                         <div id="content" style="display: none;">
-                        <form action="<?php  var_dump($ordenedit); die; echo base_url();?>mantenimiento/corden/cupdatefact" method="POST">
+                        <?php  var_dump($ordenedit); die;?>
+                        <form action="<?php echo base_url();?>mantenimiento/corden/cupdatefact" method="POST">
                             <input type="hidden" value="<?php echo $ordenedit->IdOrden ?>" name="txtidorden" id="txtidorden">
                             <input type="hidden" value="<?php echo $ordenedit->N_factura ?>" name="txtid" id="txtid">  
                             <div class=" col-sm-12 form-group">
