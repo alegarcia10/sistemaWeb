@@ -15,7 +15,8 @@
                         <div class="alert alert-danger">
                             <p><?php echo $this->session->flashdata('error') ?> </p>
                         </div>
-                        <?php endif ; ?>
+                        <?php endif  ;var_dump("hola"); ?>
+                        <?php  var_dump($ordenedit); die;?>
                         <form action="<?php echo base_url();?>mantenimiento/corden/cupdate" method="POST">
                             <input type="hidden" value="<?php echo $ordenedit->IdOrden ?>" name="txtidorden" id="txtidorden">
                             <div class=" col-sm-12 form-group">
@@ -60,7 +61,7 @@
                         <input type="checkbox" name="check" id="check" value="1" onchange="javascript:showContent()" />
                        </div>
                         <div id="content" style="display: none;">
-                        <?php  var_dump($ordenedit); die;?>
+                        
                         <form action="<?php echo base_url();?>mantenimiento/corden/cupdatefact" method="POST">
                             <input type="hidden" value="<?php echo $ordenedit->IdOrden ?>" name="txtidorden" id="txtidorden">
                             <input type="hidden" value="<?php echo $ordenedit->N_factura ?>" name="txtid" id="txtid">  
