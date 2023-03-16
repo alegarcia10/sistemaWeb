@@ -84,7 +84,7 @@
                                             <?php foreach ($ordenindex as $atributos) :?>
                                                 <tr>
                                                     
-                                                    <td width="10%"><?php if ($atributos->Fecha != "-") 
+                                                    <td align="center" width="10%"><?php if ($atributos->Fecha != "-") 
                                                                         {echo substr("$atributos->Fecha", 0, 10);}
                                                                         else{echo '-' ; };?></td>
                                                     <td width="15%"><?php echo $atributos->Nombre; ?></td>
@@ -103,13 +103,13 @@
                                                     <td width="8%"><?php echo number_format($atributos->rentabilidad,2); ?>%</td>
                                                     <td align="center" width="8%"><?php if ($atributos->N_factura != null)
                                                             { echo $atributos->N_factura;}else{ echo '-';} ; ?></td>
-                                                    <td width="8%"><?php if ($atributos->fecha_factura != "-")
+                                                    <td align="center" width="8%"><?php if ($atributos->fecha_factura != "-")
                                                             { echo date("d-m-Y", strtotime("$atributos->fecha_factura"));}else{ echo '-';} ; ?></td>
-                                                    <td width="8%"><?php if ($atributos->estado_pago != null)
+                                                    <td align="center" width="8%"><?php if ($atributos->estado_pago != null)
                                                             { echo ($atributos->estado_pago);}else{ echo '-';} ; ?></td>
-                                                    <td width="8%"><?php if ($atributos->fecha_pago != "-")
+                                                    <td align="center" width="8%"><?php if ($atributos->fecha_pago != "-")
                                                             { echo date("d-m-Y", strtotime("$atributos->fecha_pago"));}else{ echo '-';} ; ?></td>
-                                                    <td width="8%"><?php echo $atributos->demora; ?></td>
+                                                    <td align="center" width="8%"><?php echo $atributos->demora; ?></td>
                                                     
                                                 </tr> 
                                             <?php endforeach ?>
@@ -260,7 +260,7 @@ var table =  $('#tablaordenc').DataTable({
        { targets: [10,11,12,13,14], visible: false},
        {searchable: false, targets: [3,5,6,7,8,9,10,11,12,13,14]  },
        {
-        "targets": 10,
+        "targets": [10,11,12,13,14],
         "createdCell": function (td, cellData, rowData, row, col) {
       if ( cellData == '-' ) {
         $(td).css('background-color','#ff5252');
