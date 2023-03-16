@@ -27,6 +27,7 @@
                                     <th>Nombre </th>
                                     <th>Email</th>
                                     <th>Privilegios</th>
+                                    <th>Operaciones</th>
 
                                 </tr>
                             </thead>

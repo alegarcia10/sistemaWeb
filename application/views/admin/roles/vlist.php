@@ -25,7 +25,7 @@
                                 <tr>
                                     <th>#</th>
                                     <th>Privilegios</th>
-
+                                    <th>Operaciones</th>
                                 </tr>
                             </thead>
                             <tbody>
