@@ -70,7 +70,7 @@
                             </div>
                             <div class="col-sm-3 form-group">
                                 <label for="numFactura">N° Factura</label>
-                                <input type="text" id="txtnumFactura" name="txtnumFactura" class= "form-control"  value="<?php echo !empty(form_error('txtnumFactura'))? set_value('txtnumFactura') :  $ordenedit->N_factura;?>" class= "form-control" >
+                                <input type="number" id="txtnumFactura" name="txtnumFactura" min="1" max="9999999999999999999999" class= "form-control"  value="<?php echo !empty(form_error('txtnumFactura'))? set_value('txtnumFactura') :  $ordenedit->N_factura;?>" class= "form-control" >
                             </div>
                             <div class="col-sm-3 form-group">
                                 <label for="fechaFactura">Fecha Factura <b>(dd-mm-aaaa)</b></label>

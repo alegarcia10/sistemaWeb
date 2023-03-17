@@ -198,9 +198,9 @@ public function cupdatefact(){
     
   
     $res=$this->mfactura->midupdatefact($nfact);
-    $ord=$this->mfactura->mbuscaordenfactura($idorden);
+    $fac=$this->mfactura->mbuscaordenfactura($idorden);
   
-       if(($res==null) or ($nfact=$id) or ($ord==null)){
+       if(($res==null) or ($nfact=$id) or ($fac==null)){
           
           $data = array(
               'N_factura' => $nfact,
