@@ -34,6 +34,15 @@ class Mfactura extends CI_Model{
          return $this->db->update('factura', $data);
       }
 
+      //busca si para esa orden hay factura
+  public function mbuscaordenfactura($id){
 
+    $resultado = $query = $this->db->query("SELECT f.N_factura 
+    FROM factura f 
+    where f.id_orden=$id;");
+    return $resultado->result();
+
+}
+//
 }
 ?>

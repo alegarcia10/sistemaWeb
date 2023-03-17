@@ -198,8 +198,9 @@ public function cupdatefact(){
     
   
     $res=$this->mfactura->midupdatefact($nfact);
+    $ord=$this->mfactura->mbuscaordenfactura($idorden);
   
-       if(($res==null) or ($nfact=$id)){
+       if(($res==null) or ($nfact=$id) or ($ord==null)){
           
           $data = array(
               'N_factura' => $nfact,
@@ -224,7 +225,7 @@ public function cupdatefact(){
        }else{
   
           //REGLA DE VALIDACION
-          $this->session->set_flashdata('error', 'Este N° de Factura ya está registrado');
+          $this->session->set_flashdata('error', 'N° de Factura registrado/ya tiene orden asociada');
           redirect(base_url().'mantenimiento/corden/cedit/'.$id);
        }
 }
