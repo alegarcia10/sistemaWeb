@@ -219,18 +219,18 @@ public function cupdatefact(){
                     redirect(base_url().'mantenimiento/corden');
                 }else {
                     $this->session->set_flashdata('error', 'No se pudo actualizar la factura');
-                    redirect(base_url().'mantenimiento/corden/cedit/'.$id);
+                    redirect(base_url().'mantenimiento/corden/cedit/'.$idorden);
                 }
   
        }else{
   
           //REGLA DE VALIDACION
           $this->session->set_flashdata('error', 'N° de Factura registrado');
-          redirect(base_url().'mantenimiento/corden/cedit/'.$id);
+          redirect(base_url().'mantenimiento/corden/cedit/'.$idorden);
        }
     }else{
         $this->session->set_flashdata('error', 'La orden tiene factura asociada');
-        redirect(base_url().'mantenimiento/corden');
+        redirect(base_url().'mantenimiento/corden/cedit/'.$idorden);
       
     }
 }
