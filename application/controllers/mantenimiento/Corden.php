@@ -230,7 +230,7 @@ public function cupdatefact(){
        }
     }else{
         $this->session->set_flashdata('error', 'La orden tiene factura asociada');
-        redirect(base_url().'mantenimiento/corden/cedit/'.$id);
+        redirect(base_url().'mantenimiento/corden');
       
     }
 }
