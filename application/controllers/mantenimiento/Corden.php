@@ -209,7 +209,7 @@ public function cupdatefact(){
               'estado_pago' => $estado,
               'id_orden' =>$idorden
           );
-          if($res==null){
+          if($res==null && ($fac==null)){
                 $res = $this->mfactura->minsertfactura($data);
           }else{
                 $res = $this->mfactura->mupdatefact($id, $data);
