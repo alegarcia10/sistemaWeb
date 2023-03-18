@@ -216,7 +216,7 @@ public function cupdatefact(){
           }
                 if($res){
                     $this->session->set_flashdata('correcto', 'Se Guardo Correctamente');
-                    redirect(base_url().'mantenimiento/corden/cedit/'.$idorden);
+                    redirect(base_url().'mantenimiento/corden');
                 }else {
                     $this->session->set_flashdata('error', 'No se pudo actualizar la factura');
                     redirect(base_url().'mantenimiento/corden/cedit/'.$idorden);
