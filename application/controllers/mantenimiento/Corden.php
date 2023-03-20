@@ -10,6 +10,7 @@ class Corden extends CI_Controller {
     $this->load->model('morden');
     $this->load->model('mroles');
     $this->load->model('mcombo');
+    $this->load->model('mfactura');
     }
 
 
@@ -118,10 +119,14 @@ public function cinsert(){
 
 public function cedit($id){
     $idrol = $this->session->userdata("idRol");
+    
+
     $data = array(
-        'ordenedit' => $this->morden->midupdateorden($id),
+        'ordenedit' => $this->morden->midupdateordenyfacturas($id),
         'roles'=> $this->mroles->obtener($idrol)
     );
+
+
     $data['cliente_select'] = $this->morden->cliente_listar_select2();
     $data['model'] = $this->morden->obtener($data['ordenedit']->IdCliente);
 
@@ -167,6 +172,69 @@ public function cupdate(){
 
 
 }
+
+public function cupdatefact(){
+
+    $fpago = $this->input->post('txtfechaPago');
+    $ffact = $this->input->post('txtfechaFactura');
+    $nfact = $this->input->post('txtnumFactura');
+    $id = $this->input->post('txtid');
+    $estado = $this->input->post('txtpago');
+    $idorden= $this->input->post('txtidorden');
+
+    if($fpago==null){
+        $fpago=null;
+    }
+    else{
+        $fpago =date("Y/m/d", strtotime($this->input->post('txtfechaPago')));
+    }
+
+    if($ffact==null){
+        $ffact=null;
+    }
+    else{
+        $ffact =date("Y/m/d", strtotime($this->input->post('txtfechaFactura')));
+    }
+    
+  
+    $res=$this->mfactura->midupdatefact($nfact);
+    $fac=$this->mfactura->mbuscaordenfactura($idorden);
+    if(($fac==null) or ($fac!=$id)){
+       if(($res==null) or ($nfact==$id)){
+          
+          $data = array(
+              'N_factura' => $nfact,
+              'fecha_factura' => $ffact,
+              'fecha_pago' => $fpago,
+              'estado_pago' => $estado,
+              'id_orden' =>$idorden
+          );
+          if($res==null && ($fac==null)){
+                $res = $this->mfactura->minsertfactura($data);
+          }else{
+                $res = $this->mfactura->mupdatefact($id, $data);
+          }
+                if($res){
+                    $this->session->set_flashdata('correcto', 'Se Guardo Correctamente');
+                    redirect(base_url().'mantenimiento/corden');
+                }else {
+                    $this->session->set_flashdata('error', 'No se pudo actualizar la factura');
+                    redirect(base_url().'mantenimiento/corden/cedit/'.$idorden);
+                }
+  
+       }else{
+  
+          //REGLA DE VALIDACION
+          $this->session->set_flashdata('error', 'N° de Factura registrado');
+          redirect(base_url().'mantenimiento/corden/cedit/'.$idorden);
+       }
+    }else{
+        $this->session->set_flashdata('error', 'La orden ' .$idorden. ' tiene factura asociada');
+        redirect(base_url().'mantenimiento/corden/cedit/'.$idorden);
+      
+    }
+}
+  
 
 public function cdelete($id){
 

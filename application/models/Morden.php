@@ -6,11 +6,42 @@ class Morden extends CI_Model{
     public function mselectorden(){
 
         $resultado =	$query = $this->db->query("SELECT o.IdOrden , c.Nombre ,o.IdCliente, o.FechaRecepcion ,
-           o.TareaDesarrollar, o.Precio, o.Completada, o.Eliminada FROM orden o
-           INNER JOIN cliente c ON o.IdCliente = c.IdCliente where o.Eliminada=0 and o.Completada=0 ORDER BY o.IdOrden DESC;");
+           o.TareaDesarrollar, o.Precio, o.Completada, o.Eliminada, f.N_factura, f.fecha_factura, f.fecha_pago, f.estado_pago FROM orden o
+           INNER JOIN cliente c ON o.IdCliente = c.IdCliente  
+           LEFT JOIN factura f ON f.id_orden = o.IdOrden
+           where o.Eliminada=0 and o.Completada=0 
+           ORDER BY o.IdOrden DESC;");
         return $resultado->result();
 
     }
+
+    public function mselectestadostrabajo(){
+
+      $resultado =	$query = $this->db->query("SELECT o.IdOrden , c.Nombre ,o.IdCliente, o.FechaRecepcion ,
+         o.TareaDesarrollar, o.Precio, o.Completada, o.Eliminada, f.N_factura, f.fecha_factura, f.fecha_pago, f.estado_pago FROM orden o
+         INNER JOIN cliente c ON o.IdCliente = c.IdCliente  
+         LEFT JOIN factura f ON f.id_orden = o.IdOrden
+         where o.Eliminada=0 ORDER BY o.IdOrden DESC;");
+      return $resultado->result();
+
+  }
+
+    public function mselectordenfecha($ini,$fin){
+     
+
+      $ini = date("Y-m-d", strtotime($ini));
+      $fin = date("Y-m-d", strtotime($fin));
+     
+      $resultado =	$query = $this->db->query("SELECT o.IdOrden , c.Nombre ,o.IdCliente, o.FechaRecepcion ,
+         o.TareaDesarrollar, o.Precio, o.Completada, o.Eliminada FROM orden o
+         INNER JOIN cliente c ON o.IdCliente = c.IdCliente 
+         where o.Eliminada=0 and o.Completada=0 and o.FechaRecepcion >= '$ini' and o.FechaRecepcion <= '$fin' 
+         ORDER BY o.IdOrden DESC;");
+    
+      return $resultado->result();
+      
+
+  }
 
     public function consultaTareas($id){
         $this->db->where('IdOrden', $id);
@@ -63,6 +94,15 @@ class Morden extends CI_Model{
        return $resultado->row();
     }
 
+    //OBTENER DATOS con idOrden
+    public function midupdateordenyfacturas($id){
+      $query=$this->db->query("SELECT o.IdOrden ,o.observaciones ,o.IdCliente, o.FechaRecepcion , o.TareaDesarrollar, 
+      o.Precio, o.Completada, o.Eliminada, f.N_factura, f.fecha_factura, f.fecha_pago, f.estado_pago 
+      FROM orden o LEFT JOIN factura f ON f.id_orden = o.IdOrden where o.IdOrden=$id;" );
+      return $query->row();
+   }
+
+  
     //MODIFICAR orden
     public function mupdateorden($id, $data){
         $this->db->where('IdOrden', $id);
@@ -96,6 +136,12 @@ class Morden extends CI_Model{
     function consultarEstado($id){//
       $query=$this->db->query("SELECT * FROM parteorden WHERE IdOrden=$id and 
       IdParte  = (SELECT MAX(IdParte) FROM parteorden WHERE IdOrden=$id and anulado=0)" ) ;
+    return $query->row();
+  	}
+
+     function consultarPrimerTarea($id){//
+      $query=$this->db->query("SELECT * FROM parteorden WHERE IdOrden=$id and 
+      IdParte  = (SELECT MIN(IdParte) FROM parteorden WHERE IdOrden=$id)" ) ;
     return $query->row();
   	}
 }

@@ -59,10 +59,10 @@
                                                       <span class="fa fa-eye"></span>
                                                   </a>
                                                     <a href="<?php echo base_url(); ?>mantenimiento/corden/cedit/<?php echo $atributos->IdOrden; ?>" class="btn btn-info" title="Modificar">
-                                                        <span class="fa fa-pencil"></span>
+                                                        <span class="fa-solid fa-pen"></span>
                                                     </a>
                                                     <a href="<?php echo base_url(); ?>mantenimiento/corden/cdelete/<?php echo $atributos->IdOrden; ?>" class="btn btn-danger btn-remove deleteOrden" title="Eliminar">
-                                                        <span class="fa fa-remove"></span>
+                                                        <span class="fa-solid fa-circle-xmark"></span>
                                                     </a>
                                                     <a href="<?php echo base_url(); ?>mantenimiento/corden/ccompleta/<?php echo $atributos->IdOrden; ?>" class="btn btn-success completaOrden" title="Completa">
                                                         <span class="fa fa-check-circle"></span>
@@ -112,13 +112,13 @@
                                                         <span class="fa fa-eye"></span>
                                                     </a>
                                                     <a href="<?php echo base_url(); ?>mantenimiento/corden/cedit/<?php echo $atributos->IdOrden; ?>" class="btn btn-info" title="Modificar">
-                                                        <span class="fa fa-pencil"></span>
+                                                        <span class="fa-solid fa-pen"></span>
                                                     </a>
                                                     <a href="<?php echo base_url(); ?>mantenimiento/corden/cdelete/<?php echo $atributos->IdOrden; ?>" class="btn btn-danger btn-remove deleteOrdenCompleta" title="Eliminar">
-                                                        <span class="fa fa-remove"></span>
+                                                        <span class="fa-solid fa-circle-xmark"></span>
                                                     </a>
                                                     <a href="<?php echo base_url(); ?>mantenimiento/corden/cdescompleta/<?php echo $atributos->IdOrden; ?>" class="btn btn-success reanudarOrden" title="Reanudar">
-                                                        <span class="fa fa-clock-o"></span>
+                                                        <span class="fa-solid fa-clock"></span>
                                                     </a>
                                                 </div>
                                             </td>
@@ -155,7 +155,9 @@ $(document).ready(function () {
                        "previous": "Anterior"
                    },
                },
+               scrollX:true,
                "order": [[ 0, "desc" ]]
           });
+          
 })
 </script>

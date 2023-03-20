@@ -11,11 +11,36 @@
 <script src="<?php echo base_url();?>assets/template/jquery/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="<?php echo base_url();?>assets/template/bootstrap/js/bootstrap.min.js"></script>
+
 <!-- SlimScroll -->
 <script src="<?php echo base_url();?>assets/template/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- dataTable -->
-<script src="<?php echo base_url();?>assets/template/datatables.net-bs/js/jquery.dataTables.min.js"></script>
-<script src="<?php echo base_url();?>assets/template/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+
+
+
+
+<script src="<?php echo base_url();?>assets/template/datatables.net-bs/js/dataTables.responsive.min.js"></script>
+
+
+
+<script src="<?php echo base_url();?>assets/template/DataTables-1.13.3/js/dataTables.fixedColumns.min.js"></script>
+
+
+
+<script src="<?php echo base_url();?>assets/template/JSZip-2.5.0/jszip.min.js"></script>
+<script src="<?php echo base_url();?>assets/template/pdfmake-0.1.36/pdfmake.min.js"></script>
+<script src="<?php echo base_url();?>assets/template/pdfmake-0.1.36/vfs_fonts.js"></script>
+<script src="<?php echo base_url();?>assets/template/DataTables-1.13.3/js/jquery.dataTables.min.js"></script>
+<script src="<?php echo base_url();?>assets/template/DataTables-1.13.3/js/dataTables.bootstrap4.min.js"></script>
+<script src="<?php echo base_url();?>assets/template/Buttons-2.3.5/js/dataTables.buttons.min.js"></script>
+
+<script src="<?php echo base_url();?>assets/template/Buttons-2.3.5/js/buttons.colVis.min.js"></script>
+<script src="<?php echo base_url();?>assets/template/Buttons-2.3.5/js/buttons.html5.min.js"></script>
+<script src="<?php echo base_url();?>assets/template/Buttons-2.3.5/js/buttons.print.min.js"></script>
+
+<script src="<?php echo base_url();?>assets/template/DataTables-1.13.3/js/dataTables.dateTimes.min.js"></script>
+<script src="<?php echo base_url();?>assets/template/DataTables-1.13.3/js/moment.min.js"></script>
+
 <!-- FastClick -->
 <script src="<?php echo base_url();?>assets/template/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
@@ -32,7 +57,7 @@ $('.sidebar-menu').tree()
 </body>
 </html>
 
-<script tyoe="text/javascript">
+<script type="text/javascript">
 
   var base_url= "<?php echo base_url();?>";
 
@@ -53,6 +78,7 @@ $('.sidebar-menu').tree()
                                    "previous": "Anterior"
                                },
                            },
+                           scrollX:true,
                            "order": [[ 0, "desc" ]]
                       });
          })

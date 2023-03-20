@@ -50,6 +50,7 @@ public function cinsert(){
     $check_orden = $this->input->post('ordenes');
     $check_usu = $this->input->post('usu');
     $check_rol = $this->input->post('rol');
+    $check_est = $this->input->post('estado');
 
    
     $b_rol = $this->mroles->obtenerrol($nombre_tipo);
@@ -79,7 +80,11 @@ public function cinsert(){
       }else{
         $rol=0;
       }
-    
+      if($check_est=='on'){
+        $est=1;
+      }else{
+        $est=0;
+      }
 
       if($b_rol==null){
         $data = array(
@@ -91,6 +96,7 @@ public function cinsert(){
             'ordenes' => $orden,
             'usuarios' => $usuario,
             'roles' => $rol,
+            'estados_trabajo' => $est,
             'anulado' => 0
             
 
@@ -140,6 +146,7 @@ public function cupdate(){
     $check_orden = $this->input->post('ordenes');
     $check_usu = $this->input->post('usu');
     $check_rol = $this->input->post('rol');
+    $check_est = $this->input->post('estado');
 
      $nrol = $this->mroles->obtenerrol($nombre_tipo);
 
@@ -168,6 +175,11 @@ public function cupdate(){
       }else{
         $rol=0;
       }
+      if($check_est=='on'){
+        $est=1;
+      }else{
+        $est=0;
+      }
 
 
       if(($nrol==null) or ($nombre==$nombre_tipo) ){
@@ -180,6 +192,7 @@ public function cupdate(){
             'ordenes' => $orden,
             'usuarios' => $usuario,
             'roles' => $rol,
+            'estados_trabajo' => $est,
             'anulado' => 0
 
         );

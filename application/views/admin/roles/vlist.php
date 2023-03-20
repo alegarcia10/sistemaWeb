@@ -20,12 +20,12 @@
                 <hr>
                 <div class="row">
                     <div class="col-md-12">
-                        <table id="example1" class="table table-bordered table-hover">
+                        <table id="example1" class="table table-bordered table-hover" style="overflow-x: scroll;">
                             <thead>
                                 <tr>
                                     <th>#</th>
                                     <th>Privilegios</th>
-
+                                    <th>Operaciones</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -37,10 +37,10 @@
                                     <td>
                                         <div class="btn-group">
                                             <a href="<?php echo base_url();?>mantenimiento/croles/cedit/<?php echo $atributos->idRol; ?>" class="btn btn-info">
-                                                <span class="fa fa-pencil"></span>
+                                                <span class="fa-solid fa-pen"></span>
                                             </a>
                                             <a href="<?php echo base_url();?>mantenimiento/croles/cdelete/<?php echo $atributos->idRol; ?>" class="btn btn-danger btn-remove deleteRoles">
-                                                <span class="fa fa-remove"></span>
+                                                <span class="fa-solid fa-circle-xmark"></span>
                                             </a>
                                         </div>
                                     </td>
@@ -74,3 +74,4 @@
         </div>
     </div>
 </div>
+

@@ -77,10 +77,10 @@
                                                         <div class="btn-group">
 
                                                             <a title="Modificar" href="<?php echo base_url(); ?>mantenimiento/cparteorden/cedit/<?php echo $atributos->IdParte; ?>" class="btn btn-info ">
-                                                                <span class="fa fa-pencil"></span>
+                                                                <span class="fa-solid fa-pen"></span>
                                                             </a>
                                                             <a title="Eliminar" href="<?php echo base_url(); ?>mantenimiento/cparteorden/cdelete/<?php echo $atributos->IdParte; ?>/<?php echo $atributos->IdOrden; ?>" class="btn btn-danger btn-remove deleteParte">
-                                                                <span class="fa fa-remove"></span>
+                                                                <span class="fa-solid fa-circle-xmark"></span>
                                                             </a>
                                                         </div>
                                                     </td>
@@ -117,7 +117,8 @@ $(document).ready(function () {
                        "next": "Siguiente",
                        "previous": "Anterior"
                    },
-               }
+               },
+               scrollX:true
           });
 })
 </script>

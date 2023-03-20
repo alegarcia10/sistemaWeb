@@ -1,23 +1,27 @@
 <div class="content-wrapper">
     <section class="content-header">
         <h1>
-        Orden
+        Orden <?php echo $ordenedit->IdOrden ?>
             <small>Editar</small>
         </h1>
     </section>
     <section class="content">
         <div class="box box-solid">
             <div class="box-body">
-               <hr>
+               
                <div class="row">
                    <div class="col-md-12">
                        <?php if($this->session->flashdata('error')):?>
                         <div class="alert alert-danger">
                             <p><?php echo $this->session->flashdata('error') ?> </p>
                         </div>
-                        <?php endif ; ?>
+                        <?php endif  ;?>
+                        
                         <form action="<?php echo base_url();?>mantenimiento/corden/cupdate" method="POST">
                             <input type="hidden" value="<?php echo $ordenedit->IdOrden ?>" name="txtidorden" id="txtidorden">
+                            <div class=" col-sm-12 form-group">
+                                <h2>Datos Orden</h2>
+                            </div>
                             <div class="col-sm-3 form-group">
                                 <label for="fecha">Fecha de Recepción</label>
                                 <input type="text" id="txtfecha" name="txtfecha"  min="2020-01-01" max="2100-12-31" value="<?php echo !empty(form_error('txtfecha'))? set_value('txtfecha') :  date("d-m-Y", strtotime("$ordenedit->FechaRecepcion"));?>" class= "form-control"   >
@@ -39,20 +43,80 @@
                               <label for="cliente">Cliente&nbsp;&nbsp; (*)</label>
                 							<? $this->select_items->sin_buscador2($cliente_select,(!empty($model->IdCliente))
                                ? $model->IdCliente : '',	'cliente','1',(!empty($consultar)) ? "disabled ":'required');?>
-                							<input id="cliente_hidden" name="cliente_hidden" type="hidden" >
-                						</div>
+                			<input id="cliente_hidden" name="cliente_hidden" type="hidden" >
+                			</div>
                             <div class=" col-sm-12 form-group">
                                 <label for="obser">OBSERVACIONES</label>
                                 <input type="text" id="txtobser" name="txtobser" maxlength="1000"class="form-control" value="<?php echo !empty(form_error('txtobser'))? set_value('txtobser') : $ordenedit->observaciones ?>" class= "form-control">
                             </div>
                             <div class="col-sm-12 form-group">
-                            <a class="btn btn-success" href="<?php echo base_url();?>mantenimiento/corden">Volver</a>
+                                <a class="btn btn-info" href="<?php echo base_url();?>mantenimiento/corden">Volver</a>
                                 <button type="submit" class="btn btn-success">Guardar</button>
                             </div>
+                        </form>
+                            <br>
+                            <br>  
+                        <div class="col-sm-12 form-group" style="margin-top: 30px;">
+                        <b>Datos Factura</b>
+                        <input type="checkbox" name="check" id="check" value="1" onchange="javascript:showContent()" />
+                       </div>
+                        <div id="content" style="display: none;">
+                        
+                        <form action="<?php echo base_url();?>mantenimiento/corden/cupdatefact" method="POST">
+                            <input type="hidden" value="<?php echo $ordenedit->IdOrden ?>" name="txtidorden" id="txtidorden">
+                            <input type="hidden" value="<?php echo $ordenedit->N_factura ?>" name="txtid" id="txtid">  
+                            <div class=" col-sm-12 form-group">
+                                <h2>Datos de Facturación</h2>
+                            </div>
+                            <div class="col-sm-3 form-group">
+                                <label for="numFactura">N° Factura</label>
+                                <input type="number" id="txtnumFactura" name="txtnumFactura" class= "form-control"  value="<?php echo !empty(form_error('txtnumFactura'))? set_value('txtnumFactura') :  $ordenedit->N_factura;?>" class= "form-control" >
+                            </div>
+                            <div class="col-sm-3 form-group">
+                                <label for="fechaFactura">Fecha Factura <b>(dd/mm/aaaa)</b></label>
+                                <input type="text" id="txtfechaFactura" name="txtfechaFactura" class="form-control"  value="<?php if($ordenedit->fecha_factura=='0000-00-00 00:00:00' || $ordenedit->fecha_factura==null){$ordenedit->fecha_factura="";}else{$ordenedit->fecha_factura= date("d-m-Y", strtotime("$ordenedit->fecha_factura")); } echo !empty(form_error('txtfechaFactura'))? set_value('txtfechaFactura') : $ordenedit->fecha_factura?>" >
+                            </div>
+                            <div class="col-sm-3 form-group">
+                                <label for="fechaPago">Fecha Pago <b>(dd/mm/aaaa)</b></label>
+                                <input type="text" id="txtfechaPago" name="txtfechaPago" class="form-control"  value="<?php if($ordenedit->fecha_pago=='0000-00-00 00:00:00' || $ordenedit->fecha_pago==null){$ordenedit->fecha_pago="";}else{$ordenedit->fecha_pago= date("d-m-Y", strtotime("$ordenedit->fecha_pago")); } echo !empty(form_error('txtfechaPago'))? set_value('txtfechaPago') : $ordenedit->fecha_pago;?>">
+                            </div>
+                            <div class="col-sm-3 form-group">
+                                <label for="Pago">Estado del Pago</label>
+                                <input type="text" id="txtpago" name="txtpago" maxlength="1000" value="<?php echo !empty(form_error('txtpago'))? set_value('txtpago') : $ordenedit->estado_pago ?>" class= "form-control">    
+                            </div>
+                            <br>
+                            <br>
+
+                            <div class="col-sm-12 form-group">
+                                
+                                <button type="submit" class="btn btn-success">Guardar</button>
+                            </div>
+                        </form>
                         </div>
-                    </form>
+                    </div> 
                </div>
             </div>
         </div>
     </section>
 </div>
+
+<style>
+    input[type="radio"], input[type="checkbox"] {
+    
+    margin-left: 20px;
+    
+}
+    </style>
+
+<script type="text/javascript">
+    function showContent() {
+        element = document.getElementById("content");
+        check = document.getElementById("check");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }
+</script>
