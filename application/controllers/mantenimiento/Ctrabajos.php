@@ -30,7 +30,7 @@ public function index(){
             $tec="";
             //$HH=0;
             $horasAcum=0;
-            $fecha_visita=new date;
+            $fecha_visita=new dateTime;
            
             foreach($parteorden as $parte){
                 
