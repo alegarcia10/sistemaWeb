@@ -125,7 +125,7 @@ public function index(){
             if($tarea != null){
                 $fecha_visita= $tarea->FechaInicio;
                 if($fecha_visita != null){
-                    $fecha_visita=$fecha_visita->format('d/m/Y');
+                    $fecha_visita=date_format('d/m/Y',"$fecha_visita");
                     $orden->Fecha=$fecha_visita;}
                 else{
                     $orden->Fecha="-";
