@@ -86,9 +86,7 @@
                                                 <tr>
                                                     
                                                     <td align="center" width="10%"><?php if ($atributos->Fecha != "-") 
-                                                                        { $newdate=$atributos->Fecha;
-                                                                            $newdate= $newdate->format('d/m/Y');
-                                                                            echo $newdate;}
+                                                                        {echo substr("$atributos->Fecha", 0, 10);}
                                                                         else{echo '-' ; };?></td>
                                                     <td width="15%"><?php echo $atributos->Nombre; ?></td>
                                                     <td width="24%"><?php echo $atributos->TareaDesarrollar; ?></td>
