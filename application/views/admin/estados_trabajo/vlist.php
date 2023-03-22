@@ -86,7 +86,7 @@
                                                 <tr>
                                                     
                                                     <td align="center" width="10%"><?php if ($atributos->Fecha != "-") 
-                                                                        {echo $atributos->Fecha;}
+                                                                        {echo date_format($atributos->Fecha, 'd/m/Y');}
                                                                         else{echo '-' ; };?></td>
                                                     <td width="15%"><?php echo $atributos->Nombre; ?></td>
                                                     <td width="24%"><?php echo $atributos->TareaDesarrollar; ?></td>
@@ -266,8 +266,8 @@ var table =  $('#tablaordenc').DataTable({
           //table.buttons().container().appendTo( '#example_wrapper .col-md-6:eq(0)' );
           $.fn.dataTable.ext.search.push(
     function( settings, data, dataIndex ) {
-        var min = date("d/m/Y", strtotime($('#start_date').val()));
-        var max = date("d/m/Y", strtotime($('#end_date').val()));
+        var min = $('#start_date').val();
+        var max = $('#end_date').val();
         var date_pursached =  data[0] || 0; // use data for the date column
  
          if (min == "" && max == "") { return true; }
