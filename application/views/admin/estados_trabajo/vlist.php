@@ -86,7 +86,7 @@
                                                 <tr>
                                                     
                                                     <td align="center" width="10%"><?php if ($atributos->Fecha != "-") 
-                                                                        {echo substr("$atributos->Fecha", 0, 10);}
+                                                                        {echo "$atributos->Fecha";}
                                                                         else{echo '-' ; };?></td>
                                                     <td width="15%"><?php echo $atributos->Nombre; ?></td>
                                                     <td width="24%"><?php echo $atributos->TareaDesarrollar; ?></td>
