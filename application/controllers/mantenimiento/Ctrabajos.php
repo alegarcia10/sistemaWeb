@@ -30,7 +30,7 @@ public function index(){
             $tec="";
             //$HH=0;
             $horasAcum=0;
-            $fecha_visita=new dateTime;
+            $fecha_visita="";
            
             foreach($parteorden as $parte){
                 
@@ -125,7 +125,7 @@ public function index(){
             if($tarea != null){
                 $fecha_visita= $tarea->FechaInicio;
                 if($fecha_visita != null){
-                    $fecha_visita=date_format('d/m/Y',"$fecha_visita");
+                    $fecha_visita=date("d/m/Y", strtotime("$fecha_visita"));
                     $orden->Fecha=$fecha_visita;}
                 else{
                     $orden->Fecha="-";
