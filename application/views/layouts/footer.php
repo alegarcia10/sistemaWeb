@@ -285,7 +285,7 @@ $('.sidebar-menu').tree()
 $(".AgregarTarea").on("click", function(e){
            e.preventDefault(); // cancela accion de href
            var ruta =$(this).attr("href");
-           //alert(ruta);
+           alert(ruta);
            swal({
              title: "Esta por agregar una nueva tarea",
              //text: "Orden Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
@@ -324,7 +324,7 @@ $(".AgregarTarea").on("click", function(e){
         $(".deleteParte").on("click", function(e){
            e.preventDefault(); // cancela accion de href
            var ruta =$(this).attr("href");
-           //alert(ruta);
+           alert(ruta);
            swal({
              title: "Esta por eliminar",
              text: "Tarea Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
