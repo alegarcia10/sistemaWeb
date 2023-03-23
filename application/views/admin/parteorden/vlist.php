@@ -3,7 +3,7 @@
         <div class="col-md-6">
             <a href="<?php echo base_url(); ?>mantenimiento/cparteorden/cinsert/<?php echo $ordenindex->IdOrden; ?>" class="btn  btn-flat AgregarTarea" id="botonVioleta"><span class="fa fa-plus"></span> Agregar Tarea</a>
            
-            <a href="<?php echo base_url(); ?>mantenimiento/cparteorden/cinsert/<?php echo $ordenindex->IdOrden; ?>" class="btn btn-success insertParte" title="insertParte">
+            <a href="<?php echo base_url(); ?>mantenimiento/cparteorden/cinsert/<?php echo $ordenindex->IdOrden; ?>" class="btn btn-success insertParte" title="insertPartee">
                 <span class="fa-solid fa-clock"></span>
             </a>                            
         </div>
