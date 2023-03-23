@@ -55,11 +55,11 @@ public function listar($id){
 }*/
 
 
-public function cinsert($id){
-     var_dump("llega al cinsert".$id);
+public function cinsert($idOrden){
+     
 
         $data = array(
-            'IdOrden' => $id,
+            'IdOrden' => $idOrden,
             'Estado' => 0
 
         );
@@ -69,10 +69,10 @@ public function cinsert($id){
 
         if($id){
             $this->session->set_flashdata('correcto', 'Se guardo Correctamente');
-            redirect(base_url().'mantenimiento/cparteorden/listar/'.$id);
+            redirect(base_url().'mantenimiento/cparteorden/listar/'.$idOrden);
         }else{
             $this->session->set_flashdata('error', 'No se Guardo registro');
-            redirect(base_url().'mantenimiento/cparteorden/listar/'.$id);
+            redirect(base_url().'mantenimiento/cparteorden/listar/'.$idOrden);
         }
 
 }
