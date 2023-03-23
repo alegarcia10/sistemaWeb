@@ -126,7 +126,7 @@ $(".insertParte").on("click", function(e){
          $(".deleteOrden").on("click", function(e){
            e.preventDefault(); // cancela accion de href
            var ruta =$(this).attr("href");
-           //alert(ruta);
+           alert(ruta);
            swal({
              title: "Esta por eliminar",
              text: "Orden Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
@@ -146,7 +146,8 @@ $(".insertParte").on("click", function(e){
                     url: ruta,
                     type: "POST",
                     success:function(res){
-                      //alert(res);
+                      alert(res);
+                      alert(ruta);
                       window.location.href=base_url+res;
                     }
                   });
