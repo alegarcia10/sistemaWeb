@@ -86,49 +86,11 @@ $('.sidebar-menu').tree()
 
 //ACCIONES DE ORDEN ***************************************************************************************
 
-$(".insertParte").on("click", function(e){
-           e.preventDefault(); // cancela accion de href
-           var ruta =$(this).attr("href");
-           //alert(ruta);
-           id=ruta.substring(ruta.lastIndexOf('/') + 1);
-         
-           swal({
-             title: "Esta por agregar Nueva Tarea",
-             //text: "Orden Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
-             type: "warning",
-             showCancelButton: true,
-             confirmButtonColor: '#d9534f',
-             cancelButtonColor: '#d33',
-             confirmButtonText: "Confirmar",
-             showLoaderOnConfirm: true,
-             cancelButtonText: "Cancelar",
-             closeOnConfirm: false,
-             closeOnCancel: false
-              },
-              function(isConfirm){
-                if (isConfirm) {
-                  $.ajax({
-                    url: ruta,
-                    type: "POST",
-                    success:function(res){
-                      res='mantenimiento/cparteorden/listar/';
-                      window.location.href=base_url+res+id;
-                    }
-                  });
-                }else{
-                  swal({
-                      type: 'error',
-                      title: 'Cancelado',
-                      showConfirmButton: false,
-                      timer: 500
-                    });
-                }
-              });
-         });
+
          $(".deleteOrden").on("click", function(e){
            e.preventDefault(); // cancela accion de href
            var ruta =$(this).attr("href");
-           alert(ruta);
+           //alert(ruta);
            swal({
              title: "Esta por eliminar",
              text: "Orden Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
@@ -148,8 +110,8 @@ $(".insertParte").on("click", function(e){
                     url: ruta,
                     type: "POST",
                     success:function(res){
-                      alert(res);
-                      alert(ruta);
+                      //alert(res);
+                      
                       window.location.href=base_url+res;
                     }
                   });
@@ -321,12 +283,14 @@ $(".insertParte").on("click", function(e){
 //acciones parte confirmacion de agregar
 //AgregarTarea
 
-$(".AgregarTarea").on("click", function(e){
+$(".insertParte").on("click", function(e){
            e.preventDefault(); // cancela accion de href
            var ruta =$(this).attr("href");
-           alert(ruta);
+           //alert(ruta);
+           id=ruta.substring(ruta.lastIndexOf('/') + 1);
+         
            swal({
-             title: "Esta por agregar una nueva tarea",
+             title: "Esta por agregar Nueva Tarea",
              //text: "Orden Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
              type: "warning",
              showCancelButton: true,
@@ -344,8 +308,8 @@ $(".AgregarTarea").on("click", function(e){
                     url: ruta,
                     type: "POST",
                     success:function(res){
-                      alert(res);
-                      window.location.href=base_url+res;
+                      res='mantenimiento/cparteorden/listar/';
+                      window.location.href=base_url+res+id;
                     }
                   });
                 }else{
@@ -363,7 +327,7 @@ $(".AgregarTarea").on("click", function(e){
         $(".deleteParte").on("click", function(e){
            e.preventDefault(); // cancela accion de href
            var ruta =$(this).attr("href");
-           alert(ruta);
+           //alert(ruta);
           
            swal({
              title: "Esta por eliminar",
@@ -384,7 +348,7 @@ $(".AgregarTarea").on("click", function(e){
                     url: ruta,
                     type: "POST",
                     success:function(res){
-                      alert(res);
+                      //alert(res);
                       window.location.href=base_url+res;
                     }
                   });
