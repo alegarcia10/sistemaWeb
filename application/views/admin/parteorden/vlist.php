@@ -2,9 +2,10 @@
     <section class="content-header">
         <div class="col-md-6">
             <a href="<?php echo base_url(); ?>mantenimiento/cparteorden/cinsert/<?php echo $ordenindex->IdOrden; ?>" class="btn  btn-flat AgregarTarea" id="botonVioleta"><span class="fa fa-plus"></span> Agregar Tarea</a>
-            <a title="Agregar Orden" href="<?php echo base_url(); ?>mantenimiento/cparteorden/cinsert/<?php echo $ordenindex->IdOrden;; ?>/<?php echo $ordenindex->IdOrden;; ?>" class="btn btn-remove insertParte">
-                <span class="fa-solid fa-circle-xmark"></span>
-            </a>                             
+           
+            <a href="<?php echo base_url(); ?>mantenimiento/cparteorden/cinsert/<?php echo $ordenindex->IdOrden; ?>" class="btn btn-success insertParte" title="insertParte">
+                <span class="fa-solid fa-clock"></span>
+            </a>                            
         </div>
     </section>
     <section class="content" id="cuerpo">

@@ -91,13 +91,13 @@ $(".insertParte").on("click", function(e){
            var ruta =$(this).attr("href");
            alert(ruta);
            swal({
-             title: "Esta por Agregar una Nueva Orden",
-             //text: "Orden Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
+             title: "Esta por agregar Nueva Tarea",
+             text: "Orden Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
              type: "warning",
              showCancelButton: true,
              confirmButtonColor: '#d9534f',
              cancelButtonColor: '#d33',
-             confirmButtonText: "Eliminar",
+             confirmButtonText: "Confirmar",
              showLoaderOnConfirm: true,
              cancelButtonText: "Cancelar",
              closeOnConfirm: false,
@@ -123,7 +123,6 @@ $(".insertParte").on("click", function(e){
                 }
               });
          });
-
          $(".deleteOrden").on("click", function(e){
            e.preventDefault(); // cancela accion de href
            var ruta =$(this).attr("href");
