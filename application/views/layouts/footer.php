@@ -344,7 +344,7 @@ $(".AgregarTarea").on("click", function(e){
                     url: ruta,
                     type: "POST",
                     success:function(res){
-                      //alert(res);
+                      alert(res);
                       window.location.href=base_url+res;
                     }
                   });
