@@ -109,7 +109,7 @@ $(".insertParte").on("click", function(e){
                     url: ruta,
                     type: "POST",
                     success:function(res){
-                      alert(ruta);
+                      res='mantenimiento/cinsert';
                       window.location.href=base_url+res;
                     }
                   });
