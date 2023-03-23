@@ -72,7 +72,7 @@ public function cinsert($id){
             redirect(base_url().'mantenimiento/cparteorden/listar/'.$id);
         }else{
             $this->session->set_flashdata('error', 'No se Guardo registro');
-            redirect(base_url().'mantenimiento/cparteorden/cadd/'.$id);
+            redirect(base_url().'mantenimiento/cparteorden/listar/'.$id);
         }
 
 }
