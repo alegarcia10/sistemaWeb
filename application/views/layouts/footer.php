@@ -86,7 +86,7 @@ $('.sidebar-menu').tree()
 
 //ACCIONES DE ORDEN ***************************************************************************************
 
-$(".insertOrden").on("click", function(e){
+$(".insertParte").on("click", function(e){
            e.preventDefault(); // cancela accion de href
            var ruta =$(this).attr("href");
            alert(ruta);
