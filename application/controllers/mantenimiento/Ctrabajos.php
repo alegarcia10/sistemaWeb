@@ -54,8 +54,17 @@ public function index(){
 
                     $FechaInicio= $parte->FechaInicio;
                     $FechaFin= $parte->FechaFin;
-                    if($FechaInicio != null && $FechaFin != null){
-
+                    if($FechaInicio == null || $FechaFin == null || $FechaInicio == '0000-00-00 00:00:00' || $FechaFin == '0000-00-00 00:00:00'){
+                        if($FechaInicio == '0000-00-00 00:00:00' || $FechaInicio == null){
+                            $orden->$FechaInicio="-";
+                        }
+                        if($FechaFin == '0000-00-00 00:00:00' || $FechaFin == null){
+                            $orden->$FechaFin="-";
+                        }
+                        $orden->HH="-";
+                        $horasAcum = $horasAcum + 0;
+                    }
+                    else{
                     $date1 = strtotime("$FechaInicio");
                     $date2 = strtotime("$FechaFin");
 
@@ -70,11 +79,8 @@ public function index(){
 
                     //$h1 = $this->mparteorden->suma_horas($date1,$date2);
                     $horasAcum = $horasAcum+$h1;
-                    }
-                    else{
                         //$band=false;
                         //var_dump("Entra al else");
-                        $horasAcum = $horasAcum + 0;
                     }
                     
 
