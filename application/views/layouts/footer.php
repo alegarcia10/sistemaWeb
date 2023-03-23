@@ -89,12 +89,12 @@ $('.sidebar-menu').tree()
 $(".insertParte").on("click", function(e){
            e.preventDefault(); // cancela accion de href
            var ruta =$(this).attr("href");
-           alert(ruta);
+           //alert(ruta);
            id=ruta.substring(ruta.lastIndexOf('/') + 1);
-           alert(id);
+         
            swal({
              title: "Esta por agregar Nueva Tarea",
-             text: "Orden Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
+             //text: "Orden Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
              type: "warning",
              showCancelButton: true,
              confirmButtonColor: '#d9534f',
@@ -111,8 +111,8 @@ $(".insertParte").on("click", function(e){
                     url: ruta,
                     type: "POST",
                     success:function(res){
-                      res='mantenimiento/cinsert';
-                      window.location.href=base_url+res;
+                      res='mantenimiento/cparteorden/listar/';
+                      window.location.href=base_url+res+id;
                     }
                   });
                 }else{
