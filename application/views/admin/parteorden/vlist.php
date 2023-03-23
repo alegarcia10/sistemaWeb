@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <section class="content-header">
         <div class="col-md-6">
-            <a href="<?php echo base_url(); ?>mantenimiento/cparteorden/cinsert/<?php echo $ordenindex->IdOrden; ?>" class="btn  btn-flat" id="botonVioleta"><span class="fa fa-plus"></span> Agregar Tarea</a>
+            <a href="<?php echo base_url(); ?>mantenimiento/cparteorden/cinsert/<?php echo $ordenindex->IdOrden; ?>" class="btn  btn-flat" id="AgregarTarea"><span class="fa fa-plus"></span> Agregar Tarea</a>
                                                    
         </div>
     </section>

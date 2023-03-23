@@ -279,6 +279,46 @@ $('.sidebar-menu').tree()
               });
          });
 
+//acciones parte confirmacion de agregar
+//AgregarTarea
+
+$(".AgregarTarea").on("click", function(e){
+           e.preventDefault(); // cancela accion de href
+           var ruta =$(this).attr("href");
+           //alert(ruta);
+           swal({
+             title: "Esta por agregar una nueva tarea",
+             text: "Tarea Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
+             type: "warning",
+             showCancelButton: true,
+             confirmButtonColor: '#d9534f',
+             cancelButtonColor: '#d33',
+             confirmButtonText: "Confirmar",
+             showLoaderOnConfirm: true,
+             cancelButtonText: "Cancelar",
+             closeOnConfirm: false,
+             closeOnCancel: false
+              },
+              function(isConfirm){
+                if (isConfirm) {
+                  $.ajax({
+                    url: ruta,
+                    type: "POST",
+                    success:function(res){
+                      //alert(res);
+                      window.location.href=base_url+res;
+                    }
+                  });
+                }else{
+                  swal({
+                      type: 'error',
+                      title: 'Cancelado',
+                      showConfirmButton: false,
+                      timer: 500
+                    });
+                }
+              });
+         });
 //ACCIONES DE PARTE ***************************************************************************************
 
         $(".deleteParte").on("click", function(e){
