@@ -288,7 +288,7 @@ $(".AgregarTarea").on("click", function(e){
            //alert(ruta);
            swal({
              title: "Esta por agregar una nueva tarea",
-             text: "Tarea Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
+             //text: "Orden Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
              type: "warning",
              showCancelButton: true,
              confirmButtonColor: '#d9534f',
@@ -305,7 +305,7 @@ $(".AgregarTarea").on("click", function(e){
                     url: ruta,
                     type: "POST",
                     success:function(res){
-                      //alert(res);
+                      alert(res);
                       window.location.href=base_url+res;
                     }
                   });
