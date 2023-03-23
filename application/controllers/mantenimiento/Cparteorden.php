@@ -56,7 +56,7 @@ public function listar($id){
 
 
 public function cinsert($id){
-     
+     var_dump("llega al cinsert".$id);
 
         $data = array(
             'IdOrden' => $id,
