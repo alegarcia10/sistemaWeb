@@ -240,10 +240,10 @@ $(document).ready(function(){
                         // url:'https://biosgastro.online/WebService/Controladores/Orden.php?op=SendNotification',
                         url:'https://biosgastro.online/WebServiceTesting/Controladores/Orden.php?op=SendNotification',
                         dataType:'application/json',
-                        data:{DNI:tecnico}
+                        data: JSON.stringify({DNI:tecnico})
                       })
                       .done(function(){
-                        console.log("Noti enviada");
+                        console.log('Noti enviada');
                       }
                   );
 
