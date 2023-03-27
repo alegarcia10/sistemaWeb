@@ -12,7 +12,7 @@
             <div class="box-body">
                 <div class="row" id="datos">
                     <div class="col-md-12">
-                        <h1 id="H1A">DETALLES ÓRDEN N° <?php echo $ordenindex->IdOrden; ?> </h1>
+                        <h1 id="H1A">DETALLES ORDEN N° <?php echo $ordenindex->IdOrden; ?> </h1>
                     </div>
                     <br>
                     <br>
