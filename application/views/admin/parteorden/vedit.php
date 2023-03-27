@@ -235,6 +235,8 @@ $(document).ready(function(){
       var idParte =$('#txtidParte').val();
 
 
+      console.log(JSON.stringify({DNI:tecnico}));
+      
           $.ajax({
                         method:'POST',
                         // url:'https://biosgastro.online/WebService/Controladores/Orden.php?op=SendNotification',
