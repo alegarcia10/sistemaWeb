@@ -105,11 +105,11 @@
                                                     <td align="center" width="8%"><?php if ($atributos->N_factura != null)
                                                             { echo $atributos->N_factura;}else{ echo '-';} ; ?></td>
                                                     <td align="center" width="8%"><?php if ($atributos->fecha_factura != "-")
-                                                            { echo date("d-m-Y", strtotime("$atributos->fecha_factura"));}else{ echo '-';} ; ?></td>
+                                                            { echo date("d/m/Y", strtotime("$atributos->fecha_factura"));}else{ echo '-';} ; ?></td>
                                                     <td align="center" width="8%"><?php if ($atributos->estado_pago != null)
                                                             { echo ($atributos->estado_pago);}else{ echo '-';} ; ?></td>
                                                     <td align="center" width="8%"><?php if ($atributos->fecha_pago != "-")
-                                                            { echo date("d-m-Y", strtotime("$atributos->fecha_pago"));}else{ echo '-';} ; ?></td>
+                                                            { echo date("d/m/Y", strtotime("$atributos->fecha_pago"));}else{ echo '-';} ; ?></td>
                                                     <td align="center" width="8%"><?php echo $atributos->demora; ?></td>
                                                     
                                                 </tr> 
