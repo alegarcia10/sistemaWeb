@@ -42,7 +42,7 @@
                                     <?php foreach ($ordenindex as $atributos) :?>
                                         <tr>
                                             <td width="5%"><?php echo $atributos->IdOrden; ?></td>
-                                            <td width="10%"><?php echo date("d-m-Y", strtotime("$atributos->FechaRecepcion")); ?></td>
+                                            <td width="10%"><?php echo date("d/m/Y", strtotime("$atributos->FechaRecepcion")); ?></td>
                                             <td width="24%"><?php echo $atributos->TareaDesarrollar; ?></td>
                                             <td width="8%"> $<?php echo number_format($atributos->Gastos, 2); ?></td>
                                             <td width="8%">$<?php echo number_format($atributos->Precio, 2); ?></td>
@@ -101,7 +101,7 @@
                                     <?php foreach ($ordencompletas as $atributos) :?>
                                         <tr>
                                           <td width="5%"><?php echo $atributos->IdOrden; ?></td>
-                                          <td width="10%"><?php echo date("d-m-Y", strtotime("$atributos->FechaRecepcion")); ?></td>
+                                          <td width="10%"><?php echo date("d/m/Y", strtotime("$atributos->FechaRecepcion")); ?></td>
                                           <td width="30%"><?php echo $atributos->TareaDesarrollar; ?></td>
                                           <td width="10%"> $<?php echo number_format($atributos->Gastos, 2); ?></td>
                                             <td width="10%">$<?php echo number_format($atributos->Precio, 2); ?></td>
