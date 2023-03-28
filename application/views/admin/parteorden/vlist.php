@@ -3,7 +3,7 @@
         <div class="col-md-6">
 
             <a href="<?php echo base_url(); ?>mantenimiento/cparteorden/cinsert/<?php echo $ordenindex->IdOrden; ?>" class="btn  btn-flat insertParte" id="botonVioleta" title="insertParte">
-                <span class="fa-solid fa-plus"><span> Agregar Tarea </span> </span>
+                <span class="fa-solid fa-plus"></span><span> Agregar Tarea  </span>
             </a>                            
         </div>
     </section>
@@ -18,7 +18,7 @@
                     <br>
                     <br>
                     <div class="col-md-4">
-                        <h4>Fecha: <?=   date("d/m/Y", strtotime("$ordenindex->FechaRecepcion "));?> </h4>
+                        <h4>Fecha: <?=   date("d-m-Y", strtotime("$ordenindex->FechaRecepcion "));?> </h4>
                     </div>
                     <div class="col-md-4">
                         <h4>Cliente: <?= $ordenindex->Nombre ?> </h4>
