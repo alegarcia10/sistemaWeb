@@ -2,7 +2,7 @@
     <section class="content-header">
         <h1>
             Orden
-            <small>Listado de Ordenes</small>
+            <small>Listado de Órdenes</small>
         </h1>
     </section>
     <section class="content">
@@ -22,7 +22,7 @@
                 <div class="row">
                     <div class="col-md-12">
                       <div class="col-md-12">
-                          <h1>Ordenes Activas  <span class="fa fa-clock-o"></span></h1>
+                          <h1>Órdenes Activas  <span class="fa fa-clock-o"></span></h1>
                       </div>
                         <table id="tablaordena" class="table table-bordered table-hover order-table1">
                             <thead>
@@ -80,7 +80,7 @@
                 <div class="row">
                   <div class="col-md-12">
                     <div class="col-md-12">
-                        <h1>Ordenes Completas  <span class="fa fa-check-circle"></span></h1>
+                        <h1>Órdenes Completas  <span class="fa fa-check-circle"></span></h1>
                     </div>
                     <br>
 
@@ -143,7 +143,7 @@ $(document).ready(function () {
                "language": {
                    "lengthMenu": "Mostrar _MENU_ registros por página",
                    "zeroRecords": "No se encontraron resultados en su búsqueda",
-                   "searchPlaceholder": "Buscar Ordenes Completas",
+                   "searchPlaceholder": "Buscar Órdenes Completas",
                    "info": "Mostrando registros de _START_ al _END_ de un total de  _TOTAL_ registros",
                    "infoEmpty": "No existen registros",
                    "infoFiltered": "(filtrado de un total de _MAX_ registros)",
