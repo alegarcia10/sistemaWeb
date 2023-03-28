@@ -252,7 +252,7 @@ $(document).ready(function(){
 
           $.ajax({
                     type: "POST",
-                    url: "https://biosgastro.online/WebServiceTesting/Controladores/Orden.php?op=SendNotification",
+                    url: "https://biosgastro.online/WebService/Controladores/Orden.php?op=SendNotification",
                     data: JSON.stringify({"DNI": tecnico}),
                     contentType: "application/json",
                     dataType: "json",
