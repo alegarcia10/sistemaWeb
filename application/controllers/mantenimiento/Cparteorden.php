@@ -31,8 +31,8 @@ public function listar($id){
     $this->load->view('layouts/footer');
 }
 
-
-public function cadd($id){
+//no esta en uso
+/*public function cadd($id){
 
   log_message('error',sprintf(" llega a cadd"));
   log_message('error',sprintf(" id que lelga es $id"));
@@ -52,17 +52,14 @@ public function cadd($id){
     $this->load->view('layouts/footer');
 
 
-}
+}*/
 
 
-public function cinsert(){
-     $idorden = $this->input->post('txtidorden');
-
-     $tarea = $this->input->post('txttarea');
+public function cinsert($idOrden){
+     
 
         $data = array(
-            'TareaDesarrollada' => $tarea,
-            'IdOrden' => $idorden,
+            'IdOrden' => $idOrden,
             'Estado' => 0
 
         );
@@ -72,10 +69,10 @@ public function cinsert(){
 
         if($id){
             $this->session->set_flashdata('correcto', 'Se guardo Correctamente');
-            redirect(base_url().'mantenimiento/cparteorden/listar/'.$idorden);
+            redirect(base_url().'mantenimiento/cparteorden/listar/'.$idOrden);
         }else{
             $this->session->set_flashdata('error', 'No se Guardo registro');
-            redirect(base_url().'mantenimiento/cparteorden/cadd/'.$idorden);
+            redirect(base_url().'mantenimiento/cparteorden/listar/'.$idOrden);
         }
 
 }

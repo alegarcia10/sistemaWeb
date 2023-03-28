@@ -235,6 +235,36 @@ $(document).ready(function(){
       var idParte =$('#txtidParte').val();
 
 
+      console.log(JSON.stringify({DNI:tecnico}));
+
+          // $.ajax({
+          //               method:'POST',
+          //               // url:'https://biosgastro.online/WebService/Controladores/Orden.php?op=SendNotification',
+          //               url:'https://biosgastro.online/WebServiceTesting/Controladores/Orden.php?op=SendNotification',
+          //               dataType:'application/json',
+          //               data: JSON.stringify({DNI:tecnico})
+          //             })
+          //             .done(function(){
+          //               console.log('Noti enviada');
+          //             }
+          //         );
+          
+
+          $.ajax({
+                    type: "POST",
+                    url: "https://biosgastro.online/WebServiceTesting/Controladores/Orden.php?op=SendNotification",
+                    data: JSON.stringify({"DNI": tecnico}),
+                    contentType: "application/json",
+                    dataType: "json",
+                    success: function (response) {
+                        console.log(response);
+                    },
+                    error: function (xhr, status, error) {
+                        console.log(xhr);
+                    }
+                });
+
+
 
 
                 $.ajax( {

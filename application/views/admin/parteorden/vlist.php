@@ -1,7 +1,10 @@
 <div class="content-wrapper">
     <section class="content-header">
         <div class="col-md-6">
-            <a href="<?php echo base_url(); ?>mantenimiento/cparteorden/cadd/<?php echo $ordenindex->IdOrden; ?>" class="btn  btn-flat" id="botonVioleta"><span class="fa fa-plus"></span> Agregar Tarea</a>
+
+            <a href="<?php echo base_url(); ?>mantenimiento/cparteorden/cinsert/<?php echo $ordenindex->IdOrden; ?>" class="btn  btn-flat insertParte" id="botonVioleta" title="insertParte">
+                <span class="fa-solid fa-plus"></span><span> Agregar Tarea  </span>
+            </a>                            
         </div>
     </section>
     <section class="content" id="cuerpo">
@@ -9,13 +12,13 @@
             <div class="box-body">
                 <div class="row" id="datos">
                     <div class="col-md-12">
-                        <h1 id="H1A">DETALLES ÓRDEN N° <?php echo $ordenindex->IdOrden; ?> </h1>
+                        <h1 id="H1A">DETALLES ORDEN N° <?php echo $ordenindex->IdOrden; ?> </h1>
                     </div>
                     <br>
                     <br>
                     <br>
                     <div class="col-md-4">
-                        <h4>Fecha: <?=   date("d-m-Y", strtotime("$ordenindex->FechaRecepcion "));?> </h4>
+                        <h4>Fecha: <?=   date("d/m/Y", strtotime("$ordenindex->FechaRecepcion "));?> </h4>
                     </div>
                     <div class="col-md-4">
                         <h4>Cliente: <?= $ordenindex->Nombre ?> </h4>
@@ -65,7 +68,7 @@
                                                 <tr>
                                                 <td width="10%"><?php echo $atributos->IdParte; ?></td>
                                                     <td width="45%"><?php echo $atributos->TareaDesarrollada; ?></td>
-                                                    <td width="10%"><?php if($atributos->FechaInicio == null){ echo "-";}else{echo $atributos->FechaInicio;} ?></td>
+                                                    <td width="10%"><?php if($atributos->FechaInicio == null){ echo "-";}else{echo date("d/m/Y H:i:s",strtotime ("$atributos->FechaInicio"));} ?></td>
                                                     <td width="10%"><?php if($atributos->FechaFin == null){ echo "-";}else{echo $atributos->FechaFin;} ?></td>
                                                     <td width="10%"><?php if ($atributos->Completa == 1)
                                                     { echo 'Completada';}elseif($atributos->Estado == 0)
