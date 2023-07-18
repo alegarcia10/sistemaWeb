@@ -51,6 +51,8 @@
                                         <tr>
                                             <th>Fecha Visita</th>
 
+                                            <th>N° Orden</th>
+
                                             <th>Cliente</th>
                                             
                                             <th>Detalle Trabajo</th>
@@ -88,6 +90,7 @@
                                                     <td align="center" width="10%"><?php if ($atributos->Fecha != "-") 
                                                                         {echo substr("$atributos->Fecha", 0, 10);}
                                                                         else{echo '-' ; };?></td>
+                                                    <td align="center" width="3%"><?php echo $atributos->IdOrden; ?></td>
                                                     <td width="15%"><?php echo $atributos->Nombre; ?></td>
                                                     <td width="24%"><?php echo $atributos->TareaDesarrollar; ?></td>
                                                     <td width="10%"><?php if ($atributos->Completa == '1')
@@ -206,7 +209,7 @@ var table =  $('#tablaordenc').DataTable({
                "order": [[ 0, "desc" ]],
                responsive: "true",
                scrollX:true,
-    
+               bstate: true,
                dom: '<"dt-buttons"Bf><"clear">lirtp',
                
                buttons: [ 
