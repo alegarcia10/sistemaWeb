@@ -209,7 +209,7 @@ var table =  $('#tablaordenc').DataTable({
                "order": [[ 0, "desc" ]],
                responsive: "true",
                scrollX:true,
-               bstate: true,
+               bStateSave: true,
                dom: '<"dt-buttons"Bf><"clear">lirtp',
                
                buttons: [ 
