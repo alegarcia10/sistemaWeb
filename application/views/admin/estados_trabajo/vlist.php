@@ -197,6 +197,7 @@ var table =  $('#tablaordenc').DataTable({
                    "infoEmpty": "No existen registros",
                    "infoFiltered": "(filtrado de un total de _MAX_ registros)",
                    "search": "Buscar:",
+                    "bStateSave": true,
                    "paginate": {
                        "first": "Primero",
                        "last": "Último",
