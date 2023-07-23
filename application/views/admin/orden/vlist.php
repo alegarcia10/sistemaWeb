@@ -148,7 +148,6 @@ $(document).ready(function () {
                    "infoEmpty": "No existen registros",
                    "infoFiltered": "(filtrado de un total de _MAX_ registros)",
                    "search": "Buscar:",
-                   "bStateSave": true,
                    "paginate": {
                        "first": "Primero",
                        "last": "Último",
@@ -156,6 +155,7 @@ $(document).ready(function () {
                        "previous": "Anterior"
                    },
                },
+               "bStateSave": true,
                scrollX:true,
                "order": [[ 0, "desc" ]]
           });

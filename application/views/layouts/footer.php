@@ -62,7 +62,7 @@ $('.sidebar-menu').tree()
   var base_url= "<?php echo base_url();?>";
 
             $(document).ready(function () {
-             var table =   $('#tablaordena').DataTable({
+               $('#tablaordena').DataTable({
                            "language": {
                                "lengthMenu": "Mostrar _MENU_ registros por página",
                                "zeroRecords": "No se encontraron resultados en su busqueda",
@@ -70,7 +70,6 @@ $('.sidebar-menu').tree()
                                "info": "Mostrando registros de _START_ al _END_ de un total de  _TOTAL_ registros",
                                "infoEmpty": "No existen registros",
                                "infoFiltered": "(filtrado de un total de _MAX_ registros)",
-                               "bStateSave": true,
                                "search": "Buscar:",
                                "paginate": {
                                    "first": "Primero",
@@ -79,6 +78,7 @@ $('.sidebar-menu').tree()
                                    "previous": "Anterior"
                                },
                            },
+                           "bStateSave": true,
                            scrollX:true,
                            "order": [[ 0, "desc" ]]
                       });
