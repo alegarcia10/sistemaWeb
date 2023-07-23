@@ -49,7 +49,7 @@
                                     <table id="tablaordenc" class="table table-bordered table-hover order-table1">
                                     <thead>
                                         <tr>
-                                            <th>Fecha Visitaa</th>
+                                            <th>Fecha Visita</th>
 
                                             <th>N° Orden</th>
 
