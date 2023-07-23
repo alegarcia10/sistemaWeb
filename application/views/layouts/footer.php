@@ -62,7 +62,7 @@ $('.sidebar-menu').tree()
   var base_url= "<?php echo base_url();?>";
 
             $(document).ready(function () {
-                $('#tablaordena').DataTable({
+             var table =   $('#tablaordena').DataTable({
                            "language": {
                                "lengthMenu": "Mostrar _MENU_ registros por página",
                                "zeroRecords": "No se encontraron resultados en su busqueda",
