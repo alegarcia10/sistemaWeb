@@ -147,6 +147,7 @@ $(document).ready(function () {
                    "info": "Mostrando registros de _START_ al _END_ de un total de  _TOTAL_ registros",
                    "infoEmpty": "No existen registros",
                    "infoFiltered": "(filtrado de un total de _MAX_ registros)",
+                   "bStateSave": true,
                    "search": "Buscar:",
                    "paginate": {
                        "first": "Primero",
