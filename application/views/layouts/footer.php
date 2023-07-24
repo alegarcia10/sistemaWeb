@@ -62,7 +62,7 @@ $('.sidebar-menu').tree()
   var base_url= "<?php echo base_url();?>";
 
             $(document).ready(function () {
-                $('#tablaordena').DataTable({
+               $('#tablaordena').DataTable({
                            "language": {
                                "lengthMenu": "Mostrar _MENU_ registros por página",
                                "zeroRecords": "No se encontraron resultados en su busqueda",
@@ -78,6 +78,7 @@ $('.sidebar-menu').tree()
                                    "previous": "Anterior"
                                },
                            },
+                           "bStateSave": true,
                            scrollX:true,
                            "order": [[ 0, "desc" ]]
                       });

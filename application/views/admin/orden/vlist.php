@@ -139,7 +139,7 @@
 
 
 $(document).ready(function () {
-    $('#tablaordenc').DataTable({
+  var table =  $('#tablaordenc').DataTable({
                "language": {
                    "lengthMenu": "Mostrar _MENU_ registros por página",
                    "zeroRecords": "No se encontraron resultados en su búsqueda",
@@ -155,9 +155,10 @@ $(document).ready(function () {
                        "previous": "Anterior"
                    },
                },
+               "bStateSave": true,
                scrollX:true,
                "order": [[ 0, "desc" ]]
           });
           
-})
+});
 </script>
