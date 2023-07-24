@@ -96,6 +96,15 @@ class Mparteorden extends CI_Model{
         return $resultado->result();
     }
 
+    public function mselectTecnicoId($id){
+
+        $resultado =	$query = $this->db->query("SELECT tc.Nombre FROM tecnicoorden t
+           INNER JOIN tecnico tc ON t.Dni = tc.Dni where tc.Activo=1 and t.IdParte=$id  ;");
+         return $resultado->result();
+         
+    }
+
+
 
 
     //MODIFICAR material
@@ -166,6 +175,67 @@ class Mparteorden extends CI_Model{
         $resultado =$this->db->get('tecnico');
         $res=$resultado->row();
         return $res;
+    }
+
+
+    public  function suma_horas($hora1,$hora2){
+ 
+        $hora1=explode(":",$hora1);
+        $hora2=explode(":",$hora2);
+        $temp=0;
+     
+        //sumo segundos 
+        $segundos=(int)$hora1[2]+(int)$hora2[2];
+        while($segundos>=60){
+            $segundos=$segundos-60;
+            $temp++;
+        }
+     
+        //sumo minutos 
+        $minutos=(int)$hora1[1]+(int)$hora2[1]+$temp;
+        $temp=0;
+        while($minutos>=60){
+            $minutos=$minutos-60;
+            $temp++;
+        }
+     
+        //sumo horas 
+        $horas=(int)$hora1[0]+(int)$hora2[0]+$temp;
+     
+        if($horas<10)
+            $horas= '0'.$horas;
+     
+        if($minutos<10)
+            $minutos= '0'.$minutos;
+     
+        if($segundos<10)
+            $segundos= '0'.$segundos;
+     
+        $sum_hrs = $horas.':'.$minutos.':'.$segundos;
+     
+        return ($sum_hrs);
+     
+        }
+    //funciones de horas// Separamos el tiempo en un array para pasarlo a segundos
+    public function explode_tiempo($tiempo) {
+        //date("Y-m-d",strtotime($tiempo));
+        //var_dump("entro al explode");
+        //var_dump($tiempo);
+        $arr_tiempo = explode(':', $tiempo);
+    
+       
+        $segundos = $arr_tiempo[0] * 3600 + $arr_tiempo[1] * 60 + $arr_tiempo[2];
+        return $segundos;
+    }
+
+    // Transformar los segundos en hora formato HH:mm:ss
+    public function segundos_hhmm($seg) {
+        //var_dump($seg."lo q se me cante");
+        $horas = floor($seg / 3600);
+        $minutos = floor($seg / 60 % 60);
+        $segundos = floor($seg % 60);
+
+        return sprintf('%02d:%02d:%02d', $horas, $minutos, $segundos);
     }
 
 

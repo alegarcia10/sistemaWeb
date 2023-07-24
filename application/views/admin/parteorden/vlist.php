@@ -1,7 +1,10 @@
 <div class="content-wrapper">
     <section class="content-header">
         <div class="col-md-6">
-            <a href="<?php echo base_url(); ?>mantenimiento/cparteorden/cadd/<?php echo $ordenindex->IdOrden; ?>" class="btn  btn-flat" id="botonVioleta"><span class="fa fa-plus"></span> Agregar Tarea</a>
+
+            <a href="<?php echo base_url(); ?>mantenimiento/cparteorden/cinsert/<?php echo $ordenindex->IdOrden; ?>" class="btn  btn-flat insertParte" id="botonVioleta" title="insertParte">
+                <span class="fa-solid fa-plus"></span><span> Agregar Tarea  </span>
+            </a>                            
         </div>
     </section>
     <section class="content" id="cuerpo">
@@ -9,13 +12,13 @@
             <div class="box-body">
                 <div class="row" id="datos">
                     <div class="col-md-12">
-                        <h1 id="H1A">DETALLES ÓRDEN N° <?php echo $ordenindex->IdOrden; ?> </h1>
+                        <h1 id="H1A">DETALLES ORDEN N° <?php echo $ordenindex->IdOrden; ?> </h1>
                     </div>
                     <br>
                     <br>
                     <br>
                     <div class="col-md-4">
-                        <h4>Fecha: <?=   date("d-m-Y", strtotime("$ordenindex->FechaRecepcion "));?> </h4>
+                        <h4>Fecha: <?=   date("d/m/Y", strtotime("$ordenindex->FechaRecepcion "));?> </h4>
                     </div>
                     <div class="col-md-4">
                         <h4>Cliente: <?= $ordenindex->Nombre ?> </h4>
@@ -77,10 +80,10 @@
                                                         <div class="btn-group">
 
                                                             <a title="Modificar" href="<?php echo base_url(); ?>mantenimiento/cparteorden/cedit/<?php echo $atributos->IdParte; ?>" class="btn btn-info ">
-                                                                <span class="fa fa-pencil"></span>
+                                                                <span class="fa-solid fa-pen"></span>
                                                             </a>
                                                             <a title="Eliminar" href="<?php echo base_url(); ?>mantenimiento/cparteorden/cdelete/<?php echo $atributos->IdParte; ?>/<?php echo $atributos->IdOrden; ?>" class="btn btn-danger btn-remove deleteParte">
-                                                                <span class="fa fa-remove"></span>
+                                                                <span class="fa-solid fa-circle-xmark"></span>
                                                             </a>
                                                         </div>
                                                     </td>
@@ -117,7 +120,8 @@ $(document).ready(function () {
                        "next": "Siguiente",
                        "previous": "Anterior"
                    },
-               }
+               },
+               scrollX:true
           });
 })
 </script>

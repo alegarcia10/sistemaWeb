@@ -9,15 +9,27 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
     <link rel="stylesheet" href="<?php echo base_url();?>assets/template/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/bootstrap/css/bootstrap.css">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/fontawesome/css/all.css">
+    
     <!-- Theme style -->
     <link rel="stylesheet" href="<?php echo base_url();?>assets/template/dist/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
     folder instead of downloading all of them to reduce the load. -->
     <!-- DataTables -->
 
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/datatables.net-bs/css/dataTables.bootstrap.min.css">
+    
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/DataTables-1.13.3/css/jquery.dataTables.min.css"/>
+    
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/DataTables-1.13.3/css/dataTables.dateTimes.min.css"/>
+    
+
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/DataTables-1.13.3/css/dataTables.bootstrap4.min.css"/>
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/DataTables-1.13.3/css/fixedColumns.dataTables.min.css"/>
+    
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/Buttons-2.3.5/css/buttons.bootstrap4.min.css"/>
+
 
     <link rel="stylesheet" href="<?php echo base_url();?>assets/template/dist/css/skins/_all-skins.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/template/dist/css/diseño.css">
@@ -33,7 +45,7 @@
         <header class="main-header" >
             <!-- Logo -->
 
-            <a href="<?php echo base_url()?>cdashboard" class="logo" id="menu3">
+            <a href="#" class="logo" id="menu3">
                 <!-- mini logo for sidebar mini 50x50 pixels -->
                 <span class="logo-mini"><img src="<?php echo base_url()?>assets/template/dist/img/ICONO COOLSOFT jpg.png" id="imgSmall"></span>
                 <!-- logo for regular state and mobile devices -->
@@ -54,13 +66,13 @@
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <!--<img src="<?php echo base_url()?>assets/template/dist/img/logo.jpg" class="user-image" alt="User Image"> -->
-                                <span class="hidden-xs"><?php echo $this->session->userdata('nombre')?></span>
+                                <span class="hidden-xs"><i class="fa-solid fa-user"> &nbsp;&nbsp;</i><?php echo $this->session->userdata('nombre')?></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <li class="user-body">
                                     <div class="row">
                                         <div class="col-xs-12 text-center">
-                                            <a href="<?php echo base_url();?>clogin/clogout"> Cerrar Sesión</a>
+                                            <a href="<?php echo base_url();?>clogin/clogout" color='red'><i class="fa-solid fa-xmark">&nbsp;&nbsp;</i>Cerrar Sesión</a>
                                         </div>
                                     </div>
                                     <!-- /.row -->
@@ -71,3 +83,14 @@
                 </div>
             </nav>
         </header>
+        <style>
+            .navbar-nav>.user-menu>.dropdown-menu>.user-body a {
+    color: red !important;}
+
+    .navbar-nav>.user-menu>.dropdown-menu{
+        width: 100px;
+            }
+            .skin-blue .main-header .navbar .nav > li > a:hover, .skin-blue .main-header .navbar .nav > li > a:active, .skin-blue .main-header .navbar .nav > li > a:focus, .skin-blue .main-header .navbar .nav .open > a, .skin-blue .main-header .navbar .nav .open > a:hover, .skin-blue .main-header .navbar .nav .open > a:focus, .skin-blue .main-header .navbar .nav > .active > a{
+                color: #000000;
+            }
+        </style>

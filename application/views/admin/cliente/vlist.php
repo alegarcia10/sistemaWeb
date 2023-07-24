@@ -10,7 +10,7 @@
             <div class="box-body">
                 <div class="row">
                     <div class="col-md-9">
-                        <a href="<?php echo base_url(); ?>mantenimiento/ccliente/cadd" class="btn btn-flat" id="botonVioleta"><span class="fa fa-plus"></span> Agregar Cliente</a>
+                        <a href="<?php echo base_url(); ?>mantenimiento/ccliente/cadd" class="btn btn-flat" id="botonVioleta"><span class="fa-solid fa-plus"></span> Agregar Cliente</a>
                     </div>
                 </div>
                 <?php if ($this->session->flashdata('correcto')) : ?>
@@ -45,7 +45,7 @@
                                           <td  >
                                               <div class="btn-group">
                                                 <a href="<?php echo base_url(); ?>mantenimiento/ccliente/cedit/<?php echo $atributos->IdCliente; ?>" class="btn btn-info" title="Modificar">
-                                                    <span class="fa fa-pencil"></span>
+                                                    <span class="fa-solid fa-pen"></span>
                                                 </a>
                                    
                                               </div>
@@ -82,7 +82,9 @@ $(document).ready(function () {
                        "next": "Siguiente",
                        "previous": "Anterior"
                    },
-               }
+                   
+               },
+               scrollX:true
           });
 })
 </script>

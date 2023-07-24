@@ -4,6 +4,7 @@ class Clogin extends CI_Controller {
     function __construct(){
     parent:: __construct();
     $this->load->model('musuario');
+    $this->load->model('mroles');
     }
 
 
@@ -28,10 +29,17 @@ public function clogeo(){
             'idUsuario' => $res->idUsuario,
             'nombre' => $res->nombre,
             'idRol' => $res->idRol,
-            'login' => TRUE
+            'login' => TRUE,
+            'roles' => $this->mroles->obtener($res->idRol)
         );
         echo $this->session->set_userdata($data);
-        redirect(base_url().'cdashboard');
+       // redirect(base_url().'cdashboard',$data);
+        
+       
+        $this->load->view('layouts/header');
+		$this->load->view('layouts/aside',$data);
+		$this->load->view('admin/dashboard');
+		$this->load->view('layouts/footer');
     }
 }
 

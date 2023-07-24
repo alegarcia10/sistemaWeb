@@ -11,11 +11,36 @@
 <script src="<?php echo base_url();?>assets/template/jquery/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="<?php echo base_url();?>assets/template/bootstrap/js/bootstrap.min.js"></script>
+
 <!-- SlimScroll -->
 <script src="<?php echo base_url();?>assets/template/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- dataTable -->
-<script src="<?php echo base_url();?>assets/template/datatables.net-bs/js/jquery.dataTables.min.js"></script>
-<script src="<?php echo base_url();?>assets/template/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+
+
+
+
+<script src="<?php echo base_url();?>assets/template/datatables.net-bs/js/dataTables.responsive.min.js"></script>
+
+
+
+<script src="<?php echo base_url();?>assets/template/DataTables-1.13.3/js/dataTables.fixedColumns.min.js"></script>
+
+
+
+<script src="<?php echo base_url();?>assets/template/JSZip-2.5.0/jszip.min.js"></script>
+<script src="<?php echo base_url();?>assets/template/pdfmake-0.1.36/pdfmake.min.js"></script>
+<script src="<?php echo base_url();?>assets/template/pdfmake-0.1.36/vfs_fonts.js"></script>
+<script src="<?php echo base_url();?>assets/template/DataTables-1.13.3/js/jquery.dataTables.min.js"></script>
+<script src="<?php echo base_url();?>assets/template/DataTables-1.13.3/js/dataTables.bootstrap4.min.js"></script>
+<script src="<?php echo base_url();?>assets/template/Buttons-2.3.5/js/dataTables.buttons.min.js"></script>
+
+<script src="<?php echo base_url();?>assets/template/Buttons-2.3.5/js/buttons.colVis.min.js"></script>
+<script src="<?php echo base_url();?>assets/template/Buttons-2.3.5/js/buttons.html5.min.js"></script>
+<script src="<?php echo base_url();?>assets/template/Buttons-2.3.5/js/buttons.print.min.js"></script>
+
+<script src="<?php echo base_url();?>assets/template/DataTables-1.13.3/js/dataTables.dateTimes.min.js"></script>
+<script src="<?php echo base_url();?>assets/template/DataTables-1.13.3/js/moment.min.js"></script>
+
 <!-- FastClick -->
 <script src="<?php echo base_url();?>assets/template/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
@@ -32,12 +57,12 @@ $('.sidebar-menu').tree()
 </body>
 </html>
 
-<script tyoe="text/javascript">
+<script type="text/javascript">
 
   var base_url= "<?php echo base_url();?>";
 
             $(document).ready(function () {
-                $('#tablaordena').DataTable({
+               $('#tablaordena').DataTable({
                            "language": {
                                "lengthMenu": "Mostrar _MENU_ registros por página",
                                "zeroRecords": "No se encontraron resultados en su busqueda",
@@ -53,6 +78,8 @@ $('.sidebar-menu').tree()
                                    "previous": "Anterior"
                                },
                            },
+                           "bStateSave": true,
+                           scrollX:true,
                            "order": [[ 0, "desc" ]]
                       });
          })
@@ -85,6 +112,7 @@ $('.sidebar-menu').tree()
                     type: "POST",
                     success:function(res){
                       //alert(res);
+                      
                       window.location.href=base_url+res;
                     }
                   });
@@ -253,12 +281,55 @@ $('.sidebar-menu').tree()
               });
          });
 
+//acciones parte confirmacion de agregar
+//AgregarTarea
+
+$(".insertParte").on("click", function(e){
+           e.preventDefault(); // cancela accion de href
+           var ruta =$(this).attr("href");
+           //alert(ruta);
+           id=ruta.substring(ruta.lastIndexOf('/') + 1);
+         
+           swal({
+             title: "Esta por agregar Nueva Tarea",
+             //text: "Orden Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
+             type: "warning",
+             showCancelButton: true,
+             confirmButtonColor: '#d9534f',
+             cancelButtonColor: '#d33',
+             confirmButtonText: "Confirmar",
+             showLoaderOnConfirm: true,
+             cancelButtonText: "Cancelar",
+             closeOnConfirm: false,
+             closeOnCancel: false
+              },
+              function(isConfirm){
+                if (isConfirm) {
+                  $.ajax({
+                    url: ruta,
+                    type: "POST",
+                    success:function(res){
+                      res='mantenimiento/cparteorden/listar/';
+                      window.location.href=base_url+res+id;
+                    }
+                  });
+                }else{
+                  swal({
+                      type: 'error',
+                      title: 'Cancelado',
+                      showConfirmButton: false,
+                      timer: 500
+                    });
+                }
+              });
+         });
 //ACCIONES DE PARTE ***************************************************************************************
 
         $(".deleteParte").on("click", function(e){
            e.preventDefault(); // cancela accion de href
            var ruta =$(this).attr("href");
            //alert(ruta);
+          
            swal({
              title: "Esta por eliminar",
              text: "Tarea Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
@@ -415,6 +486,44 @@ $(".deleteUsuario").on("click", function(e){//
               });
          });
 
+// ACCIONES DE ROLES
+$(".deleteRoles").on("click", function(e){//
+           e.preventDefault(); // cancela accion de href
+           var ruta =$(this).attr("href");
+           //alert(ruta);
+           swal({
+             title: "Esta por eliminar",
+             text: "Rol Nro° " +ruta.substring(this.href.lastIndexOf('/') + 1),
+             type: "warning",
+             showCancelButton: true,
+             confirmButtonColor: '#d9534f',
+             cancelButtonColor: '#d33',
+             confirmButtonText: "Eliminar",
+             showLoaderOnConfirm: true,
+             cancelButtonText: "Cancelar",
+             closeOnConfirm: false,
+             closeOnCancel: false
+              },
+              function(isConfirm){
+                if (isConfirm) {
+                  $.ajax({
+                    url: ruta,
+                    type: "POST",
+                    success:function(res){
+                      //alert(res);
+                      window.location.href=base_url+res;
+                    }
+                  });
+                }else{
+                  swal({
+                      type: 'error',
+                      title: 'Cancelado',
+                      showConfirmButton: false,
+                      timer: 500
+                    });
+                }
+              });
+         });
 //ACCIONES DE TAREA-MATERIAL ***************************************************************************************
 
 

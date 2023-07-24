@@ -22,12 +22,12 @@
                                 <input type="text" id="txtnombre" name="txtnombre" class="form-control" value="<?php echo set_value('txtnombre') ?>"   required>
                             </div>
                             <div class=" col-sm-4 form-group">
-                                <label for="apellido">Email</label>
+                                <label for="apellido">Apellido</label>
                                 <input type="text" id="txtapellido" name="txtapellido" class="form-control" value="<?php echo set_value('txtapellido') ?>"   >
                             </div>
                             <div class="col-sm-4 form-group">
-                                <label for="usuario">Usuario</label>
-                                <input type="text" id="txtusuario" name="txtusuario" class="form-control" value="<?php echo set_value('txtusuario') ?>"  required>
+                                <label for="usuario_select">Privilegios</label>
+                                <? $this->select_items->sin_buscador_priv($usuario_select, '','usuario_select','1', 'required');?>
                             </div>
                             <div class="col-sm-4 form-group">
                                 <label for="Contraseña">Contraseña</label>
@@ -35,7 +35,7 @@
                             </div>
 
                             <div class="col-sm-12 form-group">
-                            <a class="btn btn-success" href="<?php echo base_url();?>mantenimiento/cusuario">Volver</a>
+                            <a class="btn btn-default" href="<?php echo base_url();?>mantenimiento/cusuario">Volver</a>
                                 <button type="submit" class="btn btn-success">Guardar</button>
                             </div>
                         </form>

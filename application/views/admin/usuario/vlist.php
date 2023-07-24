@@ -20,13 +20,15 @@
                 <hr>
                 <div class="row">
                     <div class="col-md-12">
-                        <table id="example1" class="table table-bordered table-hover">
+                    <div class="table-scroll">
+                        <table id="example1" class="table table-bordered table-hover" style="overflow-x: auto; width: 100%;">
                             <thead>
                                 <tr>
-                                    <th>#</th>
+                                   
                                     <th>Nombre </th>
-                                    <th>Apellido</th>
-                                    <th>Usuario</th>
+                                    
+                                    <th>Privilegios</th>
+                                    <th>Operaciones</th>
 
                                 </tr>
                             </thead>
@@ -34,17 +36,17 @@
                                 <?php if(!empty($usuarioindex)):?>
                                 <?php foreach ($usuarioindex as $atributos):?>
                                 <tr>
-                                    <td><?php echo $atributos->idUsuario;?></td>
+                                    
                                     <td><?php echo $atributos->nombre ;?></td>
-                                    <td><?php echo $atributos->apellido ;?></td>
-                                    <td><?php echo $atributos->usuario;?></td>
+                                    
+                                    <td><?php echo $atributos->nombre_tipo ;?></td>
                                     <td>
                                         <div class="btn-group">
                                             <a href="<?php echo base_url();?>mantenimiento/cusuario/cedit/<?php echo $atributos->idUsuario; ?>" class="btn btn-info">
-                                                <span class="fa fa-pencil"></span>
+                                                <span class="fa-solid fa-pen"></span>
                                             </a>
                                             <a href="<?php echo base_url();?>mantenimiento/cusuario/cdelete/<?php echo $atributos->idUsuario; ?>" class="btn btn-danger btn-remove deleteUsuario">
-                                                <span class="fa fa-remove"></span>
+                                                <span class="fa-solid fa-circle-xmark"></span>
                                             </a>
                                         </div>
                                     </td>
@@ -53,6 +55,7 @@
                                 <?php endif ;?>
                             </tbody>
                         </table>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -78,3 +81,5 @@
         </div>
     </div>
 </div>
+
+
