@@ -38,7 +38,7 @@
                         </ul>
                     </li>
                    
-                    <?php if ($roles->estados_trabajo =="1") { ?>
+                    <?php if ($roles->estados_trabajo =="1" || $roles->equipos =="1") { ?>
                     <li class="treeview">
                         <a href="#">
                         
@@ -48,9 +48,12 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                        
+                        <?php if ($roles->estados_trabajo =="1") { ?>
                             <li><a href="<?php echo base_url(); ?>mantenimiento/ctrabajos"><i class="fa-solid fa-chart-line"></i> Estados de Trabajo</a></li>
-                        
+                            <?php } ?>
+                        <?php if ($roles->equipos =="1") { ?>
+                            <li><a href="<?php echo base_url(); ?>mantenimiento/cequipos"><i class="fa-solid fa-chart-line"></i> Recepción equipos</a></li>
+                            <?php } ?>
                         </ul>
                         </li>
                     <?php } ?>
