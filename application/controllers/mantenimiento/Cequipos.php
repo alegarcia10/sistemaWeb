@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Ccliente extends CI_Controller {
+class Cequipos extends CI_Controller {
     function __construct(){
     parent:: __construct();
     if(!$this->session->userdata('login')){
