@@ -17,7 +17,7 @@
                                 </div>
                             <?php endif; ?>
                             <div class="col-md-12" style="padding-left:0">
-                                <h3>Buscar por Fechaaa</h3>
+                                <h3>Buscar por Fecha</h3>
                             </div>
 
                             <div class="col-md-12" style="padding-left:0">
