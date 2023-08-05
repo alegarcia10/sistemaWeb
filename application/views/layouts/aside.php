@@ -46,17 +46,17 @@
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
+                            <?php } ?>
                         </a>
                         <ul class="treeview-menu">
                         <?php if ($roles->estados_trabajo =="1") { ?>
                             <li><a href="<?php echo base_url(); ?>mantenimiento/ctrabajos"><i class="fa-solid fa-chart-line"></i> Estados de Trabajo</a></li>
                             <?php } ?>
                         <?php if ($roles->equipos =="1") { ?>
-                            <li><a href="<?php echo base_url(); ?>mantenimiento/Cequipos"><i class="fa-solid fa-chart-line"></i> Recepción equipos</a></li>
+                            <li><a href="<?php echo base_url(); ?>mantenimiento/cequipos"><i class="fa-solid fa-chart-line"></i> Recepción equipos</a></li>
                             <?php } ?>
                         </ul>
-                        </li>
-                    <?php } ?>
+                    </li>
 
                     <?php if ($roles->usuarios =="1" || $roles->roles =="1") { ?>
                     <li class="treeview">
