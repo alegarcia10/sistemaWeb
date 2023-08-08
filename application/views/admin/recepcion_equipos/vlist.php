@@ -29,7 +29,7 @@
                                   <th>Fecha</th>
                                   <th>Cliente</th>
                                   <th>Descripcion</th>
-                                  <th>Operaciones</th>
+                                  <th width="5%">Operaciones</th>
                               </tr>
                           </thead>
                           <tbody>
