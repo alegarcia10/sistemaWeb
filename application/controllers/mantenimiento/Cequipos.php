@@ -64,6 +64,7 @@ public function cinsert(){
                    'num_serie' => $num_serie,
                    'sector' => $sector,
                    'descripcion' => $descripcion,
+                   'id_cliente' => $id_cliente,
                    'anulado' => '0'
                );
                $res=$this->mequipos->minsertequipos($data);
