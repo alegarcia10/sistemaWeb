@@ -6,7 +6,7 @@ class Mequipos extends CI_Model{
     public function mselectequipos(){
         $resultado =	$query = $this->db->query("SELECT r.num_orden , r.fecha ,r.marca, r.modelo,
         r.num_serie, r.sector, r.descripcion, r.id_cliente, r.anulado, c.Nombre FROM recepcionequipos r
-        JOIN cliente c ON r.idcliente = c.IdCliente  
+        JOIN cliente c ON r.id_cliente = c.IdCliente  
         where r.anulado=0 
         ORDER BY r.num_orden DESC;");
      return $resultado->result();
