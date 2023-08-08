@@ -9,6 +9,7 @@ class Cequipos extends CI_Controller {
     }
     $idrol = $this->session->userdata("idRol");
     $this->load->model('mcliente');
+    $this->load->model('mequipos');
     $this->load->model('mroles');
     $this->load->model('mcombo');
     //var_dump($nombre);
@@ -18,7 +19,7 @@ class Cequipos extends CI_Controller {
 public function index(){
     $idrol = $this->session->userdata("idRol");
     $data = array (
-        'clienteindex' => $this->mcliente->mselectcliente(),
+        'equipoindex' => $this->mequipos->mselectequipos(),
         'roles'=> $this->mroles->obtener($idrol)
     );
     //$roles=$this->mroles->obtener($idRol);
@@ -38,7 +39,7 @@ public function cadd(){
     
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside',$data);
-    $this->load->view('admin/cliente/vadd');
+    $this->load->view('admin/recepcion_equipos/vadd');
     $this->load->view('layouts/footer');
 }
 
@@ -138,9 +139,9 @@ public function cdelete($id){
     $data=array(
         'Anulado' => '1'
     );
-    $this->mcliente->mupdatecliente($id, $data);
+    $this->mequipos->mupdateequipos($id, $data);
     //redirect(base_url().'mantenimiento/ccliente');
-    echo "mantenimiento/ccliente";
+    echo "mantenimiento/cequipos";
 }
 
 

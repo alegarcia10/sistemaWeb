@@ -1,8 +1,8 @@
 <div class="content-wrapper">
     <section class="content-header">
         <h1>
-            Clientes
-            <small>Listado de Clientes</small>
+            Orden de Recepción de equipos
+            <small>Listado</small>
         </h1>
     </section>
     <section class="content">
@@ -22,26 +22,24 @@
                 <div class="row">
                     <div class="col-md-12">
                       <br>
-                        <table id="tablacliente" class="table table-bordered table-hover order-table1">
+                        <table id="tablaequipos" class="table table-bordered table-hover order-table1">
                           <thead>
                               <tr>
-                                  <th>#</th>
-                                  <th>CUIT</th>
-                                  <th>Nombre</th>
-                                  <th>Domicilio</th>
-                                  <th>Provincia</th>
+                                  <th>Orden N°</th>
+                                  <th>Fecha</th>
+                                  <th>Cliente</th>
+                                  <th>Descripcion</th>
                                   <th width="5%">Operaciones</th>
                               </tr>
                           </thead>
                           <tbody>
-                              <?php if (!empty($clienteindex)) : ?>
-                                  <?php foreach ($clienteindex as $atributos) :?>
+                              <?php if (!empty($equipoindex)) : ?>
+                                  <?php foreach ($equipoindex as $atributos) :?>
                                       <tr>
-                                          <td ><?php echo $atributos->IdCliente; ?></td>
-                                          <td ><?php echo $atributos->DniCuit; ?></td>
+                                          <td ><?php echo $atributos->num_orden; ?></td>
+                                          <td ><?php echo $atributos->fecha; ?></td>
                                           <td ><?php echo $atributos->Nombre; ?></td>
-                                          <td ><?php echo $atributos->Domicilio; ?></td>
-                                          <td ><?php echo $atributos->Provincia; ?></td>
+                                          <td ><?php echo $atributos->descripcion; ?></td>
                                           <td  >
                                               <div class="btn-group">
                                                 <a href="<?php echo base_url(); ?>mantenimiento/ccliente/cedit/<?php echo $atributos->IdCliente; ?>" class="btn btn-info" title="Modificar">
@@ -67,7 +65,7 @@
 
 
 $(document).ready(function () {
-    $('#tablacliente').DataTable({
+    $('#tablaequipos').DataTable({
                "language": {
                    "lengthMenu": "Mostrar _MENU_ registros por página",
                    "zeroRecords": "No se encontraron resultados en su búsqueda",
