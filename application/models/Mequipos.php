@@ -36,5 +36,19 @@ class Mequipos extends CI_Model{
         $resultado =$this->db->get('cliente');
         return $resultado->row();
     }
+
+    public function cliente_listar_select(){//
+        $query=$this->db->query("SELECT DISTINCT cliente.IdCliente  ID ,cliente.Nombre as NOMBRE
+                                FROM cliente WHERE cliente.Anulado = 0
+                                ORDER BY cliente.Nombre ASC " );
+      return $query->result();
+      }
+
+      public function cliente_listar_select2(){//
+        $query=$this->db->query("SELECT DISTINCT cliente.IdCliente  IdCliente ,cliente.Nombre as NOMBRE
+                                FROM cliente WHERE cliente.Anulado = 0
+                                ORDER BY cliente.Nombre ASC " );
+      return $query->result();
+      }
 }
 ?>

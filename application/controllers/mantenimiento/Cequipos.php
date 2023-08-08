@@ -33,13 +33,14 @@ public function index(){
 
 public function cadd(){
     $idrol = $this->session->userdata("idRol");
-    $data = array (
+    $data['tipo_cliente_select'] = $this->mequipos->cliente_listar_select();
+    $datos = array (
         'roles'=>$this->mroles->obtener($idrol)
     );
     
     $this->load->view('layouts/header');
-    $this->load->view('layouts/aside',$data);
-    $this->load->view('admin/recepcion_equipos/vadd');
+    $this->load->view('layouts/aside',$datos);
+    $this->load->view('admin/recepcion_equipos/vadd',$data);
     $this->load->view('layouts/footer');
 }
 
@@ -47,37 +48,33 @@ public function cadd(){
 public function cinsert(){
 
     
-     $nombre = $this->input->post('txtnombre');
-     $cuit = $this->input->post('txtcuit');
-     $prov = $this->input->post('txtprovincia');
-     $domicilio = $this->input->post('txtdomicilio');
+     $fecha = $this->input->post('txtfecha');
+     $id_cliente=$this->input->post("tipo_cliente");
+     $marca = $this->input->post('txtmarca');
+     $modelo = $this->input->post('txtmodelo');
+     $num_serie = $this->input->post('txtserie');
+     $sector = $this->input->post('txtsector');
+     $descripcion = $this->input->post('txtdescripcion');
 
-     $cli = $this->mcliente->obtenerclientedni($cuit);
-
-     if($cli==null){
                $data = array(
 
-                   'Nombre' => $nombre,
-                   'DniCuit' => $cuit,
-                   'Provincia' => $prov,
-                   'Domicilio' => $domicilio,
-                   'Anulado' => '0'
+                   'fecha' => $fecha,
+                   'marca' => $marca,
+                   'modelo' => $modelo,
+                   'num_serie' => $num_serie,
+                   'sector' => $sector,
+                   'descripcion' => $descripcion,
+                   'anulado' => '0'
                );
-               $res=$this->mcliente->minsertcliente($data);
+               $res=$this->mequipos->minsertequipos($data);
 
                if($res){
                    $this->session->set_flashdata('correcto', 'Se guardo Correctamente');
-                   redirect(base_url().'mantenimiento/ccliente');
+                   redirect(base_url().'mantenimiento/cequipos');
                }else{
                    $this->session->set_flashdata('error', 'No se Guardo registro');
-                   redirect(base_url().'mantenimiento/ccliente/cadd');
+                   redirect(base_url().'mantenimiento/cequipos/cadd');
                }
-     }else{
-       //REGLA DE VALIDACION
-       $this->session->set_flashdata('error', 'Este Dni/Cuit ya esta registrado ');
-       redirect(base_url().'mantenimiento/ccliente/cadd');
-     }
-
 
 
 }
