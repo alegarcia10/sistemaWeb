@@ -42,8 +42,14 @@
                                           <td ><?php echo $atributos->descripcion; ?></td>
                                           <td  >
                                               <div class="btn-group">
+                                              <a href="<?php echo base_url(); ?>mantenimiento/cequipos/ver/<?php echo $atributos->num_orden; ?>" class="btn btn-warning" title="Ver">
+                                                      <span class="fa fa-eye"></span>
+                                                  </a>
                                                 <a href="<?php echo base_url(); ?>mantenimiento/cequipos/cedit/<?php echo $atributos->num_orden; ?>" class="btn btn-info" title="Modificar">
                                                     <span class="fa-solid fa-pen"></span>
+                                                </a>
+                                                <a href="<?php echo base_url(); ?>mantenimiento/cequipos/cdelete/<?php echo $atributos->num_orden; ?>" class="btn btn-danger btn-remove deleteEquipos" title="Eliminar">
+                                                    <span class="fa-solid fa-circle-xmark"></span>
                                                 </a>
                                    
                                               </div>

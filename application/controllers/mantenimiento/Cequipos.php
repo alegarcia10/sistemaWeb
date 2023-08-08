@@ -84,58 +84,58 @@ public function cinsert(){
 public function cedit($id){
     $idrol = $this->session->userdata("idRol");
     $data = array(
-        'clienteedit' => $this->mcliente->midupdatecliente($id),
+        'equiposedit' => $this->mequipos->midupdatecliente($id),
         'roles'=>$this->mroles->obtener($idrol)
     );
+    $data['cliente_select'] = $this->mequipos->cliente_listar_select2();
     //$roles=$this->mroles->obtener($idRol);
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside',$data);
-    $this->load->view('admin/cliente/vedit', $data);
+    $this->load->view('admin/recepcion_equipos/vedit', $data);
     $this->load->view('layouts/footer');
 }
 
 public function cupdate(){
 
-     $idcliente = $this->input->post('txtidcliente');
-     $nombre = $this->input->post('txtnombre');
-     $cuitold = $this->input->post('txtcuitold'); 
-     $cuit = $this->input->post('txtcuitnew');
-     $prov = $this->input->post('txtprovincia');
-     $domicilio = $this->input->post('txtdomicilio');
+    $fecha = $this->input->post('txtfecha');
+    $cliente = mb_strtoupper($this->input->post("cliente"));
+    $marca = $this->input->post('txtmarca');
+    $modelo = $this->input->post('txtmodelo');
+    $num_serie = $this->input->post('txtserie');
+    $sector = $this->input->post('txtsector');
+    $descripcion = $this->input->post('txtdescripcion');
 
-     $cli = $this->mcliente->obtenerclientedni($cuit);
+    
 
-     if(($cli==null) or ($cuitold==$cuit)){
+    
 
                $data = array(
 
-                   'Nombre' => $nombre,
-                   'DniCuit' => $cuit,
-                   'Provincia' => $prov,
-                   'Domicilio' => $domicilio
+                'fecha' => $fecha,
+                'marca' => $marca,
+                'modelo' => $modelo,
+                'num_serie' => $num_serie,
+                'sector' => $sector,
+                'descripcion' => $descripcion,
+                'id_cliente' => $cliente,
+                'anulado' => '0'
                );
 
-                  $res = $this->mcliente->mupdatecliente($idcliente, $data);
+                  $res = $this->mequipos->mupdateequipos($id, $data);
                   if($res){
                       $this->session->set_flashdata('correcto', 'Se Guardo Correctamente');
-                      redirect(base_url().'mantenimiento/ccliente');
+                      redirect(base_url().'mantenimiento/cequipos');
                   }else {
                       $this->session->set_flashdata('error', 'No se pudo actualizar la cliente');
-                      redirect(base_url().'mantenimiento/ccliente/cedit/'.$idcliente);
+                      redirect(base_url().'mantenimiento/cequipos/cedit/');
                   }
-     }else{
-       //REGLA DE VALIDACION
-       $this->session->set_flashdata('error', 'Este Dni/Cuit ya esta registrado ');
-       redirect(base_url().'mantenimiento/ccliente/cadd');
-     }
-
 
 }
 
 public function cdelete($id){
 
     $data=array(
-        'Anulado' => '1'
+        'anulado' => '1'
     );
     $this->mequipos->mupdateequipos($id, $data);
     //redirect(base_url().'mantenimiento/ccliente');
