@@ -28,9 +28,9 @@ class Mfactura extends CI_Model{
      }
  
      //MODIFICAR factura
-     public function mupdatefact($data){
+     public function mupdatefact($id, $data){
  
-         
+         $this->db->where('N_factura', $id);
          return $this->db->update('factura', $data);
       }
 

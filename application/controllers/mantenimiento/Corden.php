@@ -211,7 +211,7 @@ public function cupdatefact(){
           if($res==null && ($fac==null)){
                 $res = $this->mfactura->minsertfactura($data);
           }else{
-                $res = $this->mfactura->mupdatefact($data);
+                $res = $this->mfactura->mupdatefact($id, $data);
           }
                 if($res){
                     $this->session->set_flashdata('correcto', 'Se Guardo Correctamente');
