@@ -199,9 +199,8 @@ public function cupdatefact(){
   
     $res=$this->mfactura->midupdatefact($nfact);
     $fac=$this->mfactura->mbuscaordenfactura($idorden);
-    if(($fac==null) or ($fac!=$id)){
-       if(($res==null) or ($nfact==$id)){
-          
+    
+      
           $data = array(
               'N_factura' => $nfact,
               'fecha_factura' => $ffact,
@@ -222,17 +221,6 @@ public function cupdatefact(){
                     redirect(base_url().'mantenimiento/corden/cedit/'.$idorden);
                 }
   
-       }else{
-  
-          //REGLA DE VALIDACION
-          $this->session->set_flashdata('error', 'N° de Factura registrado');
-          redirect(base_url().'mantenimiento/corden/cedit/'.$idorden);
-       }
-    }else{
-        $this->session->set_flashdata('error', 'La orden ' .$idorden. ' tiene factura asociada');
-        redirect(base_url().'mantenimiento/corden/cedit/'.$idorden);
-      
-    }
 }
   
 
