@@ -135,7 +135,7 @@ public function cupdate(){
 
 public function print($id){
     $idrol = $this->session->userdata("idRol");
-    $datas = array (
+    $data = array (
         'equiposindex' => $this->mequipos->midupdateequipos($id),
         'roles'=> $this->mroles->obtener($idrol)
     );
@@ -143,8 +143,8 @@ public function print($id){
     var_dump($data);
     //$roles=$this->mroles->obtener($idRol);
     $this->load->view('layouts/header');
-    $this->load->view('layouts/aside',$datas);
-    $this->load->view('admin/recepcion_equipos/vprint', $datas);
+    $this->load->view('layouts/aside',$data);
+    $this->load->view('admin/recepcion_equipos/vprint', $data);
     $this->load->view('layouts/footer');
 }
 
