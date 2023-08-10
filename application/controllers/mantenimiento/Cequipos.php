@@ -133,7 +133,7 @@ public function cupdate(){
 
 }
 
-public function print(){
+public function print($id){
     $idrol = $this->session->userdata("idRol");
     $data = array (
         'equiposindex' => $this->mequipos->midupdateequipos($id),
