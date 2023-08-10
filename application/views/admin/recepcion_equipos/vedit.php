@@ -20,7 +20,7 @@
                         <input type="hidden" value="<?php echo $equiposedit->num_orden ?>" name="txtnumorden" id="txtnumorden"> 
                         <div class="col-sm-2 form-group">
                                   <label for="fecha">Fecha</label>
-                                  <input type="date" id="txtfecha" name="txtfecha" min="1"  class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo !empty(form_error('txtfecha'))? set_value('txtfecha') :  date("d-m-Y", strtotime("$equiposedit->fecha"));?>" >
+                                  <input type="text" id="txtfecha" name="txtfecha" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo !empty(form_error('txtfecha'))? set_value('txtfecha') :  date("d-m-Y", strtotime("$equiposedit->fecha"));?>" >
                                 </div>
                                 <div class="col-md-5 form-group">
                               <label for="cliente">Cliente&nbsp;&nbsp; (*)</label>
