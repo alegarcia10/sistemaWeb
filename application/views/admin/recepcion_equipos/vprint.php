@@ -38,8 +38,8 @@
                                 <div class="customer">
                                     <h2>Datos del Cliente</h2>
                                     <p>Cliente: <?php echo $model->Nombre; ?></p>
-                                    <p>Domicilio: <?php echo $equiposindex->Domicilio." ".$equiposindex->Localidad." ".$equiposindex->Provincia; ?></p>
-                                    <p>Teléfono: <?php echo $equiposindex->Telefono1; ?></p>
+                                    <p>Domicilio: <?php echo $model->Domicilio." ".$model->Localidad." ".$model->Provincia; ?></p>
+                                    <p>Teléfono: <?php echo $model->Telefono1; ?></p>
                                     <p>Correo Electrónico: </p>
                                 </div>
                                 <div class="equipment">
