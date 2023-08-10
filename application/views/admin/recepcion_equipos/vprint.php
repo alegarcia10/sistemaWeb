@@ -3,7 +3,7 @@
         <div class="col-md-6">
         <h1>
             Orden de Recepción de equipos
-            
+
         </h1>
                                        
         </div>
@@ -31,7 +31,7 @@
                                     <div class="invoice-data">
                                         <h2>ORDEN RECEPCIÓN N°</h2>
                                             <h3><?php echo $equiposindex->num_orden; ?></h3>
-                                            <h3>Fecha: <?php echo date("d/m/Y", strtotime("$equiposindex->fecha;")); ?></h3>
+                                            <h3>Fecha: <?php echo date("d/m/Y", strtotime("$equiposindex->fecha")); ?></h3>
                                     </div>
                                 </div>
                             <div class="customer-equipment">
