@@ -47,7 +47,7 @@
                                 </div>
                                 <div class="col-sm-6 form-group">
                                     <label for="descripcion">Descripción</label>
-                                    <input type="text" id="txtdescripcion" name="txtdescripcion" maxlength="950"class="form-control" value="<?php echo set_value('txtdescripcion') ?>"  >
+                                    <input type="text" id="txtdescripcion" name="txtdescripcion" maxlength="950"class="form-control" value="<?php echo !empty(form_error('txtdescripcion'))? set_value('txtdescripcion') : $equiposedit->descripcion ?>">
                                 </div>
                             <div class="col-sm-6 form-group">
                                 <a class="btn btn-success" href="<?php echo base_url();?>mantenimiento/cequipos">Volver</a>

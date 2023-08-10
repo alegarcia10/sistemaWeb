@@ -11,65 +11,64 @@
                 <div class="row" id="datos">
                     <div class="col-md-12">
                         <div class="invoice">
-                            <div class="header">
-                            <div class="logo">
-                                <img src="1200x600.jpg" width="150">
+                                <div class="header">
+                                    <div class="logo">
+                                        <img src="1200x600.jpg" width="150">
+                                    </div>
+                                    <div class="info">
+                                        <p>Elecctrónica BIOS</p>
+                                        <p>Cereseto Oeste 156</p>
+                                        <p>Capital San Juan</p>
+                                        <p>Teléfono: 264-4275852</p>
+                                        <p>Correo Electrónico: electronicabios@gmail.com</p>
+                                    </div>
+                                 </div>
+                                <div class="divider"></div>
+                                    <div class="invoice-data">
+                                        <h2>ORDEN RECEPCIÓN N°</h2>
+                                            <p><?php echo $equiposindex->num_orden; ?></p>
+                                            <p>Fecha: <?php echo $equiposindex->fecha; ?></p>
+                                    </div>
+                                </div>
+                            <div class="customer-equipment">
+                                <div class="customer">
+                                    <h2>Datos del Cliente</h2>
+                                    <p>Cliente: Juan Pérez</p>
+                                    <p>Domicilio: Calle 123, Ciudad</p>
+                                    <p>Teléfono: XXX-XXX-XXXX</p>
+                                    <p>Correo Electrónico: juan@example.com</p>
+                                </div>
+                                <div class="equipment">
+                                    <h2>Datos del equipo</h2>
+                                    <p>Marca: </p>
+                                    <p>Modelo: </p>
+                                    <p>N° de Serie: </p>
+                                    <p>Sector: </p>
+                                </div>
                             </div>
-                            <div class="info">
-                                <p>Elecctrónica BIOS</p>
-                                <p>Cereseto Oeste 156</p>
-                                <p>Capital San Juan</p>
-                                <p>Teléfono: 264-4275852</p>
-                                <p>Correo Electrónico: electronicabios@gmail.com</p>
+                            <div class="description">
+                                <h2>Descripción de Avería:</h2>
+                                <div class="lines">
+                                <p>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</p>
+                                <p>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</p>
+                                <p>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</p>
+                                </div>
                             </div>
-                            </div>
-                            <div class="divider"></div>
-                            <div class="invoice-data">
-                            <h2>ORDEN RECEPCIÓN N°</h2>
-                            <p><?php echo $equiposindex->num_orden; ?></p>
-                            <p>Fecha: <?php echo $equiposindex->fecha; ?></p>
-                            </div>
-                        </div>
-                        <div class="customer-equipment">
-                            <div class="customer">
-                            <h2>Datos del Cliente</h2>
-                            <p>Cliente: Juan Pérez</p>
-                            <p>Domicilio: Calle 123, Ciudad</p>
-                            <p>Teléfono: XXX-XXX-XXXX</p>
-                            <p>Correo Electrónico: juan@example.com</p>
-                            </div>
-                            <div class="equipment">
-                            <h2>Datos del equipo</h2>
-                            <p>Marca: </p>
-                            <p>Modelo: </p>
-                            <p>N° de Serie: </p>
-                            <p>Sector: </p>
-                            </div>
-                        </div>
-                        <div class="description">
-                            <h2>Descripción de Avería:</h2>
-                            <div class="lines">
-                            <p>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</p>
-                            <p>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</p>
-                            <p>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</p>
-                            </div>
-                        </div>
-                        <div class="signatures">
-                        <div class="signature">
-                            <h2>Firma Cliente</h2>
-                            <p>________________________</p>
-                        </div>
+                            <div class="signatures">
                             <div class="signature">
-                                <h2>Firma Técnico</h2>
+                                <h2>Firma Cliente</h2>
                                 <p>________________________</p>
-                            </div>
-                    </div>
-                        <h1 id="H1A">DETALLES ORDEN N° <?php echo $equiposindex->num_orden; ?> </h1>
+                                </div>
+                                <div class="signature">
+                                    <h2>Firma Técnico</h2>
+                                    <p>________________________</p>
+                                </div>
+                         </div>
+    
                     </div>
                     
                     
                 </div>
-                <hr>
 
             </div>    
         </div>
