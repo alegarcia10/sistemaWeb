@@ -50,5 +50,12 @@ class Mequipos extends CI_Model{
                                 ORDER BY cliente.Nombre ASC " );
       return $query->result();
       }
+
+      function obtener($id){//
+        $this->db->where("id_cliente",$id);
+        $query = $this->db->get('cliente');
+        return $query->row();
+        $error = $this->db->error();
+    }
 }
 ?>

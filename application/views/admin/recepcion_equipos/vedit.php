@@ -17,7 +17,7 @@
                         </div>
                         <?php endif ; ?>
                         <form action="<?php echo base_url();?>mantenimiento/cequipos/cupdate" method="POST">
-                            
+                        <input type="hidden" value="<?php echo $equiposedit->num_orden ?>" name="txtnumorden" id="txtnumorden"> 
                         <div class="col-sm-2 form-group">
                                   <label for="fecha">Fecha</label>
                                   <input type="date" id="txtfecha" name="txtfecha" min="1"  class="form-control" value="<?php echo set_value('txtfecha') ?>" required >
