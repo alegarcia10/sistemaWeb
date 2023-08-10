@@ -37,9 +37,9 @@
                             <div class="customer-equipment">
                                 <div class="customer">
                                     <h2>Datos del Cliente</h2>
-                                    <p>Cliente: </p>
-                                    <p>Domicilio: </p>
-                                    <p>Teléfono: </p>
+                                    <p>Cliente: <?php echo $equiposindex->Nombre; ?></p>
+                                    <p>Domicilio: <?php echo $equiposindex->Domicilio." ".$equiposindex->Localidad." ".$equiposindex->Provincia; ?></p>
+                                    <p>Teléfono: <?php echo $equiposindex->Telefono1; ?></p>
                                     <p>Correo Electrónico: </p>
                                 </div>
                                 <div class="equipment">
