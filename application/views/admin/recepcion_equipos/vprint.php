@@ -15,8 +15,8 @@
                         <div class="invoice">
                                 <div class="header">
                                     <div class="logo">
-                                    <link href="<?php echo base_url();?>assets/template/dist/img/1200x600.jpg">
-                                        <img src="1200x600.jpg" width="150">
+                                    <span class="logo-mini"><img src="<?php echo base_url()?>assets/template/dist/img/1200x600.jpg" id="imgSmall" width="150"></span>
+                                        
                                     </div>
                                     <div class="info">
                                         <p>Elecctrónica BIOS</p>
