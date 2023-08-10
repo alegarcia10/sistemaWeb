@@ -3,6 +3,7 @@
         <div class="col-md-6">
         <h1>
             Orden de Recepción de equipos
+            
         </h1>
                                        
         </div>
