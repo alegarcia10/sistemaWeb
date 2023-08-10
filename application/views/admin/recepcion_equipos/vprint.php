@@ -49,7 +49,7 @@
                             <div class="description">
                                 <h2>Descripción de Avería:</h2>
                                 <div class="lines">
-                                <p><?php echo $equiposindex->descripción; ?></p>
+                                <p><?php echo $equiposindex->descripcion; ?></p>
                                 
                                 </div>
                             </div>
