@@ -15,7 +15,7 @@
                         <div class="invoice">
                                 <div class="header">
                                     <div class="logo">
-                                    <span class="logo-mini"><img src="<?php echo base_url()?>assets/template/dist/img/1200x600.jpg" id="imgSmall"></span>
+                                    <img src="<?php echo base_url()?>assets/template/dist/img/1200x600.jpg">
                                         
                                     </div>
                                     <div class="info">
