@@ -132,6 +132,19 @@ public function cupdate(){
 
 }
 
+public function print(){
+    $idrol = $this->session->userdata("idRol");
+    $data = array (
+        'equipoindex' => $this->mequipos->mselectequipos(),
+        'roles'=> $this->mroles->obtener($idrol)
+    );
+    //$roles=$this->mroles->obtener($idRol);
+    $this->load->view('layouts/header');
+    $this->load->view('layouts/aside',$data);
+    $this->load->view('admin/recepcion_equipos/vprint', $data);
+    $this->load->view('layouts/footer');
+}
+
 public function cdelete($id){
 
     $data=array(
