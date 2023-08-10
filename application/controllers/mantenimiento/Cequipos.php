@@ -140,7 +140,6 @@ public function print($id){
         'roles'=> $this->mroles->obtener($idrol)
     );
     $data['model'] = $this->mequipos->obtener($data['equiposindex']->id_cliente);
-    var_dump($data);
     //$roles=$this->mroles->obtener($idRol);
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside',$data);
