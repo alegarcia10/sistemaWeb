@@ -42,7 +42,7 @@
                                           <td ><?php echo $atributos->descripcion; ?></td>
                                           <td  >
                                               <div class="btn-group">
-                                              <a href="<?php echo base_url(); ?>mantenimiento/cequipos/ver/<?php echo $atributos->num_orden; ?>" class="btn btn-warning" title="Ver">
+                                              <a href="<?php echo base_url(); ?>mantenimiento/cequipos/print/<?php echo $atributos->num_orden; ?>" class="btn btn-warning" title="Ver">
                                                       <span class="fa fa-eye"></span>
                                                   </a>
                                                 <a href="<?php echo base_url(); ?>mantenimiento/cequipos/cedit/<?php echo $atributos->num_orden; ?>" class="btn btn-info" title="Modificar">
