@@ -40,18 +40,17 @@
                                 </div>
                                 <div class="equipment">
                                     <h2>Datos del equipo</h2>
-                                    <p>Marca: </p>
-                                    <p>Modelo: </p>
-                                    <p>N° de Serie: </p>
-                                    <p>Sector: </p>
+                                    <p>Marca: <?php echo $equiposindex->marca; ?> </p>
+                                    <p>Modelo: <?php echo $equiposindex->modelo; ?></p>
+                                    <p>N° de Serie: <?php echo $equiposindex->num_serie; ?></p>
+                                    <p>Sector: <?php echo $equiposindex->sector; ?></p>
                                 </div>
                             </div>
                             <div class="description">
                                 <h2>Descripción de Avería:</h2>
                                 <div class="lines">
-                                <p>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</p>
-                                <p>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</p>
-                                <p>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</p>
+                                <p><?php echo $equiposindex->descripción; ?></p>
+                                
                                 </div>
                             </div>
                             <div class="signatures">
