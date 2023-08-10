@@ -52,7 +52,7 @@ class Mequipos extends CI_Model{
       }
 
       function obtener($id){//
-        $this->db->where("id_cliente",$id);
+        $this->db->where("IdCliente",$id);
         $query = $this->db->get('cliente');
         return $query->row();
         $error = $this->db->error();
