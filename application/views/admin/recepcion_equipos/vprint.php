@@ -37,10 +37,10 @@
                             <div class="customer-equipment">
                                 <div class="customer">
                                     <h2>Datos del Cliente</h2>
-                                    <p>Cliente: Juan Pérez</p>
-                                    <p>Domicilio: Calle 123, Ciudad</p>
-                                    <p>Teléfono: XXX-XXX-XXXX</p>
-                                    <p>Correo Electrónico: juan@example.com</p>
+                                    <p>Cliente: </p>
+                                    <p>Domicilio: </p>
+                                    <p>Teléfono: </p>
+                                    <p>Correo Electrónico: </p>
                                 </div>
                                 <div class="equipment">
                                     <h2>Datos del equipo</h2>
@@ -102,6 +102,9 @@
   }
   .info {
     font-size: 14px;
+  }
+  .info p {
+    margin-bottom: 1px;
   }
   .divider {
     border-left: 1px solid #ccc;
