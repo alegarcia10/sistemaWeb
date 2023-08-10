@@ -84,7 +84,7 @@ public function cinsert(){
 public function cedit($id){
     $idrol = $this->session->userdata("idRol");
     $data = array(
-        'equiposedit' => $this->mequipos->miupdateequipos($id),
+        'equiposedit' => $this->mequipos->midupdateequipos($id),
         'roles'=>$this->mroles->obtener($idrol)
     );
     $data['cliente_select'] = $this->mequipos->cliente_listar_select2();
