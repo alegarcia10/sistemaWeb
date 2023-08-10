@@ -16,17 +16,18 @@
                                 <img src="1200x600.jpg" width="150">
                             </div>
                             <div class="info">
-                                <p>Nombre de la Empresa</p>
-                                <p>Dirección de la Empresa</p>
-                                <p>Teléfono: XXX-XXX-XXXX</p>
-                                <p>Correo Electrónico: info@empresa.com</p>
+                                <p>Elecctrónica BIOS</p>
+                                <p>Cereseto Oeste 156</p>
+                                <p>Capital San Juan</p>
+                                <p>Teléfono: 264-4275852</p>
+                                <p>Correo Electrónico: electronicabios@gmail.com</p>
                             </div>
                             </div>
                             <div class="divider"></div>
                             <div class="invoice-data">
                             <h2>ORDEN RECEPCIÓN N°</h2>
-                            <p>12345</p>
-                            <p>Fecha: 08 de Agosto de 2023</p>
+                            <p><?php echo $equiposindex->num_orden; ?></p>
+                            <p>Fecha: <?php echo $equiposindex->fecha; ?></p>
                             </div>
                         </div>
                         <div class="customer-equipment">
@@ -63,7 +64,7 @@
                                 <p>________________________</p>
                             </div>
                     </div>
-                        <h1 id="H1A">DETALLES ORDEN N° <?php echo $ordenindex->IdOrden; ?> </h1>
+                        <h1 id="H1A">DETALLES ORDEN N° <?php echo $equiposindex->num_orden; ?> </h1>
                     </div>
                     
                     

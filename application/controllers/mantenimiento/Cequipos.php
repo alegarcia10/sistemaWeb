@@ -135,7 +135,7 @@ public function cupdate(){
 public function print(){
     $idrol = $this->session->userdata("idRol");
     $data = array (
-        'equipoindex' => $this->mequipos->mselectequipos(),
+        'equiposindex' => $this->mequipos->mselectequipos(),
         'roles'=> $this->mroles->obtener($idrol)
     );
     //$roles=$this->mroles->obtener($idRol);
