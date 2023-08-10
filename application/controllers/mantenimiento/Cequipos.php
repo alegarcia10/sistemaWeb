@@ -88,7 +88,7 @@ public function cedit($id){
         'roles'=>$this->mroles->obtener($idrol)
     );
     $data['cliente_select'] = $this->mequipos->cliente_listar_select2();
-    $data['model'] = $this->mequipos->obtener($data['equiposedit']->IdCliente);
+    $data['model'] = $this->mequipos->obtener($data['equiposedit']->id_cliente);
     //$roles=$this->mroles->obtener($idRol);
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside',$data);
