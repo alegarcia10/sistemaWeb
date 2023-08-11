@@ -9,7 +9,7 @@
         </div>
     </section>
     <section class="content" id="cuerpo">
-        <div class="box box-solid">
+        <div class="box box-solid" style="margin-top: 10px;">
             <div class="box-body">
                 <div class="row" id="datos">
                     <div class="col-md-12">
