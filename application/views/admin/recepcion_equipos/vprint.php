@@ -15,7 +15,7 @@
                     <div class="col-md-12">
                     <div class="col-sm-5 form-group" id="botones">
                                 <a class="btn btn-info" href="<?php echo base_url();?>mantenimiento/cequipos">Volver</a>
-                                <button id="printButton" class="btn btn-success">Imprimir Orden</button>
+                                <button id="printButton" class="btn btn-success">Imprimir</button>
                             </div>
                     
                     <div class="invoice">
@@ -148,7 +148,7 @@
   .customer-equipment {
     justify-content: space-between;
     margin-top: -106px;
-    margin-bottom: -119px;
+    margin-bottom: -115px;
   }
   .customer, .equipment {
     flex-basis: calc(50% - 5px);
@@ -160,7 +160,7 @@
   .description {
     
     padding: 5px;
-    margin-top: -117px;
+    margin-top: -114px;
   }
   .description h3 {
     margin-top: 0;
