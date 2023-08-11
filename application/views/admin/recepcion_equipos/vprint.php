@@ -115,6 +115,11 @@
     display: flex;
     align-items: center;
     margin-bottom: -93px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: space-around;
+}
   }
   .logo {
     margin-right: 10px;
