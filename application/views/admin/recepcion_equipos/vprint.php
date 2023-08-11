@@ -13,7 +13,11 @@
             <div class="box-body">
                 <div class="row" id="datos">
                     <div class="col-md-12">
-                    <button id="printButton" class="btn btn-info">Imprimir Orden</button>
+                    <div class="col-sm-6 form-group">
+                                <a class="btn btn-info" href="<?php echo base_url();?>mantenimiento/cequipos">Volver</a>
+                                <button id="printButton" class="btn btn-success">Imprimir Orden</button>
+                            </div>
+                    
                     <div class="invoice">
                     
                         <div class="header">
