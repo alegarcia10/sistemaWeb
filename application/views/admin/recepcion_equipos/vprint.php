@@ -105,7 +105,7 @@
     max-width: 30mm; /* Ancho del logo */
   }
   .info {
-    font-size: 5px;
+    font-size: 10px;
   }
   .divider {
     border-top: 1px solid #ccc;
