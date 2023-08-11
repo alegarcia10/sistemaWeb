@@ -45,7 +45,7 @@
                                     <label for="sector">Sector</label>
                                     <input type="text" id="txtsector" name="txtsector" maxlength="950"class="form-control" value="<?php echo !empty(form_error('txtsector'))? set_value('txtsector') : $equiposedit->sector ?>"  >
                                 </div>
-                                <div class="col-sm-6 form-group">
+                                <div class="col-sm-12 form-group">
                                     <label for="accesorios">Accesorios</label>
                                     <input type="text" id="txtaccesorios" name="txtaccesorios" maxlength="950"class="form-control" value="<?php echo !empty(form_error('txtaccesorios'))? set_value('txtaccesorios') : $equiposedit->accesorios ?>"  >
                                 </div>
