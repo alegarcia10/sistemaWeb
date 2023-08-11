@@ -114,7 +114,7 @@
   .header {
     display: flex;
     align-items: center;
-    margin-bottom: -50px;
+    margin-bottom: -93px;
   }
   .logo {
     margin-right: 10px;
@@ -136,8 +136,8 @@
   }
   .customer-equipment {
     justify-content: space-between;
-    margin-top: -60px;
-    margin-bottom: -100px;
+    margin-top: -106px;
+    margin-bottom: -119px;
   }
   .customer, .equipment {
     flex-basis: calc(50% - 5px);
@@ -149,7 +149,7 @@
   .description {
     
     padding: 5px;
-    margin-top: -83px;
+    margin-top: -122px;
   }
   .description h3 {
     margin-top: 0;
