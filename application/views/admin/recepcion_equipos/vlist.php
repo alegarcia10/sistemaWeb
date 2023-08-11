@@ -22,7 +22,7 @@
                 <div class="row">
                     <div class="col-md-12">
                       <br>
-                        <table id="tablaequipos" class="table table-bordered table-hover order-table1">
+                        <table id="tablaequipos" class="table table-bordered table-hover order-table2">
                           <thead>
                               <tr>
                                   <th>Orden N°</th>
@@ -36,10 +36,10 @@
                               <?php if (!empty($equipoindex)) : ?>
                                   <?php foreach ($equipoindex as $atributos) :?>
                                       <tr>
-                                          <td ><?php echo $atributos->num_orden; ?></td>
-                                          <td ><?php echo $atributos->fecha; ?></td>
-                                          <td ><?php echo $atributos->Nombre; ?></td>
-                                          <td ><?php echo $atributos->descripcion; ?></td>
+                                          <td width="5%"><?php echo $atributos->num_orden; ?></td>
+                                          <td width="10%"><?php echo $atributos->fecha; ?></td>
+                                          <td width="15%"><?php echo $atributos->Nombre; ?></td>
+                                          <td width="20%"><?php echo $atributos->descripcion; ?></td>
                                           <td  width="10%">
                                               <div class="btn-group">
                                               <a href="<?php echo base_url(); ?>mantenimiento/cequipos/print/<?php echo $atributos->num_orden; ?>" class="btn btn-warning" title="Ver">
