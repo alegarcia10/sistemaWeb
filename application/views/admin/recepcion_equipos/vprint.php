@@ -75,7 +75,7 @@
                       </div>
                       </div>
                     </div>
-                    
+                    <button id="printButton">Imprimir Factura</button>
                     
                 </div>
 
@@ -83,7 +83,24 @@
         </div>
     </section>
 </div>
+<script>
+    // Función para imprimir la factura
+    function printInvoice() {
+      const invoice = document.querySelector('.invoice');
+      const printWindow = window.open('', '_blank');
+      printWindow.document.open();
+      printWindow.document.write('<html><head><title>Factura de Venta</title></head><body>');
+      printWindow.document.write(invoice.outerHTML);
+      printWindow.document.write('</body></html>');
+      printWindow.document.close();
+      printWindow.print();
+      printWindow.close();
+    }
 
+    // Asociar la función de impresión al botón
+    const printButton = document.getElementById('printButton');
+    printButton.addEventListener('click', printInvoice);
+  </script>
 <style>
   .invoice {
     width: 148mm; /* Ancho A5 */
