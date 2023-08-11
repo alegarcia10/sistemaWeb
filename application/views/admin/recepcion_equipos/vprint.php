@@ -4,6 +4,7 @@
         <h1>
             Orden de Recepción de equipos
             <div class="col-md-12">
+              <p></p>
             </div>
         </h1>
                                        
