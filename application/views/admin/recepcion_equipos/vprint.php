@@ -98,14 +98,14 @@
   .header {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
   .logo {
     margin-right: 10px;
     max-width: 30mm; /* Ancho del logo */
   }
   .info {
-    font-size: 8px;
+    font-size: 5px;
   }
   .divider {
     border-top: 1px solid #ccc;
@@ -122,7 +122,7 @@
   }
   .customer, .equipment {
     flex-basis: calc(50% - 5px);
-    padding: 10px;
+    padding: 5px;
   }
   .customer h3, .equipment h3 {
     margin-top: 0;
