@@ -33,7 +33,7 @@
                                             <h4>Fecha: <?php echo date("d/m/Y", strtotime("$equiposindex->fecha")); ?></h4>
                                     </div>
                                 </div>
-                                </div>
+                                
                         <div class="divider"></div>
                         
                         <div class="customer-equipment">
@@ -72,7 +72,7 @@
                                 </div>
                          </div>  
                       </div>
-    
+                      </div>
                     </div>
                     
                     
