@@ -82,8 +82,8 @@
 
 <style>
   .invoice {
-    width: 210mm; /* Ancho A5 */
-    height: 148mm; /* Alto A5 */
+    width: 148mm; /* Ancho A5 */
+    height: 210mm; /* Alto A5 */
     margin: auto;
     padding: 10px;
     border: 1px solid #ccc;
@@ -99,10 +99,10 @@
   }
   .logo {
     margin-right: 10px;
-    max-width: 50mm; /* Ancho del logo */
+    max-width: 30mm; /* Ancho del logo */
   }
   .info {
-    font-size: 10px;
+    font-size: 8px;
   }
   .divider {
     border-top: 1px solid #ccc;
@@ -110,7 +110,7 @@
   }
   .invoice-data {
     text-align: right;
-    font-size: 10px;
+    font-size: 8px;
   }
   .customer-equipment {
     display: flex;
