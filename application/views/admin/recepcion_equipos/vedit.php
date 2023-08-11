@@ -46,6 +46,10 @@
                                     <input type="text" id="txtsector" name="txtsector" maxlength="950"class="form-control" value="<?php echo !empty(form_error('txtsector'))? set_value('txtsector') : $equiposedit->sector ?>"  >
                                 </div>
                                 <div class="col-sm-6 form-group">
+                                    <label for="accesorios">Accesorios</label>
+                                    <input type="text" id="txtaccesorios" name="txtaccesorios" maxlength="950"class="form-control" value="<?php echo !empty(form_error('txtaccesorios'))? set_value('txtaccesorios') : $equiposedit->accesorios ?>"  >
+                                </div>
+                                <div class="col-sm-6 form-group">
                                     <label for="descripcion">Descripción</label>
                                     <input type="text" id="txtdescripcion" name="txtdescripcion" maxlength="950"class="form-control" value="<?php echo !empty(form_error('txtdescripcion'))? set_value('txtdescripcion') : $equiposedit->descripcion ?>">
                                 </div>

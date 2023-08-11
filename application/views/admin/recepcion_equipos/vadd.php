@@ -43,6 +43,10 @@
                                     <input type="text" id="txtsector" name="txtsector" maxlength="950"class="form-control" value="<?php echo set_value('txtsector') ?>"  >
                                 </div>
                                 <div class="col-sm-6 form-group">
+                                    <label for="accesorios">Accesorios</label>
+                                    <input type="text" id="txtaccesorios" name="txtaccesorios" maxlength="950"class="form-control" value="<?php echo set_value('txtaccesorios') ?>"  >
+                                </div>
+                                <div class="col-sm-6 form-group">
                                     <label for="descripcion">Descripción</label>
                                     <input type="text" id="txtdescripcion" name="txtdescripcion" maxlength="950"class="form-control" value="<?php echo set_value('txtdescripcion') ?>"  >
                                 </div>

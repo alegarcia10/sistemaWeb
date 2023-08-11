@@ -54,6 +54,7 @@ public function cinsert(){
      $modelo = $this->input->post('txtmodelo');
      $num_serie = $this->input->post('txtserie');
      $sector = $this->input->post('txtsector');
+     $acc = $this->input->post('txtaccesorios');
      $descripcion = $this->input->post('txtdescripcion');
 
                $data = array(
@@ -64,6 +65,7 @@ public function cinsert(){
                    'num_serie' => $num_serie,
                    'sector' => $sector,
                    'descripcion' => $descripcion,
+                   'accesorios' => $acc,
                    'id_cliente' => $id_cliente,
                    'anulado' => '0'
                );
@@ -104,6 +106,7 @@ public function cupdate(){
     $modelo = $this->input->post('txtmodelo');
     $num_serie = $this->input->post('txtserie');
     $sector = $this->input->post('txtsector');
+    $acc = $this->input->post('txtaccesorios');
     $descripcion = $this->input->post('txtdescripcion');
 
     
@@ -117,6 +120,7 @@ public function cupdate(){
                 'modelo' => $modelo,
                 'num_serie' => $num_serie,
                 'sector' => $sector,
+                'accesorios' => $acc,
                 'descripcion' => $descripcion,
                 'id_cliente' => $cliente,
                 'anulado' => '0'

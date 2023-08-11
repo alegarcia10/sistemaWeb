@@ -5,7 +5,7 @@ class Mequipos extends CI_Model{
     //MOSTRAR orden equipos
     public function mselectequipos(){
         $resultado =	$query = $this->db->query("SELECT r.num_orden , r.fecha ,r.marca, r.modelo,
-        r.num_serie, r.sector, r.descripcion, r.id_cliente, r.anulado, c.Nombre FROM recepcionequipos r
+        r.num_serie, r.sector, r.descripcion, r.accesorios, r.id_cliente, r.anulado, c.Nombre FROM recepcionequipos r
         JOIN cliente c ON r.id_cliente = c.IdCliente  
         where r.anulado=0 
         ORDER BY r.num_orden DESC;");
