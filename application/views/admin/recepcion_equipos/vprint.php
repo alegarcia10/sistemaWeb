@@ -13,7 +13,7 @@
             <div class="box-body">
                 <div class="row" id="datos">
                     <div class="col-md-12">
-                    <button id="printButton" class="btn btn-info">Imprimir Orden</button>
+                    
                     <div class="invoice">
                     
                         <div class="header">
@@ -78,7 +78,7 @@
                       </div>
                       </div>
                     </div>
-                    
+                    <button id="printButton" class="btn btn-info">Imprimir Orden</button>
                     
                 </div>
 
