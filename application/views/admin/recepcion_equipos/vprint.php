@@ -200,6 +200,10 @@
     display: none;
   }
 
+  .btn btn-info{
+    display: none;
+  }
+
   .invoice {
     width: 148mm;
     height: 208mm;
