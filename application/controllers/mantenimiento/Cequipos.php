@@ -157,8 +157,8 @@ public function cdelete($id){
         'anulado' => '1'
     );
     $this->mequipos->mupdateequipos($id, $data);
-    //redirect(base_url().'mantenimiento/ccliente');
-    echo "mantenimiento/cequipos";
+    redirect(base_url().'mantenimiento/cequipos');
+    //echo "mantenimiento/cequipos";
 }
 
 
