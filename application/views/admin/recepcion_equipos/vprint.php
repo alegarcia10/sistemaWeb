@@ -28,8 +28,8 @@
                          
                         
                                     <div class="invoice-data">
-                                        <h3>ORDEN RECEPCIÓN N°</h3>
-                                            <h4><?php echo $equiposindex->num_orden; ?></h4>
+                                        <h3>ORDEN RECEPCIÓN</h3>
+                                            <h4>N°<?php echo $equiposindex->num_orden; ?></h4>
                                             <h4>Fecha: <?php echo date("d/m/Y", strtotime("$equiposindex->fecha")); ?></h4>
                                     </div>
                                 </div>
@@ -120,7 +120,6 @@
     font-size: 8px;
   }
   .customer-equipment {
-    display: flex;
     justify-content: space-between;
     margin-top: -60px;
     margin-bottom: -50px;
@@ -142,7 +141,6 @@
   }
   .signatures {
     display: flex;
-    justify-content: space-between;
     margin-top: 10px;
   }
   .signature {
