@@ -107,9 +107,9 @@
   .info {
     font-size: 10px;
   }
-  .info p{
-    padding: 0px;
-  }
+  .info p {
+    margin: 0 0 0px;
+}
   .divider {
     border-top: 1px solid #ccc;
     margin: 3px 0;
