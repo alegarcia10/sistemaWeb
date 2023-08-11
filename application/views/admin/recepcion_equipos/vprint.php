@@ -108,7 +108,7 @@
     font-size: 10px;
   }
   .info p{
-    margin-top: 0;
+    padding: 0px;
   }
   .divider {
     border-top: 1px solid #ccc;
