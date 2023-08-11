@@ -16,7 +16,7 @@
                     <div class="invoice">
                         <div class="header">
                           <div class="logo">
-                          <img src="<?php echo base_url()?>assets/template/dist/img/1200x600.jpg" width="100">
+                          <img src="<?php echo base_url()?>assets/template/dist/img/logo presus.png" width="100">
                           </div>
                           <div class="info">
                             <p>Elecctrónica BIOS</p>
@@ -46,7 +46,7 @@
                                 </div>
                                 <div class="equipment">
                                     <h3>Datos del equipo</h3>
-                                    <p>Marca: <?php echo $equiposindex->marca; ?> </p>
+                                    <p>Marca: <?php echo $equiposindex->marca;?> </p>
                                     <p>Modelo: <?php echo $equiposindex->modelo; ?></p>
                                     <p>N° de Serie: <?php echo $equiposindex->num_serie; ?></p>
                                     <p>Sector: <?php echo $equiposindex->sector; ?></p>
@@ -123,6 +123,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: -60px;
+    margin-bottom: -50px;
   }
   .customer, .equipment {
     flex-basis: calc(50% - 5px);
@@ -132,8 +133,9 @@
     margin-top: 0;
   }
   .description {
-    border: 1px solid #ccc;
-    padding: 10px;
+    
+    padding: 5px;
+    margin-top: -50px;
   }
   .description h3 {
     margin-top: 0;
