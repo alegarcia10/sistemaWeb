@@ -9,11 +9,11 @@
         </div>
     </section>
     <section class="content" id="cuerpo">
-        <div class="box box-solid">
+        <div class="box box-solid" style="margin-top: 20px;">
             <div class="box-body">
                 <div class="row" id="datos">
                     <div class="col-md-12">
-                    
+                    <button id="printButton" class="btn btn-info">Imprimir Orden</button>
                     <div class="invoice">
                     
                         <div class="header">
@@ -78,7 +78,7 @@
                       </div>
                       </div>
                     </div>
-                    <button id="printButton" class="btn btn-info">Imprimir Orden</button>
+                    
                     
                 </div>
 
@@ -188,7 +188,11 @@
     font-size: 10px;
   }
 
-  .main-footer{
+  .main-footer {
+    display: none;
+  }
+
+  .box box-solid{
     display: none;
   }
 
