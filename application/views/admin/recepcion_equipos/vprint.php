@@ -29,22 +29,22 @@
                         </div>
                         <div class="divider"></div>
                                     <div class="invoice-data">
-                                        <h2>ORDEN RECEPCIÓN N°</h2>
-                                            <h3><?php echo $equiposindex->num_orden; ?></h3>
-                                            <h3>Fecha: <?php echo date("d/m/Y", strtotime("$equiposindex->fecha")); ?></h3>
+                                        <h3>ORDEN RECEPCIÓN N°</h3>
+                                            <h4><?php echo $equiposindex->num_orden; ?></h4>
+                                            <h4>Fecha: <?php echo date("d/m/Y", strtotime("$equiposindex->fecha")); ?></h4>
                                     </div>
                                 </div>
                         
                         <div class="customer-equipment">
                           <div class="customer">
-                          <h2>Datos del Cliente</h2>
+                          <h3>Datos del Cliente</h3>
                                     <p>Cliente: <?php echo $model->Nombre; ?></p>
                                     <p>Domicilio: <?php echo $model->Domicilio." ".$model->Localidad." ".$model->Provincia; ?></p>
                                     <p>Teléfono: <?php echo $model->Telefono1; ?></p>
                                     <p>Correo Electrónico: </p>
                                 </div>
                                 <div class="equipment">
-                                    <h2>Datos del equipo</h2>
+                                    <h3>Datos del equipo</h3>
                                     <p>Marca: <?php echo $equiposindex->marca; ?> </p>
                                     <p>Modelo: <?php echo $equiposindex->modelo; ?></p>
                                     <p>N° de Serie: <?php echo $equiposindex->num_serie; ?></p>
