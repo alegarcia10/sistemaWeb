@@ -50,6 +50,7 @@
                                     <p>Modelo: <?php echo $equiposindex->modelo; ?></p>
                                     <p>N° de Serie: <?php echo $equiposindex->num_serie; ?></p>
                                     <p>Sector: <?php echo $equiposindex->sector; ?></p>
+                                    <p>Accesorios: <?php echo $equiposindex->accesorios; ?></p>
                                 </div>
                             </div>
                             <div class="divider"></div>
