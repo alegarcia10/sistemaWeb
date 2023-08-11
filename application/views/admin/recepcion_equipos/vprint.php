@@ -98,7 +98,7 @@
   .header {
     display: flex;
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: -50px;
   }
   .logo {
     margin-right: 10px;
@@ -121,7 +121,7 @@
   .customer-equipment {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 5px;
+    margin-top: -60px;
   }
   .customer, .equipment {
     flex-basis: calc(50% - 5px);
