@@ -137,16 +137,16 @@ function sin_buscador5($opciones, $opcionSeleccionada, $nombreSelect, $tipoOpera
         <?if ($tipoOperacion==''):?>
             <option value="">Seleccione una opción</option>
             <?foreach ($opciones as $row):?>
-                <option value="<?= strval($row->id_cliente); ?>">
-                    <?= $row->NOMBRE ?>
+                <option value="<?= strval($row->IdCliente); ?>">
+                    <?= $row->Nombre ?>
                 </option>
             <?endforeach;?>
         <?else:?>
             <option value=""></option>
             <?
             foreach ($opciones as $row): ?>
-            <option value="<?= strval($row->id_cliente) ?>" <?if (strval($opcionSeleccionada) == strval($row->id_cliente)) echo "selected"; ?> >
-                <?= $row->NOMBRE; ?>
+            <option value="<?= strval($row->IdCliente) ?>" <?if (strval($opcionSeleccionada) == strval($row->IdCliente)) echo "selected"; ?> >
+                <?= $row->Nombre; ?>
             </option>
             <?endforeach;?>
         <?endif;?>
