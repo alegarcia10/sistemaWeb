@@ -13,62 +13,70 @@
             <div class="box-body">
                 <div class="row" id="datos">
                     <div class="col-md-12">
-                        <div class="invoice">
-                                <div class="header">
-                                    <div class="logo">
-                                    <img src="<?php echo base_url()?>assets/template/dist/img/1200x600.jpg" width="150">
-                                        
-                                    </div>
-                                    <div class="info">
-                                        <p>Elecctrónica BIOS</p>
-                                        <p>Cereseto Oeste 156</p>
-                                        <p>Capital San Juan</p>
-                                        <p>Teléfono: 264-4275852</p>
-                                        <p>Correo Electrónico: electronicabios@gmail.com</p>
-                                    </div>
-                                 </div>
-                                <div class="divider"></div>
-                                    <div class="invoice-data">
-                                        <h2>ORDEN RECEPCIÓN N°</h2>
-                                            <h3><?php echo $equiposindex->num_orden; ?></h3>
-                                            <h3>Fecha: <?php echo date("d/m/Y", strtotime("$equiposindex->fecha")); ?></h3>
-                                    </div>
-                                </div>
-                            <div class="customer-equipment">
-                                <div class="customer">
-                                    <h2>Datos del Cliente</h2>
-                                    <p>Cliente: <?php echo $model->Nombre; ?></p>
-                                    <p>Domicilio: <?php echo $model->Domicilio." ".$model->Localidad." ".$model->Provincia; ?></p>
-                                    <p>Teléfono: <?php echo $model->Telefono1; ?></p>
-                                    <p>Correo Electrónico: </p>
-                                </div>
-                                <div class="equipment">
-                                    <h2>Datos del equipo</h2>
-                                    <p>Marca: <?php echo $equiposindex->marca; ?> </p>
-                                    <p>Modelo: <?php echo $equiposindex->modelo; ?></p>
-                                    <p>N° de Serie: <?php echo $equiposindex->num_serie; ?></p>
-                                    <p>Sector: <?php echo $equiposindex->sector; ?></p>
-                                </div>
-                            </div>
-                            <div class="description">
-                                <h2>Descripción de Avería:</h2>
-                                
-                                <p><?php echo $equiposindex->descripcion; ?></p>
-                                
-                                
-                            </div>
-                            <div class="signatures">
-                            <div class="signature">
-                                <h2>Firma Cliente</h2>
-                                    <hr>
-                                    <p>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</p>
-                                </div>
-                                <div class="signature">
-                                    <h2>Firma Técnico</h2>
-                                    <hr>
-                                    <p>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</p>
-                                </div>
-                         </div>
+                    <div class="invoice">
+    <div class="header">
+      <div class="logo">
+        <img src="tu_logo.png" alt="Logo de la Empresa">
+      </div>
+      <div class="info">
+        <p>Nombre de la Empresa</p>
+        <p>Dirección de la Empresa</p>
+        <p>Teléfono: XXX-XXX-XXXX</p>
+        <p>Correo Electrónico: info@empresa.com</p>
+        <p>Número de Identificación Fiscal: XXXXXXXXX</p>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="invoice-data">
+      <h2>Datos de la Factura</h2>
+      <p>Número de Factura: 12345</p>
+      <p>Fecha de Emisión: 08 de Agosto de 2023</p>
+      <p style="font-size: 20px;">X</p>
+    </div>
+    <div class="customer-equipment">
+      <div class="customer">
+        <h2>Datos del Cliente</h2>
+        <p>Nombre del Cliente: Juan Pérez</p>
+        <p>Dirección del Cliente: Calle 123, Ciudad</p>
+        <p>Teléfono: XXX-XXX-XXXX</p>
+        <p>Correo Electrónico: juan@example.com</p>
+      </div>
+      <div class="equipment">
+        <h2>Datos del equipo</h2>
+        <p>Marca: </p>
+        <p>Modelo: </p>
+        <p>N° de Serie: </p>
+        <p>Sector: </p>
+      </div>
+    </div>
+    <div class="description">
+      <h2>Descripción de Avería</h2>
+      <div class="lines">
+        <p>____________________________________</p>
+        <p>____________________________________</p>
+        <p>____________________________________</p>
+      </div>
+    </div>
+    <div class="total">
+      <p>Subtotal: $100.00</p>
+      <p>Impuestos: $10.00</p>
+      <p>Total: $110.00</p>
+    </div>
+    <div class="signatures">
+      <div class="signature">
+        <h2>Firma Técnico</h2>
+        <p>____________________</p>
+        <p>Nombre: </p>
+        <p>Fecha: </p>
+      </div>
+      <div class="signature">
+        <h2>Firma Cliente</h2>
+        <p>____________________</p>
+        <p>Nombre: </p>
+        <p>Fecha: </p>
+      </div>
+    </div>
+  </div>
     
                     </div>
                     
