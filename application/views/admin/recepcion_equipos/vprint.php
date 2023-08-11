@@ -82,82 +82,75 @@
 
 <style>
   .invoice {
-    
+    width: 210mm; /* Ancho A5 */
+    height: 148mm; /* Alto A5 */
     margin: auto;
-    padding: 20px;
+    padding: 10px;
     border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    flex-wrap: wrap;
   }
   .header {
     display: flex;
     align-items: center;
-    flex: 1;
+    margin-bottom: 10px;
   }
   .logo {
-    margin-right: 20px;
-    max-width: 150px;
+    margin-right: 10px;
+    max-width: 50mm; /* Ancho del logo */
   }
   .info {
-    font-size: 14px;
-  }
-  .info p {
-    margin-bottom: 1px;
+    font-size: 10px;
   }
   .divider {
-    border-left: 1px solid #ccc;
-    margin: 0 20px;
-    height: 100%;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
   }
   .invoice-data {
-    flex: 1;
     text-align: right;
-    font-size: 14px;
+    font-size: 10px;
   }
   .customer-equipment {
-    flex-basis: 100%;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 10px;
   }
   .customer, .equipment {
-    flex-basis: calc(50% - 10px);
-    border: 1px solid #ccc;
-    padding: 20px;
+    flex-basis: calc(50% - 5px);
+    padding: 10px;
   }
   .customer h2, .equipment h2 {
     margin-top: 0;
   }
   .description {
-    flex-basis: 100%;
     border: 1px solid #ccc;
-    padding: 20px;
+    padding: 10px;
   }
   .description h2 {
     margin-top: 0;
   }
   .lines {
-    margin-top: 10px;
+    margin-top: 5px;
     border-top: 1px dotted #ccc;
-    padding-top: 10px;
+    padding-top: 5px;
   }
   .signatures {
-    flex-basis: 100%;
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
   }
   .signature {
-    flex-basis: 50%;
-    margin-top: 20px;
+    flex-basis: calc(50% - 5px);
     border-top: 1px solid #ccc;
-    padding-top: 20px;
+    padding-top: 10px;
   }
   .signature h2 {
     margin-top: 0;
   }
   .signature p {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 </style>
 
