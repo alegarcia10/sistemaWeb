@@ -13,7 +13,7 @@
             <div class="box-body">
                 <div class="row" id="datos">
                     <div class="col-md-12">
-                    <div class="col-sm-3 form-group">
+                    <div class="col-sm-3 form-group" id="botones">
                                 <a class="btn btn-info" href="<?php echo base_url();?>mantenimiento/cequipos">Volver</a>
                                 <button id="printButton" class="btn btn-success">Imprimir Orden</button>
                             </div>
@@ -200,7 +200,7 @@
     display: none;
   }
 
-  .btn btn-info{
+  #botones{
     display: none;
   }
 
