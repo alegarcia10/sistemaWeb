@@ -75,7 +75,7 @@
                       </div>
                       </div>
                     </div>
-                    <button id="printButton" class="btn btn-flat" id="botonVioleta">Imprimir Orden</button>
+                    <button id="printButton" class="btn btn-info">Imprimir Orden</button>
                     
                 </div>
 
