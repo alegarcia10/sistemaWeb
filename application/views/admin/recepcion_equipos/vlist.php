@@ -68,7 +68,7 @@
 
 <style>
 .dataTables_wrapper.no-footer div.dataTables_scrollHead table.dataTable, .dataTables_wrapper.no-footer div.dataTables_scrollBody>table{
- margin-left: -5px;
+ margin-left: -4px;
 }
 </style>
 <script type="text/javascript">
