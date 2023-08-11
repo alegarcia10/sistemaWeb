@@ -26,14 +26,15 @@
                             <p>Correo Electrónico: electronicabios@gmail.com</p>
                           </div>
                          
-                        </div>
-                        <div class="divider"></div>
+                        
                                     <div class="invoice-data">
                                         <h3>ORDEN RECEPCIÓN N°</h3>
                                             <h4><?php echo $equiposindex->num_orden; ?></h4>
                                             <h4>Fecha: <?php echo date("d/m/Y", strtotime("$equiposindex->fecha")); ?></h4>
                                     </div>
                                 </div>
+                                </div>
+                        <div class="divider"></div>
                         
                         <div class="customer-equipment">
                           <div class="customer">
