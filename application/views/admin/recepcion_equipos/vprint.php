@@ -13,8 +13,9 @@
             <div class="box-body">
                 <div class="row" id="datos">
                     <div class="col-md-12">
-                    <div class="invoice">
                     <button id="printButton" class="btn btn-info">Imprimir Orden</button>
+                    <div class="invoice">
+                    
                         <div class="header">
                           <div class="logo">
                           <img src="<?php echo base_url()?>assets/template/dist/img/logo presus.png" width="100">
