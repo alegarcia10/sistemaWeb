@@ -121,7 +121,6 @@
     align-content: stretch;
     justify-content: space-around;
 }
-  }
   .logo {
     margin-right: 10px;
     max-width: 30mm; /* Ancho del logo */
@@ -155,7 +154,7 @@
   .description {
     
     padding: 5px;
-    margin-top: -122px;
+    margin-top: -117px;
   }
   .description h3 {
     margin-top: 0;
