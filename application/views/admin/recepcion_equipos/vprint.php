@@ -173,7 +173,9 @@
   @media print {
   body {
     margin: 0;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 0;
     font-family: Arial, sans-serif;
     font-size: 10px;
