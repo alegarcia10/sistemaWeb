@@ -29,7 +29,7 @@
       <h3>Orden N°</h3>
       <p>Número de Factura: 12345</p>
       <p>Fecha de Emisión: 08 de Agosto de 2023</p>
-      <p style="font-size: 20px;">X</p>
+     
     </div>
     </div>
     <div class="divider"></div>
