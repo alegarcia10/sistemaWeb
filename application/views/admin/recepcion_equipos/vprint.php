@@ -3,19 +3,18 @@
         <div class="col-md-6">
         <h1>
             Orden de Recepción de equipos
-            <div class="col-md-12">
-              <p></p>
-            </div>
+            
         </h1>
                                        
         </div>
     </section>
     <section class="content" id="cuerpo">
-        <div class="box box-solid">
+        <div class="box box-solid" style="margin-top: 20px;">
             <div class="box-body">
                 <div class="row" id="datos">
                     <div class="col-md-12">
                     <div class="invoice">
+                    <button id="printButton" class="btn btn-info">Imprimir Orden</button>
                         <div class="header">
                           <div class="logo">
                           <img src="<?php echo base_url()?>assets/template/dist/img/logo presus.png" width="100">
@@ -78,7 +77,7 @@
                       </div>
                       </div>
                     </div>
-                    <button id="printButton" class="btn btn-info">Imprimir Orden</button>
+                    
                     
                 </div>
 
