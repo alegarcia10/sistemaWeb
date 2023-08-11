@@ -25,17 +25,18 @@
         <p>Correo Electrónico: info@empresa.com</p>
         <p>Número de Identificación Fiscal: XXXXXXXXX</p>
       </div>
-    </div>
-    <div class="divider"></div>
-    <div class="invoice-data">
-      <h2>Datos de la Factura</h2>
+      <div class="invoice-data">
+      <h3>Orden N°</h3>
       <p>Número de Factura: 12345</p>
       <p>Fecha de Emisión: 08 de Agosto de 2023</p>
       <p style="font-size: 20px;">X</p>
     </div>
+    </div>
+    <div class="divider"></div>
+    
     <div class="customer-equipment">
       <div class="customer">
-        <h2>Datos del Cliente</h2>
+        <h3>Datos del Cliente</h3>
         <p>Nombre del Cliente: Juan Pérez</p>
         <p>Dirección del Cliente: Calle 123, Ciudad</p>
         <p>Teléfono: XXX-XXX-XXXX</p>
@@ -57,23 +58,14 @@
         <p>____________________________________</p>
       </div>
     </div>
-    <div class="total">
-      <p>Subtotal: $100.00</p>
-      <p>Impuestos: $10.00</p>
-      <p>Total: $110.00</p>
-    </div>
     <div class="signatures">
       <div class="signature">
         <h2>Firma Técnico</h2>
         <p>____________________</p>
-        <p>Nombre: </p>
-        <p>Fecha: </p>
       </div>
       <div class="signature">
         <h2>Firma Cliente</h2>
         <p>____________________</p>
-        <p>Nombre: </p>
-        <p>Fecha: </p>
       </div>
     </div>
   </div>
