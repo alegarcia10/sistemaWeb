@@ -36,8 +36,8 @@
                               <?php if (!empty($equipoindex)) : ?>
                                   <?php foreach ($equipoindex as $atributos) :?>
                                       <tr>
-                                          <td width="5%"><?php echo $atributos->num_orden; ?></td>
-                                          <td width="10%"><?php echo $atributos->fecha; ?></td>
+                                          <td width="3%"><?php echo $atributos->num_orden; ?></td>
+                                          <td width="7%"><?php echo $atributos->fecha; ?></td>
                                           <td width="15%"><?php echo $atributos->Nombre; ?></td>
                                           <td width="20%"><?php echo $atributos->descripcion; ?></td>
                                           <td  width="10%">
