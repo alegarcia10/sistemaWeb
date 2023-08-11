@@ -75,7 +75,7 @@
                       </div>
                       </div>
                     </div>
-                    <button id="printButton">Imprimir Factura</button>
+                    <button id="printButton" class="btn btn-flat" id="botonVioleta">Imprimir Orden</button>
                     
                 </div>
 
@@ -137,7 +137,7 @@
   .customer-equipment {
     justify-content: space-between;
     margin-top: -60px;
-    margin-bottom: -50px;
+    margin-bottom: -100px;
   }
   .customer, .equipment {
     flex-basis: calc(50% - 5px);
@@ -149,7 +149,7 @@
   .description {
     
     padding: 5px;
-    margin-top: -50px;
+    margin-top: -83px;
   }
   .description h3 {
     margin-top: 0;
