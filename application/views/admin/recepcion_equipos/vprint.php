@@ -16,7 +16,7 @@
                     <div class="invoice">
                         <div class="header">
                           <div class="logo">
-                          <img src="<?php echo base_url()?>assets/template/dist/img/1200x600.jpg" width="150">
+                          <img src="<?php echo base_url()?>assets/template/dist/img/1200x600.jpg" width="100">
                           </div>
                           <div class="info">
                             <p>Elecctrónica BIOS</p>
@@ -53,7 +53,7 @@
                                 </div>
                             </div>
                             <div class="description">
-                                <h2>Descripción de Avería:</h2>
+                                <h3>Descripción de Avería:</h3>
                                 
                                 <p><?php echo $equiposindex->descripcion; ?></p>
                                 
@@ -61,13 +61,13 @@
                             </div>
                             <div class="signatures">
                             <div class="signature">
-                                <h2>Firma Cliente</h2>
-                                    <hr>
+                                <h3>Firma Cliente</h3>
+                                    <br>
                                     <p>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</p>
                                 </div>
                                 <div class="signature">
-                                    <h2>Firma Técnico</h2>
-                                    <hr>
+                                    <h3>Firma Técnico</h3>
+                                    <br>
                                     <p>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</p>
                                 </div>
                          </div>  
@@ -109,7 +109,7 @@
   }
   .divider {
     border-top: 1px solid #ccc;
-    margin: 10px 0;
+    margin: 3px 0;
   }
   .invoice-data {
     text-align: right;
@@ -118,26 +118,21 @@
   .customer-equipment {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
   .customer, .equipment {
     flex-basis: calc(50% - 5px);
     padding: 10px;
   }
-  .customer h2, .equipment h2 {
+  .customer h3, .equipment h3 {
     margin-top: 0;
   }
   .description {
     border: 1px solid #ccc;
     padding: 10px;
   }
-  .description h2 {
+  .description h3 {
     margin-top: 0;
-  }
-  .lines {
-    margin-top: 5px;
-    border-top: 1px dotted #ccc;
-    padding-top: 5px;
   }
   .signatures {
     display: flex;
@@ -149,7 +144,7 @@
     border-top: 1px solid #ccc;
     padding-top: 10px;
   }
-  .signature h2 {
+  .signature h3 {
     margin-top: 0;
   }
   .signature p {
