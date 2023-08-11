@@ -52,6 +52,7 @@
                                     <p>Sector: <?php echo $equiposindex->sector; ?></p>
                                 </div>
                             </div>
+                            <div class="divider"></div>
                             <div class="description">
                                 <h3>Descripción de Avería:</h3>
                                 
