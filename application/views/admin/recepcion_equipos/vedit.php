@@ -24,7 +24,7 @@
                                 </div>
                                 <div class="col-md-5 form-group">
                               <label for="cliente">Cliente&nbsp;&nbsp; (*)</label>
-                							<? $this->select_items->sin_buscador2($cliente_select,(!empty($model->IdCliente))
+                							<? $this->select_items->sin_buscador5($cliente_select,(!empty($model->IdCliente))
                                ? $model->IdCliente : '',	'cliente','1',(!empty($consultar)) ? "disabled ":'required');?>
                 			<input id="cliente_hidden" name="cliente_hidden" type="hidden" >
                 			</div>
@@ -54,7 +54,7 @@
                                     <input type="text" id="txtdescripcion" name="txtdescripcion" maxlength="950"class="form-control" value="<?php echo !empty(form_error('txtdescripcion'))? set_value('txtdescripcion') : $equiposedit->descripcion ?>">
                                 </div>
                             <div class="col-sm-6 form-group">
-                                <a class="btn btn-success" href="<?php echo base_url();?>mantenimiento/cequipos">Volver</a>
+                                <a class="btn btn-info" href="<?php echo base_url();?>mantenimiento/cequipos">Volver</a>
                                 <button type="submit" class="btn btn-success">Guardar</button>
                             </div>
                         </div>

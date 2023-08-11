@@ -132,6 +132,27 @@ function sin_buscador2($opciones, $opcionSeleccionada, $nombreSelect, $tipoOpera
 </select>
 <?}
 
+function sin_buscador5($opciones, $opcionSeleccionada, $nombreSelect, $tipoOperacion, $camposAuxiliares = ''){?>
+    <select name="<?= $nombreSelect; ?>" id="<?= $nombreSelect; ?>" class="form-control" <?if ($camposAuxiliares != '') echo $camposAuxiliares;?> ><!--input multiselect filtro-select-->
+        <?if ($tipoOperacion==''):?>
+            <option value="">Seleccione una opción</option>
+            <?foreach ($opciones as $row):?>
+                <option value="<?= strval($row->id_cliente); ?>">
+                    <?= $row->NOMBRE ?>
+                </option>
+            <?endforeach;?>
+        <?else:?>
+            <option value=""></option>
+            <?
+            foreach ($opciones as $row): ?>
+            <option value="<?= strval($row->id_cliente) ?>" <?if (strval($opcionSeleccionada) == strval($row->id_cliente)) echo "selected"; ?> >
+                <?= $row->NOMBRE; ?>
+            </option>
+            <?endforeach;?>
+        <?endif;?>
+    </select>
+    <?}
+
 function sin_buscador_roles($opciones, $opcionSeleccionada, $nombreSelect, $tipoOperacion, $camposAuxiliares = ''){?>
     <select name="<?= $nombreSelect; ?>" id="<?= $nombreSelect; ?>" class="form-control" <?if ($camposAuxiliares != '') echo $camposAuxiliares;?> ><!--input multiselect filtro-select-->
         <?if ($tipoOperacion==''):?>
