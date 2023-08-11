@@ -29,7 +29,7 @@
                                   <th>Fecha</th>
                                   <th>Cliente</th>
                                   <th>Descripcion</th>
-                                  <th width="2%">Operaciones</th>
+                                  <th>Operaciones</th>
                               </tr>
                           </thead>
                           <tbody>
@@ -40,7 +40,7 @@
                                           <td ><?php echo $atributos->fecha; ?></td>
                                           <td ><?php echo $atributos->Nombre; ?></td>
                                           <td ><?php echo $atributos->descripcion; ?></td>
-                                          <td  >
+                                          <td  width="10%">
                                               <div class="btn-group">
                                               <a href="<?php echo base_url(); ?>mantenimiento/cequipos/print/<?php echo $atributos->num_orden; ?>" class="btn btn-warning" title="Ver">
                                                       <span class="fa fa-eye"></span>
