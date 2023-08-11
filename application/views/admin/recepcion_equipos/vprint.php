@@ -192,7 +192,7 @@
 
   .invoice {
     width: 148mm;
-    height: 200mm;
+    height: 208mm;
     margin: 0;
     padding: 10px;
     border: 1px solid #ccc;
