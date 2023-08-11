@@ -83,16 +83,22 @@
         </div>
     </section>
 </div>
-<script>
-  // Función para imprimir la factura
-  function printInvoice() {
-    window.print();
-  }
 
-  // Asociar la función de impresión al botón
-  const printButton = document.getElementById('printButton');
-  printButton.addEventListener('click', printInvoice);
-</script>
+<script>
+    // Función para imprimir la factura
+    function printInvoice() {
+      const printButton = document.getElementById('printButton');
+      printButton.style.display = 'none'; // Ocultar el botón antes de imprimir
+
+      window.print();
+
+      printButton.style.display = 'block'; // Mostrar el botón después de imprimir
+    }
+
+    // Asociar la función de impresión al botón
+    const printButton = document.getElementById('printButton');
+    printButton.addEventListener('click', printInvoice);
+  </script>
 <style>
   .invoice {
     width: 148mm; /* Ancho A5 */
