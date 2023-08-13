@@ -25,11 +25,11 @@
                         <table id="tablaequipos" class="table table-bordered table-hover order-table1">
                           <thead>
                               <tr>
-                                  <th>Orden N°</th>
-                                  <th>Fecha</th>
-                                  <th>Cliente</th>
-                                  <th>Descripcion</th>
-                                  <th>Operaciones</th>
+                                  <th width="3%">Orden N°</th>
+                                  <th width="7%">Fecha</th>
+                                  <th width="15%">Cliente</th>
+                                  <th width="20%">Descripcion</th>
+                                  <th width="10%">Operaciones</th>
                               </tr>
                           </thead>
                           <tbody>
