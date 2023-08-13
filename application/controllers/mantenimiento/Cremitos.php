@@ -96,7 +96,7 @@ public function cedit($id){
         'remitoedit' => $this->mremito->midupdateremito($id),
         'roles'=>$this->mroles->obtener($idrol)
     );
-    $data['remito_select'] = $this->mremito->cliente_listar_select2();
+    $data['cliente_select'] = $this->mremito->cliente_listar_select2();
    
     //$roles=$this->mroles->obtener($idRol);
     $this->load->view('layouts/header');
