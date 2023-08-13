@@ -79,10 +79,10 @@ public function cinsert(){
         $res=$this->mremito->minsertremito($data);
         if($res){
             $this->session->set_flashdata('correcto', 'Se guardo Correctamente');
-            redirect(base_url().'mantenimiento/cremito');
+            redirect(base_url().'mantenimiento/cremitos');
         }else{
             $this->session->set_flashdata('error', 'No se Guardo registro');
-            redirect(base_url().'mantenimiento/cremito/cadd');
+            redirect(base_url().'mantenimiento/cremitos/cadd');
         }
 
 
