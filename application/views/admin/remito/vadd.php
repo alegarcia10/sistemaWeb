@@ -25,9 +25,9 @@
                                     <label class="control-label" for="tipo_cliente">CLIENTE (*)</label>
                                     <?$this->select_items->sin_buscador($tipo_cliente_select, '','tipo_cliente','1', 'required');?>
                                 </div>
-                                <div class=" col-sm-12 form-group">
-                                    <label for="tarea">TAREA</label>
-                                    <input type="text" id="txttarea" name="txttarea" maxlength="1000"class="form-control" value="<?php echo set_value('txttarea') ?>" required >
+                                <div class=" col-sm-3 form-group">
+                                    <label for="vendedor">VENDEDOR</label>
+                                    <input type="text" id="txtvendedor" name="txtvendedor" maxlength="50"class="form-control" value="<?php echo set_value('txtvendedor') ?>"  >
                                 </div>
                                 <div class=" col-sm-12 form-group">
                                     <label for="obser">OBSERVACIONES</label>
