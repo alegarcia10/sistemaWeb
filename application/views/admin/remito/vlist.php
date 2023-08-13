@@ -45,7 +45,7 @@
                                         <tr>
                                           <td width="5%"><?php echo $atributos->IdRemito; ?></td>
                                           <td width="10%"><?php echo date("d/m/Y", strtotime("$atributos->fecha")); ?></td>
-                                          <td width="30%"><?php echo $atributos->cliente; ?></td>
+                                          <td width="30%"><?php echo $atributos->IdCliente; ?></td>
                                           <td width="10%"><?php echo $atributos->vendedor; ?></td>
                                           <td width="15%"><?php echo $atributos->observaciones; ?></td>
                                           <td width="10%">$<?php echo number_format($atributos->montoTotal, 2); ?></td>
