@@ -68,6 +68,14 @@
                                 <span class="checkmark"></span>
                                 
                             </div>
+
+                            <div class="col-sm-2 form-group">
+                                <label>Recepción de Equipos</label>
+                               
+                                <input class="chk_input" type="checkbox" id="equipos" name="equipos" data-width="20" data-height="20" <?=(!empty($rolesedit->equipos)&&$rolesedit->equipos=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($rolesedit->equipos))?'checked':''?> />
+                                <span class="checkmark"></span>
+                                
+                            </div>
                             
                             <div class="col-sm-12 form-group">
                             <a class="btn btn-success" href="<?php echo base_url();?>mantenimiento/croles">Volver</a>
