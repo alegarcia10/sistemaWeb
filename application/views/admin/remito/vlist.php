@@ -23,7 +23,7 @@
                 <div class="row">
                   <div class="col-md-12">
                     <div class="col-md-12">
-                        <h1>Remitos Completos  <span class="fa fa-check-circle"></span></h1>
+                        <h1>Remitos <span class="fa fa-check-circle"></span></h1>
                     </div>
                     <br>
 
@@ -31,11 +31,11 @@
                             <thead>
                                 <tr>
                                   <th>N° remito</th>
-                                  <th>Fecha Recepción</th>
-                                  <th>Tarea</th>
-                                  <th>Gastos</th>
-                                  <th>Monto Facturado</th>
+                                  <th>Fecha</th>
                                   <th>Cliente</th>
+                                  <th>Vendedor</th>
+                                  <th>Descripcion</th>
+                                  <th>Monto Total</th>
                                   <th >Operaciones</th>
                                 </tr>
                             </thead>
@@ -43,12 +43,12 @@
                                 <?php if (!empty($remito)) : ?>
                                     <?php foreach ($remito as $atributos) :?>
                                         <tr>
-                                          <td width="5%"><?php echo $atributos->Idremito; ?></td>
-                                          <td width="10%"><?php echo date("d/m/Y", strtotime("$atributos->FechaRecepcion")); ?></td>
-                                          <td width="30%"><?php echo $atributos->TareaDesarrollar; ?></td>
-                                          <td width="10%"> $<?php echo number_format($atributos->Gastos, 2); ?></td>
-                                            <td width="10%">$<?php echo number_format($atributos->Precio, 2); ?></td>
-                                          <td width="15%"><?php echo $atributos->Nombre; ?></td>
+                                          <td width="5%"><?php echo $atributos->IdRemito; ?></td>
+                                          <td width="10%"><?php echo date("d/m/Y", strtotime("$atributos->fecha")); ?></td>
+                                          <td width="30%"><?php echo $atributos->cliente; ?></td>
+                                          <td width="10%"><?php echo $atributos->vendedo; ?></td>
+                                          <td width="15%"><?php echo $atributos->descripcion; ?></td>
+                                          <td width="10%">$<?php echo number_format($atributos->montoTotal, 2); ?></td>
                                           <td width="20%" >
                                                 <div class="btn-group">
                                                     <a href="<?php echo base_url(); ?>mantenimiento/cparteremito/listar/<?php echo $atributos->Idremito; ?>" class="btn btn-warning" title="Tareas">
