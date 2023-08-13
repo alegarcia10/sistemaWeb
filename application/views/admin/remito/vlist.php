@@ -10,7 +10,7 @@
             <div class="box-body">
                 <div class="row">
                     <div class="col-md-9">
-                        <a href="<?php echo base_url(); ?>mantenimiento/cremito/cadd" class="btn btn-flat" id="botonVioleta"><span class="fa fa-plus"></span> Agregar remito</a>
+                        <a href="<?php echo base_url(); ?>mantenimiento/cremitos/cadd" class="btn btn-flat" id="botonVioleta"><span class="fa fa-plus"></span> Agregar remito</a>
                     </div>
                 </div>
                 <?php if ($this->session->flashdata('correcto')) : ?>
