@@ -51,16 +51,16 @@
                                           <td width="10%">$<?php echo number_format($atributos->montoTotal, 2); ?></td>
                                           <td width="20%" >
                                                 <div class="btn-group">
-                                                    <a href="<?php echo base_url(); ?>mantenimiento/cparteremito/listar/<?php echo $atributos->Idremito; ?>" class="btn btn-warning" title="Tareas">
+                                                    <a href="<?php echo base_url(); ?>mantenimiento/cparteremito/listar/<?php echo $atributos->IdRemito; ?>" class="btn btn-warning" title="Tareas">
                                                         <span class="fa fa-eye"></span>
                                                     </a>
-                                                    <a href="<?php echo base_url(); ?>mantenimiento/cremito/cedit/<?php echo $atributos->Idremito; ?>" class="btn btn-info" title="Modificar">
+                                                    <a href="<?php echo base_url(); ?>mantenimiento/cremito/cedit/<?php echo $atributos->IdRemito; ?>" class="btn btn-info" title="Modificar">
                                                         <span class="fa-solid fa-pen"></span>
                                                     </a>
-                                                    <a href="<?php echo base_url(); ?>mantenimiento/cremito/cdelete/<?php echo $atributos->Idremito; ?>" class="btn btn-danger btn-remove deleteremitoCompleta" title="Eliminar">
+                                                    <a href="<?php echo base_url(); ?>mantenimiento/cremito/cdelete/<?php echo $atributos->IdRemito; ?>" class="btn btn-danger btn-remove deleteremitoCompleta" title="Eliminar">
                                                         <span class="fa-solid fa-circle-xmark"></span>
                                                     </a>
-                                                    <a href="<?php echo base_url(); ?>mantenimiento/cremito/cdescompleta/<?php echo $atributos->Idremito; ?>" class="btn btn-success reanudarremito" title="Reanudar">
+                                                    <a href="<?php echo base_url(); ?>mantenimiento/cremito/cdescompleta/<?php echo $atributos->IdRemito; ?>" class="btn btn-success reanudarremito" title="Reanudar">
                                                         <span class="fa-solid fa-clock"></span>
                                                     </a>
                                                 </div>

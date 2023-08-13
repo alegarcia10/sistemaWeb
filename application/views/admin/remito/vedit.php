@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <section class="content-header">
         <h1>
-        remito <?php echo $remitoedit->Idremito ?>
+        remito <?php echo $remitoedit->IdRemito ?>
             <small>Editar</small>
         </h1>
     </section>
@@ -18,7 +18,7 @@
                         <?php endif  ;?>
                         
                         <form action="<?php echo base_url();?>mantenimiento/cremito/cupdate" method="POST">
-                            <input type="hidden" value="<?php echo $remitoedit->Idremito ?>" name="txtidremito" id="txtidremito">
+                            <input type="hidden" value="<?php echo $remitoedit->IdRemito ?>" name="txtIdRemito" id="txtIdRemito">
                             <div class=" col-sm-12 form-group">
                                 <h2>Datos remito</h2>
                             </div>
@@ -63,7 +63,7 @@
                         <div id="content" style="display: none;">
                         
                         <form action="<?php echo base_url();?>mantenimiento/cremito/cupdatefact" method="POST">
-                            <input type="hidden" value="<?php echo $remitoedit->Idremito ?>" name="txtidremito" id="txtidremito">
+                            <input type="hidden" value="<?php echo $remitoedit->IdRemito ?>" name="txtIdRemito" id="txtIdRemito">
                             <input type="hidden" value="<?php echo $remitoedit->N_factura ?>" name="txtid" id="txtid">  
                             <div class=" col-sm-12 form-group">
                                 <h2>Datos de Facturación</h2>
