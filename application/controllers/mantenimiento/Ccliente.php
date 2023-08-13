@@ -88,6 +88,8 @@ public function cedit($id){
         'clienteedit' => $this->mcliente->midupdatecliente($id),
         'roles'=>$this->mroles->obtener($idrol)
     );
+    var_dump($data);
+    die;
     //$roles=$this->mroles->obtener($idRol);
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside',$data);

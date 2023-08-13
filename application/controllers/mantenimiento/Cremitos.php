@@ -112,7 +112,7 @@ public function cupdate(){
     $vendedor = $this->input->post('txtvendedor');
     $obs = $this->input->post('txtobser');
     $fecha = $this->input->post('txtfecha');
-    $id_cliente=$this->input->post("tipo_cliente");
+    $id_cliente=$this->input->post("cliente");
 
      
 
