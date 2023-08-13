@@ -21,27 +21,14 @@ public function index(){
     
     foreach ($remitos as $remito ) {
         $id=$remito->Idremito;
-        $premito=$this->mremito->consultarEstado($id);
+        $remito=$this->mremito->consultarEstado($id);
 
        
-        if($premito != null){
-            $completa=$premito->Completa;
-            $estado=$premito->Estado;
-
-            $remito->Completa=$completa;
-            $remito->Estado=$estado;
-
-            }else{
-               
-                $remito->Completa='0';
-                $remito->Estado='4';
-            }
 
 
    }
     $data = array (
         'remitoindex' => $remitos,
-        'remitocompletas' => $this->mremito->mselectremito(),
         'roles'=> $this->mroles->obtener($idrol)
     );
 
