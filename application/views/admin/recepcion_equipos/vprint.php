@@ -13,7 +13,7 @@
         <div class="box box-solid" style="margin-top: 1px;">
        
             <div class="box-body">
-            <div class="col-sm-3 form-group" id="botones">
+            <div class="col-sm-3 form-group" id="botones" style="margin-left: -85px;">
                                 <a class="btn btn-info" href="<?php echo base_url();?>mantenimiento/cequipos">Volver</a>
                                 <button id="printButton" class="btn btn-success">Imprimir</button>
                             </div>
