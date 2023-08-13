@@ -20,7 +20,7 @@ public function index(){
     $remitos= $this->mremito->mselectremito(); 
     
     foreach ($remitos as $remito ) {
-        $id=$remito->Idremito;
+        $id=$remito->IdRemito;
         $remito=$this->mremito->consultarEstado($id);
 
        
@@ -37,7 +37,7 @@ public function index(){
   
 
     foreach ($remitos as $remito ) {
-         $id=$remito->Idremito;
+         $id=$remito->IdRemito;
          $remito->Gastos=$this->mremito->consultaGatosremito($id);
     }
 
@@ -121,7 +121,7 @@ public function cupdate(){
       $obs = $this->input->post('txtobser');
       $precio = $this->input->post('txtprecio');
       $cliente = mb_strtoupper($this->input->post("cliente"));
-      $id = $this->input->post('txtidremito');
+      $id = $this->input->post('txtIdRemito');
       $check = $this->input->post('habilitado');
 
       if($check=='on'){
@@ -159,7 +159,7 @@ public function cupdatefact(){
     $nfact = $this->input->post('txtnumFactura');
     $id = $this->input->post('txtid');
     $estado = $this->input->post('txtpago');
-    $idremito= $this->input->post('txtidremito');
+    $IdRemito= $this->input->post('txtIdRemito');
 
     if($fpago==null){
         $fpago=null;
@@ -177,7 +177,7 @@ public function cupdatefact(){
     
   
     $res=$this->mfactura->midupdatefact($nfact);
-    $fac=$this->mfactura->mbuscaremitofactura($idremito);
+    $fac=$this->mfactura->mbuscaremitofactura($IdRemito);
     if(($fac==null) or ($fac!=$id)){
        if(($res==null) or ($nfact==$id)){
           
@@ -186,7 +186,7 @@ public function cupdatefact(){
               'fecha_factura' => $ffact,
               'fecha_pago' => $fpago,
               'estado_pago' => $estado,
-              'id_remito' =>$idremito
+              'id_remito' =>$IdRemito
           );
           if($res==null && ($fac==null)){
                 $res = $this->mfactura->minsertfactura($data);
@@ -198,18 +198,18 @@ public function cupdatefact(){
                     redirect(base_url().'mantenimiento/cremito');
                 }else {
                     $this->session->set_flashdata('error', 'No se pudo actualizar la factura');
-                    redirect(base_url().'mantenimiento/cremito/cedit/'.$idremito);
+                    redirect(base_url().'mantenimiento/cremito/cedit/'.$IdRemito);
                 }
   
        }else{
   
           //REGLA DE VALIDACION
           $this->session->set_flashdata('error', 'N° de Factura registrado');
-          redirect(base_url().'mantenimiento/cremito/cedit/'.$idremito);
+          redirect(base_url().'mantenimiento/cremito/cedit/'.$IdRemito);
        }
     }else{
-        $this->session->set_flashdata('error', 'La remito ' .$idremito. ' tiene factura asociada');
-        redirect(base_url().'mantenimiento/cremito/cedit/'.$idremito);
+        $this->session->set_flashdata('error', 'La remito ' .$IdRemito. ' tiene factura asociada');
+        redirect(base_url().'mantenimiento/cremito/cedit/'.$IdRemito);
       
     }
 }
