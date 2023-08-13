@@ -2,23 +2,17 @@
 
 class Mremito extends CI_Model{
 
-    //MOSTRAR remito actvas
+    //MOSTRAR remito activas
 
-    public function mselectremito(){
-      $this->db->where('Anulado =','0');
-      $this->db->order_by("IdRemito", "asc");
-      $resultado =$this->db->get('remitos');
+    
 
-      return $resultado->result();
-  }
-
-  public function mselectorden(){
+  public function mselectremito(){
 
     $resultado =	$query = $this->db->query("SELECT o.IdRemito , c.Nombre ,o.IdCliente, o.fecha ,
        o.observaciones, o.vendedor  FROM remitos o
        INNER JOIN cliente c ON o.IdCliente = c.IdCliente 
-       where o.Eliminada=0 and o.Completada=0 
-       ORDER BY o.IdOrden DESC;");
+       where o.Anulado=0 
+       ORDER BY o.IdRemito DESC;");
     return $resultado->result();
 
 }
