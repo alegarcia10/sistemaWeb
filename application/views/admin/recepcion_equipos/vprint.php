@@ -11,7 +11,7 @@
     <section class="content" id="cuerpo">
    
         <div class="box box-solid" style="margin-top: 1px;">
-        <div class="col-sm-6 form-group" id="botones">
+        <div class="col-sm-3 form-group" id="botones">
                                 <a class="btn btn-info" href="<?php echo base_url();?>mantenimiento/cequipos">Volver</a>
                                 <button id="printButton" class="btn btn-success">Imprimir</button>
                             </div>
