@@ -40,8 +40,8 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php if (!empty($remito)) : ?>
-                                    <?php foreach ($remito as $atributos) :?>
+                                <?php if (!empty($remitoindex)) : ?>
+                                    <?php foreach ($remitoindex as $atributos) :?>
                                         <tr>
                                           <td width="5%"><?php echo $atributos->IdRemito; ?></td>
                                           <td width="10%"><?php echo date("d/m/Y", strtotime("$atributos->fecha")); ?></td>
