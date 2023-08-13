@@ -29,10 +29,10 @@ public function index(){
     $remitos=  $data['remitoindex'];
   
 
-    foreach ($remitos as $remito ) {
+    /*foreach ($remitos as $remito ) {
          $id=$remito->IdRemito;
          $remito->Gastos=$this->mremito->consultaGatosremito($id);
-    }
+    }*/
 
 
 

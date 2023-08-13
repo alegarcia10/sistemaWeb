@@ -60,17 +60,7 @@ class Mremito extends CI_Model{
       }
 
 
-      public function consultaGatosremito($id){
-        $resultado =$query = $this->db->query("SELECT ifnull(SUM(Precio),0) as Gastos FROM material where IdRemito=$id");
-         //log_message('error',sprintf("id remito $ $resultado"));
-         $resultado=$resultado->row();
-        $gastos=$resultado->Gastos;
-
-        $x=intval($gastos);
-        //var_dump($gastos->Gastos);
-        //log_message('error',sprintf("gastos de remito $x "));
-          return  $gastos;
-       }
+     
     //MOSTRAR remito completas
    
     //INSERTAR remito
