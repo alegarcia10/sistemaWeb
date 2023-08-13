@@ -20,8 +20,8 @@
                             <input type="hidden" value="<?php echo $remitoedit->IdRemito?>" name="txtIdRemito" id="txtIdRemito">
                             <div class="col-md-5 form-group">
                               <label for="cliente">Cliente&nbsp;&nbsp; (*)</label>
-                							<? $this->select_items->sin_buscador2($remito_select,(!empty($model->IdRemito))
-                               ? $model->IdRemito : '',	'cliente','1',(!empty($consultar)) ? "disabled ":'required');?>
+                							<? $this->select_items->sin_buscador2($cliente_select,(!empty($model->IdCliente))
+                               ? $model->IdCliente : '',	'cliente','1',(!empty($consultar)) ? "disabled ":'required');?>
                 			<input id="cliente_hidden" name="cliente_hidden" type="hidden" >
                 			</div>
                             <div class="col-sm-2 form-group">
