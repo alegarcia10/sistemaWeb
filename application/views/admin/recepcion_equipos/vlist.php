@@ -22,7 +22,7 @@
                 <div class="row">
                     <div class="col-md-12">
                       <br>
-                        <table id="tablaequipos" class="table table-bordered table-hover order-table2">
+                        <table id="tablaequipos" class="table table-bordered table-hover order-table1">
                           <thead>
                               <tr>
                                   <th>Orden N°</th>

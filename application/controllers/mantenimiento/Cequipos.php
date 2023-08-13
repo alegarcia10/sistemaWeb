@@ -120,8 +120,8 @@ public function cupdate(){
                 'modelo' => $modelo,
                 'num_serie' => $num_serie,
                 'sector' => $sector,
-                'accesorios' => $acc,
                 'descripcion' => $descripcion,
+                'accesorios' => $acc,
                 'id_cliente' => $cliente,
                 'anulado' => '0'
                );
