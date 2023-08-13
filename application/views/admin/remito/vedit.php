@@ -24,9 +24,9 @@
                                ? $model->IdCliente : '',	'cliente','1',(!empty($consultar)) ? "disabled ":'required');?>
                 			<input id="cliente_hidden" name="cliente_hidden" type="hidden" >
                 			</div>
-                            <div class="col-sm-2 form-group">
-                                <label for="txtfecha">FECHA</label>
-                                <input type="number" id="txtfecha" name="txtfecha"  value="<?php echo !empty(form_error('txtfecha'))? set_value('txtfecha') : $remitoedit->fecha ?>" class= "form-control" required >
+                            <div class="col-sm-3 form-group">
+                                <label for="fecha">Fecha de Recepción</label>
+                                <input type="text" id="txtfecha" name="txtfecha"  min="2020-01-01" max="2100-12-31" value="<?php echo !empty(form_error('txtfecha'))? set_value('txtfecha') :  date("d-m-Y", strtotime("$ordenedit->fecha"));?>" class= "form-control"   >
                             </div>
                             <div class="col-sm-6 form-group">
                                 <label for="vendedor">VENDEDOR</label>
