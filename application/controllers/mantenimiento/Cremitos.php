@@ -19,14 +19,7 @@ public function index(){
     $idrol = $this->session->userdata("idRol");
     $remitos= $this->mremito->mselectremito(); 
     
-    foreach ($remitos as $remito ) {
-        $id=$remito->IdRemito;
-        $remito=$this->mremito->consultarEstado($id);
-
-       
-
-
-   }
+   
     $data = array (
         'remitoindex' => $remitos,
         'roles'=> $this->mroles->obtener($idrol)
