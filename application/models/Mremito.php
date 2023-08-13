@@ -12,6 +12,17 @@ class Mremito extends CI_Model{
       return $resultado->result();
   }
 
+  public function mselectorden(){
+
+    $resultado =	$query = $this->db->query("SELECT o.IdRemito , c.Nombre ,o.IdCliente, o.fecha ,
+       o.observaciones, o.vendedor  FROM remitos o
+       INNER JOIN cliente c ON o.IdCliente = c.IdCliente 
+       where o.Eliminada=0 and o.Completada=0 
+       ORDER BY o.IdOrden DESC;");
+    return $resultado->result();
+
+}
+
  
 
     public function mselectremitofecha($ini,$fin){
