@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <section class="content-header">
         <h1>
-        remito<?php echo $remitoedit->IdRemito ?>
+        Remito <?php echo $remitoedit->IdRemito ?>
             <small>Editar</small>
         </h1>
     </section>
@@ -26,7 +26,7 @@
                 			</div>
                             <div class="col-sm-3 form-group">
                                 <label for="fecha">Fecha de Recepción</label>
-                                <input type="text" id="txtfecha" name="txtfecha"  min="2020-01-01" max="2100-12-31" value="<?php echo !empty(form_error('txtfecha'))? set_value('txtfecha') :  date("d-m-Y", strtotime("$ordenedit->fecha"));?>" class= "form-control"   >
+                                <input type="text" id="txtfecha" name="txtfecha"  min="2020-01-01" max="2100-12-31" value="<?php echo !empty(form_error('txtfecha'))? set_value('txtfecha') :  date("d-m-Y", strtotime("$remitoedit->fecha"));?>" class= "form-control"   >
                             </div>
                             <div class="col-sm-6 form-group">
                                 <label for="vendedor">VENDEDOR</label>
