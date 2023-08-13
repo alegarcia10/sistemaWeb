@@ -48,9 +48,10 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                        
                             <li><a href="<?php echo base_url(); ?>mantenimiento/ctrabajos"><i class="fa-solid fa-chart-line"></i> Estados de Trabajo</a></li>
-                        
+                        </ul>
+                        <ul class="treeview-menu">
+                            <li><a href="<?php echo base_url(); ?>mantenimiento/ctrabajos"><i class="fa-solid fa-chart-line"></i>Remitos</a></li>
                         </ul>
                         </li>
                     <?php } ?>
