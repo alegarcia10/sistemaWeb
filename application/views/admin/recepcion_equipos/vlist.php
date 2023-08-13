@@ -25,11 +25,11 @@
                         <table id="tablaequipos" class="table table-bordered table-hover order-table1">
                           <thead>
                               <tr>
-                                  <th>Orden N°</th>
-                                  <th>Fecha</th>
-                                  <th>Cliente</th>
-                                  <th>Descripcion</th>
-                                  <th>Operaciones</th>
+                                  <th width="3%">Orden N°</th>
+                                  <th width="7%">Fecha</th>
+                                  <th width="15%">Cliente</th>
+                                  <th width="20%">Descripcion</th>
+                                  <th width="10%">Operaciones</th>
                               </tr>
                           </thead>
                           <tbody>
@@ -71,6 +71,7 @@
  margin-left: -3px;
 }
 </style>
+
 <script type="text/javascript">
 
 
@@ -79,7 +80,7 @@ $(document).ready(function () {
                "language": {
                    "lengthMenu": "Mostrar _MENU_ registros por página",
                    "zeroRecords": "No se encontraron resultados en su búsqueda",
-                   "searchPlaceholder": "Buscar Cliente",
+                   "searchPlaceholder": "Buscar Orden",
                    "info": "Mostrando registros de _START_ al _END_ de un total de  _TOTAL_ registros",
                    "infoEmpty": "No existen registros",
                    "infoFiltered": "(filtrado de un total de _MAX_ registros)",
