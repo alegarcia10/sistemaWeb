@@ -130,10 +130,6 @@ class Mremito extends CI_Model{
     return $query->row();
   	}
 
-     function consultarPrimerTarea($id){//
-      $query=$this->db->query("SELECT * FROM parteremito WHERE IdRemito=$id and 
-      IdParte  = (SELECT MIN(IdParte) FROM parteremito WHERE IdRemito=$id)" ) ;
-    return $query->row();
-  	}
+    
 }
 ?>
