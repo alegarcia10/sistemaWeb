@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <section class="content-header">
         <h1>
-        Remito <?php echo $remitoedit->IdRemito ?>
+        Remito N° <?php echo $remitoedit->IdRemito ?>
             <small>Editar</small>
         </h1>
     </section>

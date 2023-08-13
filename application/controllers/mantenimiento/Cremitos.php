@@ -11,6 +11,7 @@ class Cremitos extends CI_Controller {
     $this->load->model('mroles');
     $this->load->model('mcombo');
     $this->load->model('mfactura');
+    $this->load->model('morden');
     }
 
 
@@ -97,6 +98,7 @@ public function cedit($id){
         'roles'=>$this->mroles->obtener($idrol)
     );
     $data['cliente_select'] = $this->mremito->cliente_listar_select2();
+    $data['model'] = $this->morden->obtener($data['ordenedit']->IdCliente);
    
     //$roles=$this->mroles->obtener($idRol);
     $this->load->view('layouts/header');
