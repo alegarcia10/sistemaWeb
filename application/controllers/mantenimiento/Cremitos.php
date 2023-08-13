@@ -64,18 +64,16 @@ public function cadd(){
 
 public function cinsert(){
 
-     $tarea = $this->input->post('txttarea');
+     $vendedor = $this->input->post('txtvendedor');
      $obs = $this->input->post('txtobser');
      $fecha = $this->input->post('txtfecha');
      $id_cliente=$this->input->post("tipo_cliente");
 
     //REGLA DE VALIDACION
         $data = array(
-            'FechaRecepcion' => $fecha,
-            'TareaDesarrollar' => $tarea,
+            'fecha' => $fecha,
+            'vendedor' => $vendedor,
             'IdCliente' => $id_cliente,
-            'Completada' => '0',
-            'Eliminada' => '0',
             'observaciones' => $obs
         );
         $res=$this->mremito->minsertremito($data);
