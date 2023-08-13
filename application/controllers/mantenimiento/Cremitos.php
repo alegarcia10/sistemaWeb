@@ -100,8 +100,7 @@ public function cedit($id){
     $data['cliente_select'] = $this->mremito->cliente_listar_select2();
     
     $data['model'] = $this->mremito->obtener($data['remitoedit']->IdCliente);
-    var_dump($data);
-    die;   
+    
     //$roles=$this->mroles->obtener($idRol);
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside',$data);
