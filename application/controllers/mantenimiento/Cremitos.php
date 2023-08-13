@@ -92,18 +92,11 @@ public function cinsert(){
 
 public function cedit($id){
     $idrol = $this->session->userdata("idRol");
-    
-
     $data = array(
         'remitoedit' => $this->mremito->midupdateremito($id),
-        'roles'=> $this->mroles->obtener($idrol)
+        'roles'=>$this->mroles->obtener($idrol)
     );
-
-
-    $data['cliente_select'] = $this->mremito->cliente_listar_select2();
-    $data['model'] = $this->mremito->obtener($data['remitoedit']->IdCliente);
-
-
+    //$roles=$this->mroles->obtener($idRol);
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside',$data);
     $this->load->view('admin/remito/vedit', $data);
