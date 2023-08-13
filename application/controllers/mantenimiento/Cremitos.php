@@ -41,7 +41,7 @@ public function index(){
    }
     $data = array (
         'remitoindex' => $remitos,
-        'remitocompletas' => $this->mremito->mselectremitocompletas(),
+        'remitocompletas' => $this->mremito->mselectremito(),
         'roles'=> $this->mroles->obtener($idrol)
     );
 

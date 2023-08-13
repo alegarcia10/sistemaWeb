@@ -72,13 +72,7 @@ class Mremito extends CI_Model{
           return  $gastos;
        }
     //MOSTRAR remito completas
-    public function mselectremitocompletas(){
-
-        $resultado =$query = $this->db->query("SELECT o.Idremito , c.Nombre ,o.IdCliente, o.FechaRecepcion ,
-           o.TareaDesarrollar, o.Precio, o.Completada, o.Eliminada FROM remito o
-           INNER JOIN cliente c ON o.IdCliente = c.IdCliente where o.Eliminada=0 and o.Completada=1  ORDER BY o.Idremito ASC ");
-        return $resultado->result();
-    }
+   
     //INSERTAR remito
     public function minsertremito($data){
         return  $this->db->insert('remito',$data);
