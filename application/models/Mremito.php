@@ -12,16 +12,7 @@ class Mremito extends CI_Model{
       return $resultado->result();
   }
 
-    public function mselectestadostrabajo(){
-
-      $resultado =	$query = $this->db->query("SELECT o.IdRemito , c.Nombre ,o.IdCliente, o.FechaRecepcion ,
-         o.TareaDesarrollar, o.Precio, o.Completada, o.Eliminada, f.N_factura, f.fecha_factura, f.fecha_pago, f.estado_pago FROM remito o
-         INNER JOIN cliente c ON o.IdCliente = c.IdCliente  
-         LEFT JOIN factura f ON f.id_remito = o.IdRemito
-         where o.Eliminada=0 ORDER BY o.IdRemito DESC;");
-      return $resultado->result();
-
-  }
+ 
 
     public function mselectremitofecha($ini,$fin){
      
@@ -42,7 +33,7 @@ class Mremito extends CI_Model{
 
     public function consultaTareas($id){
         $this->db->where('IdRemito', $id);
-        $resultado=$this->db->get('parteremito');
+        $resultado=$this->db->get('remitos');
         return  $resultado->result();
      }
 
@@ -65,13 +56,13 @@ class Mremito extends CI_Model{
    
     //INSERTAR remito
     public function minsertremito($data){
-        return  $this->db->insert('remito',$data);
+        return  $this->db->insert('remitos',$data);
     }
 
     //OBTENER DATOS con IdRemito
     public function midupdateremito($id){
        $this->db->where('IdRemito', $id);
-       $resultado = $this->db->get('remito');
+       $resultado = $this->db->get('remitos');
        return $resultado->row();
     }
 
@@ -80,12 +71,12 @@ class Mremito extends CI_Model{
     //MODIFICAR remito
     public function mupdateremito($id, $data){
         $this->db->where('IdRemito', $id);
-        return $this->db->update('remito', $data);
+        return $this->db->update('remitos', $data);
      }
      //Traer remito
     public function mselectinforemito($id){
         $this->db->where('IdRemito =',"$id");
-        $resultado =$this->db->get('remito');
+        $resultado =$this->db->get('remitos');
         return $resultado->row();
     }
 
