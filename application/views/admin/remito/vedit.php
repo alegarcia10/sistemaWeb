@@ -1,122 +1,50 @@
 <div class="content-wrapper">
     <section class="content-header">
         <h1>
-        remito <?php echo $remitoedit->IdRemito ?>
+        remito<?php echo $remitoedit->IdRemito ?>
             <small>Editar</small>
         </h1>
     </section>
     <section class="content">
         <div class="box box-solid">
             <div class="box-body">
-               
+               <hr>
                <div class="row">
                    <div class="col-md-12">
                        <?php if($this->session->flashdata('error')):?>
                         <div class="alert alert-danger">
                             <p><?php echo $this->session->flashdata('error') ?> </p>
                         </div>
-                        <?php endif  ;?>
-                        
-                        <form action="<?php echo base_url();?>mantenimiento/cremito/cupdate" method="POST">
-                            <input type="hidden" value="<?php echo $remitoedit->IdRemito ?>" name="txtIdRemito" id="txtIdRemito">
-                            <div class=" col-sm-12 form-group">
-                                <h2>Datos remito</h2>
-                            </div>
-                            <div class="col-sm-3 form-group">
-                                <label for="fecha">Fecha de Recepción</label>
-                                <input type="text" id="txtfecha" name="txtfecha"  min="2020-01-01" max="2100-12-31" value="<?php echo !empty(form_error('txtfecha'))? set_value('txtfecha') :  date("d-m-Y", strtotime("$remitoedit->FechaRecepcion"));?>" class= "form-control"   >
-                            </div>
-                            <div class="col-sm-3 form-group">
-                                <label for="precio">Precio</label>
-                                <input type="number" id="txtprecio" name="txtprecio" step="0.01"  value="<?php echo !empty(form_error('txtprecio'))? set_value('txtprecio') :  $remitoedit->Precio;?>" class= "form-control"   >
-                            </div>
-                            <div class="col-md-4 form-group">
-                                <label>Completa</label><br>
-                                <input class="chk_input" type="checkbox" id="habilitado" name="habilitado" data-width="20" data-height="20" <?=(!empty($remitoedit->Completada)&&$remitoedit->Completada=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($remitoedit->Completada))?'checked':''?> />
-                                <span class="checkmark"></span>
-                            </div>
-                            <div class="col-sm-12 form-group">
-                                <label for="tarea">Tarea</label>
-                                <input type="text" id="txttarea" name="txttarea"  maxlength="1000" value="<?php echo !empty(form_error('txttarea'))? set_value('txttarea') : $remitoedit->TareaDesarrollar ?>" class= "form-control"  required>
-                            </div>
+                        <?php endif ; ?>
+                        <form action="<?php echo base_url();?>mantenimiento/cremitos/cupdate" method="POST">
+                            <input type="hidden" value="<?php echo $remitoedit->IdRemito?>" name="txtIdRemito" id="txtIdRemito">
                             <div class="col-md-5 form-group">
                               <label for="cliente">Cliente&nbsp;&nbsp; (*)</label>
-                							<? $this->select_items->sin_buscador2($cliente_select,(!empty($model->IdCliente))
-                               ? $model->IdCliente : '',	'cliente','1',(!empty($consultar)) ? "disabled ":'required');?>
+                							<? $this->select_items->sin_buscador2($remito_select,(!empty($model->IdRemito))
+                               ? $model->IdRemito : '',	'cliente','1',(!empty($consultar)) ? "disabled ":'required');?>
                 			<input id="cliente_hidden" name="cliente_hidden" type="hidden" >
                 			</div>
-                            <div class=" col-sm-12 form-group">
-                                <label for="obser">OBSERVACIONES</label>
-                                <input type="text" id="txtobser" name="txtobser" maxlength="1000"class="form-control" value="<?php echo !empty(form_error('txtobser'))? set_value('txtobser') : $remitoedit->observaciones ?>" class= "form-control">
+                            <div class="col-sm-2 form-group">
+                                <label for="txtfecha">FECHA</label>
+                                <input type="number" id="txtfecha" name="txtfecha"  value="<?php echo !empty(form_error('txtfecha'))? set_value('txtfecha') : $remitoedit->fecha ?>" class= "form-control" required >
                             </div>
-                            <div class="col-sm-12 form-group">
-                                <a class="btn btn-info" href="<?php echo base_url();?>mantenimiento/cremito">Volver</a>
-                                <button type="submit" class="btn btn-success">Guardar</button>
+                            <div class="col-sm-6 form-group">
+                                <label for="vendedor">VENDEDOR</label>
+                                <input type="text" id="txtvendedor" name="txtvendedor" maxlength="256" value="<?php echo !empty(form_error('txtvendedor'))? set_value('txtvendedor') : $remitoedit->vendedor ?>" class= "form-control" required >
                             </div>
-                        </form>
-                            <br>
-                            <br>  
-                        <div class="col-sm-12 form-group" style="margin-top: 30px;">
-                        <b>Datos Factura</b>
-                        <input type="checkbox" name="check" id="check" value="1" onchange="javascript:showContent()" />
-                       </div>
-                        <div id="content" style="display: none;">
+                            <div class="col-sm-6 form-group">
+                                <label for="observaciones">OBSERVACIONES</label>
+                                <input type="text" id="txtobservaciones" name="txtobservaciones" maxlength="1000" value="<?php echo !empty(form_error('txtobservaciones'))? set_value('txtobservaciones') : $remitoedit->observaciones ?>" class= "form-control"  >
+                            </div>
                         
-                        <form action="<?php echo base_url();?>mantenimiento/cremito/cupdatefact" method="POST">
-                            <input type="hidden" value="<?php echo $remitoedit->IdRemito ?>" name="txtIdRemito" id="txtIdRemito">
-                            <input type="hidden" value="<?php echo $remitoedit->N_factura ?>" name="txtid" id="txtid">  
-                            <div class=" col-sm-12 form-group">
-                                <h2>Datos de Facturación</h2>
-                            </div>
-                            <div class="col-sm-3 form-group">
-                                <label for="numFactura">N° Factura</label>
-                                <input type="number" id="txtnumFactura" name="txtnumFactura" class= "form-control"  value="<?php echo !empty(form_error('txtnumFactura'))? set_value('txtnumFactura') :  $remitoedit->N_factura;?>" class= "form-control" >
-                            </div>
-                            <div class="col-sm-3 form-group">
-                                <label for="fechaFactura">Fecha Factura <b>(dd/mm/aaaa)</b></label>
-                                <input type="text" id="txtfechaFactura" name="txtfechaFactura" class="form-control"  value="<?php if($remitoedit->fecha_factura=='0000-00-00 00:00:00' || $remitoedit->fecha_factura==null){$remitoedit->fecha_factura="";}else{$remitoedit->fecha_factura= date("d-m-Y", strtotime("$remitoedit->fecha_factura")); } echo !empty(form_error('txtfechaFactura'))? set_value('txtfechaFactura') : $remitoedit->fecha_factura?>" >
-                            </div>
-                            <div class="col-sm-3 form-group">
-                                <label for="fechaPago">Fecha Pago <b>(dd/mm/aaaa)</b></label>
-                                <input type="text" id="txtfechaPago" name="txtfechaPago" class="form-control"  value="<?php if($remitoedit->fecha_pago=='0000-00-00 00:00:00' || $remitoedit->fecha_pago==null){$remitoedit->fecha_pago="";}else{$remitoedit->fecha_pago= date("d-m-Y", strtotime("$remitoedit->fecha_pago")); } echo !empty(form_error('txtfechaPago'))? set_value('txtfechaPago') : $remitoedit->fecha_pago;?>">
-                            </div>
-                            <div class="col-sm-3 form-group">
-                                <label for="Pago">Estado del Pago</label>
-                                <input type="text" id="txtpago" name="txtpago" maxlength="1000" value="<?php echo !empty(form_error('txtpago'))? set_value('txtpago') : $remitoedit->estado_pago ?>" class= "form-control">    
-                            </div>
-                            <br>
-                            <br>
-
-                            <div class="col-sm-12 form-group">
-                                
+                            <div class="col-sm-6 form-group">
+                                <a class="btn btn-success" href="<?php echo base_url();?>mantenimiento/cremitos">Volver</a>
                                 <button type="submit" class="btn btn-success">Guardar</button>
                             </div>
-                        </form>
                         </div>
-                    </div> 
+                    </form>
                </div>
             </div>
         </div>
     </section>
 </div>
-
-<style>
-    input[type="radio"], input[type="checkbox"] {
-    
-    margin-left: 20px;
-    
-}
-    </style>
-
-<script type="text/javascript">
-    function showContent() {
-        element = document.getElementById("content");
-        check = document.getElementById("check");
-        if (check.checked) {
-            element.style.display='block';
-        }
-        else {
-            element.style.display='none';
-        }
-    }
-</script>
