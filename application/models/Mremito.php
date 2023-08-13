@@ -124,11 +124,7 @@ class Mremito extends CI_Model{
   		return $query->row();
   		$error = $this->db->error();
   	}
-    function consultarEstado($id){//
-      $query=$this->db->query("SELECT * FROM parteremito WHERE IdRemito=$id and 
-      IdParte  = (SELECT MAX(IdParte) FROM parteremito WHERE IdRemito=$id)" ) ;
-    return $query->row();
-  	}
+   
 
     
 }
