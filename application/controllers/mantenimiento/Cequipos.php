@@ -47,7 +47,7 @@ public function cadd(){
 
 public function cinsert(){
 
-    
+
      $fecha = $this->input->post('txtfecha');
      $id_cliente=$this->input->post("tipo_cliente");
      $marca = $this->input->post('txtmarca');
@@ -100,6 +100,7 @@ public function cedit($id){
 
 public function cupdate(){
 
+    $id = $this->input->post('txtnumorden');
     $fecha = $this->input->post('txtfecha');
     $cliente = mb_strtoupper($this->input->post("cliente"));
     $marca = $this->input->post('txtmarca');
@@ -131,7 +132,7 @@ public function cupdate(){
                       $this->session->set_flashdata('correcto', 'Se Guardo Correctamente');
                       redirect(base_url().'mantenimiento/cequipos');
                   }else {
-                      $this->session->set_flashdata('error', 'No se pudo actualizar la cliente');
+                      $this->session->set_flashdata('error', 'No se pudo actualizar la orden');
                       redirect(base_url().'mantenimiento/cequipos/cedit/');
                   }
 
