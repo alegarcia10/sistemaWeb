@@ -107,7 +107,7 @@ public function cedit($id){
 }
 
 public function cupdate(){
-    txtIdRemito
+    
     $id = $this->input->post('txtIdRemito');
     $vendedor = $this->input->post('txtvendedor');
     $obs = $this->input->post('txtobser');
