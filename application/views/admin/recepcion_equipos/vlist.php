@@ -66,6 +66,11 @@
     </section>
 </div>
 
+<style>
+    .dataTables_scrollHeadInner{
+        width: 100%;
+    }
+    </style>
 
 <script type="text/javascript">
 
