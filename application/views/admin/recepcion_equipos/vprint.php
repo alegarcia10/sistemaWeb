@@ -9,12 +9,13 @@
         </div>
     </section>
     <section class="content" id="cuerpo">
-        <div class="box box-solid" style="margin-top: 1px;">
-            <div class="box-body">
-            <div class="col-sm-5 form-group" id="botones">
+    <div class="col-sm-6 form-group" id="botones">
                                 <a class="btn btn-info" href="<?php echo base_url();?>mantenimiento/cequipos">Volver</a>
                                 <button id="printButton" class="btn btn-success">Imprimir</button>
                             </div>
+        <div class="box box-solid" style="margin-top: 1px;">
+            <div class="box-body">
+            
                 <div class="row" id="datos">
                     <div class="col-md-12">
                     
