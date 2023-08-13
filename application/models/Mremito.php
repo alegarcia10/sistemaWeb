@@ -3,17 +3,14 @@
 class Mremito extends CI_Model{
 
     //MOSTRAR remito actvas
+
     public function mselectremito(){
+      $this->db->where('Anulado =','0');
+      $this->db->order_by("IdRemito", "asc");
+      $resultado =$this->db->get('remitos');
 
-        $resultado =	$query = $this->db->query("SELECT o.Idremito , c.Nombre ,o.IdCliente, o.FechaRecepcion ,
-           o.TareaDesarrollar, o.Precio, o.Completada, o.Eliminada, f.N_factura, f.fecha_factura, f.fecha_pago, f.estado_pago FROM remito o
-           INNER JOIN cliente c ON o.IdCliente = c.IdCliente  
-           LEFT JOIN factura f ON f.id_remito = o.Idremito
-           where o.Eliminada=0 and o.Completada=0 
-           ORDER BY o.Idremito DESC;");
-        return $resultado->result();
-
-    }
+      return $resultado->result();
+  }
 
     public function mselectestadostrabajo(){
 
