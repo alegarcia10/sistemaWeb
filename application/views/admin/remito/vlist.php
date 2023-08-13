@@ -46,23 +46,19 @@
                                           <td width="5%"><?php echo $atributos->IdRemito; ?></td>
                                           <td width="10%"><?php echo date("d/m/Y", strtotime("$atributos->fecha")); ?></td>
                                           <td width="30%"><?php echo $atributos->cliente; ?></td>
-                                          <td width="10%"><?php echo $atributos->vendedo; ?></td>
+                                          <td width="10%"><?php echo $atributos->vendedor; ?></td>
                                           <td width="15%"><?php echo $atributos->descripcion; ?></td>
                                           <td width="10%">$<?php echo number_format($atributos->montoTotal, 2); ?></td>
                                           <td width="20%" >
                                                 <div class="btn-group">
-                                                    <a href="<?php echo base_url(); ?>mantenimiento/cparteremito/listar/<?php echo $atributos->IdRemito; ?>" class="btn btn-warning" title="Tareas">
-                                                        <span class="fa fa-eye"></span>
-                                                    </a>
+
                                                     <a href="<?php echo base_url(); ?>mantenimiento/cremito/cedit/<?php echo $atributos->IdRemito; ?>" class="btn btn-info" title="Modificar">
                                                         <span class="fa-solid fa-pen"></span>
                                                     </a>
                                                     <a href="<?php echo base_url(); ?>mantenimiento/cremito/cdelete/<?php echo $atributos->IdRemito; ?>" class="btn btn-danger btn-remove deleteremitoCompleta" title="Eliminar">
                                                         <span class="fa-solid fa-circle-xmark"></span>
                                                     </a>
-                                                    <a href="<?php echo base_url(); ?>mantenimiento/cremito/cdescompleta/<?php echo $atributos->IdRemito; ?>" class="btn btn-success reanudarremito" title="Reanudar">
-                                                        <span class="fa-solid fa-clock"></span>
-                                                    </a>
+
                                                 </div>
                                             </td>
                                         </tr>
