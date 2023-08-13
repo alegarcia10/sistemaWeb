@@ -14,11 +14,11 @@ class Mremito extends CI_Model{
 
     public function mselectestadostrabajo(){
 
-      $resultado =	$query = $this->db->query("SELECT o.Idremito , c.Nombre ,o.IdCliente, o.FechaRecepcion ,
+      $resultado =	$query = $this->db->query("SELECT o.IdRemito , c.Nombre ,o.IdCliente, o.FechaRecepcion ,
          o.TareaDesarrollar, o.Precio, o.Completada, o.Eliminada, f.N_factura, f.fecha_factura, f.fecha_pago, f.estado_pago FROM remito o
          INNER JOIN cliente c ON o.IdCliente = c.IdCliente  
-         LEFT JOIN factura f ON f.id_remito = o.Idremito
-         where o.Eliminada=0 ORDER BY o.Idremito DESC;");
+         LEFT JOIN factura f ON f.id_remito = o.IdRemito
+         where o.Eliminada=0 ORDER BY o.IdRemito DESC;");
       return $resultado->result();
 
   }
@@ -29,11 +29,11 @@ class Mremito extends CI_Model{
       $ini = date("Y-m-d", strtotime($ini));
       $fin = date("Y-m-d", strtotime($fin));
      
-      $resultado =	$query = $this->db->query("SELECT o.Idremito , c.Nombre ,o.IdCliente, o.FechaRecepcion ,
+      $resultado =	$query = $this->db->query("SELECT o.IdRemito , c.Nombre ,o.IdCliente, o.FechaRecepcion ,
          o.TareaDesarrollar, o.Precio, o.Completada, o.Eliminada FROM remito o
          INNER JOIN cliente c ON o.IdCliente = c.IdCliente 
          where o.Eliminada=0 and o.Completada=0 and o.FechaRecepcion >= '$ini' and o.FechaRecepcion <= '$fin' 
-         ORDER BY o.Idremito DESC;");
+         ORDER BY o.IdRemito DESC;");
     
       return $resultado->result();
       
@@ -41,7 +41,7 @@ class Mremito extends CI_Model{
   }
 
     public function consultaTareas($id){
-        $this->db->where('Idremito', $id);
+        $this->db->where('IdRemito', $id);
         $resultado=$this->db->get('parteremito');
         return  $resultado->result();
      }
@@ -61,7 +61,7 @@ class Mremito extends CI_Model{
 
 
       public function consultaGatosremito($id){
-        $resultado =$query = $this->db->query("SELECT ifnull(SUM(Precio),0) as Gastos FROM material where Idremito=$id");
+        $resultado =$query = $this->db->query("SELECT ifnull(SUM(Precio),0) as Gastos FROM material where IdRemito=$id");
          //log_message('error',sprintf("id remito $ $resultado"));
          $resultado=$resultado->row();
         $gastos=$resultado->Gastos;
@@ -78,30 +78,30 @@ class Mremito extends CI_Model{
         return  $this->db->insert('remito',$data);
     }
 
-    //OBTENER DATOS con idremito
+    //OBTENER DATOS con IdRemito
     public function midupdateremito($id){
-       $this->db->where('Idremito', $id);
+       $this->db->where('IdRemito', $id);
        $resultado = $this->db->get('remito');
        return $resultado->row();
     }
 
-    //OBTENER DATOS con idremito
+    //OBTENER DATOS con IdRemito
     public function midupdateremitoyfacturas($id){
-      $query=$this->db->query("SELECT o.Idremito ,o.observaciones ,o.IdCliente, o.FechaRecepcion , o.TareaDesarrollar, 
+      $query=$this->db->query("SELECT o.IdRemito ,o.observaciones ,o.IdCliente, o.FechaRecepcion , o.TareaDesarrollar, 
       o.Precio, o.Completada, o.Eliminada, f.N_factura, f.fecha_factura, f.fecha_pago, f.estado_pago 
-      FROM remito o LEFT JOIN factura f ON f.id_remito = o.Idremito where o.Idremito=$id;" );
+      FROM remito o LEFT JOIN factura f ON f.id_remito = o.IdRemito where o.IdRemito=$id;" );
       return $query->row();
    }
 
   
     //MODIFICAR remito
     public function mupdateremito($id, $data){
-        $this->db->where('Idremito', $id);
+        $this->db->where('IdRemito', $id);
         return $this->db->update('remito', $data);
      }
      //Traer remito
     public function mselectinforemito($id){
-        $this->db->where('Idremito =',"$id");
+        $this->db->where('IdRemito =',"$id");
         $resultado =$this->db->get('remito');
         return $resultado->row();
     }
@@ -125,14 +125,14 @@ class Mremito extends CI_Model{
   		$error = $this->db->error();
   	}
     function consultarEstado($id){//
-      $query=$this->db->query("SELECT * FROM parteremito WHERE Idremito=$id and 
-      IdParte  = (SELECT MAX(IdParte) FROM parteremito WHERE Idremito=$id)" ) ;
+      $query=$this->db->query("SELECT * FROM parteremito WHERE IdRemito=$id and 
+      IdParte  = (SELECT MAX(IdParte) FROM parteremito WHERE IdRemito=$id)" ) ;
     return $query->row();
   	}
 
      function consultarPrimerTarea($id){//
-      $query=$this->db->query("SELECT * FROM parteremito WHERE Idremito=$id and 
-      IdParte  = (SELECT MIN(IdParte) FROM parteremito WHERE Idremito=$id)" ) ;
+      $query=$this->db->query("SELECT * FROM parteremito WHERE IdRemito=$id and 
+      IdParte  = (SELECT MIN(IdParte) FROM parteremito WHERE IdRemito=$id)" ) ;
     return $query->row();
   	}
 }
