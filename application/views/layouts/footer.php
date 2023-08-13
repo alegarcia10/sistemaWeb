@@ -281,6 +281,45 @@ $('.sidebar-menu').tree()
               });
          });
 
+         //******** acciones de recepcion de equipos
+         $(".deleteEquipos").on("click", function(e){
+           e.preventDefault(); // cancela accion de href
+           var ruta =$(this).attr("href");
+           //alert(ruta);
+           swal({
+             title: "Esta por eliminar",
+             text: "Orden Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
+             type: "warning",
+             showCancelButton: true,
+             confirmButtonColor: '#d9534f',
+             cancelButtonColor: '#d33',
+             confirmButtonText: "Eliminar",
+             showLoaderOnConfirm: true,
+             cancelButtonText: "Cancelar",
+             closeOnConfirm: false,
+             closeOnCancel: false
+              },
+              function(isConfirm){
+                if (isConfirm) {
+                  $.ajax({
+                    url: ruta,
+                    type: "POST",
+                    success:function(res){
+                      //alert(res);
+                      
+                      window.location.href=base_url+res;
+                    }
+                  });
+                }else{
+                  swal({
+                      type: 'error',
+                      title: 'Cancelado',
+                      showConfirmButton: false,
+                      timer: 500
+                    });
+                }
+              });
+         });
 //acciones parte confirmacion de agregar
 //AgregarTarea
 
