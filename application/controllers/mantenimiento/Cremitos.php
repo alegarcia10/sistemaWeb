@@ -42,14 +42,6 @@ public function index(){
     }
 
 
-    $remitosCompletas=  $data['remitocompletas'];
-
-
-
-    foreach ($remitosCompletas as $remito ) {
-         $id=$remito->Idremito;
-         $remito->Gastos=$this->mremito->consultaGatosremito($id);
-    }
 
 
     //die;
