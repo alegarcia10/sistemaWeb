@@ -52,10 +52,10 @@
                                           <td width="20%" >
                                                 <div class="btn-group">
 
-                                                    <a href="<?php echo base_url(); ?>mantenimiento/cremito/cedit/<?php echo $atributos->IdRemito; ?>" class="btn btn-info" title="Modificar">
+                                                    <a href="<?php echo base_url(); ?>mantenimiento/cremitos/cedit/<?php echo $atributos->IdRemito; ?>" class="btn btn-info" title="Modificar">
                                                         <span class="fa-solid fa-pen"></span>
                                                     </a>
-                                                    <a href="<?php echo base_url(); ?>mantenimiento/cremito/cdelete/<?php echo $atributos->IdRemito; ?>" class="btn btn-danger btn-remove deleteremitoCompleta" title="Eliminar">
+                                                    <a href="<?php echo base_url(); ?>mantenimiento/cremitos/cdelete/<?php echo $atributos->IdRemito; ?>" class="btn btn-danger btn-remove deleteremitoCompleta" title="Eliminar">
                                                         <span class="fa-solid fa-circle-xmark"></span>
                                                     </a>
 
