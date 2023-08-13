@@ -114,7 +114,14 @@ public function cupdate(){
     $fecha = $this->input->post('txtfecha');
     $id_cliente=$this->input->post("cliente");
 
-     
+    if($fecha==null){
+        $fecha=null;
+    }
+    else{
+        $fecha =date("Y/m/d", strtotime($this->input->post('txtfecha')));
+    }
+
+   
    
     $data = array(
         'fecha' => $fecha,
