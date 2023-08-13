@@ -75,14 +75,7 @@ class Mremito extends CI_Model{
        return $resultado->row();
     }
 
-    //OBTENER DATOS con IdRemito
-    public function midupdateremitoyfacturas($id){
-      $query=$this->db->query("SELECT o.IdRemito ,o.observaciones ,o.IdCliente, o.FechaRecepcion , o.TareaDesarrollar, 
-      o.Precio, o.Completada, o.Eliminada, f.N_factura, f.fecha_factura, f.fecha_pago, f.estado_pago 
-      FROM remito o LEFT JOIN factura f ON f.id_remito = o.IdRemito where o.IdRemito=$id;" );
-      return $query->row();
-   }
-
+    
   
     //MODIFICAR remito
     public function mupdateremito($id, $data){

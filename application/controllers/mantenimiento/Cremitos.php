@@ -95,7 +95,7 @@ public function cedit($id){
     
 
     $data = array(
-        'remitoedit' => $this->mremito->midupdateremitoyfacturas($id),
+        'remitoedit' => $this->mremito->midupdateremito($id),
         'roles'=> $this->mroles->obtener($idrol)
     );
 
