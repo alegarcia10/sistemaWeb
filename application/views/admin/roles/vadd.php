@@ -55,6 +55,11 @@
                                 <input class="chk_input" type="checkbox" id="estado" name="estado" data-width="20" data-height="20" />
                                 <span class="checkmark"></span>
                             </div>
+                            <div class="col-sm-2 form-group">
+                                <label>Recepción de Equipos </label>
+                                <input class="chk_input" type="checkbox" id="equipos" name="equipos" data-width="20" data-height="20" />
+                                <span class="checkmark"></span>
+                            </div>
                             <div class="col-sm-12 form-group">
                             <a class="btn btn-default" href="<?php echo base_url();?>mantenimiento/croles">Volver</a>
                                 <button type="submit" class="btn btn-success">Guardar</button>
