@@ -107,102 +107,35 @@ public function cedit($id){
 }
 
 public function cupdate(){
-      $tarea = $this->input->post('txttarea');
-      $obs = $this->input->post('txtobser');
-      $precio = $this->input->post('txtprecio');
-      $cliente = mb_strtoupper($this->input->post("cliente"));
-      $id = $this->input->post('txtIdRemito');
-      $check = $this->input->post('habilitado');
+    txtIdRemito
+    $id = $this->input->post('txtIdRemito');
+    $vendedor = $this->input->post('txtvendedor');
+    $obs = $this->input->post('txtobser');
+    $fecha = $this->input->post('txtfecha');
+    $id_cliente=$this->input->post("tipo_cliente");
 
-      if($check=='on'){
-        $completa=1;
-      }else{
-        $completa=0;
-      }
+     
 
-     $data = array(
-
-       'Precio' => $precio,
-       'TareaDesarrollar' => $tarea,
-       'IdCliente' => $cliente,
-       'Completada' => $completa,
-       'observaciones' => $obs
-
-     );
+    $data = array(
+        'fecha' => $fecha,
+        'vendedor' => $vendedor,
+        'IdCliente' => $id_cliente,
+        'observaciones' => $obs
+    );
 
         $res = $this->mremito->mupdateremito($id, $data);
         if($res){
             $this->session->set_flashdata('correcto', 'Se Guardo Correctamente');
-            redirect(base_url().'mantenimiento/cremito');
+            redirect(base_url().'mantenimiento/cremitos');
         }else {
             $this->session->set_flashdata('error', 'No se pudo actualizar la remito');
-            redirect(base_url().'mantenimiento/cremito/cedit'.$id);
+            redirect(base_url().'mantenimiento/cremitos/cedit'.$id);
         }
 
 
 }
 
-public function cupdatefact(){
 
-    $fpago = $this->input->post('txtfechaPago');
-    $ffact = $this->input->post('txtfechaFactura');
-    $nfact = $this->input->post('txtnumFactura');
-    $id = $this->input->post('txtid');
-    $estado = $this->input->post('txtpago');
-    $IdRemito= $this->input->post('txtIdRemito');
-
-    if($fpago==null){
-        $fpago=null;
-    }
-    else{
-        $fpago =date("Y/m/d", strtotime($this->input->post('txtfechaPago')));
-    }
-
-    if($ffact==null){
-        $ffact=null;
-    }
-    else{
-        $ffact =date("Y/m/d", strtotime($this->input->post('txtfechaFactura')));
-    }
-    
-  
-    $res=$this->mfactura->midupdatefact($nfact);
-    $fac=$this->mfactura->mbuscaremitofactura($IdRemito);
-    if(($fac==null) or ($fac!=$id)){
-       if(($res==null) or ($nfact==$id)){
-          
-          $data = array(
-              'N_factura' => $nfact,
-              'fecha_factura' => $ffact,
-              'fecha_pago' => $fpago,
-              'estado_pago' => $estado,
-              'id_remito' =>$IdRemito
-          );
-          if($res==null && ($fac==null)){
-                $res = $this->mfactura->minsertfactura($data);
-          }else{
-                $res = $this->mfactura->mupdatefact($id, $data);
-          }
-                if($res){
-                    $this->session->set_flashdata('correcto', 'Se Guardo Correctamente');
-                    redirect(base_url().'mantenimiento/cremito');
-                }else {
-                    $this->session->set_flashdata('error', 'No se pudo actualizar la factura');
-                    redirect(base_url().'mantenimiento/cremito/cedit/'.$IdRemito);
-                }
-  
-       }else{
-  
-          //REGLA DE VALIDACION
-          $this->session->set_flashdata('error', 'N° de Factura registrado');
-          redirect(base_url().'mantenimiento/cremito/cedit/'.$IdRemito);
-       }
-    }else{
-        $this->session->set_flashdata('error', 'La remito ' .$IdRemito. ' tiene factura asociada');
-        redirect(base_url().'mantenimiento/cremito/cedit/'.$IdRemito);
-      
-    }
-}
   
 
 public function cdelete($id){
