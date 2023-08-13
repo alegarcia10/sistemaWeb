@@ -101,7 +101,7 @@ public function cedit($id){
 public function cupdate(){
 
     $id = $this->input->post('txtnumorden');
-    $fecha = date("d/m/Y", strtotime($this->input->post('txtfecha')));
+    $fecha = date("Y/m/d", strtotime($this->input->post('txtfecha')));
     $cliente = mb_strtoupper($this->input->post("cliente"));
     $marca = $this->input->post('txtmarca');
     $modelo = $this->input->post('txtmodelo');
