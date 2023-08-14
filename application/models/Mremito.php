@@ -109,6 +109,36 @@ class Mremito extends CI_Model{
       $resultado =$this->db->get('producto');
       return $resultado->result();
   }
+
+  public function cargarProd($data){
+
+    $IdRemito=$data['IdRemito'];
+    $IdProducto=$data['IdProducto'];
+    $cantidad=$data['cantidad'];
+    $producto=$data['producto'];
+    $precio=$data['precio'];
+    $this->db->where('IdRemito =',"$IdRemito");
+    $this->db->where('IdProducto =',"$IdProducto");
+    $this->db->insert('producto',$data);
+    $IdMat=$this->db->insert_id();
+
+    return $linka= '<tr>
+                <td>'.$IdProducto.'</td>
+                <td>'.$producto.'</td>
+                <td>'.$cantidad.'</td>
+                <td>'.$precio.'</td>
+                <td>
+                    <div class="btn-group">
+                        <a title="Modificar" href="@'.$IdProducto.'" class="btn btn-info ">
+                            <span class="fa fa-pencil"></span>
+                        </a>
+                        <a title="Eliminar" href="_'.$IdProducto.'" class="btn btn-danger btn-remove">
+                            <span class="fa fa-remove"></span>
+                        </a>
+                    </div>
+                </td>
+            </tr>';
+}
     
 }
 ?>
