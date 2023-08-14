@@ -93,7 +93,7 @@
         var producto =$('#txtproducto').val();
         var cant =$('#txtcantidad').val();
         var precio =$('#txtprecio').val();
-
+        alert("llega00");
         if((producto=='') || (cant=='') ){
 
         }else{
