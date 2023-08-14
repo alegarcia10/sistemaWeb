@@ -48,7 +48,7 @@ public function index(){
 }
 
 
-public function cadd(){
+public function cadd($id){
     $idrol = $this->session->userdata("idRol");
     
     $data = array(
@@ -75,6 +75,29 @@ public function cadd(){
     $this->load->view('layouts/footer');
 }
 
+public function addProducto(){
+    $producto = $this->input->post("producto");
+    $idRemito = $this->input->post("idRemito");
+    $idProducto = $this->input->post("idProducto");
+    $cant = $this->input->post("cant");
+    $precio = $this->input->post("precio");
+
+
+    $data = array(
+        'cantidad' => $cant,
+        'producto' =>  $producto,
+        'idRemito' => $idRemito,
+        'idProducto' => $idProducto,
+        'precio' => $precio
+    );
+    $ale=$data['Cantidad'];
+
+    $res=$this->mremito->cargarProd($data);
+
+    $a=['linksa'=>$res];
+
+    echo json_encode($a);
+}
 
 public function cinsert(){
 
