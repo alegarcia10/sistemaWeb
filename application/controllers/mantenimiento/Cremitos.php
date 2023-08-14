@@ -67,7 +67,6 @@ public function cadd(){
 public function addProducto(){
     $producto = $this->input->post("producto");
     $idRemito = $this->input->post("idRemito");
-    $idProducto = $this->input->post("idProducto");
     $cant = $this->input->post("cant");
     $precio = $this->input->post("precio");
 
@@ -76,7 +75,6 @@ public function addProducto(){
         'cantidad' => $cant,
         'producto' =>  $producto,
         'idRemito' => $idRemito,
-        'idProducto' => $idProducto,
         'precio' => $precio
     );
     $ale=$data['Cantidad'];
@@ -128,11 +126,10 @@ public function cedit($id){
     
 
     $IdRemito=$data['remitoedit']->IdRemito;
-    $IdProducto=$data['remitoedit']->IdProducto;
-    $data['producto'] = $this->mremito->obtenerProducto($IdRemito,$IdProducto);
 
-    var_dump($data);
-    die;
+    $data['producto'] = $this->mremito->obtenerProducto($IdRemito);
+
+ 
    
     //$roles=$this->mroles->obtener($idRol);
     $this->load->view('layouts/header');

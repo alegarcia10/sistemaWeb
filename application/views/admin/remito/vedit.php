@@ -55,7 +55,7 @@
                                 <h3>Detalle Productos</h3>
                                 </div>
                                 <input type="hidden" value="<?php echo $remitoedit->IdRemito ?>" name="txtIdRemito" id="txtIdRemito">
-                                <input type="hidden" value="<?php echo $remitoedit->IdProducto ?>" name="txtIdProducto" id="txtIdProducto">
+                               
                                 <div class="col-sm-12 form-group">
                                     <label for="producto">Producto</label>
                                     <input type="text" id="txtproducto" name="txtproducto" class="form-control"  value="<?php echo set_value('txtproducto') ?>" >

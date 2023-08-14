@@ -103,9 +103,8 @@ class Mremito extends CI_Model{
   	}
    
     //Trear PRUDCTOS DE REMITOS
-    public function obtenerProducto($IdRemito, $IdProducto){
+    public function obtenerProducto($IdRemito){
       $this->db->where('IdRemito =',"$IdRemito");
-      $this->db->where('IdProducto =',"$IdProducto");
       $resultado =$this->db->get('producto');
       return $resultado->result();
   }
@@ -113,12 +112,10 @@ class Mremito extends CI_Model{
   public function cargarProd($data){
 
     $IdRemito=$data['IdRemito'];
-    $IdProducto=$data['IdProducto'];
     $cantidad=$data['cantidad'];
     $producto=$data['producto'];
     $precio=$data['precio'];
     $this->db->where('IdRemito =',"$IdRemito");
-    $this->db->where('IdProducto =',"$IdProducto");
     $this->db->insert('producto',$data);
     $IdMat=$this->db->insert_id();
 
