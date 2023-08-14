@@ -55,6 +55,13 @@ public function cadd(){
         'roles'=> $this->mroles->obtener($idrol)
     );
 
+    $IdRemito=$data['remitoedit']->IdRemito;
+    $IdProducto=$data['remitoedit']->IdProducto;
+    $data['producto'] = $this->mremito->obtenerProducto($IdRemito,$IdProducto);
+
+    var_dump($data);
+    die;
+
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside',$datos);
     $this->load->view('admin/remito/vadd', $data);
