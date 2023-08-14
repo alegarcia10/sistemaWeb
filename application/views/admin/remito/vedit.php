@@ -145,6 +145,7 @@ $(document).ready(function(){
                                    
                                     .done(function(r) {
                                         alert("llegapoco");
+                                        window.location.href=base_url+'/mantenimiento/cremitos/cedit/'+idRemito;
                                             r = JSON.parse(r);
                                         alert("llegalejos");
                                             window.location.href=base_url+'/mantenimiento/cremitos/cedit/'+idRemito;
