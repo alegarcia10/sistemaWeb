@@ -122,13 +122,11 @@ $(document).ready(function(){
 
     var base_url= "<?php echo base_url();?>";
   $('#agregarProducto').on('click',function(){
-
         var idRemito =$('#txtIdRemito').val();
-      
         var producto =$('#txtproducto').val();
         var cant =$('#txtcantidad').val();
         var precio =$('#txtprecio').val();
-        alert(base_url);
+      
         if((producto=='') || (cant=='') ){
 
         }else{
@@ -144,12 +142,7 @@ $(document).ready(function(){
                                     data:{producto:producto,idRemito:idRemito,cant:cant,precio:precio}})
                                    
                                     .done(function(r) {
-                                        alert("llegapoco");
                                         window.location.href=base_url+'/mantenimiento/cremitos/cedit/'+idRemito;
-                                            r = JSON.parse(r);
-                                        alert("llegalejos");
-                                            window.location.href=base_url+'/mantenimiento/cremitos/cedit/'+idRemito;
-                                        
                                             //$("#tbody1").append(r['linksa']);
                                     });
 
