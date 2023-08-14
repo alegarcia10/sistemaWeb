@@ -144,7 +144,7 @@
 
                                     r = JSON.parse(r);
                                     window.location.href=base_url+'/mantenimiento/cremitos/cedit/'+idRemito;
-                                    //$("#tbody1").append(r['linksa']);
+                                    $("#tbody1").append(r['linksa']);
                                     });
 
         }
