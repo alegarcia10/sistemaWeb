@@ -144,12 +144,12 @@ $(document).ready(function(){
                                     data:{producto:producto,idRemito:idRemito,cant:cant,precio:precio}})
                                    
                                     .done(function(r) {
-
-                                    r = JSON.parse(r);
-                                  alert("llegalejos");
-                                    window.location.href=base_url+'/mantenimiento/cremitos/cedit/'+idRemito;
-                                
-                                    //$("#tbody1").append(r['linksa']);
+                                        alert("llegapoco");
+                                            r = JSON.parse(r);
+                                        alert("llegalejos");
+                                            window.location.href=base_url+'/mantenimiento/cremitos/cedit/'+idRemito;
+                                        
+                                            //$("#tbody1").append(r['linksa']);
                                     });
 
         }
