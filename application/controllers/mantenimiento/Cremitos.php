@@ -35,10 +35,8 @@ public function index(){
         $remito->montoTotal=$this->mremito->mselectremito($id);
     }
 
-
-
-
-    //die;
+var_dump($data);
+    die;
 
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside',$data);
