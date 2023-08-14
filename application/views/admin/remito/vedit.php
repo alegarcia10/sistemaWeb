@@ -143,8 +143,10 @@
                                     .done(function(r) {
 
                                     r = JSON.parse(r);
+                                    alert("llega1");
                                     window.location.href=base_url+'/mantenimiento/cremitos/cedit/'+idRemito;
-                                    $("#tbody1").append(r['linksa']);
+                                    alert("llega2");
+                                    //$("#tbody1").append(r['linksa']);
                                     });
 
         }
