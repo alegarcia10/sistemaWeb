@@ -85,7 +85,7 @@
 
 <script type="text/javascript">
 
-
+$(document).ready(function(){
   $('#agregarProducto').on('click',function(){
 
         var idRemito =$('#txtIdRemito').val();
@@ -120,5 +120,5 @@
         }
 
         });
-
+    })
 </script>
