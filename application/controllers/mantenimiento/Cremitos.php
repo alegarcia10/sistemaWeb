@@ -215,10 +215,10 @@ public function cupdateProd(){
   $cantidad = $this->input->post('txtcantidad');
   $precio = $this->input->post('txtprecio');
   $id = $this->input->post('txtid');
-  $mat = $this->mparteorden->obtenerMaterialconIdMat($id);
+  $prod = $this->mremito->obtenerProdconIdProd($id);
 
 
-  $IdParte= $mat->IdParte;
+  $IdRemito= $prod->IdRemito;
 
       $data = array(
           'producto' => $descripcion,
@@ -230,7 +230,7 @@ public function cupdateProd(){
       $res = $this->mremito->mupdateproducto($id, $data);
       if($res){
           $this->session->set_flashdata('correcto', 'Se Guardo Correctamente');
-          redirect(base_url().'mantenimiento/cparteorden/cedit/'.$IdParte);
+          redirect(base_url().'mantenimiento/cparteorden/cedit/'.$IdRemito);
       }else {
           $this->session->set_flashdata('error', 'No se pudo actualizar la parteorden');
           redirect(base_url().'mantenimiento/cparteorden/cedit'.$IdParte);
