@@ -48,26 +48,15 @@ public function index(){
 }
 
 
-public function cadd($id){
+public function cadd(){
     $idrol = $this->session->userdata("idRol");
-    
-    $data = array(
-        'remitoedit' => $this->mremito->midupdateremito($id),
-        'roles'=>$this->mroles->obtener($idrol)
-    );
+   
     $data['tipo_cliente_select'] = $this->mremito->cliente_listar_select();
     $datos = array(
         'roles'=> $this->mroles->obtener($idrol)
     );
 
 
-
-    $IdRemito=$data['remitoedit']->IdRemito;
-    $IdProducto=$data['remitoedit']->IdProducto;
-    $data['producto'] = $this->mremito->obtenerProducto($IdRemito,$IdProducto);
-
-    var_dump($data);
-    die;
 
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside',$datos);
