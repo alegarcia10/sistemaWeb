@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <section class="content-header">
         <h1>
-        Orden de Recepción de equipos
+        Orden de Recepción de Equipos
             <small>Nuevo</small>
         </h1>
     </section>
