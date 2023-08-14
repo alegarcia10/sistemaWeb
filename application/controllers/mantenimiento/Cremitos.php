@@ -184,7 +184,7 @@ public function cdelete($id){
     );
     $this->mremito->mupdateremito($id, $data);
     //redirect(base_url().'mantenimiento/cremito');
-    echo "mantenimiento/cremito";
+    echo "mantenimiento/cremitos";
 }
 
 public function ceditProd($id){
@@ -206,7 +206,7 @@ public function cdeleteProd($id){
     $IdRemito= $prod->IdRemito;
     $this->mremito->mdeleteproducto($id);
     //redirect(base_url().'mantenimiento/cparteorden/cedit/'.$IdParte);
-    echo "mantenimiento/cparteorden/cedit/$IdRemito";
+    echo "mantenimiento/cremitos/cedit/$IdRemito";
 }
 
 public function cupdateProd(){
@@ -230,10 +230,10 @@ public function cupdateProd(){
       $res = $this->mremito->mupdateproducto($id, $data);
       if($res){
           $this->session->set_flashdata('correcto', 'Se Guardo Correctamente');
-          redirect(base_url().'mantenimiento/cparteorden/cedit/'.$IdRemito);
+          redirect(base_url().'mantenimiento/cremitos/cedit/'.$IdRemito);
       }else {
           $this->session->set_flashdata('error', 'No se pudo actualizar la parteorden');
-          redirect(base_url().'mantenimiento/cparteorden/cedit'.$IdParte);
+          redirect(base_url().'mantenimiento/cremitos/cedit'.$IdParte);
       }
 }
 
