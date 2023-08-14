@@ -4,8 +4,6 @@ class Mremito extends CI_Model{
 
     //MOSTRAR remito activas
 
-    
-
   public function mselectremito(){
 
     $resultado =	$query = $this->db->query("SELECT o.IdRemito , c.Nombre ,o.IdCliente, o.fecha ,
@@ -104,7 +102,13 @@ class Mremito extends CI_Model{
   		$error = $this->db->error();
   	}
    
-
+    //Trear PRUDCTOS DE REMITOS
+    public function obtenerProducto($IdRemito, $IdProducto){
+      $this->db->where('IdRemito =',"$IdRemito");
+      $this->db->where('IdProducto =',"$IdProducto");
+      $resultado =$this->db->get('producto');
+      return $resultado->result();
+  }
     
 }
 ?>

@@ -98,6 +98,15 @@ public function cedit($id){
     $data['cliente_select'] = $this->mremito->cliente_listar_select2();
     
     $data['model'] = $this->mremito->obtener($data['remitoedit']->IdCliente);
+
+    $data = array(
+        'remitonedit' => $this->mremito->midupdateremito($id),
+        'roles'=> $this->mroles->obtener($idrol)
+    );
+
+    $IdRemito=$data['remitonedit']->IdRemito;
+    $IdProducto=$data['remitonedit']->IdProducto;
+    $data['producto'] = $this->mremito->obtenerProducto($IdRemito,$IdProducto);
    
     //$roles=$this->mroles->obtener($idRol);
     $this->load->view('layouts/header');
