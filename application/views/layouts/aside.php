@@ -53,7 +53,7 @@
                             <li><a href="<?php echo base_url(); ?>mantenimiento/ctrabajos"><i class="fa-solid fa-chart-line"></i> Estados de Trabajo</a></li>
                             <?php } ?>
                         <?php if ($roles->equipos =="1") { ?>
-                            <li><a href="<?php echo base_url(); ?>mantenimiento/cequipos"><i class="fa-solid fa-file-invoice"></i> Recepción equipos</a></li>
+                            <li><a href="<?php echo base_url(); ?>mantenimiento/cequipos"><i class="fa-solid fa-file-invoice"></i>&nbsp Recepción Equipos</a></li>
                             <?php } ?>
                         </ul>
                     </li>
