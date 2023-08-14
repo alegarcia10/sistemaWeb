@@ -56,7 +56,7 @@
                                 </div>
                                 <input type="hidden" value="<?php echo $remitoedit->IdRemito ?>" name="txtIdRemito" id="txtIdRemito">
                                
-                                <div class="col-sm-12 form-group">
+                                <div class="col-sm-6 form-group">
                                     <label for="producto">Producto</label>
                                     <input type="text" id="txtproducto" name="txtproducto" class="form-control"  value="<?php echo set_value('txtproducto') ?>" >
                                 </div>
