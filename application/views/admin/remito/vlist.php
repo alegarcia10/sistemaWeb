@@ -23,7 +23,7 @@
                 <div class="row">
                   <div class="col-md-12">
                     <div class="col-md-12">
-                        <h1>Remitos <span class="fa fa-check-circle"></span></h1>
+                        <h1>Remitos </h1>
                     </div>
                     <br>
 
