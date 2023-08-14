@@ -17,7 +17,7 @@
                         </div>
                         <?php endif ; ?>
                         <form action="<?php echo base_url();?>mantenimiento/cremitos/cupdateProd" method="POST">
-                            <input type="hidden" value="<?php echo $productoedit->IdMat ?>" name="txtid" id="txtid">
+                            <input type="hidden" value="<?php echo $productoedit->IdProducto ?>" name="txtid" id="txtid">
                             <div class="col-sm-6 form-group">
                                 <label for="producto">Descripción</label>
                                 <input type="text" id="txtproducto" name="txtproducto" maxlength="150" value="<?php echo !empty(form_error('txtproducto'))? set_value('txtproducto') : $productoedit->producto ?>" class= "form-control"  >
