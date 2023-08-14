@@ -136,6 +136,35 @@ class Mremito extends CI_Model{
                 </td>
             </tr>';
 }
+
+//Trear Producto con IdProducto
+public function obtenerProdconIdProd($IdProducto){
+
+  $this->db->where('IdProducto =',"$IdProducto");
+  $resultado =$this->db->get('producto');
+  return $resultado->row();
+}
+
+//Eliminar Producto
+public function mdeleteproducto($IdProducto){
+
+  $this->db->where('IdProducto =',"$IdProducto");
+  $resultado =$this->db->delete('producto');
+
+}
+
+//OBTENER DATOS Producto
+public function midupdateproducto($id){
+  $this->db->where('IdProducto', $id);
+  $resultado = $this->db->get('producto');
+  return $resultado->row();
+}
+
+//MODIFICAR producto
+public function mupdateproducto($id, $data){
+  $this->db->where('IdProducto', $id);
+  return $this->db->update('producto', $data);
+}
     
 }
 ?>

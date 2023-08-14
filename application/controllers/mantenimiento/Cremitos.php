@@ -187,25 +187,57 @@ public function cdelete($id){
     echo "mantenimiento/cremito";
 }
 
-public function ccompleta($id){
-
-    $data=array(
-        'Completada' => '1'
+public function ceditProd($id){
+    $idrol = $this->session->userdata("idRol");
+    $data = array(
+        'productoedit' => $this->mremito->midupdateproducto($id),
+        'roles'=> $this->mroles->obtener($idrol)
     );
-    $this->mremito->mupdateremito($id, $data);
-    //redirect(base_url().'mantenimiento/cremito');
-    echo "mantenimiento/cremito";
+
+    $this->load->view('layouts/header');
+    $this->load->view('layouts/aside',$data);
+    $this->load->view('admin/producto/vedit', $data);
+    $this->load->view('layouts/footer');
 }
 
-public function cdescompleta($id){
+public function cdeleteProd($id){
 
-    $data=array(
-        'Completada' => '0'
-    );
-    $this->mremito->mupdateremito($id, $data);
-    //redirect(base_url().'mantenimiento/cremito');
-    echo "mantenimiento/cremito";
+    $prod = $this->mremito->obtenerProdconIdProd($id);
+    $IdRemito= $prod->IdRemito;
+    $this->mremito->mdeleteproducto($id);
+    //redirect(base_url().'mantenimiento/cparteorden/cedit/'.$IdParte);
+    echo "mantenimiento/cparteorden/cedit/$IdRemito";
 }
+
+public function cupdateProd(){
+
+  $descripcion = $this->input->post('txtproducto');
+  $cantidad = $this->input->post('txtcantidad');
+  $precio = $this->input->post('txtprecio');
+  $id = $this->input->post('txtid');
+  $mat = $this->mparteorden->obtenerMaterialconIdMat($id);
+
+
+  $IdParte= $mat->IdParte;
+
+      $data = array(
+          'producto' => $descripcion,
+          'cantidad' => $cantidad,
+          'precio' => $precio
+      );
+
+
+      $res = $this->mremito->mupdateproducto($id, $data);
+      if($res){
+          $this->session->set_flashdata('correcto', 'Se Guardo Correctamente');
+          redirect(base_url().'mantenimiento/cparteorden/cedit/'.$IdParte);
+      }else {
+          $this->session->set_flashdata('error', 'No se pudo actualizar la parteorden');
+          redirect(base_url().'mantenimiento/cparteorden/cedit'.$IdParte);
+      }
+}
+
+
 
 
 
