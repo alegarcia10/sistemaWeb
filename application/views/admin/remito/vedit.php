@@ -134,12 +134,13 @@
         $('#txtproducto').val('');
         $('#txtcantidad').val('');
         $('#txtprecio').val('');
-
+        alert("llega");
                 $.ajax( {
                                     method:'POST',
                                     url:'<?php echo base_url(); ?>' + 'mantenimiento/cremitos/addProducto',
                                     dataType:'html',
                                     data:{producto:producto,idRemito:idRemito,cant:cant,precio:precio}})
+                                    alert("llega0");
                                     .done(function(r) {
 
                                     r = JSON.parse(r);
