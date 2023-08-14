@@ -20,7 +20,6 @@ public function index(){
     $idrol = $this->session->userdata("idRol");
     $remitos= $this->mremito->mselectremito(); 
     
-   
     $data = array (
         'remitoindex' => $remitos,
         'roles'=> $this->mroles->obtener($idrol)
@@ -31,9 +30,9 @@ public function index(){
   
 
     foreach ($remitos as $remito ) {
-        $id=100;
-        $remito->montoTotal= $id;
-         //$remito->Gastos=$this->mremito->consultaGatosremito($id);
+        $id=$remito->IdRemito;
+       
+        $remito->montoTotal=$this->mremito->mselectremito($id);
     }
 
 

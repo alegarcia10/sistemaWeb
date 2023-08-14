@@ -40,17 +40,16 @@ class Mremito extends CI_Model{
         return  $resultado->result();
      }
 
-     //CONSULTA LOS GASTOS DE TODOS OS MATERIALES DE UNA TAREA
-     public function consultaGatosTotales($id){
-       $resultado =$query = $this->db->query("SELECT SUM(Precio)as Gastos FROM material where IdParte=$id");
-        //log_message('error',sprintf("id remito $ $resultado"));
+     //CALCULA TOTAL ACUMULADO A COBRAR EN REMITO
+     public function consultaTotalRemito($id){
+       $resultado =$query = $this->db->query("SELECT SUM(precio)as totalPrecio FROM producto where IdRemito=$id");
+      
         $resultado=$resultado->row();
-       $gastos=$resultado->Gastos;
+       $totalPrecio=$resultado->totalPrecio;
 
-       $x=intval($gastos);
-       //var_dump($gastos->Gastos);
-       //log_message('error',sprintf("gastosssss $x "));
-         return  $gastos;
+       $x=intval($totalPrecio);
+     
+         return  $totalPrecio;
       }
 
 
