@@ -180,7 +180,7 @@ public function cupdate(){
 public function cdelete($id){
 
     $data=array(
-        'Eliminada' => '1'
+        'Anulado' => '1'
     );
     $this->mremito->mupdateremito($id, $data);
     //redirect(base_url().'mantenimiento/cremito');
