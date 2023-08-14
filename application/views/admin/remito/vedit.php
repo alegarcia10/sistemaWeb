@@ -88,8 +88,8 @@
                                                         <tr>
                                                             <td><?php echo $atributos->IdProducto; ?></td>
                                                             <td><?php echo $atributos->producto; ?></td>
-                                                            <td><?php echo $atributos->Cantidad; ?></td>
-                                                            <td><?php echo $atributos->Precio; ?></td>
+                                                            <td><?php echo $atributos->cantidad; ?></td>
+                                                            <td><?php echo $atributos->precio; ?></td>
                                                             <?php $data = $atributos->IdRemito; ?>
                                                             <td>
                                                                 <div class="btn-group">
@@ -122,7 +122,7 @@
   $('#agregarProducto').on('click',function(){
 
         var idRemito =$('#txtIdRemito').val();
-        var idProducto =$('#txtIdProducto').val();
+      
         var producto =$('#txtproducto').val();
         var cant =$('#txtcantidad').val();
         var precio =$('#txtprecio').val();
@@ -139,7 +139,7 @@
                                     method:'POST',
                                     url:'<?php echo base_url(); ?>' + 'mantenimiento/cremitos/addProducto',
                                     dataType:'html',
-                                    data:{producto:producto,idRemito:idRemito,idProducto:idProducto,cant:cant,precio:precio}})
+                                    data:{producto:producto,idRemito:idRemito,cant:cant,precio:precio}})
                                     .done(function(r) {
 
                                     r = JSON.parse(r);
