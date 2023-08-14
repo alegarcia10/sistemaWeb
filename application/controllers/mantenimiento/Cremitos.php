@@ -32,11 +32,9 @@ public function index(){
     foreach ($remitos as $remito ) {
         $id=$remito->IdRemito;
        
-        $remito->montoTotal=$this->mremito->mselectremito($id);
+        $remito->montoTotal=$this->mremito->consultaTotalRemito($id);
     }
 
-var_dump($data);
-    die;
 
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside',$data);
