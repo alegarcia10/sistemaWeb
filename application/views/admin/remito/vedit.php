@@ -128,7 +128,7 @@ $(document).ready(function(){
         var producto =$('#txtproducto').val();
         var cant =$('#txtcantidad').val();
         var precio =$('#txtprecio').val();
-        alert("llega00");
+        alert(base_url);
         if((producto=='') || (cant=='') ){
 
         }else{
