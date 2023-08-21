@@ -247,7 +247,7 @@ public function cprint($id){
     //$roles=$this->mroles->obtener($idRol);
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside',$data);
-    $this->load->view('admin/remito/vedit', $data);
+    $this->load->view('admin/remito/vprint', $data);
     $this->load->view('layouts/footer');
 }
 
