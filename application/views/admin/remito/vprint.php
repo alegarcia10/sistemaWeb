@@ -29,8 +29,8 @@
                                 </div>
                                 <div class="invoice-data">
                                     <h3>ORDEN RECEPCIÓN</h3>
-                                    <h4>N°<?php echo $remitoedit->IdRemito; ?></h4>
-                                    <h4>Fecha: <?php echo date("d/m/Y", strtotime("$remitoedit->fecha")); ?></h4>
+                                    <h4>N°<?php echo $remito->IdRemito; ?></h4>
+                                    <h4>Fecha: <?php echo date("d/m/Y", strtotime("$remito->fecha")); ?></h4>
                                 </div>
                             </div>
                             <div class="divider"></div>
@@ -44,17 +44,17 @@
                                 </div>
                                 <div class="equipment">
                                     <h3>Datos del equipo</h3>
-                                    <p>Marca: <?php echo $remitoedit->IdRemito; ?> </p>
-                                    <p>Modelo: <?php echo $remitoedit->IdRemito; ?></p>
-                                    <p>N° de Serie: <?php echo $remitoedit->IdRemito; ?></p>
-                                    <p>Sector: <?php echo $remitoedit->IdRemito; ?></p>
-                                    <p>Accesorios: <?php echo $remitoedit->IdRemito; ?></p>
+                                    <p>Marca: <?php echo $remito->IdRemito; ?> </p>
+                                    <p>Modelo: <?php echo $remito->IdRemito; ?></p>
+                                    <p>N° de Serie: <?php echo $remito->IdRemito; ?></p>
+                                    <p>Sector: <?php echo $remito->IdRemito; ?></p>
+                                    <p>Accesorios: <?php echo $remito->IdRemito; ?></p>
                                 </div>
                             </div>
                             <div class="divider"></div>
                             <div class="description">
                                 <h3>Descripción de Avería:</h3>
-                                <p><?php echo $remitoedit->IdRemito; ?></p>
+                                <p><?php echo $remito->IdRemito; ?></p>
                             </div>
                         </div>
                     </div>
