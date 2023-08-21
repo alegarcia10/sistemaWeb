@@ -66,7 +66,7 @@
                                     </div>
                                     <div class="col-sm-1">
                                         <br>
-                                        <button class="btn btn-success" type="button" id="agregarProducto"><span class="fa fa-plus" aria-hidden="true" ></span> Agregar </button>
+                                        <button class="btn btn-info" type="button" id="agregarProducto"><span class="fa fa-plus" aria-hidden="true" ></span> Agregar </button>
                                     </div>
                                     <div class="col-sm-12 form-group">
                                             <table id="example1" class="table table-bordered table-hover order-table">
