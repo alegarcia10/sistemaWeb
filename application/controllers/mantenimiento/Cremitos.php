@@ -242,8 +242,7 @@ public function cprint($id){
    
     
     $data['cliente'] = $this->mcliente->midupdatecliente($data['remito']->IdCliente);
-    var_dump($data);
-    die;
+   
    
     //$roles=$this->mroles->obtener($idRol);
     $this->load->view('layouts/header');
