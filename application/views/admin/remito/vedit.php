@@ -47,7 +47,7 @@
                         <div class="row">
                             <div class="col-md-11">
                                 <form action="<?php echo base_url();?>mantenimiento/cremitos/cupdateProducto" method="POST">
-                                    <div class="col-sm-8 form-group">
+                                    <div class="col-sm-12 form-group">
                                     <h3>Detalle Productos</h3>
                                     </div>
                                     <input type="hidden" value="<?php echo $remitoedit->IdRemito ?>" name="txtIdRemito" id="txtIdRemito">
