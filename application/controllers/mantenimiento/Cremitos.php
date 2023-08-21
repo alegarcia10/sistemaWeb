@@ -12,6 +12,7 @@ class Cremitos extends CI_Controller {
     $this->load->model('mcombo');
     $this->load->model('mfactura');
     $this->load->model('morden');
+    $this->load->model('mcliente');
     }
 
 
@@ -232,6 +233,24 @@ public function cupdateProd(){
       }
 }
 
+public function cprint($id){
+    $idrol = $this->session->userdata("idRol");
+    $data = array(
+        'remito' => $this->mremito->midupdateremito($id),
+        'roles'=>$this->mroles->obtener($idrol)
+    );
+   
+    
+    $data['cliente'] = $this->mcliente->midupdatecliente($data['remitoedit']->IdCliente);
+    var_dump($data);
+    die;
+   
+    //$roles=$this->mroles->obtener($idRol);
+    $this->load->view('layouts/header');
+    $this->load->view('layouts/aside',$data);
+    $this->load->view('admin/remito/vedit', $data);
+    $this->load->view('layouts/footer');
+}
 
 
 
