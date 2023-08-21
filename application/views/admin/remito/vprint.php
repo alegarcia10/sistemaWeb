@@ -17,7 +17,7 @@
                     <div class="col-md-12">
                         <div class="invoice">
                         <div class="col-md-9">
-                            <div class="header">
+                            <div class="header1">
                                 <div class="logo">
                                     <img src="<?php echo base_url() ?>assets/template/dist/img/logo presus.png" width="100">
                                 </div>
