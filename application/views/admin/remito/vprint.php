@@ -16,7 +16,7 @@
                 <div class="row" id="datos">
                     <div class="col-md-12">
                         <div class="invoice">
-                            <div class="col-md-2">
+                            <div class="col-md-2" id="cabecera1">
                                 <div class="header1">
                                     <div class="logo">
                                         <img src="<?php echo base_url() ?>assets/template/dist/img/logo presus.png" width="100">
@@ -92,6 +92,10 @@
     printButton.addEventListener('click', printInvoice);
 </script>
 <style>
+    #cabecera1{
+        border: red 5px solid;
+    }
+    
     .invoice {
         width: 148mm;
         /* Ancho A5 */
