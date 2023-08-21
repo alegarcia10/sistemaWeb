@@ -493,7 +493,7 @@ $(".deleteUsuario").on("click", function(e){//
            //alert(ruta);
            swal({
              title: "Esta por eliminar",
-             text: "Orden Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
+             text: "Remito Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
              type: "warning",
              showCancelButton: true,
              confirmButtonColor: '#d9534f',
@@ -531,7 +531,7 @@ $(".deleteProductoTarea").on("click", function(e){//
            //alert(ruta);
            swal({
              title: "Esta por eliminar",
-             text: "Rol Nro° " +ruta.substring(this.href.lastIndexOf('/') + 1),
+             text: "Producto Nro° " +ruta.substring(this.href.lastIndexOf('/') + 1),
              type: "warning",
              showCancelButton: true,
              confirmButtonColor: '#d9534f',
