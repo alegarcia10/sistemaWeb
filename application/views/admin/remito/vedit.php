@@ -52,11 +52,11 @@
                                     </div>
                                     <input type="hidden" value="<?php echo $remitoedit->IdRemito ?>" name="txtIdRemito" id="txtIdRemito">
                                 
-                                    <div class="col-sm-6 form-group">
+                                    <div class="col-sm-3 form-group">
                                         <label for="producto">Producto</label>
                                         <input type="text" id="txtproducto" name="txtproducto" class="form-control"  value="<?php echo set_value('txtproducto') ?>" >
                                     </div>
-                                    <div class="col-sm-3 form-group">
+                                    <div class="col-sm-1 form-group">
                                         <label for="cantidad">Cantidad</label>
                                         <input type="text" id="txtcantidad" name="txtcantidad" class="form-control" value="<?php echo set_value('txtcantidad') ?>" >
                                     </div>
