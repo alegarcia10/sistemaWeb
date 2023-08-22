@@ -194,6 +194,7 @@
     height: 65px !important;
     width: 5%;
     position: center top ;
+    font-weight: bold !important;
    
   }
   .datos p {
