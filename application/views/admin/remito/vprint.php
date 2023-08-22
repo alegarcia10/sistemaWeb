@@ -15,16 +15,16 @@
                     <div class="col-md-12">
                         <div class="cuerpo">
                             <div class="row">
-                                <div class="col-md-8" id="celdas">
+                                <div class="col-md-8" id="celdas1">
                                     
                                 </div>
-                                <div class="col-md-3" id="celdas">
+                                <div class="col-md-4" id="celdas2">
                                     
                                 </div>
-                                <div class="col-md-12" id="celdas">
+                                <div class="col-md-12" id="celdas3">
                                     
                                 </div>
-                                <div class="col-md-12" id="celdas">
+                                <div class="col-md-12" id="celdas4">
                                     
                                 </div>
                             </div>
@@ -62,7 +62,22 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
 
-  #celdas{
+  #celdas1{
+    border-style: solid;
+    margin: 5px;
+    height: 15%;
+  }
+  #celdas2{
+    border-style: solid;
+    margin: 5px;
+    height: 15%; 
+  }
+  #celdas3{
+    border-style: solid;
+    margin: 5px;
+    height: 15%;
+  }
+  #celdas4{
     border-style: solid;
     margin: 5px;
   }
