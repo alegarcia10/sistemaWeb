@@ -91,16 +91,16 @@
 
 <script>
 
-    function printDiv(nombreDiv) {
-     var contenido= document.getElementById(nombreDiv).innerHTML;
-     var contenidoOriginal= document.body.innerHTML;
-
-     document.body.innerHTML = contenido;
-
-     window.print();
-
-     document.body.innerHTML = contenidoOriginal;
-    }
+function printDiv() {
+          var objeto=document.getElementById('printButton'); 
+   
+   //obtenemos el objeto a imprimir
+          var ventana=window.open('','_blank');  //abrimos una ventana vacía nueva
+          ventana.document.write(objeto.innerHTML);  //imprimimos el HTML del objeto en la nueva ventana
+          ventana.document.close();  //cerramos el documento
+          ventana.print();  //imprimimos la ventana
+          ventana.close();  //cerramos la ventana
+        }
     
     
     // Función para imprimir la factura
