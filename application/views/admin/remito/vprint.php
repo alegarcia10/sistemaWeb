@@ -279,7 +279,7 @@
   @media print {
   
     .cuerpo {
-    width: 180mm; /* Ancho A4 */
+    width: 184mm; /* Ancho A4 */
     height: 250mm; /* Alto A4 */
     margin: auto;
     margin-top: 10px !important;
@@ -392,21 +392,21 @@
   .registrovacio1 {
     border: 1px solid #ccc;
     height: 25mm !important;
-    width: 60mm !important; 
+    width: 58mm !important; 
   }
   .registrovacio2 {
     border: 1px solid #ccc;
     height: 25mm !important;
-    width: 60mm !important;
-    margin-left: 60mm !important; 
+    width: 58mm !important;
+    margin-left: 58mm !important; 
     margin-top: -25mm !important;
     
   }
   .registrovacio3 {
     border: 1px solid #ccc;
     height: 25mm !important;
-    width: 60mm !important;
-    margin-left: 120mm !important; 
+    width: 58mm !important;
+    margin-left: 116mm !important; 
     margin-top: -25mm !important;
      
   }
