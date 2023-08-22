@@ -322,8 +322,8 @@
   .logo img{
     margin-top: 3%;
     margin-left: 10%;
-    height: 15%;
-    width: 25%;
+    height: 10%;
+    width: 22%;
   }
   .datos {
     background-color: black !important;
@@ -348,9 +348,9 @@
 .datos2 {
     font-size: 10px;
     padding: 0px !important;
-    margin-top: 0% !important;
+    margin-top: -5% !important;
     text-align: left;
-    margin-left: 60% !important;
+    margin-left: 55% !important;
     border: 1px solid blue;
   
   }
