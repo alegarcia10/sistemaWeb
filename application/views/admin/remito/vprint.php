@@ -114,7 +114,7 @@
     margin: 0 0 0px;
 
 }
-datos2 {
+.datos2 {
     font-size: 10px;
     border: 1px solid #ccc;
     padding: 0px !important;
