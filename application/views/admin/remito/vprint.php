@@ -420,12 +420,14 @@
     height: 5mm !important;
     width: 56mm !important; 
     margin-left: 56mm !important; 
+    margin-top: -5mm !important;
   }
   .registro3 {
     border: 1px solid #ccc;
     height: 5mm !important;
     width: 57mm !important; 
     margin-left: 112mm !important; 
+    margin-top: -5mm !important;
   
   }
 
