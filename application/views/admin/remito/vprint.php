@@ -9,12 +9,13 @@
             <div class="box-body">
                 <div class="col-sm-3 form-group" id="botones" style="margin-left: -85px;">
                            <a class="btn btn-info" style="margin-bottom: 10px; margin-rigth: 10px;" href="<?php echo base_url();?>mantenimiento/cremitos">Volver</a>
-                           <button id="printButton" style="margin-bottom: 10px; margin-rigth: 10px;" class="btn btn-success" onclick="printDiv()" >Imprimir</button>
+                           <button id="printButton" style="margin-bottom: 10px; margin-rigth: 10px;" class="btn btn-success">Imprimir</button>
                          
                 </div>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="cuerpo" id='areaImprimir'>
+                            <link rel="stylesheet" href="<?php echo base_url();?>assets/template/dist/css/Remito.css" media="print">
                             <div class="row">
                                 <div class="col-md-12" id="celdas1">
                                     <div class="row" >
@@ -90,19 +91,19 @@
 
 <script>
 
-function printDiv() {
-          var objeto=document.getElementById('areaImprimir'); 
-   
-   //obtenemos el objeto a imprimir
-          var ventana=window.open('','_blank');  //abrimos una ventana vacía nueva
-          ventana.document.write(objeto.innerHTML);  //imprimimos el HTML del objeto en la nueva ventana
-          ventana.document.close();  //cerramos el documento
-          ventana.print();  //imprimimos la ventana
-          ventana.close();  //cerramos la ventana
-        }
+    function printDiv(nombreDiv) {
+     var contenido= document.getElementById(nombreDiv).innerHTML;
+     var contenidoOriginal= document.body.innerHTML;
+
+     document.body.innerHTML = contenido;
+
+     window.print();
+
+     document.body.innerHTML = contenidoOriginal;
+    }
     
     
-   /* // Función para imprimir la factura
+    // Función para imprimir la factura
     function printInvoice() {
       const printButton = document.getElementById('printButton');
       printButton.style.display = 'none'; // Ocultar el botón antes de imprimir
@@ -114,10 +115,10 @@ function printDiv() {
 
     // Asociar la función de impresión al botón
     const printButton = document.getElementById('printButton');
-    printButton.addEventListener('click', printInvoice);*/
+    printButton.addEventListener('click', printInvoice);
   </script>
-  <style>
-    .cuerpo {
+<style>
+  .cuerpo {
     width: 148mm; /* Ancho A5 */
     height: 210mm; /* Alto A5 */
     margin: auto;
@@ -284,6 +285,5 @@ function printDiv() {
 
   /* ... otros estilos para la impresión ... */
 }
-  </style>
-
+</style>
 
