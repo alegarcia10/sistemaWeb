@@ -283,6 +283,8 @@
   }
   #tbody1 td{
     text-align: left !important;
+    font-size: 5px !important;
+    height:6px !important;
   }
 
   @media print {
@@ -461,6 +463,7 @@
   }
   #tbody1 td{
     text-align: left !important;
+    fon
   }
 
   /* ... otros estilos para la impresión ... */
