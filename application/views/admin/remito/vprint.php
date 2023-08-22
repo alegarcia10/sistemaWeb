@@ -204,7 +204,7 @@
     right:10px;
 
 }
-.datos2 {
+  .datos2 {
     font-size: 10px;
     padding: 0px !important;
     margin-top: 0% !important;
@@ -288,7 +288,7 @@
     border: 1px solid #ccc;
     border-radius: 15px;
     margin: 5px;
-    height: 195mm !important;
+    height: 155mm !important;
   }
 
   #celdas5{
