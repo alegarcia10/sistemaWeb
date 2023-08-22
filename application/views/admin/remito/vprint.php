@@ -175,7 +175,7 @@
 .datos2 {
     font-size: 10px;
     padding: 0px !important;
-    margin-top: 1%;
+    margin-top: -1%;
     text-align: left;
     margin-left: 3% !important;
   
