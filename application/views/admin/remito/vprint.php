@@ -15,7 +15,7 @@
                     <div class="col-md-12">
                         <div class="cuerpo">
                             <div class="row">
-                                <div class="col-md-8" id="celdas1">
+                                <div class="col-md-7" id="celdas1">
                                     <p>asdasd</p>
                                     <p>asdasdasd</p>
                                 </div>
@@ -66,21 +66,22 @@
   #celdas1{
     border-style: solid;
     margin: 5px;
-    height: 15%;
+    height: 30mm !important;
   }
   #celdas2{
     border-style: solid;
     margin: 5px;
-    height: 15%; 
+    height: 30mm !important;
   }
   #celdas3{
     border-style: solid;
     margin: 5px;
-    height: 15%;
+    height: 30mm !important;
   }
   #celdas4{
     border-style: solid;
     margin: 5px;
+    height: 140mm !important;
   }
   
 
