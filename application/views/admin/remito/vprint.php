@@ -308,9 +308,8 @@
   #celdas4{
     border: 1px solid #ccc;
     border-radius: 15px;
-    margin: 5px;
-    margin-top: 40mm !important;
-    height: 105mm !important;
+    margin: 5px !important;
+    height: 145mm !important;
   }
 
   #celdas5{
@@ -400,7 +399,7 @@
     margin-left: 49% !important;
   }
   .cliente2 p {
-    margin-top: 5% !important;
+    margin-top: 7% !important;
     margin-left: 5%;
   }
 
