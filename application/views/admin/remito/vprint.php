@@ -34,10 +34,12 @@
                             <div class="divider"></div>
                             <div class="cliente">
                                 <div class="info2">
-                                    <p>Cliente: <?php echo $cliente->Nombre; ?></p>
-                                    <p>Domicilio: <?php echo $cliente->Domicilio." ".$cliente->Localidad." ".$cliente->Provincia; ?></p>
-                                    <p>Teléfono: <?php echo $cliente->Telefono1; ?></p>
-                                    <p>Correo Electrónico: </p>
+
+                                    <strong>Cliente: <?php echo $cliente->Nombre; ?></strong>
+                                    <p><?php echo $cliente->Nombre; ?></p>
+                                    <strong>Domicilio: <?php echo $cliente->Domicilio." ".$cliente->Localidad." ".$cliente->Provincia; ?></strong>
+                                    <strong>Teléfono: <?php echo $cliente->Telefono1; ?></strong>
+                                    <strong>Correo Electrónico: </strong>
                                 </div>
                             </div>
                             <div class="divider"></div>
@@ -123,7 +125,7 @@
   .cliente{
     display: flex;
     align-items: left !important;
-    margin-top: -106px;
+    margin-top: -96px;
     margin-bottom: -53px;
     flex-direction: row;
     flex-wrap: nowrap;
