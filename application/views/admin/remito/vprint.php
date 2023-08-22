@@ -26,9 +26,9 @@
                                             <p>X</p>
                                         </div>
                                         <div class="col-md-5 datos2">
-                                            <h4>REMITO N°<?php echo $remito->IdRemito; ?></h4>
-                                            <h5>COMPROBANTE NO VALIDO COMO FACTURA</h5>
-                                            <h5>Fecha: <?php echo date("d/m/Y", strtotime("$remito->fecha")); ?></h5>
+                                            <h5>REMITO N°<?php echo $remito->IdRemito; ?></h5>
+                                            <p>COMPROBANTE NO VALIDO COMO FACTURA</p>
+                                            <p>Fecha: <?php echo date("d/m/Y", strtotime("$remito->fecha")); ?></p>
                                         </div>
                                     </div>
                                 </div>
