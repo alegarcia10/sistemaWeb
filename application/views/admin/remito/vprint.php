@@ -1,9 +1,5 @@
 <div class="content-wrapper">
-    <section class="content-header">
-        <div class="col-md-6">
-            <h1>Detalle Remito</h1>                            
-        </div>
-    </section>
+
     <section class="content" id="cuerpo">
         <div class="box solid" style="margin-top: 10px;">
             <div class="body">
