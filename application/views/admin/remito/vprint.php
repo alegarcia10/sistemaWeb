@@ -56,10 +56,9 @@
                                         <table class="table table-primary">
                                                 <thead>
                                                     <tr>
-                                                    <th scope="col">#</th>
-                                                    <th scope="col">Producto</th>
                                                     <th scope="col">Cantidad</th>
-                                                    <th scope="col">Precio</th>
+                                                    <th scope="col">Detalle</th>
+                                                    <th scope="col">Numero de Serie</th>
                                                     </tr>
                                                 </thead>
 
@@ -67,10 +66,9 @@
                                                 <?php if (!empty($producto)) : ?>
                                                     <?php foreach ($producto as $atributos) : ?>
                                                         <tr>
-                                                            <td><?php echo $atributos->IdProducto; ?></td>
-                                                            <td><?php echo $atributos->producto; ?></td>
                                                             <td><?php echo $atributos->cantidad; ?></td>
-                                                            <td><?php echo $atributos->precio; ?></td>
+                                                            <td><?php echo $atributos->producto; ?></td>
+                                                            <td></td>
                                                         </tr>
                                                     <?php endforeach ?>
                                                 <?php endif; ?>
