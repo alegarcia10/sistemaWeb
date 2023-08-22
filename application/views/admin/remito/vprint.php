@@ -16,7 +16,6 @@
                     <div class="col-md-12">
                         <div class="cuerpo" id='areaImprimir'>
                         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css" media="print">
-                            <link rel="stylesheet" href="<?php echo base_url();?>assets/template/dist/css/Remito.css" >
                             <div class="row">
                                 <div class="col-md-12" id="celdas1">
                                     <div class="row" >
@@ -118,5 +117,174 @@ function printDiv() {
     const printButton = document.getElementById('printButton');
     printButton.addEventListener('click', printInvoice);*/
   </script>
+  <style>
+    .cuerpo {
+    width: 148mm; /* Ancho A5 */
+    height: 210mm; /* Alto A5 */
+    margin: auto;
+    margin-top: 10px !important;
+    padding: 25px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+  #celdas1{
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin: 5px;
+    height: 30mm !important;
+  }
+  #celdas3{
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin: 5px;
+    height: 25mm !important;
+  }
+  #celdas4{
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin: 5px;
+    height: 135mm !important;
+  }
+
+  .logo {
+    margin-right: 2px;
+    
+  }
+  .logo img{
+    margin-top: 3mm;
+    height: 20mm;
+    width: 25mm;
+  }
+  .datos {
+    font-size: 10px;
+    padding: 0px !important;
+    margin-top: 3mm;
+  }
+  .datos p {
+    margin: 0 0 0px;
+
+}
+.datos2 {
+    font-size: 10px;
+    padding: 0px !important;
+    margin-top: -2mm;
+    text-align: right;
+    margin-left: 5mm !important;
+  }
+
+  .cliente {
+    font-size: 12px;
+    padding: 0px !important;
+    margin-top: 3mm;
+  }
+  .cliente p {
+    margin-top: 2mm;
+    margin-left: 2mm;
+  }
+
+  #celdas4 h1{
+    position:absolute;
+    bottom:5px;
+    right:10px;
+  }
+  
+
+  @media print {
+  body {
+    margin: 0;
+    justify-content: space-between;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+  }
+
+  .main-footer {
+    display: none;
+  }
+
+  .box box-solid{
+    display: none;
+  }
+
+  #botones{
+    display: none;
+  }
+
+  #celdas1{
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin: 5px;
+    height: 30mm !important;
+  }
+  #celdas3{
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin: 5px;
+    height: 25mm !important;
+  }
+  #celdas4{
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin: 5px;
+    height: 135mm !important;
+  }
+
+  .logo {
+    margin-right: 2px;
+    
+  }
+  .logo img{
+    margin-top: 3mm;
+    height: 20mm;
+    width: 25mm;
+  }
+  .datos {
+    font-size: 10px;
+    padding: 0px !important;
+    margin-top: 3mm;
+  }
+  .datos p {
+    margin: 0 0 0px;
+
+}
+.datos2 {
+    font-size: 10px;
+    padding: 0px !important;
+    margin-top: -2mm;
+    text-align: right;
+    margin-left: 5mm !important;
+  }
+
+  .cliente {
+    font-size: 12px;
+    padding: 0px !important;
+    margin-top: 3mm;
+  }
+  .cliente p {
+    margin-top: 2mm;
+    margin-left: 2mm;
+  }
+
+  #celdas4 h1{
+    position:absolute;
+    bottom:5px;
+    right:10px;
+  }
+  
+  .cuerpo {
+    width: 148mm; /* Ancho A5 */
+    height: 210mm; /* Alto A5 */
+    margin: auto;
+    margin-top: 10px !important;
+    padding: 25px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+
+  /* ... otros estilos para la impresión ... */
+}
+  </style>
 
 
