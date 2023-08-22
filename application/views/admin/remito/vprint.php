@@ -34,12 +34,11 @@
                             <div class="divider"></div>
                             <div class="cliente">
                                 <div class="info2">
-                                    <div><p>Cliente:</p>
+
+                                    <p>Cliente:</p>
                                     <p><?php echo $cliente->Nombre; ?></p>
-                                    </div>
-                                    <div><strong>Domicilio: </strong>
-                                    <p><?php echo $cliente->Domicilio; ?></p></div>
-                                    
+                                    <strong>Domicilio: </strong>
+                                    <p><?php echo $cliente->Domicilio; ?></p>
                                     <strong>Localidad: </strong>
                                     <p><?php echo $cliente->Localidad; ?></p>
                                     <strong>Provincia: </strong>
@@ -132,11 +131,11 @@
   .cliente{
     display: flex;
     align-items: left !important;
-    margin-top: -96px;
+    margin-top: -56px;
     margin-bottom: -53px;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-content: space-evenly;
+    align-content: stretch;
     justify-content: space-around;
 
   }
