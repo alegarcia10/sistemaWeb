@@ -195,6 +195,13 @@
   
   }
 
+  .datos2 {
+ 
+    text-align: center;
+
+  
+  }
+
   .cliente1 {
     font-size: 12px;
     padding: 0px !important;
