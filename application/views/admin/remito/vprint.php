@@ -16,8 +16,7 @@
                 <div class="row" id="datos">
                     <div class="col-md-12">
                         <div class="invoice">
-                            <div class="col-md-2" id="cabecera1">
-                                <div class="header1">
+                            <div class="col-md-9" id="cabecera1">
                                     <div class="logo">
                                         <img src="<?php echo base_url() ?>assets/template/dist/img/logo presus.png" width="100">
                                     </div>
@@ -33,9 +32,8 @@
                                         <h4>N°<?php echo $remito->IdRemito; ?></h4>
                                         <h4>Fecha: <?php echo date("d/m/Y", strtotime("$remito->fecha")); ?></h4>
                                     </div>
-                                </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-3" id="cabecera2">
                                 <div class="header2">
                                     <div class="invoice-data">
                                         <h3>ORDEN RECEPCIÓN</h3>
@@ -94,6 +92,9 @@
 <style>
     #cabecera1{
         border: red 5px solid !important;
+    }
+    #cabecera2{
+        border: blue 5px solid !important;
     }
     
     .invoice {
