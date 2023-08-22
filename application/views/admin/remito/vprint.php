@@ -148,12 +148,12 @@
   .cliente{
     display: flex;
     align-items: left;
-    margin-bottom: -353px;
+    margin-bottom: -553px;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: stretch;
     justify-content: space-around;
-    margin-top: -750px !important;
+    margin-top: -650px !important;
   }
 
   .info2 {
