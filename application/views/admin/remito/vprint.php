@@ -16,7 +16,7 @@
                 <div class="row" id="datos">
                     <div class="col-md-12">
                         <div class="invoice">
-                            <div  >
+                            <div class="header">
                                 <section class="col-md-9" id="cabecera1">
                                     <div class="logo">
                                         <img src="<?php echo base_url() ?>assets/template/dist/img/logo presus.png" width="100">
