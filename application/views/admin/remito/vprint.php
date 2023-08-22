@@ -161,8 +161,7 @@
     margin-top: 3%;
     height: 20%;
     width: 5%;
-    position:absolute;
-    top:0px;
+    position: center top ;
    
   }
   .datos p {
