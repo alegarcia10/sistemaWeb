@@ -164,10 +164,6 @@
     margin-left: -60px !important;
   }
  
-  .description {
-    padding: 5px;
-    margin-top: -414px;
-  }
   /*
   .customer-equipment {
     justify-content: space-between;
