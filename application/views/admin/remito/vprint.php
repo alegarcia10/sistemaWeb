@@ -278,7 +278,12 @@
     border: 1px solid #ccc;
     height: 5mm !important;
   }
-  
+  .table-primary{
+    text-align: center;
+  }
+  #tbody1{
+    text-align: left;
+  }
 
   @media print {
   
