@@ -19,10 +19,10 @@
                             <div class="row">
                                 <div class="col-md-12" id="celdas1">
                                     <div class="row" >
-                                        <div class="col-md-6 logo">
+                                        <div class="col-md-5 logo">
                                             <img src="<?php echo base_url()?>assets/template/dist/img/logo presus.png" width="100">
                                         </div>
-                                        <div class="col-md-1 datos">
+                                        <div class="col-md-2 datos">
                                             <p>X</p>
                                         </div>
                                         <div class="col-md-5 datos2">
@@ -159,6 +159,9 @@
     font-size: 25px;
     padding: 0px !important;
     margin-top: 3%;
+    height: 10%;
+    width: 5%;
+    position: center;
   }
   .datos p {
     color: white;
