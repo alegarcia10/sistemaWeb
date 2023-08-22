@@ -92,7 +92,7 @@
 <script>
 
 function printDiv() {
-          var objeto=document.getElementById('printButton'); 
+          var objeto=document.getElementById('areaImprimir'); 
    
    //obtenemos el objeto a imprimir
           var ventana=window.open('','_blank');  //abrimos una ventana vacía nueva
