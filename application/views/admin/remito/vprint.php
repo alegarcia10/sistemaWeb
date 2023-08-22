@@ -81,6 +81,18 @@
                                         <h1>TOTAL: <?php echo '$'.$total; ?></h1>
                                     </div>
                                 </div>
+                                <div class="col-md-12" id="celdas5">
+                                    <div class="row" >
+                                        <div class="col-md-6 cliente1">
+                                            <p>Sr./es: <?php echo $cliente->Nombre; ?></p>
+                                            <p>C.U.I.T: <?php echo $cliente->DniCuit; ?></p>                                            
+                                        </div>
+                                        <div class="col-md-6 cliente2">
+                                            <p>DOMICILIO: <?php echo $cliente->Domicilio; ?></p>
+                                            <p>PROVINCIA: <?php echo $cliente->Provincia; ?></p>
+                                        </div>
+                                    </div>
+                                </div>
 
                             </div>
                         </div>
@@ -146,7 +158,7 @@
     border: 1px solid #ccc;
     border-radius: 15px;
     margin: 5px;
-    height: 180mm !important;
+    height: 185mm !important;
   }
 
   #celdas5{
