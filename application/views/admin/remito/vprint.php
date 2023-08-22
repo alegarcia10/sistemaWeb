@@ -93,6 +93,7 @@
     flex-wrap: nowrap;
     align-content: stretch;
     justify-content: space-around;
+    margin-top: 15px;
 }
   .logo {
     margin-right: 10px;
