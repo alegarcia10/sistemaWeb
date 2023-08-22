@@ -278,7 +278,7 @@
     border: 1px solid #ccc;
     height: 5mm !important;
   }
-  .table-primary{
+  .table-primary th{
     text-align: center !important;
   }
   #tbody1{
