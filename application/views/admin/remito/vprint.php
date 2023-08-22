@@ -146,7 +146,14 @@
     border: 1px solid #ccc;
     border-radius: 15px;
     margin: 5px;
-    height: 135mm !important;
+    height: 180mm !important;
+  }
+
+  #celdas5{
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin: 5px;
+    height: 20mm !important;
   }
 
   .logo {
