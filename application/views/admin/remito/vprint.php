@@ -46,8 +46,8 @@
                             </div>
                             <div class="divider"></div>
                             <div class="description">
-                                <table class="table table-dark">
-                                    <thead>
+                                <table class="table">
+                                    <thead class="thead-dark">
                                         <tr>
                                         <th scope="col">#</th>
                                         <th scope="col">First</th>
@@ -55,7 +55,7 @@
                                         <th scope="col">Handle</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody class="table-primary">
                                         <tr>
                                         <th scope="row">1</th>
                                         <td>Mark</td>
@@ -166,7 +166,7 @@
  
   .description {
     padding: 5px;
-    margin-top: -114px;
+    margin-top: -414px;
   }
   /*
   .customer-equipment {
