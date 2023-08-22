@@ -133,7 +133,7 @@
     font-size: 14px;
     padding-top: 10px;
     align-items: left !important;
-    margin-left: -40px !important;
+    margin-left: -60px !important;
   }
  
   /*
