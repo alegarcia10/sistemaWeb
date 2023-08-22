@@ -156,7 +156,7 @@
   }
   .logo img{
     margin-top: 3%;
-    margin-left: 15%;
+    margin-left: 25%;
     height: 35%;
     width: 55%;
    
@@ -198,7 +198,7 @@
   .datos3 {
     font-size: 10px;
     text-align: center;
-
+    margin-top: 5% !important; 
   }
 
   .cliente1 {
