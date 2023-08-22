@@ -167,7 +167,7 @@
   .productos{
     display: flex;
     align-items: left;
-    margin-bottom: -330px;
+    margin-bottom: -530px;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: stretch;
