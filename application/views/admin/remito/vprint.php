@@ -48,29 +48,29 @@
                             <div class="description">
                                 <table class="table">
                                     <!-- On rows -->
-                                    <tr class="table-active">...</tr>
+                                    <tr class="table-active">asdasd</tr>
 
-                                    <tr class="table-primary">...</tr>
-                                    <tr class="table-secondary">...</tr>
-                                    <tr class="table-success">...</tr>
-                                    <tr class="table-danger">...</tr>
-                                    <tr class="table-warning">...</tr>
-                                    <tr class="table-info">...</tr>
-                                    <tr class="table-light">...</tr>
-                                    <tr class="table-dark">...</tr>
+                                    <tr class="table-primary">.asdasdas</tr>
+                                    <tr class="table-secondary">.asd</tr>
+                                    <tr class="table-success">dasdasd</tr>
+                                    <tr class="table-danger">dasdasdasd</tr>
+                                    <tr class="table-warning">asdasdas</tr>
+                                    <tr class="table-info">asdasdasd</tr>
+                                    <tr class="table-light">asdasdasd</tr>
+                                    <tr class="table-dark">asdasdasdasd</tr>
 
                                     <!-- On cells (`td` or `th`) -->
                                     <tr>
-                                    <td class="table-active">...</td>
+                                    <td class="table-active">asdasdasdasd</td>
 
-                                    <td class="table-primary">...</td>
-                                    <td class="table-secondary">...</td>
-                                    <td class="table-success">...</td>
-                                    <td class="table-danger">...</td>
-                                    <td class="table-warning">...</td>
-                                    <td class="table-info">...</td>
-                                    <td class="table-light">...</td>
-                                    <td class="table-dark">...</td>
+                                    <td class="table-primary">asdasdasdas</td>
+                                    <td class="table-secondary">asdasdasd</td>
+                                    <td class="table-success">asdasda</td>
+                                    <td class="table-danger">asdasd</td>
+                                    <td class="table-warning">asasdasd</td>
+                                    <td class="table-info">asdasdasd</td>
+                                    <td class="table-light">asdasdasd</td>
+                                    <td class="table-dark">asdasdasda</td>
                                     </tr>
                                 </table>
                             </div>
