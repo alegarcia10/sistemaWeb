@@ -36,13 +36,11 @@
                                 <div class="info2">
                                         <p>CLIENTE: <?php echo $cliente->Nombre; ?></p>
                                         <p>CUIT: <?php echo $cliente->DniCuit; ?></p>
-                                    </div>
-                                    <div class="info2">
                                         <p>DOMICILIO: <?php echo $cliente->Domicilio; ?></p>
-                                        <p>LOCALIDAD: <?php echo $cliente->Localidad; ?></p>  
                                     </div>
-                                    <div class="info2">
-                                        <p>PROVINCIA: <?php echo $cliente->Provincia; ?></p>                                 
+                                    <div class="info3">
+                                        <p>PROVINCIA: <?php echo $cliente->Provincia; ?></p>
+                                        <p>LOCALIDAD: <?php echo $cliente->Localidad; ?></p>                                   
                                         <p>TELEFONO: <?php echo $cliente->Telefono1; ?></p>
                                     </div>                            
                             </div>
@@ -132,7 +130,9 @@
 
   .info2 {
     font-size: 14px;
+    padding: 10px;
   }
+  
  
 .invoice-data2 {
     text-align: right;
