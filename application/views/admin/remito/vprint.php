@@ -153,7 +153,7 @@
     flex-wrap: nowrap;
     align-content: stretch;
     justify-content: space-around;
-    padding-top: -500px !important;
+    padding-top: -100px !important;
     
   }
 
