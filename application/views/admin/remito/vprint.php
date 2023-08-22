@@ -15,7 +15,6 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="cuerpo" id='areaImprimir'>
-                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css" media="print">
                             <div class="row">
                                 <div class="col-md-12" id="celdas1">
                                     <div class="row" >
