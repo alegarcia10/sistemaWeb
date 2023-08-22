@@ -92,7 +92,7 @@
 
   .logo {
     margin-right: 2px;
-    border: 1px solid #ccc;
+    
   }
   .logo img{
     margin-top: 3mm;
@@ -102,9 +102,12 @@
   .datos {
     font-size: 10px;
     border: 1px solid #ccc;
+    padding: 0px !important;
+    margin-top: 3mm;
   }
   .datos p {
     margin: 0 0 0px;
+
 }
   
 
