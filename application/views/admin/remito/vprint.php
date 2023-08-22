@@ -23,11 +23,7 @@
                                             <img src="<?php echo base_url()?>assets/template/dist/img/logo presus.png" width="100">
                                         </div>
                                         <div class="col-md-5 datos">
-                                            <p>Elecctrónica BIOS</p>
-                                            <p>Cereseto Oeste 156</p>
-                                            <p>Capital San Juan</p>
-                                            <p>Teléfono: 264-4275852</p>
-                                            <p>Correo Electrónico: electronicabios@gmail.com</p>
+                                            <p>X</p>
                                         </div>
                                         <div class="col-md-3 datos2">
                                             <h2>REMITO</h2>
@@ -157,9 +153,9 @@
     width: 25mm;
   }
   .datos {
-    font-size: 10px;
+    font-size: 25px;
     padding: 0px !important;
-    margin-top: 3mm;
+    margin-top: 3%;
   }
   .datos p {
     margin: 0 0 0px;
@@ -242,7 +238,7 @@
   .datos {
     font-size: 10px;
     padding: 0px !important;
-    margin-top: -15% !important;
+    margin-top: -5% !important;
     margin-left: 30% !important;
   }
   .datos p {
