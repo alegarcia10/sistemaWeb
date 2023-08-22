@@ -405,7 +405,7 @@
   .registrovacio3 {
     border: 1px solid #ccc;
     height: 25mm !important;
-    width: 56.5mm !important;
+    width: 57mm !important;
     margin-left: 112mm !important; 
     margin-top: -25mm !important;
      
