@@ -42,9 +42,8 @@
                                 <div class="col-md-12" id="celdas3">
                                     <div class="row" >
                                         <div class="col-md-6 cliente1">
-                                            <p>CLIENTE: <?php echo $cliente->Nombre; ?></p>
-                                            <p>CUIT: <?php echo $cliente->DniCuit; ?></p>
-                                            
+                                            <p>Sr./es: <?php echo $cliente->Nombre; ?></p>
+                                            <p>CUIT: <?php echo $cliente->DniCuit; ?></p>                                            
                                         </div>
                                         <div class="col-md-6 cliente2">
                                             <p>DOMICILIO: <?php echo $cliente->Domicilio; ?></p>
@@ -203,20 +202,20 @@
   .cliente1 {
     font-size: 12px;
     padding: 0px !important;
-    margin-top: 3mm;
+    margin-top: 3%;
   }
   .cliente1 p {
-    margin-top: 2mm;
-    margin-left: 2mm;
+    margin-top: 2%;
+    margin-left: 5%;
   }
   .cliente2 {
     font-size: 12px;
     padding: 0px !important;
-    margin-top: 3mm;
+    margin-top: 3%;
   }
   .cliente2 p {
-    margin-top: 2mm;
-    margin-left: 2mm;
+    margin-top: 2%;
+    margin-left: 5%;
   }
 
   #celdas4 h1{
