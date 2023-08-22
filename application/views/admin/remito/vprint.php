@@ -27,10 +27,10 @@
                                     <p>Teléfono: 264-4275852</p>
                                     <p>Correo Electrónico: electronicabios@gmail.com</p>
                                 </div>
-                                <div class="invoice-data">
-                                    <h3 id='invoice-data1'>REMITO</h3>
-                                    <h4 id='invoice-data2' >N°<?php echo $remito->IdRemito; ?></h4>
-                                    <h4 id='invoice-data2'>Fecha: <?php echo date("d/m/Y", strtotime("$remito->fecha")); ?></h4>
+                                <div class="invoice-data1">
+                                    <h3 >REMITO</h3>
+                                    <h5>N°<?php echo $remito->IdRemito; ?></h5>
+                                    <h5>Fecha: <?php echo date("d/m/Y", strtotime("$remito->fecha")); ?></h5>
                                 </div>
                             </div>
                             <div class="divider"></div>
@@ -124,11 +124,11 @@
         margin: 3px 0;
     }
 
-    #invoice-data1 {
+    .invoice-data1 {
         text-align: right;
         font-size: 8px;
     }
-    #invoice-data2 {
+    .invoice-data2 {
         text-align: right;
         font-size: 4px;
     }
