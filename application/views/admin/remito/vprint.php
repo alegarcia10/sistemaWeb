@@ -83,6 +83,12 @@
                                 </div>
                                 <div class="col-md-12" id="celdas5">
                                     <div class="row" >
+                                        <div class="col-md-4 registrovacio">                                      
+                                        </div>
+                                        <div class="col-md-4 registrovacio">  
+                                        </div>
+                                        <div class="col-md-4 registrovacio">   
+                                        </div>
                                         <div class="col-md-4 registro">
                                            <p>FIRMA</p>                                       
                                         </div>
@@ -164,7 +170,6 @@
 
   #celdas5{
     border: 1px solid #ccc;
-    border-radius: 15px;
     margin: 5px;
     height: 30mm !important;
     text-align: center;
@@ -245,8 +250,13 @@
     right:10px;
   }
 
+  .registrovacio {
+    border: 1px solid #ccc;
+    height: 25mm !important;
+  }
   .registro {
     border: 1px solid #ccc;
+    height: 5mm !important;
   }
   
 
