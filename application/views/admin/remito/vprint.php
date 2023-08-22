@@ -156,10 +156,9 @@
   }
   .logo img{
     margin-top: 3%;
-    margin-left: 25%;
+    margin-left: 30%;
     height: 35%;
     width: 55%;
-   
   }
   .datos {
     background-color: black;
@@ -198,7 +197,7 @@
   .datos3 {
     font-size: 10px;
     text-align: center;
-    margin-top: 2% !important; 
+    margin-top: 1% !important; 
   }
 
   .cliente1 {
