@@ -34,7 +34,7 @@
                                           <p>Cereseto Oeste 156  - Teléfono: 264-4275852</p>
                                     
                                         </div>
-                                        <div class="col-md-6 datos3">
+                                        <div class="col-md-6 datos4">
                                             <p>C.U.I.T: 30-71621552-7 </p>
                                         </div>
                                     </div>
@@ -224,6 +224,11 @@
     text-align: center;
     margin-top: 1% !important; 
   }
+  .datos4 {
+    font-size: 10px;
+    text-align: center;
+    margin-top: 1% !important; 
+  }
 
   .cliente1 {
     font-size: 12px;
@@ -365,7 +370,17 @@
     text-align: center;
     margin-top: 1% !important; 
     border: 1px solid green;
-    width: 75mm;
+    width: 49% !important;
+
+  }
+  .datos4 {
+    font-size: 10px;
+    text-align: center;
+    margin-top: -1% !important; 
+    border: 1px solid green;
+    width: 49% !important;
+    margin-left: 49% !important;
+
 
   }
 
