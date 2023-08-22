@@ -167,12 +167,11 @@
   .productos{
     display: flex;
     align-items: left;
-    margin-bottom: -0px;
+    margin-bottom: -330px;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: stretch;
     justify-content: space-around;
-    margin-top: -900px !important;
   }
  
   /*
