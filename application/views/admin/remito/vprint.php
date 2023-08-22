@@ -43,7 +43,7 @@
                                     <div class="row" >
                                         <div class="col-md-6 cliente1">
                                             <p>Sr./es: <?php echo $cliente->Nombre; ?></p>
-                                            <p>CUIT: <?php echo $cliente->DniCuit; ?></p>                                            
+                                            <p>C.U.I.T: <?php echo $cliente->DniCuit; ?></p>                                            
                                         </div>
                                         <div class="col-md-6 cliente2">
                                             <p>DOMICILIO: <?php echo $cliente->Domicilio; ?></p>
@@ -140,7 +140,7 @@
     border: 1px solid #ccc;
     border-radius: 15px;
     margin: 5px;
-    height: 25mm !important;
+    height: 20mm !important;
   }
   #celdas4{
     border: 1px solid #ccc;
