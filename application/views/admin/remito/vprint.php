@@ -8,7 +8,7 @@
         <div class="box box-solid" style="margin-top: 1px;">
             <div class="box-body">
                 <div class="col-sm-3 form-group" id="botones" style="margin-left: -85px;">
-                           <a class="btn btn-info" style="margin-bottom: 10px; margin-rigth: 10px;" href="<?php echo base_url();?>mantenimiento/cequipos">Volver</a>
+                           <a class="btn btn-info" style="margin-bottom: 10px; margin-rigth: 10px;" href="<?php echo base_url();?>mantenimiento/cremitos">Volver</a>
                            <button id="printButton" style="margin-bottom: 10px; margin-rigth: 10px;" class="btn btn-success">Imprimir</button>
                          
                 </div>
@@ -80,7 +80,175 @@
                                 </div>
 
                             </div>
-                           
+                            <style>
+                              .cuerpo {
+                                width: 148mm; /* Ancho A5 */
+                                height: 210mm; /* Alto A5 */
+                                margin: auto;
+                                margin-top: 10px !important;
+                                padding: 25px;
+                                border: 1px solid #ccc;
+                                box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+                              }
+
+                              #celdas1{
+                                border: 1px solid #ccc;
+                                border-radius: 15px;
+                                margin: 5px;
+                                height: 30mm !important;
+                              }
+                              #celdas3{
+                                border: 1px solid #ccc;
+                                border-radius: 15px;
+                                margin: 5px;
+                                height: 25mm !important;
+                              }
+                              #celdas4{
+                                border: 1px solid #ccc;
+                                border-radius: 15px;
+                                margin: 5px;
+                                height: 135mm !important;
+                              }
+
+                              .logo {
+                                margin-right: 2px;
+                                
+                              }
+                              .logo img{
+                                margin-top: 3mm;
+                                height: 20mm;
+                                width: 25mm;
+                              }
+                              .datos {
+                                font-size: 10px;
+                                padding: 0px !important;
+                                margin-top: 3mm;
+                              }
+                              .datos p {
+                                margin: 0 0 0px;
+
+                            }
+                            .datos2 {
+                                font-size: 10px;
+                                padding: 0px !important;
+                                margin-top: -2mm;
+                                text-align: right;
+                                margin-left: 5mm !important;
+                              }
+
+                              .cliente {
+                                font-size: 12px;
+                                padding: 0px !important;
+                                margin-top: 3mm;
+                              }
+                              .cliente p {
+                                margin-top: 2mm;
+                                margin-left: 2mm;
+                              }
+
+                              #celdas4 h1{
+                                position:absolute;
+                                bottom:5px;
+                                right:10px;
+                              }
+                              
+
+                              @media print {
+                              body {
+                                margin: 0;
+                                justify-content: space-between;
+                                padding: 0;
+                                font-family: Arial, sans-serif;
+                                font-size: 10px;
+                              }
+
+                              .main-footer {
+                                display: none;
+                              }
+
+                              .box box-solid{
+                                display: none;
+                              }
+
+                              #botones{
+                                display: none;
+                              }
+
+                              #celdas1{
+                                border: 1px solid #ccc;
+                                border-radius: 15px;
+                                margin: 5px;
+                                height: 30mm !important;
+                              }
+                              #celdas3{
+                                border: 1px solid #ccc;
+                                border-radius: 15px;
+                                margin: 5px;
+                                height: 25mm !important;
+                              }
+                              #celdas4{
+                                border: 1px solid #ccc;
+                                border-radius: 15px;
+                                margin: 5px;
+                                height: 135mm !important;
+                              }
+
+                              .logo {
+                                margin-right: 2px;
+                                
+                              }
+                              .logo img{
+                                margin-top: 3mm;
+                                height: 20mm;
+                                width: 25mm;
+                              }
+                              .datos {
+                                font-size: 10px;
+                                padding: 0px !important;
+                                margin-top: 3mm;
+                              }
+                              .datos p {
+                                margin: 0 0 0px;
+
+                            }
+                            .datos2 {
+                                font-size: 10px;
+                                padding: 0px !important;
+                                margin-top: -2mm;
+                                text-align: right;
+                                margin-left: 5mm !important;
+                              }
+
+                              .cliente {
+                                font-size: 12px;
+                                padding: 0px !important;
+                                margin-top: 3mm;
+                              }
+                              .cliente p {
+                                margin-top: 2mm;
+                                margin-left: 2mm;
+                              }
+
+                              #celdas4 h1{
+                                position:absolute;
+                                bottom:5px;
+                                right:10px;
+                              }
+                              
+                              .cuerpo {
+                                width: 148mm; /* Ancho A5 */
+                                height: 210mm; /* Alto A5 */
+                                margin: auto;
+                                margin-top: 10px !important;
+                                padding: 25px;
+                                border: 1px solid #ccc;
+                                box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+                              }
+
+
+                              /* ... otros estilos para la impresión ... */
+                            }
+                            </style>
                         </div>
                     </div>
                 </div>
