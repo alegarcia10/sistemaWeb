@@ -399,7 +399,7 @@
     height: 25mm !important;
     width: 50mm !important;
     margin-left: 50mm !important; 
-    margin-bottom: 25mm !important;
+    margin-top: -25mm !important;
     
   }
   .registrovacio3 {
