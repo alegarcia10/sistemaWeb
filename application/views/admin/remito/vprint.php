@@ -283,8 +283,6 @@
   }
   #tbody1 td{
     text-align: left !important;
-    font-size: 10px !important;
-    height:11px !important;
     font-weight: bold !important;
   }
 
