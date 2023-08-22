@@ -211,7 +211,7 @@
   #celdas3{
     border: 1px solid #ccc;
     border-radius: 15px;
-    margin: 0px !important;
+    margin-left: 25% !important;
     height: 25mm !important;
   }
   #celdas4{
