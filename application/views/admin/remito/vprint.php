@@ -138,15 +138,13 @@
     flex-wrap: nowrap;
     align-content: stretch;
     justify-content: space-around;
-    padding-top: -100px !important;
+    margin-top: -100px !important;
   }
 
   .info2 {
     font-size: 14px;
   }
-  .info2 p {
-    margin: auto;
-}
+ 
 .invoice-data2 {
     text-align: right;
     font-size: 8px;
