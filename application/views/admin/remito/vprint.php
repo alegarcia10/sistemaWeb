@@ -245,7 +245,7 @@
     padding: 0px !important;
     margin-top: -15% !important;
     text-align: right;
-    padding: 0 5px 0 0;
+    padding: 0 30% 0 0;
   }
 
   .cliente {
