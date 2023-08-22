@@ -84,12 +84,14 @@
                                 <div class="col-md-12" id="celdas5">
                                     <div class="row" >
                                         <div class="col-md-6 cliente1">
-                                            <p>Sr./es: <?php echo $cliente->Nombre; ?></p>
-                                            <p>C.U.I.T: <?php echo $cliente->DniCuit; ?></p>                                            
+                                           <h3>Firma Cliente</h3>
+                                           <br>
+                                           <p>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</p>                                          
                                         </div>
                                         <div class="col-md-6 cliente2">
-                                            <p>DOMICILIO: <?php echo $cliente->Domicilio; ?></p>
-                                            <p>PROVINCIA: <?php echo $cliente->Provincia; ?></p>
+                                            <h3>Firma Cliente</h3>
+                                            <br>
+                                            <p>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</p> 
                                         </div>
                                     </div>
                                 </div>
@@ -158,14 +160,14 @@
     border: 1px solid #ccc;
     border-radius: 15px;
     margin: 5px;
-    height: 205mm !important;
+    height: 195mm !important;
   }
 
   #celdas5{
     border: 1px solid #ccc;
     border-radius: 15px;
     margin: 5px;
-    height: 20mm !important;
+    height: 30mm !important;
   }
 
   .logo {
