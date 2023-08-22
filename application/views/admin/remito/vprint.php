@@ -39,12 +39,11 @@
                                         <div class="col-md-6 cliente">
                                             <p>CLIENTE: <?php echo $cliente->Nombre; ?></p>
                                             <p>CUIT: <?php echo $cliente->DniCuit; ?></p>
-                                            <p>DOMICILIO: <?php echo $cliente->Domicilio; ?></p>
+                                            
                                         </div>
                                         <div class="col-md-6 cliente">
+                                            <p>DOMICILIO: <?php echo $cliente->Domicilio; ?></p>
                                             <p>PROVINCIA: <?php echo $cliente->Provincia; ?></p>
-                                            <p>LOCALIDAD: <?php echo $cliente->Localidad; ?></p>                                   
-                                            <p>TELEFONO: <?php echo $cliente->Telefono1; ?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -97,13 +96,13 @@
     border: 1px solid #ccc;
     border-radius: 15px;
     margin: 5px;
-    height: 30mm !important;
+    height: 25mm !important;
   }
   #celdas4{
     border: 1px solid #ccc;
     border-radius: 15px;
     margin: 5px;
-    height: 130mm !important;
+    height: 135mm !important;
   }
 
   .logo {
@@ -125,7 +124,7 @@
 
 }
 .datos2 {
-    font-size: 12px;
+    font-size: 10px;
     padding: 0px !important;
     margin-top: -2mm;
     text-align: right;
@@ -133,7 +132,7 @@
   }
 
   .cliente {
-    font-size: 10px;
+    font-size: 12px;
     padding: 0px !important;
     margin-top: 3mm;
   }
