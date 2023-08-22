@@ -17,6 +17,21 @@
                             <div class="row">
                                 <div class="col-md-12" id="celdas1">
                                     <div class="row" >
+                                        <div class="col-md-6 logo">
+                                            <p>CLIENTE: <?php echo $cliente->Nombre; ?></p>
+                                            <p>CUIT: <?php echo $cliente->DniCuit; ?></p>
+                                            <p>DOMICILIO: <?php echo $cliente->Domicilio; ?></p>
+                                        </div>
+                                        <div class="col-md-6 datos">
+                                            <p>PROVINCIA: <?php echo $cliente->Provincia; ?></p>
+                                            <p>LOCALIDAD: <?php echo $cliente->Localidad; ?></p>                                   
+                                            <p>TELEFONO: <?php echo $cliente->Telefono1; ?></p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-md-12" id="celdas3">
+                                <div class="row" >
                                         <div class="col-md-3 logo">
                                             <img src="<?php echo base_url()?>assets/template/dist/img/logo presus.png" width="100">
                                         </div>
@@ -33,8 +48,6 @@
                                             <h5>Fecha: <?php echo date("d/m/Y", strtotime("$remito->fecha")); ?></h5>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-12" id="celdas3">
                                     
                                 </div>
                                 <div class="col-md-12" id="celdas4">
