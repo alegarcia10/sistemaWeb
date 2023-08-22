@@ -383,14 +383,14 @@
     height: 25mm !important;
     width: 50mm !important;
     margin-left: 50mm !important; 
-    margin-top: -25mm !important; 
+    
   }
   .registrovacio3 {
     border: 1px solid #ccc;
     height: 25mm !important;
     width: 50mm !important;
     margin-left: 100mm !important; 
-    margin-top: -25mm !important;  
+     
   }
   .registro1 {
     border: 1px solid #ccc;
@@ -401,15 +401,12 @@
     border: 1px solid #ccc;
     height: 5mm !important;
     width: 50mm !important; 
-    margin-left: 50mm !important; 
-    margin-top: -25mm !important;
   }
   .registro3 {
     border: 1px solid #ccc;
     height: 5mm !important;
     width: 50mm !important; 
-    margin-left: 100mm !important; 
-    margin-top: -25mm !important; 
+  
   }
 
   /* ... otros estilos para la impresión ... */
