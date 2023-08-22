@@ -97,7 +97,7 @@
 }
   .logo {
     margin-right: 10px;
-    max-width: 30mm; /* Ancho del logo */
+    max-width: 35mm; /* Ancho del logo */
   }
   .info {
     font-size: 10px;
@@ -120,7 +120,7 @@
 
   .cliente{
     display: flex;
-    align-items: center;
+    align-items: left;
     margin-bottom: -343px;
     flex-direction: row;
     flex-wrap: nowrap;
