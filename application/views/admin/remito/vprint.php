@@ -35,11 +35,21 @@
                             <div class="cliente">
                                 <div class="info2">
 
-                                    <strong>Cliente: <?php echo $cliente->Nombre; ?></strong>
+                                    <strong>Cliente:</strong>
                                     <p><?php echo $cliente->Nombre; ?></p>
-                                    <strong>Domicilio: <?php echo $cliente->Domicilio." ".$cliente->Localidad." ".$cliente->Provincia; ?></strong>
-                                    <strong>Teléfono: <?php echo $cliente->Telefono1; ?></strong>
-                                    <strong>Correo Electrónico: </strong>
+                                    <br>
+                                    <strong>Domicilio: </strong>
+                                    <p><?php echo $cliente->Domicilio; ?></p>
+                                    <br>
+                                    <strong>Localidad: </strong>
+                                    <p><?php echo $cliente->Localidad; ?></p>
+                                    <br>
+                                    <strong>Provincia: </strong>
+                                    <p><?php echo $cliente->Provincia; ?></p>
+                                    <br>
+                                    <strong>Teléfono: </strong>
+                                    <p><?php echo $cliente->Telefono1; ?></p>
+                                    <br>
                                 </div>
                             </div>
                             <div class="divider"></div>
@@ -135,7 +145,7 @@
   }
 
   .info2 {
-    font-size: 10px;
+    font-size: 12px;
   }
   .info2 p {
     margin: 0 0 0px;
