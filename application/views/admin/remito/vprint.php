@@ -15,12 +15,9 @@
                     <div class="col-md-12">
                         <div class="cuerpo">
                             <div class="row">
-                                <div class="col-md-8" id="celdas1">
+                                <div class="col-md-12" id="celdas1">
                                     <p>asdasd</p>
                                     <p>asdasdasd</p>
-                                </div>
-                                <div class="col-md-4" id="celdas2">
-                                    
                                 </div>
                                 <div class="col-md-12" id="celdas3">
                                     
@@ -57,8 +54,7 @@
   .cuerpo {
     width: 148mm; /* Ancho A5 */
     height: 210mm; /* Alto A5 */
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: auto;
     padding: 25px;
     border: 1px solid #ccc;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -66,12 +62,12 @@
 
   #celdas1{
     border-style: solid;
-    
+    margin: 5px;
     height: 30mm !important;
   }
   #celdas2{
     border-style: solid;
- 
+    margin: 5px;
     height: 30mm !important;
   }
   #celdas3{
