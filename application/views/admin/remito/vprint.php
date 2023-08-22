@@ -172,7 +172,7 @@
     flex-wrap: nowrap;
     align-content: stretch;
     justify-content: space-around;
-    margin-top: -500px !important;
+    margin-top: -900px !important;
   }
  
   /*
