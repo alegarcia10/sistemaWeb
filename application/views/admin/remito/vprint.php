@@ -158,8 +158,8 @@
     background-color: black;
     font-size: 25px;
     padding: 0px !important;
-    margin-top: 3%;
-    height: 100px !important;
+    margin-top: 0% !important;
+    height: 50px !important;
     width: 5%;
     position: center top ;
    
@@ -167,6 +167,9 @@
   .datos p {
     color: white;
     margin: 0 0 0px;
+    position:absolute;
+    top:5px;
+    right:10px;
 
 }
 .datos2 {
