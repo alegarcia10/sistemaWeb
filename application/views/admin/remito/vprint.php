@@ -66,8 +66,8 @@
                                                 <?php if (!empty($producto)) : ?>
                                                     <?php foreach ($producto as $atributos) : ?>
                                                         <tr>
-                                                            <td><?php echo $atributos->cantidad; ?></td>
-                                                            <td><?php echo $atributos->producto; ?></td>
+                                                            <td id='tbody2'><?php echo $atributos->cantidad; ?></td>
+                                                            <td id='tbody3'><?php echo $atributos->producto; ?></td>
                                                             <td></td>
                                                         </tr>
                                                     <?php endforeach ?>
@@ -281,7 +281,11 @@
   .table-primary th{
     text-align: center !important;
   }
-  #tbody1 td{
+  #tbody2 {
+    text-align: center !important;
+    font-weight: bold !important;
+  }
+  #tbody3 {
     text-align: left !important;
     font-weight: bold !important;
   }
@@ -460,9 +464,13 @@
   .table-primary th{
     text-align: center !important;
   }
-  #tbody1 td{
+  #tbody2 {
+    text-align: center !important;
+    font-weight: bold !important;
+  }
+  #tbody3 {
     text-align: left !important;
-    fon
+    font-weight: bold !important;
   }
 
   /* ... otros estilos para la impresión ... */
