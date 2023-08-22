@@ -149,7 +149,7 @@
   }
   .logo img{
     margin-top: 3%;
-    margin-left: 5%;
+    margin-left: 15%;
     height: 35%;
     width: 55%;
    
