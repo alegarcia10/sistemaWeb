@@ -413,17 +413,19 @@
   .registro1 {
     border: 1px solid #ccc;
     height: 5mm !important;
-    width: 60mm !important; 
+    width: 56mm !important;  
   }
   .registro2 {
     border: 1px solid #ccc;
     height: 5mm !important;
-    width: 60mm !important; 
+    margin-left: 56mm !important; 
+    margin-top: -25mm !important; 
   }
   .registro3 {
     border: 1px solid #ccc;
     height: 5mm !important;
-    width: 50mm !important; 
+    margin-left: 112mm !important; 
+    margin-top: -25mm !important;
   
   }
 
