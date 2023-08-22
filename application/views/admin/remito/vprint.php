@@ -33,7 +33,7 @@
                             </div>   
                             <div class="divider"></div>
                             <div class="cliente">
-                                <div class="">
+                                <div class="info2">
                                     <h3>Datos del Cliente</h3>
                                     <p>Cliente: <?php echo $cliente->Nombre; ?></p>
                                     <p>Domicilio: <?php echo $cliente->Domicilio." ".$cliente->Localidad." ".$cliente->Provincia; ?></p>
@@ -124,13 +124,20 @@
   .cliente{
     display: flex;
     align-items: left;
-    margin-bottom: -93px;
+    margin-bottom: -53px;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: stretch;
     justify-content: space-around;
 
   }
+
+  .info2 {
+    font-size: 10px;
+  }
+  .info2 p {
+    margin: 0 0 0px;
+}
   /*
   .customer-equipment {
     justify-content: space-between;
