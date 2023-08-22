@@ -115,7 +115,7 @@
   .header {
     display: flex;
     align-items: center;
-    margin-bottom: -873px;
+    margin-bottom: -923px;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: stretch;
@@ -153,7 +153,7 @@
     flex-wrap: nowrap;
     align-content: stretch;
     justify-content: space-around;
-    margin-top: -950px !important;
+    margin-top: -650px !important;
   }
 
   .info2 {
