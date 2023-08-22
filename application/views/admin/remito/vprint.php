@@ -19,13 +19,13 @@
                             <div class="row">
                                 <div class="col-md-12" id="celdas1">
                                     <div class="row" >
-                                        <div class="col-md-3 logo">
+                                        <div class="col-md-5 logo">
                                             <img src="<?php echo base_url()?>assets/template/dist/img/logo presus.png" width="100">
                                         </div>
-                                        <div class="col-md-5 datos">
+                                        <div class="col-md-1 datos">
                                             <p>X</p>
                                         </div>
-                                        <div class="col-md-3 datos2">
+                                        <div class="col-md-5 datos2">
                                             <h2>REMITO</h2>
                                             <h5>N°<?php echo $remito->IdRemito; ?></h5>
                                             <h5>Fecha: <?php echo date("d/m/Y", strtotime("$remito->fecha")); ?></h5>
@@ -148,9 +148,9 @@
     
   }
   .logo img{
-    margin-top: 3mm;
-    height: 20mm;
-    width: 25mm;
+    margin-top: 3%;
+    height: 20%;
+    width: 25%;
   }
   .datos {
     font-size: 25px;
