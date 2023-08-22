@@ -407,6 +407,7 @@
     height: 25mm !important;
     width: 50mm !important;
     margin-left: 100mm !important; 
+    margin-top: -25mm !important;
      
   }
   .registro1 {
