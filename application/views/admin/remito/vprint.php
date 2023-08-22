@@ -355,7 +355,6 @@
     margin-top: -10% !important;
     text-align: left;
     margin-left: 55% !important;
-    border: 1px solid blue;
   
   }
 
@@ -376,7 +375,7 @@
   .datos4 {
     font-size: 10px;
     text-align: center;
-    margin-top: -5% !important; 
+    margin-top: -4% !important; 
     border: 1px solid green;
     width: 49% !important;
     margin-left: 49% !important;
