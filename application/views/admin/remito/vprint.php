@@ -166,6 +166,7 @@
     font-size: 25px;
     padding: 0px !important;
     margin-top: 0% !important;
+    margin-left: 5% !important;
     height: 65px !important;
     width: 5%;
     position: center top ;
