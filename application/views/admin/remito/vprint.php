@@ -20,12 +20,17 @@
                                         <div class="col-md-3 logo">
                                             <img src="<?php echo base_url()?>assets/template/dist/img/logo presus.png" width="100">
                                         </div>
-                                        <div class="col-md-8 datos">
+                                        <div class="col-md-5 datos">
                                             <p>Elecctrónica BIOS</p>
                                             <p>Cereseto Oeste 156</p>
                                             <p>Capital San Juan</p>
                                             <p>Teléfono: 264-4275852</p>
                                             <p>Correo Electrónico: electronicabios@gmail.com</p>
+                                        </div>
+                                        <div class="col-md-3 datos">
+                                            <h2>REMITO</h2>
+                                            <h4>N°<?php echo $remito->IdRemito; ?></h4>
+                                            <h4>Fecha: <?php echo date("d/m/Y", strtotime("$remito->fecha")); ?></h4>
                                         </div>
                                     </div>
                                 </div>
