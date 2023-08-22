@@ -97,7 +97,7 @@
   .logo img{
     margin-top: 3mm;
     height: 20mm;
-    width: 20mm;
+    width: 25mm;
   }
   .datos {
     font-size: 10px;
