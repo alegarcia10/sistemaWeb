@@ -234,7 +234,7 @@
     font-size: 10px;
     padding: 0px !important;
     margin-top: -15% !important;
-    margin-left: 10% !important;
+    margin-left: 30% !important;
   }
   .datos p {
     margin: 0 0 0px;
@@ -245,7 +245,7 @@
    
     margin-top: -15% !important;
     text-align: right;
-    padding: 0 30% 0 0 !important;
+    padding: 0 2% 0 0 !important;
   }
 
   .cliente {
