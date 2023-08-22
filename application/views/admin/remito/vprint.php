@@ -193,8 +193,8 @@
   @media print {
   
     .cuerpo {
-    width: 210mm; /* Ancho A5 */
-    height: 297mm; /* Alto A5 */
+    width: 200mm; /* Ancho A4 */
+    height: 250mm; /* Alto A4 */
     margin: auto;
     margin-top: 10px !important;
     padding: 25px;
