@@ -88,8 +88,8 @@
 </script>
 <style>
     #cabecera1{
-        width: auto;
-        height: auto;
+        width: 100%;
+        height: 100%;
         border: red 5px solid !important;
         padding: 2px;
     }
@@ -117,7 +117,7 @@
     .header {
         display: flex;
         align-items: center;
-       
+        margin: auto;
         flex-direction: row;
         flex-wrap: nowrap;
         align-content: stretch;
