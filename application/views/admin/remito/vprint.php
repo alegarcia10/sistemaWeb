@@ -149,7 +149,7 @@
   .cliente{
     display: flex;
     align-items: left;
-    margin-bottom: -500px;
+    margin-bottom: -0px;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: stretch;
@@ -167,12 +167,12 @@
   .productos{
     display: flex;
     align-items: left;
-    margin-bottom: -353px;
+    margin-bottom: -0px;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: stretch;
     justify-content: space-around;
-    margin-top: -350px !important;
+    margin-top: -500px !important;
   }
  
   /*
