@@ -5,11 +5,11 @@
         </div>
     </section>
     <section class="content" >
-        <div class="box solid" style="margin-top: 35 px;">
+        <div class="box box-solid" style="margin-top: 1px;">
             <div class="box-body">
-                <div class="col-sm-3 form-group" id="botones" style="margin-left: -85px;" style="margin-top: 35 px;">
-                                <a class="btn btn-info" style="margin-bottom: 10px; margin-rigth: 10px;" href="<?php echo base_url();?>mantenimiento/cremitos">Volver</a>
-                                <button id="printButton" style="margin-bottom: 10px; margin-rigth: 10px;" class="btn btn-success">Imprimir</button>
+                <div class="col-sm-3 form-group" id="botones" style="margin-left: -85px;">
+                           <a class="btn btn-info" style="margin-bottom: 10px; margin-rigth: 10px;" href="<?php echo base_url();?>mantenimiento/cequipos">Volver</a>
+                           <button id="printButton" style="margin-bottom: 10px; margin-rigth: 10px;" class="btn btn-success">Imprimir</button>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
