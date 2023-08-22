@@ -98,7 +98,7 @@
     .header {
         display: flex;
         align-items: center;
-        margin-bottom: -93px;
+        margin-bottom: -133px;
         flex-direction: row;
         flex-wrap: nowrap;
         align-content: stretch;
