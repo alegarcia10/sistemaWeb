@@ -31,9 +31,8 @@
                                     <h4>Fecha: <?php echo date("d/m/Y", strtotime("$remito->fecha")); ?></h4>
                                 </div>
                             </div>   
-                            <div class="divider"></div>
+                            <div class="divider1"></div>
                             <div class="cliente">
-                               <div id="clienteInfo">
                                 <div class="info2">
                                         <p>CLIENTE: <?php echo $cliente->Nombre; ?></p>
                                         <p>CUIT: <?php echo $cliente->DniCuit; ?></p>
@@ -45,8 +44,7 @@
                                     <div class="info2">
                                         <p>PROVINCIA: <?php echo $cliente->Provincia; ?></p>                                 
                                         <p>TELEFONO: <?php echo $cliente->Telefono1; ?></p>
-                                    </div>
-                               </div> 
+                                    </div>                            
                             </div>
                             <div class="divider"></div>
                             <div class="description">
@@ -119,6 +117,10 @@
   .info p {
     margin: 0 0 0px;
 }
+.divider1 {
+    border-top: 1px solid #ccc;
+    margin: 1px 0;
+  }
   .divider {
     border-top: 1px solid #ccc;
     margin: 3px 0;
@@ -128,9 +130,6 @@
     font-size: 8px;
   }
 
-    #clienteInfo{
-        padding-top: -100px !important;
-    }
   .cliente{
     display: flex;
     align-items: center;
