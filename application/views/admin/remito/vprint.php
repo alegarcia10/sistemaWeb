@@ -249,9 +249,9 @@
 
 }
 .datos2 {
-    font-size: 10px;
+    font-size: 5px;
     padding: 0px !important;
-    margin-top: -2mm;
+    margin-top: -5mm;
     text-align: right;
     margin-left: 5mm !important;
   }
