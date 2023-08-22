@@ -119,7 +119,7 @@
   </script>
 <style>
   .cuerpo {
-    width: 190mm; /* Ancho A4 */
+    width: 150mm; /* Ancho A4 */
     height: 297mm; /* Alto A4 */
     margin: auto;
     margin-top: 10px !important;
