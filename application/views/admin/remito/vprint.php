@@ -211,7 +211,7 @@
   .cliente2 {
     font-size: 12px;
     padding: 0px !important;
-    margin-top: 3%;
+    margin-top: 1%;
   }
   .cliente2 p {
     margin-top: 2%;
