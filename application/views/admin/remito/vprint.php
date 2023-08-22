@@ -42,14 +42,6 @@
                                     <p>Teléfono: <?php echo $cliente->Telefono1; ?></p>
                                     <p>Correo Electrónico: </p>
                                 </div>
-                                <div class="equipment">
-                                    <h3>Datos del equipo</h3>
-                                    <p>Marca: <?php echo $remito->IdRemito; ?> </p>
-                                    <p>Modelo: <?php echo $remito->IdRemito; ?></p>
-                                    <p>N° de Serie: <?php echo $remito->IdRemito; ?></p>
-                                    <p>Sector: <?php echo $remito->IdRemito; ?></p>
-                                    <p>Accesorios: <?php echo $remito->IdRemito; ?></p>
-                                </div>
                             </div>
                             <div class="divider"></div>
                             <div class="description">
