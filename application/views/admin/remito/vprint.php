@@ -83,14 +83,14 @@
                                 </div>
                                 <div class="col-md-12" id="celdas5">
                                     <div class="row" >
-                                        <div class="col-md-4 regitro">
-                                           <h3>FIRMA</h3>                                       
+                                        <div class="col-md-4 registro">
+                                           <p>FIRMA</p>                                       
                                         </div>
-                                        <div class="col-md-4 regitro">
-                                            <h3>ACLARACION</h3>
+                                        <div class="col-md-4 registro">
+                                            <p>ACLARACION</p>
                                         </div>
-                                        <div class="col-md-4 regitro">
-                                            <h3>N° Y TIPO DE DOCUMENTO</h3>
+                                        <div class="col-md-4 registro">
+                                            <p>N° Y TIPO DE DOCUMENTO</p>
                                         </div>
                                     </div>
                                 </div>
