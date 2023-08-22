@@ -113,6 +113,7 @@
 
     .info {
         font-size: 12px;
+        padding-right: 20%;
     }
 
     .info p {
