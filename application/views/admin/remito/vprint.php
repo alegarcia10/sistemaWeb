@@ -119,7 +119,7 @@
   </script>
 <style>
   .cuerpo {
-    width: 150mm; /* Ancho A4 */
+    width: 210mm; /* Ancho A4 */
     height: 297mm; /* Alto A4 */
     margin: auto;
     margin-top: 10px !important;
@@ -193,7 +193,7 @@
   @media print {
   
     .cuerpo {
-    width: 200mm; /* Ancho A4 */
+    width: 150mm; /* Ancho A4 */
     height: 250mm; /* Alto A4 */
     margin: auto;
     margin-top: 10px !important;
