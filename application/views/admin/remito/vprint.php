@@ -148,7 +148,7 @@
   .cliente{
     display: flex;
     align-items: left;
-    margin-bottom: -1253px;
+    margin-bottom: -1300px;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: stretch;
