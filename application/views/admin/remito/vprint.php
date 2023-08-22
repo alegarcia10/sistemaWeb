@@ -288,6 +288,7 @@
   #tbody3 {
     text-align: left !important;
     font-weight: bold !important;
+    border: 0 1px 0 solid #ccc;
   }
 
   @media print {
