@@ -74,7 +74,7 @@
                                         </table>
                                     </div>
                                     <div>
-                                        <h1>TOTAL: <?php echo $total; ?></h1>
+                                        <h1>TOTAL: <?php echo '$'.$total; ?></h1>
                                     </div>
                                 </div>
 
