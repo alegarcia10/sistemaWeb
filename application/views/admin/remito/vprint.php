@@ -48,30 +48,36 @@
                                     </div>
                                 </div>
                                 <div class="col-md-12" id="celdas4">
-                                    <table class="table table-dark">
-                                            <thead>
-                                                <tr>
-                                                <th scope="col">#</th>
-                                                <th scope="col">Producto</th>
-                                                <th scope="col">Cantidad</th>
-                                                <th scope="col">Precio</th>
-                                                </tr>
-                                            </thead>
-
-                                            <tbody id='tbody1'>
-                                            <?php if (!empty($producto)) : ?>
-                                                <?php foreach ($producto as $atributos) : ?>
+                                    <div>
+                                        <table class="table table-dark">
+                                                <thead>
                                                     <tr>
-                                                        <td><?php echo $atributos->IdProducto; ?></td>
-                                                        <td><?php echo $atributos->producto; ?></td>
-                                                        <td><?php echo $atributos->cantidad; ?></td>
-                                                        <td><?php echo $atributos->precio; ?></td>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Producto</th>
+                                                    <th scope="col">Cantidad</th>
+                                                    <th scope="col">Precio</th>
                                                     </tr>
-                                                <?php endforeach ?>
-                                            <?php endif; ?>
-                                        </tbody>
-                                    </table>
+                                                </thead>
+
+                                                <tbody id='tbody1'>
+                                                <?php if (!empty($producto)) : ?>
+                                                    <?php foreach ($producto as $atributos) : ?>
+                                                        <tr>
+                                                            <td><?php echo $atributos->IdProducto; ?></td>
+                                                            <td><?php echo $atributos->producto; ?></td>
+                                                            <td><?php echo $atributos->cantidad; ?></td>
+                                                            <td><?php echo $atributos->precio; ?></td>
+                                                        </tr>
+                                                    <?php endforeach ?>
+                                                <?php endif; ?>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div>
+                                        <h1>TOTAL: $100</h1>
+                                    </div>
                                 </div>
+
                             </div>
                            
                         </div>
@@ -161,6 +167,12 @@
   .cliente p {
     margin-top: 2mm;
     margin-left: 2mm;
+  }
+
+  #celdas4 h1{
+    position:absolute;
+    bottom:5px;
+    right:10px;
   }
   
 
