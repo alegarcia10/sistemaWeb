@@ -233,7 +233,8 @@
   .datos {
     font-size: 10px;
     padding: 0px !important;
-    margin-top: 3mm;
+    margin-top: -35% !important;
+    margin-left: 10% !important;
   }
   .datos p {
     margin: 0 0 0px;
