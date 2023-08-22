@@ -113,7 +113,8 @@
 
     .info {
         font-size: 12px;
-        padding-right: 20% !important;
+        padding-right: 10% !important;
+        text-align: left;
     }
 
     .info p {
