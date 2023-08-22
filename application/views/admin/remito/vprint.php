@@ -91,11 +91,13 @@
   }
 
   .logo {
-    margin-right: 10px;
+    margin-right: 2px;
+    border: 1px solid #ccc;
+  }
+  .logo img{
     margin-top: 5mm;
     height: 25mm;
     width: 25mm;
-    border: 1px solid #ccc;
   }
   .datos {
     font-size: 10px;
