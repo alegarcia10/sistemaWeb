@@ -211,14 +211,68 @@
     display: none;
   }
 
-  .cuerpo {
-    width: 148mm;
-    height: 208mm;
-    margin: 0;
-    padding: 10px;
+  #celdas1{
     border: 1px solid #ccc;
-    box-shadow: none;
+    border-radius: 15px;
+    margin: 5px;
+    height: 30mm !important;
   }
+  #celdas3{
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin: 5px;
+    height: 25mm !important;
+  }
+  #celdas4{
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin: 5px;
+    height: 135mm !important;
+  }
+
+  .logo {
+    margin-right: 2px;
+    
+  }
+  .logo img{
+    margin-top: 3mm;
+    height: 20mm;
+    width: 25mm;
+  }
+  .datos {
+    font-size: 10px;
+    padding: 0px !important;
+    margin-top: 3mm;
+  }
+  .datos p {
+    margin: 0 0 0px;
+
+}
+.datos2 {
+    font-size: 10px;
+    padding: 0px !important;
+    margin-top: -2mm;
+    text-align: right;
+    margin-left: 5mm !important;
+  }
+
+  .cliente {
+    font-size: 12px;
+    padding: 0px !important;
+    margin-top: 3mm;
+  }
+  .cliente p {
+    margin-top: 2mm;
+    margin-left: 2mm;
+  }
+
+  #celdas4 h1{
+    position:absolute;
+    bottom:5px;
+    right:10px;
+  }
+  
+
 
   /* ... otros estilos para la impresión ... */
 }
