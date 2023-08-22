@@ -51,18 +51,7 @@
                                 <h3>Descripción de Avería:</h3>
                                 <p><?php echo $remito->IdRemito; ?></p>  
                             </div>
-                            <div class="signatures">
-                                <div class="signature">
-                                    <h3>Firma Cliente</h3>
-                                    <br>
-                                    <p>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</p>
-                                </div>
-                                <div class="signature">
-                                    <h3>Firma Técnico</h3>
-                                    <br>
-                                    <p>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</p>
-                                </div>
-                            </div>  
+                            
                         </div>
                     </div>
                 </div>
