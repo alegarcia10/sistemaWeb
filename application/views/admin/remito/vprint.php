@@ -279,10 +279,10 @@
     height: 5mm !important;
   }
   .table-primary{
-    text-align: center;
+    text-align: center !important;
   }
   #tbody1{
-    text-align: left;
+    text-align: left !important;
   }
 
   @media print {
