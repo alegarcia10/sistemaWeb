@@ -250,11 +250,27 @@
     right:10px;
   }
 
-  .registrovacio {
+  .registrovacio1  {
     border: 1px solid #ccc;
     height: 25mm !important;
   }
-  .registro {
+  .registrovacio2  {
+    border: 1px solid #ccc;
+    height: 25mm !important;
+  }
+  .registrovacio3  {
+    border: 1px solid #ccc;
+    height: 25mm !important;
+  }
+  .registro1 {
+    border: 1px solid #ccc;
+    height: 5mm !important;
+  }
+  .registro2 {
+    border: 1px solid #ccc;
+    height: 5mm !important;
+  }
+  .registro3 {
     border: 1px solid #ccc;
     height: 5mm !important;
   }
@@ -383,6 +399,7 @@
     height: 25mm !important;
     width: 50mm !important;
     margin-left: 50mm !important; 
+    margin-bottom: 25mm !important;
     
   }
   .registrovacio3 {
