@@ -348,7 +348,7 @@
     margin: 0 0 0px;
     position:absolute !important;
     top:5px !important;
-    right:5px !important;
+    right:7px !important;
 
   }
 .datos2 {
