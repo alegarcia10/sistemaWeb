@@ -115,7 +115,7 @@
   .header {
     display: flex;
     align-items: center;
-    margin-bottom: -723px;
+    margin-bottom: -523px;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: stretch;
@@ -148,12 +148,12 @@
   .cliente{
     display: flex;
     align-items: left;
-    margin-bottom: -353px;
+    margin-bottom: -553px;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: stretch;
     justify-content: space-around;
-    margin-top: -350px !important;
+    margin-top: -550px !important;
   }
 
   .info2 {
@@ -165,12 +165,12 @@
   .productos{
     display: flex;
     align-items: left;
-    margin-bottom: -353px;
+    margin-bottom: -553px;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: stretch;
     justify-content: space-around;
-    margin-top: -350px !important;
+    margin-top: -550px !important;
   }
  
   /*
