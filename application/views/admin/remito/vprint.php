@@ -10,7 +10,7 @@
                 <div class="col-sm-3 form-group" id="botones" style="margin-left: -85px;">
                            <a class="btn btn-info" style="margin-bottom: 10px; margin-rigth: 10px;" href="<?php echo base_url();?>mantenimiento/cequipos">Volver</a>
                            <button id="printButton" style="margin-bottom: 10px; margin-rigth: 10px;" class="btn btn-success">Imprimir</button>
-                           <input type="button" onclick="printDiv('areaImprimir')" value="imprimir div" />
+                         
                 </div>
                 <div class="row">
                     <div class="col-md-12">
