@@ -32,9 +32,9 @@
                                 </div>
                             </div>   
                             <div class="divider"></div>
-                            <div class="cliente">
+                            <div class="header">
                                 <div class="info">
-                                <p>Cliente:</p>
+                                    <p>Cliente:</p>
                                     <p><?php echo $cliente->Nombre; ?></p>
                                     <strong>Domicilio: </strong>
                                     <p><?php echo $cliente->Domicilio; ?></p>
