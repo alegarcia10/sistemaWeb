@@ -35,21 +35,17 @@
                             <div class="cliente">
                                 <div class="info2">
 
-                                    <strong>Cliente:</strong>
+                                    <p>Cliente:</p>
                                     <p><?php echo $cliente->Nombre; ?></p>
-                                    <br>
                                     <strong>Domicilio: </strong>
                                     <p><?php echo $cliente->Domicilio; ?></p>
-                                    <br>
                                     <strong>Localidad: </strong>
                                     <p><?php echo $cliente->Localidad; ?></p>
-                                    <br>
                                     <strong>Provincia: </strong>
                                     <p><?php echo $cliente->Provincia; ?></p>
-                                    <br>
                                     <strong>Teléfono: </strong>
                                     <p><?php echo $cliente->Telefono1; ?></p>
-                                    <br>
+                                  
                                 </div>
                             </div>
                             <div class="divider"></div>
