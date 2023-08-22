@@ -16,7 +16,8 @@
                 <div class="row" id="datos">
                     <div class="col-md-12">
                         <div class="invoice">
-                            <div class="col-md-9" id="cabecera1">
+                            <div  >
+                                <section class="col-md-9" id="cabecera1">
                                     <div class="logo">
                                         <img src="<?php echo base_url() ?>assets/template/dist/img/logo presus.png" width="100">
                                     </div>
@@ -27,23 +28,17 @@
                                         <p>Teléfono: 264-4275852</p>
                                         <p>Correo Electrónico: electronicabios@gmail.com</p>
                                     </div>
+                                </section>
+                                <section class="col-md-3" id="cabecera2" >
                                     <div class="invoice-data">
                                         <h3>ORDEN RECEPCIÓN</h3>
                                         <h4>N°<?php echo $remito->IdRemito; ?></h4>
                                         <h4>Fecha: <?php echo date("d/m/Y", strtotime("$remito->fecha")); ?></h4>
                                     </div>
-                            </div>
-                            <div class="col-md-3" id="cabecera2">
-                                <div class="header2">
-                                    <div class="invoice-data">
-                                        <h3>ORDEN RECEPCIÓN</h3>
-                                        <h4>N°<?php echo $remito->IdRemito; ?></h4>
-                                        <h4>Fecha: <?php echo date("d/m/Y", strtotime("$remito->fecha")); ?></h4>
-                                    </div>
-                                </div>
+                                </section>       
                             </div>
                             <div class="divider"></div>
-                            <div class="col-md-12 customer-equipment">
+                            <div class="customer-equipment">
                                 <div class="customer">
                                     <h3>Datos del Cliente</h3>
                                     <p>Cliente: <?php echo $cliente->Nombre; ?></p>
@@ -61,7 +56,7 @@
                                 </div>
                             </div>
                             <div class="divider"></div>
-                            <div class=" col-md-12 description">
+                            <div class="description">
                                 <h3>Descripción de Avería:</h3>
                                 <p><?php echo $remito->IdRemito; ?></p>
                             </div>
@@ -107,6 +102,7 @@
         border: 1px solid #ccc;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
     }
 
