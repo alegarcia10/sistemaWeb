@@ -149,7 +149,7 @@
   .cliente{
     display: flex;
     align-items: left;
-    margin-bottom: -300px;
+    margin-bottom: -500px;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: stretch;
