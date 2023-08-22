@@ -168,6 +168,7 @@
     border-radius: 15px;
     margin: 5px;
     height: 30mm !important;
+    text-align: center;
   }
 
   .logo {
