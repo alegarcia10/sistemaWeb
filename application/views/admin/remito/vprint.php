@@ -389,7 +389,7 @@
     width: 49% !important;
   }
   .cliente1 p {
-    margin-top: 2%;
+    margin-top: 2.5%;
     margin-left: 5%;
   }
   .cliente2 {
@@ -400,7 +400,7 @@
     margin-left: 49% !important;
   }
   .cliente2 p {
-    margin-top: 2%;
+    margin-top: 3.5%;
     margin-left: 5%;
   }
 
