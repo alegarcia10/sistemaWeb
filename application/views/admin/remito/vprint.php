@@ -387,7 +387,6 @@
     padding: 0px !important;
     margin-top: 1%;
     width: 49% !important;
-    border: 1px solid green;
   }
   .cliente1 p {
     margin-top: 2%;
@@ -397,7 +396,6 @@
     font-size: 12px;
     padding: 0px !important;
     margin-top: -9.8%;
-    border: 1px solid blue;
     width: 49% !important;
     margin-left: 49% !important;
   }
@@ -410,6 +408,7 @@
     position:absolute;
     bottom:5px;
     right:10px;
+    border: 1px solid green;
   }
 
   .registrovacio1 {
