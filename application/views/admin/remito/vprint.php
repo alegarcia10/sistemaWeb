@@ -16,7 +16,8 @@
                         <div class="cuerpo">
                             <div class="row">
                                 <div class="col-md-8" id="celdas1">
-                                    
+                                    <p>asdasd</p>
+                                    <p>asdasdasd</p>
                                 </div>
                                 <div class="col-md-4" id="celdas2">
                                     
