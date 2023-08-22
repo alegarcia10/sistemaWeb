@@ -334,7 +334,6 @@
     height: 65px !important;
     width: 5%;
     position: center top ;
-    border: 1px solid red;
    
   }
   .datos p {
@@ -348,7 +347,7 @@
 .datos2 {
     font-size: 10px;
     padding: 0px !important;
-    margin-top: -5% !important;
+    margin-top: -10% !important;
     text-align: left;
     margin-left: 55% !important;
     border: 1px solid blue;
@@ -366,6 +365,8 @@
     text-align: center;
     margin-top: 1% !important; 
     border: 1px solid green;
+    width: 50%;
+
   }
 
   .cliente1 {
