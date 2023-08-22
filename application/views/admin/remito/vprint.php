@@ -282,13 +282,20 @@
     border: 1px solid #ccc;
     border-radius: 15px;
     margin: 5px;
-    height: 25mm !important;
+    height: 20mm !important;
   }
   #celdas4{
     border: 1px solid #ccc;
     border-radius: 15px;
     margin: 5px;
-    height: 135mm !important;
+    height: 195mm !important;
+  }
+
+  #celdas5{
+    border: 1px solid #ccc;
+    margin: 5px;
+    height: 30mm !important;
+    text-align: center;
   }
 
   .logo {
@@ -297,49 +304,82 @@
   }
   .logo img{
     margin-top: 3%;
-    height: 20%;
-    width: 25%;
+    margin-left: 30%;
+    height: 35%;
+    width: 55%;
   }
   .datos {
-    font-size: 10px;
+    background-color: black;
+    font-size: 25px;
     padding: 0px !important;
-    margin-top: -5% !important;
-    margin-left: 30% !important;
+    margin-top: 0% !important;
+    margin-left: 5% !important;
+    height: 65px !important;
+    width: 5%;
+    position: center top ;
+   
   }
   .datos p {
+    color: white;
     margin: 0 0 0px;
+    position:absolute;
+    top:5px;
+    right:10px;
 
 }
 .datos2 {
     font-size: 10px;
-   
-    margin-top: -15% !important;
-    text-align: right;
-    padding: 0 2% 0 0 !important;
+    padding: 0px !important;
+    margin-top: 0% !important;
+    text-align: left;
+    margin-left: 3% !important;
+  
+  }
+
+  .datos2 h5 p {
+    margin: 0;
+    padding: 0;
+  
+  }
+
+  .datos3 {
+    font-size: 10px;
+    text-align: center;
+    margin-top: 1% !important; 
   }
 
   .cliente1 {
     font-size: 12px;
     padding: 0px !important;
-    
+    margin-top: 1%;
   }
   .cliente1 p {
-  
+    margin-top: 2%;
+    margin-left: 5%;
   }
   .cliente2 {
     font-size: 12px;
     padding: 0px !important;
-    margin-left: 25% !important;
-    margin-top: -10% !important
+    margin-top: 1%;
   }
   .cliente2 p {
-   
+    margin-top: 2%;
+    margin-left: 5%;
   }
 
   #celdas4 h1{
     position:absolute;
     bottom:5px;
     right:10px;
+  }
+
+  .registrovacio {
+    border: 1px solid #ccc;
+    height: 25mm !important;
+  }
+  .registro {
+    border: 1px solid #ccc;
+    height: 5mm !important;
   }
 
   /* ... otros estilos para la impresión ... */
