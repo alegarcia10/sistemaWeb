@@ -148,9 +148,9 @@
     
   }
   .logo img{
-    margin-top: 5%;
-    height: 70%;
-    width: 80%;
+    margin-top: 3%;
+    height: 50%;
+    width: 70%;
     position: center;
   }
   .datos {
