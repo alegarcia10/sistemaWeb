@@ -133,9 +133,9 @@
     margin: 0 0 0px;
 }
 .divider2 {
-    border-top: 1px solid #ccc;
-    margin: 1px 0;
-    color: red;
+    border-top: 5px solid red;
+    margin: 3px 0;
+   
   }
   .divider1 {
     border-top: 1px solid #ccc;
@@ -154,7 +154,7 @@
     flex-wrap: nowrap;
     align-content: stretch;
     justify-content: space-around;
-    margin-top: -1300px !important;
+    margin-top: -1350px !important;
     
   }
 
