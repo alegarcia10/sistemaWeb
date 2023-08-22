@@ -91,7 +91,6 @@
     display: flex;
     align-items: center;
     margin-bottom: -353px;
-    padding-top:  10px;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: stretch;
