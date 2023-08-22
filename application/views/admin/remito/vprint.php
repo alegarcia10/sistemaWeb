@@ -88,7 +88,7 @@
   .header {
     display: flex;
     align-items: center;
-    margin-bottom: -303px;
+    margin-bottom: -323px;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: stretch;
@@ -121,12 +121,12 @@
   .cliente{
     display: flex;
     align-items: left;
-    margin-bottom: -343px;
+    margin-bottom: -353px;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: stretch;
     justify-content: space-around;
-    margin-top: -340px !important;
+    margin-top: -350px !important;
   }
 
   .info2 {
