@@ -29,8 +29,8 @@
                                         </div>
                                         <div class="col-md-3 datos2">
                                             <h2>REMITO</h2>
-                                            <h4>N°<?php echo $remito->IdRemito; ?></h4>
-                                            <h4>Fecha: <?php echo date("d/m/Y", strtotime("$remito->fecha")); ?></h4>
+                                            <h5>N°<?php echo $remito->IdRemito; ?></h5>
+                                            <h5>Fecha: <?php echo date("d/m/Y", strtotime("$remito->fecha")); ?></h5>
                                         </div>
                                     </div>
                                 </div>
@@ -106,7 +106,6 @@
   }
   .datos {
     font-size: 10px;
-    border: 1px solid #ccc;
     padding: 0px !important;
     margin-top: 3mm;
   }
@@ -116,11 +115,10 @@
 }
 .datos2 {
     font-size: 10px;
-    border: 1px solid #ccc;
     padding: 0px !important;
     margin-top: -2mm;
     text-align: right;
-    margin-left: 2mm !important;
+    margin-left: 5mm !important;
   }
   
 
