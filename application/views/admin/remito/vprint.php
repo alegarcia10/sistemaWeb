@@ -16,8 +16,16 @@
                         <div class="cuerpo">
                             <div class="row">
                                 <div class="col-md-12" id="celdas1">
-                                    <p>asdasd</p>
-                                    <p>asdasdasd</p>
+                                    <div class="logo">
+                                        <img src="<?php echo base_url()?>assets/template/dist/img/logo presus.png" width="100">
+                                    </div>
+                                    <div class="info">
+                                        <p>Elecctrónica BIOS</p>
+                                        <p>Cereseto Oeste 156</p>
+                                        <p>Capital San Juan</p>
+                                        <p>Teléfono: 264-4275852</p>
+                                        <p>Correo Electrónico: electronicabios@gmail.com</p>
+                                    </div>
                                 </div>
                                 <div class="col-md-12" id="celdas3">
                                     
@@ -78,6 +86,11 @@
     border-radius: 15px;
     margin: 5px;
     height: 130mm !important;
+  }
+
+  .logo {
+    margin-right: 10px;
+    max-width: 35mm; /* Ancho del logo */
   }
   
 
