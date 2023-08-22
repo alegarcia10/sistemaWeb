@@ -31,11 +31,8 @@
                                             <p>Fecha: <?php echo date("d/m/Y", strtotime("$remito->fecha")); ?></p>
                                         </div>
                                         <div class="col-md-6 datos3">
-                                          <p>Cereseto Oeste 156  - Teléfono: 264-4275852</p>
+                                          <p>Cereseto Oeste 156  - Teléfono: 264-4275852                            C.U.I.T: 30-71621552-7</p>
                                     
-                                        </div>
-                                        <div class="col-md-6 datos3">
-                                            <p>C.U.I.T: 30-71621552-7 </p>
                                         </div>
                                     </div>
                                 </div>
@@ -365,7 +362,7 @@
     text-align: center;
     margin-top: 1% !important; 
     border: 1px solid green;
-    width: 45%;
+ 
 
   }
 
