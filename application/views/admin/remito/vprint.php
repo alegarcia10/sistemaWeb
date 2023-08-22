@@ -154,7 +154,7 @@
     flex-wrap: nowrap;
     align-content: stretch;
     justify-content: space-around;
-    margin-top: -300px !important;
+    margin-top: -500px !important;
     
   }
 
