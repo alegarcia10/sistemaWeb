@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <section class="content-header">
         <div class="col-md-6">
-                               
+                           <h2>Remito</h2>    
         </div>
     </section>
     <section class="content" >
