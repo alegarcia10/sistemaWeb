@@ -309,7 +309,7 @@
     width: 55%;
   }
   .datos {
-    background-color: black;
+    background-color: black !important;
     font-size: 25px;
     padding: 0px !important;
     margin-top: 0% !important;
