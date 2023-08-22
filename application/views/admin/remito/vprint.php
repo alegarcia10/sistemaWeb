@@ -17,9 +17,7 @@
                         <div class="cuerpo" id='areaImprimir'>
                             <link rel="stylesheet" href="<?php echo base_url();?>assets/template/dist/css/Remito.css" media="print">
                             <div class="row">
-                            <link rel="stylesheet" href="<?php echo base_url();?>assets/template/dist/css/Remito.css" media="print">
                                 <div class="col-md-12" id="celdas1">
-                                <link rel="stylesheet" href="<?php echo base_url();?>assets/template/dist/css/Remito.css" media="print">
                                     <div class="row" >
                                         <div class="col-md-3 logo">
                                             <img src="<?php echo base_url()?>assets/template/dist/img/logo presus.png" width="100">
@@ -39,7 +37,6 @@
                                     </div>
                                 </div>
                                 <div class="col-md-12" id="celdas3">
-                                <link rel="stylesheet" href="<?php echo base_url();?>assets/template/dist/css/Remito.css" media="print">
                                     <div class="row" >
                                         <div class="col-md-6 cliente">
                                             <p>CLIENTE: <?php echo $cliente->Nombre; ?></p>
@@ -53,7 +50,6 @@
                                     </div>
                                 </div>
                                 <div class="col-md-12" id="celdas4">
-                                <link rel="stylesheet" href="<?php echo base_url();?>assets/template/dist/css/Remito.css" media="print">
                                     <div>
                                         <table class="table table-primary">
                                                 <thead>
@@ -121,7 +117,5 @@
     const printButton = document.getElementById('printButton');
     printButton.addEventListener('click', printInvoice);
   </script>
-<style>
-  
-</style>
+
 
