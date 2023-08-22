@@ -45,7 +45,7 @@
                                     </div>                            
                             </div>
                             <div class="divider"></div>
-                            <div class="description">
+                            <div class="productos">
                                 <table class="table">
                                     <thead class="thead-dark">
                                         <tr>
@@ -161,6 +161,16 @@
     padding-top: 10px;
     align-items: left !important;
     margin-left: -60px !important;
+  }
+  .productos{
+    display: flex;
+    align-items: left;
+    margin-bottom: -353px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: space-around;
+    margin-top: -350px !important;
   }
  
   /*
