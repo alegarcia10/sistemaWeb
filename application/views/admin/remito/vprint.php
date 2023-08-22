@@ -329,7 +329,7 @@
     background-color: black !important;
     font-size: 25px;
     padding: 0px !important;
-    margin-top: -25% !important;
+    margin-top: -15% !important;
     margin-left: 47.5% !important;
     height: 65px !important;
     width: 5%;
