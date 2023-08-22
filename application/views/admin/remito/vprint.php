@@ -34,7 +34,6 @@
                             <div class="divider"></div>
                             <div class="cliente">
                                 <div class="info2">
-                                    <h3>Datos del Cliente</h3>
                                     <p>Cliente: <?php echo $cliente->Nombre; ?></p>
                                     <p>Domicilio: <?php echo $cliente->Domicilio." ".$cliente->Localidad." ".$cliente->Provincia; ?></p>
                                     <p>Teléfono: <?php echo $cliente->Telefono1; ?></p>
@@ -123,7 +122,7 @@
 
   .cliente{
     display: flex;
-    align-items: left;
+    align-items: left !important;
     margin-top: -106px;
     margin-bottom: -53px;
     flex-direction: row;
