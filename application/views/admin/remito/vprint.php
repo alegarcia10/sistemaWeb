@@ -198,7 +198,7 @@
   .datos3 {
     font-size: 10px;
     text-align: center;
-    margin-top: 5% !important; 
+    margin-top: 2% !important; 
   }
 
   .cliente1 {
