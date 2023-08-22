@@ -86,10 +86,16 @@
 </script>
 <style>
     #cabecera1{
+        width: auto;
+        height: auto;
         border: red 5px solid !important;
+        padding: 5px;
     }
     #cabecera2{
+        width: auto;
+        height: auto;
         border: blue 5px solid !important;
+        padding: 5px;
     }
     
     .invoice {
