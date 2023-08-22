@@ -321,9 +321,9 @@
   }
   .logo img{
     margin-top: 3%;
-    margin-left: 30%;
-    height: 35%;
-    width: 55%;
+    margin-left: 10%;
+    height: 15%;
+    width: 25%;
   }
   .datos {
     background-color: black !important;
