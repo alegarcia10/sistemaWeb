@@ -149,7 +149,7 @@
   .cliente{
     display: flex;
     align-items: left;
-    margin-bottom: -0px;
+    margin-bottom: -300px;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: stretch;
@@ -167,7 +167,6 @@
   .productos{
     display: flex;
     align-items: left;
-    margin-bottom: -530px;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: stretch;
