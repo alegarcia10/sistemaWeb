@@ -246,6 +246,7 @@
     margin-top: -15% !important;
     text-align: right;
     margin-left: 0mm !important;
+    margin-rigth: 5% !important ;
   }
 
   .cliente {
