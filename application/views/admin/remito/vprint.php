@@ -242,10 +242,10 @@
 }
 .datos2 {
     font-size: 10px;
-    padding: 0px !important;
+   
     margin-top: -15% !important;
     text-align: right;
-    padding: 0 30% 0 0;
+    padding: 0 30% 0 0 !important;
   }
 
   .cliente {
