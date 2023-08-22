@@ -26,8 +26,8 @@
                                             <p>X</p>
                                         </div>
                                         <div class="col-md-5 datos2">
-                                            <h2>REMITO</h2>
-                                            <h5>N°<?php echo $remito->IdRemito; ?></h5>
+                                            <h4>REMITO N°<?php echo $remito->IdRemito; ?></h4>
+                                            <h5>COMPROBANTE NO VALIDO COMO FACTURA</h5>
                                             <h5>Fecha: <?php echo date("d/m/Y", strtotime("$remito->fecha")); ?></h5>
                                         </div>
                                     </div>
@@ -175,9 +175,9 @@
 .datos2 {
     font-size: 10px;
     padding: 0px !important;
-    margin-top: -2mm;
-    text-align: right;
-    margin-left: 5mm !important;
+    margin-top: 3%;
+    text-align: left;
+  
   }
 
   .cliente1 {
