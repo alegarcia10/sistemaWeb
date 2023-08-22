@@ -281,7 +281,7 @@
   .table-primary th{
     text-align: center !important;
   }
-  #tbody1{
+  #tbody1 td{
     text-align: left !important;
   }
 
@@ -454,6 +454,13 @@
     margin-left: 112mm !important; 
     margin-top: -5mm !important;
   
+  }
+
+  .table-primary th{
+    text-align: center !important;
+  }
+  #tbody1 td{
+    text-align: left !important;
   }
 
   /* ... otros estilos para la impresión ... */
