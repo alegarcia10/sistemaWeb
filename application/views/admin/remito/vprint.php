@@ -368,7 +368,6 @@
     font-size: 10px;
     text-align: center;
     margin-top: 1% !important; 
-    border: 1px solid green;
     width: 49% !important;
 
   }
@@ -376,7 +375,6 @@
     font-size: 10px;
     text-align: center;
     margin-top: -4% !important; 
-    border: 1px solid green;
     width: 49% !important;
     margin-left: 49% !important;
 
@@ -387,6 +385,8 @@
     font-size: 12px;
     padding: 0px !important;
     margin-top: 1%;
+    width: 49% !important;
+    border: 1px solid green;
   }
   .cliente1 p {
     margin-top: 2%;
@@ -395,7 +395,10 @@
   .cliente2 {
     font-size: 12px;
     padding: 0px !important;
-    margin-top: 1%;
+    margin-top: -5%;
+    border: 1px solid blue;
+    width: 49% !important;
+    margin-left: 49% !important;
   }
   .cliente2 p {
     margin-top: 2%;
