@@ -26,7 +26,7 @@
                                     <p>Correo Electrónico: electronicabios@gmail.com</p>
                                 </div>
                                 <div class="invoice-data">
-                                    <h3>ORDEN RECEPCIÓN</h3>
+                                    <h2>REMITO</h2>
                                     <h4>N°<?php echo $remito->IdRemito; ?></h4>
                                     <h4>Fecha: <?php echo date("d/m/Y", strtotime("$remito->fecha")); ?></h4>
                                 </div>
@@ -120,6 +120,17 @@
     text-align: right;
     font-size: 8px;
   }
+
+  .cliente{
+    display: flex;
+    align-items: center;
+    margin-bottom: -93px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: space-around;
+
+  }
   /*
   .customer-equipment {
     justify-content: space-between;
@@ -132,7 +143,7 @@
   }
   .customer h3, .equipment h3 {
     margin-top: 0;
-  }*/
+  }
   .description {
     
     padding: 5px;
@@ -156,6 +167,7 @@
   .signature p {
     margin-bottom: 5px;
   }
+  */
 
   @media print {
   body {
