@@ -288,7 +288,7 @@
     border: 1px solid #ccc;
     border-radius: 15px;
     margin: 5px;
-    height: 155mm !important;
+    height: 105mm !important;
   }
 
   #celdas5{
