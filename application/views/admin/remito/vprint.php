@@ -348,21 +348,20 @@
     top:5px !important;
     right:5px !important;
 
-}
+  }
 .datos2 {
     font-size: 10px;
     padding: 0px !important;
     margin-top: -10% !important;
     text-align: left;
     margin-left: 55% !important;
-  
-  }
+}
 
   .datos2 h5 p {
     margin: 0;
     padding: 0;
   
-  }
+}
 
   .datos3 {
     font-size: 10px;
@@ -394,12 +393,12 @@
   .cliente2 {
     font-size: 12px;
     padding: 0px !important;
-    margin-top: -9.8%;
+    margin-top: -7.8%;
     width: 49% !important;
     margin-left: 49% !important;
   }
   .cliente2 p {
-    margin-top: 7% !important;
+    margin-top: 3% !important;
     margin-left: 5%;
   }
 
