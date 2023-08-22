@@ -175,9 +175,15 @@
 .datos2 {
     font-size: 10px;
     padding: 0px !important;
-    margin-top: -1%;
+    margin-top: 0% !important;
     text-align: left;
     margin-left: 3% !important;
+  
+  }
+
+  .datos2 h5 p {
+    margin: 0;
+    padding: 0;
   
   }
 
