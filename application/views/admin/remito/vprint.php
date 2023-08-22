@@ -159,9 +159,11 @@
     font-size: 25px;
     padding: 0px !important;
     margin-top: 3%;
-    height: 10%;
+    height: 20%;
     width: 5%;
-    position: center;
+    position:absolute;
+    top:0px;
+   
   }
   .datos p {
     color: white;
