@@ -120,6 +120,7 @@
     padding: 0px !important;
     margin-top: -2mm;
     text-align: right;
+    margin-left: 2mm !important;
   }
   
 
