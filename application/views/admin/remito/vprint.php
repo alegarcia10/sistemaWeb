@@ -339,6 +339,7 @@
     height: 65px !important;
     width: 5%;
     position: center top ;
+    font-weight: bold !important;
    
   }
   .datos p {
@@ -395,7 +396,7 @@
   .cliente2 {
     font-size: 12px;
     padding: 0px !important;
-    margin-top: -10%;
+    margin-top: -9.5%;
     border: 1px solid blue;
     width: 49% !important;
     margin-left: 49% !important;
