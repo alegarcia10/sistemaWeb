@@ -83,19 +83,19 @@
                                 </div>
                                 <div class="col-md-12" id="celdas5">
                                     <div class="row" >
-                                        <div class="col-md-4 registrovacio">                                      
+                                        <div class="col-md-4 registrovacio1">                                      
                                         </div>
-                                        <div class="col-md-4 registrovacio">  
+                                        <div class="col-md-4 registrovacio2">  
                                         </div>
-                                        <div class="col-md-4 registrovacio">   
+                                        <div class="col-md-4 registrovacio3">   
                                         </div>
-                                        <div class="col-md-4 registro">
+                                        <div class="col-md-4 registro1">
                                            <strong>FIRMA</strong>                                       
                                         </div>
-                                        <div class="col-md-4 registro">
+                                        <div class="col-md-4 registro2">
                                             <strong>ACLARACION</strong>
                                         </div>
-                                        <div class="col-md-4 registro">
+                                        <div class="col-md-4 registro3">
                                             <strong>N° Y TIPO DE DOCUMENTO</strong>
                                         </div>
                                     </div>
@@ -373,12 +373,23 @@
     right:10px;
   }
 
-  .registrovacio {
+  .registrovacio1 {
     border: 1px solid #ccc;
     height: 25mm !important;
     width: 50mm !important; 
   }
-  .registro {
+  .registrovacio2 {
+    border: 1px solid #ccc;
+    height: 25mm !important;
+    width: 50mm !important;
+    margin-left: 50mm !important; 
+  }
+  .registrovacio3 {
+    border: 1px solid #ccc;
+    height: 25mm !important;
+    width: 50mm !important; 
+  }
+  .registro1 {
     border: 1px solid #ccc;
     height: 5mm !important;
     width: 50mm !important; 
