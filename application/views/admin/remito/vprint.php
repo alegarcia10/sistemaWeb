@@ -122,12 +122,12 @@
   .cliente{
     display: flex;
     align-items: center;
-    margin-bottom: -93px;
+    margin-bottom: -293px;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: stretch;
     justify-content: space-around;
-    margin-top: -90px !important;
+    margin-top: -290px !important;
   }
 
   .info2 {
