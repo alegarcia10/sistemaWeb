@@ -115,7 +115,7 @@
   .header {
     display: flex;
     align-items: center;
-    margin-bottom: -923px;
+    margin-bottom: -1323px;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: stretch;
@@ -149,7 +149,7 @@
   .cliente{
     display: flex;
     align-items: left;
-    margin-bottom: -1350px;
+    margin-bottom: -950px;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: stretch;
