@@ -254,8 +254,8 @@
     margin-top: 3mm;
   }
   .cliente p {
-    margin-top: 2mm;
-    margin-left: 2mm;
+    margin-top: 0mm;
+    margin-left: 0mm;
   }
 
   #celdas4 h1{
