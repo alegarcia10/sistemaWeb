@@ -245,6 +245,7 @@ public function cprint($id){
 
 
     $data['producto'] = $this->mremito->obtenerProducto($id);
+    $data['total']=$this->mremito->consultaTotalRemito($id);
    
    
     //$roles=$this->mroles->obtener($idRol);
