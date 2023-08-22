@@ -134,7 +134,7 @@
     flex-wrap: nowrap;
     align-content: stretch;
     justify-content: space-around;
-
+    padding-top: -100px !important;
   }
 
   .info2 {
