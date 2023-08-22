@@ -27,7 +27,7 @@
                                             <p>Teléfono: 264-4275852</p>
                                             <p>Correo Electrónico: electronicabios@gmail.com</p>
                                         </div>
-                                        <div class="col-md-3 datos">
+                                        <div class="col-md-3 datos2">
                                             <h2>REMITO</h2>
                                             <h4>N°<?php echo $remito->IdRemito; ?></h4>
                                             <h4>Fecha: <?php echo date("d/m/Y", strtotime("$remito->fecha")); ?></h4>
@@ -114,6 +114,13 @@
     margin: 0 0 0px;
 
 }
+datos2 {
+    font-size: 10px;
+    border: 1px solid #ccc;
+    padding: 0px !important;
+    margin-top: -2mm;
+    text-align: right;
+  }
   
 
   @media print {
