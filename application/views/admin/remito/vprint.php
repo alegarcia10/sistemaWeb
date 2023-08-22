@@ -15,7 +15,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="cuerpo" id='areaImprimir'>
-                            <link rel="stylesheet" href="<?php echo base_url();?>assets/template/dist/css/Remito.css" media="print">
+                            <link rel="stylesheet" href="<?php echo base_url();?>assets/template/dist/css/Remito.css" >
                             <div class="row">
                                 <div class="col-md-12" id="celdas1">
                                     <div class="row" >
