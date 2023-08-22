@@ -63,7 +63,7 @@
   }
 
   #celdas{
-    border: #fff;
+    border-style: solid;
     margin: 5px;
   }
   
