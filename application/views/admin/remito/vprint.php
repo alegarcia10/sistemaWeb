@@ -53,7 +53,7 @@
     printButton.addEventListener('click', printInvoice);
   </script>
 <style>
-  .invoice {
+  .cuerpo {
     width: 148mm; /* Ancho A5 */
     height: 210mm; /* Alto A5 */
     margin: auto;
@@ -89,7 +89,7 @@
     display: none;
   }
 
-  .invoice {
+  .cuerpo {
     width: 148mm;
     height: 208mm;
     margin: 0;
