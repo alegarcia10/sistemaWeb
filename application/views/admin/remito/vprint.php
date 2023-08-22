@@ -95,9 +95,9 @@
     border: 1px solid #ccc;
   }
   .logo img{
-    margin-top: 5mm;
-    height: 25mm;
-    width: 25mm;
+    margin-top: 3mm;
+    height: 20mm;
+    width: 20mm;
   }
   .datos {
     font-size: 10px;
