@@ -202,7 +202,7 @@
   .cliente1 {
     font-size: 12px;
     padding: 0px !important;
-    margin-top: 3%;
+    margin-top: 1%;
   }
   .cliente1 p {
     margin-top: 2%;
