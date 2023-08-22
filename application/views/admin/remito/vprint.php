@@ -124,6 +124,7 @@
   .cliente{
     display: flex;
     align-items: left;
+    margin-top: -106px;
     margin-bottom: -53px;
     flex-direction: row;
     flex-wrap: nowrap;
