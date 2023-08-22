@@ -132,13 +132,9 @@
   .info2 {
     font-size: 14px;
     padding: 10px;
+    align-items: left;
   }
-  
  
-.invoice-data2 {
-    text-align: right;
-    font-size: 8px;
-  }
   /*
   .customer-equipment {
     justify-content: space-between;
