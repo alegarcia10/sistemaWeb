@@ -92,7 +92,9 @@
 
   .logo {
     margin-right: 10px;
-    max-width: 35mm; /* Ancho del logo */
+    margin-top: 5mm;
+    height: 25mm;
+    width: 25mm;
     border: 1px solid #ccc;
   }
   .datos {
