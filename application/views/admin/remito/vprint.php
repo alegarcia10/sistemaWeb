@@ -33,18 +33,20 @@
                             </div>   
                             <div class="divider"></div>
                             <div class="cliente">
+                               <div id="clienteInfo">
                                 <div class="info2">
-                                    <p>CLIENTE: <?php echo $cliente->Nombre; ?></p>
-                                    <p>CUIT: <?php echo $cliente->DniCuit; ?></p>
-                                </div>
-                                <div class="info2">
-                                    <p>DOMICILIO: <?php echo $cliente->Domicilio; ?></p>
-                                    <p>LOCALIDAD: <?php echo $cliente->Localidad; ?></p>  
-                                </div>
-                                <div class="info2">
-                                    <p>PROVINCIA: <?php echo $cliente->Provincia; ?></p>                                 
-                                    <p>TELEFONO: <?php echo $cliente->Telefono1; ?></p>
-                                </div>
+                                        <p>CLIENTE: <?php echo $cliente->Nombre; ?></p>
+                                        <p>CUIT: <?php echo $cliente->DniCuit; ?></p>
+                                    </div>
+                                    <div class="info2">
+                                        <p>DOMICILIO: <?php echo $cliente->Domicilio; ?></p>
+                                        <p>LOCALIDAD: <?php echo $cliente->Localidad; ?></p>  
+                                    </div>
+                                    <div class="info2">
+                                        <p>PROVINCIA: <?php echo $cliente->Provincia; ?></p>                                 
+                                        <p>TELEFONO: <?php echo $cliente->Telefono1; ?></p>
+                                    </div>
+                               </div> 
                             </div>
                             <div class="divider"></div>
                             <div class="description">
@@ -126,6 +128,9 @@
     font-size: 8px;
   }
 
+    #clienteInfo{
+        padding-top: -100px !important;
+    }
   .cliente{
     display: flex;
     align-items: center;
