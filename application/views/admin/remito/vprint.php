@@ -38,7 +38,7 @@
                                         <p>CUIT: <?php echo $cliente->DniCuit; ?></p>
                                         <p>DOMICILIO: <?php echo $cliente->Domicilio; ?></p>
                                     </div>
-                                    <div class="info3">
+                                    <div class="info2">
                                         <p>PROVINCIA: <?php echo $cliente->Provincia; ?></p>
                                         <p>LOCALIDAD: <?php echo $cliente->Localidad; ?></p>                                   
                                         <p>TELEFONO: <?php echo $cliente->Telefono1; ?></p>
