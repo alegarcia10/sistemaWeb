@@ -171,6 +171,7 @@
     flex-wrap: nowrap;
     align-content: stretch;
     justify-content: space-around;
+    margin-bottom: -100px !important;
   }
  
   /*
