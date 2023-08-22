@@ -56,9 +56,9 @@
                                         <table class="table table-primary">
                                                 <thead>
                                                     <tr>
-                                                    <th scope="col">Cantidad</th>
-                                                    <th scope="col">Detalle</th>
-                                                    <th scope="col">Numero de Serie</th>
+                                                    <th width="15%" scope="col">Cantidad</th>
+                                                    <th width="60%"scope="col">Detalle</th>
+                                                    <th width="25%"scope="col">Numero de Serie</th>
                                                     </tr>
                                                 </thead>
 
