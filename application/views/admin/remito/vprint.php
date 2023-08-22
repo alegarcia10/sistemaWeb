@@ -83,15 +83,14 @@
                                 </div>
                                 <div class="col-md-12" id="celdas5">
                                     <div class="row" >
-                                        <div class="col-md-6 cliente1">
-                                           <h3>Firma Cliente</h3>
-                                           <br>
-                                           <p>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</p>                                          
+                                        <div class="col-md-4 regitro">
+                                           <h3>FIRMA</h3>                                       
                                         </div>
-                                        <div class="col-md-6 cliente2">
-                                            <h3>Firma Cliente</h3>
-                                            <br>
-                                            <p>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</p> 
+                                        <div class="col-md-4 regitro">
+                                            <h3>ACLARACION</h3>
+                                        </div>
+                                        <div class="col-md-4 regitro">
+                                            <h3>N° Y TIPO DE DOCUMENTO</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -244,6 +243,10 @@
     position:absolute;
     bottom:5px;
     right:10px;
+  }
+
+  .registro {
+    border: 1px solid #ccc;
   }
   
 
