@@ -113,7 +113,7 @@
 
     .info {
         font-size: 12px;
-        padding-right: 10% !important;
+        padding-right: 15% !important;
         text-align: left;
     }
 
