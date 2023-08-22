@@ -283,8 +283,9 @@
   }
   #tbody1 td{
     text-align: left !important;
-    font-size: 15px !important;
-    height:16px !important;
+    font-size: 10px !important;
+    height:11px !important;
+    font-weight: bold !important;
   }
 
   @media print {
