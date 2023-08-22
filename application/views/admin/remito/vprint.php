@@ -28,9 +28,9 @@
                                     <p>Correo Electrónico: electronicabios@gmail.com</p>
                                 </div>
                                 <div class="invoice-data">
-                                    <h3>REMITO</h3>
-                                    <h4>N°<?php echo $remito->IdRemito; ?></h4>
-                                    <h4>Fecha: <?php echo date("d/m/Y", strtotime("$remito->fecha")); ?></h4>
+                                    <h3 id='invoice-data1'>REMITO</h3>
+                                    <h4 id='invoice-data2' >N°<?php echo $remito->IdRemito; ?></h4>
+                                    <h4 id='invoice-data2'>Fecha: <?php echo date("d/m/Y", strtotime("$remito->fecha")); ?></h4>
                                 </div>
                             </div>
                             <div class="divider"></div>
@@ -124,9 +124,13 @@
         margin: 3px 0;
     }
 
-    .invoice-data {
+    #invoice-data1 {
         text-align: right;
         font-size: 8px;
+    }
+    #invoice-data2 {
+        text-align: right;
+        font-size: 4px;
     }
 
     .customer-equipment {
