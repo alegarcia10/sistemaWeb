@@ -133,12 +133,12 @@
   .cliente{
     display: flex;
     align-items: center;
-    margin-bottom: -113px;
+    margin-bottom: -93px;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: stretch;
     justify-content: space-around;
-    margin-top: -100px !important;
+    margin-top: -90px !important;
   }
 
   .info2 {
