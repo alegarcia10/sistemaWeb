@@ -4,7 +4,7 @@
             <h1> Remito</h1>                            
         </div>
     </section>
-    <section class="content" id="cuerpo">
+    <section class="content" >
         <div class="box solid" style="margin-top: 35 px;">
             <div class="body">
                 <div class="col-sm-3 form-group" id="botones" style="margin-left: -85px;">
@@ -51,14 +51,11 @@
     printButton.addEventListener('click', printInvoice);
   </script>
 <style>
-    #cuerpo {
-    margin-top: 30px !important;
-  }
   .cuerpo {
     width: 148mm; /* Ancho A5 */
     height: 210mm; /* Alto A5 */
     margin: auto;
-    margin-top: 30px !important;
+    margin-top: 10px !important;
     padding: 25px;
     border: 1px solid #ccc;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
