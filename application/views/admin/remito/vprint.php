@@ -32,20 +32,18 @@
                                 </div>
                             </div>   
                             <div class="divider"></div>
-                            <div class="header">
-                                <div class="info">
-                                    <p>Cliente:</p>
-                                    <p><?php echo $cliente->Nombre; ?></p>
-                                    <strong>Domicilio: </strong>
-                                    <p><?php echo $cliente->Domicilio; ?></p>
-                                    <strong>Localidad: </strong>
-                                    <p><?php echo $cliente->Localidad; ?></p>  
+                            <div class="cliente">
+                                <div class="info2">
+                                    <p>CLIENTE: <?php echo $cliente->Nombre; ?></p>
+                                    <p>CUIT: <?php echo $cliente->DniCuit; ?></p>
                                 </div>
-                                <div class="invoice-data">
-                                <strong>Provincia: </strong>
-                                    <p><?php echo $cliente->Provincia; ?></p>
-                                    <strong>Teléfono: </strong>
-                                    <p><?php echo $cliente->Telefono1; ?></p>
+                                <div class="info2">
+                                    <p>DOMICILIO: <?php echo $cliente->Domicilio; ?></p>
+                                    <p>LOCALIDAD: <?php echo $cliente->Localidad; ?></p>  
+                                </div>
+                                <div class="info2">
+                                    <p>PROVINCIA: <?php echo $cliente->Provincia; ?></p>                                 
+                                    <p>TELEFONO: <?php echo $cliente->Telefono1; ?></p>
                                 </div>
                             </div>
                             <div class="divider"></div>
@@ -130,8 +128,7 @@
 
   .cliente{
     display: flex;
-    align-items: left !important;
-    margin-top: -56px !important;
+    align-items: center;
     margin-bottom: -53px;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -146,6 +143,10 @@
   .info2 p {
     margin: 0 0 0px;
 }
+.invoice-data2 {
+    text-align: right;
+    font-size: 8px;
+  }
   /*
   .customer-equipment {
     justify-content: space-between;
