@@ -159,7 +159,7 @@
     font-size: 25px;
     padding: 0px !important;
     margin-top: 0% !important;
-    height: 50px !important;
+    height: 75px !important;
     width: 5%;
     position: center top ;
    
