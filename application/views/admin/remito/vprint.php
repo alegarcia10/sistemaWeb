@@ -397,16 +397,16 @@
   .registrovacio2 {
     border: 1px solid #ccc;
     height: 25mm !important;
-    width: 56mm !important;
-    margin-left: 56mm !important; 
+    width: 57mm !important;
+    margin-left: 57mm !important; 
     margin-top: -25mm !important;
     
   }
   .registrovacio3 {
     border: 1px solid #ccc;
     height: 25mm !important;
-    width: 56mm !important;
-    margin-left: 112mm !important; 
+    width: 57mm !important;
+    margin-left: 114mm !important; 
     margin-top: -25mm !important;
      
   }
