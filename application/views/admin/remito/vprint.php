@@ -11,29 +11,29 @@
                                 <a class="btn btn-info" style="margin-bottom: 10px; margin-rigth: 10px;" href="<?php echo base_url();?>mantenimiento/cequipos">Volver</a>
                                 <button id="printButton" style="margin-bottom: 10px; margin-rigth: 10px;" class="btn btn-success">Imprimir</button>
                 </div>
-                <div class="row" id="datos">
+                <div class="row">
                     <div class="col-md-12">
                         <div class="invoice">
                             <div class="header">
-                            <div class="logo">
-                                <img src="<?php echo base_url()?>assets/template/dist/img/logo presus.png" width="100">
-                            </div>
-                            <div class="info">
-                                <p>Elecctrónica BIOS</p>
-                                <p>Cereseto Oeste 156</p>
-                                <p>Capital San Juan</p>
-                                <p>Teléfono: 264-4275852</p>
-                                <p>Correo Electrónico: electronicabios@gmail.com</p>
-                            </div>
-                            <div class="invoice-data">
-                                <h3>ORDEN RECEPCIÓN</h3>
-                                <h4>N°<?php echo $remito->IdRemito; ?></h4>
-                                <h4>Fecha: <?php echo date("d/m/Y", strtotime("$remito->fecha")); ?></h4>
+                                <div class="logo">
+                                    <img src="<?php echo base_url()?>assets/template/dist/img/logo presus.png" width="100">
+                                </div>
+                                <div class="info">
+                                    <p>Elecctrónica BIOS</p>
+                                    <p>Cereseto Oeste 156</p>
+                                    <p>Capital San Juan</p>
+                                    <p>Teléfono: 264-4275852</p>
+                                    <p>Correo Electrónico: electronicabios@gmail.com</p>
+                                </div>
+                                <div class="invoice-data">
+                                    <h3>ORDEN RECEPCIÓN</h3>
+                                    <h4>N°<?php echo $remito->IdRemito; ?></h4>
+                                    <h4>Fecha: <?php echo date("d/m/Y", strtotime("$remito->fecha")); ?></h4>
                                 </div>
                             </div>   
                             <div class="divider"></div>
-                            <div class="customer-equipment">
-                                <div class="customer">
+                            <div class="cliente">
+                                <div class="">
                                     <h3>Datos del Cliente</h3>
                                     <p>Cliente: <?php echo $cliente->Nombre; ?></p>
                                     <p>Domicilio: <?php echo $cliente->Domicilio." ".$cliente->Localidad." ".$cliente->Provincia; ?></p>
@@ -120,6 +120,7 @@
     text-align: right;
     font-size: 8px;
   }
+  /*
   .customer-equipment {
     justify-content: space-between;
     margin-top: -106px;
@@ -131,7 +132,7 @@
   }
   .customer h3, .equipment h3 {
     margin-top: 0;
-  }
+  }*/
   .description {
     
     padding: 5px;
