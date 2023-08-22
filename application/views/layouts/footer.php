@@ -25,7 +25,7 @@
 
 <script src="<?php echo base_url();?>assets/template/DataTables-1.13.3/js/dataTables.fixedColumns.min.js"></script>
 
-<link rel="stylesheet" href="<?php echo base_url();?>assets/template/dist/css/Remito.css" media="print">
+<link rel="stylesheet" href="<?php echo base_url();?>assets/template/dist/css/Remito.css" >
 
 <script src="<?php echo base_url();?>assets/template/JSZip-2.5.0/jszip.min.js"></script>
 <script src="<?php echo base_url();?>assets/template/pdfmake-0.1.36/pdfmake.min.js"></script>
