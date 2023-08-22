@@ -141,7 +141,7 @@
     font-size: 12px;
   }
   .info2 p {
-    margin: 0 0 0px;
+    margin: auto;
 }
 .invoice-data2 {
     text-align: right;
