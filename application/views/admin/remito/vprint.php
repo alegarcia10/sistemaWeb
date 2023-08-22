@@ -408,7 +408,6 @@
     position:absolute;
     bottom:5px;
     right:10px;
-    border: 1px solid green;
   }
 
   .registrovacio1 {
