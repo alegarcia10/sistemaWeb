@@ -36,12 +36,12 @@
                                 </div>
                                 <div class="col-md-12" id="celdas3">
                                     <div class="row" >
-                                        <div class="col-md-6 datos">
+                                        <div class="col-md-6 cliente">
                                             <p>CLIENTE: <?php echo $cliente->Nombre; ?></p>
                                             <p>CUIT: <?php echo $cliente->DniCuit; ?></p>
                                             <p>DOMICILIO: <?php echo $cliente->Domicilio; ?></p>
                                         </div>
-                                        <div class="col-md-6 datos">
+                                        <div class="col-md-6 cliente">
                                             <p>PROVINCIA: <?php echo $cliente->Provincia; ?></p>
                                             <p>LOCALIDAD: <?php echo $cliente->Localidad; ?></p>                                   
                                             <p>TELEFONO: <?php echo $cliente->Telefono1; ?></p>
@@ -125,11 +125,21 @@
 
 }
 .datos2 {
-    font-size: 10px;
+    font-size: 12px;
     padding: 0px !important;
     margin-top: -2mm;
     text-align: right;
     margin-left: 5mm !important;
+  }
+
+  .cliente {
+    font-size: 10px;
+    padding: 0px !important;
+    margin-top: 3mm;
+  }
+  .cliente p {
+    margin-top: 2mm;
+    margin-left: 2mm;
   }
   
 
