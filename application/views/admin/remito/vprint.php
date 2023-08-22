@@ -195,11 +195,10 @@
   
   }
 
-  .datos2 {
- 
+  .datos3 {
+    font-size: 10px;
     text-align: center;
 
-  
   }
 
   .cliente1 {
