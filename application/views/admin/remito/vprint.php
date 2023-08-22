@@ -34,6 +34,11 @@
                                 </div>
                             </div>
                             <div class="divider"></div>
+                            <div class="description">
+                                <h3>Descripción de Avería:</h3>
+                                <p><?php echo $remito->IdRemito; ?></p>
+                            </div>
+                            <div class="divider"></div>
                             <div class="customer-equipment">
                                 <div class="customer">
                                     <h3>Datos del Cliente</h3>
@@ -42,11 +47,6 @@
                                     <p>Teléfono: <?php echo $cliente->Telefono1; ?></p>
                                     <p>Correo Electrónico: </p>
                                 </div>
-                            </div>
-                            <div class="divider"></div>
-                            <div class="description">
-                                <h3>Descripción de Avería:</h3>
-                                <p><?php echo $remito->IdRemito; ?></p>
                             </div>
                         </div>
                     </div>
