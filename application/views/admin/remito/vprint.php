@@ -90,13 +90,13 @@
                                         <div class="col-md-4 registrovacio">   
                                         </div>
                                         <div class="col-md-4 registro">
-                                           <p>FIRMA</p>                                       
+                                           <strong>FIRMA</strong>                                       
                                         </div>
                                         <div class="col-md-4 registro">
-                                            <p>ACLARACION</p>
+                                            <strong>ACLARACION</strong>
                                         </div>
                                         <div class="col-md-4 registro">
-                                            <p>N° Y TIPO DE DOCUMENTO</p>
+                                            <strong>N° Y TIPO DE DOCUMENTO</strong>
                                         </div>
                                     </div>
                                 </div>
