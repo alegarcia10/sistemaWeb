@@ -131,7 +131,7 @@
 
   .info2 {
     font-size: 14px;
-    padding: 10px;
+    padding-top: 10px;
     align-items: left;
   }
  
