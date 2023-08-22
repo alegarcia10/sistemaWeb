@@ -47,34 +47,36 @@
                             <div class="divider"></div>
                             <div class="description">
                                 <table class="table">
-                                    <!-- On rows -->
-                                    <tr class="table-active">asdasd</tr>
-
-                                    <tr class="table-primary">.asdasdas</tr>
-                                    <tr class="table-secondary">.asd</tr>
-                                    <tr class="table-success">dasdasd</tr>
-                                    <tr class="table-danger">dasdasdasd</tr>
-                                    <tr class="table-warning">asdasdas</tr>
-                                    <tr class="table-info">asdasdasd</tr>
-                                    <tr class="table-light">asdasdasd</tr>
-                                    <tr class="table-dark">asdasdasdasd</tr>
-
-                                    <!-- On cells (`td` or `th`) -->
-                                    <tr>
-                                    <td class="table-active">asdasdasdasd</td>
-
-                                    <td class="table-primary">asdasdasdas</td>
-                                    <td class="table-secondary">asdasdasd</td>
-                                    <td class="table-success">asdasda</td>
-                                    <td class="table-danger">asdasd</td>
-                                    <td class="table-warning">asasdasd</td>
-                                    <td class="table-info">asdasdasd</td>
-                                    <td class="table-light">asdasdasd</td>
-                                    <td class="table-dark">asdasdasda</td>
-                                    </tr>
+                                    <thead class="thead-dark">
+                                        <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">First</th>
+                                        <th scope="col">Last</th>
+                                        <th scope="col">Handle</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                        </tr>
+                                        <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                        </tr>
+                                        <tr>
+                                        <th scope="row">3</th>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>@twitter</td>
+                                        </tr>
+                                    </tbody>
                                 </table>
-                            </div>
-                            
+                            </div>  
                         </div>
                     </div>
                 </div>
