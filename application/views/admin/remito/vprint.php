@@ -298,6 +298,7 @@
     border-radius: 15px;
     margin: 5px !important;
     height: 30mm !important;
+    margin-bottom: 10px !important;
   }
   #celdas3{
     border: 1px solid #ccc;
