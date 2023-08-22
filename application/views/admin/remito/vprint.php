@@ -107,12 +107,12 @@
 
     .logo {
         margin-right: 10px;
-        max-width: 30mm;
+        max-width: 35mm;
         /* Ancho del logo */
     }
 
     .info {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .info p {
