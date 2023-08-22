@@ -398,7 +398,7 @@
     border: 1px solid #ccc;
     height: 25mm !important;
     width: 57mm !important;
-    margin-left: 57mm !important; 
+    margin-left: 56mm !important; 
     margin-top: -25mm !important;
     
   }
@@ -406,7 +406,7 @@
     border: 1px solid #ccc;
     height: 25mm !important;
     width: 57mm !important;
-    margin-left: 114mm !important; 
+    margin-left: 113mm !important; 
     margin-top: -25mm !important;
      
   }
