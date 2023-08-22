@@ -327,7 +327,7 @@
   }
   .datos {
     background-color: black !important;
-    font-size: 25px;
+    font-size: 30px;
     padding: 0px !important;
     margin-top: -12.5% !important;
     margin-left: 47.5% !important;
@@ -342,7 +342,7 @@
     margin: 0 0 0px;
     position:absolute !important;
     top:5px !important;
-    right:10px !important;
+    right:5px !important;
 
 }
 .datos2 {
