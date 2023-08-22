@@ -365,7 +365,7 @@
     text-align: center;
     margin-top: 1% !important; 
     border: 1px solid green;
-    width: 50%;
+    width: 49%;
 
   }
 
