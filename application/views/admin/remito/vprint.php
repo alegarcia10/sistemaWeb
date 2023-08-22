@@ -49,7 +49,7 @@
                                 </div>
                                 <div class="col-md-12" id="celdas4">
                                     <div>
-                                        <table class="table table-dark">
+                                        <table class="table table-primary">
                                                 <thead>
                                                     <tr>
                                                     <th scope="col">#</th>
