@@ -334,6 +334,7 @@
     height: 65px !important;
     width: 5%;
     position: center top ;
+    border: 1px solid red;
    
   }
   .datos p {
@@ -350,6 +351,7 @@
     margin-top: 0% !important;
     text-align: left;
     margin-left: 60% !important;
+    border: 1px solid blue;
   
   }
 
@@ -363,6 +365,7 @@
     font-size: 10px;
     text-align: center;
     margin-top: 1% !important; 
+    border: 1px solid green;
   }
 
   .cliente1 {
