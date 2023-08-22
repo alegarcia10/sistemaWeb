@@ -149,9 +149,10 @@
   }
   .logo img{
     margin-top: 3%;
-    height: 50%;
-    width: 70%;
-    position: center;
+    margin-left: 5%;
+    height: 35%;
+    width: 55%;
+   
   }
   .datos {
     font-size: 25px;
