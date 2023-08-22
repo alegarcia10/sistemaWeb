@@ -78,7 +78,7 @@
   #celdas4{
     border-style: solid;
     margin: 5px;
-    height: 120mm !important;
+    height: 130mm !important;
   }
   
 
