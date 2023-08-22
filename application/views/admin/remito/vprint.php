@@ -44,7 +44,7 @@
                                         <p>TELEFONO: <?php echo $cliente->Telefono1; ?></p>
                                     </div>                            
                             </div>
-                            <div class="divider"></div>
+                            <div class="divider2"></div>
                             <div class="productos">
                                 <table class="table">
                                     <thead class="thead-dark">
@@ -132,11 +132,12 @@
   .info p {
     margin: 0 0 0px;
 }
-.divider1 {
+.divider2 {
     border-top: 1px solid #ccc;
     margin: 1px 0;
+    color: red;
   }
-  .divider {
+  .divider1 {
     border-top: 1px solid #ccc;
     margin: 3px 0;
   }
