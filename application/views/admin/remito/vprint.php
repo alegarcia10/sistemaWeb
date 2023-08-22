@@ -93,9 +93,11 @@
   .logo {
     margin-right: 10px;
     max-width: 35mm; /* Ancho del logo */
+    border: 1px solid #ccc;
   }
   .datos {
     font-size: 10px;
+    border: 1px solid #ccc;
   }
   .datos p {
     margin: 0 0 0px;
