@@ -93,7 +93,7 @@
 </script>
 <style>
     #cabecera1{
-        border: red 5px solid;
+        border: red 5px solid !important;
     }
     
     .invoice {
