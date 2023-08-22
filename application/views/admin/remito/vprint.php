@@ -46,8 +46,36 @@
                             </div>
                             <div class="divider"></div>
                             <div class="description">
-                                <h3>Descripción de Avería:</h3>
-                                <p><?php echo $remito->IdRemito; ?></p>  
+                                <table class="table table-dark">
+                                    <thead>
+                                        <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">First</th>
+                                        <th scope="col">Last</th>
+                                        <th scope="col">Handle</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                        </tr>
+                                        <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                        </tr>
+                                        <tr>
+                                        <th scope="row">3</th>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>@twitter</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                             
                         </div>
@@ -136,6 +164,10 @@
     margin-left: -60px !important;
   }
  
+  .description {
+    padding: 5px;
+    margin-top: -114px;
+  }
   /*
   .customer-equipment {
     justify-content: space-between;
@@ -149,11 +181,7 @@
   .customer h3, .equipment h3 {
     margin-top: 0;
   }
-  .description {
-    
-    padding: 5px;
-    margin-top: -114px;
-  }
+  
   .description h3 {
     margin-top: 0;
   }
