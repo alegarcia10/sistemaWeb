@@ -33,19 +33,19 @@
                             </div>   
                             <div class="divider"></div>
                             <div class="cliente">
-                                <div class="info2">
-
-                                    <p>Cliente:</p>
+                                <div class="info">
+                                <p>Cliente:</p>
                                     <p><?php echo $cliente->Nombre; ?></p>
                                     <strong>Domicilio: </strong>
                                     <p><?php echo $cliente->Domicilio; ?></p>
                                     <strong>Localidad: </strong>
-                                    <p><?php echo $cliente->Localidad; ?></p>
-                                    <strong>Provincia: </strong>
+                                    <p><?php echo $cliente->Localidad; ?></p>  
+                                </div>
+                                <div class="invoice-data">
+                                <strong>Provincia: </strong>
                                     <p><?php echo $cliente->Provincia; ?></p>
                                     <strong>Teléfono: </strong>
                                     <p><?php echo $cliente->Telefono1; ?></p>
-                                  
                                 </div>
                             </div>
                             <div class="divider"></div>
@@ -131,7 +131,7 @@
   .cliente{
     display: flex;
     align-items: left !important;
-    margin-top: -56px;
+    margin-top: -56px !important;
     margin-bottom: -53px;
     flex-direction: row;
     flex-wrap: nowrap;
