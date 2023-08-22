@@ -57,7 +57,7 @@
     width: 148mm; /* Ancho A5 */
     height: 210mm; /* Alto A5 */
     margin: auto;
-    padding: 5px;
+    padding: 25px;
     border: 1px solid #ccc;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
