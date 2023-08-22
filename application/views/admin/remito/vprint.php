@@ -304,6 +304,7 @@
     border: 1px solid #ccc;
     border-radius: 15px;
     margin: 5px;
+    margin-top: 40mm !important;
     height: 105mm !important;
   }
 
