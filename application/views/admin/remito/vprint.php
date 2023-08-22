@@ -61,22 +61,20 @@
   }
 
   #celdas1{
-    border-style: solid;
-    margin: 5px;
-    height: 30mm !important;
-  }
-  #celdas2{
-    border-style: solid;
+    border: 1px solid #ccc;
+    border-radius: 15px;
     margin: 5px;
     height: 30mm !important;
   }
   #celdas3{
-    border-style: solid;
+    border: 1px solid #ccc;
+    border-radius: 15px;
     margin: 5px;
     height: 30mm !important;
   }
   #celdas4{
-    border-style: solid;
+    border: 1px solid #ccc;
+    border-radius: 15px;
     margin: 5px;
     height: 130mm !important;
   }
