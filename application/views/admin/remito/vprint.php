@@ -5,7 +5,7 @@
         </div>
     </section>
     <section class="content" id="cuerpo">
-        <div class="box solid" style="margin-top: 15 px;">
+        <div class="box solid" style="margin-top: 35 px;">
             <div class="body">
                 <div class="col-sm-3 form-group" id="botones" style="margin-left: -85px;">
                                 <a class="btn btn-info" style="margin-bottom: 10px; margin-rigth: 10px;" href="<?php echo base_url();?>mantenimiento/cremitos">Volver</a>
@@ -55,7 +55,7 @@
     width: 148mm; /* Ancho A5 */
     height: 210mm; /* Alto A5 */
     margin: auto;
-    margin-top: 10px !important;
+    margin-top: 30px !important;
     padding: 25px;
     border: 1px solid #ccc;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
