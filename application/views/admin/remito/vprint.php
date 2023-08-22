@@ -48,36 +48,29 @@
                                     </div>
                                 </div>
                                 <div class="col-md-12" id="celdas4">
-                                <table class="table table-dark">
-                                        <thead>
-                                            <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">First</th>
-                                            <th scope="col">Last</th>
-                                            <th scope="col">Handle</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                            <th scope="row">1</th>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                            </tr>
-                                            <tr>
-                                            <th scope="row">2</th>
-                                            <td>Jacob</td>
-                                            <td>Thornton</td>
-                                            <td>@fat</td>
-                                            </tr>
-                                            <tr>
-                                            <th scope="row">3</th>
-                                            <td>Larry</td>
-                                            <td>the Bird</td>
-                                            <td>@twitter</td>
-                                            </tr>
+                                    <table class="table table-dark">
+                                            <thead>
+                                                <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Producto</th>
+                                                <th scope="col">Cantidad</th>
+                                                <th scope="col">Precio</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody id='tbody1'>
+                                            <?php if (!empty($producto)) : ?>
+                                                <?php foreach ($producto as $atributos) : ?>
+                                                    <tr>
+                                                        <td><?php echo $atributos->IdProducto; ?></td>
+                                                        <td><?php echo $atributos->producto; ?></td>
+                                                        <td><?php echo $atributos->cantidad; ?></td>
+                                                        <td><?php echo $atributos->precio; ?></td>
+                                                    </tr>
+                                                <?php endforeach ?>
+                                            <?php endif; ?>
                                         </tbody>
-                                        </table>
+                                    </table>
                                 </div>
                             </div>
                            

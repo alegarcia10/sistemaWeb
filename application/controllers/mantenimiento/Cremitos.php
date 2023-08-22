@@ -242,6 +242,9 @@ public function cprint($id){
    
     
     $data['cliente'] = $this->mcliente->midupdatecliente($data['remito']->IdCliente);
+
+
+    $data['producto'] = $this->mremito->obtenerProducto($id);
    
    
     //$roles=$this->mroles->obtener($idRol);
