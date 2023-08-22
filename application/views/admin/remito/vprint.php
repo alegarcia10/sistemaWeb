@@ -153,7 +153,7 @@
     flex-wrap: nowrap;
     align-content: stretch;
     justify-content: space-around;
-    margin-top: -550px !important;
+    margin-top: -750px !important;
   }
 
   .info2 {
