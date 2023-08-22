@@ -205,13 +205,13 @@
   #celdas1{
     border: 1px solid #ccc;
     border-radius: 15px;
-    margin: 5px;
+    margin: 0px !important;
     height: 30mm !important;
   }
   #celdas3{
     border: 1px solid #ccc;
     border-radius: 15px;
-    margin: 5px;
+    margin: 0px !important;
     height: 25mm !important;
   }
   #celdas4{
