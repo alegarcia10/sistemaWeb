@@ -121,18 +121,20 @@
         margin: 0 0 0px;
     }
 
-    .divider {
-        border-top: 1px solid #ccc;
-        margin: 3px 0;
-    }
+    
 
     .invoice-data1 {
-        text-align: right;
+        text-align: left;
         font-size: 8px;
     }
     .invoice-data2 {
-        text-align: right;
+        text-align: left;
         font-size: 4px;
+    }
+
+    .divider {
+        border-top: 1px solid #ccc;
+        margin: 3px 0;
     }
 
     .customer-equipment {
