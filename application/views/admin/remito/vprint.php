@@ -159,7 +159,8 @@
   .datos {
     font-size: 10px;
     padding: 0px !important;
-    margin-top: 3mm;
+    margin-top: -2mm !important;
+    margin-left: 25% !important;
   }
   .datos p {
     margin: 0 0 0px;
@@ -205,13 +206,13 @@
   #celdas1{
     border: 1px solid #ccc;
     border-radius: 15px;
-    margin: 0px !important;
+    margin: 5px;
     height: 30mm !important;
   }
   #celdas3{
     border: 1px solid #ccc;
     border-radius: 15px;
-    margin-left: 25% !important;
+    margin: 5px;
     height: 25mm !important;
   }
   #celdas4{
