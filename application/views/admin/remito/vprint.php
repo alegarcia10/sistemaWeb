@@ -355,7 +355,7 @@
     border-radius: 15px;
     margin: 5px !important;
     height: 100mm !important;
-    margin-top: 10px !important;
+    margin-top: 15px !important;
   }
 
   #celdas5{
@@ -477,7 +477,7 @@
     border: 1px solid #ccc;
     height: 5mm !important;
     text-align: center !important;
-    width: 42mm !important;
+    width: 43mm !important;
     margin-left: 126mm !important;
     margin-top: -5mm !important;
   }
