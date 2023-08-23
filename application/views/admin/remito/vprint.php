@@ -356,6 +356,7 @@
     margin: 5px !important;
     height: 100mm !important;
     margin-top: 15px !important;
+    padding-top: 5mm !important;
   }
 
   #celdas5{
@@ -480,6 +481,7 @@
     width: 43mm !important;
     margin-left: 126mm !important;
     margin-top: -5mm !important;
+    
   }
 
   .registrovacio1 {
