@@ -75,9 +75,6 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div>
-                                        <h1>TOTAL: <?php echo '$'.$total; ?></h1>
-                                    </div>
                                 </div>
                                 <div class="col-md-12" id="celdas5">
                                     <div class="row" >
