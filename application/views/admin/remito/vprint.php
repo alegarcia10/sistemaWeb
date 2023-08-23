@@ -272,16 +272,16 @@
   }
   .registrovacio0  {
     border: 1px solid #ccc;
-    height: 16mm !important;
+    height: 15mm !important;
   }
   .registro01 {
     border: 1px solid #ccc;
-    height: 4mm !important;
+    height: 5mm !important;
     text-align: center !important;
   }
   .registro02 {
     border: 1px solid #ccc;
-    height: 4mm !important;
+    height: 5mm !important;
     text-align: center !important;
   }
   .registrovacio1  {
