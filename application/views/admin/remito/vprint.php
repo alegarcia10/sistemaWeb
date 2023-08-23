@@ -81,7 +81,14 @@
                                 </div>
                                 <div class="col-md-12" id="celdas5">
                                     <div class="row" >
-                                        <p></p>
+                                        <div class="col-md-12 registrovacio0">                                      
+                                        </div>
+                                        <div class="col-md-9 registro01">
+                                           <strong>Recibió</strong>                                       
+                                        </div>
+                                        <div class="col-md-3 registro02">
+                                            <strong>Original (Pag. 1 de 1)</strong>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-12" id="celdas6">
@@ -172,7 +179,6 @@
   }
   #celdas5{
     border: 1px solid #ccc;
-    border-radius: 15px;
     margin: 5px;
     height: 20mm !important;
   }
@@ -264,7 +270,20 @@
     bottom:5px;
     right:10px;
   }
-
+  .registrovacio0  {
+    border: 1px solid #ccc;
+    height: 16mm !important;
+  }
+  .registro01 {
+    border: 1px solid #ccc;
+    height: 4mm !important;
+    text-align: center !important;
+  }
+  .registro02 {
+    border: 1px solid #ccc;
+    height: 4mm !important;
+    text-align: center !important;
+  }
   .registrovacio1  {
     border: 1px solid #ccc;
     height: 25mm !important;
@@ -277,6 +296,7 @@
     border: 1px solid #ccc;
     height: 25mm !important;
   }
+  
   .registro1 {
     border: 1px solid #ccc;
     height: 5mm !important;
