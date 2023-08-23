@@ -44,7 +44,7 @@
                                         <div class="col-md-6 cliente1">
                                             <p>Sr./es: <?php echo $cliente->Nombre; ?></p>
                                             <p>C.U.I.T: <?php echo $cliente->DniCuit; ?></p>
-                                            <p>I.V.A: <?php if($cliente->IVA!='NULL'){echo $cliente->IVA;} else echo '-' ?></p>                                            
+                                            <p>I.V.A: <?php if($cliente->IVA!='NULL' or $cliente->IVA!='' ){echo $cliente->IVA;} else echo '-' ?></p>                                            
                                         </div>
                                         <div class="col-md-6 cliente2">
                                             <p>DOMICILIO: <?php echo $cliente->Domicilio; ?></p>
