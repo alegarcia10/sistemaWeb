@@ -364,6 +364,7 @@
     margin: 5px;
     height: 20mm !important;
     text-align: center;
+    margin-top: 10px !important;
   }
   #celdas6{
     border: 1px solid #ccc;
