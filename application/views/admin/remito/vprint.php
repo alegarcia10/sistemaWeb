@@ -327,7 +327,7 @@
   @media print {
   
     .cuerpo {
-    width: 178mm; /* Ancho A4 */
+    width: 187mm; /* Ancho A4 */
     height: 250mm; /* Alto A4 */
     margin: auto;
     margin-top: 10px !important;
