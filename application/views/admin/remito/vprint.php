@@ -14,8 +14,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="cuerpo" id='areaImprimir'>
-                            <link rel="stylesheet" href="<?php echo base_url();?>assets/template/dist/css/Remito.css" media="print">
+                        <div class="cuerpo" id='areaImprimir'> 
                             <div class="row">
                                 <div class="col-md-12" id="celdas1">
                                     <div class="row" >
@@ -327,9 +326,9 @@
   @media print {
   
     .cuerpo {
-    width: 200mm; /* Ancho A4 */
+    width: 180mm; /* Ancho A4 */
     height: 250mm; /* Alto A4 */
-    margin-left: -15px !important;
+    margin-left: 0px !important;
     margin-top: 10px !important;
     padding: 0px !important;
     border: 1px solid #ccc;
