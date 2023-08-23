@@ -243,8 +243,6 @@ public function cprint($id){
     
     $data['cliente'] = $this->mcliente->midupdatecliente($data['remito']->IdCliente);
 
-var_dump( $data['cliente']);
-die;
     $data['producto'] = $this->mremito->obtenerProducto($id);
     $data['total']=$this->mremito->consultaTotalRemito($id);
    
