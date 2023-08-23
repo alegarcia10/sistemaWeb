@@ -81,10 +81,10 @@
                                         <div class="col-md-12 registrovacio0">                                      
                                         </div>
                                         <div class="col-md-9 registro01">
-                                           <strong>Recibió</strong>                                       
+                                           <p>Recibió</p>                                       
                                         </div>
                                         <div class="col-md-3 registro02">
-                                            <strong>Original (Pag. 1 de 1)</strong>
+                                            <p>Original (Pag. 1 de 1)</p>
                                         </div>
                                     </div>
                                 </div>
