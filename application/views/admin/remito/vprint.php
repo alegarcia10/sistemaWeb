@@ -174,7 +174,7 @@
     border: 1px solid #ccc;
     border-radius: 15px;
     margin: 5px;
-    height: 175mm !important;
+    height: 20mm !important;
   }
 
   #celdas6{
