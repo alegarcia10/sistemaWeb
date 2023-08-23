@@ -538,6 +538,15 @@
     font-weight: bold !important;
   }
 
+  #botones{
+    display: none;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
   /* ... otros estilos para la impresión ... */
 }
 </style>
