@@ -329,7 +329,7 @@
     .cuerpo {
     width: 200mm; /* Ancho A4 */
     height: 250mm; /* Alto A4 */
-    margin: auto;
+    margin-left: -5px !important;
     margin-top: 10px !important;
     padding: auto;
     border: 1px solid #ccc;
