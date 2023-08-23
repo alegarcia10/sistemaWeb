@@ -539,6 +539,16 @@
     font-weight: bold !important;
   }
 
+
+
+  .box box-solid{
+    display: none;
+  }
+
+  #botones{
+    display: none;
+  }
+
   /* ... otros estilos para la impresión ... */
 }
 </style>
