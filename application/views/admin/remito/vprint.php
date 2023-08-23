@@ -459,6 +459,24 @@
     right:10px;
   }
 
+  #ceeldas5 p {
+    font-size: 2mm !important;
+  }
+  .registrovacio0  {
+    border: 1px solid #ccc;
+    height: 15mm !important;
+  }
+  .registro01 {
+    border: 1px solid #ccc;
+    height: 5mm !important;
+    text-align: center !important;
+  }
+  .registro02 {
+    border: 1px solid #ccc;
+    height: 5mm !important;
+    text-align: center !important;
+  }
+
   .registrovacio1 {
     border: 1px solid #ccc;
     height: 25mm !important;
