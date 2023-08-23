@@ -81,6 +81,11 @@
                                 </div>
                                 <div class="col-md-12" id="celdas5">
                                     <div class="row" >
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="col-md-12" id="celdas6">
+                                    <div class="row" >
                                         <div class="col-md-4 registrovacio1">                                      
                                         </div>
                                         <div class="col-md-4 registrovacio2">  
@@ -163,10 +168,16 @@
     border: 1px solid #ccc;
     border-radius: 15px;
     margin: 5px;
-    height: 195mm !important;
+    height: 175mm !important;
+  }
+  #celdas5{
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin: 5px;
+    height: 175mm !important;
   }
 
-  #celdas5{
+  #celdas6{
     border: 1px solid #ccc;
     margin: 5px;
     height: 30mm !important;
@@ -325,6 +336,12 @@
   }
 
   #celdas5{
+    border: 1px solid #ccc;
+    margin: 5px;
+    height: 20mm !important;
+    text-align: center;
+  }
+  #celdas6{
     border: 1px solid #ccc;
     margin: 5px;
     height: 30mm !important;
