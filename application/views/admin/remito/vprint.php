@@ -353,7 +353,7 @@
     border: 1px solid #ccc;
     border-radius: 15px;
     margin: 5px !important;
-    height: 150mm !important;
+    height: 100mm !important;
     margin-top: 10px !important;
   }
 
