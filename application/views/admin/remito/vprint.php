@@ -478,6 +478,7 @@
     height: 5mm !important;
     text-align: center !important;
     width: 42mm !important;
+    margin-left: 126mm !important;
     margin-top: -5mm !important;
   }
 
