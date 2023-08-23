@@ -270,7 +270,7 @@
   }
 
   #ceeldas5 p {
-    font-size: 4mm !important;
+    font-size: 2.5mm !important;
   }
   .registrovacio0  {
     border: 1px solid #ccc;
