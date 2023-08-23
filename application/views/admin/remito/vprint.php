@@ -355,7 +355,7 @@
     border-radius: 15px;
     margin: 5px !important;
     height: 125mm !important;
-    margin-top: 15px !important;
+    margin-top: 12px !important;
     padding-top: 5mm !important;
   }
 
