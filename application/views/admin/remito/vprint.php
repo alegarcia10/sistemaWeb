@@ -178,7 +178,7 @@
     border: 1px solid #ccc;
     margin: 5px;
     height: 20mm !important;
-    font-size: 4mm !important;
+    
   }
 
   #celdas6{
@@ -267,6 +267,10 @@
     position:absolute;
     bottom:5px;
     right:10px;
+  }
+
+  #ceeldas5 p {
+    font-size: 4mm !important;
   }
   .registrovacio0  {
     border: 1px solid #ccc;
