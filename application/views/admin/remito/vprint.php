@@ -445,7 +445,7 @@
   .cliente2 {
     font-size: 12px;
     padding: 0px !important;
-    margin-top: -12%;
+    margin-top: -12.5%;
     width: 49% !important;
     margin-left: 49% !important;
   }
@@ -471,11 +471,14 @@
     border: 1px solid #ccc;
     height: 5mm !important;
     text-align: center !important;
+    width: 126mm !important;
   }
   .registro02 {
     border: 1px solid #ccc;
     height: 5mm !important;
     text-align: center !important;
+    width: 42mm !important;
+    margin-top: -5mm !important;
   }
 
   .registrovacio1 {
