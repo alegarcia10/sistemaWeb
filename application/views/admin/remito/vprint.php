@@ -329,9 +329,9 @@
     .cuerpo {
     width: 178mm; /* Ancho A4 */
     height: 250mm; /* Alto A4 */
-    margin: 0px !important;
+    margin: auto;
     margin-top: 10px !important;
-    padding: 0px !important;
+    padding: auto;
     border: 1px solid #ccc;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
