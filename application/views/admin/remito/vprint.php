@@ -361,7 +361,7 @@
 
   #celdas5{
     border: 1px solid #ccc;
-    margin: 10px;
+    margin: 5px;
     height: 20mm !important;
     text-align: center;
   }
@@ -536,15 +536,6 @@
   #tbody3 {
     text-align: left !important;
     font-weight: bold !important;
-  }
-
-  #botones{
-    display: none;
-  }
-  body {
-    margin: 0 !important;
-    padding: 0 !important;
-    font-family: Arial, sans-serif;
   }
 
   /* ... otros estilos para la impresión ... */
