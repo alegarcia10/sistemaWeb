@@ -43,7 +43,8 @@
                                     <div class="row" >
                                         <div class="col-md-6 cliente1">
                                             <p>Sr./es: <?php echo $cliente->Nombre; ?></p>
-                                            <p>C.U.I.T: <?php echo $cliente->DniCuit; ?></p>                                            
+                                            <p>C.U.I.T: <?php echo $cliente->DniCuit; ?></p>
+                                            <p>I.V.A: <?php if($cliente->IVA!='NULL'){echo $cliente->IVA;} else echo '-' ?></p>                                            
                                         </div>
                                         <div class="col-md-6 cliente2">
                                             <p>DOMICILIO: <?php echo $cliente->Domicilio; ?></p>
@@ -166,13 +167,13 @@
     border: 1px solid #ccc;
     border-radius: 15px;
     margin: 5px;
-    height: 20mm !important;
+    height: 25mm !important;
   }
   #celdas4{
     border: 1px solid #ccc;
     border-radius: 15px;
     margin: 5px;
-    height: 175mm !important;
+    height: 170mm !important;
   }
   #celdas5{
     border: 1px solid #ccc;
@@ -347,7 +348,7 @@
     border: 1px solid #ccc;
     border-radius: 15px;
     margin: 5px !important;
-    height: 20mm !important;
+    height: 25mm !important;
   }
   #celdas4{
     border: 1px solid #ccc;
