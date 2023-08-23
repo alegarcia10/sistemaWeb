@@ -81,10 +81,10 @@
                                         <div class="col-md-12 registrovacio0">                                      
                                         </div>
                                         <div class="col-md-9 registro01">
-                                           <p>Recibió</p>                                       
+                                            <strong><p>Recibió</p></strong>                                     
                                         </div>
                                         <div class="col-md-3 registro02">
-                                            <p>Original (Pag. 1 de 1)</p>
+                                            <strong><p>Original (Pag. 1 de 1)</p></strong>
                                         </div>
                                     </div>
                                 </div>
@@ -178,6 +178,7 @@
     border: 1px solid #ccc;
     margin: 5px;
     height: 20mm !important;
+    font-size: 4mm !important;
   }
 
   #celdas6{
