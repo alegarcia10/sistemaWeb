@@ -355,13 +355,13 @@
     border-radius: 15px;
     margin: 5px !important;
     height: 125mm !important;
-    margin-top: 12px !important;
-    padding-top: 5mm !important;
+    margin-top: 10px !important;
+    padding-top: 2.5mm !important;
   }
 
   #celdas5{
     border: 1px solid #ccc;
-    margin: 5px;
+    margin: 10px;
     height: 20mm !important;
     text-align: center;
   }
