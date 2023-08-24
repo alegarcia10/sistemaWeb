@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <section class="content-header">
         <h1>
-            Estadosss de Trabajo
+            Estados de Trabajo
             
         </h1>
     </section>
