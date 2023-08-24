@@ -438,7 +438,7 @@
   .cliente1 {
     font-size: 12px;
     padding: 0px !important;
-    margin-top: -3%;
+    margin-top: -6%;
     width: 49% !important;
   }
   .cliente1 p {
