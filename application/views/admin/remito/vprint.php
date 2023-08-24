@@ -238,7 +238,7 @@
   .datos3 {
     font-size: 10px;
     text-align: center;
-    margin-top: 1% !important; 
+    margin-top: -3% !important; 
   }
   .datos4 {
     font-size: 10px;
