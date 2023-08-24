@@ -151,6 +151,7 @@
     width: 210mm; /* Ancho A4 */
     height: 297mm; /* Alto A4 */
     margin: auto;
+    margin-left: -15px !important;
     margin-top: 10px !important;
     padding: 25px;
     /*border: 1px solid #ccc;*/
@@ -331,6 +332,7 @@
     width: 178mm; /* Ancho A4 */
     height: 250mm; /* Alto A4 */
     margin: auto;
+    margin-left: -15px !important;
     margin-top: 10px !important;
     padding: auto;
     /*border: 1px solid #ccc;*/
