@@ -421,7 +421,7 @@
   .datos3 {
     font-size: 10px;
     text-align: center;
-    margin-top: 1% !important; 
+    margin-top: -3% !important; 
     width: 49% !important;
 
   }
@@ -438,7 +438,7 @@
   .cliente1 {
     font-size: 12px;
     padding: 0px !important;
-    margin-top: -16%;
+    margin-top: 1%;
     width: 49% !important;
   }
   .cliente1 p {
