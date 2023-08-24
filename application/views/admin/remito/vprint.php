@@ -333,7 +333,7 @@
     margin: auto;
     margin-top: 10px !important;
     padding: auto;
-    border: 1px solid #ccc;
+    /*border: 1px solid #ccc;*/
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
 
