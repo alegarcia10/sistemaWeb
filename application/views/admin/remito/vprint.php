@@ -29,13 +29,14 @@
                                             <h5>REMITO N°<?php echo $remito->IdRemito; ?></h5>
                                             <p>COMPROBANTE NO VALIDO COMO FACTURA</p>
                                             <p>Fecha: <?php echo date("d/m/Y", strtotime("$remito->fecha")); ?></p>
+                                            <p>C.U.I.T: 30-71621552-7 </p>
                                         </div>
                                         <div class="col-md-6 datos3">
                                           <p>Cereseto Oeste 156  - Teléfono: 264-4275852</p>
                                     
                                         </div>
                                         <div class="col-md-6 datos4">
-                                            <p>C.U.I.T: 30-71621552-7 </p>
+                                            
                                         </div>
                                     </div>
                                 </div>
