@@ -25,9 +25,13 @@
                                     <label for="nombre">Nombre</label>
                                     <input type="text" id="txtnombre" name="txtnombre" maxlength="256"class="form-control" value="<?php echo set_value('txtnombre') ?>"  required>
                                 </div>
-                                <div class=" col-sm-4 form-group">
+                                <div class=" col-sm-5 form-group">
                                     <label for="iva">I.V.A</label>
                                     <input type="text" id="txtiva" name="txtiva" class="form-control" value="<?php echo set_value('txtiva') ?>"  >
+                                </div>
+                                <div class=" col-sm-5 form-group">
+                                    <label for="localidad">Localidad</label>
+                                    <input type="text" id="txtlocalidad" name="txtlocalidad" class="form-control" value="<?php echo set_value('txtlocalidad') ?>"  >
                                 </div>
                                 <div class="col-sm-6 form-group">
                                     <label for="domicilio">Domicilio</label>

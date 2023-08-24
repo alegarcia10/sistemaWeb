@@ -27,9 +27,13 @@
                                 <label for="nombre">Nombre</label>
                                 <input type="text" id="txtnombre" name="txtnombre" maxlength="256" value="<?php echo !empty(form_error('txtnombre'))? set_value('txtnombre') : $clienteedit->Nombre ?>" class= "form-control" required >
                             </div>
-                            <div class="col-sm-4 form-group">
+                            <div class="col-sm-5 form-group">
                                 <label for="iva">I.V.A</label>
-                                <input type="text" id="txtiva" name="txtiva" maxlength="100" value="<?php echo !empty(form_error('txtiva'))? set_value('txtiva') : $clienteedit->IVA ?>" class= "form-control" required >
+                                <input type="text" id="txtiva" name="txtiva" maxlength="100" value="<?php echo !empty(form_error('txtiva'))? set_value('txtiva') : $clienteedit->IVA ?>" class= "form-control"  >
+                            </div>
+                            <div class="col-sm-5 form-group">
+                                <label for="localidad">Localidad</label>
+                                <input type="text" id="txtlocalidad" name="txtlocalidad" maxlength="100" value="<?php echo !empty(form_error('txtlocalidad'))? set_value('txtlocalidad') : $clienteedit->Localidad ?>" class= "form-control"  >
                             </div>
                             <div class="col-sm-6 form-group">
                                 <label for="domicilio">Domicilio</label>

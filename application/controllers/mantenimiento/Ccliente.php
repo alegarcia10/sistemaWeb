@@ -51,6 +51,7 @@ public function cinsert(){
      $prov = $this->input->post('txtprovincia');
      $domicilio = $this->input->post('txtdomicilio');
      $iva = $this->input->post('txtiva');
+     $localidad = $this->input->post('txtlocalidad');
      $cli = $this->mcliente->obtenerclientedni($cuit);
 
      if($cli==null){
@@ -61,6 +62,7 @@ public function cinsert(){
                    'Provincia' => $prov,
                    'Domicilio' => $domicilio,
                    'IVA' => $iva,
+                   'Localidad' => $localidad,
                    'Anulado' => '0'
                );
                $res=$this->mcliente->minsertcliente($data);
@@ -106,6 +108,7 @@ public function cupdate(){
      $prov = $this->input->post('txtprovincia');
      $domicilio = $this->input->post('txtdomicilio');
      $iva = $this->input->post('txtiva');
+     $localidad = $this->input->post('txtlocalidad');
 
      $cli = $this->mcliente->obtenerclientedni($cuit);
 
@@ -117,6 +120,7 @@ public function cupdate(){
                    'DniCuit' => $cuit,
                    'Provincia' => $prov,
                    'IVA' => $iva,
+                   'Localidad' => $localidad,
                    'Domicilio' => $domicilio
                );
 
