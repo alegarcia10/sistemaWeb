@@ -241,7 +241,7 @@
   }
   .datos4 {
     font-size: 10px;
-    text-align: center;
+    text-align: left;
     margin-top: 1% !important; 
   }
 
