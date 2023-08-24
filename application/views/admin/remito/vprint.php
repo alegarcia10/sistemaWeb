@@ -30,11 +30,11 @@
                                             <p>COMPROBANTE NO VALIDO COMO FACTURA</p>
                                             <p>Fecha: <?php echo date("d/m/Y", strtotime("$remito->fecha")); ?></p>
                                         </div>
-                                        <div class="col-md-7 datos3">
+                                        <div class="col-md-6 datos3">
                                           <p>Cereseto Oeste 156  - Teléfono: 264-4275852</p>
                                     
                                         </div>
-                                        <div class="col-md-5 datos4">
+                                        <div class="col-md-6 datos4">
                                             <p>C.U.I.T: 30-71621552-7 </p>
                                         </div>
                                     </div>
@@ -224,6 +224,7 @@
     padding: 0px !important;
     margin-top: 0% !important;
     text-align: left;
+    margin-left: 3% !important;
   
   }
 
@@ -240,7 +241,7 @@
   }
   .datos4 {
     font-size: 10px;
-    text-align: left;
+    text-align: center;
     margin-top: 1% !important; 
   }
 
