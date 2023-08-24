@@ -224,7 +224,6 @@
     padding: 0px !important;
     margin-top: 0% !important;
     text-align: left;
-    margin-left: 3% !important;
   
   }
 
