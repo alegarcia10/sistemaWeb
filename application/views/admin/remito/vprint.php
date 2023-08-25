@@ -185,7 +185,7 @@
   }
   .linea-vertical {
     width: 1px; /* Ancho de la línea vertical */
-    height: 100%; /* Altura igual al 100% del contenedor padre */
+    height: 40%; /* Altura igual al 100% del contenedor padre */
     background-color: #000; /* Color de la línea vertical */
     position: fixed; /* Hace que la línea sea fija en la ventana */
     left: 50%; /* Ubica la línea en el centro del contenedor padre */
