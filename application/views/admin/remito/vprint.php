@@ -458,12 +458,12 @@
   }
   .cliente1 p {
     margin-top: 3% !important;
-    margin-left: 5%;
+    margin-left: 7%;
   }
   .cliente2 {
     font-size: 12px;
     padding: 0px !important;
-    margin-top: -12.5%;
+    margin-top: -10.5%;
     width: 49% !important;
     margin-left: 49% !important;
   }
