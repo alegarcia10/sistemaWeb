@@ -13,7 +13,7 @@
                          
                 </div>
                 <div class="row">
-                    <div class="col-md-12 " >
+                    <div class="col-md-12 " id='cuerpo' >
                             <link rel="stylesheet" href="<?php echo base_url();?>assets/template/dist/css/Remito.css" media="print">
                             <div class="row">
                                 <div class="col-md-12" id="celdas1">
@@ -146,6 +146,11 @@
     printButton.addEventListener('click', printInvoice);
   </script>
 <style>
+
+  #cuerpo {
+    width: 210mm; /* Ancho A4 */
+    height: 297mm; /* Alto A4 */
+  }
   .cuerpo {
     width: 210mm; /* Ancho A4 */
     height: 297mm; /* Alto A4 */
