@@ -59,6 +59,7 @@
                                                 <thead>
                                                     <tr>
                                                     <th width="15%" scope="col">Cantidad</th>
+                                                    <div class="linea-vertical"></div>
                                                     <th width="60%"scope="col">Detalle</th>
                                                     <th width="25%"scope="col">Numero de Serie</th>
                                                     </tr>
@@ -182,6 +183,15 @@
     height: 20mm !important;
     
   }
+  .linea-vertical {
+    width: 1px; /* Ancho de la línea vertical */
+    height: 100%; /* Altura igual al 100% del contenedor padre */
+    background-color: #000; /* Color de la línea vertical */
+    position: fixed; /* Hace que la línea sea fija en la ventana */
+    left: 50%; /* Ubica la línea en el centro del contenedor padre */
+    top: 0; /* Coloca la línea en la parte superior del contenedor padre */
+    transform: translateX(-50%); /* Centra la línea correctamente */
+}
 
   #celdas6{
     border: 1px solid #ccc;
