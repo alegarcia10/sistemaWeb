@@ -68,6 +68,13 @@
                                 <span class="checkmark"></span>
                                 
                             </div>
+                            <div class="col-sm-2 form-group">
+                                <label>Remitos</label>
+                               
+                                <input class="chk_input" type="checkbox" id="remitos" name="remitos" data-width="20" data-height="20" <?=(!empty($rolesedit->remitos)&&$rolesedit->remitos=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($rolesedit->remitos))?'checked':''?> />
+                                <span class="checkmark"></span>
+                                
+                            </div>
                             
                             <div class="col-sm-12 form-group">
                             <a class="btn btn-success" href="<?php echo base_url();?>mantenimiento/croles">Volver</a>
