@@ -342,7 +342,7 @@
   @media print {
   
     #cuerpo {
-      width: 178mm; /* Ancho A4 */
+      width: 184mm; /* Ancho A4 */
     height: 250mm;
   }
     .cuerpo {
