@@ -153,7 +153,7 @@
     height: 297mm; /* Alto A4 */
     margin: auto;
     margin-top: 10px !important;
-    padding: 25px;
+    /*padding: 25px;*/
     border: 1px solid #ccc;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
