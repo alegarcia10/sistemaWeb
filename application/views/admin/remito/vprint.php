@@ -495,7 +495,7 @@
     border: 1px solid #ccc;
     height: 5mm !important;
     text-align: center !important;
-    width: 43mm !important;
+    width: 55mm !important;
     margin-left: 126mm !important;
     margin-top: -5mm !important;
     
@@ -504,21 +504,21 @@
   .registrovacio1 {
     border: 1px solid #ccc;
     height: 25mm !important;
-    width: 56mm !important; 
+    width: 60mm !important; 
   }
   .registrovacio2 {
     border: 1px solid #ccc;
     height: 25mm !important;
-    width: 56mm !important;
-    margin-left: 56mm !important; 
+    width: 60mm !important;
+    margin-left: 60mm !important; 
     margin-top: -25mm !important;
     
   }
   .registrovacio3 {
     border: 1px solid #ccc;
     height: 25mm !important;
-    width: 57mm !important;
-    margin-left: 112mm !important; 
+    width: 61mm !important;
+    margin-left: 120mm !important; 
     margin-top: -25mm !important;
      
   }
@@ -537,7 +537,7 @@
   .registro3 {
     border: 1px solid #ccc;
     height: 5mm !important;
-    width: 60mm !important; 
+    width: 61mm !important; 
     margin-left: 120mm !important; 
     margin-top: -5mm !important;
   
