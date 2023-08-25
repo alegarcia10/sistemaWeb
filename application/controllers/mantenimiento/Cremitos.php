@@ -64,14 +64,12 @@ public function addProducto(){
     $producto = $this->input->post("producto");
     $idRemito = $this->input->post("idRemito");
     $cant = $this->input->post("cant");
-    $precio = $this->input->post("precio");
 
 
     $data = array(
         'cantidad' => $cant,
         'producto' =>  $producto,
-        'idRemito' => $idRemito,
-        'precio' => $precio
+        'idRemito' => $idRemito
     );
     $ale=$data['Cantidad'];
 

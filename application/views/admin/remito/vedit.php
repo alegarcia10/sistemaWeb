@@ -75,7 +75,7 @@
                                                         <th>#</th>
                                                         <th>Producto</th>
                                                         <th>Cantidad</th>
-                                                        <th>Precio</th>
+                                                      
                                                     </tr>
                                                 </thead>
                                                 <tbody id='tbody1'>
@@ -85,7 +85,7 @@
                                                                 <td><?php echo $atributos->IdProducto; ?></td>
                                                                 <td><?php echo $atributos->producto; ?></td>
                                                                 <td><?php echo $atributos->cantidad; ?></td>
-                                                                <td><?php echo $atributos->precio; ?></td>
+                                                               
                                                                 <?php $data = $atributos->IdRemito; ?>
                                                                 <td>
                                                                     <div class="btn-group">
@@ -122,7 +122,7 @@ $(document).ready(function(){
         var idRemito =$('#txtIdRemito').val();
         var producto =$('#txtproducto').val();
         var cant =$('#txtcantidad').val();
-        var precio =$('#txtprecio').val();
+    
       
         if((producto=='') || (cant=='') ){
 
@@ -130,13 +130,13 @@ $(document).ready(function(){
 
         $('#txtproducto').val('');
         $('#txtcantidad').val('');
-        $('#txtprecio').val('');
+        
        
                 $.ajax( {
                                     method:'POST',
                                     url:'<?php echo base_url(); ?>' + 'mantenimiento/cremitos/addProducto',
                                     dataType:'html',
-                                    data:{producto:producto,idRemito:idRemito,cant:cant,precio:precio}})
+                                    data:{producto:producto,idRemito:idRemito,cant:cant}})
                                    
                                     .done(function(r) {
                                         window.location.href=base_url+'/mantenimiento/cremitos/cedit/'+idRemito;
