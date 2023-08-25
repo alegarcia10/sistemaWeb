@@ -424,7 +424,7 @@
     padding: 0px !important;
     margin-top: -10% !important;
     text-align: left;
-    margin-left: 57% !important;
+    margin-left: 58% !important;
 }
 
   .datos2 h5 p {
