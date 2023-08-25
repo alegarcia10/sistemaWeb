@@ -55,7 +55,7 @@
                                 </div>
                                 <div class="col-md-12" id="celdas4">
                                     <div>
-                                        <table class="table table-primary">
+                                        <table FRAME="void" RULES="cols" class="table table-primary">
                                                 <thead>
                                                     <tr>
                                                     <th width="15%" scope="col">Cantidad</th>
