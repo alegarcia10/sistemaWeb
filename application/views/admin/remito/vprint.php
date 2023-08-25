@@ -379,14 +379,14 @@
 
   #celdas5{
     border: 1px solid #ccc;
-    margin: 5px;
+    margin: 5px !important;
     height: 20mm !important;
     text-align: center;
     margin-top: 10px !important;
   }
   #celdas6{
     border: 1px solid #ccc;
-    margin: 5px;
+    margin: 5px !important;
     height: 30mm !important;
     text-align: center;
   }
