@@ -525,20 +525,20 @@
   .registro1 {
     border: 1px solid #ccc;
     height: 5mm !important;
-    width: 56mm !important;  
+    width: 57mm !important;  
   }
   .registro2 {
     border: 1px solid #ccc;
     height: 5mm !important;
-    width: 56mm !important; 
-    margin-left: 56mm !important; 
+    width: 57mm !important; 
+    margin-left: 57mm !important; 
     margin-top: -5mm !important;
   }
   .registro3 {
     border: 1px solid #ccc;
     height: 5mm !important;
-    width: 57mm !important; 
-    margin-left: 112mm !important; 
+    width: 58mm !important; 
+    margin-left: 116mm !important; 
     margin-top: -5mm !important;
   
   }
