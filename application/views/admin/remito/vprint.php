@@ -463,7 +463,7 @@
   .cliente2 {
     font-size: 12px;
     padding: 0px !important;
-    margin-top: -10.5%;
+    margin-top: -11.5%;
     width: 49% !important;
     margin-left: 49% !important;
   }
