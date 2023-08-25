@@ -30,7 +30,6 @@
                                   <th>Cliente</th>
                                   <th>Vendedor</th>
                                   <th>Observaciones</th>
-                                  <th>Monto Total</th>
                                   <th >Operaciones</th>
                                 </tr>
                             </thead>
@@ -42,8 +41,7 @@
                                           <td width="10%"><?php echo date("d/m/Y", strtotime("$atributos->fecha")); ?></td>
                                           <td width="30%"><?php echo $atributos->Nombre; ?></td>
                                           <td width="10%"><?php echo $atributos->vendedor; ?></td>
-                                          <td width="15%"><?php echo $atributos->observaciones; ?></td>
-                                          <td width="10%">$<?php echo number_format($atributos->montoTotal, 2); ?></td>
+                                          <td width="25%"><?php echo $atributos->observaciones; ?></td>
                                           <td width="20%" >
                                                 <div class="btn-group">
                                                     <a href="<?php echo base_url(); ?>mantenimiento/cremitos/cprint/<?php echo $atributos->IdRemito; ?>" class="btn btn-warning" title="Ver">
