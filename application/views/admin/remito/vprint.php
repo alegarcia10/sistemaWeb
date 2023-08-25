@@ -59,9 +59,9 @@
                                                 <thead>
                                                     <tr>
                                                     <th width="15%" scope="col">Cantidad</th>
-                                                    <td class="linea-vertical"></td>  
+                                                    <th class="linea-vertical"></th>  
                                                     <th width="60%"scope="col">Detalle</th>
-                                                    <td class="linea-vertical"></td>  
+                                                    <th class="linea-vertical"></th>  
                                                     <th width="25%"scope="col">Numero de Serie</th>
                                                     </tr>
                                                 </thead>
@@ -71,9 +71,9 @@
                                                     <?php foreach ($producto as $atributos) : ?>
                                                         <tr>
                                                             <td id='tbody2'><?php echo $atributos->cantidad; ?></td>
-                                                            <td class="linea-vertical"></td>  
+                                                            
                                                             <td id='tbody3'><?php echo $atributos->producto; ?></td>
-                                                            <td class="linea-vertical"></td>  
+                                                         
                                                             <td></td>
                                                         </tr>
                                                     <?php endforeach ?>
