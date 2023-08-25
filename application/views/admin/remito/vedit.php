@@ -60,10 +60,6 @@
                                         <label for="cantidad">Cantidad</label>
                                         <input type="text" id="txtcantidad" name="txtcantidad" class="form-control" value="<?php echo set_value('txtcantidad') ?>" >
                                     </div>
-                                    <div class="col-sm-3 form-group">
-                                        <label for="precio">Precio</label>
-                                        <input type="number" id="txtprecio" name="txtprecio" class="form-control" step=".01" value="<?php echo set_value('txtprecio') ?>" >
-                                    </div>
                                     <div class="col-sm-1">
                                         <br>
                                         <button class="btn btn-primary" type="button" id="agregarProducto"><span class="fa fa-plus" aria-hidden="true" ></span> Agregar </button>
@@ -75,7 +71,6 @@
                                                         <th>#</th>
                                                         <th>Producto</th>
                                                         <th>Cantidad</th>
-                                                      
                                                     </tr>
                                                 </thead>
                                                 <tbody id='tbody1'>
@@ -85,7 +80,6 @@
                                                                 <td><?php echo $atributos->IdProducto; ?></td>
                                                                 <td><?php echo $atributos->producto; ?></td>
                                                                 <td><?php echo $atributos->cantidad; ?></td>
-                                                               
                                                                 <?php $data = $atributos->IdRemito; ?>
                                                                 <td>
                                                                     <div class="btn-group">
