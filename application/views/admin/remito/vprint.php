@@ -147,7 +147,7 @@
 
   #cuerpo {
     width: 210mm; /* Ancho A4 */
-    height: 287mm; /* Alto A4 */
+    height: 267mm; /* Alto A4 */
   }
   .cuerpo {
     width: 210mm; /* Ancho A4 */
