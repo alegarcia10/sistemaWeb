@@ -38,7 +38,7 @@
                             </div>
                         
                             <div class="col-sm-6 form-group">
-                                <a class="btn btn-success" href="<?php echo base_url();?>mantenimiento/cremitos">Volver</a>
+                                <a class="btn btn-info" href="<?php echo base_url();?>mantenimiento/cremitos">Volver</a>
                                 <button type="submit" class="btn btn-success">Guardar</button>
                             </div>
                         </form>
