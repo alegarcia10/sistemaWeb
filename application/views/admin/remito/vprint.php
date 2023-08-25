@@ -34,9 +34,7 @@
                                           <p>Cereseto Oeste 156  - Teléfono: 264-4275852</p>
                                     
                                         </div>
-                                        <div class="col-md-6 datos4">
-                                            
-                                        </div>
+                                    
                                     </div>
                                 </div>
                                 <div class="col-md-12" id="celdas3">
@@ -251,7 +249,7 @@
   .datos3 {
     font-size: 10px;
     text-align: center;
-    margin-top: -3% !important; 
+    margin-top: -1% !important; 
   }
   .datos4 {
     font-size: 10px;
