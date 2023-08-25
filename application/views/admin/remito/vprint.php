@@ -341,7 +341,7 @@
   
     #cuerpo {
       width: 184mm; /* Ancho A4 */
-    height: 260mm;
+    height: 255mm;
   }
     .cuerpo {
     width: 178mm; /* Ancho A4 */
@@ -370,7 +370,7 @@
     border: 1px solid #ccc;
     border-radius: 15px;
     margin: 5px !important;
-    height: 135mm !important;
+    height: 130mm !important;
     margin-top: 10px !important;
     padding-top: 2.5mm !important;
   }
