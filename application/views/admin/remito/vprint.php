@@ -161,7 +161,7 @@
     border-radius: 15px;
     margin: 5px;
     margin-left: 20px !important;
-    margin-right: 20px !important;
+    margin-right: 40px !important;
     height: 30mm !important;
   }
   #celdas3{
@@ -170,7 +170,7 @@
     margin: 5px;
     height: 25mm !important;
     margin-left: 20px !important;
-    margin-right: 20px !important;
+    margin-right: 40px !important;
   }
   #celdas4{
     border: 1px solid #ccc;
@@ -178,14 +178,14 @@
     margin: 5px;
     height: 170mm !important;
     margin-left: 20px !important;
-    margin-right: 20px !important;
+    margin-right: 40px !important;
   }
   #celdas5{
     border: 1px solid #ccc;
     margin: 5px;
     height: 20mm !important;
     margin-left: 20px !important;
-    margin-right: 20px !important;
+    margin-right: 40px !important;
     
   }
 
@@ -195,7 +195,7 @@
     height: 30mm !important;
     text-align: center;
     margin-left: 20px !important;
-    margin-right: 20px !important;
+    margin-right: 40px !important;
   }
 
   .logo {
