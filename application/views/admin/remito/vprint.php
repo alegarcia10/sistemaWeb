@@ -188,7 +188,7 @@
   }
   .linea-vertical {
             border-right: 1px solid #000; /* Añade una línea vertical de 1px de grosor */
-            height: 100%; /* Ajusta la altura según tus necesidades */
+            height: 200%; /* Ajusta la altura según tus necesidades */
         }
 
   #celdas6{
