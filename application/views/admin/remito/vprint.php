@@ -71,9 +71,9 @@
                                                     <?php foreach ($producto as $atributos) : ?>
                                                         <tr>
                                                             <td id='tbody2'><?php echo $atributos->cantidad; ?></td>
-                                                            
+                                                            <th class="linea-vertical"></th>
                                                             <td id='tbody3'><?php echo $atributos->producto; ?></td>
-                                                         
+                                                            <th class="linea-vertical"></th>
                                                             <td></td>
                                                         </tr>
                                                     <?php endforeach ?>
