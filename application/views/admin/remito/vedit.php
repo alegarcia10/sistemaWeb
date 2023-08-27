@@ -124,12 +124,12 @@ $(document).ready(function(){
         var cant =$('#txtcantidad').val();
         var numSerie =$('#txtnumSerie').val();
 
-        if()
         
     
       
-        if((producto=='') || (cant=='') ){
-
+        if((producto=='') || (cant=='') || (numSerie=='')  ){
+            alert('Datos incompletos');
+            window.location.href=base_url+'/mantenimiento/cremitos/cedit/'+idRemito;
         }else{
 
         $('#txtproducto').val('');
