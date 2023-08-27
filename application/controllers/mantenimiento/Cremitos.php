@@ -109,6 +109,8 @@ public function cinsert(){
 }
 
 
+
+
 public function cedit($id){
     $idrol = $this->session->userdata("idRol");
     $data = array(
@@ -252,6 +254,16 @@ public function cprint($id){
     $this->load->view('layouts/aside',$data);
     $this->load->view('admin/remito/vprint', $data);
     $this->load->view('layouts/footer');
+}
+
+public function cError($idRemito){
+
+    $idRemito = $this->input->post("idRemito");
+           $this->session->set_flashdata('error', 'No se Guardo registro');
+           redirect(base_url().'mantenimiento/cremitos/cedit/'.$idRemito);
+       
+
+
 }
 
 

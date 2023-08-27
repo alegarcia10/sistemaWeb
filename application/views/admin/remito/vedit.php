@@ -123,13 +123,11 @@ $(document).ready(function(){
         var producto =$('#txtproducto').val();
         var cant =$('#txtcantidad').val();
         var numSerie =$('#txtnumSerie').val();
-
-        alert(numSerie);
     
       
         if((producto=='') || (cant=='') || (numSerie=='')  ){
             alert('Datos incompletos');
-            window.location.href=base_url+'/mantenimiento/cremitos/cedit/'+idRemito;
+            window.location.href=base_url+'/mantenimiento/cremitos/cError/'+idRemito;
         }else{
 
         $('#txtproducto').val('');
