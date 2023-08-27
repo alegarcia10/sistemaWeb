@@ -50,7 +50,8 @@ public function cinsert(){
      $cuit = $this->input->post('txtcuit');
      $prov = $this->input->post('txtprovincia');
      $domicilio = $this->input->post('txtdomicilio');
-
+     $iva = $this->input->post('txtiva');
+     $localidad = $this->input->post('txtlocalidad');
      $cli = $this->mcliente->obtenerclientedni($cuit);
 
      if($cli==null){
@@ -60,6 +61,8 @@ public function cinsert(){
                    'DniCuit' => $cuit,
                    'Provincia' => $prov,
                    'Domicilio' => $domicilio,
+                   'IVA' => $iva,
+                   'Localidad' => $localidad,
                    'Anulado' => '0'
                );
                $res=$this->mcliente->minsertcliente($data);
@@ -88,6 +91,7 @@ public function cedit($id){
         'clienteedit' => $this->mcliente->midupdatecliente($id),
         'roles'=>$this->mroles->obtener($idrol)
     );
+    
     //$roles=$this->mroles->obtener($idRol);
     $this->load->view('layouts/header');
     $this->load->view('layouts/aside',$data);
@@ -103,6 +107,8 @@ public function cupdate(){
      $cuit = $this->input->post('txtcuitnew');
      $prov = $this->input->post('txtprovincia');
      $domicilio = $this->input->post('txtdomicilio');
+     $iva = $this->input->post('txtiva');
+     $localidad = $this->input->post('txtlocalidad');
 
      $cli = $this->mcliente->obtenerclientedni($cuit);
 
@@ -113,6 +119,8 @@ public function cupdate(){
                    'Nombre' => $nombre,
                    'DniCuit' => $cuit,
                    'Provincia' => $prov,
+                   'IVA' => $iva,
+                   'Localidad' => $localidad,
                    'Domicilio' => $domicilio
                );
 
