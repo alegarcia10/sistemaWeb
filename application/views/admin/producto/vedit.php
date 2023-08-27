@@ -27,8 +27,8 @@
                                 <input type="text" id="txtcantidad" name="txtcantidad"  value="<?php echo !empty(form_error('txtcantidad'))? set_value('txtcantidad') : $productoedit->cantidad ?>" class= "form-control"  >
                             </div>
                             <div class="col-sm-2 form-group">
-                                <label for="precio">Precio</label>
-                                <input type="number" id="txtprecio" name="txtprecio" step=".01" value="<?php echo !empty(form_error('txtprecio'))? set_value('txtprecio') : $productoedit->precio ?>" class= "form-control"  >
+                                <label for="numSerie">Numero de Serie</label>
+                                <input type="number" id="txtnumSerie" name="txtnumSerie"  value="<?php echo !empty(form_error('txtnumSerie'))? set_value('txtnumSerie') : $productoedit->numSerie ?>" class= "form-control"  >
                             </div>
 
                             <div class="col-sm-12 form-group">
