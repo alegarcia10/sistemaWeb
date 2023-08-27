@@ -25,10 +25,10 @@
                         <table id="tablaremito" class="table table-bordered table-hover order-table2">
                             <thead>
                                 <tr>
-                                  <th>N° remito</th>
-                                  <th>Fecha</th>
-                                  <th>Cliente</th>
-                                  <th >Operaciones</th>
+                                  <th width="5%">N° remito</th>
+                                  <th width="15%">Fecha</th>
+                                  <th width="60%">Cliente</th>
+                                  <th width="20%">Operaciones</th>
                                 </tr>
                             </thead>
                             <tbody>
