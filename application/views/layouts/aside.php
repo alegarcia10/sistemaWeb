@@ -38,15 +38,16 @@
                         </ul>
                     </li>
 
-                    <?php if ($roles->estados_trabajo =="1" || $roles->equipos =="1") { ?>
+                  
+
+                    <?php if ($roles->estados_trabajo =="1" || $roles->equipos =="1" || $roles->remitos =="1") { ?>
                     <li class="treeview">
                         <a href="#">
-
+                        
                             <i class="fa-solid fa-book"></i> <span> &nbsp Gestión</span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
-                            <?php } ?>
                         </a>
                         <ul class="treeview-menu">
                             <li><a href="<?php echo base_url(); ?>mantenimiento/ctrabajos"><i class="fa-solid fa-chart-line"></i> Estados de Trabajo</a></li>
@@ -54,10 +55,10 @@
                             <li><a href="<?php echo base_url(); ?>mantenimiento/cequipos"><i class="fa-solid fa-file-invoice"></i>&nbsp Recepción Equipos</a></li>
                             <?php } ?>
                             <?php if ($roles->remitos =="1") { ?>
-                            <li><a href="<?php echo base_url(); ?>mantenimiento/cremitos"><i class="fa-solid fa-file-invoice-dollar"></i>&nbsp Remitos</a></li>
+                            <li><a href="<?php echo base_url(); ?>mantenimiento/cremitos"><i class="fa-solid fa-file-invoice-dollar"></i>  Remitos</a></li>
                             <?php } ?>
                         </ul>
-
+                        
                         </li>
                     <?php } ?>
 
