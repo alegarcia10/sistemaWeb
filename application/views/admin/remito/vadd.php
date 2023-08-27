@@ -54,36 +54,6 @@
       $("#exampleModal").modal("show");
   });
 
-  $('#agregarProducto').on('click',function(){
-
-        var idRemito =$('#txtIdRemito').val();
-        var idProducto =$('#txtIdProducto').val();
-        var producto =$('#txtproducto').val();
-        var cant =$('#txtcantidad').val();
-        var precio =$('#txtprecio').val();
-
-        if((producto=='') || (cant=='') ){
-
-        }else{
-
-        $('#txtproducto').val('');
-        $('#txtcantidad').val('');
-        $('#txtprecio').val('');
-
-                $.ajax( {
-                                    method:'POST',
-                                    url:'<?php echo base_url(); ?>' + 'mantenimiento/Cremitos/addProducto',
-                                    dataType:'html',
-                                    data:{producto:producto,idRemito:idRemito,idProducto:idProducto,cant:cant,precio:precio}})
-                                    .done(function(r) {
-
-                                    r = JSON.parse(r);
-                                    window.location.href=base_url+'/mantenimiento/cremitos/cedit/'+idProducto;
-                                    //$("#tbody1").append(r['linksa']);
-                                    });
-
-        }
-
-        });
+ 
 
 </script>

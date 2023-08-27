@@ -64,11 +64,13 @@ public function addProducto(){
     $producto = $this->input->post("producto");
     $idRemito = $this->input->post("idRemito");
     $cant = $this->input->post("cant");
+    $numSerie = $this->input->post("numSerie");
 
 
     $data = array(
         'cantidad' => $cant,
         'producto' =>  $producto,
+        'numSerie' => $numSerie,
         'idRemito' => $idRemito
     );
     $ale=$data['Cantidad'];
@@ -207,7 +209,7 @@ public function cupdateProd(){
 
   $descripcion = $this->input->post('txtproducto');
   $cantidad = $this->input->post('txtcantidad');
-  $precio = $this->input->post('txtprecio');
+  $numSerie = $this->input->post('txtnumSerie');
   $id = $this->input->post('txtid');
   $prod = $this->mremito->obtenerProdconIdProd($id);
 
@@ -217,7 +219,7 @@ public function cupdateProd(){
       $data = array(
           'producto' => $descripcion,
           'cantidad' => $cantidad,
-          'precio' => $precio
+          'numSerie' => $numSerie
       );
 
 

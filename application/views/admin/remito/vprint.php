@@ -67,7 +67,7 @@
                                                         <tr>
                                                             <td id='tbody2'><?php echo $atributos->cantidad; ?></td>
                                                             <td id='tbody3'><?php echo $atributos->producto; ?></td>
-                                                            <td></td>
+                                                            <td id='tbody2'><?php echo $atributos->numSerie; ?></td>
                                                         </tr>
                                                     <?php endforeach ?>
                                                 <?php endif; ?>
