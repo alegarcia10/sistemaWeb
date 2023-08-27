@@ -124,7 +124,7 @@ $(document).ready(function(){
         var cant =$('#txtcantidad').val();
         var numSerie =$('#txtnumSerie').val();
 
-        
+        alert(numSerie);
     
       
         if((producto=='') || (cant=='') || (numSerie=='')  ){
