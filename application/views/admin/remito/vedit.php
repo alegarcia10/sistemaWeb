@@ -54,11 +54,11 @@
                                 
                                     <div class="col-sm-5 form-group">
                                         <label for="producto">Producto</label>
-                                        <input type="text" id="txtproducto" name="txtproducto" class="form-control"  value="<?php echo set_value('txtproducto') ?>" >
+                                        <input type="text" id="txtproducto" name="txtproducto" class="form-control"  value="<?php echo set_value('txtproducto') ?>" required>
                                     </div>
                                     <div class="col-sm-3 form-group">
                                         <label for="cantidad">Cantidad</label>
-                                        <input type="text" id="txtcantidad" name="txtcantidad" class="form-control" value="<?php echo set_value('txtcantidad') ?>" >
+                                        <input type="number" id="txtcantidad" name="txtcantidad" class="form-control" value="<?php echo set_value('txtcantidad') ?>" >
                                     </div>
                                     <div class="col-sm-3 form-group">
                                         <label for="numSerie">Numero de Serie</label>
@@ -123,6 +123,8 @@ $(document).ready(function(){
         var producto =$('#txtproducto').val();
         var cant =$('#txtcantidad').val();
         var numSerie =$('#txtnumSerie').val();
+
+        if()
         
     
       
