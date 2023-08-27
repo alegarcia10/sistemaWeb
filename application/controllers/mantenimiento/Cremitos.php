@@ -84,17 +84,15 @@ public function addProducto(){
 
 public function cinsert(){
 
-     $vendedor = $this->input->post('txtvendedor');
-     $obs = $this->input->post('txtobser');
+  
      $fecha = $this->input->post('txtfecha');
      $id_cliente=$this->input->post("tipo_cliente");
 
     //REGLA DE VALIDACION
         $data = array(
             'fecha' => $fecha,
-            'vendedor' => $vendedor,
-            'IdCliente' => $id_cliente,
-            'observaciones' => $obs
+            'IdCliente' => $id_cliente
+     
         );
         $res=$this->mremito->minsertremito($data);
         if($res){
@@ -139,8 +137,6 @@ public function cedit($id){
 public function cupdate(){
     
     $id = $this->input->post('txtIdRemito');
-    $vendedor = $this->input->post('txtvendedor');
-    $obs = $this->input->post('txtobservaciones');
     $fecha = $this->input->post('txtfecha');
     $id_cliente=$this->input->post("cliente");
 
@@ -155,9 +151,7 @@ public function cupdate(){
    
     $data = array(
         'fecha' => $fecha,
-        'vendedor' => $vendedor,
-        'IdCliente' => $id_cliente,
-        'observaciones' => $obs
+        'IdCliente' => $id_cliente
     );
 
         $res = $this->mremito->mupdateremito($id, $data);

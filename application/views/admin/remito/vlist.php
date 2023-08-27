@@ -28,8 +28,6 @@
                                   <th>N° remito</th>
                                   <th>Fecha</th>
                                   <th>Cliente</th>
-                                  <th>Vendedor</th>
-                                  <th>Observaciones</th>
                                   <th >Operaciones</th>
                                 </tr>
                             </thead>
@@ -38,10 +36,8 @@
                                     <?php foreach ($remitoindex as $atributos) :?>
                                         <tr>
                                           <td width="5%"><?php echo $atributos->IdRemito; ?></td>
-                                          <td width="10%"><?php echo date("d/m/Y", strtotime("$atributos->fecha")); ?></td>
-                                          <td width="30%"><?php echo $atributos->Nombre; ?></td>
-                                          <td width="10%"><?php echo $atributos->vendedor; ?></td>
-                                          <td width="25%"><?php echo $atributos->observaciones; ?></td>
+                                          <td width="15%"><?php echo date("d/m/Y", strtotime("$atributos->fecha")); ?></td>
+                                          <td width="60%"><?php echo $atributos->Nombre; ?></td>
                                           <td width="20%" >
                                                 <div class="btn-group">
                                                     <a href="<?php echo base_url(); ?>mantenimiento/cremitos/cprint/<?php echo $atributos->IdRemito; ?>" class="btn btn-warning" title="Ver">

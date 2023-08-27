@@ -6,8 +6,8 @@ class Mremito extends CI_Model{
 
   public function mselectremito(){
 
-    $resultado =	$query = $this->db->query("SELECT o.IdRemito , c.Nombre ,o.IdCliente, o.fecha ,
-       o.observaciones, o.vendedor  FROM remitos o
+    $resultado =	$query = $this->db->query("SELECT o.IdRemito , c.Nombre ,o.IdCliente, o.fecha 
+       FROM remitos o
        INNER JOIN cliente c ON o.IdCliente = c.IdCliente 
        where o.Anulado=0 
        ORDER BY o.IdRemito DESC;");
