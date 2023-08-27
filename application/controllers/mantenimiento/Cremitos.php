@@ -33,7 +33,7 @@ public function index(){
     foreach ($remitos as $remito ) {
         $id=$remito->IdRemito;
        
-        $remito->montoTotal=$this->mremito->consultaTotalRemito($id);
+        //$remito->montoTotal=$this->mremito->consultaTotalRemito($id);
     }
 
 
@@ -246,7 +246,7 @@ public function cprint($id){
     $data['cliente'] = $this->mcliente->midupdatecliente($data['remito']->IdCliente);
 
     $data['producto'] = $this->mremito->obtenerProducto($id);
-    $data['total']=$this->mremito->consultaTotalRemito($id);
+    //$data['total']=$this->mremito->consultaTotalRemito($id);
    
    
     //$roles=$this->mroles->obtener($idRol);
