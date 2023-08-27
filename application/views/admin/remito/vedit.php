@@ -126,7 +126,7 @@ $(document).ready(function(){
     
       
         if((producto=='') || (cant=='') || (numSerie=='')  ){
-            alert('Datos incompletos --' idRemito);
+            alert( idRemito);
             window.location.href=base_url+'/mantenimiento/cremitos/cError/'+idRemito;
         }else{
 
