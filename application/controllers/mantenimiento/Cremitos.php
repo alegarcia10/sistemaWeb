@@ -261,8 +261,6 @@ public function cError($idRemito){
     $idRemito = $this->input->post("idRemito");
            $this->session->set_flashdata('error', 'No se Guardo registro');
            redirect(base_url().'mantenimiento/cremitos/cedit/'.$idRemito);
-       
-
 
 }
 
