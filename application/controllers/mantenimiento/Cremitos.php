@@ -259,7 +259,7 @@ public function cprint($id){
 public function cError($idRemito){
 
   
-           $this->session->set_flashdata('error', 'No se Guardo registro');
+           $this->session->set_flashdata('error', 'Faltan Datos del Producto');
            redirect(base_url().'mantenimiento/cremitos/cedit/'.$idRemito);
 
 }
