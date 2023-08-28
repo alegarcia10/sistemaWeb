@@ -298,6 +298,9 @@
     height: 5mm !important;
     text-align: center !important;
   }
+  .registro01 p {
+    margin-top: 3px !important
+  }
   .registro02 {
     border: 1px solid #ccc;
     height: 5mm !important;
@@ -443,6 +446,9 @@
     margin-top: -2.5% !important; 
     width: 49% !important;
 
+  }
+  .datos3 p {
+    margin: 0% !important; 
   }
   .datos4 {
     font-size: 10px;
