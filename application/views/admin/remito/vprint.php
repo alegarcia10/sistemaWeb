@@ -300,6 +300,7 @@
   }
   .registrovacio0 p {
     margin-top: 5px !important;
+    text-align: center !important;
   }
   .registro02 {
     border: 1px solid #ccc;
@@ -499,6 +500,7 @@
   .registrovacio0 p {
     margin-top: 5px !important;
     font-size: 3mm !important;
+    text-align: center !important;
   }
   .registro01 {
     border: 1px solid #ccc;
