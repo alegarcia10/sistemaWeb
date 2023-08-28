@@ -29,6 +29,11 @@
                                 <input type="text" id="txtfecha" name="txtfecha"  min="2020-01-01" max="2100-12-31" value="<?php echo !empty(form_error('txtfecha'))? set_value('txtfecha') :  date("d-m-Y", strtotime("$remitoedit->fecha"));?>" class= "form-control"   >
                             </div>
                             <div class="col-sm-6 form-group">
+                                <label for="observaciones">OBSERVACIONES</label>
+                                <input type="text" id="txtobservaciones" name="txtobservaciones" maxlength="1000" value="<?php echo !empty(form_error('txtobservaciones'))? set_value('txtobservaciones') : $remitoedit->observaciones ?>" class= "form-control"  >
+                            </div>
+                        
+                            <div class="col-sm-6 form-group">
                                 <a class="btn btn-info" href="<?php echo base_url();?>mantenimiento/cremitos">Volver</a>
                                 <button type="submit" class="btn btn-success">Guardar</button>
                             </div>

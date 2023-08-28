@@ -27,7 +27,8 @@
                                 <tr>
                                   <th width="5%">N° remito</th>
                                   <th width="15%">Fecha</th>
-                                  <th width="60%">Cliente</th>
+                                  <th width="25%">Cliente</th>
+                                  <th width="35%">Observaciones</th>
                                   <th width="20%">Operaciones</th>
                                 </tr>
                             </thead>
@@ -37,7 +38,8 @@
                                         <tr>
                                           <td width="5%"><?php echo $atributos->IdRemito; ?></td>
                                           <td width="15%"><?php echo date("d/m/Y", strtotime("$atributos->fecha")); ?></td>
-                                          <td width="60%"><?php echo $atributos->Nombre; ?></td>
+                                          <td width="35%"><?php echo $atributos->Nombre; ?></td>
+                                          <td width="25%"><?php echo $atributos->Observaciones; ?></td>
                                           <td width="20%" >
                                                 <div class="btn-group">
                                                     <a href="<?php echo base_url(); ?>mantenimiento/cremitos/cprint/<?php echo $atributos->IdRemito; ?>" class="btn btn-warning" title="Ver">

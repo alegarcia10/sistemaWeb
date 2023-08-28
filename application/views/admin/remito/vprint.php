@@ -77,7 +77,8 @@
                                 </div>
                                 <div class="col-md-12" id="celdas5">
                                     <div class="row" >
-                                        <div class="col-md-12 registrovacio0">                                      
+                                        <div class="col-md-12 registrovacio0">    
+                                          <p><?php echo $remito->observaciones; ?></p>                                  
                                         </div>
                                         <div class="col-md-9 registro01">
                                             <strong><p>Observaciones</p></strong>                                     
