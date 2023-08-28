@@ -32,7 +32,7 @@
                                         </div>
                                         <div class="col-md-6 datos3">
                                           <p>Cereseto Oeste 156  - Teléfono: 264-4275852</p>
-                                          <p>Pagina Web: www.electronicabios.com.ar - email: electronicabios@gmail.com</p>
+                                          <p>www.electronicabios.com.ar - electronicabios@gmail.com</p>
                                         </div>
                                     
                                     </div>
