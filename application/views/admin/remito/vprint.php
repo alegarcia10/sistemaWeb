@@ -441,13 +441,13 @@
   .datos3 {
     font-size: 10px;
     text-align: center;
-    margin-top: -2.5% !important; 
+    margin-top: -3% !important; 
     width: 49% !important;
 
   }
   .datos3 p {
     margin: 0% !important; 
-    margin-top: -12% !important;
+    margin-top: -2% !important;
   }
   .datos4 {
     font-size: 10px;
