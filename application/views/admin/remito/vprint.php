@@ -299,7 +299,7 @@
     text-align: center !important;
   }
   .registrovacio0 p {
-    margin-top: 6px !important
+    margin-top: 10px !important
   }
   .registro02 {
     border: 1px solid #ccc;
