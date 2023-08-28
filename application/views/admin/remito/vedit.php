@@ -30,7 +30,7 @@
                             </div>
                             <div class="col-sm-12 form-group">
                                 <label for="observaciones">OBSERVACIONES</label>
-                                <input type="text" id="txtobservaciones" name="txtobservaciones" maxlength="1000" value="<?php echo !empty(form_error('txtobservaciones'))? set_value('txtobservaciones') : $remitoedit->observaciones ?>" class= "form-control"  >
+                                <input type="text" id="txtobservaciones" name="txtobservaciones" maxlength="200" value="<?php echo !empty(form_error('txtobservaciones'))? set_value('txtobservaciones') : $remitoedit->observaciones ?>" class= "form-control"  >
                             </div>
                         
                             <div class="col-sm-6 form-group">

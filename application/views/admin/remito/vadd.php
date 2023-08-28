@@ -27,7 +27,7 @@
                                 </div>
                                 <div class=" col-sm-12 form-group">
                                     <label for="obser">OBSERVACIONES</label>
-                                    <input type="text" id="txtobservaciones" name="txtobservaciones" maxlength="1000"class="form-control" value="<?php echo set_value('txtobservaciones') ?>">
+                                    <input type="text" id="txtobservaciones" name="txtobservaciones" maxlength="200"class="form-control" value="<?php echo set_value('txtobservaciones') ?>">
                                 </div>
                                 <div class="col-sm-12 form-group">
                                     <a class="btn btn-info" href="<?php echo base_url(); ?>mantenimiento/cremitos">Volver</a>
