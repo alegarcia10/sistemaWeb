@@ -447,7 +447,7 @@
   }
   .datos3 p {
     margin: 0% !important; 
-    margin-top: 0% !important;
+    margin-top: 0.5% !important;
   }
   .datos4 {
     font-size: 10px;
@@ -495,7 +495,8 @@
     height: 15mm !important;
   }
   .registrovacio0 p {
-    margin-top: 5px !important
+    margin-top: 5px !important;
+    font-size: 3mm !important;
   }
   .registro01 {
     border: 1px solid #ccc;
