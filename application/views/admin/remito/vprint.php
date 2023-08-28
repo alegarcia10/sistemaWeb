@@ -298,8 +298,8 @@
     height: 5mm !important;
     text-align: center !important;
   }
-  .registro01 p {
-    margin-top: 3px !important
+  .registrovacio0 p {
+    margin-top: 4px !important
   }
   .registro02 {
     border: 1px solid #ccc;
