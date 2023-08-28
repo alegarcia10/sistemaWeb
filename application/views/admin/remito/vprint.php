@@ -298,9 +298,7 @@
     height: 5mm !important;
     text-align: center !important;
   }
-  .registrovacio0 p {
-    margin-top: 10px !important
-  }
+  
   .registro02 {
     border: 1px solid #ccc;
     height: 5mm !important;
@@ -494,6 +492,9 @@
   .registrovacio0  {
     border: 1px solid #ccc;
     height: 15mm !important;
+  }
+  .registrovacio0 p {
+    margin-top: 5px !important
   }
   .registro01 {
     border: 1px solid #ccc;
