@@ -240,8 +240,7 @@ public function cprint($id){
         'roles'=>$this->mroles->obtener($idrol)
     );
    
-    var_dump($data);
-    die;
+  
     $data['cliente'] = $this->mcliente->midupdatecliente($data['remito']->IdCliente);
 
     $data['producto'] = $this->mremito->obtenerProducto($id);
