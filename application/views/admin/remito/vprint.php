@@ -251,6 +251,9 @@
     text-align: center;
     margin-top: -3% !important; 
   }
+  .datos3 p {
+    margin: 0% !important; 
+  }
   .datos4 {
     font-size: 10px;
     text-align: center;
