@@ -496,7 +496,7 @@
   }
   .registrovacio0 p {
     margin-top: 5px !important;
-    font-size: 4mm !important;
+    font-size: 2.5mm !important;
   }
   .registro01 {
     border: 1px solid #ccc;
