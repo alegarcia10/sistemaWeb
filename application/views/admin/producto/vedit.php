@@ -28,7 +28,7 @@
                             </div>
                             <div class="col-sm-3 form-group">
                                 <label for="numSerie">Numero de Serie</label>
-                                <input type="number" id="txtnumSerie" name="txtnumSerie"  value="<?php echo !empty(form_error('txtnumSerie'))? set_value('txtnumSerie') : $productoedit->numSerie ?>" class= "form-control"  >
+                                <input type="text" id="txtnumSerie" name="txtnumSerie"  value="<?php echo !empty(form_error('txtnumSerie'))? set_value('txtnumSerie') : $productoedit->numSerie ?>" class= "form-control"  >
                             </div>
 
                             <div class="col-sm-12 form-group">

@@ -58,7 +58,7 @@
                                     </div>
                                     <div class="col-sm-3 form-group">
                                         <label for="numSerie">Numero de Serie</label>
-                                        <input type="number" id="txtnumSerie" name="txtnumSerie" class="form-control" value="<?php echo set_value('txtnumSerie') ?>" >
+                                        <input type="text" id="txtnumSerie" name="txtnumSerie" class="form-control" value="<?php echo set_value('txtnumSerie') ?>" >
                                     </div>
                                     <div class="col-sm-1">
                                         <br>
