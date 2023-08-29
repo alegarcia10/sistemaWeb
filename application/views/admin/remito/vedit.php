@@ -28,6 +28,11 @@
                                 <label for="fecha">Fecha de Recepción</label>
                                 <input type="text" id="txtfecha" name="txtfecha"  min="2020-01-01" max="2100-12-31" value="<?php echo !empty(form_error('txtfecha'))? set_value('txtfecha') :  date("d-m-Y", strtotime("$remitoedit->fecha"));?>" class= "form-control"   >
                             </div>
+                            <div class="col-sm-12 form-group">
+                                <label for="observaciones">OBSERVACIONES</label>
+                                <input type="text" id="txtobservaciones" name="txtobservaciones" maxlength="200" value="<?php echo !empty(form_error('txtobservaciones'))? set_value('txtobservaciones') : $remitoedit->observaciones ?>" class= "form-control"  >
+                            </div>
+                        
                             <div class="col-sm-6 form-group">
                                 <a class="btn btn-info" href="<?php echo base_url();?>mantenimiento/cremitos">Volver</a>
                                 <button type="submit" class="btn btn-success">Guardar</button>
@@ -53,7 +58,7 @@
                                     </div>
                                     <div class="col-sm-3 form-group">
                                         <label for="numSerie">Numero de Serie</label>
-                                        <input type="number" id="txtnumSerie" name="txtnumSerie" class="form-control" value="<?php echo set_value('txtnumSerie') ?>" >
+                                        <input type="text" id="txtnumSerie" name="txtnumSerie" class="form-control" value="<?php echo set_value('txtnumSerie') ?>" >
                                     </div>
                                     <div class="col-sm-1">
                                         <br>

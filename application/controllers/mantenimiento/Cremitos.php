@@ -86,11 +86,13 @@ public function cinsert(){
 
   
      $fecha = $this->input->post('txtfecha');
+     $observaciones = $this->input->post('txtobservaciones');
      $id_cliente=$this->input->post("tipo_cliente");
 
     //REGLA DE VALIDACION
         $data = array(
             'fecha' => $fecha,
+            'observaciones' => $observaciones,
             'IdCliente' => $id_cliente
      
         );
@@ -138,6 +140,7 @@ public function cupdate(){
     
     $id = $this->input->post('txtIdRemito');
     $fecha = $this->input->post('txtfecha');
+    $observaciones = $this->input->post('txtobservaciones');
     $id_cliente=$this->input->post("cliente");
 
     if($fecha==null){
@@ -151,6 +154,7 @@ public function cupdate(){
    
     $data = array(
         'fecha' => $fecha,
+        'observaciones' => $observaciones,
         'IdCliente' => $id_cliente
     );
 
@@ -236,7 +240,7 @@ public function cprint($id){
         'roles'=>$this->mroles->obtener($idrol)
     );
    
-    
+  
     $data['cliente'] = $this->mcliente->midupdatecliente($data['remito']->IdCliente);
 
     $data['producto'] = $this->mremito->obtenerProducto($id);

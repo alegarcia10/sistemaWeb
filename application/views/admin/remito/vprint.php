@@ -32,7 +32,7 @@
                                         </div>
                                         <div class="col-md-6 datos3">
                                           <p>Cereseto Oeste 156  - Teléfono: 264-4275852</p>
-                                    
+                                          <p>www.electronicabios.com.ar - electronicabios@gmail.com</p>
                                         </div>
                                     
                                     </div>
@@ -77,10 +77,11 @@
                                 </div>
                                 <div class="col-md-12" id="celdas5">
                                     <div class="row" >
-                                        <div class="col-md-12 registrovacio0">                                      
+                                        <div class="col-md-12 registrovacio0">    
+                                          <p><?php echo $remito->observaciones; ?></p>                                  
                                         </div>
                                         <div class="col-md-9 registro01">
-                                            <strong><p>Recibió</p></strong>                                     
+                                            <strong><p>Observaciones</p></strong>                                     
                                         </div>
                                         <div class="col-md-3 registro02">
                                             <strong><p>Original (Pag. 1 de 1)</p></strong>
@@ -251,6 +252,9 @@
     text-align: center;
     margin-top: -3% !important; 
   }
+  .datos3 p {
+    margin: 0% !important; 
+  }
   .datos4 {
     font-size: 10px;
     text-align: center;
@@ -292,6 +296,10 @@
   .registro01 {
     border: 1px solid #ccc;
     height: 5mm !important;
+    text-align: center !important;
+  }
+  .registrovacio0 p {
+    margin-top: 5px !important;
     text-align: center !important;
   }
   .registro02 {
@@ -436,9 +444,13 @@
   .datos3 {
     font-size: 10px;
     text-align: center;
-    margin-top: -2.5% !important; 
+    margin-top: -3% !important; 
     width: 49% !important;
 
+  }
+  .datos3 p {
+    margin: 0% !important; 
+    margin-top: -1% !important;
   }
   .datos4 {
     font-size: 10px;
@@ -484,6 +496,11 @@
   .registrovacio0  {
     border: 1px solid #ccc;
     height: 15mm !important;
+  }
+  .registrovacio0 p {
+    margin-top: 5px !important;
+    font-size: 3mm !important;
+    text-align: center !important;
   }
   .registro01 {
     border: 1px solid #ccc;

@@ -6,7 +6,7 @@ class Mremito extends CI_Model{
 
   public function mselectremito(){
 
-    $resultado =	$query = $this->db->query("SELECT o.IdRemito , c.Nombre ,o.IdCliente, o.fecha 
+    $resultado =	$query = $this->db->query("SELECT o.IdRemito , c.Nombre , o.observaciones ,o.IdCliente, o.fecha 
        FROM remitos o
        INNER JOIN cliente c ON o.IdCliente = c.IdCliente 
        where o.Anulado=0 
@@ -23,7 +23,7 @@ class Mremito extends CI_Model{
       $ini = date("Y-m-d", strtotime($ini));
       $fin = date("Y-m-d", strtotime($fin));
      
-      $resultado =	$query = $this->db->query("SELECT o.IdRemito , c.Nombre ,o.IdCliente, o.FechaRecepcion ,
+      $resultado =	$query = $this->db->query("SELECT o.IdRemito , c.Nombre ,o.observaciones ,o.IdCliente, o.FechaRecepcion ,
          o.TareaDesarrollar, o.Completada, o.Eliminada FROM remito o
          INNER JOIN cliente c ON o.IdCliente = c.IdCliente 
          where o.Eliminada=0 and o.Completada=0 and o.FechaRecepcion >= '$ini' and o.FechaRecepcion <= '$fin' 
