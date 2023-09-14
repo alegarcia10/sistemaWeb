@@ -49,7 +49,7 @@
                           <h3>Datos del Cliente</h3>
                                     <p>Cliente: <?php echo $model->Nombre; ?></p>
                                     <p>Domicilio: <?php echo $model->Domicilio." ".$model->Localidad." ".$model->Provincia; ?></p>
-                                    <p>Tel Mantenimiento: <?php echo $model->tel_mantenimiento; ?> &nbsp Tel Ventas: <?php echo $model->tel_venta; ?> </p>
+                                    <p>Teléfonos: Mantenimiento: <?php echo $model->tel_mantenimiento; ?> &nbsp Ventas: <?php echo $model->tel_venta; ?> &nbsp Comercial: <?php echo $model->tel_comercial; ?> </p>
                                     <p>Correo Electrónico: <?php echo $model->correo; ?></p>
                                 </div>
                                 <div class="equipment">
