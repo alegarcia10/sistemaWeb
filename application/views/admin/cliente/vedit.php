@@ -48,8 +48,8 @@
                                 <input type="number" id="txtmant" name="txtmant" min="1"value="<?php echo !empty(form_error('txtmant'))? set_value('txtmant') : $clienteedit->tel_mantenimiento ?>" class= "form-control"  >
                             </div>
                             <div class="col-sm-4 form-group">
-                                <label for="venta">Tel Ventas</label>
-                                <input type="number" id="txtventa" name="txtventa" min="1"value="<?php echo !empty(form_error('txtventa'))? set_value('txtventa') : $clienteedit->tel_venta ?>" class= "form-control"  >
+                                <label for="ventas">Tel Ventas</label>
+                                <input type="number" id="txtventa" name="txtventas" min="1"value="<?php echo !empty(form_error('txtventas'))? set_value('txtventas') : $clienteedit->tel_venta ?>" class= "form-control"  >
                             </div>
                             <div class="col-sm-4 form-group">
                                 <label for="comercial">Tel Comercial</label>
