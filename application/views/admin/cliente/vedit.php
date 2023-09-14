@@ -53,7 +53,11 @@
                             </div>
                             <div class="col-sm-4 form-group">
                                 <label for="comercial">Tel Comercial</label>
-                                <input type="number" id="txtcomercial" name="txtcomercial" min="1"value="<?php echo !empty(form_error('txtcomercial'))? set_value('txtprovincia') : $clienteedit->tel_comercial ?>" class= "form-control"  >
+                                <input type="number" id="txtcomercial" name="txtcomercial" min="1"value="<?php echo !empty(form_error('txtcomercial'))? set_value('txtcomercial') : $clienteedit->tel_comercial ?>" class= "form-control"  >
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <label for="correo">Correo Electrónico</label>
+                                <input type="text" id="txtcorreo" name="txtcorreo" min="1"value="<?php echo !empty(form_error('txtcorreo'))? set_value('txtcorreo') : $clienteedit->correo ?>" class= "form-control"  >
                             </div>
                             <div class="col-sm-6 form-group">
                                 <a class="btn btn-info" href="<?php echo base_url();?>mantenimiento/ccliente">Volver</a>

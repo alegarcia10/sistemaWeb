@@ -53,6 +53,10 @@
                                     <label for="comercial">Tel Comercial</label>
                                     <input type="number" id="txtcomercial" name="txtcomercial" min="1"class="form-control" value="<?php echo set_value('txtcomercial') ?>"  >
                                 </div>
+                                <div class="col-sm-6 form-group">
+                                    <label for="correo">Correo Electrónico</label>
+                                    <input type="text" id="txtcorreo" name="txtcorreo" maxlength="50"class="form-control" value="<?php echo set_value('txtcorreo') ?>"  >
+                                </div>
                                 <div class="col-sm-12 form-group">
                                     <a class="btn btn-info" href="<?php echo base_url(); ?>mantenimiento/ccliente">Volver</a>
                                     <button type="submit" class="btn btn-success">Guardar</button>
