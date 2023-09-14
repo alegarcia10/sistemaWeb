@@ -52,6 +52,9 @@ public function cinsert(){
      $domicilio = $this->input->post('txtdomicilio');
      $iva = $this->input->post('txtiva');
      $localidad = $this->input->post('txtlocalidad');
+     $mant = $this->input->post('txtmant');
+     $venta = $this->input->post('txtventas');
+     $comer = $this->input->post('txtcomercial');
      $cli = $this->mcliente->obtenerclientedni($cuit);
 
      if($cli==null){
@@ -63,6 +66,9 @@ public function cinsert(){
                    'Domicilio' => $domicilio,
                    'IVA' => $iva,
                    'Localidad' => $localidad,
+                   'tel_mantenimiento' => $mant,
+                   'tel_venta' => $venta,
+                   'tel_comercial' => $comer,
                    'Anulado' => '0'
                );
                $res=$this->mcliente->minsertcliente($data);
@@ -109,6 +115,9 @@ public function cupdate(){
      $domicilio = $this->input->post('txtdomicilio');
      $iva = $this->input->post('txtiva');
      $localidad = $this->input->post('txtlocalidad');
+     $mant = $this->input->post('txtmant');
+     $venta = $this->input->post('txtventas');
+     $comer = $this->input->post('txtcomercial');
 
      $cli = $this->mcliente->obtenerclientedni($cuit);
 
@@ -121,6 +130,9 @@ public function cupdate(){
                    'Provincia' => $prov,
                    'IVA' => $iva,
                    'Localidad' => $localidad,
+                   'tel_mantenimiento' => $mant,
+                   'tel_venta' => $venta,
+                   'tel_comercial' => $comer,
                    'Domicilio' => $domicilio
                );
 

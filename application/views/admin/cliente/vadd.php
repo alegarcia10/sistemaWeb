@@ -41,8 +41,20 @@
                                     <label for="provincia">Provincia</label>
                                     <input type="text" id="txtprovincia" name="txtprovincia" maxlength="50"class="form-control" value="<?php echo set_value('txtprovincia') ?>"  >
                                 </div>
+                                <div class="col-sm-4 form-group">
+                                    <label for="mant">Tel Mantenimiento</label>
+                                    <input type="number" id="txtmant" name="txtmant" min="1"class="form-control" value="<?php echo set_value('txtmant') ?>"  >
+                                </div>
+                                <div class="col-sm-4 form-group">
+                                    <label for="ventas">Tel Ventas</label>
+                                    <input type="number" id="txtventas" name="txtventas" min="1"class="form-control" value="<?php echo set_value('txtventas') ?>"  >
+                                </div>
+                                <div class="col-sm-4 form-group">
+                                    <label for="comercial">Tel Comercial</label>
+                                    <input type="number" id="txtcomercial" name="txtcomercial" min="1"class="form-control" value="<?php echo set_value('txtcomercial') ?>"  >
+                                </div>
                                 <div class="col-sm-12 form-group">
-                                    <a class="btn btn-success" href="<?php echo base_url(); ?>mantenimiento/ccliente">Volver</a>
+                                    <a class="btn btn-info" href="<?php echo base_url(); ?>mantenimiento/ccliente">Volver</a>
                                     <button type="submit" class="btn btn-success">Guardar</button>
                                 </div>
 
