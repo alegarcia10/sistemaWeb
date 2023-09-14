@@ -49,7 +49,7 @@
                             </div>
                             <div class="col-sm-4 form-group">
                                 <label for="venta">Tel Ventas</label>
-                                <input type="text" id="txtventa" name="txtventa" min="1"value="<?php echo !empty(form_error('txtventa'))? set_value('txtventa') : $clienteedit->tel_venta ?>" class= "form-control"  >
+                                <input type="number" id="txtventa" name="txtventa" min="1"value="<?php echo !empty(form_error('txtventa'))? set_value('txtventa') : $clienteedit->tel_venta ?>" class= "form-control"  >
                             </div>
                             <div class="col-sm-4 form-group">
                                 <label for="comercial">Tel Comercial</label>
