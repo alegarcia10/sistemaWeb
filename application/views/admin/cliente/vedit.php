@@ -27,6 +27,14 @@
                                 <label for="nombre">Nombre</label>
                                 <input type="text" id="txtnombre" name="txtnombre" maxlength="256" value="<?php echo !empty(form_error('txtnombre'))? set_value('txtnombre') : $clienteedit->Nombre ?>" class= "form-control" required >
                             </div>
+                            <div class="col-sm-5 form-group">
+                                <label for="iva">I.V.A</label>
+                                <input type="text" id="txtiva" name="txtiva" maxlength="100" value="<?php echo !empty(form_error('txtiva'))? set_value('txtiva') : $clienteedit->IVA ?>" class= "form-control"  >
+                            </div>
+                            <div class="col-sm-5 form-group">
+                                <label for="localidad">Localidad</label>
+                                <input type="text" id="txtlocalidad" name="txtlocalidad" maxlength="100" value="<?php echo !empty(form_error('txtlocalidad'))? set_value('txtlocalidad') : $clienteedit->Localidad ?>" class= "form-control"  >
+                            </div>
                             <div class="col-sm-6 form-group">
                                 <label for="domicilio">Domicilio</label>
                                 <input type="text" id="txtdomicilio" name="txtdomicilio" maxlength="1000" value="<?php echo !empty(form_error('txtdomicilio'))? set_value('txtdomicilio') : $clienteedit->Domicilio ?>" class= "form-control"  >
@@ -35,8 +43,24 @@
                                 <label for="provincia">Provincia</label>
                                 <input type="text" id="txtprovincia" name="txtprovincia" maxlength="50"value="<?php echo !empty(form_error('txtprovincia'))? set_value('txtprovincia') : $clienteedit->Provincia ?>" class= "form-control"  >
                             </div>
+                            <div class="col-sm-4 form-group">
+                                <label for="mant">Tel Mantenimiento</label>
+                                <input type="number" id="txtmant" name="txtmant" min="1"value="<?php echo !empty(form_error('txtmant'))? set_value('txtmant') : $clienteedit->tel_mantenimiento ?>" class= "form-control"  >
+                            </div>
+                            <div class="col-sm-4 form-group">
+                                <label for="ventas">Tel Ventas</label>
+                                <input type="number" id="txtventa" name="txtventas" min="1"value="<?php echo !empty(form_error('txtventas'))? set_value('txtventas') : $clienteedit->tel_venta ?>" class= "form-control"  >
+                            </div>
+                            <div class="col-sm-4 form-group">
+                                <label for="comercial">Tel Comercial</label>
+                                <input type="number" id="txtcomercial" name="txtcomercial" min="1"value="<?php echo !empty(form_error('txtcomercial'))? set_value('txtcomercial') : $clienteedit->tel_comercial ?>" class= "form-control"  >
+                            </div>
                             <div class="col-sm-6 form-group">
-                                <a class="btn btn-success" href="<?php echo base_url();?>mantenimiento/ccliente">Volver</a>
+                                <label for="correo">Correo Electrónico</label>
+                                <input type="text" id="txtcorreo" name="txtcorreo" min="1"value="<?php echo !empty(form_error('txtcorreo'))? set_value('txtcorreo') : $clienteedit->correo ?>" class= "form-control"  >
+                            </div>
+                            <div class="col-sm-12 form-group">
+                                <a class="btn btn-info" href="<?php echo base_url();?>mantenimiento/ccliente">Volver</a>
                                 <button type="submit" class="btn btn-success">Guardar</button>
                             </div>
                         </div>

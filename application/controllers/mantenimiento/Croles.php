@@ -43,7 +43,7 @@ public function cadd(){
 
 public function cinsert(){
 
-    //$idrol = $this->input->post('txtidrol'); 
+    //$idrol = $this->input->post('txtidrol');
     $nombre_tipo = $this->input->post('txtnombre');
     $check_cliente = $this->input->post('cliente');
     $check_tecnico = $this->input->post('tecnico');
@@ -52,8 +52,10 @@ public function cinsert(){
     $check_rol = $this->input->post('rol');
     $check_est = $this->input->post('estado');
     $check_eq = $this->input->post('equipos');
+    $check_remitos = $this->input->post('remitos');
 
-   
+
+
     $b_rol = $this->mroles->obtenerrol($nombre_tipo);
 
     if($check_cliente=='on'){
@@ -91,6 +93,11 @@ public function cinsert(){
       }else{
         $eq=0;
       }
+      if($check_remitos=='on'){
+        $remito=1;
+      }else{
+        $remito=0;
+      }
 
       if($b_rol==null){
         $data = array(
@@ -103,9 +110,10 @@ public function cinsert(){
             'usuarios' => $usuario,
             'roles' => $rol,
             'estados_trabajo' => $est,
-            'anulado' => 0,
-            'equipos' => $eq
-            
+            'equipos' => $eq,
+            'remitos' => $remito,
+            'anulado' => 0
+
 
         );
         //var_dump($data);
@@ -155,6 +163,7 @@ public function cupdate(){
     $check_rol = $this->input->post('rol');
     $check_est = $this->input->post('estado');
     $check_eq = $this->input->post('equipos');
+    $check_remitos = $this->input->post('remitos');
 
      $nrol = $this->mroles->obtenerrol($nombre_tipo);
 
@@ -193,6 +202,11 @@ public function cupdate(){
       }else{
         $eq=0;
       }
+      if($check_remitos=='on'){
+        $remito=1;
+      }else{
+        $remito=0;
+      }
 
 
       if(($nrol==null) or ($nombre==$nombre_tipo) ){
@@ -206,8 +220,9 @@ public function cupdate(){
             'usuarios' => $usuario,
             'roles' => $rol,
             'estados_trabajo' => $est,
-            'anulado' => 0,
-            'equipos' => $eq
+            'equipos' => $eq,
+            'remitos' => $remito,
+            'anulado' => 0
 
         );
 
@@ -225,9 +240,9 @@ public function cupdate(){
         $this->session->set_flashdata('error', "El Rol '$nombre_tipo' ya esta registrado ");
         redirect(base_url().'mantenimiento/croles/cedit/'.$idRol);
     }
-   
 
-        
+
+
 
 
 }
