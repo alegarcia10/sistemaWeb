@@ -49,7 +49,7 @@
                             </div>
                             <div class="col-sm-4 form-group">
                                 <label for="venta">Tel Ventas</label>
-                                <input type="number" id="txtventa" name="txtventa" min="1"value="<?php echo !empty(form_error('txtventa'))? set_value('txtventa') : $clienteedit->tel_venta ?>" class= "form-control"  >
+                                <input type="text" id="txtventa" name="txtventa" min="1"value="<?php echo !empty(form_error('txtventa'))? set_value('txtventa') : $clienteedit->tel_venta ?>" class= "form-control"  >
                             </div>
                             <div class="col-sm-4 form-group">
                                 <label for="comercial">Tel Comercial</label>
@@ -59,7 +59,7 @@
                                 <label for="correo">Correo Electrónico</label>
                                 <input type="text" id="txtcorreo" name="txtcorreo" min="1"value="<?php echo !empty(form_error('txtcorreo'))? set_value('txtcorreo') : $clienteedit->correo ?>" class= "form-control"  >
                             </div>
-                            <div class="col-sm-6 form-group">
+                            <div class="col-sm-12 form-group">
                                 <a class="btn btn-info" href="<?php echo base_url();?>mantenimiento/ccliente">Volver</a>
                                 <button type="submit" class="btn btn-success">Guardar</button>
                             </div>
