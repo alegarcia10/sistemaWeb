@@ -55,7 +55,12 @@ public function cinsert(){
      $mant = $this->input->post('txtmant');
      $venta = $this->input->post('txtventas');
      $comer = $this->input->post('txtcomercial');
-     $correo = $this->input->post('txtcorreo');
+     $mmant = $this->input->post('txtmmant');
+     $mvta = $this->input->post('txtmvta');
+     $mcial = $this->input->post('txtmcial');
+     $nmant = $this->input->post('txtnmant');
+     $nvta = $this->input->post('txtnvta');
+     $ncial = $this->input->post('txtncial');
      $cli = $this->mcliente->obtenerclientedni($cuit);
 
      if($cli==null){
@@ -70,7 +75,12 @@ public function cinsert(){
                    'tel_mantenimiento' => $mant,
                    'tel_venta' => $venta,
                    'tel_comercial' => $comer,
-                   'correo' => $correo,
+                   'mail_mant' => $mmant,
+                   'mail_vta' => $mvta,
+                   'mail_comercial' => $mcial,
+                   'nya_mant' => $nmant,
+                   'nya_vta' => $nvta,
+                   'nya_cial' => $ncial,
                    'Anulado' => '0'
                );
                $res=$this->mcliente->minsertcliente($data);
@@ -120,6 +130,12 @@ public function cupdate(){
      $mant = $this->input->post('txtmant');
      $venta = $this->input->post('txtventas');
      $comer = $this->input->post('txtcomercial');
+     $mmant = $this->input->post('txtmmant');
+     $mvta = $this->input->post('txtmvta');
+     $mcial = $this->input->post('txtmcial');
+     $nmant = $this->input->post('txtnmant');
+     $nvta = $this->input->post('txtnvta');
+     $ncial = $this->input->post('txtncial');
      $correo = $this->input->post('txtcorreo');
 
      $cli = $this->mcliente->obtenerclientedni($cuit);
@@ -136,7 +152,12 @@ public function cupdate(){
                    'tel_mantenimiento' => $mant,
                    'tel_venta' => $venta,
                    'tel_comercial' => $comer,
-                   'correo' => $correo,
+                   'mail_mant' => $mmant,
+                   'mail_vta' => $mvta,
+                   'mail_comercial' => $mcial,
+                   'nya_mant' => $nmant,
+                   'nya_vta' => $nvta,
+                   'nya_cial' => $ncial,
                    'Domicilio' => $domicilio
                );
 
