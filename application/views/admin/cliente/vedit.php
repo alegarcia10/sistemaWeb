@@ -55,9 +55,17 @@
                                 <label for="comercial">Tel Comercial</label>
                                 <input type="number" id="txtcomercial" name="txtcomercial" min="1"value="<?php echo !empty(form_error('txtcomercial'))? set_value('txtcomercial') : $clienteedit->tel_comercial ?>" class= "form-control"  >
                             </div>
-                            <div class="col-sm-6 form-group">
-                                <label for="correo">Correo Electrónico</label>
-                                <input type="text" id="txtcorreo" name="txtcorreo" min="1"value="<?php echo !empty(form_error('txtcorreo'))? set_value('txtcorreo') : $clienteedit->correo ?>" class= "form-control"  >
+                            <div class="col-sm-4 form-group">
+                                <label for="correo">Mail Mantenimiento</label>
+                                <input type="text" id="txtmmant" name="txtmmant" min="1"value="<?php echo !empty(form_error('txtmmant'))? set_value('txtmmant') : $clienteedit->mail_mant ?>" class= "form-control"  >
+                            </div>
+                            <div class="col-sm-4 form-group">
+                                <label for="correo">Mail Ventas</label>
+                                <input type="text" id="txtmvta" name="txtmvta" min="1"value="<?php echo !empty(form_error('txtmvta'))? set_value('txtmvta') : $clienteedit->mail_vta ?>" class= "form-control"  >
+                            </div>
+                            <div class="col-sm-4 form-group">
+                                <label for="correo">Mail Comercial</label>
+                                <input type="text" id="txtmcial" name="txtmcial" min="1"value="<?php echo !empty(form_error('txtmcial'))? set_value('txtmcial') : $clienteedit->mail_comercial ?>" class= "form-control"  >
                             </div>
                             <div class="col-sm-12 form-group">
                                 <a class="btn btn-info" href="<?php echo base_url();?>mantenimiento/ccliente">Volver</a>
