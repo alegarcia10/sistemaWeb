@@ -66,15 +66,15 @@
                                     <input type="text" id="txtmcial" name="txtmcial" maxlength="50"class="form-control" value="<?php echo set_value('txtmcial') ?>"  >
                                 </div>
                                 <div class="col-sm-4 form-group">
-                                    <label for="nom">NyA Mantenimiento</label>
+                                    <label for="nom">Nombre y Apellido</label>
                                     <input type="text" id="txtnmant" name="txtnmant" maxlength="50"class="form-control" value="<?php echo set_value('txtnmant') ?>"  >
                                 </div>
                                 <div class="col-sm-4 form-group">
-                                    <label for="nom">NyA Ventas</label>
+                                    <label for="nom">Nombre y Apellido</label>
                                     <input type="text" id="txtnvta" name="txtnvta" maxlength="50"class="form-control" value="<?php echo set_value('txtnvta') ?>"  >
                                 </div>
                                 <div class="col-sm-4 form-group">
-                                    <label for="nom">Nya Comercial</label>
+                                    <label for="nom">Nombre y Apellido</label>
                                     <input type="text" id="txtncial" name="txtncial" maxlength="50"class="form-control" value="<?php echo set_value('txtncial') ?>"  >
                                 </div>
                                 <div class="col-sm-12 form-group">
