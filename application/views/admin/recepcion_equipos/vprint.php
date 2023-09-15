@@ -50,8 +50,8 @@
                                     <p>Cliente: <?php echo $model->Nombre; ?></p>
                                     <p>Domicilio: <?php echo $model->Domicilio." ".$model->Localidad." ".$model->Provincia; ?></p>
                                     <p>Teléfonos: Mantenimiento: <?php if($model->tel_mantenimiento) {echo $model->tel_mantenimiento; }else{ echo "-";}; ?> &nbsp Ventas: <?php if($model->tel_venta) { echo $model->tel_venta;}else{ echo "-";} ;?> &nbsp Comercial: <?php if($model->tel_comercial) {echo $model->tel_comercial;} else{ echo "-";} ; ?> </p>
-                                    <p>E-mails: Mantenimiento: <?php if($model->mail_mant) {echo $model->mail_mant; }else{ echo "-";}; ?> &nbsp Ventas:<?php if($model->mail_vta) { echo $model->mail_vta;}else{ echo "-";} ;?> &nbsp Comercial:<?php if($model->mail_comercial) {echo $model->mail_comercial;} else{ echo "-";} ; ?> </p>
-                                    <p>Nombres: Mantenimiento:<?php if($model->nya_mant) {echo $model->nya_mant; }else{ echo "-";}; ?> &nbsp Ventas:<?php if($model->nya_vta) { echo $model->nya_vta;}else{ echo "-";} ;?> &nbsp Comercial:<?php if($model->nya_cial) {echo $model->nya_cial;} else{ echo "-";} ; ?> </p>
+                                    <p>E-mails: <?php if($model->mail_mant) {echo $model->mail_mant; }else{ echo "";}; ?> &nbsp <?php if($model->mail_vta) { echo $model->mail_vta;}else{ echo "";} ;?> &nbsp <?php if($model->mail_comercial) {echo $model->mail_comercial;} else{ echo "";} ; ?> </p>
+                                    <p>Nombres: <?php if($model->nya_mant) {echo $model->nya_mant; }else{ echo "";}; ?> &nbsp <?php if($model->nya_vta) { echo $model->nya_vta;}else{ echo "";} ;?> &nbsp <?php if($model->nya_cial) {echo $model->nya_cial;} else{ echo "";} ; ?> </p>
                                   </div>
                                 <div class="equipment">
                                     <h3>Datos del equipo</h3>
