@@ -67,6 +67,18 @@
                                 <label for="correo">Mail Comercial</label>
                                 <input type="text" id="txtmcial" name="txtmcial" min="1"value="<?php echo !empty(form_error('txtmcial'))? set_value('txtmcial') : $clienteedit->mail_comercial ?>" class= "form-control"  >
                             </div>
+                            <div class="col-sm-4 form-group">
+                                <label for="nom">Nombre y Apellido</label>
+                                <input type="text" id="txtnmant" name="txtnmant" min="1"value="<?php echo !empty(form_error('txtnmant'))? set_value('txtnmant') : $clienteedit->nya_mant ?>" class= "form-control"  >
+                            </div>
+                            <div class="col-sm-4 form-group">
+                                <label for="nom">Nombre y Apellido</label>
+                                <input type="text" id="txtnvta" name="txtnvta" min="1"value="<?php echo !empty(form_error('txtnvta'))? set_value('txtnvta') : $clienteedit->nya_vta ?>" class= "form-control"  >
+                            </div>
+                            <div class="col-sm-4 form-group">
+                                <label for="nom">Nombre y Apellido</label>
+                                <input type="text" id="txtncial" name="txtncial" min="1"value="<?php echo !empty(form_error('txtncial'))? set_value('txtncial') : $clienteedit->nya_cial ?>" class= "form-control"  >
+                            </div>
                             <div class="col-sm-12 form-group">
                                 <a class="btn btn-info" href="<?php echo base_url();?>mantenimiento/ccliente">Volver</a>
                                 <button type="submit" class="btn btn-success">Guardar</button>
