@@ -13,12 +13,7 @@
                          
                 </div>
                 <div class="row">
-<<<<<<< HEAD
                     <div class="col-md-12 " id='cuerpo' >
-=======
-                    <div class="col-md-12">
-                       
->>>>>>> gonza-branch
                             <link rel="stylesheet" href="<?php echo base_url();?>assets/template/dist/css/Remito.css" media="print">
                             <div class="row">
                                 <div class="col-md-12" id="celdas1">
