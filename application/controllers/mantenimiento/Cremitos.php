@@ -33,7 +33,11 @@ public function index(){
     foreach ($remitos as $remito ) {
         $id=$remito->IdRemito;
        
+<<<<<<< HEAD
         //$remito->montoTotal=$this->mremito->consultaTotalRemito($id);
+=======
+        $remito->montoTotal=$this->mremito->consultaTotalRemito($id);
+>>>>>>> gonza-branch
     }
 
 
@@ -64,14 +68,23 @@ public function addProducto(){
     $producto = $this->input->post("producto");
     $idRemito = $this->input->post("idRemito");
     $cant = $this->input->post("cant");
+<<<<<<< HEAD
     $numSerie = $this->input->post("numSerie");
+=======
+    $precio = $this->input->post("precio");
+>>>>>>> gonza-branch
 
 
     $data = array(
         'cantidad' => $cant,
         'producto' =>  $producto,
+<<<<<<< HEAD
         'numSerie' => $numSerie,
         'idRemito' => $idRemito
+=======
+        'idRemito' => $idRemito,
+        'precio' => $precio
+>>>>>>> gonza-branch
     );
     $ale=$data['Cantidad'];
 
@@ -84,17 +97,29 @@ public function addProducto(){
 
 public function cinsert(){
 
+<<<<<<< HEAD
   
      $fecha = $this->input->post('txtfecha');
      $observaciones = $this->input->post('txtobservaciones');
+=======
+     $vendedor = $this->input->post('txtvendedor');
+     $obs = $this->input->post('txtobser');
+     $fecha = $this->input->post('txtfecha');
+>>>>>>> gonza-branch
      $id_cliente=$this->input->post("tipo_cliente");
 
     //REGLA DE VALIDACION
         $data = array(
             'fecha' => $fecha,
+<<<<<<< HEAD
             'observaciones' => $observaciones,
             'IdCliente' => $id_cliente
      
+=======
+            'vendedor' => $vendedor,
+            'IdCliente' => $id_cliente,
+            'observaciones' => $obs
+>>>>>>> gonza-branch
         );
         $res=$this->mremito->minsertremito($data);
         if($res){
@@ -109,8 +134,11 @@ public function cinsert(){
 }
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> gonza-branch
 public function cedit($id){
     $idrol = $this->session->userdata("idRol");
     $data = array(
@@ -139,8 +167,14 @@ public function cedit($id){
 public function cupdate(){
     
     $id = $this->input->post('txtIdRemito');
+<<<<<<< HEAD
     $fecha = $this->input->post('txtfecha');
     $observaciones = $this->input->post('txtobservaciones');
+=======
+    $vendedor = $this->input->post('txtvendedor');
+    $obs = $this->input->post('txtobservaciones');
+    $fecha = $this->input->post('txtfecha');
+>>>>>>> gonza-branch
     $id_cliente=$this->input->post("cliente");
 
     if($fecha==null){
@@ -154,8 +188,14 @@ public function cupdate(){
    
     $data = array(
         'fecha' => $fecha,
+<<<<<<< HEAD
         'observaciones' => $observaciones,
         'IdCliente' => $id_cliente
+=======
+        'vendedor' => $vendedor,
+        'IdCliente' => $id_cliente,
+        'observaciones' => $obs
+>>>>>>> gonza-branch
     );
 
         $res = $this->mremito->mupdateremito($id, $data);
@@ -209,7 +249,11 @@ public function cupdateProd(){
 
   $descripcion = $this->input->post('txtproducto');
   $cantidad = $this->input->post('txtcantidad');
+<<<<<<< HEAD
   $numSerie = $this->input->post('txtnumSerie');
+=======
+  $precio = $this->input->post('txtprecio');
+>>>>>>> gonza-branch
   $id = $this->input->post('txtid');
   $prod = $this->mremito->obtenerProdconIdProd($id);
 
@@ -219,7 +263,11 @@ public function cupdateProd(){
       $data = array(
           'producto' => $descripcion,
           'cantidad' => $cantidad,
+<<<<<<< HEAD
           'numSerie' => $numSerie
+=======
+          'precio' => $precio
+>>>>>>> gonza-branch
       );
 
 
@@ -240,11 +288,19 @@ public function cprint($id){
         'roles'=>$this->mroles->obtener($idrol)
     );
    
+<<<<<<< HEAD
   
     $data['cliente'] = $this->mcliente->midupdatecliente($data['remito']->IdCliente);
 
     $data['producto'] = $this->mremito->obtenerProducto($id);
     //$data['total']=$this->mremito->consultaTotalRemito($id);
+=======
+    
+    $data['cliente'] = $this->mcliente->midupdatecliente($data['remito']->IdCliente);
+
+    $data['producto'] = $this->mremito->obtenerProducto($id);
+    $data['total']=$this->mremito->consultaTotalRemito($id);
+>>>>>>> gonza-branch
    
    
     //$roles=$this->mroles->obtener($idRol);
@@ -254,6 +310,7 @@ public function cprint($id){
     $this->load->view('layouts/footer');
 }
 
+<<<<<<< HEAD
 public function cError($idRemito){
 
   
@@ -262,6 +319,8 @@ public function cError($idRemito){
 
 }
 
+=======
+>>>>>>> gonza-branch
 
 
 

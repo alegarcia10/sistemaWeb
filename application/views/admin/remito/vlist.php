@@ -25,11 +25,20 @@
                         <table id="tablaremito" class="table table-bordered table-hover order-table2">
                             <thead>
                                 <tr>
+<<<<<<< HEAD
                                   <th width="5%">N° remito</th>
                                   <th width="15%">Fecha</th>
                                   <th width="20%">Cliente</th>
                                   <th width="40%">Observaciones</th>
                                   <th width="20%">Operaciones</th>
+=======
+                                  <th>N° remito</th>
+                                  <th>Fecha</th>
+                                  <th>Cliente</th>
+                                  <th>Vendedor</th>
+                                  <th>Observaciones</th>
+                                  <th >Operaciones</th>
+>>>>>>> gonza-branch
                                 </tr>
                             </thead>
                             <tbody>
@@ -37,9 +46,16 @@
                                     <?php foreach ($remitoindex as $atributos) :?>
                                         <tr>
                                           <td width="5%"><?php echo $atributos->IdRemito; ?></td>
+<<<<<<< HEAD
                                           <td width="15%"><?php echo date("d/m/Y", strtotime("$atributos->fecha")); ?></td>
                                           <td width="20%"><?php echo $atributos->Nombre; ?></td>
                                           <td width="40%"><?php echo $atributos->observaciones; ?></td>
+=======
+                                          <td width="10%"><?php echo date("d/m/Y", strtotime("$atributos->fecha")); ?></td>
+                                          <td width="30%"><?php echo $atributos->Nombre; ?></td>
+                                          <td width="10%"><?php echo $atributos->vendedor; ?></td>
+                                          <td width="25%"><?php echo $atributos->observaciones; ?></td>
+>>>>>>> gonza-branch
                                           <td width="20%" >
                                                 <div class="btn-group">
                                                     <a href="<?php echo base_url(); ?>mantenimiento/cremitos/cprint/<?php echo $atributos->IdRemito; ?>" class="btn btn-warning" title="Ver">

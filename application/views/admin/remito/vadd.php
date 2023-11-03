@@ -25,12 +25,25 @@
                                     <label class="control-label" for="tipo_cliente">CLIENTE (*)</label>
                                     <?$this->select_items->sin_buscador($tipo_cliente_select, '','tipo_cliente','1', 'required');?>
                                 </div>
+<<<<<<< HEAD
                                 <div class=" col-sm-12 form-group">
                                     <label for="obser">OBSERVACIONES</label>
                                     <input type="text" id="txtobservaciones" name="txtobservaciones" maxlength="200"class="form-control" value="<?php echo set_value('txtobservaciones') ?>">
                                 </div>
                                 <div class="col-sm-12 form-group">
                                     <a class="btn btn-info" href="<?php echo base_url(); ?>mantenimiento/cremitos">Volver</a>
+=======
+                                <div class=" col-sm-3 form-group">
+                                    <label for="vendedor">VENDEDOR</label>
+                                    <input type="text" id="txtvendedor" name="txtvendedor" maxlength="50"class="form-control" value="<?php echo set_value('txtvendedor') ?>"  >
+                                </div>
+                                <div class=" col-sm-12 form-group">
+                                    <label for="obser">OBSERVACIONES</label>
+                                    <input type="text" id="txtobser" name="txtobser" maxlength="1000"class="form-control" value="<?php echo set_value('txtobser') ?>">
+                                </div>
+                                <div class="col-sm-12 form-group">
+                                    <a class="btn btn-success" href="<?php echo base_url(); ?>mantenimiento/cremitos">Volver</a>
+>>>>>>> gonza-branch
                                     <button type="submit" class="btn btn-success">Guardar</button>
                                 </div>
 
@@ -50,6 +63,40 @@
       $("#exampleModal").modal("show");
   });
 
+<<<<<<< HEAD
  
+=======
+  $('#agregarProducto').on('click',function(){
+
+        var idRemito =$('#txtIdRemito').val();
+        var idProducto =$('#txtIdProducto').val();
+        var producto =$('#txtproducto').val();
+        var cant =$('#txtcantidad').val();
+        var precio =$('#txtprecio').val();
+
+        if((producto=='') || (cant=='') ){
+
+        }else{
+
+        $('#txtproducto').val('');
+        $('#txtcantidad').val('');
+        $('#txtprecio').val('');
+
+                $.ajax( {
+                                    method:'POST',
+                                    url:'<?php echo base_url(); ?>' + 'mantenimiento/Cremitos/addProducto',
+                                    dataType:'html',
+                                    data:{producto:producto,idRemito:idRemito,idProducto:idProducto,cant:cant,precio:precio}})
+                                    .done(function(r) {
+
+                                    r = JSON.parse(r);
+                                    window.location.href=base_url+'/mantenimiento/cremitos/cedit/'+idProducto;
+                                    //$("#tbody1").append(r['linksa']);
+                                    });
+
+        }
+
+        });
+>>>>>>> gonza-branch
 
 </script>
