@@ -6,13 +6,8 @@ class Mremito extends CI_Model{
 
   public function mselectremito(){
 
-<<<<<<< HEAD
     $resultado =	$query = $this->db->query("SELECT o.IdRemito , c.Nombre , o.observaciones ,o.IdCliente, o.fecha 
        FROM remitos o
-=======
-    $resultado =	$query = $this->db->query("SELECT o.IdRemito , c.Nombre ,o.IdCliente, o.fecha ,
-       o.observaciones, o.vendedor  FROM remitos o
->>>>>>> gonza-branch
        INNER JOIN cliente c ON o.IdCliente = c.IdCliente 
        where o.Anulado=0 
        ORDER BY o.IdRemito DESC;");
@@ -28,13 +23,8 @@ class Mremito extends CI_Model{
       $ini = date("Y-m-d", strtotime($ini));
       $fin = date("Y-m-d", strtotime($fin));
      
-<<<<<<< HEAD
       $resultado =	$query = $this->db->query("SELECT o.IdRemito , c.Nombre ,o.observaciones ,o.IdCliente, o.FechaRecepcion ,
          o.TareaDesarrollar, o.Completada, o.Eliminada FROM remito o
-=======
-      $resultado =	$query = $this->db->query("SELECT o.IdRemito , c.Nombre ,o.IdCliente, o.FechaRecepcion ,
-         o.TareaDesarrollar, o.Precio, o.Completada, o.Eliminada FROM remito o
->>>>>>> gonza-branch
          INNER JOIN cliente c ON o.IdCliente = c.IdCliente 
          where o.Eliminada=0 and o.Completada=0 and o.FechaRecepcion >= '$ini' and o.FechaRecepcion <= '$fin' 
          ORDER BY o.IdRemito DESC;");
@@ -49,11 +39,7 @@ class Mremito extends CI_Model{
         $resultado=$this->db->get('remitos');
         return  $resultado->result();
      }
-<<<<<<< HEAD
 /*
-=======
-
->>>>>>> gonza-branch
      //CALCULA TOTAL ACUMULADO A COBRAR EN REMITO
      public function consultaTotalRemito($id){
        $resultado =$query = $this->db->query("SELECT SUM(precio)as totalPrecio FROM producto where IdRemito=$id");
@@ -64,11 +50,7 @@ class Mremito extends CI_Model{
        $x=intval($totalPrecio);
      
          return  $totalPrecio;
-<<<<<<< HEAD
       }*/
-=======
-      }
->>>>>>> gonza-branch
 
 
      
@@ -131,11 +113,7 @@ class Mremito extends CI_Model{
     $IdRemito=$data['IdRemito'];
     $cantidad=$data['cantidad'];
     $producto=$data['producto'];
-<<<<<<< HEAD
    
-=======
-    $precio=$data['precio'];
->>>>>>> gonza-branch
     $this->db->where('IdRemito =',"$IdRemito");
     $this->db->insert('producto',$data);
     $IdMat=$this->db->insert_id();
@@ -144,11 +122,7 @@ class Mremito extends CI_Model{
                 <td>'.$IdProducto.'</td>
                 <td>'.$producto.'</td>
                 <td>'.$cantidad.'</td>
-<<<<<<< HEAD
                
-=======
-                <td>'.$precio.'</td>
->>>>>>> gonza-branch
                 <td>
                     <div class="btn-group">
                         <a title="Modificar" href="@'.$IdProducto.'" class="btn btn-info ">

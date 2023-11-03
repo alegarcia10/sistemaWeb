@@ -28,7 +28,6 @@
                                 <label for="fecha">Fecha de Recepción</label>
                                 <input type="text" id="txtfecha" name="txtfecha"  min="2020-01-01" max="2100-12-31" value="<?php echo !empty(form_error('txtfecha'))? set_value('txtfecha') :  date("d-m-Y", strtotime("$remitoedit->fecha"));?>" class= "form-control"   >
                             </div>
-<<<<<<< HEAD
                             <div class="col-sm-12 form-group">
                                 <label for="observaciones">OBSERVACIONES</label>
                                 <input type="text" id="txtobservaciones" name="txtobservaciones" maxlength="200" value="<?php echo !empty(form_error('txtobservaciones'))? set_value('txtobservaciones') : $remitoedit->observaciones ?>" class= "form-control"  >
@@ -36,19 +35,6 @@
                         
                             <div class="col-sm-6 form-group">
                                 <a class="btn btn-info" href="<?php echo base_url();?>mantenimiento/cremitos">Volver</a>
-=======
-                            <div class="col-sm-6 form-group">
-                                <label for="vendedor">VENDEDOR</label>
-                                <input type="text" id="txtvendedor" name="txtvendedor" maxlength="256" value="<?php echo !empty(form_error('txtvendedor'))? set_value('txtvendedor') : $remitoedit->vendedor ?>" class= "form-control" required >
-                            </div>
-                            <div class="col-sm-6 form-group">
-                                <label for="observaciones">OBSERVACIONES</label>
-                                <input type="text" id="txtobservaciones" name="txtobservaciones" maxlength="1000" value="<?php echo !empty(form_error('txtobservaciones'))? set_value('txtobservaciones') : $remitoedit->observaciones ?>" class= "form-control"  >
-                            </div>
-                        
-                            <div class="col-sm-6 form-group">
-                                <a class="btn btn-success" href="<?php echo base_url();?>mantenimiento/cremitos">Volver</a>
->>>>>>> gonza-branch
                                 <button type="submit" class="btn btn-success">Guardar</button>
                             </div>
                         </form>
@@ -64,7 +50,6 @@
                                 
                                     <div class="col-sm-5 form-group">
                                         <label for="producto">Producto</label>
-<<<<<<< HEAD
                                         <input type="text" id="txtproducto" name="txtproducto" class="form-control"  value="<?php echo set_value('txtproducto') ?>" required>
                                     </div>
                                     <div class="col-sm-3 form-group">
@@ -74,17 +59,6 @@
                                     <div class="col-sm-3 form-group">
                                         <label for="numSerie">Numero de Serie</label>
                                         <input type="text" id="txtnumSerie" name="txtnumSerie" class="form-control" value="<?php echo set_value('txtnumSerie') ?>" >
-=======
-                                        <input type="text" id="txtproducto" name="txtproducto" class="form-control"  value="<?php echo set_value('txtproducto') ?>" >
-                                    </div>
-                                    <div class="col-sm-3 form-group">
-                                        <label for="cantidad">Cantidad</label>
-                                        <input type="text" id="txtcantidad" name="txtcantidad" class="form-control" value="<?php echo set_value('txtcantidad') ?>" >
-                                    </div>
-                                    <div class="col-sm-3 form-group">
-                                        <label for="precio">Precio</label>
-                                        <input type="number" id="txtprecio" name="txtprecio" class="form-control" step=".01" value="<?php echo set_value('txtprecio') ?>" >
->>>>>>> gonza-branch
                                     </div>
                                     <div class="col-sm-1">
                                         <br>
@@ -97,11 +71,7 @@
                                                         <th>#</th>
                                                         <th>Producto</th>
                                                         <th>Cantidad</th>
-<<<<<<< HEAD
                                                         <th>Numero de Serie</th>
-=======
-                                                        <th>Precio</th>
->>>>>>> gonza-branch
                                                     </tr>
                                                 </thead>
                                                 <tbody id='tbody1'>
@@ -111,11 +81,7 @@
                                                                 <td><?php echo $atributos->IdProducto; ?></td>
                                                                 <td><?php echo $atributos->producto; ?></td>
                                                                 <td><?php echo $atributos->cantidad; ?></td>
-<<<<<<< HEAD
                                                                 <td><?php echo $atributos->numSerie; ?></td>
-=======
-                                                                <td><?php echo $atributos->precio; ?></td>
->>>>>>> gonza-branch
                                                                 <?php $data = $atributos->IdRemito; ?>
                                                                 <td>
                                                                     <div class="btn-group">
@@ -152,39 +118,24 @@ $(document).ready(function(){
         var idRemito =$('#txtIdRemito').val();
         var producto =$('#txtproducto').val();
         var cant =$('#txtcantidad').val();
-<<<<<<< HEAD
         var numSerie =$('#txtnumSerie').val();
     
       
         if((producto=='') || (cant=='') || (numSerie=='')  ){
             alert( idRemito);
             window.location.href=base_url+'/mantenimiento/cremitos/cError/'+idRemito;
-=======
-        var precio =$('#txtprecio').val();
-      
-        if((producto=='') || (cant=='') ){
-
->>>>>>> gonza-branch
         }else{
 
         $('#txtproducto').val('');
         $('#txtcantidad').val('');
-<<<<<<< HEAD
         $('#txtnumSerie').val('');
         
-=======
-        $('#txtprecio').val('');
->>>>>>> gonza-branch
        
                 $.ajax( {
                                     method:'POST',
                                     url:'<?php echo base_url(); ?>' + 'mantenimiento/cremitos/addProducto',
                                     dataType:'html',
-<<<<<<< HEAD
                                     data:{producto:producto,idRemito:idRemito,cant:cant, numSerie:numSerie}})
-=======
-                                    data:{producto:producto,idRemito:idRemito,cant:cant,precio:precio}})
->>>>>>> gonza-branch
                                    
                                     .done(function(r) {
                                         window.location.href=base_url+'/mantenimiento/cremitos/cedit/'+idRemito;

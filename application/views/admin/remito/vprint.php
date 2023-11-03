@@ -37,17 +37,9 @@
                                         </div>
                                         <div class="col-md-6 datos3">
                                           <p>Cereseto Oeste 156  - Teléfono: 264-4275852</p>
-<<<<<<< HEAD
                                           <p>www.electronicabios.com.ar - electronicabios@gmail.com</p>
                                         </div>
                                     
-=======
-                                    
-                                        </div>
-                                        <div class="col-md-6 datos4">
-                                            
-                                        </div>
->>>>>>> gonza-branch
                                     </div>
                                 </div>
                                 <div class="col-md-12" id="celdas3">
@@ -69,13 +61,7 @@
                                                 <thead>
                                                     <tr>
                                                     <th width="15%" scope="col">Cantidad</th>
-<<<<<<< HEAD
                                                     <th width="60%"scope="col">Detalle</th>
-=======
-                                                      
-                                                    <th width="60%"scope="col">Detalle</th>
-                                                      
->>>>>>> gonza-branch
                                                     <th width="25%"scope="col">Numero de Serie</th>
                                                     </tr>
                                                 </thead>
@@ -85,15 +71,8 @@
                                                     <?php foreach ($producto as $atributos) : ?>
                                                         <tr>
                                                             <td id='tbody2'><?php echo $atributos->cantidad; ?></td>
-<<<<<<< HEAD
                                                             <td id='tbody3'><?php echo $atributos->producto; ?></td>
                                                             <td id='tbody2'><?php echo $atributos->numSerie; ?></td>
-=======
-                                                            
-                                                            <td id='tbody3'><?php echo $atributos->producto; ?></td>
-                                                            
-                                                            <td></td>
->>>>>>> gonza-branch
                                                         </tr>
                                                     <?php endforeach ?>
                                                 <?php endif; ?>
@@ -103,18 +82,11 @@
                                 </div>
                                 <div class="col-md-12" id="celdas5">
                                     <div class="row" >
-<<<<<<< HEAD
                                         <div class="col-md-12 registrovacio0">    
                                           <p><?php echo $remito->observaciones; ?></p>                                  
                                         </div>
                                         <div class="col-md-9 registro01">
                                             <strong><p>Observaciones</p></strong>                                     
-=======
-                                        <div class="col-md-12 registrovacio0">                                      
-                                        </div>
-                                        <div class="col-md-9 registro01">
-                                            <strong><p>Recibió</p></strong>                                     
->>>>>>> gonza-branch
                                         </div>
                                         <div class="col-md-3 registro02">
                                             <strong><p>Original (Pag. 1 de 1)</p></strong>
@@ -142,12 +114,7 @@
                                 </div>
 
                             </div>
-<<<<<<< HEAD
                     </div>
-=======
-                        </div>
-                    
->>>>>>> gonza-branch
                 </div>
             </div>
         </div>  
@@ -183,14 +150,11 @@
     printButton.addEventListener('click', printInvoice);
   </script>
 <style>
-<<<<<<< HEAD
 
   #cuerpo {
     width: 210mm; /* Ancho A4 */
     height: 297mm; /* Alto A4 */
   }
-=======
->>>>>>> gonza-branch
   .cuerpo {
     width: 210mm; /* Ancho A4 */
     height: 297mm; /* Alto A4 */
@@ -205,11 +169,8 @@
     border: 1px solid #ccc;
     border-radius: 15px;
     margin: 5px;
-<<<<<<< HEAD
     margin-left: 130px !important;
     margin-right: 140px !important;
-=======
->>>>>>> gonza-branch
     height: 30mm !important;
   }
   #celdas3{
@@ -217,51 +178,33 @@
     border-radius: 15px;
     margin: 5px;
     height: 25mm !important;
-<<<<<<< HEAD
     margin-left: 130px !important;
     margin-right: 40px !important;
-=======
->>>>>>> gonza-branch
   }
   #celdas4{
     border: 1px solid #ccc;
     border-radius: 15px;
     margin: 5px;
     height: 170mm !important;
-<<<<<<< HEAD
     margin-left: 130px !important;
     margin-right: 40px !important;
-=======
->>>>>>> gonza-branch
   }
   #celdas5{
     border: 1px solid #ccc;
     margin: 5px;
     height: 20mm !important;
-<<<<<<< HEAD
     margin-left: 130px !important;
     margin-right: 40px !important;
     
   }
-=======
-    
-  }
-  .linea-vertical {
-            border-right: 1px solid #000; /* Añade una línea vertical de 1px de grosor */
-            height: 200%; /* Ajusta la altura según tus necesidades */
-        }
->>>>>>> gonza-branch
 
   #celdas6{
     border: 1px solid #ccc;
     margin: 5px;
     height: 30mm !important;
     text-align: center;
-<<<<<<< HEAD
     margin-left: 130px !important;
     margin-right: 40px !important;
-=======
->>>>>>> gonza-branch
   }
 
   .logo {
@@ -314,12 +257,9 @@
     text-align: center;
     margin-top: -3% !important; 
   }
-<<<<<<< HEAD
   .datos3 p {
     margin: 0% !important; 
   }
-=======
->>>>>>> gonza-branch
   .datos4 {
     font-size: 10px;
     text-align: center;
@@ -363,13 +303,10 @@
     height: 5mm !important;
     text-align: center !important;
   }
-<<<<<<< HEAD
   .registrovacio0 p {
     margin-top: 5px !important;
     text-align: center !important;
   }
-=======
->>>>>>> gonza-branch
   .registro02 {
     border: 1px solid #ccc;
     height: 5mm !important;
@@ -415,7 +352,6 @@
 
   @media print {
   
-<<<<<<< HEAD
     #cuerpo {
       width: 184mm; /* Ancho A4 */
     height: 250mm;
@@ -423,20 +359,11 @@
     .cuerpo {
     width: 178mm; /* Ancho A4 */
     height: 250mm; /* Alto A4 */
-=======
-    .cuerpo {
-    width: 100%;  Ancho A4 
-    height: 100%; /* Alto A4 
->>>>>>> gonza-branch
     margin: auto;
     margin-top: 10px !important;
     padding: auto;
     border: 1px solid #ccc;
-<<<<<<< HEAD
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-=======
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);*/
->>>>>>> gonza-branch
   }
 
   #celdas1{
@@ -456,33 +383,21 @@
     border: 1px solid #ccc;
     border-radius: 15px;
     margin: 5px !important;
-<<<<<<< HEAD
     height: 135mm !important;
-=======
-    height: 125mm !important;
->>>>>>> gonza-branch
     margin-top: 10px !important;
     padding-top: 2.5mm !important;
   }
 
   #celdas5{
     border: 1px solid #ccc;
-<<<<<<< HEAD
     margin: 5px !important;
-=======
-    margin: 5px;
->>>>>>> gonza-branch
     height: 20mm !important;
     text-align: center;
     margin-top: 10px !important;
   }
   #celdas6{
     border: 1px solid #ccc;
-<<<<<<< HEAD
     margin: 5px !important;
-=======
-    margin: 5px;
->>>>>>> gonza-branch
     height: 30mm !important;
     text-align: center;
   }
@@ -522,11 +437,7 @@
     padding: 0px !important;
     margin-top: -10% !important;
     text-align: left;
-<<<<<<< HEAD
     margin-left: 58% !important;
-=======
-    margin-left: 55% !important;
->>>>>>> gonza-branch
 }
 
   .datos2 h5 p {
@@ -538,7 +449,6 @@
   .datos3 {
     font-size: 10px;
     text-align: center;
-<<<<<<< HEAD
     margin-top: -3% !important; 
     width: 49% !important;
 
@@ -551,16 +461,6 @@
     font-size: 10px;
     text-align: center;
     margin-top: -2% !important; 
-=======
-    margin-top: -4% !important; 
-    width: 49% !important;
-
-  }
-  .datos4 {
-    font-size: 10px;
-    text-align: center;
-    margin-top: -4% !important; 
->>>>>>> gonza-branch
     width: 49% !important;
     margin-left: 49% !important;
 
@@ -575,20 +475,12 @@
   }
   .cliente1 p {
     margin-top: 3% !important;
-<<<<<<< HEAD
     margin-left: 7%;
-=======
-    margin-left: 5%;
->>>>>>> gonza-branch
   }
   .cliente2 {
     font-size: 12px;
     padding: 0px !important;
-<<<<<<< HEAD
     margin-top: -11.5%;
-=======
-    margin-top: -12.5%;
->>>>>>> gonza-branch
     width: 49% !important;
     margin-left: 49% !important;
   }
@@ -610,14 +502,11 @@
     border: 1px solid #ccc;
     height: 15mm !important;
   }
-<<<<<<< HEAD
   .registrovacio0 p {
     margin-top: 5px !important;
     font-size: 3mm !important;
     text-align: center !important;
   }
-=======
->>>>>>> gonza-branch
   .registro01 {
     border: 1px solid #ccc;
     height: 5mm !important;
@@ -628,11 +517,7 @@
     border: 1px solid #ccc;
     height: 5mm !important;
     text-align: center !important;
-<<<<<<< HEAD
     width: 55mm !important;
-=======
-    width: 43mm !important;
->>>>>>> gonza-branch
     margin-left: 126mm !important;
     margin-top: -5mm !important;
     
@@ -641,69 +526,41 @@
   .registrovacio1 {
     border: 1px solid #ccc;
     height: 25mm !important;
-<<<<<<< HEAD
     width: 60mm !important; 
-=======
-    width: 56mm !important; 
->>>>>>> gonza-branch
   }
   .registrovacio2 {
     border: 1px solid #ccc;
     height: 25mm !important;
-<<<<<<< HEAD
     width: 60mm !important;
     margin-left: 60mm !important; 
-=======
-    width: 56mm !important;
-    margin-left: 56mm !important; 
->>>>>>> gonza-branch
     margin-top: -25mm !important;
     
   }
   .registrovacio3 {
     border: 1px solid #ccc;
     height: 25mm !important;
-<<<<<<< HEAD
     width: 61mm !important;
     margin-left: 120mm !important; 
-=======
-    width: 57mm !important;
-    margin-left: 112mm !important; 
->>>>>>> gonza-branch
     margin-top: -25mm !important;
      
   }
   .registro1 {
     border: 1px solid #ccc;
     height: 5mm !important;
-<<<<<<< HEAD
     width: 60mm !important;  
-=======
-    width: 56mm !important;  
->>>>>>> gonza-branch
   }
   .registro2 {
     border: 1px solid #ccc;
     height: 5mm !important;
-<<<<<<< HEAD
     width: 60mm !important; 
     margin-left: 60mm !important; 
-=======
-    width: 56mm !important; 
-    margin-left: 56mm !important; 
->>>>>>> gonza-branch
     margin-top: -5mm !important;
   }
   .registro3 {
     border: 1px solid #ccc;
     height: 5mm !important;
-<<<<<<< HEAD
     width: 61mm !important; 
     margin-left: 120mm !important; 
-=======
-    width: 57mm !important; 
-    margin-left: 112mm !important; 
->>>>>>> gonza-branch
     margin-top: -5mm !important;
   
   }
