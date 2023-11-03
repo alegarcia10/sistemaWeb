@@ -54,13 +54,8 @@
                             <?php if ($roles->equipos =="1") { ?>
                             <li><a href="<?php echo base_url(); ?>mantenimiento/cequipos"><i class="fa-solid fa-file-invoice"></i>&nbsp Recepción Equipos</a></li>
                             <?php } ?>
-<<<<<<< HEAD
                             <?php if ($roles->remitos =="1") { ?>
                             <li><a href="<?php echo base_url(); ?>mantenimiento/cremitos"><i class="fa-solid fa-file-invoice-dollar"></i>&nbsp  Remitos</a></li>
-=======
-                            <?php if ($roles->estados_trabajo =="1") { ?>
-                            <li><a href="<?php echo base_url(); ?>mantenimiento/cremitos"><i class="fa-solid fa-file-invoice-dollar"></i>  Remitos</a></li>
->>>>>>> gonza-branch
                             <?php } ?>
                         </ul>
                         
