@@ -28,9 +28,9 @@
                           </div>
                           <div class="info">
                             <p>Elecctrónica BIOS</p>
-                            <p>Cereseto Oeste 156</p>
+                            <p>Monteagudo 788 Este Villa Mallea</p>
                             <p>Capital San Juan</p>
-                            <p>Teléfono: 264-4275852</p>
+                            <p>Teléfono: 4212673</p>
                             <p>Correo Electrónico: electronicabios@gmail.com</p>
                           </div>
                          

@@ -31,7 +31,7 @@
                                             <p>C.U.I.T: 30-71621552-7 </p>
                                         </div>
                                         <div class="col-md-6 datos3">
-                                          <p>Cereseto Oeste 156  - Teléfono: 264-4275852</p>
+                                          <p>Monteagudo 788 Este Villa Mallea(Capital), San Juan - Teléfono: 4212673</p>
                                           <p>www.electronicabios.com.ar - electronicabios@gmail.com</p>
                                         </div>
                                     
