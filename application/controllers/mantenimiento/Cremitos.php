@@ -135,8 +135,13 @@ public function cedit($id){
         
         $cant++;
     }
-    var_dump("La Cantidad es = $cant");
-    die;
+   if($cant <= 15){
+    var_dump("vale");
+   }else{
+    var_dump("no vale");
+   }
+
+   die;
 
     $data['producto'] = $this->mremito->obtenerProducto($IdRemito);
 
