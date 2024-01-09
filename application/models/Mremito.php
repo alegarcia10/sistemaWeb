@@ -170,7 +170,7 @@ public function infoCantRemitos($id){
   var_dump("SELECT COUNT(*) FROM producto WHERE IdRemito='$id'");
  
   var_dump("id remito igual a $id--------------------------------------");
-  var_dump($query);
+  var_dump($query->result());
 
   die;
     return $resultado->result();
