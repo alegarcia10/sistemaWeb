@@ -75,18 +75,6 @@ public function addProducto(){
     }
    if($cant <= 15){
     
-   }else{
-    $this->session->set_flashdata('error', 'No se pueden agregar mas de 15 PRODUCTOS');
-    redirect(base_url().'mantenimiento/cremitos/cedit/'.$idRemito);
-   }
-
-   
-
-
-    /*-------------------------------------------------------
-    $res=$this->mremito->infoCantRemitos($idRemito);
-
-    */
     $data = array(
         'cantidad' => $cant,
         'producto' =>  $producto,
@@ -100,6 +88,20 @@ public function addProducto(){
     $a=['linksa'=>$res];
 
     echo json_encode($a);
+   }else{
+
+    echo json_encode("error");
+    
+   }
+
+   
+
+
+    /*-------------------------------------------------------
+    $res=$this->mremito->infoCantRemitos($idRemito);
+
+    */
+    
 }
 
 public function cinsert(){
@@ -282,6 +284,16 @@ public function cError($idRemito){
            redirect(base_url().'mantenimiento/cremitos/cedit/'.$idRemito);
 
 }
+
+public function cErrorCantidad($idRemito){
+
+  
+    $this->session->set_flashdata('error', 'No se pueden agregar mas de 15 PRODUCTOS');
+    redirect(base_url().'mantenimiento/cremitos/cedit/'.$idRemito);
+
+}
+
+
 
 
 
