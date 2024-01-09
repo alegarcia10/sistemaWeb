@@ -173,7 +173,8 @@ public function infoCantRemitos($id){
   $this->db->from('producto');  
   $this->db->where('IdProducto', $id);   
   $query = $this->db->get();   
-  var_dump($query);
+  var_dump(count($query->result()));
+
   die;
     return $resultado->result();
 }
