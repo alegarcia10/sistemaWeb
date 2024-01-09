@@ -66,7 +66,10 @@ public function addProducto(){
     $cant = $this->input->post("cant");
     $numSerie = $this->input->post("numSerie");
 
+    /*-------------------------------------------------------
+    $res=$this->mremito->infoCantRemitos($idRemito);
 
+    */
     $data = array(
         'cantidad' => $cant,
         'producto' =>  $producto,
@@ -113,6 +116,7 @@ public function cinsert(){
 
 public function cedit($id){
     $idrol = $this->session->userdata("idRol");
+    $res=$this->mremito->infoCantRemitos($id);
     $data = array(
         'remitoedit' => $this->mremito->midupdateremito($id),
         'roles'=>$this->mroles->obtener($idrol)

@@ -165,5 +165,13 @@ public function mupdateproducto($id, $data){
   return $this->db->update('producto', $data);
 }
     
+public function infoCantRemitos($id){
+  $resultado =	$query = $this->db->query("SELECT COUNT(*) FROM producto WHERE IdRemito='$id';");
+  var_dump($resultado);
+  die;
+    return $resultado->result();
 }
+}
+
+
 ?>
