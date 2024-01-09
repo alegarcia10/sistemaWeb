@@ -47,6 +47,9 @@
                                                 <a href="<?php echo base_url(); ?>mantenimiento/ccliente/cedit/<?php echo $atributos->IdCliente; ?>" class="btn btn-info" title="Modificar">
                                                     <span class="fa-solid fa-pen"></span>
                                                 </a>
+                                                <a href="<?php echo base_url(); ?>mantenimiento/ccliente/cdelete/<?php echo $atributos->IdCliente; ?>" class="btn btn-danger btn-remove deleteCliente" title="Eliminar">
+                                                        <span class="fa-solid fa-circle-xmark"></span>
+                                                </a>
                                    
                                               </div>
                                           </td>
@@ -84,6 +87,7 @@ $(document).ready(function () {
                    },
                    
                },
+               "bStateSave": true,
                scrollX:true
           });
 })

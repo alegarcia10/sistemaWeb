@@ -43,8 +43,44 @@
                                 <label for="provincia">Provincia</label>
                                 <input type="text" id="txtprovincia" name="txtprovincia" maxlength="50"value="<?php echo !empty(form_error('txtprovincia'))? set_value('txtprovincia') : $clienteedit->Provincia ?>" class= "form-control"  >
                             </div>
-                            <div class="col-sm-6 form-group">
-                                <a class="btn btn-success" href="<?php echo base_url();?>mantenimiento/ccliente">Volver</a>
+                            <div class="col-sm-4 form-group">
+                                <label for="mant">Tel Mantenimiento</label>
+                                <input type="number" id="txtmant" name="txtmant" min="1"value="<?php echo !empty(form_error('txtmant'))? set_value('txtmant') : $clienteedit->tel_mantenimiento ?>" class= "form-control"  >
+                            </div>
+                            <div class="col-sm-4 form-group">
+                                <label for="ventas">Tel Ventas</label>
+                                <input type="number" id="txtventa" name="txtventas" min="1"value="<?php echo !empty(form_error('txtventas'))? set_value('txtventas') : $clienteedit->tel_venta ?>" class= "form-control"  >
+                            </div>
+                            <div class="col-sm-4 form-group">
+                                <label for="comercial">Tel Comercial</label>
+                                <input type="number" id="txtcomercial" name="txtcomercial" min="1"value="<?php echo !empty(form_error('txtcomercial'))? set_value('txtcomercial') : $clienteedit->tel_comercial ?>" class= "form-control"  >
+                            </div>
+                            <div class="col-sm-4 form-group">
+                                <label for="correo">Mail Mantenimiento</label>
+                                <input type="text" id="txtmmant" name="txtmmant" min="1"value="<?php echo !empty(form_error('txtmmant'))? set_value('txtmmant') : $clienteedit->mail_mant ?>" class= "form-control"  >
+                            </div>
+                            <div class="col-sm-4 form-group">
+                                <label for="correo">Mail Ventas</label>
+                                <input type="text" id="txtmvta" name="txtmvta" min="1"value="<?php echo !empty(form_error('txtmvta'))? set_value('txtmvta') : $clienteedit->mail_vta ?>" class= "form-control"  >
+                            </div>
+                            <div class="col-sm-4 form-group">
+                                <label for="correo">Mail Comercial</label>
+                                <input type="text" id="txtmcial" name="txtmcial" min="1"value="<?php echo !empty(form_error('txtmcial'))? set_value('txtmcial') : $clienteedit->mail_comercial ?>" class= "form-control"  >
+                            </div>
+                            <div class="col-sm-4 form-group">
+                                <label for="nom">Nombre y Apellido</label>
+                                <input type="text" id="txtnmant" name="txtnmant" min="1"value="<?php echo !empty(form_error('txtnmant'))? set_value('txtnmant') : $clienteedit->nya_mant ?>" class= "form-control"  >
+                            </div>
+                            <div class="col-sm-4 form-group">
+                                <label for="nom">Nombre y Apellido</label>
+                                <input type="text" id="txtnvta" name="txtnvta" min="1"value="<?php echo !empty(form_error('txtnvta'))? set_value('txtnvta') : $clienteedit->nya_vta ?>" class= "form-control"  >
+                            </div>
+                            <div class="col-sm-4 form-group">
+                                <label for="nom">Nombre y Apellido</label>
+                                <input type="text" id="txtncial" name="txtncial" min="1"value="<?php echo !empty(form_error('txtncial'))? set_value('txtncial') : $clienteedit->nya_cial ?>" class= "form-control"  >
+                            </div>
+                            <div class="col-sm-12 form-group">
+                                <a class="btn btn-info" href="<?php echo base_url();?>mantenimiento/ccliente">Volver</a>
                                 <button type="submit" class="btn btn-success">Guardar</button>
                             </div>
                         </div>

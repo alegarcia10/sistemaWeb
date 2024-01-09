@@ -41,8 +41,44 @@
                                     <label for="provincia">Provincia</label>
                                     <input type="text" id="txtprovincia" name="txtprovincia" maxlength="50"class="form-control" value="<?php echo set_value('txtprovincia') ?>"  >
                                 </div>
+                                <div class="col-sm-4 form-group">
+                                    <label for="mant">Tel Mantenimiento</label>
+                                    <input type="number" id="txtmant" name="txtmant" min="1"class="form-control" value="<?php echo set_value('txtmant') ?>"  >
+                                </div>
+                                <div class="col-sm-4 form-group">
+                                    <label for="ventas">Tel Ventas</label>
+                                    <input type="number" id="txtventas" name="txtventas" min="1"class="form-control" value="<?php echo set_value('txtventas') ?>"  >
+                                </div>
+                                <div class="col-sm-4 form-group">
+                                    <label for="comercial">Tel Comercial</label>
+                                    <input type="number" id="txtcomercial" name="txtcomercial" min="1"class="form-control" value="<?php echo set_value('txtcomercial') ?>"  >
+                                </div>
+                                <div class="col-sm-4 form-group">
+                                    <label for="correo">Mail Mantenimiento</label>
+                                    <input type="text" id="txtmmant" name="txtmmant" maxlength="50"class="form-control" value="<?php echo set_value('txtmmant') ?>"  >
+                                </div>
+                                <div class="col-sm-4 form-group">
+                                    <label for="correo">Mail Ventas</label>
+                                    <input type="text" id="txtmvta" name="txtmvta" maxlength="50"class="form-control" value="<?php echo set_value('txtmvta') ?>"  >
+                                </div>
+                                <div class="col-sm-4 form-group">
+                                    <label for="correo">Mail Comercial</label>
+                                    <input type="text" id="txtmcial" name="txtmcial" maxlength="50"class="form-control" value="<?php echo set_value('txtmcial') ?>"  >
+                                </div>
+                                <div class="col-sm-4 form-group">
+                                    <label for="nom">Nombre y Apellido</label>
+                                    <input type="text" id="txtnmant" name="txtnmant" maxlength="50"class="form-control" value="<?php echo set_value('txtnmant') ?>"  >
+                                </div>
+                                <div class="col-sm-4 form-group">
+                                    <label for="nom">Nombre y Apellido</label>
+                                    <input type="text" id="txtnvta" name="txtnvta" maxlength="50"class="form-control" value="<?php echo set_value('txtnvta') ?>"  >
+                                </div>
+                                <div class="col-sm-4 form-group">
+                                    <label for="nom">Nombre y Apellido</label>
+                                    <input type="text" id="txtncial" name="txtncial" maxlength="50"class="form-control" value="<?php echo set_value('txtncial') ?>"  >
+                                </div>
                                 <div class="col-sm-12 form-group">
-                                    <a class="btn btn-success" href="<?php echo base_url(); ?>mantenimiento/ccliente">Volver</a>
+                                    <a class="btn btn-info" href="<?php echo base_url(); ?>mantenimiento/ccliente">Volver</a>
                                     <button type="submit" class="btn btn-success">Guardar</button>
                                 </div>
 

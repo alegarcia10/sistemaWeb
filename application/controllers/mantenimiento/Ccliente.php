@@ -52,6 +52,15 @@ public function cinsert(){
      $domicilio = $this->input->post('txtdomicilio');
      $iva = $this->input->post('txtiva');
      $localidad = $this->input->post('txtlocalidad');
+     $mant = $this->input->post('txtmant');
+     $venta = $this->input->post('txtventas');
+     $comer = $this->input->post('txtcomercial');
+     $mmant = $this->input->post('txtmmant');
+     $mvta = $this->input->post('txtmvta');
+     $mcial = $this->input->post('txtmcial');
+     $nmant = $this->input->post('txtnmant');
+     $nvta = $this->input->post('txtnvta');
+     $ncial = $this->input->post('txtncial');
      $cli = $this->mcliente->obtenerclientedni($cuit);
 
      if($cli==null){
@@ -63,6 +72,15 @@ public function cinsert(){
                    'Domicilio' => $domicilio,
                    'IVA' => $iva,
                    'Localidad' => $localidad,
+                   'tel_mantenimiento' => $mant,
+                   'tel_venta' => $venta,
+                   'tel_comercial' => $comer,
+                   'mail_mant' => $mmant,
+                   'mail_vta' => $mvta,
+                   'mail_comercial' => $mcial,
+                   'nya_mant' => $nmant,
+                   'nya_vta' => $nvta,
+                   'nya_cial' => $ncial,
                    'Anulado' => '0'
                );
                $res=$this->mcliente->minsertcliente($data);
@@ -109,6 +127,16 @@ public function cupdate(){
      $domicilio = $this->input->post('txtdomicilio');
      $iva = $this->input->post('txtiva');
      $localidad = $this->input->post('txtlocalidad');
+     $mant = $this->input->post('txtmant');
+     $venta = $this->input->post('txtventas');
+     $comer = $this->input->post('txtcomercial');
+     $mmant = $this->input->post('txtmmant');
+     $mvta = $this->input->post('txtmvta');
+     $mcial = $this->input->post('txtmcial');
+     $nmant = $this->input->post('txtnmant');
+     $nvta = $this->input->post('txtnvta');
+     $ncial = $this->input->post('txtncial');
+     $correo = $this->input->post('txtcorreo');
 
      $cli = $this->mcliente->obtenerclientedni($cuit);
 
@@ -121,6 +149,15 @@ public function cupdate(){
                    'Provincia' => $prov,
                    'IVA' => $iva,
                    'Localidad' => $localidad,
+                   'tel_mantenimiento' => $mant,
+                   'tel_venta' => $venta,
+                   'tel_comercial' => $comer,
+                   'mail_mant' => $mmant,
+                   'mail_vta' => $mvta,
+                   'mail_comercial' => $mcial,
+                   'nya_mant' => $nmant,
+                   'nya_vta' => $nvta,
+                   'nya_cial' => $ncial,
                    'Domicilio' => $domicilio
                );
 
