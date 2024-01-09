@@ -67,6 +67,12 @@ class Mremito extends CI_Model{
        $resultado = $this->db->get('remitos');
        return $resultado->row();
     }
+     //OBTENER DATOS con IdRemito
+     public function midupdateremito2($id){
+      $this->db->where('IdRemito', $id);
+      $resultado = $this->db->get('remitos');
+      return $resultado->result();
+   }
 
     
   
@@ -165,16 +171,7 @@ public function mupdateproducto($id, $data){
   return $this->db->update('producto', $data);
 }
     
-public function infoCantRemitos($id){
-  	$query = $this->db->query("SELECT COUNT(*) FROM producto WHERE IdRemito='$id';");
-  var_dump("SELECT COUNT(*) FROM producto WHERE IdRemito='$id'");
- 
-  var_dump("id remito igual a $id--------------------------------------");
-  var_dump($query->result());
 
-  die;
-    return $resultado->result();
-}
 }
 
 

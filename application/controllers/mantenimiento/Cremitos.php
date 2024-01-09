@@ -116,7 +116,13 @@ public function cinsert(){
 
 public function cedit($id){
     $idrol = $this->session->userdata("idRol");
-    $res=$this->mremito->infoCantRemitos($id);
+    $productos=$this->mremito->infoCantRemitos($id);
+    $cant=0;
+    foreach ($productos as $productos ) {
+        
+        $cant++;
+    }
+    var_dump("La Cantidad es = $cant");
     $data = array(
         'remitoedit' => $this->mremito->midupdateremito($id),
         'roles'=>$this->mroles->obtener($idrol)
