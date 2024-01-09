@@ -166,15 +166,11 @@ public function mupdateproducto($id, $data){
 }
     
 public function infoCantRemitos($id){
- /* $resultado =	$query = $this->db->query("SELECT COUNT(*) FROM producto WHERE IdRemito='$id';");
+  	$query = $this->db->query("SELECT COUNT(*) FROM producto WHERE IdRemito='$id';");
   var_dump("SELECT COUNT(*) FROM producto WHERE IdRemito='$id'");
-  $resultado = $resultado->result();*/
-  $this->db->count_all_results('producto');  // Produces an integer, like 25
-  $this->db->where('IdRemito =',"$id");
-  $this->db->from('producto');
-  $resultado =  $this->db->count_all_results(); // Produces an integer, like 17
+ 
   var_dump("id remito igual a $id--------------------------------------");
-  var_dump($resultado->result());
+  var_dump($query);
 
   die;
     return $resultado->result();
