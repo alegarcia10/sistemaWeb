@@ -66,6 +66,23 @@ public function addProducto(){
     $cant = $this->input->post("cant");
     $numSerie = $this->input->post("numSerie");
 
+    
+    $productos=$this->mremito->obtenerProducto($idRemito);
+    $cant=0;
+    foreach ($productos as $productos ) {
+        
+        $cant++;
+    }
+   if($cant <= 15){
+    
+   }else{
+    $this->session->set_flashdata('error', 'No se pueden agregar mas de 15 PRODUCTOS');
+    redirect(base_url().'mantenimiento/cremitos/cedit/'.$idRemito);
+   }
+
+   
+
+
     /*-------------------------------------------------------
     $res=$this->mremito->infoCantRemitos($idRemito);
 
@@ -128,20 +145,6 @@ public function cedit($id){
     
 
     $IdRemito=$data['remitoedit']->IdRemito;
-
-    $productos=$this->mremito->obtenerProducto($IdRemito);
-    $cant=0;
-    foreach ($productos as $productos ) {
-        
-        $cant++;
-    }
-   if($cant <= 15){
-    var_dump("vale");
-   }else{
-    var_dump("no vale");
-   }
-
-   die;
 
     $data['producto'] = $this->mremito->obtenerProducto($IdRemito);
 
