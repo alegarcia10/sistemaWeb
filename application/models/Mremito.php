@@ -172,9 +172,9 @@ public function infoCantRemitos($id){
   $this->db->count_all_results('producto');  // Produces an integer, like 25
   $this->db->where('IdRemito =',"$id");
   $this->db->from('producto');
-  $resultado=  $this->db->count_all_results(); // Produces an integer, like 17
+  $resultado =  $this->db->count_all_results(); // Produces an integer, like 17
   var_dump("id remito igual a $id--------------------------------------");
-  var_dump($resultado);
+  var_dump($resultado->result());
 
   die;
     return $resultado->result();
