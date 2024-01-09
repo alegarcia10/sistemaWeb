@@ -174,7 +174,7 @@ public function infoCantRemitos($id){
   $this->db->where('IdProducto', $id);   
   $query = $this->db->get();   */
   var_dump("id remito igual a $id--------------------------------------");
-  var_dump(count($resultado->result()));
+  var_dump(count($resultado));
 
   die;
     return $resultado->result();
