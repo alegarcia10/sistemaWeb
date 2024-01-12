@@ -402,7 +402,7 @@
     
   }
   .logo img{
-    margin-top: 3%;
+    margin-top: 1.5%;
     margin-left: 15%;
     height: 7%;
     width: 17%;
