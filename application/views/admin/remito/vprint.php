@@ -402,16 +402,16 @@
     
   }
   .logo img{
-    margin-top: 3%;
-    margin-left: 10%;
-    height: 10%;
-    width: 22%;
+    margin-top: 1.5%;
+    margin-left: 15%;
+    height: 7%;
+    width: 17%;
   }
   .datos {
     background-color: black !important;
     font-size: 30px;
     padding: 0px !important;
-    margin-top: -11.5% !important;
+    margin-top: -8.5% !important;
     margin-left: 47.5% !important;
     height: 65px !important;
     width: 5%;
@@ -430,7 +430,7 @@
 .datos2 {
     font-size: 10px;
     padding: 0px !important;
-    margin-top: -10% !important;
+    margin-top: -8% !important;
     text-align: left;
     margin-left: 58% !important;
 }
@@ -444,13 +444,13 @@
   .datos3 {
     font-size: 10px;
     text-align: center;
-    margin-top: -3% !important; 
+    margin-top: -6% !important; 
     width: 49% !important;
 
   }
   .datos3 p {
     margin: 0% !important; 
-    margin-top: -1% !important;
+    margin-top: -1.5% !important;
   }
   .datos4 {
     font-size: 10px;
