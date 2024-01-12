@@ -450,7 +450,7 @@
   }
   .datos3 p {
     margin: 0% !important; 
-    margin-top: -2% !important;
+    margin-top: -1.5% !important;
   }
   .datos4 {
     font-size: 10px;
