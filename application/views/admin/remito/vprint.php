@@ -444,7 +444,7 @@
   .datos3 {
     font-size: 10px;
     text-align: center;
-    margin-top: -6% !important; 
+    margin-top: -5% !important; 
     width: 49% !important;
 
   }
