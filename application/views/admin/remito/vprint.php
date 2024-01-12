@@ -411,7 +411,7 @@
     background-color: black !important;
     font-size: 30px;
     padding: 0px !important;
-    margin-top: -9.5% !important;
+    margin-top: -8.5% !important;
     margin-left: 47.5% !important;
     height: 65px !important;
     width: 5%;
@@ -444,7 +444,7 @@
   .datos3 {
     font-size: 10px;
     text-align: center;
-    margin-top: -5% !important; 
+    margin-top: -6% !important; 
     width: 49% !important;
 
   }
