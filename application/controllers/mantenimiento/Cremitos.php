@@ -73,7 +73,7 @@ public function addProducto(){
         
         $cant++;
     }
-   if($cant <= 15){
+   if($cant <= 10){
     
     $data = array(
         'cantidad' => $cant,
@@ -288,7 +288,7 @@ public function cError($idRemito){
 public function cErrorCantidad($idRemito){
 
   
-    $this->session->set_flashdata('error', 'No se pueden agregar mas de 15 PRODUCTOS');
+    $this->session->set_flashdata('error', 'No se pueden agregar mas de 10 PRODUCTOS');
     redirect(base_url().'mantenimiento/cremitos/cedit/'.$idRemito);
 
 }

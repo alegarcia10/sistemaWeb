@@ -207,10 +207,10 @@
     
   }
   .logo img{
-    margin-top: 3%;
+    margin-top: 1%;
     margin-left: 30%;
-    height: 35%;
-    width: 55%;
+    height: 30%;
+    width: 45%;
   }
   .datos {
     background-color: black;
