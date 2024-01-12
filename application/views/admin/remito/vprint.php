@@ -216,7 +216,7 @@
     background-color: black;
     font-size: 25px;
     padding: 0px !important;
-    margin-top: 0% !important;
+    margin-top: 3% !important;
     margin-left: 5% !important;
     height: 65px !important;
     width: 5%;
@@ -235,7 +235,7 @@
   .datos2 {
     font-size: 10px;
     padding: 0px !important;
-    margin-top: 0% !important;
+    margin-top: 3% !important;
     text-align: left;
     margin-left: 6% !important;
   
@@ -402,7 +402,7 @@
     
   }
   .logo img{
-    margin-top: 3%;
+    margin-top: 1.5%;
     margin-left: 15%;
     height: 7%;
     width: 18%;
