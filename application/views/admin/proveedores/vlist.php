@@ -40,7 +40,7 @@
                                       <tr>
                                           <td ><?php echo $atributos->IdProveedores; ?></td>
                                           <td ><?php echo $atributos->Nombre; ?></td>
-                                          <td ><?php echo $atributos->Productos; ?></td>
+                                          <td ><?php echo $atributos->Producto; ?></td>
                                           <td ><?php echo $atributos->Domicilio; ?></td>
                                           <td ><?php echo $atributos->Telefono; ?></td>
                                           <td ><?php echo $atributos->Descripcion; ?></td>
