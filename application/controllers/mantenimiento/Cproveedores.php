@@ -131,8 +131,8 @@ public function cdelete($id){
         'Anulado' => '1'
     );
     $this->mproveedores->mupdateproveedores($id, $data);
-    //redirect(base_url().'mantenimiento/cproveedores');
-    echo "mantenimiento/cproveedores";
+    redirect(base_url().'mantenimiento/cproveedores');
+    //echo "mantenimiento/cproveedores";
 }
 
 
