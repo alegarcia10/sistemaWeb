@@ -35,9 +35,9 @@
                         <?php if ($roles->ordenes =="1") { ?>
                             <li><a href="<?php echo base_url(); ?>mantenimiento/corden"><i class="fa-solid fa-file-lines"></i> &nbsp Órdenes</a></li>
                         <?php } ?>
-                        <?php if ($roles->ordenes =="1") { ?>
+                        <?php /*if ($roles->ordenes =="1") { ?>
                             <li><a href="<?php echo base_url(); ?>mantenimiento/cproveedores"><i class="fa-solid fa-truck-fast"></i>  Proveedores</a></li>
-                        <?php } ?>
+                        <?php } */?>
                         </ul>
                     </li>
 
