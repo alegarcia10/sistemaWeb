@@ -49,7 +49,7 @@
                                                 <a href="<?php echo base_url(); ?>mantenimiento/cproveedores/cedit/<?php echo $atributos->IdProveedores; ?>" class="btn btn-info" title="Modificar">
                                                     <span class="fa-solid fa-pen"></span>
                                                 </a>
-                                                <a href="<?php echo base_url(); ?>mantenimiento/cproveedores/cdelete/<?php echo $atributos->IdProveedores; ?>" class="btn btn-danger btn-remove deleteproveedores" title="Eliminar">
+                                                <a href="<?php echo base_url(); ?>mantenimiento/cproveedores/cdelete/<?php echo $atributos->IdProveedores; ?>" class="btn btn-danger btn-remove deleteProveedor" title="Eliminar">
                                                         <span class="fa-solid fa-circle-xmark"></span>
                                                 </a>
                                    
