@@ -50,6 +50,8 @@ public function cinsert(){
      $domicilio = $this->input->post('txtdomicilio');
      $producto = $this->input->post('txtproducto');
      $telefono = $this->input->post('txttelefono');
+     $email = $this->input->post('txtemail');
+     $contacto = $this->input->post('txtcontacto');
      $descripcion = $this->input->post('txtdescripcion');
      
     
@@ -59,6 +61,8 @@ public function cinsert(){
                    'Domicilio' => $domicilio,
                    'Producto' => $producto,
                    'Telefono' => $telefono,
+                   'Email' => $email,
+                   'Contacto' => $contacto,
                    'Descripcion' => $descripcion
                    
                );
@@ -99,6 +103,8 @@ public function cupdate(){
      $domicilio = $this->input->post('txtdomicilio');
      $producto = $this->input->post('txtproducto');
      $telefono = $this->input->post('txttelefono');
+     $email = $this->input->post('txtemail');
+     $contacto = $this->input->post('txtcontacto');
      $descripcion = $this->input->post('txtdescripcion');
 
 
@@ -109,6 +115,8 @@ public function cupdate(){
                 'Domicilio' => $domicilio,
                 'Producto' => $producto,
                 'Telefono' => $telefono,
+                'Email' => $email,
+                'Contacto' => $contacto,
                 'Descripcion' => $descripcion
                );
 

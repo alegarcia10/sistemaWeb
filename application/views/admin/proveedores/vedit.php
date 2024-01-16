@@ -32,9 +32,17 @@
                                 <input type="text" id="txtproducto" name="txtproducto" maxlength="200" value="<?php echo !empty(form_error('txtproducto'))? set_value('txtproducto') : $proveedoresedit->Producto ?>" class= "form-control"  >
                             </div>
                             
-                            <div class="col-sm-6 form-group">
+                            <div class="col-sm-4 form-group">
                                 <label for="telefono">Telefono</label>
                                 <input type="number" id="txttelefono" name="txttelefono" value="<?php echo !empty(form_error('txttelefono'))? set_value('txttelefono') : $proveedoresedit->Telefono ?>" class= "form-control"  >
+                            </div>
+                            <div class="col-sm-4 form-group">
+                                <label for="email">Email</label>
+                                <input type="text" id="txtemail" name="txtemail" value="<?php echo !empty(form_error('txtemail'))? set_value('txtemail') : $proveedoresedit->Email ?>" class= "form-control"  >
+                            </div>
+                            <div class="col-sm-4 form-group">
+                                <label for="contacto">Nombre de Contacto</label>
+                                <input type="text" id="txtcontacto" name="txtcontacto" value="<?php echo !empty(form_error('txtcontacto'))? set_value('txtcontacto') : $proveedoresedit->Contacto ?>" class= "form-control"  >
                             </div>
              
                             <div class="col-sm-12 form-group">

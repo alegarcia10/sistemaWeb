@@ -30,9 +30,17 @@
                                     <input type="text" id="txtproducto" name="txtproducto" class="form-control" maxlength="200" value="<?php echo set_value('txtproducto') ?>"  >
                                 </div>
                                 
-                                <div class="col-sm-6 form-group">
+                                <div class="col-sm-4 form-group">
                                     <label for="telefono">Telefono</label>
                                     <input type="number" id="txttelefono" name="txttelefono" class="form-control"maxlength="50" value="<?php echo set_value('txttelefono') ?>"  >
+                                </div>
+                                <div class="col-sm-4 form-group">
+                                    <label for="email">Email</label>
+                                    <input type="text" id="txtemail" name="txtemail" class="form-control"maxlength="50" value="<?php echo set_value('txtemail') ?>"  >
+                                </div>
+                                <div class="col-sm-4 form-group">
+                                    <label for="contacto">Nombre de Contacto</label>
+                                    <input type="text" id="txtcontacto" name="txtcontacto" class="form-control"maxlength="50" value="<?php echo set_value('txtcontacto') ?>"  >
                                 </div>
                         
                                 <div class="col-sm-12 form-group">
