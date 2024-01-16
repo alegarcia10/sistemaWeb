@@ -28,9 +28,9 @@
                                   <th>#</th>
                                   <th>Nombre</th>
                                   <th>Productos</th>
-                                  <th>Domicilio</th>
                                   <th>Telefono</th>
-                                  <th>Informacion Adicional</th>
+                                  <th>Email</th>
+                                  <th>Contacto</th>
                                   <th width="5%">Operaciones</th>
                               </tr>
                           </thead>
@@ -41,9 +41,9 @@
                                           <td ><?php echo $atributos->IdProveedores; ?></td>
                                           <td ><?php echo $atributos->Nombre; ?></td>
                                           <td ><?php echo $atributos->Producto; ?></td>
-                                          <td ><?php echo $atributos->Domicilio; ?></td>
                                           <td ><?php echo $atributos->Telefono; ?></td>
-                                          <td ><?php echo $atributos->Descripcion; ?></td>
+                                          <td ><?php echo $atributos->Email; ?></td>
+                                          <td ><?php echo $atributos->Contacto; ?></td>
                                           <td  >
                                               <div class="btn-group">
                                                 <a href="<?php echo base_url(); ?>mantenimiento/cproveedores/cedit/<?php echo $atributos->IdProveedores; ?>" class="btn btn-info" title="Modificar">
