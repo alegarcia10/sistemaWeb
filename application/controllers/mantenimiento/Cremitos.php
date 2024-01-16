@@ -88,10 +88,10 @@ public function addProducto(){
 
    $ban=1;
 
-    echo json_encode($ban);
+    echo json_encode($cant);
    }else{
     $ban=0;
-    echo json_encode($ban);
+    echo json_encode($cant);
     
    }
 

@@ -122,7 +122,7 @@ $(document).ready(function(){
     
       
         if((producto=='') || (cant=='') || (numSerie=='')  ){
-            alert( idRemito);
+            
             window.location.href=base_url+'/mantenimiento/cremitos/cError/'+idRemito;
         }else{
 
