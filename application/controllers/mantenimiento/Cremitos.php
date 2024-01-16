@@ -66,6 +66,7 @@ public function addProducto(){
     $cant = $this->input->post("cant");
     $numSerie = $this->input->post("numSerie");
 
+
     
     $productos=$this->mremito->obtenerProducto($idRemito);
     $cant=0;
@@ -73,24 +74,24 @@ public function addProducto(){
         
         $cant++;
     }
-   if($cant <= 10){
+   if($cant < 12){
     
     $data = array(
         'cantidad' => $cant,
         'producto' =>  $producto,
         'numSerie' => $numSerie,
-        'idRemito' => $idRemito
+        'IdRemito' => $idRemito
     );
-    $ale=$data['Cantidad'];
+   
 
     $res=$this->mremito->cargarProd($data);
 
-    $a=['linksa'=>$res];
+   $ban=1;
 
-    echo json_encode($a);
+    echo json_encode($ban);
    }else{
-
-    echo json_encode("error");
+    $ban=0;
+    echo json_encode($ban);
     
    }
 
@@ -288,7 +289,7 @@ public function cError($idRemito){
 public function cErrorCantidad($idRemito){
 
   
-    $this->session->set_flashdata('error', 'No se pueden agregar mas de 10 PRODUCTOS');
+    $this->session->set_flashdata('error', 'No se pueden agregar mas de 12 PRODUCTOS');
     redirect(base_url().'mantenimiento/cremitos/cedit/'.$idRemito);
 
 }

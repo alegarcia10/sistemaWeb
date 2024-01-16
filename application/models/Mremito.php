@@ -122,24 +122,9 @@ class Mremito extends CI_Model{
    
     $this->db->where('IdRemito =',"$IdRemito");
     $this->db->insert('producto',$data);
-    $IdMat=$this->db->insert_id();
+    $resultado=$this->db->insert_id();
 
-    return $linka= '<tr>
-                <td>'.$IdProducto.'</td>
-                <td>'.$producto.'</td>
-                <td>'.$cantidad.'</td>
-               
-                <td>
-                    <div class="btn-group">
-                        <a title="Modificar" href="@'.$IdProducto.'" class="btn btn-info ">
-                            <span class="fa fa-pencil"></span>
-                        </a>
-                        <a title="Eliminar" href="_'.$IdProducto.'" class="btn btn-danger btn-remove">
-                            <span class="fa fa-remove"></span>
-                        </a>
-                    </div>
-                </td>
-            </tr>';
+    return $linka= $data;
 }
 
 //Trear Producto con IdProducto
