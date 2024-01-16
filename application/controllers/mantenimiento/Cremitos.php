@@ -66,7 +66,7 @@ public function addProducto(){
     $cant = $this->input->post("cant");
     $numSerie = $this->input->post("numSerie");
 
-    
+
     
     $productos=$this->mremito->obtenerProducto($idRemito);
     $cant=0;
@@ -88,7 +88,7 @@ public function addProducto(){
 
     $a=['linksa'=>$res];
 
-    echo json_encode($a);
+    echo json_encode("no error");
    }else{
 
     echo json_encode("error");
