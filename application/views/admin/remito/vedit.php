@@ -138,9 +138,12 @@ $(document).ready(function(){
                                     data:{producto:producto,idRemito:idRemito,cant:cant, numSerie:numSerie}})
                                    
                                     .done(function(r) {
+                                        alert(r);
                                     if(r = "error"){
+                                        alert("entra al if");
                                         window.location.href=base_url+'/mantenimiento/cremitos/cErrorCantidad/'+idRemito;
                                     }else{
+                                        alert("no entra al if");
                                         window.location.href=base_url+'/mantenimiento/cremitos/cedit/'+idRemito;
                                             //$("#tbody1").append(r['linksa']);
                                     }

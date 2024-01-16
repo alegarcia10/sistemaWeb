@@ -67,6 +67,7 @@ public function addProducto(){
     $numSerie = $this->input->post("numSerie");
 
     
+    
     $productos=$this->mremito->obtenerProducto($idRemito);
     $cant=0;
     foreach ($productos as $productos ) {
