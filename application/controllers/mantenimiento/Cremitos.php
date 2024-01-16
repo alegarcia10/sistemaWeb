@@ -80,7 +80,7 @@ public function addProducto(){
         'cantidad' => $cant,
         'producto' =>  $producto,
         'numSerie' => $numSerie,
-        'idRemito' => $idRemito
+        'IdRemito' => $idRemito
     );
    
 
