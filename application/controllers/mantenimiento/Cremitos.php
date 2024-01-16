@@ -74,7 +74,7 @@ public function addProducto(){
         
         $cant++;
     }
-   if($cant < 11){
+   if($cant < 12){
     
     $data = array(
         'cantidad' => $cant,
@@ -88,10 +88,10 @@ public function addProducto(){
 
    $ban=1;
 
-    echo json_encode($cant);
+    echo json_encode($ban);
    }else{
     $ban=0;
-    echo json_encode($cant);
+    echo json_encode($ban);
     
    }
 
