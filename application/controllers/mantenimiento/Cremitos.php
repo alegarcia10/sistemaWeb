@@ -74,7 +74,7 @@ public function addProducto(){
         
         $cant++;
     }
-   if($cant <= 12){
+   if($cant < 13){
     
     $data = array(
         'cantidad' => $cant,
