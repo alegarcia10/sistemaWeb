@@ -139,10 +139,10 @@ $(document).ready(function(){
                                    
                                     .done(function(r) {
                                         alert(r);
-                                    if(r = "error"){
+                                    if(r = 0){
                                         alert("entra al if");
                                         window.location.href=base_url+'/mantenimiento/cremitos/cErrorCantidad/'+idRemito;
-                                    }else{
+                                    }else if(r = 1) {
                                         alert("no entra al if");
                                         window.location.href=base_url+'/mantenimiento/cremitos/cedit/'+idRemito;
                                             //$("#tbody1").append(r['linksa']);

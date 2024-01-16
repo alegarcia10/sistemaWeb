@@ -74,7 +74,7 @@ public function addProducto(){
         
         $cant++;
     }
-   if($cant < 13){
+   if($cant < 11){
     
     $data = array(
         'cantidad' => $cant,
@@ -86,12 +86,12 @@ public function addProducto(){
 
     $res=$this->mremito->cargarProd($data);
 
- 
+   $ban=1;
 
-    echo json_encode("no error");
+    echo json_encode($ban);
    }else{
-
-    echo json_encode("error");
+    $ban=0;
+    echo json_encode($ban);
     
    }
 
