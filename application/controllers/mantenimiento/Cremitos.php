@@ -82,11 +82,11 @@ public function addProducto(){
         'numSerie' => $numSerie,
         'idRemito' => $idRemito
     );
-    $ale=$data['Cantidad'];
+   
 
     $res=$this->mremito->cargarProd($data);
 
-    $a=['linksa'=>$res];
+ 
 
     echo json_encode("no error");
    }else{
