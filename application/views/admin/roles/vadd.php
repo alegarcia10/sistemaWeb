@@ -65,6 +65,11 @@
                                 <input class="chk_input" type="checkbox" id="remitos" name="remitos" data-width="20" data-height="20" />
                                 <span class="checkmark"></span>
                             </div>
+                            <div class="col-sm-2 form-group">
+                                <label>Proveedores</label>
+                                <input class="chk_input" type="checkbox" id="proveedores" name="proveedores" data-width="20" data-height="20" />
+                                <span class="checkmark"></span>
+                            </div>
 
                             <div class="col-sm-12 form-group">
                             <a class="btn btn-default" href="<?php echo base_url();?>mantenimiento/croles">Volver</a>
