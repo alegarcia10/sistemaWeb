@@ -69,12 +69,12 @@ public function addProducto(){
 
     
     $productos=$this->mremito->obtenerProducto($idRemito);
-    $cant=0;
+    $cant2=0;
     foreach ($productos as $productos ) {
         
-        $cant++;
+        $cant2++;
     }
-   if($cant < 12){
+   if($cant2 < 12){
     
     $data = array(
         'cantidad' => $cant,
