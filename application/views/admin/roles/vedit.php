@@ -77,6 +77,11 @@
                                 <input class="chk_input" type="checkbox" id="remitos" name="remitos" data-width="20" data-height="20" <?=(!empty($rolesedit->remitos)&&$rolesedit->remitos=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($rolesedit->remitos))?'checked':''?> />
                                 <span class="checkmark"></span>
                             </div>
+                            <div class="col-sm-2 form-group">
+                                <label>Proveedores</label>
+                                <input class="chk_input" type="checkbox" id="proveedores" name="proveedores" data-width="20" data-height="20" <?=(!empty($rolesedit->proveedores)&&$rolesedit->proveedores=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($rolesedit->proveedores))?'checked':''?> />
+                                <span class="checkmark"></span>
+                            </div>
 
                             <div class="col-sm-12 form-group">
                             <a class="btn btn-success" href="<?php echo base_url();?>mantenimiento/croles">Volver</a>
