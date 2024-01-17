@@ -53,6 +53,7 @@ public function cinsert(){
     $check_est = $this->input->post('estado');
     $check_eq = $this->input->post('equipos');
     $check_remitos = $this->input->post('remitos');
+    $check_proveedores = $this->input->post('proveedores');
 
 
 
@@ -98,6 +99,12 @@ public function cinsert(){
       }else{
         $remito=0;
       }
+      if($check_proveedores=='on'){
+        $proveedores=1;
+      }else{
+        $proveedores=0;
+      }
+      
 
       if($b_rol==null){
         $data = array(
@@ -112,6 +119,7 @@ public function cinsert(){
             'estados_trabajo' => $est,
             'equipos' => $eq,
             'remitos' => $remito,
+            'proveedores' => $proveedores,
             'anulado' => 0
 
 
@@ -164,6 +172,7 @@ public function cupdate(){
     $check_est = $this->input->post('estado');
     $check_eq = $this->input->post('equipos');
     $check_remitos = $this->input->post('remitos');
+    $check_proveedores = $this->input->post('proveedores');
 
      $nrol = $this->mroles->obtenerrol($nombre_tipo);
 
@@ -207,6 +216,11 @@ public function cupdate(){
       }else{
         $remito=0;
       }
+      if($check_proveedores=='on'){
+        $proveedores=1;
+      }else{
+        $proveedores=0;
+      }
 
 
       if(($nrol==null) or ($nombre==$nombre_tipo) ){
@@ -222,6 +236,7 @@ public function cupdate(){
             'estados_trabajo' => $est,
             'equipos' => $eq,
             'remitos' => $remito,
+            'proveedores' => $proveedores,
             'anulado' => 0
 
         );
