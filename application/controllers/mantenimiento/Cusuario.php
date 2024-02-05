@@ -58,6 +58,7 @@ public function cinsert(){
             'nombre' => $nombre,
             'email' => $email,
             'pass' => $contraseña,
+            'idRol'=> $idRol,
             'Anulado' => '0'
         );
         $res=$this->musuario->minsertusuario($data);
