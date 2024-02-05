@@ -56,7 +56,7 @@ public function cinsert(){
         $data = array(
 
             'nombre' => $nombre,
-            'apellido' => $apellido,
+            'email' => $email,
             'usuario' => $usuario,
             'pass' => $contraseña,
             'Anulado' => '0'
