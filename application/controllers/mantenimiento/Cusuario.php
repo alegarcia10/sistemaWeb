@@ -111,7 +111,7 @@ public function cupdate(){
 
         $data = array(
             'nombre' => $nombre,
-            'apellido' => $apellido,
+            'email' => $email,
             'pass' => $contraseña
         );
 
