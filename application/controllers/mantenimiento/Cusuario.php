@@ -56,9 +56,9 @@ public function cinsert(){
         $data = array(
 
             'nombre' => $nombre,
-            'apellido' => $apellido,
-            'usuario' => $usuario,
+            'email' => $email,
             'pass' => $contraseña,
+            'idRol'=> $idRol,
             'Anulado' => '0'
         );
         $res=$this->musuario->minsertusuario($data);
@@ -107,12 +107,11 @@ public function cupdate(){
 
      $usu = $this->musuario->obtenerusuario($usuario);
 
-    if(($usu==null) or ($txtnombreviejo==$usuario) ){
+    if(($usu==null) or ($txtnombreviejo==$usu) ){
 
         $data = array(
             'nombre' => $nombre,
-            'apellido' => $apellido,
-            'usuario' => $usuario,
+            'email' => $email,
             'pass' => $contraseña
         );
 
